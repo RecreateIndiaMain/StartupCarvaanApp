@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "581476801467",
+    "project_id": "startup-carvaan-4c5db",
+    "storage_bucket": "startup-carvaan-4c5db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:581476801467:android:7bef093f4dfc299612829e",
+        "android_client_info": {
+          "package_name": "recreate.india.main.startupcarvaan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "581476801467-tf2eut5ao60aeb40bni8f4o7psda2c2p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "recreate.india.main.startupcarvaan",
+            "certificate_hash": "0d4b4100a8ee0e484fc92813b06caa00d633697e"
+          }
+        },
+        {
+          "client_id": "581476801467-o77m0rk821r1t0305cqd0fmipgtg2cei.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5n-1a7vA5Yr7q2sKTUd2GJ0VhcEXoF5s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "581476801467-o77m0rk821r1t0305cqd0fmipgtg2cei.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
