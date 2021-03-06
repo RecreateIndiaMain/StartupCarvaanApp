@@ -1,60 +1,179 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
+    android:weightSum="10"
+    android:orientation="vertical"
+    android:background="@drawable/login"
     tools:context=".mainActivities.LoginActivity">
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:gravity="bottom"
+
+      android:orientation="vertical"
+      android:layout_weight="4">
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Welcome"
+
+          android:textColor="#FFFFFF"
+          android:layout_marginRight="20dp"
+          android:layout_marginLeft="40dp"
+
+          android:textSize="36dp"/>
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Back"
+          android:layout_marginBottom="40dp"
+          android:textColor="#FFFFFF"
+          android:layout_marginRight="20dp"
+          android:layout_marginLeft="40dp"
+
+          android:textSize="36dp"/>
+
+  </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+
+        android:orientation="vertical">
+
 
     <EditText
-        android:id="@+id/phoneNumber"
-        android:layout_width="wrap_content"
+        android:id="@+id/Username"
+        android:layout_marginTop="35dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="248dp"
+       android:background="@drawable/input"
         android:ems="10"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="50dp"
         android:inputType="textPersonName"
-        android:hint="enter PhoneNumber"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        android:hint="Username"
+        android:paddingLeft="8dp"
+        android:paddingBottom="7dp"
+        android:textColorHint="@color/greyish"
+     />
+        <EditText
+        android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input"
+            android:ems="10"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="50dp"
+            android:inputType="textPassword"
+            android:hint="Password"
+            android:paddingLeft="8dp"
+            android:paddingBottom="7dp"
+            android:textColorHint="@color/greyish"
+            />
 
-    <Button
-        android:id="@+id/requestOtp"
+<!--    <Button-->
+<!--        android:id="@+id/requestOtp"-->
+<!--        android:layout_width="70dp"-->
+<!--        android:layout_height="70dp"-->
+<!--       android:layout_marginTop="12dp"-->
+<!--        android:background="@drawable/button"-->
+
+<!--     />-->
+
+<!--<LinearLayout-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:orientation="horizontal"-->
+<!--    android:weightSum="10"-->
+<!--    android:layout_marginTop="20dp"-->
+<!--    android:gravity="center">-->
+<!--    <EditText-->
+<!--        android:id="@+id/otp"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_weight="6"-->
+<!--        android:layout_height="wrap_content"-->
+
+<!--        android:ems="10"-->
+<!--        android:inputType="textPersonName"-->
+<!--        android:hint="Enter otp"-->
+<!--        android:paddingLeft="12dp"-->
+<!--        android:paddingBottom="7dp"-->
+<!--        android:textColorHint="@color/greyish"-->
+<!--        android:background="@drawable/input"-->
+<!--        />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/verifyOtp"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--android:layout_marginLeft="20dp"-->
+<!--        android:backgroundTint="@color/greyish"-->
+<!--        android:textColor="#FFFFFF"-->
+<!--        android:text="Verify OTP"-->
+<!--         />-->
+<!--</LinearLayout>-->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="40dp"
+
+    android:gravity="center_vertical">
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
-        android:hint="get otp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phoneNumber" />
-
-    <EditText
-        android:id="@+id/otp"
-        android:layout_width="wrap_content"
+        android:textColor="@color/greyish"
+        android:layout_marginLeft="45dp"
+        android:textSize="24sp"
+        android:text="Sign In"
+        android:textStyle="bold"/>
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="enter otp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.437"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/requestOtp"
-        tools:ignore="MissingConstraints" />
+        android:layout_marginRight="30dp"
+        android:gravity="right">
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginRight="22dp"
+        android:src="@drawable/but"/>
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/verifyOtp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="verify otp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/otp"
-        app:layout_constraintVertical_bias="0.212"
-        tools:ignore="MissingConstraints" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/greyish"
+                android:layout_marginLeft="45dp"
+                android:textSize="19sp"
+                android:text="@string/Signup"
+                android:textStyle="bold"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="45dp"
+                android:gravity="right">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/greyish"
+
+                android:textSize="19sp"
+                android:text="@string/forget"
+
+                android:textStyle="bold"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
