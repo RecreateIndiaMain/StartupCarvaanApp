@@ -1,4 +1,4 @@
-package recreate.india.main.startupcarvaan;
+package recreate.india.main.startupcarvaan.mainActivities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,6 +12,8 @@ import com.google.firebase.auth.FirebaseUser;
 
 import java.util.Arrays;
 import java.util.List;
+
+import recreate.india.main.startupcarvaan.R;
 
 public class PrivacyPolicy extends AppCompatActivity {
 
