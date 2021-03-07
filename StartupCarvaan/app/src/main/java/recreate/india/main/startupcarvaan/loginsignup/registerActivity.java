@@ -50,6 +50,7 @@ public class registerActivity extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 fauth.createUserWithEmailAndPassword(username.getText().toString()+"@gmail.com",password.getText().toString())
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
