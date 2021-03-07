@@ -1,4 +1,4 @@
-package recreate.india.main.startupcarvaan;
+package recreate.india.main.startupcarvaan.mainActivities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +11,7 @@ import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.fragments.allshares.allshares;
 import recreate.india.main.startupcarvaan.fragments.biding.biding;
 import recreate.india.main.startupcarvaan.fragments.mycoins.mycoins;
