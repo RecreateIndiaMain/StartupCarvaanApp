@@ -43,8 +43,49 @@ public class operations {
                 .document(shareid).addSnapshotListener(new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                
+                holdings= (Map<Number, Number>) value.toObject(holdings.class);
             }
         });
+    }
+
+    void addnewshare(String shareid,Map<Number,Number> holdings){
+        ff.collection("users")
+                .document(user.getUid())
+                .collection("myshares").document(shareid).set(holdings);
+    }
+    void addshares(String shareid,Number shares,Number price){
+        getholdings(shareid);
+        if(this.holdings.containsKey(price)){
+            Number p_shares=this.holdings.get(price);
+            p_shares=Double.valueOf((Double) p_shares)+Double.valueOf((Double) shares);
+            this.holdings.put(price,p_shares);
+        }
+        else{
+            this.holdings.put(price,shares);
+        }
+        ff.collection("users")
+                .document(user.getUid())
+                .collection("myshares").document(shareid).set(this.holdings);
+    }
+    void removeshares(String shareid,Number shares,Number price){
+        getholdings(shareid);
+        Number p_shares=this.holdings.get(price);
+        p_shares=Double.valueOf((Double) p_shares)-Double.valueOf((Double) shares);
+        if(Double.valueOf((Double) p_shares)!=0)
+            this.holdings.put(price,p_shares);
+        ff.collection("users")
+                .document(user.getUid())
+                .collection("myshares")
+                .document(shareid)
+                .set(this.holdings);
+    }
+    void deleteshare(String shareid){
+        getholdings(shareid);
+        if(this.holdings.isEmpty()){
+            ff.collection("users")
+                    .document(user.getUid())
+                    .collection("myshares")
+                    .document(shareid).delete();
+        }
     }
 }
