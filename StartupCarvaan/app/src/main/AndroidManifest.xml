@@ -9,17 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.StartupCarvaan">
-        <activity android:name=".Signup"></activity>
-        <activity android:name=".PrivacyPolicy" />
-        <activity android:name=".mainActivities.LoginActivity">
+        <activity
+            android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".loginsignup.registerActivity">
+        </activity>
+        <activity android:name=".PrivacyPolicy" />
+        <activity
+            android:name=".loginsignup.loginActivity"
+            android:theme="@style/Theme.StartupCarvaan.Fullscreen" />
         <activity android:name=".mainActivities.SplashScreen" />
-        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>
