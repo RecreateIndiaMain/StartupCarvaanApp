@@ -20,7 +20,8 @@ public class usermodel {
     }
     FirebaseUser getuser(){
         return this.user;
-    }
+    }   
+
     coin coindetails(){
         final coin[] coinmodel = new coin[1];
         ff.collection("users")

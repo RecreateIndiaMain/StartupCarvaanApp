@@ -19,8 +19,10 @@ public class operations {
     private FirebaseFirestore ff=FirebaseFirestore.getInstance();
     private FirebaseAuth fauth= FirebaseAuth.getInstance();
     private FirebaseUser user=fauth.getCurrentUser();
-    private Map<Number,Number>holdings=new HashMap<>();
+    shareholdings shareholdings=new shareholdings();
 
+
+    // to check user has already invested in the share or not
     Boolean isalreadyuser(String shareid){
         final boolean[] check = {false};
         ff.collection("users")
@@ -36,6 +38,9 @@ public class operations {
         });
         return  check[0];
     }
+    //end here
+
+    // function to retrieve current holdings of a particular share of a particular user
     void getholdings(String shareid){
         ff.collection("users")
                 .document(user.getUid())
@@ -43,49 +48,72 @@ public class operations {
                 .document(shareid).addSnapshotListener(new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                holdings= (Map<Number, Number>) value.toObject(holdings.class);
+                shareholdings=value.toObject(shareholdings.class);
             }
         });
     }
+    // end here
 
-    void addnewshare(String shareid,Map<Number,Number> holdings){
+    // adding and update a share when user buy some share
+    void addnewshare(String shareid,shareholdings holdings){
         ff.collection("users")
                 .document(user.getUid())
                 .collection("myshares").document(shareid).set(holdings);
     }
+
     void addshares(String shareid,Number shares,Number price){
         getholdings(shareid);
-        if(this.holdings.containsKey(price)){
-            Number p_shares=this.holdings.get(price);
+        Map<Number,Number>holdings=new HashMap<>();
+        holdings=this.shareholdings.getHoldings();
+        if(holdings.containsKey(price)){
+            Number p_shares=holdings.get(price);
             p_shares=Double.valueOf((Double) p_shares)+Double.valueOf((Double) shares);
-            this.holdings.put(price,p_shares);
+            holdings.put(price,p_shares);
         }
         else{
-            this.holdings.put(price,shares);
+            holdings.put(price,shares);
         }
         ff.collection("users")
                 .document(user.getUid())
-                .collection("myshares").document(shareid).set(this.holdings);
+                .collection("myshares").document(shareid).set(shareholdings);
     }
+    //end here
+
+
+    // removes shares from a user share when user sells
     void removeshares(String shareid,Number shares,Number price){
         getholdings(shareid);
-        Number p_shares=this.holdings.get(price);
+        Map<Number,Number>holdings=new HashMap<>();
+        holdings=this.shareholdings.getHoldings();
+        Number p_shares=holdings.get(price);
         p_shares=Double.valueOf((Double) p_shares)-Double.valueOf((Double) shares);
         if(Double.valueOf((Double) p_shares)!=0)
-            this.holdings.put(price,p_shares);
+            holdings.put(price,p_shares);
         ff.collection("users")
                 .document(user.getUid())
                 .collection("myshares")
                 .document(shareid)
-                .set(this.holdings);
+                .set(holdings).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                deleteshare(shareid);
+            }
+        });
     }
+    //finish here
+
+
+    // deleting a share from user collection if no share is left
     void deleteshare(String shareid){
+        Map<Number,Number>holdings=new HashMap<>();
+        holdings=this.shareholdings.getHoldings();
         getholdings(shareid);
-        if(this.holdings.isEmpty()){
+        if(holdings.isEmpty()){
             ff.collection("users")
                     .document(user.getUid())
                     .collection("myshares")
                     .document(shareid).delete();
         }
     }
+    // done here
 }
