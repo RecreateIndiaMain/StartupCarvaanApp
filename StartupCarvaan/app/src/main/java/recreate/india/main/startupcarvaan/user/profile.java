@@ -7,10 +7,20 @@ public class profile {
     private  Number phonenumber;
     private  Number points;
     private String rank,resume;
+    private String imageurl;
 
-    public profile(Number age, String desciption, String name, Number phonenumber, Number points, String rank, String resume) {
+    public String getImageurl() {
+        return imageurl;
+    }
+
+    public void setImageurl(String imageurl) {
+        this.imageurl = imageurl;
+    }
+
+    public profile(Number age, String desciption, String imageurl, String name, Number phonenumber, Number points, String rank, String resume) {
         this.age = age;
         this.desciption = desciption;
+        this.imageurl=imageurl;
         this.name = name;
         this.phonenumber = phonenumber;
         this.points = points;
