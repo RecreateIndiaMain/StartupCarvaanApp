@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#DAD9D9"
     android:orientation="vertical">
 
     <LinearLayout
@@ -11,21 +12,117 @@
 
         android:orientation="vertical"
         android:background="@color/greyish">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="18dp"
             android:layout_marginLeft="15dp"
-            android:src="@drawable/information"/>
+            android:src="@drawable/gs"/>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="35dp"
+                android:id="@+id/companylogo"
+                android:visibility="gone"
+                android:src="@drawable/privacy"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/afterpress"
+            android:layout_marginTop="15dp"
+            android:background="#DAD9D9"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="30dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Buying price :  "
+                android:textSize="17sp"
+android:textColor="@color/greyish"
+
+                android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/buyingprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="10"
+                    android:textColor="@color/black"
+
+
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Selling price :  "
+                    android:textSize="17sp"
+                    android:textColor="@color/greyish"
+
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10"
+                    android:id="@+id/sellingprice"
+                    android:textSize="17sp"
+                    android:textColor="@color/black"
+
+                    android:textStyle="bold"/>
+            </LinearLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/greyish"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NextSlot "
+                android:textSize="17sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"
+                android:textColor="@color/greyish"
+
+                android:textStyle="bold"/>
+
+
+        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:id="@+id/lcompany"
+            android:visibility="gone"
             android:layout_marginRight="20dp"
             android:gravity="right">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingBottom="18dp"
                 android:orienation="horizontal"
                >
                 <TextView
@@ -34,7 +131,7 @@
                     android:text="Group"
                     android:layout_marginLeft="16dp"
                     android:id="@+id/group"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="10dp"
                     android:textColor="@color/white"
 
                     android:textSize="20sp"/>
@@ -44,37 +141,39 @@
                     android:gravity="right"
                     android:layout_marginRight="10dp">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Company Name"
+                        android:id="@+id/companyname"
+                        android:textSize="20sp"
+
+                        android:textStyle="bold"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="@color/white"/>
 
 
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="48dp"
-            android:id="@+id/companylogo"
-            android:src="@drawable/privacy"/>
                 </LinearLayout>
             </LinearLayout>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Company Name"
-                android:id="@+id/companyname"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:layout_marginTop="12dp"
-                android:layout_marginBottom="10dp"
-                android:textColor="@color/white"/>
+
         </LinearLayout>
     </LinearLayout>
 
    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
        android:layout_width="match_parent"
-       android:layout_height="160dp"/>
+       android:layout_marginLeft="30dp"
+       android:layout_marginRight="30dp"
+       android:visibility="gone"
+       android:layout_height="150dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#DAD9D9"
         android:orientation="vertical"
+        android:id="@+id/growth"
+        android:visibility="gone"
         android:paddingRight="30dp"
         android:paddingLeft="30dp"
         android:paddingBottom="14dp"
