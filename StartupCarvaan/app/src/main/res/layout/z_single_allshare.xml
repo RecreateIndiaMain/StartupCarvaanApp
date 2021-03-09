@@ -20,6 +20,7 @@
             android:layout_height="50dp"
             android:layout_marginTop="18dp"
             android:layout_marginLeft="15dp"
+
             android:src="@drawable/gs"/>
             <ImageView
                 android:layout_width="50dp"
@@ -167,6 +168,56 @@ android:textColor="@color/greyish"
        android:visibility="gone"
        android:layout_height="150dp"/>
 
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical"-->
+<!--            android:layout_marginRight="20dp"-->
+<!--            android:gravity="right">-->
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orienation="horizontal"-->
+<!--                >-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Group"-->
+<!--                    android:layout_marginLeft="16dp"-->
+<!--                    android:id="@+id/group"-->
+<!--                    android:layout_marginTop="15dp"-->
+<!--                    android:textColor="@color/white"-->
+
+<!--                    android:textSize="20sp"/>-->
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="right"-->
+<!--                    android:layout_marginRight="10dp">-->
+
+
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="50dp"-->
+<!--                        android:layout_height="48dp"-->
+<!--                        android:id="@+id/companylogo"-->
+<!--                        android:src="@drawable/privacy"/>-->
+<!--                </LinearLayout>-->
+<!--            </LinearLayout>-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Company Name"-->
+<!--                android:id="@+id/companyname"-->
+<!--                android:textSize="20sp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:layout_marginTop="12dp"-->
+<!--                android:layout_marginBottom="10dp"-->
+<!--                android:textColor="@color/white"/>-->
+<!--        </LinearLayout>-->
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -221,46 +272,46 @@ android:textColor="@color/greyish"
                         android:layout_height="60dp"
                         android:layout_marginTop="3dp">
 
-<!--                        <ProgressBar-->
-<!--                            -->
-<!--                            android:layout_width="match_parent"-->
-<!--                            android:layout_height="match_parent"-->
-<!--                            app:layout_constraintEnd_toEndOf="parent"-->
-<!--                            app:layout_constraintStart_toStartOf="parent"-->
-<!--                            style="?android:progressBarStyleHorizontal"-->
-<!--                            android:max="100"-->
-<!--                            android:progress="40"-->
-<!--                           -->
-<!--                            app:layout_constraintTop_toTopOf="parent"-->
-<!--                            tools:progress="40">-->
+                        <!--                        <ProgressBar-->
+                        <!--                            -->
+                        <!--                            android:layout_width="match_parent"-->
+                        <!--                            android:layout_height="match_parent"-->
+                        <!--                            app:layout_constraintEnd_toEndOf="parent"-->
+                        <!--                            app:layout_constraintStart_toStartOf="parent"-->
+                        <!--                            style="?android:progressBarStyleHorizontal"-->
+                        <!--                            android:max="100"-->
+                        <!--                            android:progress="40"-->
+                        <!--                           -->
+                        <!--                            app:layout_constraintTop_toTopOf="parent"-->
+                        <!--                            tools:progress="40">-->
 
-<!--                        </ProgressBar>-->
+                        <!--                        </ProgressBar>-->
 
-<!--                        <TextView-->
-<!--                           -->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:textAppearance="@style/TextAppearance.AppCompat.Small"-->
-<!--                            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                            app:layout_constraintEnd_toEndOf="parent"-->
-<!--                            app:layout_constraintHorizontal_bias="0.5"-->
-<!--                            app:layout_constraintStart_toStartOf="parent"-->
-<!--                            app:layout_constraintTop_toTopOf="parent"-->
-<!--                            android:text="60"-->
-<!--                            android:textColor="#FF533D78"-->
-<!--                            android:textStyle="bold"/>-->
-<!--                        <TextView-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:text="%"-->
-<!--                            android:textColor="#FF533D78"-->
-<!--                            android:textStyle="bold"-->
-<!--                            android:textAppearance="@style/TextAppearance.AppCompat.Small"-->
-<!--                            app:layout_constraintBottom_toBottomOf="parent"-->
+                        <!--                        <TextView-->
+                        <!--                           -->
+                        <!--                            android:layout_width="wrap_content"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:textAppearance="@style/TextAppearance.AppCompat.Small"-->
+                        <!--                            app:layout_constraintBottom_toBottomOf="parent"-->
+                        <!--                            app:layout_constraintEnd_toEndOf="parent"-->
+                        <!--                            app:layout_constraintHorizontal_bias="0.5"-->
+                        <!--                            app:layout_constraintStart_toStartOf="parent"-->
+                        <!--                            app:layout_constraintTop_toTopOf="parent"-->
+                        <!--                            android:text="60"-->
+                        <!--                            android:textColor="#FF533D78"-->
+                        <!--                            android:textStyle="bold"/>-->
+                        <!--                        <TextView-->
+                        <!--                            android:layout_width="wrap_content"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:text="%"-->
+                        <!--                            android:textColor="#FF533D78"-->
+                        <!--                            android:textStyle="bold"-->
+                        <!--                            android:textAppearance="@style/TextAppearance.AppCompat.Small"-->
+                        <!--                            app:layout_constraintBottom_toBottomOf="parent"-->
 
-<!--                            app:layout_constraintHorizontal_bias="0.5"-->
-<!--                            app:layout_constraintStart_toEndOf="@id/text_view_progress"-->
-<!--                            app:layout_constraintTop_toTopOf="parent"/>-->
+                        <!--                            app:layout_constraintHorizontal_bias="0.5"-->
+                        <!--                            app:layout_constraintStart_toEndOf="@id/text_view_progress"-->
+                        <!--                            app:layout_constraintTop_toTopOf="parent"/>-->
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -291,46 +342,46 @@ android:textColor="@color/greyish"
                         android:layout_height="60dp"
                         android:layout_marginTop="3dp">
 
-<!--                        <ProgressBar-->
-<!--                            android:id="@+id/progress_bar"-->
-<!--                            android:layout_width="match_parent"-->
-<!--                            android:layout_height="match_parent"-->
-<!--                            app:layout_constraintEnd_toEndOf="parent"-->
-<!--                            app:layout_constraintStart_toStartOf="parent"-->
-<!--                            style="?android:progressBarStyleHorizontal"-->
-<!--                            android:max="100"-->
-<!--                            android:progress="40"-->
-<!--                           -->
-<!--                            app:layout_constraintTop_toTopOf="parent"-->
-<!--                            tools:progress="40">-->
+                        <!--                        <ProgressBar-->
+                        <!--                            android:id="@+id/progress_bar"-->
+                        <!--                            android:layout_width="match_parent"-->
+                        <!--                            android:layout_height="match_parent"-->
+                        <!--                            app:layout_constraintEnd_toEndOf="parent"-->
+                        <!--                            app:layout_constraintStart_toStartOf="parent"-->
+                        <!--                            style="?android:progressBarStyleHorizontal"-->
+                        <!--                            android:max="100"-->
+                        <!--                            android:progress="40"-->
+                        <!--                           -->
+                        <!--                            app:layout_constraintTop_toTopOf="parent"-->
+                        <!--                            tools:progress="40">-->
 
-<!--                        </ProgressBar>-->
+                        <!--                        </ProgressBar>-->
 
-<!--                        <TextView-->
-<!--                            -->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:textAppearance="@style/TextAppearance.AppCompat.Small"-->
-<!--                            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                            app:layout_constraintEnd_toEndOf="parent"-->
-<!--                            app:layout_constraintHorizontal_bias="0.5"-->
-<!--                            app:layout_constraintStart_toStartOf="parent"-->
-<!--                            app:layout_constraintTop_toTopOf="parent"-->
-<!--                            android:text="60"-->
-<!--                            android:textColor="#FF533D78"-->
-<!--                            android:textStyle="bold"/>-->
-<!--                        <TextView-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:text="%"-->
-<!--                            android:textColor="#FF533D78"-->
-<!--                            android:textStyle="bold"-->
-<!--                            android:textAppearance="@style/TextAppearance.AppCompat.Small"-->
-<!--                            app:layout_constraintBottom_toBottomOf="parent"-->
+                        <!--                        <TextView-->
+                        <!--                            -->
+                        <!--                            android:layout_width="wrap_content"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:textAppearance="@style/TextAppearance.AppCompat.Small"-->
+                        <!--                            app:layout_constraintBottom_toBottomOf="parent"-->
+                        <!--                            app:layout_constraintEnd_toEndOf="parent"-->
+                        <!--                            app:layout_constraintHorizontal_bias="0.5"-->
+                        <!--                            app:layout_constraintStart_toStartOf="parent"-->
+                        <!--                            app:layout_constraintTop_toTopOf="parent"-->
+                        <!--                            android:text="60"-->
+                        <!--                            android:textColor="#FF533D78"-->
+                        <!--                            android:textStyle="bold"/>-->
+                        <!--                        <TextView-->
+                        <!--                            android:layout_width="wrap_content"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:text="%"-->
+                        <!--                            android:textColor="#FF533D78"-->
+                        <!--                            android:textStyle="bold"-->
+                        <!--                            android:textAppearance="@style/TextAppearance.AppCompat.Small"-->
+                        <!--                            app:layout_constraintBottom_toBottomOf="parent"-->
 
-<!--                            app:layout_constraintHorizontal_bias="0.5"-->
-<!--                           -->
-<!--                            app:layout_constraintTop_toTopOf="parent"/>-->
+                        <!--                            app:layout_constraintHorizontal_bias="0.5"-->
+                        <!--                           -->
+                        <!--                            app:layout_constraintTop_toTopOf="parent"/>-->
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -344,12 +395,12 @@ android:textColor="@color/greyish"
 
 
         </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
+       <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardCornerRadius="15dp"
 
-android:layout_marginTop="25dp"
+            android:layout_marginTop="25dp"
             app:cardElevation="20dp">
             <LinearLayout
                 android:layout_width="match_parent"

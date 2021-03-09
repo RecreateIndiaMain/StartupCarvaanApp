@@ -9,20 +9,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.StartupCarvaan">
-        <activity android:name=".loginsignup.forgetpassword"></activity>
-        <activity android:name=".aboutshare.blogging" />
-        <activity android:name=".mainActivities.MainActivity">
+        <activity android:name=".loginsignup.PhoneAuthActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".loginsignup.forgetpassword" />
+        <activity android:name=".aboutshare.blogging" />
+        <activity android:name=".mainActivities.MainActivity" />
         <activity android:name=".loginsignup.registerActivity" />
         <activity android:name=".mainActivities.PrivacyPolicy" />
         <activity
             android:name=".loginsignup.loginActivity"
-            android:theme="@style/Theme.StartupCarvaan.Fullscreen" />
+            android:theme="@style/Theme.StartupCarvaan.Fullscreen">
+
+        </activity>
         <activity android:name=".mainActivities.SplashScreen" />
     </application>
 

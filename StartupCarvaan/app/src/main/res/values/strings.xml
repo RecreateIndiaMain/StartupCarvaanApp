@@ -15,6 +15,9 @@
     <string name="practice">practice</string>
     <string name="biding">biding</string>
     <string name="mycoins">mycoins</string>
+    <string name="facebook_application_id" translatabl="false">155256039759012</string>
+    <string name="facebook_login_protocol_scheme">fb155256039759012</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

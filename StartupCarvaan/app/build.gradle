@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "recreate.india.main.startupcarvaan"
-        minSdkVersion 16
+        minSdkVersion 17
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -42,19 +42,27 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.firebase:firebase-firestore'
+    implementation 'com.google.firebase:firebase-storage:19.2.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation platform('com.google.firebase:firebase-bom:26.6.0')
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.android.gms:play-services-auth:19.0.0'
+
 
     // multidex
     implementation "androidx.multidex:multidex:2.0.1"
 
     //firebase dependencies
-    implementation 'com.google.firebase:firebase-analytics'
+    // Import the BoM for the Firebase platform
     implementation platform('com.google.firebase:firebase-bom:26.6.0')
-    implementation 'com.firebaseui:firebase-ui-auth:6.4.0'
-    implementation 'com.google.firebase:firebase-firestore:22.0.1'
-    implementation 'com.google.firebase:firebase-auth:20.0.1'
+
+
     //youtube player
     implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5'
+
+    implementation 'androidx.browser:browser:1.2.0'
 }
