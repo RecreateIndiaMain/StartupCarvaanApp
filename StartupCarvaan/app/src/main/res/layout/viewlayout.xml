@@ -7,6 +7,12 @@
     android:background="@color/grey"
     android:orientation="vertical"
     tools:context=".user.ProfileActivity">
+<RelativeLayout
+    android:id="@+id/viewlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,55 +20,12 @@
         android:background="@color/blue" />
 
     <!--Top Header Layout-->
-    <LinearLayout
-        android:background="@drawable/circulerprofiletop"
-        android:id="@+id/topbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:padding="16dp">
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight=".5" />
-        <TextView
-            android:id="@+id/viewprofile"
-            android:textAllCaps="true"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:fontFamily="@font/proximanovaregular"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="View Profile"
-            android:textColor="@color/white"
-            android:layout_marginRight="20dp"/>
-        <LinearLayout
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:background="@color/lightgrey" />
-        <TextView
-            android:id="@+id/createprofile"
-            android:textAllCaps="true"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:fontFamily="@font/proximanovaregular"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Create Profile"
-            android:layout_marginLeft="20dp"/>
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight=".5" />
-
-    </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbars="none"
-        android:layout_below="@+id/topbar">
+        android:layout_below="@+id/topbar"
+        android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -99,12 +62,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:fontFamily="@font/proximanovaregular"
-                        android:text="Sanskar Tiwari"
+                        android:text="Prachi Singhal"
                         android:textColor="#424242"
                         android:textSize="21sp"
                         android:textStyle="bold" />
@@ -279,8 +243,8 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/about_me"
                                 android:fontFamily="@font/proximanovaregular"
+                                android:text="@string/about_me"
                                 android:textSize="17sp"
                                 android:textStyle="bold" />
 
@@ -315,9 +279,9 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/proximanovaregular"
                             android:text="@string/contact"
                             android:textSize="17sp"
-                            android:fontFamily="@font/proximanovaregular"
                             android:textStyle="bold" />
 
                         <Space
@@ -349,10 +313,10 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="20dp"
+                                android:fontFamily="@font/proximanovaregular"
                                 android:text="+91 7999193854"
-                                android:textSize="15sp"
                                 android:textColor="@color/goodgrey"
-                                android:fontFamily="@font/proximanovaregular" />
+                                android:textSize="15sp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -373,10 +337,10 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="20dp"
-                                android:textColor="@color/goodgrey"
+                                android:fontFamily="@font/proximanovaregular"
                                 android:text="sanskar@theindianappguy.com"
-                                android:textSize="15sp"
-                                android:fontFamily="@font/proximanovaregular" />
+                                android:textColor="@color/goodgrey"
+                                android:textSize="15sp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -397,10 +361,10 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="20dp"
+                                android:fontFamily="@font/proximanovaregular"
                                 android:text="Leeds, United Kingdom"
-                                android:textSize="15sp"
                                 android:textColor="@color/goodgrey"
-                                android:fontFamily="@font/proximanovaregular" />
+                                android:textSize="15sp" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -456,7 +420,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="20dp"
                                 android:text="Expert in Photoshop, Adobe XD"
-                                android:textSize="15sp"/>
+                                android:textSize="15sp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -894,6 +858,5 @@
 
 
     </ScrollView>
-
-
+</RelativeLayout>
 </RelativeLayout>
