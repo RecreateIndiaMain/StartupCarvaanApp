@@ -18,5 +18,6 @@
     <color name="lightgrey">#EEEEEE</color>
     <color name="goodgrey">#535353</color>
     <color name="yellow">#F8BA0F</color>
+    <color name="colorTransparentWhite">#cccccc</color>
 
 </resources>
