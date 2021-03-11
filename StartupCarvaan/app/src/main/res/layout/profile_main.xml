@@ -94,14 +94,15 @@
                 android:padding="16dp">
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="150dp"
-                    android:layout_height="90dp"
-                    app:cardCornerRadius="6dp"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    app:cardCornerRadius="100dp"
                     app:cardElevation="0dp">
 
                     <ImageView
-                        android:layout_width="150dp"
-                        android:layout_height="90dp"
+                        android:id="@+id/userImage"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/pp" />
 
