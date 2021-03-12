@@ -65,4 +65,6 @@ dependencies {
     implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5'
 
     implementation 'androidx.browser:browser:1.2.0'
+    implementation 'com.chaos.view:pinview:1.4.3'
+
 }
