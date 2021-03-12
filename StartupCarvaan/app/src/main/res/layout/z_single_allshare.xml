@@ -8,7 +8,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-android:background="@color/greyish"
+        android:background="@color/greyish"
         android:orientation="vertical"
         >
         <RelativeLayout
@@ -142,7 +142,7 @@ android:background="@color/greyish"
         android:background="#DAD9D9"
         android:orientation="vertical"
         android:id="@+id/growth"
-        android:visibility="gone"
+        android:visibility="visible"
 
         android:paddingRight="30dp"
         android:paddingLeft="30dp"
@@ -150,8 +150,6 @@ android:background="@color/greyish"
         android:paddingTop="10dp">
         <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
             android:layout_width="match_parent"
-
-
             android:layout_height="150dp"/>
 
         <androidx.cardview.widget.CardView
@@ -355,7 +353,7 @@ android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/afterpress"
-
+        android:visibility="gone"
         android:layout_marginTop="10dp"
         android:background="#DAD9D9"
         android:orientation="vertical">

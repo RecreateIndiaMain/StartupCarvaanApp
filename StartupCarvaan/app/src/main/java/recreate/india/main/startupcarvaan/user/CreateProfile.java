@@ -40,6 +40,8 @@ public class CreateProfile extends AppCompatActivity {
     private FirebaseStorage fs= FirebaseStorage.getInstance();
     private String imageurl,documenturl;
     private profile profile=new profile();
+    private int document_request_code=002;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,7 +58,7 @@ public class CreateProfile extends AppCompatActivity {
 
         //getting current user all data from firestore
         ff.collection("users")
-                .document("user")
+                .document("fVL1fk8rYrIONx7qp2pP")
                 .addSnapshotListener(new EventListener<DocumentSnapshot>() {
                     @Override
                     public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
@@ -106,7 +108,7 @@ public class CreateProfile extends AppCompatActivity {
 
                 // We will be redirected to choose pdf
                 galleryIntent.setType("application/pdf");
-                startActivityForResult(galleryIntent, 1);
+                startActivityForResult(galleryIntent, document_request_code);
             }
         });
         //end here
@@ -122,6 +124,8 @@ public class CreateProfile extends AppCompatActivity {
                     newDailog.setTitle("Uploading Documents");
                     newDailog.show();
                 }
+
+
                 if(imageUri!=null){
                     StorageReference userimage=fs.getReference().child("users").child("image");
                     imageurl=userimage.getPath();
@@ -163,6 +167,9 @@ public class CreateProfile extends AppCompatActivity {
                         }
                     });
                 }
+
+
+
                 //getting all the required fields
                 String name_tobeuploaded=display_name.getText().toString();
                 String title_tobeuploaded=title.getText().toString();
@@ -180,7 +187,7 @@ public class CreateProfile extends AppCompatActivity {
                 profile.setImageurl(imageurl);
                 profile.setResume(documenturl);
                 ff.collection("users")
-                        .document("user")
+                        .document("fVL1fk8rYrIONx7qp2pP")
                         .set(profile.giveNewUser());
             }
         });
@@ -194,9 +201,9 @@ public class CreateProfile extends AppCompatActivity {
             userImage.setImageURI(imageUri);
 
         }
-        else if(requestCode==1){
+        else if(requestCode==document_request_code&& resultCode==RESULT_OK && data!=null){
             documentUri=data.getData();
-            document.setText(documentUri.getHost());
+            document.setText(documentUri.getLastPathSegment());
         }
         else{
             Toast.makeText(this, "file not selected", Toast.LENGTH_SHORT).show();
