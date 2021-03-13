@@ -58,41 +58,41 @@ public class loginActivity extends AppCompatActivity {
 
         username=findViewById(R.id.username);
         password=findViewById(R.id.password);
-        login=findViewById(R.id.login);
-        register=findViewById(R.id.gotoregister);
+//        login=findViewById(R.id.login);
+//        register=findViewById(R.id.gotoregister);
 
         //done
 
 
         // logging in user
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                firebaseAuth.signInWithEmailAndPassword(username.getText().toString()+"@gmail.com",password.getText().toString())
-                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
-                            startActivity(new Intent(loginActivity.this, MainActivity.class));
-                            finish();
-                        }
-                        else{
-                            task.getException().getMessage();
-                        }
-                    }
-                });
-            }
-        });
-        //done here
-
-        //going to register
-        register.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(loginActivity.this, registerActivity.class));
-                finish();
-            }
-        });
+//        login.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                firebaseAuth.signInWithEmailAndPassword(username.getText().toString()+"@gmail.com",password.getText().toString())
+//                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+//                    @Override
+//                    public void onComplete(@NonNull Task<AuthResult> task) {
+//                        if(task.isSuccessful()){
+//                            startActivity(new Intent(loginActivity.this, MainActivity.class));
+//                            finish();
+//                        }
+//                        else{
+//                            task.getException().getMessage();
+//                        }
+//                    }
+//                });
+//            }
+//        });
+//        //done here
+//
+//        //going to register
+//        register.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(loginActivity.this, registerActivity.class));
+//                finish();
+//            }
+//        });
         //done
         // google signin
 
