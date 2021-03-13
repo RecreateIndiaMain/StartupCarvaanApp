@@ -38,7 +38,7 @@ public class IntroSliderActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
 
-        prevBtn = findViewById(R.id.prevBtn);
+
         nextBtn = findViewById(R.id.nextBtn);
         skipBtn = findViewById(R.id.skipBtn);
 
@@ -64,12 +64,7 @@ public class IntroSliderActivity extends AppCompatActivity {
             }
         });
 
-        prevBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                viewPager.setCurrentItem(mCurrentPage - 1);
-            }
-        });
+
 
         skipBtn.setOnClickListener(new View.OnClickListener() {
             @Override

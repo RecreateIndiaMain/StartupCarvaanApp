@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/intro_slider_bg"
-    >
+android:paddingBottom="12dp"
+   >
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginBottom="25dp"
+        android:layout_above="@id/dotLayout">
 
 
     </androidx.viewpager.widget.ViewPager>
@@ -19,11 +21,13 @@
         android:id="@+id/dotLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_alignTop="@id/dotLayout"
+android:layout_marginBottom="20dp"
+        android:layout_above="@id/nextBtn"
         android:layout_centerHorizontal="true"
         android:background="@android:color/transparent"
-        android:paddingHorizontal="-8dp"
-        android:paddingBottom="16dp"
+
+
         app:tabBackground="@drawable/tab_selector"
 
         app:tabGravity="center"
@@ -31,33 +35,34 @@
 
     </com.google.android.material.tabs.TabLayout>
 
-    <Button
-        android:id="@+id/prevBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:backgroundTint="@color/purple_500"
-        android:padding="8dp"
-        android:textColor="@color/white"
-        android:textSize="17sp"
-        android:visibility="invisible"
-        tools:text="Back">
+    <!--    <Button-->
+    <!--        android:id="@+id/prevBtn"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:backgroundTint="@color/purple_500"-->
+    <!--        android:padding="8dp"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:textSize="17sp"-->
+    <!--        android:visibility="invisible"-->
+    <!--        tools:text="Back">-->
 
-    </Button>
+    <!--    </Button>-->
 
     <Button
         android:id="@+id/nextBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+
+
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:backgroundTint="@color/purple_500"
-        android:padding="8dp"
+   android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:backgroundTint="#FFF4B906"
+
         android:text="Next"
-        android:textColor="@color/white"
-        android:textSize="17sp">
+        android:textColor="@color/black"
+        android:textSize="18sp">
 
     </Button>
 
@@ -65,14 +70,15 @@
         android:id="@+id/skipBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
-        android:layout_marginTop="8dp"
         android:layout_alignParentRight="true"
-        android:backgroundTint="@color/purple_500"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="#FFF4B906"
         android:padding="8dp"
         android:text="Skip"
-        android:textColor="@color/white"
-        android:textSize="17sp">
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        >
 
     </Button>
 

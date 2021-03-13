@@ -27,9 +27,9 @@ public class SliderAdaptar extends PagerAdapter {
 
 
     public int[] slide_images = {
-            R.drawable.connect,
-            R.drawable.investing,
-            R.drawable.moneyflow
+            R.drawable.intro1,
+            R.drawable.intro2,
+            R.drawable.bidding
     };
 
     public String[] slide_headings = {
