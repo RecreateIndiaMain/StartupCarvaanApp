@@ -22,7 +22,7 @@ android:paddingBottom="12dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@id/dotLayout"
-android:layout_marginBottom="20dp"
+        android:layout_marginBottom="20dp"
         android:layout_above="@id/nextBtn"
         android:layout_centerHorizontal="true"
         android:background="@android:color/transparent"
@@ -35,28 +35,14 @@ android:layout_marginBottom="20dp"
 
     </com.google.android.material.tabs.TabLayout>
 
-    <!--    <Button-->
-    <!--        android:id="@+id/prevBtn"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_alignParentBottom="true"-->
-    <!--        android:backgroundTint="@color/purple_500"-->
-    <!--        android:padding="8dp"-->
-    <!--        android:textColor="@color/white"-->
-    <!--        android:textSize="17sp"-->
-    <!--        android:visibility="invisible"-->
-    <!--        tools:text="Back">-->
-
-    <!--    </Button>-->
 
     <Button
         android:id="@+id/nextBtn"
         android:layout_width="match_parent"
         android:layout_height="45dp"
 
-
         android:layout_alignParentBottom="true"
-   android:layout_marginRight="30dp"
+        android:layout_marginRight="30dp"
         android:layout_marginLeft="30dp"
         android:backgroundTint="#FFF4B906"
 

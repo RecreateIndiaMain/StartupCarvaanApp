@@ -21,7 +21,6 @@ public class allshares extends Fragment {
     private FirebaseFirestore ff= FirebaseFirestore.getInstance();
     private FirestoreRecyclerAdapter adapter;
     private RecyclerView recyclerView;
-
     public allshares() {
         // Required empty public constructor
     }

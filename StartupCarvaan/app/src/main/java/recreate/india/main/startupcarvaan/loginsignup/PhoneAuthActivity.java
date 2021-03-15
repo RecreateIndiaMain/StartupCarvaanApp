@@ -4,11 +4,13 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -33,10 +35,15 @@ public class PhoneAuthActivity extends AppCompatActivity {
     private PhoneAuthProvider.ForceResendingToken forceResendingToken;
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks verificationStateChangedCallbacks;
     private String verificationId;
+
+    private LinearLayout phone_layout,otp_layout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_phone_auth);
+
+        phone_layout=findViewById(R.id.phoneverify);
+        otp_layout=findViewById(R.id.otpverify);
         number=findViewById(R.id.number);
         getotp=findViewById(R.id.getotp);
         otp=findViewById(R.id.otp);
@@ -56,6 +63,8 @@ public class PhoneAuthActivity extends AppCompatActivity {
             public void onCodeSent(@NonNull String s, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
                 super.onCodeSent(s, forceResendingToken);
                 verificationId=s;
+                phone_layout.setVisibility(View.GONE);
+                otp_layout.setVisibility(View.VISIBLE);
 
             }
         };
@@ -80,7 +89,8 @@ public class PhoneAuthActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    Toast.makeText(PhoneAuthActivity.this, firebaseAuth.getCurrentUser().getPhoneNumber(), Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(PhoneAuthActivity.this,MainActivity.class));
+                    finish();
                 }
             }
         });
