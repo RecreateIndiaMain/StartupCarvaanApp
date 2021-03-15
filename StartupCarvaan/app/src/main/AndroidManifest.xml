@@ -4,34 +4,48 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/startupcarvaan"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/startupcarvaan"
         android:supportsRtl="true"
         android:theme="@style/Theme.StartupCarvaan">
-        <activity android:name=".mainActivities.IntroSliderActivity"></activity>
+
+
+
+        <activity android:name=".mainActivities.IntroSliderActivity">
+        </activity>
+
         <activity android:name=".user.CreateProfile"
             android:parentActivityName=".user.ProfileActivity">
-
         </activity>
-        <activity android:name=".loginsignup.PhoneAuthActivity" />
-        <activity android:name=".loginsignup.forgetpassword" />
+
+        <activity android:name=".loginsignup.PhoneAuthActivity"
+            android:parentActivityName=".loginsignup.loginActivity">
+        </activity>
+
         <activity android:name=".user.ProfileActivity"
             android:parentActivityName=".user.CreateProfile">
         </activity>
-        <activity android:name=".aboutshare.blogging" />
+
+        <activity android:name=".aboutshare.blogging"
+            android:parentActivityName=".mainActivities.MainActivity">
+        </activity>
+
         <activity android:name=".mainActivities.MainActivity">
+        </activity>
+
+        <activity android:name=".mainActivities.PrivacyPolicy" />
+        <activity
+            android:name=".loginsignup.loginActivity"
+            android:theme="@style/Theme.StartupCarvaan.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".loginsignup.registerActivity" />
-        <activity android:name=".mainActivities.PrivacyPolicy" />
-        <activity
-            android:name=".loginsignup.loginActivity"
-            android:theme="@style/Theme.StartupCarvaan.Fullscreen" />
+
         <activity android:name=".mainActivities.SplashScreen" />
+
     </application>
     <uses-feature android:name="android.hardware.camera"
         android:required="false" />

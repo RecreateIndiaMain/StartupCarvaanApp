@@ -21,9 +21,7 @@ public class IntroSliderActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private TabLayout mDotLayout;
     private SliderAdaptar sliderAdaptar;
-    //private ImageView[] mDots;
     private final int LENGTH_OF_ITEMS = new SliderAdaptar(IntroSliderActivity.this).getCount();
-    private Button prevBtn;
     private Button nextBtn;
     private Button skipBtn;
     private int mCurrentPage;
@@ -53,9 +51,9 @@ public class IntroSliderActivity extends AppCompatActivity {
         nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(mCurrentPage!=LENGTH_OF_ITEMS-1) {
+                if (mCurrentPage != LENGTH_OF_ITEMS - 1) {
                     viewPager.setCurrentItem(mCurrentPage + 1);
-                }else {
+                } else {
                     startActivity(new Intent(IntroSliderActivity.this, recreate.india.main.startupcarvaan.loginsignup.loginActivity.class));
                     finish();
                     Log.i("TAG", "ENDDDD");
@@ -63,7 +61,6 @@ public class IntroSliderActivity extends AppCompatActivity {
 
             }
         });
-
 
 
         skipBtn.setOnClickListener(new View.OnClickListener() {
@@ -81,26 +78,18 @@ public class IntroSliderActivity extends AppCompatActivity {
                 mCurrentPage = tab.getPosition();
 
 
-                if(mCurrentPage==0){
+                if (mCurrentPage == 0) {
                     nextBtn.setEnabled(true);
-                    prevBtn.setEnabled(false);
-                    prevBtn.setVisibility(View.INVISIBLE);
                     nextBtn.setVisibility(View.VISIBLE);
                     nextBtn.setText("Next");
-                }else if(mCurrentPage==LENGTH_OF_ITEMS-1){
+                } else if (mCurrentPage == LENGTH_OF_ITEMS - 1) {
                     nextBtn.setEnabled(true);
-                    prevBtn.setEnabled(true);
-                    prevBtn.setVisibility(View.VISIBLE);
                     nextBtn.setVisibility(View.VISIBLE);
                     nextBtn.setText("Finish");
-                    prevBtn.setText("Back");
-                }else{
+                } else {
                     nextBtn.setEnabled(true);
-                    prevBtn.setEnabled(true);
-                    prevBtn.setVisibility(View.VISIBLE);
                     nextBtn.setVisibility(View.VISIBLE);
                     nextBtn.setText("Next");
-                    prevBtn.setText("Back");
                 }
             }
 
@@ -114,52 +103,5 @@ public class IntroSliderActivity extends AppCompatActivity {
 
             }
         });
-
-
-//        addDotsIndicator(0);
-//        viewPager.addOnPageChangeListener(viewListener);
-
     }
-
-//    public void addDotsIndicator(int position) {
-//
-//        if (mDotLayout != null)
-//            mDotLayout.removeAllViews();
-//        mDots = new ImageView[sliderAdaptar.getCount()];
-//
-//
-//        for (int i = 0; i < mDots.length; i++) {
-//            mDots[i] = new ImageView(getApplicationContext());
-//            if (i==position){
-//                mDots[i].setImageDrawable(ContextCompat.getDrawable(getApplicationContext(),R.drawable.selected_dot));
-//            }else{
-//                mDots[i].setImageDrawable(ContextCompat.getDrawable(getApplicationContext(),R.drawable.default_dot));
-//            }
-//            mDotLayout.addView(mDots[i]);
-//        }
-//
-//        //      mDots[position].setTextColor(getResources().getColor(R.color.white));
-//
-//
-//    }
-
-
-//    ViewPager.OnPageChangeListener viewListener = new ViewPager.OnPageChangeListener() {
-//        @Override
-//        public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-//
-//        }
-//
-//        @Override
-//        public void onPageSelected(int position) {
-//            addDotsIndicator(position);
-//        }
-//
-//        @Override
-//        public void onPageScrollStateChanged(int state) {
-//
-//        }
-//    };
-
-
 }

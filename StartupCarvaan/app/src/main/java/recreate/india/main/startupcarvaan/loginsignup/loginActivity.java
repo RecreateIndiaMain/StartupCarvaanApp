@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.renderscript.ScriptGroup;
 import android.util.Log;
 import android.view.View;
@@ -48,53 +49,12 @@ public class loginActivity extends AppCompatActivity {
     //google signin
     private GoogleSignInClient mGoogleSignInClient;
     private SignInButton signInButton;
+    private TextView phonebutton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         getSupportActionBar().hide();
-
-        //declaration
-
-        username=findViewById(R.id.username);
-        password=findViewById(R.id.password);
-//        login=findViewById(R.id.login);
-//        register=findViewById(R.id.gotoregister);
-
-        //done
-
-
-        // logging in user
-//        login.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                firebaseAuth.signInWithEmailAndPassword(username.getText().toString()+"@gmail.com",password.getText().toString())
-//                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-//                    @Override
-//                    public void onComplete(@NonNull Task<AuthResult> task) {
-//                        if(task.isSuccessful()){
-//                            startActivity(new Intent(loginActivity.this, MainActivity.class));
-//                            finish();
-//                        }
-//                        else{
-//                            task.getException().getMessage();
-//                        }
-//                    }
-//                });
-//            }
-//        });
-//        //done here
-//
-//        //going to register
-//        register.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(loginActivity.this, registerActivity.class));
-//                finish();
-//            }
-//        });
-        //done
-        // google signin
 
         // google signin options
         // Configure Google Sign In
@@ -113,6 +73,14 @@ public class loginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 signIn();
+            }
+        });
+        phonebutton=findViewById(R.id.phonebutton);
+        phonebutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(loginActivity.this,PhoneAuthActivity.class));
+                finish();
             }
         });
 
@@ -167,7 +135,7 @@ public class loginActivity extends AppCompatActivity {
     private void updateUI(FirebaseUser user) {
         if(user!=null){
             mGoogleSignInClient.signOut();
-            startActivity(new Intent(loginActivity.this, SplashScreen.class));
+            startActivity(new Intent(loginActivity.this, MainActivity.class));
             finish();
         }
     }
