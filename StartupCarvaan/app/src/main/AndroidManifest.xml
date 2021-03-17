@@ -16,11 +16,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StartupCarvaan">
         <activity android:name=".payments.payinActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".mainActivities.IntroSliderActivity"></activity>
         <activity
@@ -28,14 +23,21 @@
             android:parentActivityName=".user.ProfileActivity"></activity>
         <activity
             android:name=".loginsignup.PhoneAuthActivity"
-            android:parentActivityName=".loginsignup.loginActivity"></activity>
+            android:parentActivityName=".loginsignup.loginActivity">
+        </activity>
         <activity
             android:name=".user.ProfileActivity"
             android:parentActivityName=".user.CreateProfile"></activity>
         <activity
             android:name=".aboutshare.blogging"
             android:parentActivityName=".mainActivities.MainActivity"></activity>
-        <activity android:name=".mainActivities.MainActivity"></activity>
+        <activity android:name=".mainActivities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".mainActivities.PrivacyPolicy" />
         <activity
             android:name=".loginsignup.loginActivity"
