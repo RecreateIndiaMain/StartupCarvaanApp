@@ -1,87 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#DAD9D9"
+    app:cardCornerRadius="20dp"
+    android:layout_margin="12dp"
+
+
+
+
+    app:cardElevation="15dp"
+    android:elevation="15dp">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:background="@color/grey"
     android:orientation="vertical">
-    <LinearLayout
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/greyish"
-        android:orientation="vertical"
-        >
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="18dp"
-            android:layout_marginLeft="15dp"
-
-            android:src="@drawable/gs"/>
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="48dp"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="35dp"
-                android:layout_marginRight="35dp"
-                android:id="@+id/companylogo"
-
-                android:src="@drawable/privacy"/>
-        </RelativeLayout>
+        android:background="#E2E6E2">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:id="@+id/lcompany"
+            android:layout_height="200dp"
+            android:background="#FF59B563"
+            android:orientation="vertical" />
 
-            android:layout_marginRight="20dp"
-            android:gravity="right">
+        <RelativeLayout
+            android:id="@+id/loglayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/companylogo"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/logonew" />
+
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="18dp"
-                android:orientation="horizontal"
-               >
+                android:layout_marginRight="12dp"
+                android:gravity="right"
+
+                android:orientation="vertical">
+
+                <ImageView
+
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="8dp"
+
+                    android:src="@drawable/ic_baseline_arrow_drop_down_circle_24" />
+
                 <TextView
+                    android:id="@+id/group"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
                     android:text="Group"
-                    android:layout_marginLeft="16dp"
-                    android:id="@+id/group"
-                    android:layout_marginTop="10dp"
                     android:textColor="@color/white"
 
-                    android:textSize="20sp"/>
-                <LinearLayout
-                    android:layout_width="match_parent"
+                    android:textSize="17sp" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/lcompany"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/loglayout"
+            android:layout_marginRight="20dp"
+
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/companyname"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="right"
-                    android:orientation="horizontal"
-                    android:layout_marginRight="10dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Company Name"
-                        android:id="@+id/companyname"
-                        android:textSize="20sp"
-
-                        android:textStyle="bold"
-                        android:layout_marginTop="12dp"
-                        android:layout_marginBottom="10dp"
-                        android:textColor="@color/white"/>
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Company Name"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
 
-                </LinearLayout>
             </LinearLayout>
 
-        </LinearLayout>
-    </LinearLayout>
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lcompany"
+            android:layout_marginLeft="25dp"
+
+            android:layout_marginTop="25dp"
+
+            android:layout_marginRight="25dp">
+
+            <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                android:layout_width="match_parent"
+
+                android:layout_height="180dp" />
+        </LinearLayout>
+
+    </RelativeLayout>
 
 
 
@@ -139,33 +188,25 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#DAD9D9"
+
         android:orientation="vertical"
         android:id="@+id/growth"
         android:visibility="visible"
 
-        android:paddingRight="30dp"
-        android:paddingLeft="30dp"
-        android:paddingBottom="14dp"
+        android:paddingRight="25dp"
+        android:paddingLeft="25dp"
+        android:paddingBottom="10dp"
         android:paddingTop="10dp">
-        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
-            android:layout_width="match_parent"
-            android:layout_height="150dp"/>
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            app:cardCornerRadius="15dp"
-android:layout_marginTop="20dp"
 
-            app:cardElevation="20dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
                 android:weightSum="2"
-                android:layout_marginTop="6dp"
-                android:paddingRight="15dp"
+                android:background="@drawable/circularbordersolid"
+                android:layout_marginTop="14dp"
+                android:padding="10dp"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -173,7 +214,8 @@ android:layout_marginTop="20dp"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:layout_weight="1"
-                    android:layout_marginTop="8dp"
+
+
 
 
                     android:orientation="vertical">
@@ -244,7 +286,7 @@ android:layout_marginTop="20dp"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:layout_weight="1"
-                    android:layout_marginTop="8dp"
+
 
                     android:orientation="vertical">
                     <TextView
@@ -317,20 +359,16 @@ android:layout_marginTop="20dp"
 
 
 
-        </androidx.cardview.widget.CardView>
-       <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="15dp"
 
-            android:layout_marginTop="25dp"
-            app:cardElevation="20dp">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:paddingBottom="6dp"
                 android:paddingTop="6dp"
                 android:gravity="center"
                 android:paddingLeft="10dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/circularbordersolid"
                 android:paddingRight="10dp"
                 android:layout_height="wrap_content">
                 <TextView
@@ -343,7 +381,7 @@ android:layout_marginTop="20dp"
             </LinearLayout>
 
 
-        </androidx.cardview.widget.CardView>
+
 
 
     </LinearLayout>
@@ -355,7 +393,7 @@ android:layout_marginTop="20dp"
         android:id="@+id/afterpress"
         android:visibility="gone"
         android:layout_marginTop="10dp"
-        android:background="#DAD9D9"
+
         android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"
@@ -459,14 +497,14 @@ android:layout_marginLeft="10dp"
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:background="#DAD9D9"
+
         android:layout_height="wrap_content">
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:backgroundTint="#293859"
 
-            android:backgroundTint="#FF67D56B"
             android:text="Invest In me"
             android:textColor="@color/white"
             android:textSize="16sp"
@@ -482,3 +520,4 @@ android:layout_marginLeft="10dp"
 
 
 </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -30,7 +30,7 @@
                 android:id="@+id/companyLogo"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
-                android:src="@drawable/logo"
+                android:src="@drawable/logonew"
                 ></de.hdodenhof.circleimageview.CircleImageView>
             <LinearLayout
                 android:layout_width="match_parent"
