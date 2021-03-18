@@ -37,7 +37,7 @@ public class payinActivity extends AppCompatActivity implements PaymentResultLis
         final Activity activity = payinActivity.this;
 
         final Checkout co = new Checkout();
-//        co.setKeyID("rzp_test_CL7b5t36YPho8S");
+        co.setKeyID("rzp_live_NG3ntIusAXHzcB");
 
         try {
             JSONObject options = new JSONObject();

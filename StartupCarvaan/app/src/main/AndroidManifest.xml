@@ -16,6 +16,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StartupCarvaan">
         <activity android:name=".payments.payinActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".mainActivities.IntroSliderActivity"></activity>
         <activity
@@ -32,11 +37,6 @@
             android:name=".aboutshare.blogging"
             android:parentActivityName=".mainActivities.MainActivity"></activity>
         <activity android:name=".mainActivities.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".mainActivities.PrivacyPolicy" />
         <activity
