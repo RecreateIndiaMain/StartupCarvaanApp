@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="10"
+    android:background="@color/white"
     android:orientation="vertical"
 
     android:theme="@style/Theme.AppCompat.Light.NoActionBar"
@@ -30,18 +31,7 @@ android:gravity="bottom|center_horizontal"
 
 
     </LinearLayout>
-    <TextView
-        android:layout_width="match_parent"
-        android:gravity="center_horizontal"
 
-        android:layout_height="wrap_content"
-        android:textColor="@color/greyish"
-        android:layout_marginLeft="45dp"
-        android:layout_marginTop="2dp"
-        android:textSize="16sp"
-        android:layout_marginRight="40dp"
-        android:text="Sign in to continue..."
-        />
 
 
 <!--    <EditText-->

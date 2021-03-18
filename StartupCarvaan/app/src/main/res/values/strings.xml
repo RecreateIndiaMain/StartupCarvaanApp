@@ -37,4 +37,6 @@
     <string name="seek_to">Jump To</string>
     <string name="seek_to_hint">Seconds</string>
     <string name="YOUTUBE_API_KEY">AIzaSyCHbEsSjyVMPHNkvBFBnubr29zbW8Jd6n0</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
 </resources>

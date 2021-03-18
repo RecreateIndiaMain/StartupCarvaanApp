@@ -1,52 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="recreate.india.main.startupcarvaan">
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
     <application
         android:allowBackup="true"
-        android:icon="@drawable/startupcarvaan"
+        android:icon="@drawable/startupcarvaanlogo"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/startupcarvaan"
+        android:roundIcon="@drawable/startupcarvaanlogo"
         android:supportsRtl="true"
         android:theme="@style/Theme.StartupCarvaan">
+        <activity android:name=".payments.payinActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-
-
-        <activity android:name=".mainActivities.IntroSliderActivity">
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-
-        <activity android:name=".user.CreateProfile"
-            android:parentActivityName=".user.ProfileActivity">
-        </activity>
-
-        <activity android:name=".loginsignup.PhoneAuthActivity"
+        <activity android:name=".mainActivities.IntroSliderActivity"></activity>
+        <activity
+            android:name=".user.CreateProfile"
+            android:parentActivityName=".user.ProfileActivity"></activity>
+        <activity
+            android:name=".loginsignup.PhoneAuthActivity"
             android:parentActivityName=".loginsignup.loginActivity">
         </activity>
-
-        <activity android:name=".user.ProfileActivity"
-            android:parentActivityName=".user.CreateProfile">
-        </activity>
-
-        <activity android:name=".aboutshare.blogging"
-            android:parentActivityName=".mainActivities.MainActivity">
-        </activity>
-
+        <activity
+            android:name=".user.ProfileActivity"
+            android:parentActivityName=".user.CreateProfile"></activity>
+        <activity
+            android:name=".aboutshare.blogging"
+            android:parentActivityName=".mainActivities.MainActivity"></activity>
         <activity android:name=".mainActivities.MainActivity">
         </activity>
-
         <activity android:name=".mainActivities.PrivacyPolicy" />
         <activity
             android:name=".loginsignup.loginActivity"
             android:theme="@style/Theme.StartupCarvaan.Fullscreen">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-
         <activity android:name=".mainActivities.SplashScreen" />
-
     </application>
-    <uses-feature android:name="android.hardware.camera"
-        android:required="false" />
+
 </manifest>
