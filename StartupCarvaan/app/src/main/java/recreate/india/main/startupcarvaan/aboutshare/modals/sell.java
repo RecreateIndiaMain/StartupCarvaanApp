@@ -41,7 +41,7 @@ public class sell extends DialogFragment {
         spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (parent.getItemAtPosition(position).equals("Select problem")) {
+                if (parent.getItemAtPosition(position).equals("price : no of shares")) {
 
                 } else {
                     item = parent.getItemAtPosition(position).toString();

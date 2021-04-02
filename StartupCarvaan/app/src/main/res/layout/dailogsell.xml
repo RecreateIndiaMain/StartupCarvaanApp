@@ -94,14 +94,14 @@ android:background="@drawable/sellinput"
         android:layout_marginLeft="15dp"
         android:layout_gravity="bottom"
 
-        android:fontFamily="sans-serif-medium"
+
         android:spinnerMode="dialog"
         android:textSize="20sp"
         android:background="@drawable/spinnerbord"
         android:splitMotionEvents="true"
 
         android:textColor="#000000"
-        tools:ignore="RtlCompat" />
+        />
 
     <Button
         android:id="@+id/btn_sell"
