@@ -11,6 +11,21 @@
             >
 
         </item>
+        <item android:id="@+id/profile"
+            android:title="Your Profile"
+            >
+
+        </item>
+        <item android:id="@+id/your_coins"
+            android:title="Your Coins"
+            >
+
+        </item>
+        <item android:id="@+id/privacypolicy"
+            android:title="Term and Conditions"
+            >
+
+        </item>
     </group>
     <group android:checkableBehavior="single">
         <item
