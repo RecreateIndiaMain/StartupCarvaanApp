@@ -16,6 +16,8 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -39,6 +41,7 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile_main);
+        FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
         webView=findViewById(R.id.webview);
         user_image=findViewById(R.id.userImage);
         name=findViewById(R.id.name);
@@ -51,7 +54,7 @@ public class ProfileActivity extends AppCompatActivity {
         address=findViewById(R.id.address);
 
         ff.collection("users")
-                .document("fVL1fk8rYrIONx7qp2pP")
+                .document(user.getUid())
                 .addSnapshotListener(new EventListener<DocumentSnapshot>() {
                     @Override
                     public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {

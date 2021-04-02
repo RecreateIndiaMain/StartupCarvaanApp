@@ -18,6 +18,8 @@ import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -48,6 +50,7 @@ public class CreateProfile extends AppCompatActivity {
         setContentView(R.layout.activity_create_profile);
 
         //edit text declaration
+        FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
         display_name=findViewById(R.id.displayName);
         title=findViewById(R.id.title);
         desc=findViewById(R.id.description);
@@ -58,7 +61,7 @@ public class CreateProfile extends AppCompatActivity {
 
         //getting current user all data from firestore
         ff.collection("users")
-                .document("fVL1fk8rYrIONx7qp2pP")
+                .document(user.getUid())
                 .addSnapshotListener(new EventListener<DocumentSnapshot>() {
                     @Override
                     public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
@@ -187,7 +190,7 @@ public class CreateProfile extends AppCompatActivity {
                 profile.setImageurl(imageurl);
                 profile.setResume(documenturl);
                 ff.collection("users")
-                        .document("fVL1fk8rYrIONx7qp2pP")
+                        .document(user.getUid())
                         .set(profile.giveNewUser());
             }
         });

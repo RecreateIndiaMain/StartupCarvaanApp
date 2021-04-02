@@ -5,34 +5,35 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.ContactsContract;
-import android.renderscript.ScriptGroup;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.SignInButton;
-import com.google.android.gms.common.api.Api;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import recreate.india.main.startupcarvaan.mainActivities.MainActivity;
 import recreate.india.main.startupcarvaan.R;
-import recreate.india.main.startupcarvaan.mainActivities.SplashScreen;
+import recreate.india.main.startupcarvaan.user.profile;
 
 public class loginActivity extends AppCompatActivity {
 
@@ -50,6 +51,8 @@ public class loginActivity extends AppCompatActivity {
     private GoogleSignInClient mGoogleSignInClient;
     private SignInButton signInButton;
     private TextView phonebutton;
+    private User user=new User();
+    private recreate.india.main.startupcarvaan.user.profile profile=new profile();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -135,8 +138,26 @@ public class loginActivity extends AppCompatActivity {
     private void updateUI(FirebaseUser user) {
         if(user!=null){
             mGoogleSignInClient.signOut();
-            startActivity(new Intent(loginActivity.this, MainActivity.class));
-            finish();
+            FirebaseFirestore.getInstance().collection("users").document(user.getUid()).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                    if(!task.getResult().exists()){
+                        FirebaseFirestore.getInstance().collection("users").document(user.getUid()).set(profile.giveNewUser());
+                        Map<String,Double> coins=new HashMap<>();
+                        coins.put("bonus", Double.valueOf(1000));
+                        coins.put("rci", Double.valueOf(0));
+                        coins.put("winnings", Double.valueOf(0));
+                        FirebaseFirestore.getInstance().collection("users").document(user.getUid())
+                                .collection("others").document("coins").set(coins);
+
+                    }
+                    startActivity(new Intent(loginActivity.this,MainActivity.class));
+                    finish();
+                }
+            });
+        }
+        else{
+            Toast.makeText(loginActivity.this,"there is some error in logging into your account",Toast.LENGTH_LONG).show();
         }
     }
 }

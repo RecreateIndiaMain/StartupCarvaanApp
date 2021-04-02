@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import recreate.india.main.startupcarvaan.R;
+import recreate.india.main.startupcarvaan.aboutshare.modals.buy;
 
 public class blogging extends AppCompatActivity {
     private BottomNavigationView bottomNavigationView;
@@ -16,8 +17,13 @@ public class blogging extends AppCompatActivity {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()){
-                case R.id.buy:break;
-                case R.id.sell:break;
+                case R.id.buy:
+                    break;
+                case R.id.sell:
+                    buy buy=new buy();
+                    buy.show(getSupportFragmentManager(),"Dailog buy");
+
+                    break;
             }
             return false;
         }

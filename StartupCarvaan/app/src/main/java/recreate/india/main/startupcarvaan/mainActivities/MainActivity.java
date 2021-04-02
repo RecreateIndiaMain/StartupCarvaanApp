@@ -9,21 +9,26 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Toast;
 import android.widget.Toolbar;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
+import io.paperdb.Paper;
 import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.fragments.allshares.allshares;
 import recreate.india.main.startupcarvaan.fragments.biding.biding;
 import recreate.india.main.startupcarvaan.fragments.mycoins.mycoins;
 import recreate.india.main.startupcarvaan.fragments.myshares.myshares;
 import recreate.india.main.startupcarvaan.fragments.practice.practice;
+import recreate.india.main.startupcarvaan.loginsignup.loginActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
     private BottomNavigationView bnv;
     private NavigationView navigationView;
     private Fragment fragment = null;
@@ -61,15 +66,6 @@ public class MainActivity extends AppCompatActivity {
             return false;
         }
     };
-    private NavigationView.OnNavigationItemSelectedListener drawer=new NavigationView.OnNavigationItemSelectedListener() {
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            switch(item.getItemId()){
-
-            }
-            return true;
-        }
-    };
 
 
     private void switchFragment(Fragment fragment) {
@@ -81,16 +77,31 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Paper.init(MainActivity.this);
         drawerLayout=findViewById(R.id.drawerlayout);
         ActionBar toolbar=this.getSupportActionBar();
         toggle= new ActionBarDrawerToggle(MainActivity.this,drawerLayout,R.string.open,R.string.close);
         drawerLayout.setDrawerListener(toggle);
         toggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        navigationView=findViewById(R.id.n1);
-        navigationView.setNavigationItemSelectedListener(drawer);
+
+
+        navigationView=findViewById(R.id.n11);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch(item.getItemId()){
+                    case R.id.logout:
+                        Toast.makeText(MainActivity.this, "logout working", Toast.LENGTH_SHORT).show();
+                        break;
+                }
+                return true;
+            }
+        });
+
         bnv=findViewById(R.id.main_bottom_nav);
         bnv.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
         switchFragment(new allshares());
         bnv.setSelectedItemId(R.id.allshares);
     }
@@ -100,6 +111,18 @@ public class MainActivity extends AppCompatActivity {
 
             return true;
         }
+        switch(item.getItemId()){
+            case R.id.howtoplay:
+                Toast.makeText(MainActivity.this, "howtoplay working", Toast.LENGTH_SHORT).show();
+                break;
+        }
         return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Paper.book().write("first","true");
+    }
+
 }
