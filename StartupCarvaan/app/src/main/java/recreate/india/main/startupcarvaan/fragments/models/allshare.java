@@ -1,22 +1,48 @@
 package recreate.india.main.startupcarvaan.fragments.models;
 
+import com.google.firebase.Timestamp;
+
 import java.sql.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 public class allshare {
-    private String desc;
-    private Double growth;
-    private String introvideourl,logourl,name;
-    private List<String> tags;
-    private Double users;
+    String advice,description;
+    Map<String, Timestamp> graph;
+    Double growth;
+    String introvideourl,logourl,name;
+    List<String>tags=new ArrayList<>();
+    String type;
+    Double users;
 
-    public String getDesc() {
-        return desc;
+
+    public allshare() {
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public String getAdvice() {
+        return advice;
+    }
+
+    public void setAdvice(String advice) {
+        this.advice = advice;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Map<String, Timestamp> getGraph() {
+        return graph;
+    }
+
+    public void setGraph(Map<String, Timestamp> graph) {
+        this.graph = graph;
     }
 
     public Double getGrowth() {
@@ -59,24 +85,32 @@ public class allshare {
         this.tags = tags;
     }
 
-    public Double getUsers() {
-        return users;
-    }
-
-    public void setUsers(Double users) {
-        this.users = users;
-    }
-
-    public allshare() {
-    }
-
-    public allshare(String desc, Double growth, String introvideourl, String logourl, String name, List<String> tags, Double users) {
-        this.desc = desc;
+    public allshare(String advice, String description, Map<String, Timestamp> graph, Double growth, String introvideourl, String logourl, String name, List<String> tags, String type, Double users) {
+        this.advice = advice;
+        this.description = description;
+        this.graph = graph;
         this.growth = growth;
         this.introvideourl = introvideourl;
         this.logourl = logourl;
         this.name = name;
         this.tags = tags;
+        this.type = type;
+        this.users = users;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public Double getUsers() {
+        return users;
+    }
+
+    public void setUsers(Double users) {
         this.users = users;
     }
 }

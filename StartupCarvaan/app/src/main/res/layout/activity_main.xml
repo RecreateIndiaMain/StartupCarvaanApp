@@ -14,7 +14,7 @@
         android:id="@+id/drawerlayout">
 
         <com.google.android.material.navigation.NavigationView
-            android:id="@+id/n1"
+            android:id="@+id/n11"
             app:headerLayout="@layout/header"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -43,7 +43,7 @@
         app:itemTextColor="#ffffff"
         android:layout_marginBottom="0dp"
         app:itemIconTint="@color/white"
-        android:background="@color/greyish"
+        android:background="@color/yellow"
         app:menu="@menu/bottom_nav_menu">
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 

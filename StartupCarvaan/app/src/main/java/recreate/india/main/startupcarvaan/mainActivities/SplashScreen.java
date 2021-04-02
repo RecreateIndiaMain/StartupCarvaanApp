@@ -1,26 +1,17 @@
 package recreate.india.main.startupcarvaan.mainActivities;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.View;
 import android.widget.Button;
 
-import com.google.android.gms.auth.api.signin.GoogleSignIn;
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
-import com.google.android.gms.auth.api.signin.GoogleSignInClient;
-import com.google.android.gms.auth.api.signin.SignInAccount;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 
 import io.paperdb.Paper;
 import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.loginsignup.loginActivity;
-import recreate.india.main.startupcarvaan.user.User;
 
 public class SplashScreen extends AppCompatActivity {
     private Button logout;
@@ -45,18 +36,17 @@ public class SplashScreen extends AppCompatActivity {
 
     }
     private void gotonextpage() {
-        if(Paper.book().contains("isFirst")){
-            if(user.getUser()!=null){
-                startActivity(new Intent(SplashScreen.this, MainActivity.class));
-                finish();
-            }
-            else{
-                startActivity(new Intent(SplashScreen.this, recreate.india.main.startupcarvaan.loginsignup.loginActivity.class));
-                finish();
-            }
+        Paper.book().write("version","1.20");
+        if(FirebaseAuth.getInstance().getCurrentUser()!=null){
+            startActivity(new Intent(SplashScreen.this,MainActivity.class));
+            finish();
         }
-        else {
-            startActivity(new Intent(SplashScreen.this, IntroSliderActivity.class));
+        else if(Paper.book().read("first")=="true") {
+            startActivity(new Intent(SplashScreen.this, loginActivity.class));
+            finish();
+        }
+        else{
+            startActivity(new Intent(SplashScreen.this,IntroSliderActivity.class));
             finish();
         }
     }
@@ -64,7 +54,6 @@ public class SplashScreen extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        Paper.book().write("version","1.20");
     }
         // COMMENTED OUT LOGOUT CODE FOR NOW
 //        logout=findViewById(R.id.logout);

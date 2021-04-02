@@ -10,7 +10,6 @@ public class coin {
     public void setBonus(Number bonus) {
         this.bonus = bonus;
     }
-
     public Number getRci() {
         return rci;
     }
@@ -32,7 +31,6 @@ public class coin {
         this.rci = rci;
         this.winnings = winnings;
     }
-
     public coin() {
     }
 }
