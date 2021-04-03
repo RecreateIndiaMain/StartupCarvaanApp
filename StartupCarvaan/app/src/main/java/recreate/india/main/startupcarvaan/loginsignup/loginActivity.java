@@ -51,7 +51,6 @@ public class loginActivity extends AppCompatActivity {
     private GoogleSignInClient mGoogleSignInClient;
     private SignInButton signInButton;
     private TextView phonebutton;
-    private User user=new User();
     private recreate.india.main.startupcarvaan.user.profile profile=new profile();
     @Override
     protected void onCreate(Bundle savedInstanceState) {

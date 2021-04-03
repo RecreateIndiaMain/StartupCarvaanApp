@@ -1,14 +1,350 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.mycoins.mycoins">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="these are my coins" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:weightsum="2">
 
+                <androidx.cardview.widget.CardView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="16dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/purple_500"
+                    app:cardCornerRadius="50dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="16dp"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ProgressBar
+                                    android:id="@+id/progress_bar"
+                                    style="?android:progressBarStyleHorizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="120dp"
+                                    android:layout_gravity="center"
+                                    android:progress="80"
+                                    android:progressDrawable="@drawable/circle"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintRight_toRightOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"></ProgressBar>
+
+                                <TextView
+                                    android:id="@+id/text_view_progress"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                    android:textColor="@color/white"
+                                    app:layout_constraintBottom_toBottomOf="@+id/progress_bar"
+                                    app:layout_constraintEnd_toEndOf="@+id/progress_bar"
+                                    app:layout_constraintStart_toStartOf="@+id/progress_bar"
+                                    app:layout_constraintTop_toTopOf="@+id/progress_bar"
+                                    tools:text="60%" />
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginVertical="16dp"
+                            android:layout_weight="2"
+                            android:orientation="vertical"
+                            android:weightSum="2">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="My Portfolio"
+                                    android:textColor="@color/white"
+                                    android:textSize="30sp">
+
+                                </TextView>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="32dp"
+                                        android:layout_marginTop="32dp"
+                                        android:text="Balance"
+                                        android:textColor="@color/white"
+                                        android:textSize="22sp">
+
+
+                                    </TextView>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="32dp"
+                                        android:text="32$"
+                                        android:textColor="@color/white"
+                                        android:textSize="20sp">
+
+
+                                    </TextView>
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="32dp"
+                                        android:layout_marginTop="32dp"
+                                        android:text="Balance"
+                                        android:textColor="@color/white"
+                                        android:textSize="22sp">
+
+
+                                    </TextView>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="32dp"
+                                        android:text="32$"
+                                        android:textColor="@color/white"
+                                        android:textSize="20sp">
+
+
+                                    </TextView>
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="16dp"
+                    android:layout_weight="1"
+                    android:background="#000"
+                    android:padding="16dp"
+                    app:cardBackgroundColor="@android:color/holo_red_light"
+                    app:cardCornerRadius="50dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="16dp"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+
+                                <ProgressBar
+                                    android:id="@+id/progress_bar1"
+                                    style="?android:progressBarStyleHorizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="120dp"
+                                    android:layout_gravity="center"
+                                    android:progress="80"
+                                    android:progressDrawable="@drawable/circle"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintRight_toRightOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                                <TextView
+                                    android:id="@+id/text_view_progress1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                    android:textColor="@color/white"
+                                    app:layout_constraintBottom_toBottomOf="@+id/progress_bar1"
+                                    app:layout_constraintEnd_toEndOf="@+id/progress_bar1"
+                                    app:layout_constraintStart_toStartOf="@+id/progress_bar1"
+                                    app:layout_constraintTop_toTopOf="@+id/progress_bar1"
+                                    tools:text="60%" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginVertical="16dp"
+                            android:layout_weight="2"
+                            android:orientation="vertical"
+                            android:weightSum="2">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="My Portfolio"
+                                    android:textColor="@color/white"
+                                    android:textSize="30sp">
+
+                                </TextView>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="32dp"
+                                        android:layout_marginTop="32dp"
+                                        android:text="Balance"
+                                        android:textColor="@color/white"
+                                        android:textSize="22sp">
+
+
+                                    </TextView>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="32dp"
+                                        android:text="32$"
+                                        android:textColor="@color/white"
+                                        android:textSize="20sp">
+
+
+                                    </TextView>
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="32dp"
+                                        android:layout_marginTop="32dp"
+                                        android:text="Balance"
+                                        android:textColor="@color/white"
+                                        android:textSize="22sp">
+
+
+                                    </TextView>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="32dp"
+                                        android:text="32$"
+                                        android:textColor="@color/white"
+                                        android:textSize="20sp">
+
+
+                                    </TextView>
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
 </FrameLayout>

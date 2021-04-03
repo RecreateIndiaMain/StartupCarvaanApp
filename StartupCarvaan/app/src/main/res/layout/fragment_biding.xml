@@ -7,10 +7,12 @@
     android:background="@color/grey">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/bidingrecyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 
-        android:text="bid here and find some rewards" />
+        tools:listitem="@layout/z_single_biding">
+    </androidx.recyclerview.widget.RecyclerView>
 
 </FrameLayout>

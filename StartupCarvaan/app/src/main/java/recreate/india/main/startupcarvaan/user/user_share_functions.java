@@ -11,10 +11,9 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.SplittableRandom;
 
 import recreate.india.main.startupcarvaan.fragments.models.allshare;
-import recreate.india.main.startupcarvaan.fragments.myshares.holdings;
+import recreate.india.main.startupcarvaan.fragments.models.holdings;
 
 public class user_share_functions {
     private FirebaseFirestore ff=FirebaseFirestore.getInstance();

@@ -9,7 +9,7 @@
     <item
         android:id="@+id/myshares"
         android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="@string/allshares" />
+        android:title="@string/myshares" />
 
     <item
         android:id="@+id/practice"

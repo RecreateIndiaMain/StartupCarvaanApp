@@ -1,4 +1,4 @@
-package recreate.india.main.startupcarvaan.fragments.myshares;
+package recreate.india.main.startupcarvaan.fragments.models;
 
 import java.util.HashMap;
 import java.util.Map;

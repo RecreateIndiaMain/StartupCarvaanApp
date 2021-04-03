@@ -1,16 +1,16 @@
-package recreate.india.main.startupcarvaan.fragments.practice.model;
+package recreate.india.main.startupcarvaan.fragments.models;
 
 public class practicemodel {
 
-    private Number currentvotes;
+    private Double currentvotes;
     private String  description,introvideourl,logourl,name;
-    private Number neededvotes;
+    private Double neededvotes;
 
-    public Number getCurrentvotes() {
+    public Double getCurrentvotes() {
         return currentvotes;
     }
 
-    public void setCurrentvotes(Number currentvotes) {
+    public void setCurrentvotes(Double currentvotes) {
         this.currentvotes = currentvotes;
     }
 
@@ -46,15 +46,15 @@ public class practicemodel {
         this.name = name;
     }
 
-    public Number getNeededvotes() {
+    public Double getNeededvotes() {
         return neededvotes;
     }
 
-    public void setNeededvotes(Number neededvotes) {
+    public void setNeededvotes(Double neededvotes) {
         this.neededvotes = neededvotes;
     }
 
-    public practicemodel(Number currentvotes, String description, String introvideourl, String logourl, String name, Number neededvotes) {
+    public practicemodel(Double currentvotes, String description, String introvideourl, String logourl, String name, Double neededvotes) {
         this.currentvotes = currentvotes;
         this.description = description;
         this.introvideourl = introvideourl;

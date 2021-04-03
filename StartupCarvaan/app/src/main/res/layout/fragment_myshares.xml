@@ -6,9 +6,11 @@
     tools:context=".fragments.myshares.myshares">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mysharerecyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="this is my shares" />
+        tools:listitem="@layout/z_single_myshare">
+    </androidx.recyclerview.widget.RecyclerView>
 
 </FrameLayout>

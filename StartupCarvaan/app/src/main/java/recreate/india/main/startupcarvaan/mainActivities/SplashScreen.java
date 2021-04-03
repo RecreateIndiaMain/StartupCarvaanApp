@@ -15,7 +15,6 @@ import recreate.india.main.startupcarvaan.loginsignup.loginActivity;
 
 public class SplashScreen extends AppCompatActivity {
     private Button logout;
-    public User user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // WRITTEN BY VISHNU
