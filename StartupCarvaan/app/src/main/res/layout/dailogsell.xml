@@ -35,7 +35,7 @@
             android:gravity="right"
             android:text="$ 2.15"
             android:textColor="#E8D63C"
-            android:textSize="55sp" />
+            android:textSize="45sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -55,7 +55,7 @@
         android:background="#000000" />
 
     <TextView
-        android:id="@+id/totalsharestobuy"
+        android:id="@+id/totalsharestosell"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -73,7 +73,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
 
-        android:text="Price:20"
+        android:text="Price:"
         android:textColor="#FFFFFF"
         android:textSize="20sp" />
 
@@ -96,7 +96,9 @@
         android:layout_marginBottom="20dp"
         android:background="@drawable/sellinput"
         android:gravity="center"
-        android:text="20"
+        android:text=""
+        android:hint="20"
+        android:textColorHint="#ffffff"
         android:inputType="number"
         android:textColor="#ffffff" />
     <Spinner

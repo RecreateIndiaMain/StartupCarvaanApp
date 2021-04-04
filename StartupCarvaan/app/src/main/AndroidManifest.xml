@@ -15,7 +15,6 @@
         android:roundIcon="@drawable/startupcarvaanlogo"
         android:supportsRtl="true"
         android:theme="@style/Theme.StartupCarvaan">
-        <activity android:name=".CardViewActivity"></activity>
         <activity android:name=".coin_exchange.buy_rci" />
         <activity android:name=".payments.UpiPaymentActivity" />
         <activity android:name=".payments.payinActivity" />
@@ -28,24 +27,21 @@
             android:parentActivityName=".loginsignup.loginActivity" />
         <activity
             android:name=".user.ProfileActivity"
-            android:parentActivityName=".user.CreateProfile">
-            \
-        </activity>
+            android:parentActivityName=".user.CreateProfile" />
         <activity
             android:name=".aboutshare.blogging"
             android:parentActivityName=".mainActivities.MainActivity" />
-        <activity android:name=".mainActivities.MainActivity"></activity>
+        <activity android:name=".mainActivities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
         <activity android:name=".mainActivities.PrivacyPolicy" />
         <activity
             android:name=".loginsignup.loginActivity"
             android:theme="@style/Theme.StartupCarvaan.Fullscreen" />
-        <activity android:name=".mainActivities.SplashScreen">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".mainActivities.SplashScreen" />
     </application>
 
 </manifest>

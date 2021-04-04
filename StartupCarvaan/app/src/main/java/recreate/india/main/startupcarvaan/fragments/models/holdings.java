@@ -4,20 +4,20 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class holdings {
-    Map<String,Double> share=new HashMap<>();
+    Map<String,Double> holdings=new HashMap<>();
 
-    public Map<String, Double> getShare() {
-        return share;
+    public Map<String, Double> getHoldings() {
+        return holdings;
     }
 
-    public void setShare(Map<String, Double> share) {
-        this.share = share;
+    public void setHoldings(Map<String, Double> holdings) {
+        this.holdings = holdings;
     }
 
     public holdings() {
     }
 
-    public holdings(Map<String, Double> share) {
-        this.share = share;
+    public holdings(Map<String, Double> holdings) {
+        this.holdings = holdings;
     }
 }

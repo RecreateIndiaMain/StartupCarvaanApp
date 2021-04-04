@@ -8,4 +8,5 @@ public class user {
     public FirebaseUser user(){
         return FirebaseAuth.getInstance().getCurrentUser();
     }
+
 }

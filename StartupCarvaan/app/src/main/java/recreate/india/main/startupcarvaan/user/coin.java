@@ -42,18 +42,6 @@ public class coin {
     }
 
     public coin() {
-        final DocumentSnapshot[] dc = new DocumentSnapshot[1];
-        FirebaseFirestore.getInstance().collection("users")
-                .document(new user().user().getUid())
-                .collection("others").document("coins")
-                .addSnapshotListener(new EventListener<DocumentSnapshot>() {
-                    @Override
-                    public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                        dc[0] =value;
-                    }
-                });
-        this.bonus=Double.valueOf(dc[0].getString("bonus"));
-        this.rci=Double.valueOf(dc[0].getString("rci"));
-        this.winnings=Double.valueOf(dc[0].getString("winnings"));
-        }
+
+    }
 }

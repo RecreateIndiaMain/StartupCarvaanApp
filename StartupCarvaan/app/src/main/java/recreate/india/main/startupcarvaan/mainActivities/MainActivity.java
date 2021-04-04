@@ -66,7 +66,19 @@ public class MainActivity extends AppCompatActivity{
             return false;
         }
     };
+    private NavigationView.OnNavigationItemSelectedListener mOnDNavigationItemSelectedListener
+            = new NavigationView.OnNavigationItemSelectedListener() {
 
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            switch (item.getItemId()) {
+                case R.id.logout:
+                    Toast.makeText(MainActivity.this, "logout done", Toast.LENGTH_SHORT).show();
+                    break;
+            }
+            return false;
+        }
+    };
 
     private void switchFragment(Fragment fragment) {
         fragmentTransaction = getSupportFragmentManager().beginTransaction();
@@ -78,32 +90,21 @@ public class MainActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Paper.init(MainActivity.this);
-        drawerLayout=findViewById(R.id.drawerlayout);
-        ActionBar toolbar=this.getSupportActionBar();
-        toggle= new ActionBarDrawerToggle(MainActivity.this,drawerLayout,R.string.open,R.string.close);
-        drawerLayout.setDrawerListener(toggle);
-        toggle.syncState();
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
         navigationView=findViewById(R.id.n11);
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch(item.getItemId()){
-                    case R.id.logout:
-                        Toast.makeText(MainActivity.this, "logout working", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                return true;
-            }
-        });
+        navigationView.setNavigationItemSelectedListener(mOnDNavigationItemSelectedListener);
 
         bnv=findViewById(R.id.main_bottom_nav);
         bnv.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         switchFragment(new allshares());
         bnv.setSelectedItemId(R.id.allshares);
+        drawerLayout=findViewById(R.id.drawerlayout);
+        toggle= new ActionBarDrawerToggle(this,drawerLayout,R.string.open,R.string.close);
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
