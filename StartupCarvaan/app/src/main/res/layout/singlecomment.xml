@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#FFFFFF"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/vsm_coin">
+
+        </de.hdodenhof.circleimageview.CircleImageView>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <TextView
+            android:textSize="17dp"
+
+
+            android:layout_marginLeft="16dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="username :">
+        </TextView>
+            <TextView
+                android:textSize="1dp"
+
+android:layout_marginTop="3dp"
+                android:layout_marginLeft="16dp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3 hrs ago">
+            </TextView>
+    </LinearLayout>
+
+
+    </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="8dp"
+            android:textSize="15dp"
+            android:layout_marginBottom="12dp"
+            android:text="ytfdsfyusdcrcrcf"
+            android:textColor="@color/black"
+            />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
