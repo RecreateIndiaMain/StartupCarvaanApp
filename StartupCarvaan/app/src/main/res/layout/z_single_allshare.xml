@@ -14,29 +14,23 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+android:background="@color/grey"
 
-        android:background="@color/grey"
         android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#ffffff">
+       >
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="160dp"
                 android:id="@+id/colorlayout"
                 android:background="#FF59B563"
                 android:visibility="visible"
                 android:orientation="vertical" />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:id="@+id/colorlayoutafter"
-                android:background="#FF59B563"
-                android:visibility="gone"
-                android:orientation="vertical" />
+
 
 
             <RelativeLayout
@@ -46,10 +40,10 @@
 
                 <ImageView
                     android:id="@+id/companylogo"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:layout_marginLeft="25dp"
-                    android:layout_marginTop="25dp"
+                    android:layout_marginTop="16dp"
                     android:src="@drawable/logonew" />
 
 
@@ -70,17 +64,6 @@
 
                         android:src="@drawable/ic_baseline_arrow_drop_down_circle_24" />
 
-                    <TextView
-                        android:id="@+id/group"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="5dp"
-                        android:text="Group"
-                        android:textColor="@color/white"
-
-                        android:textSize="17sp" />
 
 
                 </LinearLayout>
@@ -91,7 +74,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/loglayout"
-                android:layout_marginRight="20dp"
+                android:layout_marginRight="15dp"
 
                 android:gravity="right"
                 android:orientation="vertical">
@@ -113,6 +96,27 @@
                         android:textColor="@color/white"
                         android:textSize="20sp"
                         android:textStyle="bold" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:gravity="right"
+
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/group"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Group"
+                            android:textColor="@color/white"
+
+                            android:textSize="17sp" />
+
+
+                    </LinearLayout>
 
 
                 </LinearLayout>
@@ -136,7 +140,7 @@
                 <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
                     android:layout_width="match_parent"
 
-                    android:layout_height="160dp" />
+                    android:layout_height="180dp" />
             </LinearLayout>
 
         </RelativeLayout>
