@@ -9,12 +9,13 @@
         android:targetSdkVersion="30" />
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <uses-feature
         android:name="android.hardware.camera"
         android:required="false" />
 
-    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
@@ -28,15 +29,18 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.StartupCarvaan" >
-        <activity android:name="recreate.india.main.startupcarvaan.lalaactivity" >
+        <activity android:name="recreate.india.main.startupcarvaan.payments.payout" >
+        </activity>
+        <activity android:name="recreate.india.main.startupcarvaan.payments.payin" >
+        </activity>
+        <activity android:name="recreate.india.main.startupcarvaan.Helppage" >
         </activity>
         <activity android:name="recreate.india.main.startupcarvaan.coin_exchange.buy_rci" />
-        <activity android:name="recreate.india.main.startupcarvaan.payments.UpiPaymentActivity" />
-        <activity android:name="recreate.india.main.startupcarvaan.payments.payinActivity" />
         <activity android:name="recreate.india.main.startupcarvaan.mainActivities.IntroSliderActivity" />
         <activity
             android:name="recreate.india.main.startupcarvaan.user.CreateProfile"
-            android:parentActivityName="recreate.india.main.startupcarvaan.user.ProfileActivity" />
+            android:parentActivityName="recreate.india.main.startupcarvaan.user.ProfileActivity" >
+        </activity>
         <activity
             android:name="recreate.india.main.startupcarvaan.loginsignup.PhoneAuthActivity"
             android:parentActivityName="recreate.india.main.startupcarvaan.loginsignup.loginActivity" />
@@ -47,17 +51,21 @@
             android:name="recreate.india.main.startupcarvaan.aboutshare.blogging"
             android:parentActivityName="recreate.india.main.startupcarvaan.mainActivities.MainActivity" />
         <activity android:name="recreate.india.main.startupcarvaan.mainActivities.MainActivity" >
+        </activity>
+        <activity android:name="recreate.india.main.startupcarvaan.mainActivities.PrivacyPolicy" />
+        <activity
+            android:name="recreate.india.main.startupcarvaan.loginsignup.loginActivity"
+            android:theme="@style/Theme.StartupCarvaan.Fullscreen" />
+        <activity android:name="recreate.india.main.startupcarvaan.mainActivities.SplashScreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="recreate.india.main.startupcarvaan.mainActivities.PrivacyPolicy" />
         <activity
-            android:name="recreate.india.main.startupcarvaan.loginsignup.loginActivity"
-            android:theme="@style/Theme.StartupCarvaan.Fullscreen" />
-        <activity android:name="recreate.india.main.startupcarvaan.mainActivities.SplashScreen" />
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
         <activity
             android:name="com.shreyaspatil.EasyUpiPayment.ui.PaymentUiActivity"
             android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />

@@ -5,12 +5,9 @@ import android.app.Dialog;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,20 +16,17 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.aboutshare.models.sharedetails;
 import recreate.india.main.startupcarvaan.fragments.models.sharefunctions;
-import recreate.india.main.startupcarvaan.user.coin;
+import recreate.india.main.startupcarvaan.fragments.mycoins.coin;
 import recreate.india.main.startupcarvaan.user.user_share_functions;
 import recreate.india.main.startupcarvaan.user.userfunctions;
 
@@ -86,29 +80,28 @@ public class buy extends DialogFragment {
         // retrieving coin details
         FirebaseFirestore.getInstance()
                 .collection("users")
-                .document("tupjdAJB8JcfMdzqc4P5iRIg0XE2")
+                .document(FirebaseAuth.getInstance().getCurrentUser().getUid())
                 .collection("others").document("coins").addSnapshotListener(new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
                 coin=value.toObject(coin.class);
-                Toast.makeText(getContext(), String.valueOf(coin.getRci()), Toast.LENGTH_SHORT).show();
             }
         });
 
         buy_now.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Double share_price=Double.valueOf(sharedetails.getBuyingprice());
-                Double quantity=Double.valueOf(no_of_shares.getText().toString());
+                Integer share_price=Integer.valueOf(sharedetails.getBuyingprice());
+                Integer quantity=Integer.valueOf(no_of_shares.getText().toString());
                 if(quantity<=sharedetails.getAvailableforbuying()) {
-                    Double resultant_price=share_price*quantity;
+                    Integer resultant_price=share_price*quantity;
                     if(resultant_price>coin.getRci()){
                         Toast.makeText(getContext(), "you do not have sufficient funds, please add some", Toast.LENGTH_SHORT).show();
                     }
                     else{
                         // checking is user already a investor
                         FirebaseFirestore.getInstance().collection("users")
-                                .document("tupjdAJB8JcfMdzqc4P5iRIg0XE2")
+                                .document(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                 .collection("myshares")
                                 .document("shareid").get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                             @Override
@@ -118,6 +111,7 @@ public class buy extends DialogFragment {
                                     sharefunctions.removeAvailableBuy("shareid",sharedetails.getAvailableforbuying(),quantity);
                                     sharefunctions.addSell("shareid",sharedetails.getAvailableforselling(),quantity);
                                     userfunctions.removeRci(coin.getRci(),resultant_price);
+                                    userfunctions.addPoints(.1*resultant_price);
                                 }
                                 else{
                                     usersharefunctions.addNewShare("shareid",share_price,quantity);
@@ -125,7 +119,9 @@ public class buy extends DialogFragment {
                                     sharefunctions.removeAvailableBuy("shareid",sharedetails.getAvailableforbuying(),quantity);
                                     sharefunctions.addSell("shareid",sharedetails.getAvailableforselling(),quantity);
                                     userfunctions.removeRci(coin.getRci(),resultant_price);
+                                    userfunctions.addPoints(.1*resultant_price);
                                 }
+                                dismiss();
                             }
                         });
                     }

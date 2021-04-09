@@ -25,17 +25,16 @@ import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
 import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.aboutshare.models.sharedetails;
-import recreate.india.main.startupcarvaan.fragments.models.holdings;
-import recreate.india.main.startupcarvaan.user.coin;
+import recreate.india.main.startupcarvaan.fragments.models.sharefunctions;
+import recreate.india.main.startupcarvaan.fragments.myshares.holdings;
+import recreate.india.main.startupcarvaan.fragments.mycoins.coin;
+import recreate.india.main.startupcarvaan.user.user;
 import recreate.india.main.startupcarvaan.user.user_share_functions;
 import recreate.india.main.startupcarvaan.user.userfunctions;
 
@@ -50,6 +49,7 @@ public class sell extends DialogFragment {
     String share_;
     private sharedetails sharedetails=new sharedetails();
     private userfunctions userfunctions=new userfunctions();
+    private sharefunctions sharefunctions=new sharefunctions();
     private coin coin=new coin();
     private user_share_functions user_share_functions=new user_share_functions();
 
@@ -72,14 +72,14 @@ public class sell extends DialogFragment {
         //retrieve holdings
         FirebaseFirestore.getInstance()
                 .collection("users")
-                .document("tupjdAJB8JcfMdzqc4P5iRIg0XE2")
+                .document(new user().user().getUid())
                 .collection("myshares")
                 .document("shareid").addSnapshotListener(new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
                 holdings=value.toObject(holdings.class);
-                Map<String,Double>holding=holdings.getHoldings();
-                for (Map.Entry<String,Double> entry : holding.entrySet())
+                Map<String,Integer>holding=holdings.getHoldings();
+                for (Map.Entry<String,Integer> entry : holding.entrySet())
                     list.add(String.valueOf(entry.getKey()+" : "+entry.getValue()));
             }
         });
@@ -88,19 +88,18 @@ public class sell extends DialogFragment {
                 .collection("allshares")
                 .document("shareid")
                 .collection("sharedetails")
-                .document("sharedetails").get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                .document("sharedetails").addSnapshotListener(new EventListener<DocumentSnapshot>() {
             @Override
-            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                sharedetails=task.getResult().toObject(sharedetails.class);
+            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                sharedetails=value.toObject(sharedetails.class);
                 available.setText("Available :"+String.valueOf(sharedetails.getAvailableforselling()));
                 price_of_share.setText(sharedetails.getSellingprice()+" rci");
             }
         });
-
         // retrieving coin details
         FirebaseFirestore.getInstance()
                 .collection("users")
-                .document("tupjdAJB8JcfMdzqc4P5iRIg0XE2")
+                .document(new user().user().getUid())
                 .collection("others").document("coins").addSnapshotListener(new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
@@ -114,7 +113,6 @@ public class sell extends DialogFragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (parent.getItemAtPosition(position).equals("price : no of shares")) {
-
                 } else {
                     item = parent.getItemAtPosition(position).toString();
                     int i;
@@ -124,7 +122,7 @@ public class sell extends DialogFragment {
                         }
                         price_+=item.charAt(i);
                     }
-                    i+=2;
+                    i+=3    ;
                     share_=item.substring(i,item.length());
                     price.setText("price: "+price_);
                     share.setText(share_);
@@ -134,21 +132,32 @@ public class sell extends DialogFragment {
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
-
             }
         });
         btnsell.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Double price=Double.valueOf(price_);
-                Double quantity=Double.valueOf(share.getText().toString());
-                if(quantity>Double.valueOf(holdings.getHoldings().get(price_)))
-                    Toast.makeText(getContext(), "do not have "+ quantity + " shares for price "+price_, Toast.LENGTH_SHORT).show();
-                else{
-                    Double resultant_price=price*quantity;
-                    userfunctions.addRci(coin.getRci(),resultant_price);
-                    user_share_functions.removeSomeShares("shareid",quantity,price);
-
+                if(price_.equals(""))
+                    Toast.makeText(getContext(), "please select one holding", Toast.LENGTH_SHORT).show();
+                else {
+                    String quan=share.getText().toString();
+                    if(quan.equals(""))
+                        Toast.makeText(getContext(), "please select a amount", Toast.LENGTH_SHORT).show();
+                    else{
+                        Integer price=Integer.valueOf(String.valueOf(price_));
+                        Integer quantity=Integer.valueOf(String.valueOf(share.getText().toString()));
+                        if(quantity>Double.valueOf(holdings.getHoldings().get(price_)))
+                            Toast.makeText(getContext(), "do not have "+ quantity + " shares for price "+price_, Toast.LENGTH_SHORT).show();
+                        else{
+                            list.clear();
+                            Integer resultant_price=price*quantity;
+                            userfunctions.addRci(coin.getRci(),resultant_price);
+                            user_share_functions.removeSomeShares("shareid",quantity,price);
+                            sharefunctions.removeAvailableSell("shareid",sharedetails.getAvailableforselling(),quantity);
+                            sharefunctions.addBuy("shareid",sharedetails.getAvailableforbuying(),quantity);
+                            dismiss();
+                        }
+                    }
                 }
             }
         });
