@@ -25,6 +25,8 @@ import com.google.firebase.auth.PhoneAuthProvider;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import org.apache.commons.codec.language.bm.PhoneticEngine;
+
 import java.sql.Time;
 import java.util.HashMap;
 import java.util.Map;
@@ -32,6 +34,7 @@ import java.util.concurrent.TimeUnit;
 
 import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.mainActivities.MainActivity;
+import recreate.india.main.startupcarvaan.user.CreateProfile;
 import recreate.india.main.startupcarvaan.user.profile;
 
 public class PhoneAuthActivity extends AppCompatActivity {
@@ -96,8 +99,7 @@ public class PhoneAuthActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    startActivity(new Intent(PhoneAuthActivity.this,MainActivity.class));
-                    finish();
+                    updateUI(firebaseAuth.getCurrentUser());
                 }
             }
         });
@@ -130,9 +132,13 @@ public class PhoneAuthActivity extends AppCompatActivity {
                         coins.put("winnings", Double.valueOf(0));
                         FirebaseFirestore.getInstance().collection("users").document(user.getUid())
                                 .collection("others").document("coins").set(coins);
+                        startActivity(new Intent(PhoneAuthActivity.this, CreateProfile.class));
+                        finish();
                     }
-                    startActivity(new Intent(PhoneAuthActivity.this, MainActivity.class));
-                    finish();
+                    else {
+                        startActivity(new Intent(PhoneAuthActivity.this, MainActivity.class));
+                        finish();
+                    }
                 }
             });
         } else {

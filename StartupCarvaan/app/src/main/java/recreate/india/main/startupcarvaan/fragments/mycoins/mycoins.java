@@ -1,66 +1,77 @@
 package recreate.india.main.startupcarvaan.fragments.mycoins;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
+
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+
+import org.w3c.dom.Text;
 
 import recreate.india.main.startupcarvaan.R;
+import recreate.india.main.startupcarvaan.payments.payin;
+import recreate.india.main.startupcarvaan.payments.payout;
+import recreate.india.main.startupcarvaan.user.user;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link mycoins#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class mycoins extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
+    private TextView rci,bonus,winnings;
+    private Button buy,sell;
     public mycoins() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment mycoins.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static mycoins newInstance(String param1, String param2) {
-        mycoins fragment = new mycoins();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_mycoins, container, false);
+        View view= inflater.inflate(R.layout.fragment_mycoins, container, false);
+        rci=view.findViewById(R.id.rci);
+        bonus=view.findViewById(R.id.bonus);
+        winnings=view.findViewById(R.id.winnings);
+        buy=view.findViewById(R.id.buy);
+        sell=view.findViewById(R.id.sell);
+        FirebaseFirestore.getInstance().collection("users").document(new user().user().getUid()).collection("others").document("coins")
+                .addSnapshotListener(new EventListener<DocumentSnapshot>() {
+                    @Override
+                    public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                        coin coin=new coin();
+                        coin=value.toObject(coin.class);
+                        rci.setText(String.valueOf(coin.getRci()));
+                        bonus.setText(String.valueOf(coin.getBonus()));
+                        winnings.setText(String.valueOf(coin.getWinnings()));
+                    }
+                });
+        buy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), payin.class));
+            }
+        });
+        sell.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), payout.class));
+            }
+        });
+        return view;
     }
 }

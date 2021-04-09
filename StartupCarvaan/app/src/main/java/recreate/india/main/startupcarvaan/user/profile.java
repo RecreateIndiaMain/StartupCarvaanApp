@@ -7,7 +7,7 @@ public class profile {
     private String address="your address";
     private String description="your description here";
     private String email="your professional email";
-    private String imageurl="/users/image";
+    private String imageurl="/userprofile.png";
     private String name="display name";
     private String phone="your phone number";
     private Double points=0.0;
