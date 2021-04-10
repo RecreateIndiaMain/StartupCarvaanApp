@@ -17,12 +17,19 @@
         android:roundIcon="@drawable/startupcarvaanlogo"
         android:supportsRtl="true"
         android:theme="@style/Theme.StartupCarvaan">
+<<<<<<< HEAD
+        <activity android:name=".mainActivities.RecyclerActivity"></activity>
+        <activity android:name=".CardViewActivity" />
+||||||| f720409
+        <activity android:name=".CardViewActivity"></activity>
+=======
         <activity android:name=".payments.payout">
         </activity>
         <activity android:name=".payments.payin">
         </activity>
         <activity android:name=".Helppage">
         </activity>
+>>>>>>> 563d894c1bc64ea9514176600a9745bd1ea0979a
         <activity android:name=".coin_exchange.buy_rci" />
         <activity android:name=".mainActivities.IntroSliderActivity" />
         <activity
@@ -38,9 +45,15 @@
         <activity
             android:name=".aboutshare.blogging"
             android:parentActivityName=".mainActivities.MainActivity" />
+<<<<<<< HEAD
+        <activity android:name=".mainActivities.MainActivity" />
+||||||| f720409
+        <activity android:name=".mainActivities.MainActivity"></activity>
+=======
         <activity android:name=".mainActivities.MainActivity">
 
         </activity>
+>>>>>>> 563d894c1bc64ea9514176600a9745bd1ea0979a
         <activity android:name=".mainActivities.PrivacyPolicy" />
         <activity
             android:name=".loginsignup.loginActivity"
