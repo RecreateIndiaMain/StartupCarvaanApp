@@ -15,7 +15,8 @@
         android:roundIcon="@drawable/startupcarvaanlogo"
         android:supportsRtl="true"
         android:theme="@style/Theme.StartupCarvaan">
-        <activity android:name=".CardViewActivity"></activity>
+        <activity android:name=".mainActivities.RecyclerActivity"></activity>
+        <activity android:name=".CardViewActivity" />
         <activity android:name=".coin_exchange.buy_rci" />
         <activity android:name=".payments.UpiPaymentActivity" />
         <activity android:name=".payments.payinActivity" />
@@ -34,7 +35,7 @@
         <activity
             android:name=".aboutshare.blogging"
             android:parentActivityName=".mainActivities.MainActivity" />
-        <activity android:name=".mainActivities.MainActivity"></activity>
+        <activity android:name=".mainActivities.MainActivity" />
         <activity android:name=".mainActivities.PrivacyPolicy" />
         <activity
             android:name=".loginsignup.loginActivity"
