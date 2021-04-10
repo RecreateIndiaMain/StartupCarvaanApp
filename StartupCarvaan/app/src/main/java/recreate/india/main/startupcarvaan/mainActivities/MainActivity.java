@@ -27,6 +27,7 @@ import recreate.india.main.startupcarvaan.fragments.mycoins.mycoins;
 import recreate.india.main.startupcarvaan.fragments.myshares.myshares;
 import recreate.india.main.startupcarvaan.fragments.practice.practice;
 import recreate.india.main.startupcarvaan.loginsignup.loginActivity;
+import recreate.india.main.startupcarvaan.user.ProfileActivity;
 
 public class MainActivity extends AppCompatActivity{
     private BottomNavigationView bnv;
@@ -36,6 +37,8 @@ public class MainActivity extends AppCompatActivity{
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle toggle;
 
+
+    // drawer bottom navigation menu
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -66,6 +69,33 @@ public class MainActivity extends AppCompatActivity{
             return false;
         }
     };
+    //drawer navigation
+    private NavigationView.OnNavigationItemSelectedListener mOnDNavigationItemSelectedListener
+            = new NavigationView.OnNavigationItemSelectedListener() {
+
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            switch (item.getItemId()) {
+                case R.id.logout:
+                    FirebaseAuth.getInstance().signOut();
+                    startActivity(new Intent(MainActivity.this,loginActivity.class));
+                    finish();
+                    break;
+                case R.id.howtoplay:
+//                    startActivity(new Intent(MainActivity.this,loginActivity.class));
+                    Toast.makeText(MainActivity.this, "how to play", Toast.LENGTH_SHORT).show();
+                    finish();
+                    break;
+                case R.id.profile:
+
+                    startActivity(new Intent(MainActivity.this, ProfileActivity.class));
+                    finish();
+                    break;
+            }
+            return false;
+        }
+    };
+
 
 
     private void switchFragment(Fragment fragment) {
@@ -78,32 +108,19 @@ public class MainActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Paper.init(MainActivity.this);
-        drawerLayout=findViewById(R.id.drawerlayout);
-        ActionBar toolbar=this.getSupportActionBar();
-        toggle= new ActionBarDrawerToggle(MainActivity.this,drawerLayout,R.string.open,R.string.close);
-        drawerLayout.setDrawerListener(toggle);
-        toggle.syncState();
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
         navigationView=findViewById(R.id.n11);
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch(item.getItemId()){
-                    case R.id.logout:
-                        Toast.makeText(MainActivity.this, "logout working", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                return true;
-            }
-        });
-
+        navigationView.setNavigationItemSelectedListener(mOnDNavigationItemSelectedListener);
         bnv=findViewById(R.id.main_bottom_nav);
         bnv.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-
         switchFragment(new allshares());
         bnv.setSelectedItemId(R.id.allshares);
+        drawerLayout=findViewById(R.id.drawerlayout);
+        toggle= new ActionBarDrawerToggle(this,drawerLayout,R.string.open,R.string.close);
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {

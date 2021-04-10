@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,32 +8,23 @@
     android:orientation="vertical"
     tools:context=".mainActivities.MainActivity">
     <androidx.drawerlayout.widget.DrawerLayout
-
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/drawerlayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#FFFFFF"
-        android:id="@+id/drawerlayout">
-
-        <com.google.android.material.navigation.NavigationView
-            android:id="@+id/n11"
-            app:headerLayout="@layout/header"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            app:menu="@menu/drawer_menu"
-            app:itemTextColor="#000000"
-            android:background="#FFFFFF"
-            android:layout_gravity="start">
-        </com.google.android.material.navigation.NavigationView>
-
-
+        android:layout_height="match_parent">
+        <!-- The main content view displays when the drawer is hidden -->
         <FrameLayout
             android:id="@+id/main_frame"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_above="@+id/main_bottom_nav"
-         >
+            android:layout_height="match_parent" />
 
-        </FrameLayout>
+        <!-- The navigation drawer -->
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/n11"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:menu="@menu/drawer_menu"/>
     </androidx.drawerlayout.widget.DrawerLayout>
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/main_bottom_nav"
@@ -43,7 +35,7 @@
         app:itemTextColor="#ffffff"
         android:layout_marginBottom="0dp"
         app:itemIconTint="@color/white"
-        android:background="@color/yellow"
+        android:background="@color/blue"
         app:menu="@menu/bottom_nav_menu">
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 

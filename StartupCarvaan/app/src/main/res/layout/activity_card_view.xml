@@ -27,100 +27,75 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:weight_sum="2"
+            android:weightSum="2"
             android:padding="16dp">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_height="wrap_content"
+
+                android:padding="16dp"
                 app:cardCornerRadius="50dp"
                 android:layout_marginBottom="16dp"
-                app:cardBackgroundColor="@color/purple_500">
+                app:cardBackgroundColor="@color/purple"
+              >
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal"
                     android:layout_marginHorizontal="16dp"
-                    android:weightSum="3">
+
+                    android:layout_marginBottom="15dp"
+
+                    android:orientation="horizontal">
+
 
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal">
+                        android:layout_marginVertical="16dp"
 
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-
-                        <ProgressBar
-                            android:layout_width="match_parent"
-                            android:layout_height="120dp"
-                            android:id="@+id/progress_bar"
-                            style="?android:progressBarStyleHorizontal"
-                            android:progress="80"
-                            android:layout_gravity="center"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintLeft_toLeftOf="parent"
-                            app:layout_constraintRight_toRightOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            android:progressDrawable="@drawable/circle">
-                        </ProgressBar>
-
-                        <TextView
-                            android:id="@+id/text_view_progress"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/white"
-                         android:layout_gravity="center"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                            app:layout_constraintBottom_toBottomOf="@+id/progress_bar"
-                            app:layout_constraintEnd_toEndOf="@+id/progress_bar"
-                            app:layout_constraintStart_toStartOf="@+id/progress_bar"
-                            app:layout_constraintTop_toTopOf="@+id/progress_bar"
-                            tools:text="60%" />
-
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
                         android:layout_weight="2"
-                        android:layout_height="match_parent"
-                        android:weightSum="2"
-                        android:orientation="vertical"
-                        android:layout_marginVertical="16dp" >
+                        android:orientation="vertical">
 
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="1">
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center_vertical"
+                           >
 
                             <TextView
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:textColor="@color/white"
+                                android:layout_marginLeft="35dp"
                                 android:text="My Portfolio"
-                                android:gravity="center"
-                                android:textSize="30sp">
+                                android:textColor="@color/white"
+                                android:textSize="26sp">
 
                             </TextView>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right">
+                            <ImageView
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_marginRight="50dp"
+                                android:src="@drawable/purpledot"/>
+                            </LinearLayout>
 
                         </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+
                             android:weightSum="2">
 
                             <LinearLayout
@@ -132,11 +107,11 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_marginLeft="32dp"
+                                    android:layout_marginTop="32dp"
                                     android:text="Balance"
                                     android:textColor="@color/white"
-                                    android:textSize="22sp"
-                                    android:layout_marginLeft="32dp"
-                                    android:layout_marginTop="32dp">
+                                    android:textSize="22sp">
 
 
                                 </TextView>
@@ -144,18 +119,17 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_marginLeft="32dp"
                                     android:text="32$"
                                     android:textColor="@color/white"
-                                    android:textSize="20sp"
-                                    android:layout_marginLeft="32dp"
-                                    >
+                                    android:textSize="20sp">
 
 
                                 </TextView>
 
 
-
                             </LinearLayout>
+
                             <LinearLayout
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
@@ -166,11 +140,11 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_marginLeft="32dp"
+                                    android:layout_marginTop="32dp"
                                     android:text="Balance"
                                     android:textColor="@color/white"
-                                    android:textSize="22sp"
-                                    android:layout_marginLeft="32dp"
-                                    android:layout_marginTop="32dp">
+                                    android:textSize="22sp">
 
 
                                 </TextView>
@@ -178,11 +152,10 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_marginLeft="32dp"
                                     android:text="32$"
                                     android:textColor="@color/white"
-                                    android:textSize="20sp"
-                                    android:layout_marginLeft="32dp"
-                                    >
+                                    android:textSize="20sp">
 
 
                                 </TextView>
@@ -196,100 +169,73 @@
                     </LinearLayout>
 
 
-
                 </LinearLayout>
+
+
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="#000"
+                android:layout_height="wrap_content"
+
+
                 android:padding="16dp"
                 app:cardCornerRadius="50dp"
                 android:layout_marginBottom="16dp"
-                app:cardBackgroundColor="@android:color/holo_red_light">
+                app:cardBackgroundColor="@color/orange"
+                >
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal"
                     android:layout_marginHorizontal="16dp"
-                    android:weightSum="3">
+                    android:layout_marginBottom="15dp"
+
+                    android:orientation="horizontal">
+
 
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="match_parent">
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            >
-
-
-
-                        <ProgressBar
-                            android:layout_width="match_parent"
-                            android:layout_height="120dp"
-                            android:id="@+id/progress_bar1"
-                            style="?android:progressBarStyleHorizontal"
-                            android:progress="80"
-                            android:layout_gravity="center"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintLeft_toLeftOf="parent"
-                            app:layout_constraintRight_toRightOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            android:progressDrawable="@drawable/circle"/>
-
-
-                            <TextView
-                                android:id="@+id/text_view_progress1"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textColor="@color/white"
-                                android:layout_gravity="center"
-                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                                app:layout_constraintBottom_toBottomOf="@+id/progress_bar1"
-                                app:layout_constraintEnd_toEndOf="@+id/progress_bar1"
-                                app:layout_constraintStart_toStartOf="@+id/progress_bar1"
-                                app:layout_constraintTop_toTopOf="@+id/progress_bar1"
-                                tools:text="60%" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_weight="2"
                         android:layout_height="match_parent"
-                        android:weightSum="2"
-                        android:orientation="vertical"
-                        android:layout_marginVertical="16dp" >
+                        android:layout_marginVertical="16dp"
+
+                        android:layout_weight="2"
+
+                        android:orientation="vertical">
 
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="1">
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
 
                             <TextView
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:textColor="@color/white"
+                                android:layout_marginLeft="35dp"
                                 android:text="My Portfolio"
-                                android:gravity="center"
-                                android:textSize="30sp">
+                                android:textColor="@color/white"
+                                android:textSize="26sp">
 
                             </TextView>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right">
+                                <ImageView
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:layout_marginRight="50dp"
+                                    android:src="@drawable/orangedot"/>
+                            </LinearLayout>
+
 
                         </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+
                             android:weightSum="2">
 
                             <LinearLayout
@@ -301,30 +247,30 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_marginLeft="32dp"
+                                    android:layout_marginTop="32dp"
                                     android:text="Balance"
                                     android:textColor="@color/white"
-                                    android:textSize="22sp"
-                                    android:layout_marginLeft="32dp"
-                                    android:layout_marginTop="32dp">
+                                    android:textSize="22sp">
 
 
                                 </TextView>
+
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_marginLeft="32dp"
                                     android:text="32$"
                                     android:textColor="@color/white"
-                                    android:textSize="20sp"
-                                    android:layout_marginLeft="32dp"
-                                    >
+                                    android:textSize="20sp">
 
 
                                 </TextView>
 
 
-
                             </LinearLayout>
+
                             <LinearLayout
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
@@ -335,11 +281,11 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_marginLeft="32dp"
+                                    android:layout_marginTop="32dp"
                                     android:text="Balance"
                                     android:textColor="@color/white"
-                                    android:textSize="22sp"
-                                    android:layout_marginLeft="32dp"
-                                    android:layout_marginTop="32dp">
+                                    android:textSize="22sp">
 
 
                                 </TextView>
@@ -347,11 +293,10 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_marginLeft="32dp"
                                     android:text="32$"
                                     android:textColor="@color/white"
-                                    android:textSize="20sp"
-                                    android:layout_marginLeft="32dp"
-                                    >
+                                    android:textSize="20sp">
 
 
                                 </TextView>
@@ -363,7 +308,6 @@
 
 
                     </LinearLayout>
-
 
 
                 </LinearLayout>

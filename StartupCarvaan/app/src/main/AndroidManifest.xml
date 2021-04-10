@@ -2,7 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="recreate.india.main.startupcarvaan">
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <uses-feature
         android:name="android.hardware.camera"
@@ -15,27 +17,43 @@
         android:roundIcon="@drawable/startupcarvaanlogo"
         android:supportsRtl="true"
         android:theme="@style/Theme.StartupCarvaan">
+<<<<<<< HEAD
         <activity android:name=".mainActivities.RecyclerActivity"></activity>
         <activity android:name=".CardViewActivity" />
+||||||| f720409
+        <activity android:name=".CardViewActivity"></activity>
+=======
+        <activity android:name=".payments.payout">
+        </activity>
+        <activity android:name=".payments.payin">
+        </activity>
+        <activity android:name=".Helppage">
+        </activity>
+>>>>>>> 563d894c1bc64ea9514176600a9745bd1ea0979a
         <activity android:name=".coin_exchange.buy_rci" />
-        <activity android:name=".payments.UpiPaymentActivity" />
-        <activity android:name=".payments.payinActivity" />
         <activity android:name=".mainActivities.IntroSliderActivity" />
         <activity
             android:name=".user.CreateProfile"
-            android:parentActivityName=".user.ProfileActivity" />
+            android:parentActivityName=".user.ProfileActivity" >
+        </activity>
         <activity
             android:name=".loginsignup.PhoneAuthActivity"
             android:parentActivityName=".loginsignup.loginActivity" />
         <activity
             android:name=".user.ProfileActivity"
-            android:parentActivityName=".user.CreateProfile">
-            \
-        </activity>
+            android:parentActivityName=".user.CreateProfile" />
         <activity
             android:name=".aboutshare.blogging"
             android:parentActivityName=".mainActivities.MainActivity" />
+<<<<<<< HEAD
         <activity android:name=".mainActivities.MainActivity" />
+||||||| f720409
+        <activity android:name=".mainActivities.MainActivity"></activity>
+=======
+        <activity android:name=".mainActivities.MainActivity">
+
+        </activity>
+>>>>>>> 563d894c1bc64ea9514176600a9745bd1ea0979a
         <activity android:name=".mainActivities.PrivacyPolicy" />
         <activity
             android:name=".loginsignup.loginActivity"
@@ -47,6 +65,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat"/>
     </application>
-
 </manifest>

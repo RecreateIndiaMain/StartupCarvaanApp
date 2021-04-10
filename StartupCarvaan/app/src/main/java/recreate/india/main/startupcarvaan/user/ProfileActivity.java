@@ -3,9 +3,12 @@ package recreate.india.main.startupcarvaan.user;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
+import android.view.View;
 import android.webkit.WebView;
 
 import android.widget.ImageView;
@@ -30,7 +33,7 @@ import com.google.firebase.storage.StorageReference;
 import recreate.india.main.startupcarvaan.R;
 
 public class ProfileActivity extends AppCompatActivity {
-    private ImageView user_image;
+    private ImageView user_image,updateprofile;
     private TextView name,title,points,level,desc,phone,email,address;
     private WebView webView;
     private FirebaseFirestore ff=FirebaseFirestore.getInstance();
@@ -42,6 +45,7 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile_main);
         FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
+        updateprofile=findViewById(R.id.updateprofile);
         webView=findViewById(R.id.webview);
         user_image=findViewById(R.id.userImage);
         name=findViewById(R.id.name);
@@ -52,7 +56,13 @@ public class ProfileActivity extends AppCompatActivity {
         phone=findViewById(R.id.phone);
         email=findViewById(R.id.email);
         address=findViewById(R.id.address);
+        updateprofile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ProfileActivity.this,CreateProfile.class));
 
+            }
+        });
         ff.collection("users")
                 .document(user.getUid())
                 .addSnapshotListener(new EventListener<DocumentSnapshot>() {

@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.StartupCarvaan" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/yellow</item>
-        <item name="colorPrimaryVariant">@color/yellow</item>
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryVariant">@color/blue</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
@@ -26,4 +26,13 @@
         <item name="fullscreenBackgroundColor">@color/light_blue_600</item>
         <item name="fullscreenTextColor">@color/light_blue_A200</item>
     </style>
+
+    <style name="Theme.StartupCarvaan.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.StartupCarvaan.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.StartupCarvaan.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

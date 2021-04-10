@@ -6,8 +6,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -15,7 +17,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.google.android.gms.tasks.Continuation;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -26,10 +28,15 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
+import com.theartofdev.edmodo.cropper.CropImage;
+import com.theartofdev.edmodo.cropper.CropImageView;
 
-import java.util.HashMap;
+import java.io.File;
 
 import recreate.india.main.startupcarvaan.R;
+import recreate.india.main.startupcarvaan.compressor.Compressor;
+import recreate.india.main.startupcarvaan.mainActivities.MainActivity;
 
 public class CreateProfile extends AppCompatActivity {
     private static final int CROP_PIC_REQUEST_CODE = 001 ;
@@ -40,15 +47,15 @@ public class CreateProfile extends AppCompatActivity {
 
     private FirebaseFirestore ff=FirebaseFirestore.getInstance();
     private FirebaseStorage fs= FirebaseStorage.getInstance();
-    private String imageurl,documenturl;
+    private String imageurl="",documenturl="";
     private profile profile=new profile();
     private int document_request_code=002;
+    private File compressFile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_profile);
-
         //edit text declaration
         FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
         display_name=findViewById(R.id.displayName);
@@ -59,6 +66,8 @@ public class CreateProfile extends AppCompatActivity {
         address=findViewById(R.id.userAddress);
         // end here
 
+        imageurl=profile.getImageurl();
+        documenturl=profile.getResume();
         //getting current user all data from firestore
         ff.collection("users")
                 .document(user.getUid())
@@ -73,19 +82,6 @@ public class CreateProfile extends AppCompatActivity {
                         phone.setText(profile.getPhone());
                         email.setText(profile.getEmail());
                         address.setText(profile.getAddress());
-                        StorageReference storageReference=fs.getReference().child(profile.getImageurl());
-                        storageReference.getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
-                            @Override
-                            public void onComplete(@NonNull Task<Uri> task) {
-                                if(task.getResult()!=null)
-                                    Glide.with(CreateProfile.this)
-                                        .load(task.getResult())
-                                        .into(userImage);
-                                else{
-                                    Toast.makeText(CreateProfile.this, "file does not exists", Toast.LENGTH_SHORT).show();
-                                }
-                            }
-                        });
                     }
                 });
         //end here
@@ -123,75 +119,67 @@ public class CreateProfile extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Dialog newDailog = new Dialog(CreateProfile.this);
-                if(!(imageUri==null && documentUri==null)) {
-                    newDailog.setTitle("Uploading Documents");
-                    newDailog.show();
-                }
-
-
                 if(imageUri!=null){
-                    StorageReference userimage=fs.getReference().child("users").child("image");
+                    StorageReference userimage=fs.getReference().child("users").child(user.getUid()).child("image");
                     imageurl=userimage.getPath();
-                    userimage.putFile(imageUri).continueWithTask(new Continuation() {
+                    userimage.putFile(imageUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                         @Override
-                        public Object then(@NonNull Task task) throws Exception {
-                            if(!task.isSuccessful()){
-                                throw task.getException();
-                            }
-                            return userimage.getDownloadUrl();
-                        }
-                    }).addOnCompleteListener(new OnCompleteListener() {
-                        @Override
-                        public void onComplete(@NonNull Task task) {
-                            Uri uri= (Uri) task.getResult();
-                            newDailog.dismiss();
+                        public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
                             Toast.makeText(CreateProfile.this, "image successfully uploaded", Toast.LENGTH_SHORT).show();
-                        }
-                    });
-                }
-                if(documentUri!=null){
-                    newDailog.show();
-                    StorageReference userdocument=fs.getReference().child("users").child("document");
-                    documenturl=userdocument.getPath();
-                    userdocument.putFile(documentUri).continueWithTask(new Continuation() {
-                        @Override
-                        public Object then(@NonNull Task task) throws Exception {
-                            if(!task.isSuccessful()){
-                                throw task.getException();
+                            if(documentUri!=null){
+                                StorageReference userdoc=fs.getReference().child("users").child(user.getUid()).child("doc");
+                                documenturl=userdoc.getPath();
+                                userdoc.putFile(documentUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
+                                        Toast.makeText(CreateProfile.this, "document successfully", Toast.LENGTH_SHORT).show();
+                                    }
+                                });
                             }
-                            return userdocument.getDownloadUrl();
-                        }
-                    }).addOnCompleteListener(new OnCompleteListener() {
-                        @Override
-                        public void onComplete(@NonNull Task task) {
-                            Uri uri= (Uri) task.getResult();
-                            Toast.makeText(CreateProfile.this, "document successfully uploaded", Toast.LENGTH_SHORT).show();
-                            newDailog.dismiss();
+                            startActivity(new Intent(CreateProfile.this, MainActivity.class));
+                            finish();
                         }
                     });
                 }
+                else{
+                    if(documentUri!=null){
+                        StorageReference userdoc=fs.getReference().child("users").child(user.getUid()).child("doc");
+                        documenturl=userdoc.getPath();
+                        userdoc.putFile(documentUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
+                            @Override
+                            public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
+                                Toast.makeText(CreateProfile.this, "document successfully uploaded ", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(CreateProfile.this, MainActivity.class));
+                                finish();
+                            }
+                        });
+                    }
+                }
 
+                    //getting all the required fields
+                    String name_tobeuploaded=display_name.getText().toString();
+                    String title_tobeuploaded=title.getText().toString();
+                    String desc_tobeuploaded=desc.getText().toString();
+                    String phone_tobeuploaded=phone.getText().toString();
+                    String email_tobeuploaded=email.getText().toString();
+                    String address_tobeuploaded=address.getText().toString();
 
+                    profile.setName(name_tobeuploaded);
+                    profile.setAddress(address_tobeuploaded);
+                    profile.setDescription(desc_tobeuploaded);
+                    profile.setEmail(email_tobeuploaded);
+                    profile.setPhone(phone_tobeuploaded);
+                    profile.setTitle(title_tobeuploaded);
+                    if(imageUri!=null)
+                        profile.setImageurl(imageurl);
+                    if(documentUri!=null)
+                        profile.setResume(documenturl);
 
-                //getting all the required fields
-                String name_tobeuploaded=display_name.getText().toString();
-                String title_tobeuploaded=title.getText().toString();
-                String desc_tobeuploaded=desc.getText().toString();
-                String phone_tobeuploaded=phone.getText().toString();
-                String email_tobeuploaded=email.getText().toString();
-                String address_tobeuploaded=address.getText().toString();
-
-                profile.setName(name_tobeuploaded);
-                profile.setAddress(address_tobeuploaded);
-                profile.setDescription(desc_tobeuploaded);
-                profile.setEmail(email_tobeuploaded);
-                profile.setPhone(phone_tobeuploaded);
-                profile.setTitle(title_tobeuploaded);
-                profile.setImageurl(imageurl);
-                profile.setResume(documenturl);
-                ff.collection("users")
-                        .document(user.getUid())
-                        .set(profile.giveNewUser());
+                    ff.collection("users")
+                            .document(user.getUid())
+                            .set(profile);
+                    if(imageUri==null && documentUri==null)
+                        startActivity(new Intent(CreateProfile.this, MainActivity.class));
             }
         });
     }
@@ -201,12 +189,23 @@ public class CreateProfile extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == CROP_PIC_REQUEST_CODE && resultCode == RESULT_OK && null != data) {
             imageUri=data.getData();
-            userImage.setImageURI(imageUri);
+            CropImage.activity(imageUri)
+                    .setAspectRatio(1,1)
+                    .setCropShape(CropImageView.CropShape.RECTANGLE)
+                    .start(this);
+//            userImage.setImageURI(imageUri);
 
         }
         else if(requestCode==document_request_code&& resultCode==RESULT_OK && data!=null){
             documentUri=data.getData();
             document.setText(documentUri.getLastPathSegment());
+        }
+        else if(requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE){
+            CropImage.ActivityResult result = CropImage.getActivityResult(data);
+            if (resultCode == RESULT_OK) {
+                imageUri = result.getUri();
+                userImage.setImageURI(imageUri);
+            }
         }
         else{
             Toast.makeText(this, "file not selected", Toast.LENGTH_SHORT).show();

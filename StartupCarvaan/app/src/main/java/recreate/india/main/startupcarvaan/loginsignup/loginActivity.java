@@ -33,6 +33,7 @@ import java.util.Map;
 
 import recreate.india.main.startupcarvaan.mainActivities.MainActivity;
 import recreate.india.main.startupcarvaan.R;
+import recreate.india.main.startupcarvaan.user.CreateProfile;
 import recreate.india.main.startupcarvaan.user.profile;
 
 public class loginActivity extends AppCompatActivity {
@@ -148,10 +149,14 @@ public class loginActivity extends AppCompatActivity {
                         coins.put("winnings", Double.valueOf(0));
                         FirebaseFirestore.getInstance().collection("users").document(user.getUid())
                                 .collection("others").document("coins").set(coins);
+                        startActivity(new Intent(loginActivity.this, CreateProfile.class));
+                        finish();
 
                     }
-                    startActivity(new Intent(loginActivity.this,MainActivity.class));
-                    finish();
+                    else{
+                        startActivity(new Intent(loginActivity.this,MainActivity.class));
+                        finish();
+                    }
                 }
             });
         }

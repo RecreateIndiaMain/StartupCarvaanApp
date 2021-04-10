@@ -20,14 +20,14 @@ public class RecyclerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_recycler);
 
 
-        List<RecyclerData> list = new ArrayList<>();
-        list = getData();
-
-        // setting up the recycler view
-        RecyclerView recyclerView = findViewById(R.id.recycler_view);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new MyRecyclerViewAdapter(RecyclerActivity.this);
-        //adapter.setClickListener(this);
-        recyclerView.setAdapter(adapter);
+//        List<RecyclerData> list = new ArrayList<>();
+//        list = getData();
+//
+//        // setting up the recycler view
+//        RecyclerView recyclerView = findViewById(R.id.recycler_view);
+//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+//        adapter = new MyRecyclerViewAdapter(RecyclerActivity.this);
+//        //adapter.setClickListener(this);
+//        recyclerView.setAdapter(adapter);
     }
 }

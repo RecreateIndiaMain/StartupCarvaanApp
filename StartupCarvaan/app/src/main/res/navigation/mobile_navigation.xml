@@ -7,19 +7,16 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="recreate.india.main.startupcarvaan.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_allshares" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="recreate.india.main.startupcarvaan.ui.dashboard.DashboardFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_myshares" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="recreate.india.main.startupcarvaan.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_myshares" />
 </navigation>

@@ -7,31 +7,54 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
-import org.w3c.dom.Text;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 
 import recreate.india.main.startupcarvaan.R;
-import recreate.india.main.startupcarvaan.fragments.models.holdings;
+import recreate.india.main.startupcarvaan.aboutshare.models.sharedetails;
+import recreate.india.main.startupcarvaan.fragments.models.sharefunctions;
+import recreate.india.main.startupcarvaan.fragments.myshares.holdings;
+import recreate.india.main.startupcarvaan.fragments.mycoins.coin;
+import recreate.india.main.startupcarvaan.user.user;
+import recreate.india.main.startupcarvaan.user.user_share_functions;
+import recreate.india.main.startupcarvaan.user.userfunctions;
 
 public class sell extends DialogFragment {
-    private TextView shares;
+    private TextView shares,price,available,price_of_share;
     private ImageView closebuy;
     private EditText share;
-    private TextView price;
+    private Button btnsell;
     Spinner spin;
     String item;
+    String price_ ="";
+    String share_;
+    private sharedetails sharedetails=new sharedetails();
+    private userfunctions userfunctions=new userfunctions();
+    private sharefunctions sharefunctions=new sharefunctions();
+    private coin coin=new coin();
+    private user_share_functions user_share_functions=new user_share_functions();
+
+
+    private holdings holdings=new holdings();
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = getActivity().getLayoutInflater();
@@ -39,11 +62,50 @@ public class sell extends DialogFragment {
         share=view.findViewById(R.id.shares);
         price=view.findViewById(R.id.price);
         spin=view.findViewById(R.id.spinner3);
+        available=view.findViewById(R.id.totalsharestosell);
+        price_of_share=view.findViewById(R.id.price_of_shares);
+        btnsell=view.findViewById(R.id.btn_sell);
+
+
         List<String> list = new ArrayList<String>();
         list.add(0, "price : no of shares");
-        list.add("10 : 80");
-        list.add("20 : 90");
-        list.add("30 : 100");
+        //retrieve holdings
+        FirebaseFirestore.getInstance()
+                .collection("users")
+                .document(new user().user().getUid())
+                .collection("myshares")
+                .document("shareid").addSnapshotListener(new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                holdings=value.toObject(holdings.class);
+                Map<String,Integer>holding=holdings.getHoldings();
+                for (Map.Entry<String,Integer> entry : holding.entrySet())
+                    list.add(String.valueOf(entry.getKey()+" : "+entry.getValue()));
+            }
+        });
+        //retrieving share details
+        FirebaseFirestore.getInstance()
+                .collection("allshares")
+                .document("shareid")
+                .collection("sharedetails")
+                .document("sharedetails").addSnapshotListener(new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                sharedetails=value.toObject(sharedetails.class);
+                available.setText("Available :"+String.valueOf(sharedetails.getAvailableforselling()));
+                price_of_share.setText(sharedetails.getSellingprice()+" rci");
+            }
+        });
+        // retrieving coin details
+        FirebaseFirestore.getInstance()
+                .collection("users")
+                .document(new user().user().getUid())
+                .collection("others").document("coins").addSnapshotListener(new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                coin=value.toObject(coin.class);
+            }
+        });
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getActivity().getBaseContext(), android.R.layout.simple_spinner_item, list);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spin.setAdapter(arrayAdapter);
@@ -51,11 +113,8 @@ public class sell extends DialogFragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (parent.getItemAtPosition(position).equals("price : no of shares")) {
-
                 } else {
                     item = parent.getItemAtPosition(position).toString();
-                    String price_ ="";
-                    String share_;
                     int i;
                     for(i=0;i<item.length();i++){
                         if(item.charAt(i)==' '){
@@ -63,9 +122,9 @@ public class sell extends DialogFragment {
                         }
                         price_+=item.charAt(i);
                     }
-                    i+=2;
+                    i+=3    ;
                     share_=item.substring(i,item.length());
-                    price.setText(price_);
+                    price.setText("price: "+price_);
                     share.setText(share_);
                 }
             }
@@ -73,10 +132,35 @@ public class sell extends DialogFragment {
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
-
             }
         });
-
+        btnsell.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(price_.equals(""))
+                    Toast.makeText(getContext(), "please select one holding", Toast.LENGTH_SHORT).show();
+                else {
+                    String quan=share.getText().toString();
+                    if(quan.equals(""))
+                        Toast.makeText(getContext(), "please select a amount", Toast.LENGTH_SHORT).show();
+                    else{
+                        Integer price=Integer.valueOf(String.valueOf(price_));
+                        Integer quantity=Integer.valueOf(String.valueOf(share.getText().toString()));
+                        if(quantity>Double.valueOf(holdings.getHoldings().get(price_)))
+                            Toast.makeText(getContext(), "do not have "+ quantity + " shares for price "+price_, Toast.LENGTH_SHORT).show();
+                        else{
+                            list.clear();
+                            Integer resultant_price=price*quantity;
+                            userfunctions.addRci(coin.getRci(),resultant_price);
+                            user_share_functions.removeSomeShares("shareid",quantity,price);
+                            sharefunctions.removeAvailableSell("shareid",sharedetails.getAvailableforselling(),quantity);
+                            sharefunctions.addBuy("shareid",sharedetails.getAvailableforbuying(),quantity);
+                            dismiss();
+                        }
+                    }
+                }
+            }
+        });
         builder.setView(view);
         return builder.create();
 
