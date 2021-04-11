@@ -1,21 +1,27 @@
 package recreate.india.main.startupcarvaan.aboutshare;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.media.Image;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -24,8 +30,21 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.Query;
+import com.google.firebase.storage.FirebaseStorage;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.PlayerConstants;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.YouTubePlayerListener;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView;
+
+import org.jetbrains.annotations.NotNull;
+import org.w3c.dom.Text;
+
+import java.util.Random;
+import java.util.UUID;
 
 import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.aboutshare.modals.buy;
@@ -33,6 +52,9 @@ import recreate.india.main.startupcarvaan.aboutshare.modals.sell;
 import recreate.india.main.startupcarvaan.aboutshare.models.blogdetails;
 import recreate.india.main.startupcarvaan.fragments.allshares.allshare;
 import recreate.india.main.startupcarvaan.fragments.allshares.allshares;
+import recreate.india.main.startupcarvaan.fragments.mycoins.coin;
+import recreate.india.main.startupcarvaan.user.user;
+import recreate.india.main.startupcarvaan.user.userfunctions;
 
 public class blogging extends AppCompatActivity {
     private BottomNavigationView bottomNavigationView;
@@ -41,6 +63,7 @@ public class blogging extends AppCompatActivity {
     private FirestoreRecyclerAdapter adapter;
     private FirebaseUser firebaseUser=FirebaseAuth.getInstance().getCurrentUser();
     private String shareid;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +72,7 @@ public class blogging extends AppCompatActivity {
         bottomNavigationView.setOnNavigationItemSelectedListener(onNavigationItemReselectedListener);
         recyclerView=findViewById(R.id.aboutshare);
         shareid=getIntent().getStringExtra("shareid");
+
         Query query=ff.collection("allshares").document(shareid).collection("blogs");
         FirestoreRecyclerOptions<blogdetails> option= new FirestoreRecyclerOptions.
                 Builder<blogdetails>().setQuery(query,blogdetails.class).
@@ -63,20 +87,148 @@ public class blogging extends AppCompatActivity {
 
             @Override
             protected void onBindViewHolder(@NonNull PostViewHolder holder, int position, @NonNull blogdetails model) {
+                holder.title.setText(model.getTitle());
+                holder.description.setText(model.getDescription());
+                holder.num_likes.setText(String.valueOf(model.getLikes().size()));
+                holder.num_comments.setText(String.valueOf(model.getComments().size()));
+                holder.commentbutton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
 
+                            model.getComments().put(new user().user().getUid()+new Random().toString(),holder.addcomment.getText().toString());
+                            FirebaseFirestore.getInstance().collection("allshares")
+                                    .document(shareid)
+                                    .collection("blogs")
+                                    .document(getSnapshots().getSnapshot(position).getId())
+                                    .update("comments",model.getComments());
+                            }
+                });
+                holder.likeimage.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if(model.getLikes().containsKey(new user().user().getUid()))
+                            Toast.makeText(blogging.this, "already liked", Toast.LENGTH_SHORT).show();
+                        else{
+                            model.getLikes().put(new user().user().getUid(),true);
+                            FirebaseFirestore.getInstance().collection("allshares")
+                                    .document(shareid)
+                                    .collection("blogs")
+                                    .document(getSnapshots().getSnapshot(position).getId())
+                                    .update("likes",model.getLikes());
+                            final coin[] coin = {new coin()};
+                            FirebaseFirestore.getInstance().collection("users")
+                                    .document(new user().user().getUid())
+                                    .collection("others")
+                                    .document("coins")
+                                    .get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                                @Override
+                                public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                                    coin[0] =task.getResult().toObject(coin.class);
+                                    userfunctions userfunctions=new userfunctions();
+                                    userfunctions.addPoints(1.0);
+                                    userfunctions.addBonus(coin[0].getBonus(),5);
+                                }
+                            });
+                        }
+                    }
+                });
+
+
+
+
+
+                if(model.getType().equals("video")){
+                    final float[] c_sec = {0};
+                    final boolean[] me = {true};
+                    holder.imageView.setVisibility(View.GONE);
+                    holder.videoplayer.setVisibility(View.VISIBLE);
+                    holder.videoplayer.addYouTubePlayerListener(new YouTubePlayerListener() {
+                        @Override
+                        public void onReady(@NotNull YouTubePlayer youTubePlayer) {
+                            String id=model.getBlogurl();
+                            youTubePlayer.cueVideo(id,0);
+                        }
+
+                        @Override
+                        public void onStateChange(@NotNull YouTubePlayer youTubePlayer, @NotNull PlayerConstants.PlayerState playerState) {
+
+                        }
+
+                        @Override
+                        public void onPlaybackQualityChange(@NotNull YouTubePlayer youTubePlayer, @NotNull PlayerConstants.PlaybackQuality playbackQuality) {
+
+                        }
+
+                        @Override
+                        public void onPlaybackRateChange(@NotNull YouTubePlayer youTubePlayer, @NotNull PlayerConstants.PlaybackRate playbackRate) {
+
+                        }
+
+                        @Override
+                        public void onError(@NotNull YouTubePlayer youTubePlayer, @NotNull PlayerConstants.PlayerError playerError) {
+
+                        }
+
+                        @Override
+                        public void onCurrentSecond(@NotNull YouTubePlayer youTubePlayer, float v) {
+                                c_sec[0] =v;
+                        }
+
+                        @Override
+                        public void onVideoDuration(@NotNull YouTubePlayer youTubePlayer, float v) {
+
+                        }
+
+                        @Override
+                        public void onVideoLoadedFraction(@NotNull YouTubePlayer youTubePlayer, float v) {
+
+                        }
+
+                        @Override
+                        public void onVideoId(@NotNull YouTubePlayer youTubePlayer, @NotNull String s) {
+
+                        }
+
+                        @Override
+                        public void onApiChange(@NotNull YouTubePlayer youTubePlayer) {
+
+                        }
+                    });
+                }
+                else{
+                    holder.imageView.setVisibility(View.VISIBLE);
+                    holder.videoplayer.setVisibility(View.GONE);
+                    FirebaseStorage.getInstance().getReference().child(model.getBlogurl())
+                            .getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Uri> task) {
+                            Glide.with(blogging.this).load(task.getResult()).into(holder.imageView);
+                        }
+                    });
+
+                }
             }
         };
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(blogging.this));
     }
     public class PostViewHolder extends RecyclerView.ViewHolder {
-        private Button invest;
-        private ImageView switchLayout;
-        private LinearLayout first,second;
-        private boolean on=true;
+        private YouTubePlayerView videoplayer;
+        private ImageView imageView;
+        private TextView title,description,num_likes,num_comments;
+        private EditText addcomment;
+        private ImageView commentbutton,likeimage;
         public PostViewHolder(@NonNull View itemView) {
             super(itemView);
-
+            videoplayer=itemView.findViewById(R.id.videoplayer);
+            imageView=itemView.findViewById(R.id.imageview);
+            title=itemView.findViewById(R.id.blogtitle);
+            description=itemView.findViewById(R.id.description);
+            num_likes=itemView.findViewById(R.id.number_of_likes);
+            num_comments=itemView.findViewById(R.id.number_of_comments);
+            addcomment=itemView.findViewById(R.id.addcomment);
+            commentbutton=itemView.findViewById(R.id.commentButton);
+            likeimage=itemView.findViewById(R.id.likeimage);
         }
     }
     private BottomNavigationView.OnNavigationItemSelectedListener onNavigationItemReselectedListener= new BottomNavigationView.OnNavigationItemSelectedListener() {

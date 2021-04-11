@@ -8,6 +8,7 @@ import java.util.Map;
 public class blogdetails {
     String blogurl;
     Map<String,String> comments=new HashMap<>();
+    Map<String,String> views=new HashMap<>();
     Timestamp date;
     String description;
     Map<String, Boolean>likes=new HashMap<>();
@@ -28,6 +29,14 @@ public class blogdetails {
 
     public void setComments(Map<String, String> comments) {
         this.comments = comments;
+    }
+
+    public Map<String, String> getViews() {
+        return views;
+    }
+
+    public void setViews(Map<String, String> views) {
+        this.views = views;
     }
 
     public Timestamp getDate() {
@@ -70,9 +79,10 @@ public class blogdetails {
         this.type = type;
     }
 
-    public blogdetails(String blogurl, Map<String, String> comments, Timestamp date, String description, Map<String, Boolean> likes, String title, String type) {
+    public blogdetails(String blogurl, Map<String, String> comments, Map<String, String> views, Timestamp date, String description, Map<String, Boolean> likes, String title, String type) {
         this.blogurl = blogurl;
         this.comments = comments;
+        this.views = views;
         this.date = date;
         this.description = description;
         this.likes = likes;
