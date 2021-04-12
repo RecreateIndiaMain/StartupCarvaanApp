@@ -1,19 +1,14 @@
 package recreate.india.main.startupcarvaan.fragments.practice;
 
+import java.util.Map;
+
 public class practicemodel {
     private Integer buyingprice;
     private Integer currentvotes;
-    private String  description,introvideourl,logourl,name;
+    private String  description;
+    private Map<String,String>holdings;
+    private String introvideourl,logourl,name;
     private Integer neededvotes;
-    private Integer sellingprice;
-
-    public Integer getBuyingprice() {
-        return buyingprice;
-    }
-
-    public void setBuyingprice(Integer buyingprice) {
-        this.buyingprice = buyingprice;
-    }
 
     public Integer getCurrentvotes() {
         return currentvotes;
@@ -29,6 +24,14 @@ public class practicemodel {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Map<String, String> getHoldings() {
+        return holdings;
+    }
+
+    public void setHoldings(Map<String, String> holdings) {
+        this.holdings = holdings;
     }
 
     public String getIntrovideourl() {
@@ -63,23 +66,23 @@ public class practicemodel {
         this.neededvotes = neededvotes;
     }
 
-    public Integer getSellingprice() {
-        return sellingprice;
+    public Integer getBuyingprice() {
+        return buyingprice;
     }
 
-    public void setSellingprice(Integer sellingprice) {
-        this.sellingprice = sellingprice;
+    public void setBuyingprice(Integer buyingprice) {
+        this.buyingprice = buyingprice;
     }
 
-    public practicemodel(Integer buyingprice, Integer currentvotes, String description, String introvideourl, String logourl, String name, Integer neededvotes, Integer sellingprice) {
+    public practicemodel(Integer buyingprice, Integer currentvotes, String description, Map<String, String> holdings, String introvideourl, String logourl, String name, Integer neededvotes) {
         this.buyingprice = buyingprice;
         this.currentvotes = currentvotes;
         this.description = description;
+        this.holdings = holdings;
         this.introvideourl = introvideourl;
         this.logourl = logourl;
         this.name = name;
         this.neededvotes = neededvotes;
-        this.sellingprice = sellingprice;
     }
 
     public practicemodel() {

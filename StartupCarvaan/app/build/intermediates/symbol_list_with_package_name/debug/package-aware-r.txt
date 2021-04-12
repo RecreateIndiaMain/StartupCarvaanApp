@@ -2011,6 +2011,7 @@ id bonus
 id bottom
 id bottom_to_top
 id bounce
+id bp
 id browser_actions_header_text
 id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
@@ -2162,6 +2163,7 @@ id headerCash
 id headerCoins
 id headerWinnings
 id hideable
+id holding
 id home
 id homeAsUp
 id honorRequest

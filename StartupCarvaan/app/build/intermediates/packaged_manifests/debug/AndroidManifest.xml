@@ -39,16 +39,12 @@
         <activity android:name="recreate.india.main.startupcarvaan.coin_exchange.buy_rci" />
         <activity android:name="recreate.india.main.startupcarvaan.mainActivities.IntroSliderActivity" >
         </activity>
-        <activity
-            android:name="recreate.india.main.startupcarvaan.user.CreateProfile"
-            android:parentActivityName="recreate.india.main.startupcarvaan.user.ProfileActivity" >
+        <activity android:name="recreate.india.main.startupcarvaan.user.CreateProfile" >
         </activity>
         <activity
             android:name="recreate.india.main.startupcarvaan.loginsignup.PhoneAuthActivity"
             android:parentActivityName="recreate.india.main.startupcarvaan.loginsignup.loginActivity" />
-        <activity
-            android:name="recreate.india.main.startupcarvaan.user.ProfileActivity"
-            android:parentActivityName="recreate.india.main.startupcarvaan.user.CreateProfile" />
+        <activity android:name="recreate.india.main.startupcarvaan.user.ProfileActivity" />
         <activity
             android:name="recreate.india.main.startupcarvaan.aboutshare.blogging"
             android:parentActivityName="recreate.india.main.startupcarvaan.mainActivities.MainActivity" />

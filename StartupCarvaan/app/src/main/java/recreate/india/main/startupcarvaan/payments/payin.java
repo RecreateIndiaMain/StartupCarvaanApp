@@ -8,9 +8,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -78,30 +81,18 @@ public class payin extends AppCompatActivity implements PaymentResultListener {
             e.printStackTrace();
         }
     }
-
-    /**
-     * The name of the function has to be
-     * onPaymentSuccess
-     * Wrap your code in try catch, as shown, to ensure that this method runs correctly
-     */
     @SuppressWarnings("unused")
     @Override
     public void onPaymentSuccess(String razorpayPaymentID) {
         try {
-            increment();
             Toast.makeText(this, "completed   " + coin.getRci(), Toast.LENGTH_SHORT).show();
+            increment();
         }
         catch (Exception e){
 
         }
 
     }
-
-    /**
-     * The name of the function has to be
-     * onPaymentError
-     * Wrap your code in try catch, as shown, to ensure that this method runs correctly
-     */
     @SuppressWarnings("unused")
     @Override
     public void onPaymentError(int code, String response) {
@@ -112,8 +103,20 @@ public class payin extends AppCompatActivity implements PaymentResultListener {
         }
     }
     private void increment(){
-        coin coin=new coin();
-        userfunctions userfunctions=new userfunctions();
-        userfunctions.addRci(coin.getRci(),pay);
+        FirebaseFirestore.getInstance().collection("users")
+                .document(new user().user().getUid())
+                .collection("others")
+                .document("coins")
+                .get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                coin coin=task.getResult().toObject(coin.class);
+                FirebaseFirestore.getInstance().collection("users")
+                        .document(new user().user().getUid())
+                        .collection("others")
+                        .document("coins")
+                        .update("rci",coin.getRci()+(pay/100));
+            }
+        });
     }
 }

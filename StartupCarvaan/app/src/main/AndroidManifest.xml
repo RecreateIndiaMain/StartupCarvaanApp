@@ -28,15 +28,13 @@
         <activity android:name=".mainActivities.IntroSliderActivity">
         </activity>
         <activity
-            android:name=".user.CreateProfile"
-            android:parentActivityName=".user.ProfileActivity" >
+            android:name=".user.CreateProfile">
         </activity>
         <activity
             android:name=".loginsignup.PhoneAuthActivity"
             android:parentActivityName=".loginsignup.loginActivity" />
         <activity
-            android:name=".user.ProfileActivity"
-            android:parentActivityName=".user.CreateProfile" />
+            android:name=".user.ProfileActivity"/>
         <activity
             android:name=".aboutshare.blogging"
             android:parentActivityName=".mainActivities.MainActivity" />
