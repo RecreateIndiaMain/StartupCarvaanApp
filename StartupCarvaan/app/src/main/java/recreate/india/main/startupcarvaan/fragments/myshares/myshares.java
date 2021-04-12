@@ -14,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -54,6 +55,8 @@ public class myshares extends Fragment {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_myshares, container, false);
         myshare=view.findViewById(R.id.mysharerecyclerview);
+
+
         Query query= FirebaseFirestore.getInstance().collection("users").document(new user().user().getUid()).collection("myshares");
         FirestoreRecyclerOptions<holdings> option=new FirestoreRecyclerOptions.Builder<holdings>().setQuery(query,holdings.class).build();
         adapter= new FirestoreRecyclerAdapter<holdings, viewholder>(option) {
@@ -118,6 +121,7 @@ public class myshares extends Fragment {
         private CircleImageView companylogo;
         private TextView sharename,buyp,sellp;
         private Button trade;
+        private Spinner spin1;
         public viewholder(@NonNull View itemView) {
             super(itemView);
             sharename=itemView.findViewById(R.id.sharename);
@@ -125,6 +129,7 @@ public class myshares extends Fragment {
             buyp=itemView.findViewById(R.id.buyingPrice);
             sellp=itemView.findViewById(R.id.sellingPrice);
             trade=itemView.findViewById(R.id.trade);
+            spin1=itemView.findViewById(R.id.spinner4);
         }
     }
 

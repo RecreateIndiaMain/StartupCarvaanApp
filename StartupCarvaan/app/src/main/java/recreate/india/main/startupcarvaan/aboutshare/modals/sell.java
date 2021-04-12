@@ -68,7 +68,7 @@ public class sell extends DialogFragment {
 
 
         List<String> list = new ArrayList<String>();
-        list.add(0, "price : no of shares");
+        list.add(0, "Price of a share : No. of shares");
         //retrieve holdings
         FirebaseFirestore.getInstance()
                 .collection("users")
@@ -112,7 +112,7 @@ public class sell extends DialogFragment {
         spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (parent.getItemAtPosition(position).equals("price : no of shares")) {
+                if (parent.getItemAtPosition(position).equals("Price of a share : No. of shares")) {
                 } else {
                     item = parent.getItemAtPosition(position).toString();
                     int i;
