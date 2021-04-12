@@ -33,6 +33,20 @@ public class userfunctions {
                 .document("coins")
                 .update("rci",current+rci);
     }
+    public void addBonus(Integer current,Integer bonus){
+        ff.collection("users")
+                .document(new user().user().getUid())
+                .collection("others")
+                .document("coins")
+                .update("bonus",current+bonus);
+    }
+    public void removeBonus(Integer current,Integer bonus){
+        ff.collection("users")
+                .document(new user().user().getUid())
+                .collection("others")
+                .document("coins")
+                .update("bonus",current+bonus);
+    }
     public void addPoints(Double increase){
         ff.collection("users")
                 .document(new user().user().getUid())

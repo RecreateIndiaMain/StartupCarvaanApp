@@ -106,7 +106,7 @@ public class sell extends DialogFragment {
                 coin=value.toObject(coin.class);
             }
         });
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getActivity().getBaseContext(), android.R.layout.simple_spinner_item, list);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, list);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spin.setAdapter(arrayAdapter);
         spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {

@@ -10,7 +10,6 @@
         xmlns:tools="http://schemas.android.com/tools"
         app:cardCornerRadius="10dp"
         app:cardElevation="5dp"
-
         app:cardBackgroundColor="#FFFFFF"
         >
 
@@ -29,19 +28,14 @@
                 android:layout_marginTop="10dp"
                 android:gravity="center_horizontal"
                 android:padding="2dp">
-
-
-
                 <TextView
-                    android:id="@+id/title"
+                    android:id="@+id/blogtitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:lines="1"
                    android:layout_marginLeft="15dp"
                     android:padding="7dp"
                     android:textStyle="bold"
-
-
                     android:text="We are the ones yfuyfufuh "
                     android:textColor="#293859"
                     android:textSize="23sp"
@@ -82,7 +76,13 @@
                 app:showVideoCurrentTime="true"
                 app:showVideoDuration="true"
                 app:showYouTubeButton="false"></com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView>
-
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/imageview"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"></ImageView>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -257,9 +257,9 @@
 
                                     android:layout_width="0dp"
                         android:layout_weight="5.5"
-
+                                    android:id="@+id/addcomment"
                                     android:layout_height="40dp"
-                                    android:textColor="@color/black"
+                                    android:textColor="@color/white"
                                     android:hint="Add a Comment ...."
                                     android:textColorHint="@color/white"
                                     android:paddingLeft="14dp"

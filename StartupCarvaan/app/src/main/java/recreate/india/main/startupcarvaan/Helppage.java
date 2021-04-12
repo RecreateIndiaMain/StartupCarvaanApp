@@ -38,6 +38,7 @@ public class Helppage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_helppage);
+
 before=findViewById(R.id.beforefaq);
 after=findViewById(R.id.afterfaq);
         l1=findViewById(R.id.linear1);
@@ -158,6 +159,29 @@ after=findViewById(R.id.afterfaq);
 
 
 
+
+
+//        lineChart=findViewById(R.id.linechart);
+//        FirebaseFirestore.getInstance().collection("allshares")
+//                .document("shareid")
+//                .addSnapshotListener(new EventListener<DocumentSnapshot>() {
+//                    @Override
+//                    public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+//                        allshare allshare=value.toObject(allshare.class);
+//                        List<Entry> entries = new ArrayList<Entry>();
+//                        List<Integer> dataObjects;
+//                        dataObjects=allshare.getGraph();
+//                        int count=0;
+//                        for (int i=0;i<dataObjects.size();i++) {
+//                            // turn your data into Entry objects
+//                            entries.add(new Entry(count++, dataObjects.get(i)));
+//                            lineChart.setData(new LineData(new LineDataSet(entries,"Price by day")));
+//                            lineChart.setX(0);
+//                            lineChart.setY(0);
+//                            lineChart.invalidate();
+//                        }
+//                    }
+//                });
 
     }
 }

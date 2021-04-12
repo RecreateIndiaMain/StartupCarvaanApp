@@ -1771,6 +1771,7 @@ drawable googleg_standard_color_18
 drawable googlesign
 drawable gs
 drawable ic_arrow_back_24dp
+drawable ic_baseline_arrow_drop_down_24
 drawable ic_baseline_arrow_drop_down_circle_24
 drawable ic_bg
 drawable ic_call_24dp
@@ -1970,11 +1971,13 @@ id actions
 id activity_chooser_view_content
 id add
 id addAttatchment
+id addcomment
 id addrci
 id address
 id adjust_height
 id adjust_width
 id advice
+id afterfaq
 id afterpress
 id alertTitle
 id aligned
@@ -1996,12 +1999,14 @@ id autoCompleteToStart
 id availableforbuying
 id barrier
 id baseline
+id beforefaq
 id beginOnFirstDraw
 id beginning
 id biding
 id bidingrecyclerview
 id bidprice
 id blocking
+id blogtitle
 id bonus
 id bottom
 id bottom_to_top
@@ -2048,6 +2053,7 @@ id close67
 id coin
 id collapseActionView
 id colorlayout
+id comment
 id commentButton
 id commentimage
 id companylogo
@@ -2074,6 +2080,8 @@ id customPanel
 id custom_action_left_button
 id custom_action_right_button
 id cut
+id cv1
+id cv2
 id dark
 id date_picker_actions
 id decelerate
@@ -2095,6 +2103,7 @@ id disableHome
 id disablePostScroll
 id disableScroll
 id displayName
+id displayname
 id document
 id dotLayout
 id dragDown
@@ -2166,6 +2175,7 @@ id ignoreRequest
 id image
 id imageView2
 id imageView3
+id imageview
 id info
 id introvideo
 id invest
@@ -2189,7 +2199,6 @@ id line
 id line1
 id line3
 id linear
-id linechart
 id listMode
 id list_item
 id live_video_indicator
@@ -2285,6 +2294,7 @@ id password_toggle
 id path
 id pathRelative
 id payment_policy
+id paymentbutton
 id peekHeight
 id percent
 id personalinfo
@@ -2302,6 +2312,7 @@ id practice
 id practicerecyclerview
 id price
 id price_of_shares
+id privacybutton
 id privacypolicy
 id productimage
 id profile
@@ -2409,12 +2420,17 @@ id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id tags
 id terms_condition
+id termsbutton
 id test_checkbox_android_button_tint
 id test_checkbox_app_button_tint
 id test_radiobutton_android_button_tint
 id test_radiobutton_app_button_tint
 id text
+id text1
 id text2
+id text3
+id text4
+id text5
 id textEnd
 id textFile
 id textSpacerNoButtons
@@ -2558,6 +2574,7 @@ layout activity_payin
 layout activity_payout
 layout activity_phone_auth
 layout activity_privacy_policy
+layout activity_recycler
 layout activity_splash_screen
 layout activity_upipay
 layout apps_bottomsheet

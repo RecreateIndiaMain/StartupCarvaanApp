@@ -1,11 +1,13 @@
 package recreate.india.main.startupcarvaan.fragments.allshares;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -193,7 +195,13 @@ public class allshares extends Fragment {
                             }
                         });
 //                Toast.makeText(getContext(), sharedetails[0].getBuyingprice(), Toast.LENGTH_SHORT).show();
-
+                if(model.getType().equals("elite")){
+                    holder.colorlayout.setBackgroundColor(ContextCompat.getColor(getContext(),R.color.blue));
+                }
+                else if(model.getType().equals("mediocre")){
+                    holder.colorlayout.setBackgroundColor(ContextCompat.getColor(getContext(),R.color.yellow));
+                }
+                else holder.colorlayout.setBackgroundColor(ContextCompat.getColor(getContext(),R.color.greyish));
             }
         };
         recyclerView.setAdapter(adapter);
@@ -203,7 +211,7 @@ public class allshares extends Fragment {
     public class PostViewHolder extends RecyclerView.ViewHolder {
         private Button invest;
         private ImageView switchLayout;
-        private LinearLayout first,second,video;
+        private LinearLayout first,second,video,colorlayout;
         // fields
         private ImageView companylogo;
         private TextView companyname,group,investors;
@@ -220,6 +228,7 @@ public class allshares extends Fragment {
             first=itemView.findViewById(R.id.growth);
             second=itemView.findViewById(R.id.afterpress);
             video=itemView.findViewById(R.id.video);
+            colorlayout=itemView.findViewById(R.id.colorlayout);
 
             //fields
             companylogo=itemView.findViewById(R.id.companylogo);
