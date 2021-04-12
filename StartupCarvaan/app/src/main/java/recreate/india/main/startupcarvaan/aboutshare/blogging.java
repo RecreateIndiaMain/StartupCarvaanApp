@@ -53,6 +53,7 @@ import recreate.india.main.startupcarvaan.aboutshare.models.blogdetails;
 import recreate.india.main.startupcarvaan.fragments.allshares.allshare;
 import recreate.india.main.startupcarvaan.fragments.allshares.allshares;
 import recreate.india.main.startupcarvaan.fragments.mycoins.coin;
+import recreate.india.main.startupcarvaan.user.profile;
 import recreate.india.main.startupcarvaan.user.user;
 import recreate.india.main.startupcarvaan.user.userfunctions;
 
@@ -125,7 +126,6 @@ public class blogging extends AppCompatActivity {
                                 public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                                     coin[0] =task.getResult().toObject(coin.class);
                                     userfunctions userfunctions=new userfunctions();
-                                    userfunctions.addPoints(1.0);
                                     userfunctions.addBonus(coin[0].getBonus(),5);
                                 }
                             });

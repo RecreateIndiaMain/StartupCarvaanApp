@@ -65,6 +65,7 @@ public class practice extends Fragment {
                 holder.description.setText(model.getDescription());
                 holder.current.setText(String.valueOf(model.getCurrentvotes()));
                 holder.required.setText(String.valueOf(model.getNeededvotes()));
+                holder.bp.setText(model.getBuyingprice()+" bonus coins");
                 FirebaseStorage.getInstance().getReference().child(model.getLogourl()).getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
                     @Override
                     public void onComplete(@NonNull Task<Uri> task) {
@@ -134,6 +135,7 @@ public class practice extends Fragment {
         private ImageView like;
         private CircleImageView logo;
         private YouTubePlayerView video;
+        private TextView bp;
         public viewholder(@NonNull View itemView) {
             super(itemView);
             logo=itemView.findViewById(R.id.companylogo);
@@ -142,6 +144,7 @@ public class practice extends Fragment {
             current=itemView.findViewById(R.id.current);
             required=itemView.findViewById(R.id.required);
             video=itemView.findViewById(R.id.videoplayer);
+            bp=itemView.findViewById(R.id.bp);
         }
     }
 
