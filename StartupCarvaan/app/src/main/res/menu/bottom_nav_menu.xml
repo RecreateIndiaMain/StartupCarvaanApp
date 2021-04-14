@@ -21,7 +21,7 @@
         android:title="@string/biding" />
     <item
         android:id="@+id/mycoins"
-        android:icon="@drawable/ic_notifications_black_24dp"
+        android:icon="@drawable/ic_baseline_attach_money_24"
         android:title="@string/mycoins" />
 
 </menu>
