@@ -38,6 +38,7 @@ public class buy extends DialogFragment {
     private ImageView closebuy;
 
 
+
     // constructor declaration
     private user_share_functions usersharefunctions= new user_share_functions();
     private sharedetails sharedetails=new sharedetails();
