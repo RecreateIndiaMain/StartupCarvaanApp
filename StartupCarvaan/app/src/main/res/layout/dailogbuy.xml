@@ -2,22 +2,25 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/blue"
+    android:background="@color/teal_700"
     android:orientation="vertical"
 
     >
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="right"
         android:layout_marginTop="12dp"
-        android:layout_marginRight="20dp">
+        android:layout_marginRight="20dp"
+        android:gravity="right">
+
         <ImageView
+            android:id="@+id/close67"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:id="@+id/close67"
-            android:src="@drawable/cross"/>
+            android:src="@drawable/cross" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -41,8 +44,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginRight="5dp"
             android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
 
             android:text="Per Share"
             android:textColor="#FFE8D63C"
@@ -79,14 +82,20 @@
 
     <EditText
         android:id="@+id/noofshares"
-        android:layout_width="160dp"
+        android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="20dp"
         android:background="@drawable/sellinput"
         android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:hint="Enter no of shares"
         android:inputType="number"
-        android:textColor="#ffffff" />
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+
     <Button
         android:id="@+id/btn_buy"
         android:layout_width="wrap_content"
@@ -97,8 +106,8 @@
 
         android:text="Buy"
         android:textAllCaps="false"
-        android:textColor="#FFFFFF"
-        android:textSize="25sp" />
+        android:textColor="@color/black"
+        android:textSize="19sp" />
 
 
 </LinearLayout>

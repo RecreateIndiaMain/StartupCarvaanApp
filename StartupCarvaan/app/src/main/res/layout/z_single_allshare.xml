@@ -85,6 +85,7 @@
 
                     <TextView
                         android:id="@+id/companyname"
+                        android:fontFamily="@font/proximanovaregular"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
@@ -420,7 +421,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:backgroundTint="#293859"
-
+                android:fontFamily="@font/proximanovaregular"
                 android:text="Invest In me"
                 android:textColor="@color/white"
                 android:textSize="16sp"

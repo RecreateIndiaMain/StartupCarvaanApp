@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/greyish"
+    android:background="@color/teal_700"
     android:orientation="vertical"
 
     >
@@ -82,14 +82,15 @@
         android:layout_marginRight="20dp"
 android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
-        android:popupBackground="@color/yellow"
+        android:popupBackground="@drawable/mysharespin"
+        android:popupElevation="10dp"
 
         android:fontFamily="sans-serif-medium"
 
         android:textSize="14sp"
 
 
-        android:background="@drawable/spinnerbord"
+        android:background="@drawable/mysharespin"
         android:splitMotionEvents="true"
         android:textColor="@color/white"/>
 
