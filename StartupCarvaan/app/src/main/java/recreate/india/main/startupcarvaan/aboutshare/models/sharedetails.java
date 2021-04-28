@@ -15,6 +15,9 @@ public class sharedetails {
     private String buyingtips;
     private Boolean increased;
     private Map<String,String> price;
+    private Integer sellingprice;
+    private String sellingtips;
+    private Integer totalsharesatusers,totalsharesonmarket;
 
     public sharedetails() {
     }
@@ -111,8 +114,4 @@ public class sharedetails {
         this.totalsharesatusers = totalsharesatusers;
         this.totalsharesonmarket = totalsharesonmarket;
     }
-
-    private Integer sellingprice;
-    private String sellingtips;
-    private Integer totalsharesatusers,totalsharesonmarket;
 }

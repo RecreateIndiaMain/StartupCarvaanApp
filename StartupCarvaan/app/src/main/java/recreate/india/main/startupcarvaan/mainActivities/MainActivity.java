@@ -89,7 +89,6 @@ public class MainActivity extends AppCompatActivity{
                 case R.id.profile:
 
                     startActivity(new Intent(MainActivity.this, ProfileActivity.class));
-                    finish();
                     break;
             }
             return false;
