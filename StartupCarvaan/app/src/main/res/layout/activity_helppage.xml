@@ -6,19 +6,22 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".Helppage">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:id="@+id/beforefaq"
         android:background="@color/blue"
-        tools:ignore="Orientation"></LinearLayout>
+        tools:ignore="Orientation">
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:visibility="gone"
         android:id="@+id/afterfaq"
         android:background="@color/blue"
-        tools:ignore="Orientation"></LinearLayout>
+        tools:ignore="Orientation">
+    </LinearLayout>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -44,7 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-android:id="@+id/linear1"
+                android:id="@+id/linear1"
                 android:orientation="vertical">
 
                 <LinearLayout

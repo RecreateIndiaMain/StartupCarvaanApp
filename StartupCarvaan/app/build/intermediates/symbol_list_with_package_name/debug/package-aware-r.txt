@@ -1762,6 +1762,7 @@ drawable crop_image_menu_rotate_right
 drawable cross
 drawable decline
 drawable default_dot
+drawable deh
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1852,6 +1853,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable orangedot
+drawable padlock
 drawable paintbrush
 drawable person1
 drawable person2
@@ -1894,6 +1896,7 @@ drawable timer
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable unlike
+drawable unlock
 drawable vsm_coin
 drawable wallpaper1
 font proximanovaregular
@@ -2595,6 +2598,7 @@ layout activity_card_view
 layout activity_create_profile
 layout activity_helppage
 layout activity_intro_slider
+layout activity_levels
 layout activity_login
 layout activity_main
 layout activity_payin

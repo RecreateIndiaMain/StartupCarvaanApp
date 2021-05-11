@@ -20,6 +20,7 @@ import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
 import io.paperdb.Paper;
+import recreate.india.main.startupcarvaan.Levels;
 import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.fragments.allshares.allshares;
 import recreate.india.main.startupcarvaan.fragments.biding.biding;
@@ -87,8 +88,11 @@ public class MainActivity extends AppCompatActivity{
                     finish();
                     break;
                 case R.id.profile:
-
                     startActivity(new Intent(MainActivity.this, ProfileActivity.class));
+                    break;
+
+                case R.id.growth:
+                    startActivity(new Intent(MainActivity.this, Levels.class));
                     break;
             }
             return false;
