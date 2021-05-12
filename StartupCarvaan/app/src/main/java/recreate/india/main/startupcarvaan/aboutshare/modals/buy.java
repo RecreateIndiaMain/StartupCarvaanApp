@@ -92,43 +92,47 @@ public class buy extends DialogFragment {
         buy_now.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Integer share_price=Integer.valueOf(sharedetails.getBuyingprice());
-                Integer quantity=Integer.valueOf(no_of_shares.getText().toString());
-                if(quantity<=sharedetails.getAvailableforbuying()) {
-                    Integer resultant_price=share_price*quantity;
-                    if(resultant_price>coin.getRci()){
-                        Toast.makeText(getContext(), "you do not have sufficient funds, please add some", Toast.LENGTH_SHORT).show();
+                if(no_of_shares.getText().toString().equals(""))
+                    Toast.makeText(getContext(), "please enter a valid quantity", Toast.LENGTH_SHORT).show();
+                else{
+                    Integer share_price=Integer.valueOf(sharedetails.getBuyingprice());
+                    Integer quantity=Integer.valueOf(no_of_shares.getText().toString());
+                    if(quantity<=sharedetails.getAvailableforbuying()) {
+                        Integer resultant_price=share_price*quantity;
+                        if(resultant_price>coin.getRci()){
+                            Toast.makeText(getContext(), "you do not have sufficient funds, please add some", Toast.LENGTH_SHORT).show();
+                        }
+                        else{
+                            // checking is user already a investor
+                            FirebaseFirestore.getInstance().collection("users")
+                                    .document(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                    .collection("myshares")
+                                    .document("shareid").get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                                @Override
+                                public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                                    if(task.getResult().exists()){
+                                        usersharefunctions.updateShare("shareid",share_price,quantity);
+                                        sharefunctions.removeAvailableBuy("shareid",sharedetails.getAvailableforbuying(),quantity);
+                                        sharefunctions.addSell("shareid",sharedetails.getAvailableforselling(),quantity);
+                                        userfunctions.removeRci(coin.getRci(),resultant_price);
+                                        userfunctions.addPoints(.1*resultant_price);
+                                    }
+                                    else{
+                                        usersharefunctions.addNewShare("shareid",share_price,quantity);
+                                        usersharefunctions.addUser("shareid");
+                                        sharefunctions.removeAvailableBuy("shareid",sharedetails.getAvailableforbuying(),quantity);
+                                        sharefunctions.addSell("shareid",sharedetails.getAvailableforselling(),quantity);
+                                        userfunctions.removeRci(coin.getRci(),resultant_price);
+                                        userfunctions.addPoints(.1*resultant_price);
+                                    }
+                                    dismiss();
+                                }
+                            });
+                        }
                     }
                     else{
-                        // checking is user already a investor
-                        FirebaseFirestore.getInstance().collection("users")
-                                .document(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                                .collection("myshares")
-                                .document("shareid").get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-                            @Override
-                            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                                if(task.getResult().exists()){
-                                    usersharefunctions.updateShare("shareid",share_price,quantity);
-                                    sharefunctions.removeAvailableBuy("shareid",sharedetails.getAvailableforbuying(),quantity);
-                                    sharefunctions.addSell("shareid",sharedetails.getAvailableforselling(),quantity);
-                                    userfunctions.removeRci(coin.getRci(),resultant_price);
-                                    userfunctions.addPoints(.1*resultant_price);
-                                }
-                                else{
-                                    usersharefunctions.addNewShare("shareid",share_price,quantity);
-                                    usersharefunctions.addUser("shareid");
-                                    sharefunctions.removeAvailableBuy("shareid",sharedetails.getAvailableforbuying(),quantity);
-                                    sharefunctions.addSell("shareid",sharedetails.getAvailableforselling(),quantity);
-                                    userfunctions.removeRci(coin.getRci(),resultant_price);
-                                    userfunctions.addPoints(.1*resultant_price);
-                                }
-                                dismiss();
-                            }
-                        });
+                        Toast.makeText(getContext(), "sorry these much share are not available for buying right now", Toast.LENGTH_SHORT).show();
                     }
-                }
-                else{
-                    Toast.makeText(getContext(), "sorry these much share are not available for buying right now", Toast.LENGTH_SHORT).show();
                 }
             }
         });

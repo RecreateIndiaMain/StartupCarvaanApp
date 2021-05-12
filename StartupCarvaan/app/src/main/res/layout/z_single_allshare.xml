@@ -9,7 +9,6 @@
     android:layout_margin="12dp"
     app:cardElevation="15dp"
     android:elevation="15dp">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

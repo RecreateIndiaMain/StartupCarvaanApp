@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.media.Image;
 import android.net.Uri;
@@ -65,10 +66,14 @@ public class blogging extends AppCompatActivity {
     private FirebaseUser firebaseUser=FirebaseAuth.getInstance().getCurrentUser();
     private String shareid;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blogging);
+        ProgressDialog pd=new ProgressDialog(blogging.this);
+        pd.setMessage("this is blogging");
+        pd.show();
         bottomNavigationView=findViewById(R.id.buy_sell_bottom_nav);
         bottomNavigationView.setOnNavigationItemSelectedListener(onNavigationItemReselectedListener);
         recyclerView=findViewById(R.id.aboutshare);
@@ -147,6 +152,7 @@ public class blogging extends AppCompatActivity {
                         public void onReady(@NotNull YouTubePlayer youTubePlayer) {
                             String id=model.getBlogurl();
                             youTubePlayer.cueVideo(id,0);
+                            pd.dismiss();
                         }
 
                         @Override

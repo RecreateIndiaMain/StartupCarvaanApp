@@ -17,8 +17,11 @@ import recreate.india.main.startupcarvaan.fragments.allshares.allshare;
 import recreate.india.main.startupcarvaan.fragments.myshares.holdings;
 
 public class user_share_functions {
+
     public user_share_functions() {
     }
+
+
 
     private FirebaseFirestore ff=FirebaseFirestore.getInstance();
     private FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();

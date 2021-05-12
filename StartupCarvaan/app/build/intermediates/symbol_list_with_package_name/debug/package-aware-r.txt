@@ -1122,6 +1122,7 @@ color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
 color goodgrey
+color green
 color grey
 color greyish
 color highlighted_text_material_dark
@@ -1717,6 +1718,7 @@ drawable ayp_shape_rounded_corners
 drawable bidding
 drawable bidprice
 drawable bottomsheet_back
+drawable bsw
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -1760,6 +1762,7 @@ drawable crop_image_menu_rotate_right
 drawable cross
 drawable decline
 drawable default_dot
+drawable deh
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1771,8 +1774,12 @@ drawable googleg_standard_color_18
 drawable googlesign
 drawable gs
 drawable ic_arrow_back_24dp
+drawable ic_baseline_account_circle_24
 drawable ic_baseline_arrow_drop_down_24
 drawable ic_baseline_arrow_drop_down_circle_24
+drawable ic_baseline_arrow_drop_up_24
+drawable ic_baseline_attach_money_24
+drawable ic_baseline_groups_24
 drawable ic_bg
 drawable ic_call_24dp
 drawable ic_close
@@ -1831,6 +1838,7 @@ drawable mtrl_ic_error
 drawable mtrl_popupmenu_background
 drawable mtrl_popupmenu_background_dark
 drawable mtrl_tabs_default_indicator
+drawable mysharespin
 drawable navigation_empty_icon
 drawable notification_action_background
 drawable notification_bg
@@ -1845,6 +1853,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable orangedot
+drawable padlock
 drawable paintbrush
 drawable person1
 drawable person2
@@ -1874,6 +1883,7 @@ drawable side_nav_bar
 drawable siginput
 drawable signup
 drawable spinnerbord
+drawable spinwhite
 drawable star
 drawable startupcarvaanlogo
 drawable swend
@@ -1886,6 +1896,7 @@ drawable timer
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable unlike
+drawable unlock
 drawable vsm_coin
 drawable wallpaper1
 font proximanovaregular
@@ -2174,6 +2185,11 @@ id icon_only
 id ifRoom
 id ignore
 id ignoreRequest
+id im1
+id im2
+id im3
+id im4
+id im5
 id image
 id imageView2
 id imageView3
@@ -2201,6 +2217,16 @@ id line
 id line1
 id line3
 id linear
+id linear1
+id linear11
+id linear12
+id linear13
+id linear14
+id linear15
+id linear2
+id linear3
+id linear4
+id linear5
 id listMode
 id list_item
 id live_video_indicator
@@ -2323,6 +2349,7 @@ id progressBar
 id progress_circular
 id progress_horizontal
 id radio
+id rateText
 id ratio
 id rci
 id rciimage
@@ -2391,6 +2418,7 @@ id snap
 id snapMargins
 id spacer
 id spinner3
+id spinner4
 id spline
 id split_action_bar
 id spread
@@ -2570,6 +2598,7 @@ layout activity_card_view
 layout activity_create_profile
 layout activity_helppage
 layout activity_intro_slider
+layout activity_levels
 layout activity_login
 layout activity_main
 layout activity_payin
