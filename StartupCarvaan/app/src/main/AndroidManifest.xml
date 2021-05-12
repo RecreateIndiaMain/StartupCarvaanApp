@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="recreate.india.main.startupcarvaan">
-
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-feature
         android:name="android.hardware.camera"
         android:required="false" />
@@ -22,7 +20,9 @@
         <activity android:name=".payments.payout"></activity>
         <activity android:name=".payments.payin"></activity>
         <activity android:name=".Helppage"></activity>
-        <activity android:name=".coin_exchange.buy_rci" />
+        <activity android:name=".coin_exchange.buy_rci" >
+
+        </activity>
         <activity android:name=".mainActivities.IntroSliderActivity"></activity>
         <activity android:name=".user.CreateProfile"></activity>
         <activity
@@ -33,20 +33,22 @@
             android:name=".aboutshare.blogging"
             android:parentActivityName=".mainActivities.MainActivity" />
         <activity android:name=".mainActivities.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".mainActivities.PrivacyPolicy" />
         <activity
             android:name=".loginsignup.loginActivity"
             android:theme="@style/Theme.StartupCarvaan.Fullscreen" />
-        <activity android:name=".mainActivities.SplashScreen"></activity>
+        <activity android:name=".mainActivities.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/Base.Theme.AppCompat" />
     </application>
+
 
 </manifest>

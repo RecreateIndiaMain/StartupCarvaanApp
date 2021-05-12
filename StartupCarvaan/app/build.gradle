@@ -30,7 +30,9 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 }
+task prepareKotlinBuildScriptModel {
 
+}
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.1'
@@ -98,6 +100,9 @@ dependencies {
     implementation 'com.theartofdev.edmodo:android-image-cropper:2.7.+'
 
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+    // Spinkit dependecy
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
 
 
 }

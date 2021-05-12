@@ -60,6 +60,9 @@ animator nav_default_enter_anim
 animator nav_default_exit_anim
 animator nav_default_pop_enter_anim
 animator nav_default_pop_exit_anim
+attr SpinKitViewStyle
+attr SpinKit_Color
+attr SpinKit_Style
 attr action
 attr actionBarDivider
 attr actionBarItemBackground
@@ -1063,6 +1066,7 @@ color cardview_light_background
 color cardview_shadow_end_color
 color cardview_shadow_start_color
 color checkbox_themeable_attribute_color
+color colorAccent
 color colorTransparentWhite
 color common_google_signin_btn_text_dark
 color common_google_signin_btn_text_dark_default
@@ -1122,6 +1126,7 @@ color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
 color goodgrey
+color green
 color grey
 color greyish
 color highlighted_text_material_dark
@@ -1717,6 +1722,7 @@ drawable ayp_shape_rounded_corners
 drawable bidding
 drawable bidprice
 drawable bottomsheet_back
+drawable bsw
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -1760,6 +1766,7 @@ drawable crop_image_menu_rotate_right
 drawable cross
 drawable decline
 drawable default_dot
+drawable deh
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1771,8 +1778,12 @@ drawable googleg_standard_color_18
 drawable googlesign
 drawable gs
 drawable ic_arrow_back_24dp
+drawable ic_baseline_account_circle_24
 drawable ic_baseline_arrow_drop_down_24
 drawable ic_baseline_arrow_drop_down_circle_24
+drawable ic_baseline_arrow_drop_up_24
+drawable ic_baseline_attach_money_24
+drawable ic_baseline_groups_24
 drawable ic_bg
 drawable ic_call_24dp
 drawable ic_close
@@ -1831,6 +1842,7 @@ drawable mtrl_ic_error
 drawable mtrl_popupmenu_background
 drawable mtrl_popupmenu_background_dark
 drawable mtrl_tabs_default_indicator
+drawable mysharespin
 drawable navigation_empty_icon
 drawable notification_action_background
 drawable notification_bg
@@ -1845,6 +1857,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable orangedot
+drawable padlock
 drawable paintbrush
 drawable person1
 drawable person2
@@ -1874,6 +1887,7 @@ drawable side_nav_bar
 drawable siginput
 drawable signup
 drawable spinnerbord
+drawable spinwhite
 drawable star
 drawable startupcarvaanlogo
 drawable swend
@@ -1886,6 +1900,7 @@ drawable timer
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable unlike
+drawable unlock
 drawable vsm_coin
 drawable wallpaper1
 font proximanovaregular
@@ -1893,15 +1908,27 @@ id ALT
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
+id ChasingDots
+id Circle
 id CropOverlayView
 id CropProgressBar
+id CubeGrid
+id DoubleBounce
 id FUNCTION
+id FadingCircle
 id FirstFragment
+id FoldingCube
 id ImageView_image
 id META
+id MultiplePulse
+id MultiplePulseRing
 id NO_DEBUG
+id Pulse
+id PulseRing
 id RedeemNow
 id Redeemtext
+id RotatingCircle
+id RotatingPlane
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
@@ -1910,6 +1937,9 @@ id SYM
 id SecondFragment
 id TOP_END
 id TOP_START
+id ThreeBounce
+id WanderingCubes
+id Wave
 id aboutRci
 id aboutshare
 id accelerate
@@ -2174,6 +2204,11 @@ id icon_only
 id ifRoom
 id ignore
 id ignoreRequest
+id im1
+id im2
+id im3
+id im4
+id im5
 id image
 id imageView2
 id imageView3
@@ -2201,6 +2236,16 @@ id line
 id line1
 id line3
 id linear
+id linear1
+id linear11
+id linear12
+id linear13
+id linear14
+id linear15
+id linear2
+id linear3
+id linear4
+id linear5
 id listMode
 id list_item
 id live_video_indicator
@@ -2323,6 +2368,7 @@ id progressBar
 id progress_circular
 id progress_horizontal
 id radio
+id rateText
 id ratio
 id rci
 id rciimage
@@ -2390,7 +2436,9 @@ id snackbar_text
 id snap
 id snapMargins
 id spacer
+id spin_kit
 id spinner3
+id spinner4
 id spline
 id split_action_bar
 id spread
@@ -2570,6 +2618,7 @@ layout activity_card_view
 layout activity_create_profile
 layout activity_helppage
 layout activity_intro_slider
+layout activity_levels
 layout activity_login
 layout activity_main
 layout activity_payin
@@ -2616,6 +2665,7 @@ layout fragment_practice
 layout fragment_second
 layout header
 layout item_app
+layout loading_layout
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title
@@ -3181,6 +3231,54 @@ style ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Year
 style ShapeAppearanceOverlay_MaterialComponents_TextInputLayout_FilledBox
 style ShapeAppearanceOverlay_TopLeftCut
 style ShapeAppearanceOverlay_TopRightDifferentCornerSize
+style SpinKitView
+style SpinKitView_ChasingDots
+style SpinKitView_Circle
+style SpinKitView_CubeGrid
+style SpinKitView_DoubleBounce
+style SpinKitView_FadingCircle
+style SpinKitView_FoldingCube
+style SpinKitView_Large
+style SpinKitView_Large_ChasingDots
+style SpinKitView_Large_Circle
+style SpinKitView_Large_CubeGrid
+style SpinKitView_Large_DoubleBounce
+style SpinKitView_Large_FadingCircle
+style SpinKitView_Large_FoldingCube
+style SpinKitView_Large_MultiplePulse
+style SpinKitView_Large_MultiplePulseRing
+style SpinKitView_Large_Pulse
+style SpinKitView_Large_PulseRing
+style SpinKitView_Large_RotatingCircle
+style SpinKitView_Large_RotatingPlane
+style SpinKitView_Large_ThreeBounce
+style SpinKitView_Large_WanderingCubes
+style SpinKitView_Large_Wave
+style SpinKitView_MultiplePulse
+style SpinKitView_MultiplePulseRing
+style SpinKitView_Pulse
+style SpinKitView_PulseRing
+style SpinKitView_RotatingCircle
+style SpinKitView_RotatingPlane
+style SpinKitView_Small
+style SpinKitView_Small_ChasingDots
+style SpinKitView_Small_Circle
+style SpinKitView_Small_CubeGrid
+style SpinKitView_Small_DoubleBounce
+style SpinKitView_Small_FadingCircle
+style SpinKitView_Small_FoldingCube
+style SpinKitView_Small_MultiplePulse
+style SpinKitView_Small_MultiplePulseRing
+style SpinKitView_Small_Pulse
+style SpinKitView_Small_PulseRing
+style SpinKitView_Small_RotatingCircle
+style SpinKitView_Small_RotatingPlane
+style SpinKitView_Small_ThreeBounce
+style SpinKitView_Small_WanderingCubes
+style SpinKitView_Small_Wave
+style SpinKitView_ThreeBounce
+style SpinKitView_WanderingCubes
+style SpinKitView_Wave
 style Test_ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day
 style Test_Theme_MaterialComponents_MaterialCalendar
 style Test_Widget_MaterialComponents_MaterialCalendar
@@ -3719,6 +3817,7 @@ styleable SignInButton buttonSize colorScheme scopeUris
 styleable Slider android_enabled android_value android_stepSize android_valueFrom android_valueTo haloColor haloRadius labelBehavior labelStyle thumbColor thumbElevation thumbRadius tickColor tickColorActive tickColorInactive trackColor trackColorActive trackColorInactive trackHeight
 styleable Snackbar snackbarButtonStyle snackbarStyle snackbarTextViewStyle
 styleable SnackbarLayout android_maxWidth actionTextColorAlpha animationMode backgroundOverlayColorAlpha backgroundTint backgroundTintMode elevation maxActionInlineWidth
+styleable SpinKitView SpinKit_Color SpinKit_Style
 styleable Spinner android_entries android_popupBackground android_prompt android_dropDownWidth popupTheme
 styleable State android_id constraints
 styleable StateListDrawable android_dither android_visible android_variablePadding android_constantSize android_enterFadeDuration android_exitFadeDuration

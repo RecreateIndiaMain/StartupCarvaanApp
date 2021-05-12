@@ -31,10 +31,12 @@ import org.jetbrains.annotations.NotNull;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import recreate.india.main.startupcarvaan.R;
+import recreate.india.main.startupcarvaan.fragments.progressdialogue.CustomProgressDialogue;
 
 public class practice extends Fragment {
     private RecyclerView myshare;
     private FirestoreRecyclerAdapter adapter;
+    private CustomProgressDialogue cpd;
     public practice() {
         // Required empty public constructor
     }
@@ -48,7 +50,9 @@ public class practice extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view= inflater.inflate(R.layout.fragment_practice, container, false);
+        cpd=new CustomProgressDialogue(getActivity());
         myshare=view.findViewById(R.id.practicerecyclerview);
+        cpd.show();
         Query query= FirebaseFirestore.getInstance().collection("validators");
         FirestoreRecyclerOptions<practicemodel> option=new FirestoreRecyclerOptions.Builder<practicemodel>().setQuery(query,practicemodel.class).build();
         adapter= new FirestoreRecyclerAdapter<practicemodel, practice.viewholder>(option) {
@@ -70,12 +74,14 @@ public class practice extends Fragment {
                     @Override
                     public void onComplete(@NonNull Task<Uri> task) {
                         Glide.with(getContext()).load(task.getResult()).into(holder.logo);
+
                     }
                 });
                 holder.video.addYouTubePlayerListener(new YouTubePlayerListener() {
                     @Override
                     public void onReady(@NotNull YouTubePlayer youTubePlayer) {
                         youTubePlayer.cueVideo(model.getIntrovideourl(),0);
+                        cpd.dismiss();
                     }
 
                     @Override

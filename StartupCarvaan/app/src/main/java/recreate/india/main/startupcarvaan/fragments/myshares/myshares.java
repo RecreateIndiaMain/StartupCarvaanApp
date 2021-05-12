@@ -13,6 +13,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -29,17 +31,22 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.storage.FirebaseStorage;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
 import de.hdodenhof.circleimageview.CircleImageView;
 import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.aboutshare.blogging;
 import recreate.india.main.startupcarvaan.aboutshare.models.sharedetails;
 import recreate.india.main.startupcarvaan.fragments.allshares.allshare;
+import recreate.india.main.startupcarvaan.fragments.progressdialogue.CustomProgressDialogue;
 import recreate.india.main.startupcarvaan.user.user;
 
 public class myshares extends Fragment {
     private RecyclerView myshare;
     private FirestoreRecyclerAdapter adapter;
-
+    private CustomProgressDialogue cpd;
     public myshares() {
         // Required empty public constructor
     }
@@ -56,7 +63,8 @@ public class myshares extends Fragment {
         View view= inflater.inflate(R.layout.fragment_myshares, container, false);
         myshare=view.findViewById(R.id.mysharerecyclerview);
 
-
+        cpd= new CustomProgressDialogue(getActivity());
+        cpd.show();
         Query query= FirebaseFirestore.getInstance().collection("users").document(new user().user().getUid()).collection("myshares");
         FirestoreRecyclerOptions<holdings> option=new FirestoreRecyclerOptions.Builder<holdings>().setQuery(query,holdings.class).build();
         adapter= new FirestoreRecyclerAdapter<holdings, viewholder>(option) {
@@ -69,6 +77,40 @@ public class myshares extends Fragment {
 
             @Override
             protected void onBindViewHolder(@NonNull viewholder holder, int position, @NonNull holdings model) {
+                List<String> list = new ArrayList<String>();
+                list.add(0, "Price of a share : No. of shares");
+                Map<String,Integer> holding=model.getHoldings();
+                for (Map.Entry<String,Integer> entry : holding.entrySet())
+                    list.add(String.valueOf(entry.getKey()+" : "+entry.getValue()));
+                final String[] item = new String[1];
+                ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, list);
+                arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                holder.spin1.setAdapter(arrayAdapter);
+                holder.spin1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+//                        if (parent.getItemAtPosition(position).equals("Price of a share : No. of shares")) {
+//                        } else {
+//                            item[0] = parent.getItemAtPosition(position).toString();
+//                            int i;
+//                            for(i=0; i< item[0].length(); i++){
+//                                if(item[0].charAt(i)==' '){
+//                                    break;
+//                                }
+//                                price_+= item[0].charAt(i);
+//                            }
+//                            i+=3    ;
+//                            share_= item[0].substring(i, item[0].length());
+//                            price.setText("price: "+price_);
+//                            share.setText(share_);
+//                        }
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {
+
+                    }
+                });
                 String shareid=getSnapshots().getSnapshot(position).getId();
                 final sharedetails[] sharedetails = {new sharedetails()};
                 final allshare[] allshare = {new allshare()};
@@ -84,6 +126,7 @@ public class myshares extends Fragment {
                                     public void onComplete(@NonNull Task<Uri> task) {
                                         if(task.isSuccessful()){
                                             Glide.with(getContext()).load(task.getResult()).into(holder.companylogo);
+                                            cpd.dismiss();
                                         }
                                     }
                                 });

@@ -7,9 +7,10 @@
 
         </item>
         <item android:id="@+id/profile"
-            android:title="Your Profile"
-            >
-
+            android:title="Your Profile">
+        </item>
+        <item android:id="@+id/growth"
+            android:title="Your level">
         </item>
         <item android:id="@+id/your_coins"
             android:title="Your Coins"

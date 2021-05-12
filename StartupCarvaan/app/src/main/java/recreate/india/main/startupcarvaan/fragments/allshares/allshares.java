@@ -1,5 +1,6 @@
 package recreate.india.main.startupcarvaan.fragments.allshares;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
@@ -45,18 +46,21 @@ import java.nio.charset.IllegalCharsetNameException;
 import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.aboutshare.blogging;
 import recreate.india.main.startupcarvaan.aboutshare.models.sharedetails;
+import recreate.india.main.startupcarvaan.fragments.progressdialogue.CustomProgressDialogue;
 import recreate.india.main.startupcarvaan.user.ProfileActivity;
 
 public class allshares extends Fragment {
     private FirebaseFirestore ff= FirebaseFirestore.getInstance();
     private FirestoreRecyclerAdapter adapter;
     private RecyclerView recyclerView;
+    private CustomProgressDialogue pDialog;
     public allshares() {
         // Required empty public constructor
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        ProgressDialog pDailog;
         super.onCreate(savedInstanceState);
     }
 
@@ -66,6 +70,7 @@ public class allshares extends Fragment {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_allshares, container, false);
         recyclerView=view.findViewById(R.id.allsharerecyclerview);
+        final int[] count = {1};
         Query query=ff.collection("allshares");
         FirestoreRecyclerOptions<allshare> option= new FirestoreRecyclerOptions.
                 Builder<allshare>().setQuery(query,allshare.class).
@@ -83,22 +88,21 @@ public class allshares extends Fragment {
                 holder.invest.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        String shareid=getSnapshots().getSnapshot(position).getId();
-                        startActivity(new Intent(getContext(), blogging.class).putExtra("shareid",shareid));
+                        String shareid = getSnapshots().getSnapshot(position).getId();
+                        startActivity(new Intent(getContext(), blogging.class).putExtra("shareid", shareid));
                     }
                 });
 
                 holder.switchLayout.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        if(holder.on){
-                            holder.on=false;
+                        if (holder.on) {
+                            holder.on = false;
                             holder.first.setVisibility(View.GONE);
                             holder.video.setVisibility(View.GONE);
                             holder.second.setVisibility(View.VISIBLE);
-                        }
-                        else{
-                            holder.on=true;
+                        } else {
+                            holder.on = true;
                             holder.first.setVisibility(View.VISIBLE);
                             holder.video.setVisibility(View.VISIBLE);
                             holder.second.setVisibility(View.GONE);
@@ -110,10 +114,13 @@ public class allshares extends Fragment {
                 FirebaseStorage.getInstance().getReference().child(model.getLogourl()).getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
                     @Override
                     public void onComplete(@NonNull Task<Uri> task) {
-                        if(task.getResult()!=null)
+                        if (task.getResult() != null) {
                             Glide.with(getContext())
                                     .load(task.getResult())
                                     .into(holder.companylogo);
+
+                        }
+
                     }
                 });
                 holder.companyname.setText(model.getName());
@@ -121,18 +128,22 @@ public class allshares extends Fragment {
                 holder.growthbar.setProgress(Integer.valueOf(model.getGrowth()));
                 holder.investors.setText(String.valueOf(model.getUsers()));
                 holder.group.setText(model.getType());
-                String tag="";
-                for(int i=0;i<model.getTags().size();i++){
-                    tag+= model.getTags().get(i)+"  ";
+                String tag = "";
+                for (int i = 0; i < model.getTags().size(); i++) {
+                    tag += model.getTags().get(i) + "  ";
                 }
                 holder.tags.setText(tag);
-                holder.advice.setText("Advice  "+model.getAdvice());
-                holder.nextslot.setText("Next slot   "+String.valueOf(model.getNextslot().toDate()));
+                holder.advice.setText("Advice  " + model.getAdvice());
+                holder.nextslot.setText("Next slot   " + String.valueOf(model.getNextslot().toDate()));
                 holder.introvideo.addYouTubePlayerListener(new YouTubePlayerListener() {
                     @Override
                     public void onReady(@NotNull YouTubePlayer youTubePlayer) {
-                        String url=model.getIntrovideourl();
-                        youTubePlayer.cueVideo(url,0);
+                        String url = model.getIntrovideourl();
+                        youTubePlayer.cueVideo(url, 0);
+                        count[0] =0;
+//                        Toast.makeText(getContext(), "video loaded", Toast.LENGTH_SHORT).show();
+                        checkDailog(count[0]);
+
                     }
 
                     @Override
@@ -180,7 +191,7 @@ public class allshares extends Fragment {
 
                     }
                 });
-                String shareid=getSnapshots().getSnapshot(position).getId();
+                String shareid = getSnapshots().getSnapshot(position).getId();
                 FirebaseFirestore.getInstance()
                         .collection("allshares")
                         .document(shareid)
@@ -189,19 +200,18 @@ public class allshares extends Fragment {
                         .addSnapshotListener(new EventListener<DocumentSnapshot>() {
                             @Override
                             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                                sharedetails sharedetails= value.toObject(recreate.india.main.startupcarvaan.aboutshare.models.sharedetails.class);
+                                sharedetails sharedetails = value.toObject(recreate.india.main.startupcarvaan.aboutshare.models.sharedetails.class);
                                 holder.sellingprice.setText(String.valueOf(sharedetails.getSellingprice()));
                                 holder.buyingprice.setText(String.valueOf(sharedetails.getBuyingprice()));
                             }
                         });
 //                Toast.makeText(getContext(), sharedetails[0].getBuyingprice(), Toast.LENGTH_SHORT).show();
-                if(model.getType().equals("elite")){
-                    holder.colorlayout.setBackgroundColor(ContextCompat.getColor(getContext(),R.color.blue));
-                }
-                else if(model.getType().equals("mediocre")){
-                    holder.colorlayout.setBackgroundColor(ContextCompat.getColor(getContext(),R.color.yellow));
-                }
-                else holder.colorlayout.setBackgroundColor(ContextCompat.getColor(getContext(),R.color.greyish));
+                if (model.getType().equals("elite")) {
+                    holder.colorlayout.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.blue));
+                } else if (model.getType().equals("mediocre")) {
+                    holder.colorlayout.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.yellow));
+                } else
+                    holder.colorlayout.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.greyish));
             }
         };
         recyclerView.setAdapter(adapter);
@@ -245,16 +255,36 @@ public class allshares extends Fragment {
             sellingprice=itemView.findViewById(R.id.sellingprice);
         }
     }
+    public void showProgress() {
+        pDialog = null;
+        if (pDialog == null) {
+            pDialog = new CustomProgressDialogue(getActivity());
+            pDialog.show();
+        }
+
+    }
+    void checkDailog(int i){
+        if(i==0)
+            dismissDialog();
+    }
+    public void dismissDialog() {
+        if (pDialog != null && pDialog.isShowing()){
+            pDialog.dismiss();
+            pDialog = null;
+        }
+    }
 
     @Override
     public void onStart() {
         super.onStart();
         adapter.startListening();
+        showProgress();
     }
 
     @Override
     public void onStop() {
         super.onStop();
         adapter.stopListening();
+        dismissDialog();
     }
 }
