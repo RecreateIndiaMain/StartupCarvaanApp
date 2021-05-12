@@ -128,9 +128,9 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/lcompany"
 
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
 
                 android:visibility="visible">
 
@@ -138,7 +138,7 @@
                     android:id="@+id/introvideo"
 
                     android:layout_width="match_parent"
-                    android:layout_height="190dp" />
+                    android:layout_height="210dp" />
             </LinearLayout>
 
         </RelativeLayout>
@@ -162,7 +162,7 @@
 
                 android:weightSum="2"
                 android:background="@drawable/circularbordersolid"
-                android:layout_marginTop="18dp"
+                android:layout_marginTop="14dp"
                 android:padding="6dp"
                 android:orientation="horizontal">
 
@@ -417,7 +417,7 @@
             <Button
                 android:id="@+id/invest"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_marginTop="5dp"
                 android:backgroundTint="#293859"
                 android:fontFamily="@font/proximanovaregular"
@@ -427,7 +427,7 @@
                 android:layout_marginRight="35dp"
                 android:layout_marginLeft="35dp"
                 android:textAllCaps="false"
-                android:layout_marginBottom="12dp"
+                android:layout_marginBottom="14dp"
                 android:textStyle="bold" />
 
         </LinearLayout>
