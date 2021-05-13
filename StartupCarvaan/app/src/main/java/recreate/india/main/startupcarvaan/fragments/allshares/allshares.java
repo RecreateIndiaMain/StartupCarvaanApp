@@ -46,13 +46,14 @@ import java.nio.charset.IllegalCharsetNameException;
 import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.aboutshare.blogging;
 import recreate.india.main.startupcarvaan.aboutshare.models.sharedetails;
+import recreate.india.main.startupcarvaan.fragments.progressdialogue.CustomProgressDialogue;
 import recreate.india.main.startupcarvaan.user.ProfileActivity;
 
 public class allshares extends Fragment {
     private FirebaseFirestore ff= FirebaseFirestore.getInstance();
     private FirestoreRecyclerAdapter adapter;
     private RecyclerView recyclerView;
-    private ProgressDialog pDialog;
+    private CustomProgressDialogue pDialog;
     public allshares() {
         // Required empty public constructor
     }
@@ -140,7 +141,7 @@ public class allshares extends Fragment {
                         String url = model.getIntrovideourl();
                         youTubePlayer.cueVideo(url, 0);
                         count[0] =0;
-                        Toast.makeText(getContext(), "video loaded", Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(getContext(), "video loaded", Toast.LENGTH_SHORT).show();
                         checkDailog(count[0]);
 
                     }
@@ -257,9 +258,7 @@ public class allshares extends Fragment {
     public void showProgress() {
         pDialog = null;
         if (pDialog == null) {
-            pDialog = new ProgressDialog(getActivity());
-            pDialog.setMessage("this is dailog");
-            pDialog.setCancelable(false);
+            pDialog = new CustomProgressDialogue(getActivity());
             pDialog.show();
         }
 

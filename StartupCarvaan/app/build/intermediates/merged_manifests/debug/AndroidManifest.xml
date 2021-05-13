@@ -34,7 +34,8 @@
         <activity android:name="recreate.india.main.startupcarvaan.payments.payout" />
         <activity android:name="recreate.india.main.startupcarvaan.payments.payin" />
         <activity android:name="recreate.india.main.startupcarvaan.Helppage" />
-        <activity android:name="recreate.india.main.startupcarvaan.coin_exchange.buy_rci" />
+        <activity android:name="recreate.india.main.startupcarvaan.coin_exchange.buy_rci" >
+        </activity>
         <activity android:name="recreate.india.main.startupcarvaan.mainActivities.IntroSliderActivity" />
         <activity android:name="recreate.india.main.startupcarvaan.user.CreateProfile" />
         <activity

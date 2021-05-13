@@ -31,11 +31,14 @@ import com.google.firebase.storage.FirebaseStorage;
 
 import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.fragments.mycoins.coin;
+import recreate.india.main.startupcarvaan.fragments.progressdialogue.CustomProgressDialogue;
 import recreate.india.main.startupcarvaan.user.user;
 
 public class biding extends Fragment {
     private RecyclerView myshare;
     private FirestoreRecyclerAdapter adapter;
+
+    private CustomProgressDialogue cpd;
     public biding() {
         // Required empty public constructor
     }
@@ -49,7 +52,13 @@ public class biding extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        // 11-05-21 Written by Siddharth start
+        cpd=new CustomProgressDialogue(getActivity());
+        // 11-05-21 Written by Siddharth end
         View view= inflater.inflate(R.layout.fragment_biding, container, false);
+        // 11-05-21 Written by Siddharth start
+        cpd.show();
+        // 11-05-21 Written by Siddharth end
         myshare=view.findViewById(R.id.bidingrecyclerview);
         Query query= FirebaseFirestore.getInstance().collection("biding");
         FirestoreRecyclerOptions<bidingm> option=new FirestoreRecyclerOptions.Builder<bidingm>().setQuery(query,bidingm.class).build();
@@ -67,6 +76,9 @@ public class biding extends Fragment {
                     @Override
                     public void onComplete(@NonNull Task<Uri> task) {
                         Glide.with(getContext()).load(task.getResult()).into(holder.productimage);
+                        // 11-05-21 Written by Siddharth start
+                        cpd.dismiss();
+                        // 11-05-21 Written by Siddharth start
                     }
                 });
                 holder.title.setText(model.getProducttitle());

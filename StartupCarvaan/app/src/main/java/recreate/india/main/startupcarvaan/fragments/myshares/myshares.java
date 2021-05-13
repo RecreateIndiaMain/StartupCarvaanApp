@@ -40,12 +40,13 @@ import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.aboutshare.blogging;
 import recreate.india.main.startupcarvaan.aboutshare.models.sharedetails;
 import recreate.india.main.startupcarvaan.fragments.allshares.allshare;
+import recreate.india.main.startupcarvaan.fragments.progressdialogue.CustomProgressDialogue;
 import recreate.india.main.startupcarvaan.user.user;
 
 public class myshares extends Fragment {
     private RecyclerView myshare;
     private FirestoreRecyclerAdapter adapter;
-
+    private CustomProgressDialogue cpd;
     public myshares() {
         // Required empty public constructor
     }
@@ -62,7 +63,8 @@ public class myshares extends Fragment {
         View view= inflater.inflate(R.layout.fragment_myshares, container, false);
         myshare=view.findViewById(R.id.mysharerecyclerview);
 
-
+        cpd= new CustomProgressDialogue(getActivity());
+        cpd.show();
         Query query= FirebaseFirestore.getInstance().collection("users").document(new user().user().getUid()).collection("myshares");
         FirestoreRecyclerOptions<holdings> option=new FirestoreRecyclerOptions.Builder<holdings>().setQuery(query,holdings.class).build();
         adapter= new FirestoreRecyclerAdapter<holdings, viewholder>(option) {
@@ -124,6 +126,7 @@ public class myshares extends Fragment {
                                     public void onComplete(@NonNull Task<Uri> task) {
                                         if(task.isSuccessful()){
                                             Glide.with(getContext()).load(task.getResult()).into(holder.companylogo);
+                                            cpd.dismiss();
                                         }
                                     }
                                 });

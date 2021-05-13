@@ -20,7 +20,9 @@
         <activity android:name=".payments.payout"></activity>
         <activity android:name=".payments.payin"></activity>
         <activity android:name=".Helppage"></activity>
-        <activity android:name=".coin_exchange.buy_rci" />
+        <activity android:name=".coin_exchange.buy_rci" >
+
+        </activity>
         <activity android:name=".mainActivities.IntroSliderActivity"></activity>
         <activity android:name=".user.CreateProfile"></activity>
         <activity
@@ -31,6 +33,7 @@
             android:name=".aboutshare.blogging"
             android:parentActivityName=".mainActivities.MainActivity" />
         <activity android:name=".mainActivities.MainActivity">
+
         </activity>
         <activity android:name=".mainActivities.PrivacyPolicy" />
         <activity
