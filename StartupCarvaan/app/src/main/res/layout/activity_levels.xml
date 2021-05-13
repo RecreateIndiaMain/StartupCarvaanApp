@@ -60,10 +60,13 @@
 
                 <ProgressBar
                     android:layout_width="match_parent"
-                    android:layout_height="16dp"
+                    android:layout_height="wrap_content"
                     android:id="@+id/progressid"
+android:max="100"
 
+                    android:scaleY="3"
                     android:layout_margin="4dp"
+
                     android:progressBackgroundTint="@color/green"
                     android:progressTint="@color/yellow"
                     style="@style/Widget.AppCompat.ProgressBar.Horizontal">
@@ -71,6 +74,15 @@
 
 
                 </ProgressBar>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_alignLeft="@id/progressid"
+                        android:layout_alignTop="@id/progressid"
+                        android:layout_alignRight="@id/progressid"
+                        android:layout_alignBottom="@id/progressid">
                     <TextView
                         android:background="#00000000"
                         android:text="gewfudfuwvd"
@@ -79,11 +91,20 @@
                         android:textSize="9sp"
                         android:layout_width="wrap_content"
                         android:textColor="@color/white"
-                    android:layout_alignLeft="@id/progressid"
-                    android:layout_alignTop="@id/progressid"
-                    android:layout_alignRight="@id/progressid"
-                    android:layout_alignBottom="@id/progressid"
+
                     />
+                        <TextView
+                            android:background="#00000000"
+                            android:text="gewfudfuwvd"
+                            android:layout_marginLeft="5dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textSize="9sp"
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/white"
+
+                            />
+            </LinearLayout>
                 </RelativeLayout>
                 <TextView
                     android:layout_width="match_parent"
@@ -166,9 +187,11 @@
 
                     <ProgressBar
                         android:layout_width="match_parent"
-                        android:layout_height="16dp"
+                        android:layout_height="wrap_content"
                         android:id="@+id/progressid2"
+                        android:max="100"
 
+                        android:scaleY="3"
                         android:layout_margin="4dp"
                         android:progressBackgroundTint="@color/green"
                         android:progressTint="@color/yellow"
@@ -177,19 +200,37 @@
 
 
                     </ProgressBar>
-                    <TextView
-                        android:background="#00000000"
-                        android:text="gewfudfuwvd"
-                        android:layout_height="match_parent"
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
                         android:gravity="center"
-                        android:textSize="9sp"
-                        android:layout_width="wrap_content"
-                        android:textColor="@color/white"
                         android:layout_alignLeft="@id/progressid2"
                         android:layout_alignTop="@id/progressid2"
                         android:layout_alignRight="@id/progressid2"
-                        android:layout_alignBottom="@id/progressid2"
-                        />
+                        android:layout_alignBottom="@id/progressid2">
+                        <TextView
+                            android:background="#00000000"
+                            android:text="gewfudfuwvd"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textSize="9sp"
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/white"
+
+                            />
+                        <TextView
+                            android:background="#00000000"
+                            android:text="gewfudfuwvd"
+                            android:layout_marginLeft="5dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textSize="9sp"
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/white"
+
+                            />
+                    </LinearLayout>
                 </RelativeLayout>
                 <TextView
                     android:layout_width="match_parent"
@@ -273,9 +314,11 @@
 
                     <ProgressBar
                         android:layout_width="match_parent"
-                        android:layout_height="16dp"
+                        android:layout_height="wrap_content"
                         android:id="@+id/progressid3"
+                        android:max="100"
 
+                        android:scaleY="3"
                         android:layout_margin="4dp"
                         android:progressBackgroundTint="@color/green"
                         android:progressTint="@color/yellow"
@@ -284,19 +327,37 @@
 
 
                     </ProgressBar>
-                    <TextView
-                        android:background="#00000000"
-                        android:text="gewfudfuwvd"
-                        android:layout_height="match_parent"
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
                         android:gravity="center"
-                        android:textSize="9sp"
-                        android:layout_width="wrap_content"
-                        android:textColor="@color/white"
                         android:layout_alignLeft="@id/progressid3"
                         android:layout_alignTop="@id/progressid3"
                         android:layout_alignRight="@id/progressid3"
-                        android:layout_alignBottom="@id/progressid3"
-                        />
+                        android:layout_alignBottom="@id/progressid3">
+                        <TextView
+                            android:background="#00000000"
+                            android:text="gewfudfuwvd"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textSize="9sp"
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/white"
+
+                            />
+                        <TextView
+                            android:background="#00000000"
+                            android:text="gewfudfuwvd"
+                            android:layout_marginLeft="5dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textSize="9sp"
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/white"
+
+                            />
+                    </LinearLayout>
                 </RelativeLayout>
                 <TextView
                     android:layout_width="match_parent"
@@ -380,9 +441,11 @@
 
                         <ProgressBar
                             android:layout_width="match_parent"
-                            android:layout_height="16dp"
+                            android:layout_height="wrap_content"
                             android:id="@+id/progressid4"
+                            android:max="100"
 
+                            android:scaleY="3"
                             android:layout_margin="4dp"
                             android:progressBackgroundTint="@color/green"
                             android:progressTint="@color/yellow"
@@ -391,19 +454,37 @@
 
 
                         </ProgressBar>
-                        <TextView
-                            android:background="#00000000"
-                            android:text="gewfudfuwvd"
-                            android:layout_height="match_parent"
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
                             android:gravity="center"
-                            android:textSize="9sp"
-                            android:layout_width="wrap_content"
-                            android:textColor="@color/white"
                             android:layout_alignLeft="@id/progressid4"
                             android:layout_alignTop="@id/progressid4"
                             android:layout_alignRight="@id/progressid4"
-                            android:layout_alignBottom="@id/progressid4"
-                            />
+                            android:layout_alignBottom="@id/progressid4">
+                            <TextView
+                                android:background="#00000000"
+                                android:text="gewfudfuwvd"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textSize="9sp"
+                                android:layout_width="wrap_content"
+                                android:textColor="@color/white"
+
+                                />
+                            <TextView
+                                android:background="#00000000"
+                                android:text="gewfudfuwvd"
+                                android:layout_marginLeft="5dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textSize="9sp"
+                                android:layout_width="wrap_content"
+                                android:textColor="@color/white"
+
+                                />
+                        </LinearLayout>
                     </RelativeLayout>
                     <TextView
                         android:layout_width="match_parent"
@@ -487,9 +568,11 @@
 
                         <ProgressBar
                             android:layout_width="match_parent"
-                            android:layout_height="16dp"
+                            android:layout_height="wrap_content"
                             android:id="@+id/progressid5"
+                            android:max="100"
 
+                            android:scaleY="3"
                             android:layout_margin="4dp"
                             android:progressBackgroundTint="@color/green"
                             android:progressTint="@color/yellow"
@@ -498,19 +581,37 @@
 
 
                         </ProgressBar>
-                        <TextView
-                            android:background="#00000000"
-                            android:text="gewfudfuwvd"
-                            android:layout_height="match_parent"
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
                             android:gravity="center"
-                            android:textSize="9sp"
-                            android:layout_width="wrap_content"
-                            android:textColor="@color/white"
                             android:layout_alignLeft="@id/progressid5"
                             android:layout_alignTop="@id/progressid5"
                             android:layout_alignRight="@id/progressid5"
-                            android:layout_alignBottom="@id/progressid5"
-                            />
+                            android:layout_alignBottom="@id/progressid5">
+                            <TextView
+                                android:background="#00000000"
+                                android:text="gewfudfuwvd"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textSize="9sp"
+                                android:layout_width="wrap_content"
+                                android:textColor="@color/white"
+
+                                />
+                            <TextView
+                                android:background="#00000000"
+                                android:text="gewfudfuwvd"
+                                android:layout_marginLeft="5dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textSize="9sp"
+                                android:layout_width="wrap_content"
+                                android:textColor="@color/white"
+
+                                />
+                        </LinearLayout>
                     </RelativeLayout>
                     <TextView
                         android:layout_width="match_parent"
@@ -594,9 +695,11 @@
 
                         <ProgressBar
                             android:layout_width="match_parent"
-                            android:layout_height="16dp"
+                            android:layout_height="wrap_content"
                             android:id="@+id/progressid6"
+                            android:max="100"
 
+                            android:scaleY="3"
                             android:layout_margin="4dp"
                             android:progressBackgroundTint="@color/green"
                             android:progressTint="@color/yellow"
@@ -605,19 +708,37 @@
 
 
                         </ProgressBar>
-                        <TextView
-                            android:background="#00000000"
-                            android:text="gewfudfuwvd"
-                            android:layout_height="match_parent"
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
                             android:gravity="center"
-                            android:textSize="9sp"
-                            android:layout_width="wrap_content"
-                            android:textColor="@color/white"
                             android:layout_alignLeft="@id/progressid6"
                             android:layout_alignTop="@id/progressid6"
                             android:layout_alignRight="@id/progressid6"
-                            android:layout_alignBottom="@id/progressid6"
-                            />
+                            android:layout_alignBottom="@id/progressid6">
+                            <TextView
+                                android:background="#00000000"
+                                android:text="gewfudfuwvd"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textSize="9sp"
+                                android:layout_width="wrap_content"
+                                android:textColor="@color/white"
+
+                                />
+                            <TextView
+                                android:background="#00000000"
+                                android:text="gewfudfuwvd"
+                                android:layout_marginLeft="5dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textSize="9sp"
+                                android:layout_width="wrap_content"
+                                android:textColor="@color/white"
+
+                                />
+                        </LinearLayout>
                     </RelativeLayout>
                     <TextView
                         android:layout_width="match_parent"
@@ -701,9 +822,11 @@
 
                         <ProgressBar
                             android:layout_width="match_parent"
-                            android:layout_height="16dp"
+                            android:layout_height="wrap_content"
                             android:id="@+id/progressid7"
+                            android:max="100"
 
+                            android:scaleY="3"
                             android:layout_margin="4dp"
                             android:progressBackgroundTint="@color/green"
                             android:progressTint="@color/yellow"
@@ -712,19 +835,37 @@
 
 
                         </ProgressBar>
-                        <TextView
-                            android:background="#00000000"
-                            android:text="gewfudfuwvd"
-                            android:layout_height="match_parent"
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
                             android:gravity="center"
-                            android:textSize="9sp"
-                            android:layout_width="wrap_content"
-                            android:textColor="@color/white"
                             android:layout_alignLeft="@id/progressid7"
                             android:layout_alignTop="@id/progressid7"
                             android:layout_alignRight="@id/progressid7"
-                            android:layout_alignBottom="@id/progressid7"
-                            />
+                            android:layout_alignBottom="@id/progressid7">
+                            <TextView
+                                android:background="#00000000"
+                                android:text="gewfudfuwvd"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textSize="9sp"
+                                android:layout_width="wrap_content"
+                                android:textColor="@color/white"
+
+                                />
+                            <TextView
+                                android:background="#00000000"
+                                android:text="gewfudfuwvd"
+                                android:layout_marginLeft="5dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textSize="9sp"
+                                android:layout_width="wrap_content"
+                                android:textColor="@color/white"
+
+                                />
+                        </LinearLayout>
                     </RelativeLayout>
                     <TextView
                         android:layout_width="match_parent"
@@ -808,9 +949,11 @@
 
                     <ProgressBar
                         android:layout_width="match_parent"
-                        android:layout_height="16dp"
+                        android:layout_height="wrap_content"
                         android:id="@+id/progressid8"
+                        android:max="100"
 
+                        android:scaleY="3"
                         android:layout_margin="4dp"
                         android:progressBackgroundTint="@color/green"
                         android:progressTint="@color/yellow"
@@ -819,19 +962,37 @@
 
 
                     </ProgressBar>
-                    <TextView
-                        android:background="#00000000"
-                        android:text="gewfudfuwvd"
-                        android:layout_height="match_parent"
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
                         android:gravity="center"
-                        android:textSize="9sp"
-                        android:layout_width="wrap_content"
-                        android:textColor="@color/white"
                         android:layout_alignLeft="@id/progressid8"
                         android:layout_alignTop="@id/progressid8"
                         android:layout_alignRight="@id/progressid8"
-                        android:layout_alignBottom="@id/progressid8"
-                        />
+                        android:layout_alignBottom="@id/progressid8">
+                        <TextView
+                            android:background="#00000000"
+                            android:text="gewfudfuwvd"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textSize="9sp"
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/white"
+
+                            />
+                        <TextView
+                            android:background="#00000000"
+                            android:text="gewfudfuwvd"
+                            android:layout_marginLeft="5dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textSize="9sp"
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/white"
+
+                            />
+                    </LinearLayout>
                 </RelativeLayout>
                 <TextView
                     android:layout_width="match_parent"
@@ -915,9 +1076,11 @@
 
                         <ProgressBar
                             android:layout_width="match_parent"
-                            android:layout_height="16dp"
+                            android:layout_height="wrap_content"
                             android:id="@+id/progressid9"
+                            android:max="100"
 
+                            android:scaleY="3"
                             android:layout_margin="4dp"
                             android:progressBackgroundTint="@color/green"
                             android:progressTint="@color/yellow"
@@ -926,19 +1089,37 @@
 
 
                         </ProgressBar>
-                        <TextView
-                            android:background="#00000000"
-                            android:text="gewfudfuwvd"
-                            android:layout_height="match_parent"
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
                             android:gravity="center"
-                            android:textSize="9sp"
-                            android:layout_width="wrap_content"
-                            android:textColor="@color/white"
                             android:layout_alignLeft="@id/progressid9"
                             android:layout_alignTop="@id/progressid9"
                             android:layout_alignRight="@id/progressid9"
-                            android:layout_alignBottom="@id/progressid9"
-                            />
+                            android:layout_alignBottom="@id/progressid9">
+                            <TextView
+                                android:background="#00000000"
+                                android:text="gewfudfuwvd"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textSize="9sp"
+                                android:layout_width="wrap_content"
+                                android:textColor="@color/white"
+
+                                />
+                            <TextView
+                                android:background="#00000000"
+                                android:text="gewfudfuwvd"
+                                android:layout_marginLeft="5dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textSize="9sp"
+                                android:layout_width="wrap_content"
+                                android:textColor="@color/white"
+
+                                />
+                        </LinearLayout>
                     </RelativeLayout>
                     <TextView
                         android:layout_width="match_parent"
@@ -1022,9 +1203,11 @@
 
                         <ProgressBar
                             android:layout_width="match_parent"
-                            android:layout_height="16dp"
+                            android:layout_height="wrap_content"
                             android:id="@+id/progressid10"
+                            android:max="100"
 
+                            android:scaleY="3"
                             android:layout_margin="4dp"
                             android:progressBackgroundTint="@color/green"
                             android:progressTint="@color/yellow"
@@ -1033,19 +1216,37 @@
 
 
                         </ProgressBar>
-                        <TextView
-                            android:background="#00000000"
-                            android:text="gewfudfuwvd"
-                            android:layout_height="match_parent"
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
                             android:gravity="center"
-                            android:textSize="9sp"
-                            android:layout_width="wrap_content"
-                            android:textColor="@color/white"
                             android:layout_alignLeft="@id/progressid10"
                             android:layout_alignTop="@id/progressid10"
                             android:layout_alignRight="@id/progressid10"
-                            android:layout_alignBottom="@id/progressid10"
-                            />
+                            android:layout_alignBottom="@id/progressid10">
+                            <TextView
+                                android:background="#00000000"
+                                android:text="gewfudfuwvd"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textSize="9sp"
+                                android:layout_width="wrap_content"
+                                android:textColor="@color/white"
+
+                                />
+                            <TextView
+                                android:background="#00000000"
+                                android:text="gewfudfuwvd"
+                                android:layout_marginLeft="5dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textSize="9sp"
+                                android:layout_width="wrap_content"
+                                android:textColor="@color/white"
+
+                                />
+                        </LinearLayout>
                     </RelativeLayout>
                     <TextView
                         android:layout_width="match_parent"
@@ -1129,9 +1330,11 @@
 
                         <ProgressBar
                             android:layout_width="match_parent"
-                            android:layout_height="16dp"
+                            android:layout_height="wrap_content"
                             android:id="@+id/progressid11"
+                            android:max="100"
 
+                            android:scaleY="3"
                             android:layout_margin="4dp"
                             android:progressBackgroundTint="@color/green"
                             android:progressTint="@color/yellow"
@@ -1140,19 +1343,37 @@
 
 
                         </ProgressBar>
-                        <TextView
-                            android:background="#00000000"
-                            android:text="gewfudfuwvd"
-                            android:layout_height="match_parent"
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
                             android:gravity="center"
-                            android:textSize="9sp"
-                            android:layout_width="wrap_content"
-                            android:textColor="@color/white"
                             android:layout_alignLeft="@id/progressid11"
                             android:layout_alignTop="@id/progressid11"
                             android:layout_alignRight="@id/progressid11"
-                            android:layout_alignBottom="@id/progressid11"
-                            />
+                            android:layout_alignBottom="@id/progressid11">
+                            <TextView
+                                android:background="#00000000"
+                                android:text="gewfudfuwvd"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textSize="9sp"
+                                android:layout_width="wrap_content"
+                                android:textColor="@color/white"
+
+                                />
+                            <TextView
+                                android:background="#00000000"
+                                android:text="gewfudfuwvd"
+                                android:layout_marginLeft="5dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textSize="9sp"
+                                android:layout_width="wrap_content"
+                                android:textColor="@color/white"
+
+                                />
+                        </LinearLayout>
                     </RelativeLayout>
                     <TextView
                         android:layout_width="match_parent"
