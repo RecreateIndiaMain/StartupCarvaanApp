@@ -2367,6 +2367,17 @@ id progress
 id progressBar
 id progress_circular
 id progress_horizontal
+id progressid
+id progressid10
+id progressid11
+id progressid2
+id progressid3
+id progressid4
+id progressid5
+id progressid6
+id progressid7
+id progressid8
+id progressid9
 id radio
 id rateText
 id ratio

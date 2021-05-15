@@ -79,6 +79,7 @@ public class allshares extends Fragment {
             @NonNull
             @Override
             public PostViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                showProgress();
                 View view=LayoutInflater.from(parent.getContext()).inflate(R.layout.z_single_allshare,parent,false);
                 return new PostViewHolder(view);
             }
@@ -278,7 +279,6 @@ public class allshares extends Fragment {
     public void onStart() {
         super.onStart();
         adapter.startListening();
-        showProgress();
     }
 
     @Override
