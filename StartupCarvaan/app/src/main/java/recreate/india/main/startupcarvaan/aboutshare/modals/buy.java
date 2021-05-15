@@ -99,6 +99,7 @@ public class buy extends DialogFragment {
                     Integer quantity=Integer.valueOf(no_of_shares.getText().toString());
                     if(quantity<=sharedetails.getAvailableforbuying()) {
                         Integer resultant_price=share_price*quantity;
+                        Integer resultant67= Integer.valueOf((int) Math.floor((resultant_price*67)/100));
                         if(resultant_price>coin.getRci()){
                             Toast.makeText(getContext(), "you do not have sufficient funds, please add some", Toast.LENGTH_SHORT).show();
                         }
@@ -113,15 +114,15 @@ public class buy extends DialogFragment {
                                     if(task.getResult().exists()){
                                         usersharefunctions.updateShare("shareid",share_price,quantity);
                                         sharefunctions.removeAvailableBuy("shareid",sharedetails.getAvailableforbuying(),quantity);
-                                        sharefunctions.addSell("shareid",sharedetails.getAvailableforselling(),quantity);
                                         userfunctions.removeRci(coin.getRci(),resultant_price);
                                         userfunctions.addPoints(.1*resultant_price);
+                                       // sharefunctions.updatetotalinvested(shareid,resultant67);
                                     }
                                     else{
                                         usersharefunctions.addNewShare("shareid",share_price,quantity);
                                         usersharefunctions.addUser("shareid");
                                         sharefunctions.removeAvailableBuy("shareid",sharedetails.getAvailableforbuying(),quantity);
-                                        sharefunctions.addSell("shareid",sharedetails.getAvailableforselling(),quantity);
+                                       // sharefunctions.updatetotalinvested(shareid,resultant67);
                                         userfunctions.removeRci(coin.getRci(),resultant_price);
                                         userfunctions.addPoints(.1*resultant_price);
                                     }

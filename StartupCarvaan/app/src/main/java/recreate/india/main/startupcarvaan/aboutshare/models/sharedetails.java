@@ -17,10 +17,7 @@ public class sharedetails {
     private Map<String,String> price;
     private Integer sellingprice;
     private String sellingtips;
-    private Integer totalsharesatusers,totalsharesonmarket;
-
-    public sharedetails() {
-    }
+    private Integer totalinvested,totalsharesatusers,totalsharesonmarket;
 
     public Integer getAvailableforbuying() {
         return availableforbuying;
@@ -86,6 +83,14 @@ public class sharedetails {
         this.sellingtips = sellingtips;
     }
 
+    public Integer getTotalinvested() {
+        return totalinvested;
+    }
+
+    public void setTotalinvested(Integer totalinvested) {
+        this.totalinvested = totalinvested;
+    }
+
     public Integer getTotalsharesatusers() {
         return totalsharesatusers;
     }
@@ -102,7 +107,7 @@ public class sharedetails {
         this.totalsharesonmarket = totalsharesonmarket;
     }
 
-    public sharedetails(Integer availableforbuying, Integer availableforselling, Integer buyingprice, String buyingtips, Boolean increased, Map<String, String> price, Integer sellingprice, String sellingtips, Integer totalsharesatusers, Integer totalsharesonmarket) {
+    public sharedetails(Integer availableforbuying, Integer availableforselling, Integer buyingprice, String buyingtips, Boolean increased, Map<String, String> price, Integer sellingprice, String sellingtips, Integer totalinvested, Integer totalsharesatusers, Integer totalsharesonmarket) {
         this.availableforbuying = availableforbuying;
         this.availableforselling = availableforselling;
         this.buyingprice = buyingprice;
@@ -111,7 +116,11 @@ public class sharedetails {
         this.price = price;
         this.sellingprice = sellingprice;
         this.sellingtips = sellingtips;
+        this.totalinvested = totalinvested;
         this.totalsharesatusers = totalsharesatusers;
         this.totalsharesonmarket = totalsharesonmarket;
+    }
+
+    public sharedetails() {
     }
 }

@@ -11,231 +11,120 @@
 9-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-<<<<<<< HEAD
-11-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:5:5-80
-11-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:5:22-77
+11-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:5:5-80
+11-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:5:22-77
 12    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-12-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:6:5-81
-12-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:6:22-78
+12-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:6:5-81
+12-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:6:22-78
 13    <uses-permission android:name="android.permission.INTERNET" />
-13-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:7:5-67
-13-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:7:22-64
+13-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:7:5-67
+13-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:7:22-64
 14
 15    <uses-feature
-15-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:9:5-11:36
+15-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:9:5-11:36
 16        android:name="android.hardware.camera"
-16-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:10:9-47
+16-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:10:9-47
 17        android:required="false" />
-17-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:11:9-33
-=======
-11-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:4:5-80
-11-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:4:22-77
-12    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-12-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:5:5-81
-12-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:5:22-78
-13    <uses-permission android:name="android.permission.INTERNET" />
-13-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:6:5-67
-13-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:6:22-64
-14
-15    <uses-feature
-15-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:7:5-9:36
-16        android:name="android.hardware.camera"
-16-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:8:9-47
-17        android:required="false" />
-17-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:9:9-33
->>>>>>> c15ba16703073ce2f51962a8f7bb2b4b90fcefc6
+17-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:11:9-33
 18
 19    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 19-->[com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5] C:\Users\avkg0\.gradle\caches\transforms-3\bfd941b67c9848bc77551dc616d7c9b9\transformed\jetified-core-10.0.5\AndroidManifest.xml:12:5-79
 19-->[com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5] C:\Users\avkg0\.gradle\caches\transforms-3\bfd941b67c9848bc77551dc616d7c9b9\transformed\jetified-core-10.0.5\AndroidManifest.xml:12:22-76
 20
 21    <application
-<<<<<<< HEAD
-21-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:13:5-53:19
+21-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:13:5-53:19
 22        android:name="androidx.multidex.MultiDexApplication"
 23        android:allowBackup="true"
-23-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:14:9-35
-=======
-21-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:11:5-51:19
-22        android:name="androidx.multidex.MultiDexApplication"
-23        android:allowBackup="true"
-23-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:12:9-35
->>>>>>> c15ba16703073ce2f51962a8f7bb2b4b90fcefc6
+23-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:14:9-35
 24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 24-->[androidx.core:core:1.3.1] C:\Users\avkg0\.gradle\caches\transforms-3\93ad5fb70247950b640af4a3898b5cce\transformed\core-1.3.1\AndroidManifest.xml:24:18-86
 25        android:debuggable="true"
 26        android:icon="@drawable/startupcarvaanlogo"
-<<<<<<< HEAD
-26-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:15:9-52
+26-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:15:9-52
 27        android:label="@string/app_name"
-27-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:16:9-41
+27-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:16:9-41
 28        android:roundIcon="@drawable/startupcarvaanlogo"
-28-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:17:9-57
+28-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:17:9-57
 29        android:supportsRtl="true"
-29-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:18:9-35
+29-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:18:9-35
 30        android:testOnly="true"
 31        android:theme="@style/Theme.StartupCarvaan" >
-31-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:19:9-52
+31-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:19:9-52
 32        <activity android:name="recreate.india.main.startupcarvaan.coin_exchange.rci_exchange" >
-32-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:20:9-26:20
-32-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:20:19-61
+32-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:20:9-26:20
+32-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:20:19-61
 33            <intent-filter>
-33-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:21:13-25:29
+33-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:21:13-25:29
 34                <action android:name="android.intent.action.MAIN" />
-34-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:22:17-69
-34-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:22:25-66
+34-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:22:17-69
+34-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:22:25-66
 35
 36                <category android:name="android.intent.category.LAUNCHER" />
-36-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:24:17-77
-36-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:24:27-74
+36-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:24:17-77
+36-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:24:27-74
 37            </intent-filter>
 38        </activity>
 39        <activity android:name="recreate.india.main.startupcarvaan.Levels" />
-39-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:27:9-44
-39-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:27:19-41
+39-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:27:9-44
+39-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:27:19-41
 40        <activity android:name="recreate.india.main.startupcarvaan.mainActivities.RecyclerActivity" />
-40-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:28:9-69
-40-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:28:19-66
+40-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:28:9-69
+40-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:28:19-66
 41        <activity android:name="recreate.india.main.startupcarvaan.payments.payout" />
-41-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:29:9-53
-41-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:29:19-50
+41-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:29:9-53
+41-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:29:19-50
 42        <activity android:name="recreate.india.main.startupcarvaan.payments.payin" />
-42-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:30:9-52
-42-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:30:19-49
+42-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:30:9-52
+42-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:30:19-49
 43        <activity android:name="recreate.india.main.startupcarvaan.Helppage" />
-43-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:31:9-46
-43-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:31:19-43
+43-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:31:9-46
+43-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:31:19-43
 44        <activity android:name="recreate.india.main.startupcarvaan.coin_exchange.buy_rci" />
-44-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:32:9-68
-44-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:32:19-56
+44-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:32:9-68
+44-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:32:19-56
 45        <activity android:name="recreate.india.main.startupcarvaan.mainActivities.IntroSliderActivity" />
-45-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:33:9-72
-45-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:33:19-69
+45-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:33:9-72
+45-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:33:19-69
 46        <activity android:name="recreate.india.main.startupcarvaan.user.CreateProfile" />
-46-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:34:9-56
-46-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:34:19-53
+46-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:34:9-56
+46-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:34:19-53
 47        <activity
-47-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:35:9-37:71
+47-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:35:9-37:71
 48            android:name="recreate.india.main.startupcarvaan.loginsignup.PhoneAuthActivity"
-48-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:36:13-58
+48-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:36:13-58
 49            android:parentActivityName="recreate.india.main.startupcarvaan.loginsignup.loginActivity" />
-49-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:37:13-68
+49-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:37:13-68
 50        <activity android:name="recreate.india.main.startupcarvaan.user.ProfileActivity" />
-50-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:38:9-58
-50-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:38:19-55
+50-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:38:9-58
+50-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:38:19-55
 51        <activity
-51-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:39:9-41:73
+51-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:39:9-41:73
 52            android:name="recreate.india.main.startupcarvaan.aboutshare.blogging"
-52-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:40:13-48
+52-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:40:13-48
 53            android:parentActivityName="recreate.india.main.startupcarvaan.mainActivities.MainActivity" />
-53-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:41:13-70
+53-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:41:13-70
 54        <activity android:name="recreate.india.main.startupcarvaan.mainActivities.MainActivity" />
-54-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:42:9-74
-54-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:42:19-62
-55        <activity android:name="recreate.india.main.startupcarvaan.mainActivities.PrivacyPolicy" />
-55-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:43:9-66
-55-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:43:19-63
-56        <activity
-56-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:44:9-46:70
-57            android:name="recreate.india.main.startupcarvaan.loginsignup.loginActivity"
-57-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:45:13-54
-58            android:theme="@style/Theme.StartupCarvaan.Fullscreen" />
-58-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:46:13-67
-59        <activity android:name="recreate.india.main.startupcarvaan.mainActivities.SplashScreen" >
-59-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:47:9-49:20
-59-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:47:19-62
-60        </activity>
-61        <activity
-61-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:50:9-52:59
-62            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
-62-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:51:13-76
-63            android:theme="@style/Base.Theme.AppCompat" />
-63-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:52:13-56
-=======
-26-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:13:9-52
-27        android:label="@string/app_name"
-27-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:14:9-41
-28        android:roundIcon="@drawable/startupcarvaanlogo"
-28-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:15:9-57
-29        android:supportsRtl="true"
-29-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:16:9-35
-30        android:testOnly="true"
-31        android:theme="@style/Theme.StartupCarvaan" >
-31-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:17:9-52
-32        <activity android:name="recreate.india.main.startupcarvaan.Levels" />
-32-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:18:9-53
-32-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:18:19-41
-33        <activity android:name="recreate.india.main.startupcarvaan.mainActivities.RecyclerActivity" />
-33-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:19:9-69
-33-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:19:19-66
-34        <activity android:name="recreate.india.main.startupcarvaan.payments.payout" />
-34-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:20:9-62
-34-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:20:19-50
-35        <activity android:name="recreate.india.main.startupcarvaan.payments.payin" />
-35-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:21:9-61
-35-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:21:19-49
-36        <activity android:name="recreate.india.main.startupcarvaan.Helppage" />
-36-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:22:9-55
-36-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:22:19-43
-37        <activity android:name="recreate.india.main.startupcarvaan.coin_exchange.buy_rci" >
-37-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:23:9-25:20
-37-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:23:19-56
-38        </activity>
-39        <activity android:name="recreate.india.main.startupcarvaan.mainActivities.IntroSliderActivity" />
-39-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:26:9-81
-39-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:26:19-69
-40        <activity android:name="recreate.india.main.startupcarvaan.user.CreateProfile" />
-40-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:27:9-65
-40-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:27:19-53
-41        <activity
-41-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:28:9-30:71
-42            android:name="recreate.india.main.startupcarvaan.loginsignup.PhoneAuthActivity"
-42-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:29:13-58
-43            android:parentActivityName="recreate.india.main.startupcarvaan.loginsignup.loginActivity" />
-43-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:30:13-68
-44        <activity android:name="recreate.india.main.startupcarvaan.user.ProfileActivity" />
-44-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:31:9-58
-44-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:31:19-55
-45        <activity
-45-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:32:9-34:73
-46            android:name="recreate.india.main.startupcarvaan.aboutshare.blogging"
-46-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:33:13-48
-47            android:parentActivityName="recreate.india.main.startupcarvaan.mainActivities.MainActivity" />
-47-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:34:13-70
-48        <activity android:name="recreate.india.main.startupcarvaan.mainActivities.MainActivity" >
-48-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:35:9-37:20
-48-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:35:19-62
-49        </activity>
-50        <activity android:name="recreate.india.main.startupcarvaan.mainActivities.PrivacyPolicy" />
-50-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:38:9-66
-50-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:38:19-63
-51        <activity
-51-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:39:9-41:70
-52            android:name="recreate.india.main.startupcarvaan.loginsignup.loginActivity"
-52-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:40:13-54
-53            android:theme="@style/Theme.StartupCarvaan.Fullscreen" />
-53-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:41:13-67
-54        <activity android:name="recreate.india.main.startupcarvaan.mainActivities.SplashScreen" >
-54-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:42:9-47:20
+54-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:42:9-74
 54-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:42:19-62
-55            <intent-filter>
-55-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:43:13-46:29
-56                <action android:name="android.intent.action.MAIN" />
-56-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:44:17-69
-56-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:44:25-66
-57
-58                <category android:name="android.intent.category.LAUNCHER" />
-58-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:45:17-77
-58-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:45:27-74
-59            </intent-filter>
+55        <activity android:name="recreate.india.main.startupcarvaan.mainActivities.PrivacyPolicy" />
+55-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:43:9-66
+55-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:43:19-63
+56        <activity
+56-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:44:9-46:70
+57            android:name="recreate.india.main.startupcarvaan.loginsignup.loginActivity"
+57-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:45:13-54
+58            android:theme="@style/Theme.StartupCarvaan.Fullscreen" />
+58-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:46:13-67
+59        <activity android:name="recreate.india.main.startupcarvaan.mainActivities.SplashScreen" >
+59-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:47:9-49:20
+59-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:47:19-62
 60        </activity>
 61        <activity
-61-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:48:9-50:59
+61-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:50:9-52:59
 62            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
-62-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:49:13-76
+62-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:51:13-76
 63            android:theme="@style/Base.Theme.AppCompat" />
-63-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:50:13-56
->>>>>>> c15ba16703073ce2f51962a8f7bb2b4b90fcefc6
+63-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:52:13-56
 64        <activity
 64-->[com.shreyaspatil:EasyUpiPayment:2.0] C:\Users\avkg0\.gradle\caches\transforms-3\74bf93474c281850ccf76f375b97d503\transformed\jetified-EasyUpiPayment-2.0\AndroidManifest.xml:12:9-14:81
 65            android:name="com.shreyaspatil.EasyUpiPayment.ui.PaymentUiActivity"
@@ -265,13 +154,8 @@
 78            <intent-filter>
 78-->[com.razorpay:checkout:1.6.6] C:\Users\avkg0\.gradle\caches\transforms-3\ef631643bead73c70d3d72b463795ab4\transformed\jetified-checkout-1.6.6\AndroidManifest.xml:22:13-28:29
 79                <action android:name="android.intent.action.MAIN" />
-<<<<<<< HEAD
-79-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:22:17-69
-79-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:22:25-66
-=======
-79-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:44:17-69
-79-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:44:25-66
->>>>>>> c15ba16703073ce2f51962a8f7bb2b4b90fcefc6
+79-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:22:17-69
+79-->C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:22:25-66
 80
 81                <data
 81-->[com.razorpay:checkout:1.6.6] C:\Users\avkg0\.gradle\caches\transforms-3\ef631643bead73c70d3d72b463795ab4\transformed\jetified-checkout-1.6.6\AndroidManifest.xml:25:17-27:47

@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-=======
-recreate/india/main/startupcarvaan/Levels.java
- recreate.india.main.startupcarvaan.Levels
- recreate.india.main.startupcarvaan.Levels$1
->>>>>>> c15ba16703073ce2f51962a8f7bb2b4b90fcefc6
 recreate/india/main/startupcarvaan/user/user_share_functions.java
  recreate.india.main.startupcarvaan.user.user_share_functions
  recreate.india.main.startupcarvaan.user.user_share_functions$1
@@ -22,16 +16,6 @@ recreate/india/main/startupcarvaan/fragments/mycoins/coin.java
  recreate.india.main.startupcarvaan.fragments.mycoins.coin
 recreate/india/main/startupcarvaan/aboutshare/models/coinExchange.java
  recreate.india.main.startupcarvaan.aboutshare.models.coinExchange
-<<<<<<< HEAD
-=======
-recreate/india/main/startupcarvaan/fragments/biding/biding.java
- recreate.india.main.startupcarvaan.fragments.biding.biding
- recreate.india.main.startupcarvaan.fragments.biding.biding$1
- recreate.india.main.startupcarvaan.fragments.biding.biding$1$1
- recreate.india.main.startupcarvaan.fragments.biding.biding$1$2
- recreate.india.main.startupcarvaan.fragments.biding.biding$1$2$1
- recreate.india.main.startupcarvaan.fragments.biding.biding$viewholder
->>>>>>> c15ba16703073ce2f51962a8f7bb2b4b90fcefc6
 recreate/india/main/startupcarvaan/user/ProfileActivity.java
  recreate.india.main.startupcarvaan.user.ProfileActivity
  recreate.india.main.startupcarvaan.user.ProfileActivity$1
@@ -54,20 +38,6 @@ recreate/india/main/startupcarvaan/user/CreateProfile.java
  recreate.india.main.startupcarvaan.user.CreateProfile$4$2
 recreate/india/main/startupcarvaan/aboutshare/models/work.java
  recreate.india.main.startupcarvaan.aboutshare.models.work
-<<<<<<< HEAD
-=======
-recreate/india/main/startupcarvaan/fragments/practice/practice.java
- recreate.india.main.startupcarvaan.fragments.practice.practice
- recreate.india.main.startupcarvaan.fragments.practice.practice$1
- recreate.india.main.startupcarvaan.fragments.practice.practice$1$1
- recreate.india.main.startupcarvaan.fragments.practice.practice$1$2
- recreate.india.main.startupcarvaan.fragments.practice.practice$viewholder
-recreate/india/main/startupcarvaan/coin_exchange/buy_rci.java
- recreate.india.main.startupcarvaan.coin_exchange.buy_rci
-recreate/india/main/startupcarvaan/aboutshare/modals/rates.java
- recreate.india.main.startupcarvaan.aboutshare.modals.rates
- recreate.india.main.startupcarvaan.aboutshare.modals.rates$1
->>>>>>> c15ba16703073ce2f51962a8f7bb2b4b90fcefc6
 recreate/india/main/startupcarvaan/aboutshare/modals/sell.java
  recreate.india.main.startupcarvaan.aboutshare.modals.sell
  recreate.india.main.startupcarvaan.aboutshare.modals.sell$1
@@ -84,13 +54,6 @@ recreate/india/main/startupcarvaan/fragments/allshares/allshares.java
  recreate.india.main.startupcarvaan.fragments.allshares.allshares$1$4
  recreate.india.main.startupcarvaan.fragments.allshares.allshares$1$5
  recreate.india.main.startupcarvaan.fragments.allshares.allshares$PostViewHolder
-<<<<<<< HEAD
-=======
-recreate/india/main/startupcarvaan/user/userfunctions.java
- recreate.india.main.startupcarvaan.user.userfunctions
- recreate.india.main.startupcarvaan.user.userfunctions$1
- recreate.india.main.startupcarvaan.user.userfunctions$2
->>>>>>> c15ba16703073ce2f51962a8f7bb2b4b90fcefc6
 recreate/india/main/startupcarvaan/loginsignup/PhoneAuthActivity.java
  recreate.india.main.startupcarvaan.loginsignup.PhoneAuthActivity
  recreate.india.main.startupcarvaan.loginsignup.PhoneAuthActivity$1
@@ -226,23 +189,6 @@ recreate/india/main/startupcarvaan/mainActivities/MyRecyclerViewAdapter.java
  recreate.india.main.startupcarvaan.mainActivities.MyRecyclerViewAdapter
  recreate.india.main.startupcarvaan.mainActivities.MyRecyclerViewAdapter$ItemClickListener
  recreate.india.main.startupcarvaan.mainActivities.MyRecyclerViewAdapter$ViewHolder
-<<<<<<< HEAD
 recreate/india/main/startupcarvaan/coin_exchange/rci_exchange.java
  recreate.india.main.startupcarvaan.coin_exchange.rci_exchange
  recreate.india.main.startupcarvaan.coin_exchange.rci_exchange$1
-=======
-recreate/india/main/startupcarvaan/fragments/myshares/myshares.java
- recreate.india.main.startupcarvaan.fragments.myshares.myshares
- recreate.india.main.startupcarvaan.fragments.myshares.myshares$1
- recreate.india.main.startupcarvaan.fragments.myshares.myshares$1$1
- recreate.india.main.startupcarvaan.fragments.myshares.myshares$1$2
- recreate.india.main.startupcarvaan.fragments.myshares.myshares$1$2$1
- recreate.india.main.startupcarvaan.fragments.myshares.myshares$1$3
- recreate.india.main.startupcarvaan.fragments.myshares.myshares$1$4
- recreate.india.main.startupcarvaan.fragments.myshares.myshares$viewholder
-recreate/india/main/startupcarvaan/fragments/practice/practicemodel.java
- recreate.india.main.startupcarvaan.fragments.practice.practicemodel
-recreate/india/main/startupcarvaan/mainActivities/SplashScreen.java
- recreate.india.main.startupcarvaan.mainActivities.SplashScreen
- recreate.india.main.startupcarvaan.mainActivities.SplashScreen$1
->>>>>>> c15ba16703073ce2f51962a8f7bb2b4b90fcefc6
