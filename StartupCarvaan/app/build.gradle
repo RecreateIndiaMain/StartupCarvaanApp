@@ -104,5 +104,7 @@ dependencies {
     // Spinkit dependecy
     implementation 'com.github.ybq:Android-SpinKit:1.4.0'
 
+    // Mp Charts
+    implementation 'com.github.PhilJay:MPAndroidChart:v2.2.4'
 
 }
