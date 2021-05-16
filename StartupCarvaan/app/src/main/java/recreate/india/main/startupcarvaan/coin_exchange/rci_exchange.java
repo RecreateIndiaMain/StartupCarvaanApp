@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
+import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -13,11 +15,7 @@ import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
-import com.github.mikephil.charting.interfaces.datasets.IDataSet;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -49,12 +47,14 @@ public class rci_exchange extends AppCompatActivity {
         ArrayList<String> xAxes=new ArrayList<>();
         ArrayList<Entry> day=new ArrayList<>();
         ArrayList<Entry> values = new ArrayList<>();
-        values.add(new Entry(1, 5));
-        values.add(new Entry(2, 10));
-        values.add(new Entry(3, 10));
-        values.add(new Entry(3, 20));
-        values.add(new Entry(4, 50));
-        showGraph(values);
+//        values.add(new Entry(1.4f, 5.6f));
+//        values.add(new Entry(2.4f, 10));
+//        values.add(new Entry(3.4f, 10));
+//        values.add(new Entry(3.6f, 20));
+//        values.add(new Entry(4.8f, 50));
+//        showGraph(values);
+        final float[] s1 = new float[1];
+        final float[] s2 = new float[1];
         ff.collection("AboutRci").document("details").addSnapshotListener(new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
@@ -62,21 +62,20 @@ public class rci_exchange extends AppCompatActivity {
                     rciValue = value.toObject(RciValue.class);
                     price_rci.setText(String.valueOf(rciValue.getCurrentvalue()));
                     desc_rci.setText(String.valueOf(rciValue.getDescription()));
-//                    HashMap<String,Double> price_time =rciValue.getGraph();
-//                    for (Map.Entry<String, Double> set : price_time.entrySet()) {
-//                        xAxes.add(String.valueOf(set.getKey()));
-//                        day.add(new Entry((float) Double.parseDouble(String.valueOf(set.getValue())), (float) Double.parseDouble(set.getKey())));
-//                    }
+                    HashMap<String,Double> price_time =rciValue.getGraph();
+                    for (Map.Entry<String, Double> set : price_time.entrySet()) {
+                        s1[0] =Float.parseFloat(set.getKey());
+                        s2[0] =Float.parseFloat(String.valueOf(set.getValue()));
+//                        xAxes.add(s1[0]);
+                        values.add(new Entry(s1[0], s2[0]));
+//                        Toast.makeText(rci_exchange.this, (int) Float.parseFloat(set.getKey()), Toast.LENGTH_SHORT).show();
+                    }
+
+                    showGraph(values);
 //                    String[] xaxes = new String[xAxes.size()];
 //                    for (int i = 0; i < xAxes.size(); i++) {
 //                        xaxes[i] = xAxes.get(i).toString();
 //                    }
-//                    ArrayList<ILineDataSet> lineDataSets = new ArrayList<>();
-//                    LineDataSet lineDataSet = new LineDataSet(day, "Date");
-//                    lineDataSet.setDrawCircles(false);
-//                    lineDataSet.setColor(Color.BLUE);
-//                    lineDataSets.add(lineDataSet);
-//                    lineChart.setData(new LineData(lineDataSets));
                 }
             }
         });
@@ -90,7 +89,9 @@ public class rci_exchange extends AppCompatActivity {
             lineChart.getData().notifyDataChanged();
             lineChart.notifyDataSetChanged();
         } else {
-            set1 = new LineDataSet(values, "Sample Data");
+            for (Entry i:values)
+                Log.i("my_values", String.valueOf(i));
+            set1 = new LineDataSet(values, "Price");
             set1.setDrawIcons(false);
             set1.enableDashedLine(10f, 5f, 0f);
             set1.enableDashedHighlightLine(10f, 5f, 0f);

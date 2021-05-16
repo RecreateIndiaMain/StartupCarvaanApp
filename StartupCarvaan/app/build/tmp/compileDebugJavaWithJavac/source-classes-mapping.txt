@@ -192,3 +192,4 @@ recreate/india/main/startupcarvaan/mainActivities/MyRecyclerViewAdapter.java
 recreate/india/main/startupcarvaan/coin_exchange/rci_exchange.java
  recreate.india.main.startupcarvaan.coin_exchange.rci_exchange
  recreate.india.main.startupcarvaan.coin_exchange.rci_exchange$1
+ recreate.india.main.startupcarvaan.coin_exchange.rci_exchange$2
