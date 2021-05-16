@@ -18,11 +18,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StartupCarvaan">
         <activity android:name=".coin_exchange.rci_exchange">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".Levels" />
         <activity android:name=".mainActivities.RecyclerActivity" />
@@ -44,8 +40,13 @@
         <activity
             android:name=".loginsignup.loginActivity"
             android:theme="@style/Theme.StartupCarvaan.Fullscreen" />
-        <activity android:name=".mainActivities.SplashScreen">
+        <activity android:name=".mainActivities.SplashScreen"
+            android:theme="@style/Theme.StartupCarvaan.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
