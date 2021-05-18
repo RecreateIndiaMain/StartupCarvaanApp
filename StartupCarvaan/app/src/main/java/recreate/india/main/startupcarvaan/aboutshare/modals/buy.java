@@ -115,7 +115,12 @@ public class buy extends DialogFragment {
                                         usersharefunctions.updateShare("shareid",share_price,quantity);
                                         sharefunctions.removeAvailableBuy("shareid",sharedetails.getAvailableforbuying(),quantity);
                                         userfunctions.removeRci(coin.getRci(),resultant_price);
-                                        userfunctions.addPoints(.1*resultant_price);
+                                        try {
+                                            userfunctions.addPoints(.1*resultant_price);
+                                        }
+                                        catch (Error e){
+
+                                        }
                                         sharefunctions.addSell(shareid,sharedetails.getAvailableforselling(),resultant67);
                                     }
                                     else{
