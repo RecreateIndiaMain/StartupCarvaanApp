@@ -23,10 +23,10 @@ recreate/india/main/startupcarvaan/user/ProfileActivity.java
  recreate.india.main.startupcarvaan.user.ProfileActivity$2$1
 recreate/india/main/startupcarvaan/compressor/FileUtil.java
  recreate.india.main.startupcarvaan.compressor.FileUtil
-recreate/india/main/startupcarvaan/mainActivities/MainActivity.java
- recreate.india.main.startupcarvaan.mainActivities.MainActivity
- recreate.india.main.startupcarvaan.mainActivities.MainActivity$1
- recreate.india.main.startupcarvaan.mainActivities.MainActivity$2
+recreate/india/main/startupcarvaan/mainActivities/MyRecyclerViewAdapter.java
+ recreate.india.main.startupcarvaan.mainActivities.MyRecyclerViewAdapter
+ recreate.india.main.startupcarvaan.mainActivities.MyRecyclerViewAdapter$ItemClickListener
+ recreate.india.main.startupcarvaan.mainActivities.MyRecyclerViewAdapter$ViewHolder
 recreate/india/main/startupcarvaan/user/CreateProfile.java
  recreate.india.main.startupcarvaan.user.CreateProfile
  recreate.india.main.startupcarvaan.user.CreateProfile$1
@@ -111,9 +111,9 @@ recreate/india/main/startupcarvaan/fragments/practice/practicemodel.java
 recreate/india/main/startupcarvaan/mainActivities/SplashScreen.java
  recreate.india.main.startupcarvaan.mainActivities.SplashScreen
  recreate.india.main.startupcarvaan.mainActivities.SplashScreen$1
-recreate/india/main/startupcarvaan/Levels.java
- recreate.india.main.startupcarvaan.Levels
- recreate.india.main.startupcarvaan.Levels$1
+recreate/india/main/startupcarvaan/coin_exchange/rci_exchange.java
+ recreate.india.main.startupcarvaan.coin_exchange.rci_exchange
+ recreate.india.main.startupcarvaan.coin_exchange.rci_exchange$1
 recreate/india/main/startupcarvaan/compressor/ImageUtil.java
  recreate.india.main.startupcarvaan.compressor.ImageUtil
 recreate/india/main/startupcarvaan/fragments/biding/biding.java
@@ -185,11 +185,10 @@ recreate/india/main/startupcarvaan/Helppage.java
  recreate.india.main.startupcarvaan.Helppage$2
  recreate.india.main.startupcarvaan.Helppage$3
  recreate.india.main.startupcarvaan.Helppage$4
-recreate/india/main/startupcarvaan/mainActivities/MyRecyclerViewAdapter.java
- recreate.india.main.startupcarvaan.mainActivities.MyRecyclerViewAdapter
- recreate.india.main.startupcarvaan.mainActivities.MyRecyclerViewAdapter$ItemClickListener
- recreate.india.main.startupcarvaan.mainActivities.MyRecyclerViewAdapter$ViewHolder
-recreate/india/main/startupcarvaan/coin_exchange/rci_exchange.java
- recreate.india.main.startupcarvaan.coin_exchange.rci_exchange
- recreate.india.main.startupcarvaan.coin_exchange.rci_exchange$1
- recreate.india.main.startupcarvaan.coin_exchange.rci_exchange$2
+recreate/india/main/startupcarvaan/Levels.java
+ recreate.india.main.startupcarvaan.Levels
+ recreate.india.main.startupcarvaan.Levels$1
+recreate/india/main/startupcarvaan/mainActivities/MainActivity.java
+ recreate.india.main.startupcarvaan.mainActivities.MainActivity
+ recreate.india.main.startupcarvaan.mainActivities.MainActivity$1
+ recreate.india.main.startupcarvaan.mainActivities.MainActivity$2
