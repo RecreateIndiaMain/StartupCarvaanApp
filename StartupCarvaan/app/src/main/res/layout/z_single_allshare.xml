@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardCornerRadius="20dp"
-    android:layout_margin="12dp"
+    android:layout_margin="7dp"
     app:cardElevation="15dp"
     android:elevation="15dp">
     <LinearLayout
@@ -129,8 +129,8 @@
                 android:layout_below="@id/lcompany"
 
                 android:layout_marginTop="15dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
 
                 android:visibility="visible">
 
@@ -196,17 +196,15 @@
 
                         <TextView
                             android:id="@+id/investors"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.5"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/newr"
                             android:text="30000"
+
+                         android:gravity="center"
                             android:textColor="#FF533D78"
-                            android:textStyle="bold"/>
+                            android:textStyle="bold"
+                        />
 
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -236,6 +234,7 @@
                         android:id="@+id/relativeLayout"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
+                        android:background="@drawable/newr"
                         android:layout_marginTop="3dp">
 
                         <ProgressBar
@@ -257,6 +256,7 @@
                             android:id="@+id/growthtext"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
                             android:textAppearance="@style/TextAppearance.AppCompat.Small"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -264,6 +264,19 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
                             android:text="30"
+                            android:textColor="#FF533D78"
+                            android:textStyle="bold"/>
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            app:layout_constraintBottom_toBottomOf="parent"
+
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@id/growthtext"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:text="%"
                             android:textColor="#FF533D78"
                             android:textStyle="bold"/>
 
@@ -290,14 +303,16 @@
                 android:background="@drawable/circularbordersolid"
                 android:paddingRight="10dp"
                 android:layout_height="wrap_content">
+
                 <TextView
                     android:id="@+id/tags"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+
                     android:text="trdyfudfyuf"
-                    android:textStyle="bold"
                     android:textColor="@color/greyish"
-                    android:textSize="17sp"/>
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
 
@@ -417,15 +432,15 @@
             <Button
                 android:id="@+id/invest"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="54dp"
                 android:layout_marginTop="5dp"
                 android:backgroundTint="#293859"
                 android:fontFamily="@font/proximanovaregular"
                 android:text="Invest In me"
                 android:textColor="@color/white"
                 android:textSize="16sp"
-                android:layout_marginRight="35dp"
-                android:layout_marginLeft="35dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
                 android:textAllCaps="false"
                 android:layout_marginBottom="14dp"
                 android:textStyle="bold" />

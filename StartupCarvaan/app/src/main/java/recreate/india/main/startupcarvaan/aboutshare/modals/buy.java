@@ -64,6 +64,13 @@ public class buy extends DialogFragment {
         availableforbuying=view.findViewById(R.id.availableforbuying);
         no_of_shares=view.findViewById(R.id.noofshares);
         buy_now=view.findViewById(R.id.btn_buy);
+        closebuy=view.findViewById(R.id.close68);
+        closebuy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dismiss();
+            }
+        });
 
         // retrieving share details
         FirebaseFirestore.getInstance()
