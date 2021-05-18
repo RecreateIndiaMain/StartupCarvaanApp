@@ -1923,6 +1923,7 @@ id META
 id MultiplePulse
 id MultiplePulseRing
 id NO_DEBUG
+id Price
 id Pulse
 id PulseRing
 id RedeemNow
@@ -2121,6 +2122,7 @@ id decor_content_parent
 id default_activity_button
 id deltaRelative
 id dependency_ordering
+id desc_aboutRci
 id description
 id design_bottom_sheet
 id design_menu_item_action_area
@@ -2192,6 +2194,7 @@ id growthtext
 id headerCash
 id headerCoins
 id headerWinnings
+id heading_about_rci
 id hideable
 id holding
 id home
@@ -2235,6 +2238,7 @@ id likeimage
 id line
 id line1
 id line3
+id lineChart_rci
 id linear
 id linear1
 id linear11
@@ -2358,6 +2362,7 @@ id postLayout
 id practice
 id practicerecyclerview
 id price
+id price_of_RCI
 id price_of_shares
 id privacybutton
 id privacypolicy
@@ -2367,6 +2372,17 @@ id progress
 id progressBar
 id progress_circular
 id progress_horizontal
+id progressid
+id progressid10
+id progressid11
+id progressid2
+id progressid3
+id progressid4
+id progressid5
+id progressid6
+id progressid7
+id progressid8
+id progressid9
 id radio
 id rateText
 id ratio
@@ -2625,6 +2641,7 @@ layout activity_payin
 layout activity_payout
 layout activity_phone_auth
 layout activity_privacy_policy
+layout activity_rci_exchange
 layout activity_recycler
 layout activity_splash_screen
 layout activity_upipay
@@ -2783,6 +2800,7 @@ string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string about_me
+string about_rci
 string action_settings
 string allshares
 string app_name

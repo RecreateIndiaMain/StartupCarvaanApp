@@ -64,7 +64,22 @@ public class CreateProfile extends AppCompatActivity {
         phone=findViewById(R.id.userPhone);
         email=findViewById(R.id.userEmail);
         address=findViewById(R.id.userAddress);
+        userImage=findViewById(R.id.userImage);
         // end here
+
+//        StorageReference irl=fs.getReference().child(profile.getImageurl());
+//        irl.getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
+//            @Override
+//            public void onComplete(@NonNull Task<Uri> task) {
+//                if(task.getResult()!=null)
+//                    Glide.with(CreateProfile.this)
+//                            .load(task.getResult())
+//                            .into(userImage);
+//                else{
+//                    Toast.makeText(CreateProfile.this, "file does not exists", Toast.LENGTH_SHORT).show();
+//                }
+//            }
+//        });
 
         imageurl=profile.getImageurl();
         documenturl=profile.getResume();

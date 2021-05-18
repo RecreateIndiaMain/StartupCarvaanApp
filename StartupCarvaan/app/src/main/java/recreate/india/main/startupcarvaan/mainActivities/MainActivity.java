@@ -20,8 +20,10 @@ import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
 import io.paperdb.Paper;
+import recreate.india.main.startupcarvaan.Helppage;
 import recreate.india.main.startupcarvaan.Levels;
 import recreate.india.main.startupcarvaan.R;
+import recreate.india.main.startupcarvaan.coin_exchange.rci_exchange;
 import recreate.india.main.startupcarvaan.fragments.allshares.allshares;
 import recreate.india.main.startupcarvaan.fragments.biding.biding;
 import recreate.india.main.startupcarvaan.fragments.mycoins.mycoins;
@@ -80,12 +82,9 @@ public class MainActivity extends AppCompatActivity{
                 case R.id.logout:
                     FirebaseAuth.getInstance().signOut();
                     startActivity(new Intent(MainActivity.this,loginActivity.class));
-                    finish();
                     break;
                 case R.id.howtoplay:
-//                    startActivity(new Intent(MainActivity.this,loginActivity.class));
-                    Toast.makeText(MainActivity.this, "how to play", Toast.LENGTH_SHORT).show();
-                    finish();
+                    startActivity(new Intent(MainActivity.this, Helppage.class));
                     break;
                 case R.id.profile:
                     startActivity(new Intent(MainActivity.this, ProfileActivity.class));
@@ -93,6 +92,13 @@ public class MainActivity extends AppCompatActivity{
 
                 case R.id.growth:
                     startActivity(new Intent(MainActivity.this, Levels.class));
+                    break;
+
+                case R.id.aboutRci:
+                    startActivity(new Intent(MainActivity.this, rci_exchange.class));
+                    break;
+                case R.id.terms_condition:
+                    startActivity(new Intent(MainActivity.this,PrivacyPolicy.class));
                     break;
             }
             return false;

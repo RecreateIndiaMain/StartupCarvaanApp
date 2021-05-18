@@ -54,6 +54,7 @@ public class allshares extends Fragment {
     private FirestoreRecyclerAdapter adapter;
     private RecyclerView recyclerView;
     private CustomProgressDialogue pDialog;
+    private boolean loaded=false;
     public allshares() {
         // Required empty public constructor
     }
@@ -70,6 +71,8 @@ public class allshares extends Fragment {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_allshares, container, false);
         recyclerView=view.findViewById(R.id.allsharerecyclerview);
+        if(loaded==false)
+            dismissDialog();
         final int[] count = {1};
         Query query=ff.collection("allshares");
         FirestoreRecyclerOptions<allshare> option= new FirestoreRecyclerOptions.
@@ -79,6 +82,8 @@ public class allshares extends Fragment {
             @NonNull
             @Override
             public PostViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                showProgress();
+                loaded=true;
                 View view=LayoutInflater.from(parent.getContext()).inflate(R.layout.z_single_allshare,parent,false);
                 return new PostViewHolder(view);
             }
@@ -264,8 +269,10 @@ public class allshares extends Fragment {
 
     }
     void checkDailog(int i){
-        if(i==0)
+        if(i==0) {
             dismissDialog();
+
+        }
     }
     public void dismissDialog() {
         if (pDialog != null && pDialog.isShowing()){
@@ -278,7 +285,6 @@ public class allshares extends Fragment {
     public void onStart() {
         super.onStart();
         adapter.startListening();
-        showProgress();
     }
 
     @Override
