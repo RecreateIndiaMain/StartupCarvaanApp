@@ -137,6 +137,7 @@ public class buy extends DialogFragment {
                                        // sharefunctions.updatetotalinvested(shareid,resultant67);
                                         userfunctions.removeRci(coin.getRci(),resultant_price);
                                         userfunctions.addPoints(.1*resultant_price);
+                                        sharefunctions.addSell(shareid,sharedetails.getAvailableforselling(),resultant67);
                                     }
                                     dismiss();
                                 }
