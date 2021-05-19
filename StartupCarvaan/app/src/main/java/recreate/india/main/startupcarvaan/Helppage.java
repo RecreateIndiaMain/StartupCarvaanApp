@@ -39,8 +39,8 @@ public class Helppage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_helppage);
 
-before=findViewById(R.id.beforefaq);
-after=findViewById(R.id.afterfaq);
+        before=findViewById(R.id.beforefaq);
+        after=findViewById(R.id.afterfaq);
         l1=findViewById(R.id.linear1);
         l2=findViewById(R.id.linear2);
         l3=findViewById(R.id.linear3);

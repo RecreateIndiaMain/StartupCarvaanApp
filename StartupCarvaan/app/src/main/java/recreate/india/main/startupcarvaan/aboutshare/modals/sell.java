@@ -1,4 +1,4 @@
-package recreate.india.main.startupcarvaan.aboutshare.modals;
+ package recreate.india.main.startupcarvaan.aboutshare.modals;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -65,14 +65,6 @@ public class sell extends DialogFragment {
         available=view.findViewById(R.id.totalsharestosell);
         price_of_share=view.findViewById(R.id.price_of_shares);
         btnsell=view.findViewById(R.id.btn_sell);
-
-closesell=view.findViewById(R.id.close67);
-        closesell.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                dismiss();
-            }
-        });
         List<String> list = new ArrayList<String>();
         list.add(0, "Price of a share : No. of shares");
         //retrieve holdings
@@ -150,7 +142,7 @@ closesell=view.findViewById(R.id.close67);
                     if(quan.equals(""))
                         Toast.makeText(getContext(), "please select a amount", Toast.LENGTH_SHORT).show();
                     else{
-                        Integer price=Integer.valueOf(String.valueOf(price_));
+                        Integer price=sharedetails.getSellingprice();
                         Integer quantity=Integer.valueOf(String.valueOf(share.getText().toString()));
                         if(quantity>Double.valueOf(holdings.getHoldings().get(price_)))
                             Toast.makeText(getContext(), "do not have "+ quantity + " shares for price "+price_, Toast.LENGTH_SHORT).show();
@@ -160,7 +152,7 @@ closesell=view.findViewById(R.id.close67);
                             list.clear();
                             Integer resultant_price=price*quantity;
                             userfunctions.addRci(coin.getRci(),resultant_price);
-                            user_share_functions.removeSomeShares("shareid",quantity,price);
+                            user_share_functions.removeSomeShares("shareid",quantity,Integer.valueOf(price_));
                             sharefunctions.removeAvailableSell("shareid",sharedetails.getAvailableforselling(),resultant_price);
                             dismiss();
                         }
