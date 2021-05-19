@@ -31,9 +31,11 @@ import com.google.firebase.storage.StorageReference;
 
 
 import recreate.india.main.startupcarvaan.R;
+import recreate.india.main.startupcarvaan.loginsignup.loginActivity;
+import recreate.india.main.startupcarvaan.mainActivities.MainActivity;
 
 public class ProfileActivity extends AppCompatActivity {
-    private ImageView user_image,updateprofile;
+    private ImageView user_image,updateprofile,back;
     private TextView name,title,points,level,desc,phone,email,address;
     private WebView webView;
     private FirebaseFirestore ff=FirebaseFirestore.getInstance();
@@ -56,6 +58,14 @@ public class ProfileActivity extends AppCompatActivity {
         phone=findViewById(R.id.phone);
         email=findViewById(R.id.email);
         address=findViewById(R.id.address);
+        back=findViewById(R.id.backprofile);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(ProfileActivity.this, MainActivity.class));
+            }
+        });
         updateprofile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

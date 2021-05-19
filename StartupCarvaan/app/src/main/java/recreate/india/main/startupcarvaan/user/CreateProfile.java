@@ -36,6 +36,7 @@ import java.io.File;
 
 import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.compressor.Compressor;
+import recreate.india.main.startupcarvaan.loginsignup.loginActivity;
 import recreate.india.main.startupcarvaan.mainActivities.MainActivity;
 
 public class CreateProfile extends AppCompatActivity {
@@ -65,6 +66,7 @@ public class CreateProfile extends AppCompatActivity {
         email=findViewById(R.id.userEmail);
         address=findViewById(R.id.userAddress);
         userImage=findViewById(R.id.userImage);
+
         // end here
 
 //        StorageReference irl=fs.getReference().child(profile.getImageurl());
