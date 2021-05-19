@@ -15,7 +15,7 @@
         android:gravity="right">
 
         <ImageView
-            android:id="@+id/close67"
+            android:id="@+id/close68"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@drawable/cross" />

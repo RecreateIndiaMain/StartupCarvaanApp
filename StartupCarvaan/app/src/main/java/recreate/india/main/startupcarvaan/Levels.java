@@ -132,7 +132,7 @@ public class Levels extends AppCompatActivity {
 
         for (int i=1;i<12;i++){
             rt[i].setText("/ "+ levels[i]);
-            lt[i].setText("0"); 
+            lt[i].setText("0");
 //            l[i].setMax(levels[i]);
         }
 

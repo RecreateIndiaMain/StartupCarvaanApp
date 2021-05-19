@@ -40,7 +40,7 @@ import recreate.india.main.startupcarvaan.user.userfunctions;
 
 public class sell extends DialogFragment {
     private TextView shares,price,available,price_of_share;
-    private ImageView closebuy;
+    private ImageView closesell;
     private EditText share;
     private Button btnsell;
     Spinner spin;
@@ -66,7 +66,13 @@ public class sell extends DialogFragment {
         price_of_share=view.findViewById(R.id.price_of_shares);
         btnsell=view.findViewById(R.id.btn_sell);
 
-
+closesell=view.findViewById(R.id.close67);
+        closesell.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dismiss();
+            }
+        });
         List<String> list = new ArrayList<String>();
         list.add(0, "Price of a share : No. of shares");
         //retrieve holdings
