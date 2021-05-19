@@ -92,7 +92,7 @@ public class sell extends DialogFragment {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
                 sharedetails=value.toObject(sharedetails.class);
-                available.setText("Available :"+String.valueOf(sharedetails.getAvailableforselling()));
+                available.setText("Available :"+String.valueOf(sharedetails.getAvailableforselling()/sharedetails.getSellingprice()));
                 price_of_share.setText(sharedetails.getSellingprice()+" rci");
             }
         });
@@ -148,13 +148,14 @@ public class sell extends DialogFragment {
                         Integer quantity=Integer.valueOf(String.valueOf(share.getText().toString()));
                         if(quantity>Double.valueOf(holdings.getHoldings().get(price_)))
                             Toast.makeText(getContext(), "do not have "+ quantity + " shares for price "+price_, Toast.LENGTH_SHORT).show();
+                        else if(quantity*price>sharedetails.getAvailableforselling())
+                            Toast.makeText(getContext(),"sorry this much share is not available for selling",Toast.LENGTH_LONG).show();
                         else{
                             list.clear();
                             Integer resultant_price=price*quantity;
                             userfunctions.addRci(coin.getRci(),resultant_price);
                             user_share_functions.removeSomeShares("shareid",quantity,price);
-                            sharefunctions.removeAvailableSell("shareid",sharedetails.getAvailableforselling(),quantity);
-                            sharefunctions.addBuy("shareid",sharedetails.getAvailableforbuying(),quantity);
+                            sharefunctions.removeAvailableSell("shareid",sharedetails.getAvailableforselling(),resultant_price);
                             dismiss();
                         }
                     }

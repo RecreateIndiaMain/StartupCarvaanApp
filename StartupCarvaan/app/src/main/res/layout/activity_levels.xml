@@ -36,7 +36,8 @@
                     android:layout_marginLeft="35dp"
                     android:layout_marginTop="6dp"
                     android:layout_marginBottom="6dp"
-                    android:src="@drawable/unlock">
+                    android:src="@drawable/unlock"
+                    android:id="@+id/L1Lock">
 
                 </ImageView>
 
@@ -98,6 +99,7 @@
                                 android:text="gewfudfuwvd"
                                 android:textColor="@color/white"
                                 android:textSize="9sp"
+                                android:id="@+id/L1txt1"
 
                                 />
 
@@ -107,10 +109,10 @@
                                 android:layout_marginLeft="5dp"
                                 android:background="#00000000"
                                 android:gravity="center"
-                                android:text="gewfudfuwvd"
+                                android:text="ksdhfjjldskfh"
                                 android:textColor="@color/white"
                                 android:textSize="9sp"
-
+                                android:id="@+id/L1txt2"
                                 />
                         </LinearLayout>
                     </RelativeLayout>
@@ -127,7 +129,8 @@
 
                         android:textColor="@color/white"
 
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        android:id="@+id/L1txt3"/>
 
                 </LinearLayout>
 
@@ -174,7 +177,8 @@
                     android:layout_marginLeft="35dp"
                     android:layout_marginTop="6dp"
                     android:layout_marginBottom="6dp"
-                    android:src="@drawable/padlock">
+                    android:src="@drawable/padlock"
+                    android:id="@+id/L2Lock">
 
                 </ImageView>
 
@@ -235,7 +239,7 @@
                                 android:text="gewfudfuwvd"
                                 android:textColor="@color/white"
                                 android:textSize="9sp"
-
+                                android:id="@+id/L2txt1"
                                 />
 
                             <TextView
@@ -247,7 +251,7 @@
                                 android:text="gewfudfuwvd"
                                 android:textColor="@color/white"
                                 android:textSize="9sp"
-
+                                android:id="@+id/L2txt2"
                                 />
                         </LinearLayout>
                     </RelativeLayout>
@@ -264,7 +268,8 @@
 
                         android:textColor="@color/white"
 
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        android:id="@+id/L2txt3"/>
 
                 </LinearLayout>
 
@@ -312,7 +317,8 @@
                     android:layout_marginLeft="35dp"
                     android:layout_marginTop="6dp"
                     android:layout_marginBottom="6dp"
-                    android:src="@drawable/padlock">
+                    android:src="@drawable/padlock"
+                    android:id="@+id/L3Lock">
 
                 </ImageView>
 
@@ -373,7 +379,7 @@
                                 android:text="gewfudfuwvd"
                                 android:textColor="@color/white"
                                 android:textSize="9sp"
-
+                                android:id="@+id/L3txt1"
                                 />
 
                             <TextView
@@ -385,7 +391,7 @@
                                 android:text="gewfudfuwvd"
                                 android:textColor="@color/white"
                                 android:textSize="9sp"
-
+                                android:id="@+id/L3txt2"
                                 />
                         </LinearLayout>
                     </RelativeLayout>
@@ -402,7 +408,8 @@
 
                         android:textColor="@color/white"
 
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        android:id="@+id/L3txt3"/>
 
                 </LinearLayout>
 
@@ -450,7 +457,8 @@
                     android:layout_marginLeft="35dp"
                     android:layout_marginTop="6dp"
                     android:layout_marginBottom="6dp"
-                    android:src="@drawable/padlock">
+                    android:src="@drawable/padlock"
+                    android:id="@+id/L4Lock">
 
                 </ImageView>
 
@@ -511,7 +519,7 @@
                                 android:text="gewfudfuwvd"
                                 android:textColor="@color/white"
                                 android:textSize="9sp"
-
+                                android:id="@+id/L4txt1"
                                 />
 
                             <TextView
@@ -523,7 +531,7 @@
                                 android:text="gewfudfuwvd"
                                 android:textColor="@color/white"
                                 android:textSize="9sp"
-
+                                android:id="@+id/L4txt2"
                                 />
                         </LinearLayout>
                     </RelativeLayout>
@@ -540,7 +548,8 @@
 
                         android:textColor="@color/white"
 
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        android:id="@+id/L4txt3"/>
 
                 </LinearLayout>
 
@@ -588,7 +597,8 @@
                     android:layout_marginLeft="35dp"
                     android:layout_marginTop="6dp"
                     android:layout_marginBottom="6dp"
-                    android:src="@drawable/padlock">
+                    android:src="@drawable/padlock"
+                    android:id="@+id/L5Lock">
 
                 </ImageView>
 
@@ -649,7 +659,7 @@
                                 android:text="gewfudfuwvd"
                                 android:textColor="@color/white"
                                 android:textSize="9sp"
-
+                                android:id="@+id/L5txt1"
                                 />
 
                             <TextView
@@ -661,7 +671,7 @@
                                 android:text="gewfudfuwvd"
                                 android:textColor="@color/white"
                                 android:textSize="9sp"
-
+                                android:id="@+id/L5txt2"
                                 />
                         </LinearLayout>
                     </RelativeLayout>
@@ -678,7 +688,8 @@
 
                         android:textColor="@color/white"
 
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        android:id="@+id/L5txt3"/>
 
                 </LinearLayout>
 
@@ -726,7 +737,8 @@
                     android:layout_marginLeft="35dp"
                     android:layout_marginTop="6dp"
                     android:layout_marginBottom="6dp"
-                    android:src="@drawable/padlock">
+                    android:src="@drawable/padlock"
+                    android:id="@+id/L6Lock">
 
                 </ImageView>
 
@@ -787,7 +799,7 @@
                                 android:text="gewfudfuwvd"
                                 android:textColor="@color/white"
                                 android:textSize="9sp"
-
+                                android:id="@+id/L6txt1"
                                 />
 
                             <TextView
@@ -799,7 +811,7 @@
                                 android:text="gewfudfuwvd"
                                 android:textColor="@color/white"
                                 android:textSize="9sp"
-
+                                android:id="@+id/L6txt2"
                                 />
                         </LinearLayout>
                     </RelativeLayout>
@@ -816,7 +828,8 @@
 
                         android:textColor="@color/white"
 
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        android:id="@+id/L6txt3"/>
 
                 </LinearLayout>
 
@@ -864,7 +877,8 @@
                     android:layout_marginLeft="35dp"
                     android:layout_marginTop="6dp"
                     android:layout_marginBottom="6dp"
-                    android:src="@drawable/padlock">
+                    android:src="@drawable/padlock"
+                    android:id="@+id/L7Lock">
 
                 </ImageView>
 
@@ -925,7 +939,7 @@
                                 android:text="gewfudfuwvd"
                                 android:textColor="@color/white"
                                 android:textSize="9sp"
-
+                                android:id="@+id/L7txt1"
                                 />
 
                             <TextView
@@ -937,7 +951,7 @@
                                 android:text="gewfudfuwvd"
                                 android:textColor="@color/white"
                                 android:textSize="9sp"
-
+                                android:id="@+id/L7txt2"
                                 />
                         </LinearLayout>
                     </RelativeLayout>
@@ -954,7 +968,8 @@
 
                         android:textColor="@color/white"
 
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        android:id="@+id/L7txt3"/>
 
                 </LinearLayout>
 
@@ -1002,7 +1017,8 @@
                     android:layout_marginLeft="35dp"
                     android:layout_marginTop="6dp"
                     android:layout_marginBottom="6dp"
-                    android:src="@drawable/padlock">
+                    android:src="@drawable/padlock"
+                    android:id="@+id/L8Lock">
 
                 </ImageView>
 
@@ -1063,7 +1079,7 @@
                                 android:text="gewfudfuwvd"
                                 android:textColor="@color/white"
                                 android:textSize="9sp"
-
+                                android:id="@+id/L8txt1"
                                 />
 
                             <TextView
@@ -1075,7 +1091,7 @@
                                 android:text="gewfudfuwvd"
                                 android:textColor="@color/white"
                                 android:textSize="9sp"
-
+                                android:id="@+id/L8txt2"
                                 />
                         </LinearLayout>
                     </RelativeLayout>
@@ -1092,7 +1108,8 @@
 
                         android:textColor="@color/white"
 
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        android:id="@+id/L8txt3"/>
 
                 </LinearLayout>
 
@@ -1140,7 +1157,8 @@
                     android:layout_marginLeft="35dp"
                     android:layout_marginTop="6dp"
                     android:layout_marginBottom="6dp"
-                    android:src="@drawable/padlock">
+                    android:src="@drawable/padlock"
+                    android:id="@+id/L9Lock">
 
                 </ImageView>
 
@@ -1201,7 +1219,7 @@
                                 android:text="gewfudfuwvd"
                                 android:textColor="@color/white"
                                 android:textSize="9sp"
-
+                                android:id="@+id/L9txt1"
                                 />
 
                             <TextView
@@ -1213,7 +1231,7 @@
                                 android:text="gewfudfuwvd"
                                 android:textColor="@color/white"
                                 android:textSize="9sp"
-
+                                android:id="@+id/L9txt2"
                                 />
                         </LinearLayout>
                     </RelativeLayout>
@@ -1230,7 +1248,8 @@
 
                         android:textColor="@color/white"
 
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        android:id="@+id/L9txt3"/>
 
                 </LinearLayout>
 
@@ -1278,7 +1297,8 @@
                     android:layout_marginLeft="35dp"
                     android:layout_marginTop="6dp"
                     android:layout_marginBottom="6dp"
-                    android:src="@drawable/padlock">
+                    android:src="@drawable/padlock"
+                    android:id="@+id/L10Lock">
 
                 </ImageView>
 
@@ -1339,7 +1359,7 @@
                                 android:text="gewfudfuwvd"
                                 android:textColor="@color/white"
                                 android:textSize="9sp"
-
+                                android:id="@+id/L10txt1"
                                 />
 
                             <TextView
@@ -1351,7 +1371,7 @@
                                 android:text="gewfudfuwvd"
                                 android:textColor="@color/white"
                                 android:textSize="9sp"
-
+                                android:id="@+id/L10txt2"
                                 />
                         </LinearLayout>
                     </RelativeLayout>
@@ -1368,7 +1388,8 @@
 
                         android:textColor="@color/white"
 
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        android:id="@+id/L10txt3"/>
 
                 </LinearLayout>
 
@@ -1416,7 +1437,8 @@
                     android:layout_marginLeft="35dp"
                     android:layout_marginTop="6dp"
                     android:layout_marginBottom="6dp"
-                    android:src="@drawable/padlock">
+                    android:src="@drawable/padlock"
+                    android:id="@+id/L11Lock">
 
                 </ImageView>
 
@@ -1477,7 +1499,7 @@
                                 android:text="gewfudfuwvd"
                                 android:textColor="@color/white"
                                 android:textSize="9sp"
-
+                                android:id="@+id/L11txt1"
                                 />
 
                             <TextView
@@ -1489,7 +1511,7 @@
                                 android:text="gewfudfuwvd"
                                 android:textColor="@color/white"
                                 android:textSize="9sp"
-
+                                android:id="@+id/L11txt2"
                                 />
                         </LinearLayout>
                     </RelativeLayout>
@@ -1506,7 +1528,8 @@
 
                         android:textColor="@color/white"
 
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        android:id="@+id/L11txt3"/>
 
                 </LinearLayout>
 

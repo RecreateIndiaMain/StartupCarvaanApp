@@ -64,7 +64,6 @@ public class myshares extends Fragment {
         myshare=view.findViewById(R.id.mysharerecyclerview);
 
         cpd= new CustomProgressDialogue(getActivity());
-        cpd.show();
         Query query= FirebaseFirestore.getInstance().collection("users").document(new user().user().getUid()).collection("myshares");
         FirestoreRecyclerOptions<holdings> option=new FirestoreRecyclerOptions.Builder<holdings>().setQuery(query,holdings.class).build();
         adapter= new FirestoreRecyclerAdapter<holdings, viewholder>(option) {
@@ -77,6 +76,7 @@ public class myshares extends Fragment {
 
             @Override
             protected void onBindViewHolder(@NonNull viewholder holder, int position, @NonNull holdings model) {
+                cpd.show();
                 List<String> list = new ArrayList<String>();
                 list.add(0, "Price of a share : No. of shares");
                 Map<String,Integer> holding=model.getHoldings();

@@ -75,15 +75,9 @@ recreate/india/main/startupcarvaan/payments/payin.java
  recreate.india.main.startupcarvaan.payments.payin$1
  recreate.india.main.startupcarvaan.payments.payin$2
  recreate.india.main.startupcarvaan.payments.payin$3
-recreate/india/main/startupcarvaan/fragments/myshares/myshares.java
- recreate.india.main.startupcarvaan.fragments.myshares.myshares
- recreate.india.main.startupcarvaan.fragments.myshares.myshares$1
- recreate.india.main.startupcarvaan.fragments.myshares.myshares$1$1
- recreate.india.main.startupcarvaan.fragments.myshares.myshares$1$2
- recreate.india.main.startupcarvaan.fragments.myshares.myshares$1$2$1
- recreate.india.main.startupcarvaan.fragments.myshares.myshares$1$3
- recreate.india.main.startupcarvaan.fragments.myshares.myshares$1$4
- recreate.india.main.startupcarvaan.fragments.myshares.myshares$viewholder
+recreate/india/main/startupcarvaan/coin_exchange/rci_exchange.java
+ recreate.india.main.startupcarvaan.coin_exchange.rci_exchange
+ recreate.india.main.startupcarvaan.coin_exchange.rci_exchange$1
 recreate/india/main/startupcarvaan/aboutshare/blogging.java
  recreate.india.main.startupcarvaan.aboutshare.blogging
  recreate.india.main.startupcarvaan.aboutshare.blogging$1
@@ -111,9 +105,15 @@ recreate/india/main/startupcarvaan/fragments/practice/practicemodel.java
 recreate/india/main/startupcarvaan/mainActivities/SplashScreen.java
  recreate.india.main.startupcarvaan.mainActivities.SplashScreen
  recreate.india.main.startupcarvaan.mainActivities.SplashScreen$1
-recreate/india/main/startupcarvaan/coin_exchange/rci_exchange.java
- recreate.india.main.startupcarvaan.coin_exchange.rci_exchange
- recreate.india.main.startupcarvaan.coin_exchange.rci_exchange$1
+recreate/india/main/startupcarvaan/fragments/myshares/myshares.java
+ recreate.india.main.startupcarvaan.fragments.myshares.myshares
+ recreate.india.main.startupcarvaan.fragments.myshares.myshares$1
+ recreate.india.main.startupcarvaan.fragments.myshares.myshares$1$1
+ recreate.india.main.startupcarvaan.fragments.myshares.myshares$1$2
+ recreate.india.main.startupcarvaan.fragments.myshares.myshares$1$2$1
+ recreate.india.main.startupcarvaan.fragments.myshares.myshares$1$3
+ recreate.india.main.startupcarvaan.fragments.myshares.myshares$1$4
+ recreate.india.main.startupcarvaan.fragments.myshares.myshares$viewholder
 recreate/india/main/startupcarvaan/compressor/ImageUtil.java
  recreate.india.main.startupcarvaan.compressor.ImageUtil
 recreate/india/main/startupcarvaan/fragments/biding/biding.java
@@ -146,6 +146,7 @@ recreate/india/main/startupcarvaan/user/userfunctions.java
  recreate.india.main.startupcarvaan.user.userfunctions
  recreate.india.main.startupcarvaan.user.userfunctions$1
  recreate.india.main.startupcarvaan.user.userfunctions$2
+ recreate.india.main.startupcarvaan.user.userfunctions$2$1
 recreate/india/main/startupcarvaan/mainActivities/RecyclerActivity.java
  recreate.india.main.startupcarvaan.mainActivities.RecyclerActivity
 recreate/india/main/startupcarvaan/aboutshare/models/blogdetails.java
