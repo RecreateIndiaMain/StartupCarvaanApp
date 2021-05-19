@@ -71,17 +71,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
 
-<<<<<<< HEAD
                             android:layout_margin="4dp"
                             android:max="100"
 
                             android:progressBackgroundTint="@color/green"
                             android:progressTint="@color/yellow"
-                            android:scaleY="3">
-=======
-                    android:scaleY="3.5"
-                    android:layout_margin="4dp"
->>>>>>> 974b4f4302b1ec2935473649ef4aedb6757309ea
+                            android:scaleY="3.5">
 
 
                         </ProgressBar>
@@ -363,15 +358,6 @@
                             android:progressTint="@color/yellow"
                             android:scaleY="3">
 
-<<<<<<< HEAD
-=======
-                        android:scaleY="3.5"
-                        android:layout_margin="4dp"
-                        android:progressBackgroundTint="@color/green"
-                        android:progressTint="@color/yellow"
-                        style="@style/Widget.AppCompat.ProgressBar.Horizontal">
->>>>>>> 974b4f4302b1ec2935473649ef4aedb6757309ea
-
                         </ProgressBar>
 
                         <LinearLayout
@@ -644,11 +630,6 @@
                             style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-
-<<<<<<< HEAD
-=======
-                            android:scaleY="3.5"
->>>>>>> 974b4f4302b1ec2935473649ef4aedb6757309ea
                             android:layout_margin="4dp"
                             android:max="100"
                             android:progressBackgroundTint="@color/green"
@@ -788,11 +769,6 @@
                             style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-
-<<<<<<< HEAD
-=======
-                            android:scaleY="3.5"
->>>>>>> 974b4f4302b1ec2935473649ef4aedb6757309ea
                             android:layout_margin="4dp"
                             android:max="100"
                             android:progressBackgroundTint="@color/green"
@@ -933,10 +909,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
 
-<<<<<<< HEAD
-=======
-                            android:scaleY="3.5"
->>>>>>> 974b4f4302b1ec2935473649ef4aedb6757309ea
                             android:layout_margin="4dp"
                             android:max="100"
                             android:progressBackgroundTint="@color/green"
@@ -1072,15 +1044,10 @@
                         android:layout_marginRight="15dp">
 
                         <ProgressBar
-                            android:id="@+id/progressid8"
+                            android:id="@+id/progressid11"
                             style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-
-<<<<<<< HEAD
-=======
-                            android:scaleY="3.5"
->>>>>>> 974b4f4302b1ec2935473649ef4aedb6757309ea
                             android:layout_margin="4dp"
                             android:max="100"
                             android:progressBackgroundTint="@color/green"
@@ -1093,10 +1060,10 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_alignLeft="@id/progressid8"
-                            android:layout_alignTop="@id/progressid8"
-                            android:layout_alignRight="@id/progressid8"
-                            android:layout_alignBottom="@id/progressid8"
+                            android:layout_alignLeft="@id/progressid11"
+                            android:layout_alignTop="@id/progressid11"
+                            android:layout_alignRight="@id/progressid11"
+                            android:layout_alignBottom="@id/progressid11"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1144,134 +1111,13 @@
 
 
             </LinearLayout>
-
         </androidx.cardview.widget.CardView>
-<<<<<<< HEAD
-=======
-         <View
-        android:layout_width="8dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/yellow"/>
-    <View
-        android:layout_width="8dp"
-        android:layout_height="18dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/yellow"/>
     <View
         android:layout_width="8dp"
         android:layout_height="20dp"
         android:layout_marginTop="8dp"
         android:background="@color/yellow"/>
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        app:cardBackgroundColor="@color/greyish"
-        app:cardElevation="10dp"
-        app:cardCornerRadius="22dp"
-        android:layout_height="wrap_content">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:gravity="center_vertical"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_marginTop="6dp"
-                android:layout_marginBottom="6dp"
-                android:layout_marginLeft="35dp"
-                android:src="@drawable/padlock">
 
-            </ImageView>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:gravity="center"
-                    android:fontFamily="@font/proximanovaregular"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:textSize="27sp"
-
-                    android:layout_marginRight="15dp"
-
-                    android:text="Level 8"
-                    android:textStyle="bold"/>
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_height="wrap_content">
-
-                    <ProgressBar
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/progressid8"
-                        android:max="100"
-
-                        android:scaleY="3.5"
-                        android:layout_margin="4dp"
-                        android:progressBackgroundTint="@color/green"
-                        android:progressTint="@color/yellow"
-                        style="@style/Widget.AppCompat.ProgressBar.Horizontal">
-
-
-
-                    </ProgressBar>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center"
-                        android:layout_alignLeft="@id/progressid8"
-                        android:layout_alignTop="@id/progressid8"
-                        android:layout_alignRight="@id/progressid8"
-                        android:layout_alignBottom="@id/progressid8">
-                        <TextView
-                            android:background="#00000000"
-                            android:text="gewfudfuwvd"
-                            android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:textSize="9sp"
-                            android:layout_width="wrap_content"
-                            android:textColor="@color/white"
-
-                            />
-                        <TextView
-                            android:background="#00000000"
-                            android:text="gewfudfuwvd"
-                            android:layout_marginLeft="5dp"
-                            android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:textSize="9sp"
-                            android:layout_width="wrap_content"
-                            android:textColor="@color/white"
-
-                            />
-                    </LinearLayout>
-                </RelativeLayout>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:gravity="center"
-                    android:fontFamily="@font/proximanovaregular"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:textSize="18sp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="6dp"
-
-                    android:layout_marginRight="15dp"
->>>>>>> 974b4f4302b1ec2935473649ef4aedb6757309ea
-
-        <View
-            android:layout_width="8dp"
-            android:layout_height="20dp"
-            android:layout_marginTop="8dp"
-            android:background="@color/yellow" />
 
         <View
             android:layout_width="8dp"
@@ -1340,11 +1186,6 @@
                             style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-
-<<<<<<< HEAD
-=======
-                            android:scaleY="3.5"
->>>>>>> 974b4f4302b1ec2935473649ef4aedb6757309ea
                             android:layout_margin="4dp"
                             android:max="100"
                             android:progressBackgroundTint="@color/green"
@@ -1484,11 +1325,6 @@
                             style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-
-<<<<<<< HEAD
-=======
-                            android:scaleY="3.5"
->>>>>>> 974b4f4302b1ec2935473649ef4aedb6757309ea
                             android:layout_margin="4dp"
                             android:max="100"
                             android:progressBackgroundTint="@color/green"
@@ -1624,15 +1460,10 @@
                         android:layout_marginRight="15dp">
 
                         <ProgressBar
-                            android:id="@+id/progressid11"
+                            android:id="@+id/progressid14"
                             style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-
-<<<<<<< HEAD
-=======
-                            android:scaleY="3.5"
->>>>>>> 974b4f4302b1ec2935473649ef4aedb6757309ea
                             android:layout_margin="4dp"
                             android:max="100"
                             android:progressBackgroundTint="@color/green"
@@ -1645,10 +1476,10 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_alignLeft="@id/progressid11"
-                            android:layout_alignTop="@id/progressid11"
-                            android:layout_alignRight="@id/progressid11"
-                            android:layout_alignBottom="@id/progressid11"
+                            android:layout_alignLeft="@id/progressid14"
+                            android:layout_alignTop="@id/progressid14"
+                            android:layout_alignRight="@id/progressid14"
+                            android:layout_alignBottom="@id/progressid14"
                             android:gravity="center"
                             android:orientation="horizontal">
 
