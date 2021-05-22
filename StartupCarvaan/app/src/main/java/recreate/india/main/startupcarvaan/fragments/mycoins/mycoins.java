@@ -46,7 +46,6 @@ public class mycoins extends Fragment {
         View view= inflater.inflate(R.layout.fragment_mycoins, container, false);
         rci=view.findViewById(R.id.rci);
         bonus=view.findViewById(R.id.bonus);
-        winnings=view.findViewById(R.id.winnings);
         buy=view.findViewById(R.id.buy);
         sell=view.findViewById(R.id.sell);
         FirebaseFirestore.getInstance().collection("users").document(new user().user().getUid()).collection("others").document("coins")
@@ -57,7 +56,6 @@ public class mycoins extends Fragment {
                         coin=value.toObject(coin.class);
                         rci.setText(String.valueOf(coin.getRci()));
                         bonus.setText(String.valueOf(coin.getBonus()));
-                        winnings.setText(String.valueOf(coin.getWinnings()));
                     }
                 });
         buy.setOnClickListener(new View.OnClickListener() {

@@ -75,7 +75,7 @@ public class buy extends DialogFragment {
         // retrieving share details
         FirebaseFirestore.getInstance()
                 .collection("allshares")
-                .document("shareid")
+                .document(shareid)
                 .collection("sharedetails").document("sharedetails").addSnapshotListener(new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
@@ -115,12 +115,12 @@ public class buy extends DialogFragment {
                             FirebaseFirestore.getInstance().collection("users")
                                     .document(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                     .collection("myshares")
-                                    .document("shareid").get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                                    .document(shareid).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                                 @Override
                                 public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                                     if(task.getResult().exists()){
-                                        usersharefunctions.updateShare("shareid",share_price,quantity);
-                                        sharefunctions.removeAvailableBuy("shareid",sharedetails.getAvailableforbuying(),quantity);
+                                        usersharefunctions.updateShare(shareid,share_price,quantity);
+                                        sharefunctions.removeAvailableBuy(shareid,sharedetails.getAvailableforbuying(),quantity);
                                         userfunctions.removeRci(coin.getRci(),resultant_price);
                                         try {
                                             userfunctions.addPoints(.1*resultant_price);
@@ -129,15 +129,19 @@ public class buy extends DialogFragment {
 
                                         }
                                         sharefunctions.addSell(shareid,sharedetails.getAvailableforselling(),resultant67);
+                                        buy_success buy_success=new buy_success();
+                                        buy_success.show(getParentFragmentManager(),"buy_success");
                                     }
                                     else{
-                                        usersharefunctions.addNewShare("shareid",share_price,quantity);
-                                        usersharefunctions.addUser("shareid");
-                                        sharefunctions.removeAvailableBuy("shareid",sharedetails.getAvailableforbuying(),quantity);
+                                        usersharefunctions.addNewShare(shareid,share_price,quantity);
+                                        usersharefunctions.addUser(shareid);
+                                        sharefunctions.removeAvailableBuy(shareid,sharedetails.getAvailableforbuying(),quantity);
                                        // sharefunctions.updatetotalinvested(shareid,resultant67);
                                         userfunctions.removeRci(coin.getRci(),resultant_price);
                                         userfunctions.addPoints(.1*resultant_price);
                                         sharefunctions.addSell(shareid,sharedetails.getAvailableforselling(),resultant67);
+                                        buy_success buy_success=new buy_success();
+                                        buy_success.show(getParentFragmentManager(),"buy_success");
                                     }
                                     dismiss();
                                 }

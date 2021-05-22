@@ -59,6 +59,8 @@ public class sell extends DialogFragment {
         final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = getActivity().getLayoutInflater();
         final View view = inflater.inflate(R.layout.dailogsell,null,false);
+        Bundle bundle=getArguments();
+        String shareid=bundle.getString("shareid");
         share=view.findViewById(R.id.shares);
         price=view.findViewById(R.id.price);
         spin=view.findViewById(R.id.spinner3);
@@ -72,7 +74,7 @@ public class sell extends DialogFragment {
                 .collection("users")
                 .document(new user().user().getUid())
                 .collection("myshares")
-                .document("shareid").addSnapshotListener(new EventListener<DocumentSnapshot>() {
+                .document(shareid).addSnapshotListener(new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
                 holdings=value.toObject(holdings.class);
@@ -84,7 +86,7 @@ public class sell extends DialogFragment {
         //retrieving share details
         FirebaseFirestore.getInstance()
                 .collection("allshares")
-                .document("shareid")
+                .document(shareid)
                 .collection("sharedetails")
                 .document("sharedetails").addSnapshotListener(new EventListener<DocumentSnapshot>() {
             @Override
@@ -152,9 +154,12 @@ public class sell extends DialogFragment {
                             list.clear();
                             Integer resultant_price=price*quantity;
                             userfunctions.addRci(coin.getRci(),resultant_price);
-                            user_share_functions.removeSomeShares("shareid",quantity,Integer.valueOf(price_));
-                            sharefunctions.removeAvailableSell("shareid",sharedetails.getAvailableforselling(),resultant_price);
+                            user_share_functions.removeSomeShares(shareid,quantity,Integer.valueOf(price_));
+                            sharefunctions.removeAvailableSell(shareid,sharedetails.getAvailableforselling(),resultant_price);
+                            sell_success sell_success=new sell_success();
+                            sell_success.show(getParentFragmentManager(),"sell_success");
                             dismiss();
+
                         }
                     }
                 }
