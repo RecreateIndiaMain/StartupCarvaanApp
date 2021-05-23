@@ -1049,6 +1049,7 @@ color background_material_light
 color black
 color black_overlay
 color blue
+color bluetr
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -1784,6 +1785,7 @@ drawable ic_baseline_arrow_drop_down_circle_24
 drawable ic_baseline_arrow_drop_up_24
 drawable ic_baseline_attach_money_24
 drawable ic_baseline_groups_24
+drawable ic_baseline_thumb_up_24
 drawable ic_bg
 drawable ic_call_24dp
 drawable ic_close
@@ -1902,6 +1904,7 @@ drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable unlike
 drawable unlock
+drawable userimage
 drawable vsm_coin
 drawable wallpaper1
 font proximanovaregular
@@ -2073,6 +2076,7 @@ id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
 id availableforbuying
+id backprofile
 id barrier
 id baseline
 id beforefaq
@@ -2127,6 +2131,8 @@ id clear_text
 id clip_horizontal
 id clip_vertical
 id close68
+id closebuy
+id closesellsuccess
 id coin
 id collapseActionView
 id colorlayout
@@ -2602,7 +2608,6 @@ id visible
 id visible_removing_fragment_view_tag
 id webview
 id wide
-id winnings
 id withText
 id withinBounds
 id wrap
@@ -2697,6 +2702,7 @@ layout ayp_menu_item
 layout ayp_player_menu
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
+layout buysuccess
 layout confirmotp
 layout crop_image_activity
 layout crop_image_view
@@ -2777,6 +2783,7 @@ layout rzp_magic_base
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout sellsuccess
 layout singlecomment
 layout slide_layout
 layout support_simple_spinner_dropdown_item

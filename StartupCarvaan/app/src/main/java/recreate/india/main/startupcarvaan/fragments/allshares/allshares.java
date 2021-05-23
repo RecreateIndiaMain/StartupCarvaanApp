@@ -78,7 +78,7 @@ public class allshares extends Fragment {
         if(loaded==false)
             dismissDialog();
         final int[] count = {1};
-        Query query=ff.collection("allshares");
+        Query query=ff.collection("allshares").orderBy("users");
         FirestoreRecyclerOptions<allshare> option= new FirestoreRecyclerOptions.
                 Builder<allshare>().setQuery(query,allshare.class).
                 build();
@@ -131,6 +131,7 @@ public class allshares extends Fragment {
                             Glide.with(getContext())
                                     .load(task.getResult())
                                     .into(holder.companylogo);
+                            dismissDialog();
 
                         }
 
@@ -153,9 +154,7 @@ public class allshares extends Fragment {
                     public void onReady(@NotNull YouTubePlayer youTubePlayer) {
                         String url = model.getIntrovideourl();
                         youTubePlayer.cueVideo(url, 0);
-                        count[0] =0;
-//                        Toast.makeText(getContext(), "video loaded", Toast.LENGTH_SHORT).show();
-                        checkDailog(count[0]);
+
 
                     }
 
@@ -253,9 +252,12 @@ public class allshares extends Fragment {
             second=itemView.findViewById(R.id.afterpress);
             video=itemView.findViewById(R.id.video);
             colorlayout=itemView.findViewById(R.id.colorlayout);
+<<<<<<< HEAD
             colourlayout2=itemView.findViewById(R.id.colorlayout2);
 
             //fields
+=======
+>>>>>>> d116aafdd0dbd42dbbabb036fc659262a41e9c4f
             companylogo=itemView.findViewById(R.id.companylogo);
             companyname=itemView.findViewById(R.id.companyname);
             investors=itemView.findViewById(R.id.investors);
@@ -274,14 +276,13 @@ public class allshares extends Fragment {
         pDialog = null;
         if (pDialog == null) {
             pDialog = new CustomProgressDialogue(getActivity());
+            pDialog.setCancelable(true);
             pDialog.show();
         }
-
     }
     void checkDailog(int i){
         if(i==0) {
             dismissDialog();
-
         }
     }
     public void dismissDialog() {

@@ -74,6 +74,7 @@ public class practice extends Fragment {
                     @Override
                     public void onComplete(@NonNull Task<Uri> task) {
                         Glide.with(getContext()).load(task.getResult()).into(holder.logo);
+                        cpd.dismiss();
 
                     }
                 });
@@ -81,7 +82,6 @@ public class practice extends Fragment {
                     @Override
                     public void onReady(@NotNull YouTubePlayer youTubePlayer) {
                         youTubePlayer.cueVideo(model.getIntrovideourl(),0);
-                        cpd.dismiss();
                     }
 
                     @Override
