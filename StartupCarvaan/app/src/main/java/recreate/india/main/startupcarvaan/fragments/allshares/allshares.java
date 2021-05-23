@@ -65,8 +65,7 @@ public class allshares extends Fragment {
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        ProgressDialog pDailog;
+    public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
     }
 
@@ -260,11 +259,7 @@ public class allshares extends Fragment {
             second=itemView.findViewById(R.id.afterpress);
             video=itemView.findViewById(R.id.video);
             colorlayout=itemView.findViewById(R.id.colorlayout);
-
             colourlayout2=itemView.findViewById(R.id.colorlayout2);
-
-            //fields
-
             companylogo=itemView.findViewById(R.id.companylogo);
             companyname=itemView.findViewById(R.id.companyname);
             investors=itemView.findViewById(R.id.investors);

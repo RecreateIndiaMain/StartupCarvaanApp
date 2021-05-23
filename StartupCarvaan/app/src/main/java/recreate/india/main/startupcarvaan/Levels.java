@@ -133,6 +133,7 @@ public class Levels extends AppCompatActivity {
         for (int i=1;i<12;i++){
             rt[i].setText("/ "+ levels[i]);
             lt[i].setText("0");
+            img[i].setImageResource(R.drawable.padlock);
 //            l[i].setMax(levels[i]);
         }
 
@@ -147,7 +148,6 @@ public class Levels extends AppCompatActivity {
             img[i].setImageResource(R.drawable.unlock);
             txt3[i].setText("Congratulations..");
         }
-        img[level].setImageResource(R.drawable.unlock);
         double Points=currentPoints/levels[level]*100;
         IntValue = (int) Math. round(Points);
         l[level].setProgress(IntValue);
