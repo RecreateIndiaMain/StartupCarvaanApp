@@ -60,8 +60,7 @@ public class allshares extends Fragment {
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        ProgressDialog pDailog;
+    public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
     }
 
