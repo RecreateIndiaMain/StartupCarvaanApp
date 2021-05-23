@@ -2,7 +2,9 @@ package recreate.india.main.startupcarvaan.fragments.allshares;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -55,6 +57,8 @@ public class allshares extends Fragment {
     private RecyclerView recyclerView;
     private CustomProgressDialogue pDialog;
     private boolean loaded=false;
+
+
     public allshares() {
         // Required empty public constructor
     }
@@ -105,11 +109,15 @@ public class allshares extends Fragment {
                             holder.on = false;
                             holder.first.setVisibility(View.GONE);
                             holder.video.setVisibility(View.GONE);
+                            holder.colorlayout.setVisibility(View.GONE);
+                            holder.colourlayout2.setVisibility(View.VISIBLE);
                             holder.second.setVisibility(View.VISIBLE);
                         } else {
                             holder.on = true;
                             holder.first.setVisibility(View.VISIBLE);
                             holder.video.setVisibility(View.VISIBLE);
+                            holder.colorlayout.setVisibility(View.VISIBLE);
+                            holder.colourlayout2.setVisibility(View.GONE);
                             holder.second.setVisibility(View.GONE);
                         }
                     }
@@ -213,8 +221,9 @@ public class allshares extends Fragment {
 //                Toast.makeText(getContext(), sharedetails[0].getBuyingprice(), Toast.LENGTH_SHORT).show();
                 if (model.getType().equals("elite")) {
                     holder.colorlayout.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.blue));
+
                 } else if (model.getType().equals("mediocre")) {
-                    holder.colorlayout.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.yellow));
+                    holder.colorlayout.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.purp20));
                 } else
                     holder.colorlayout.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.greyish));
             }
@@ -226,7 +235,7 @@ public class allshares extends Fragment {
     public class PostViewHolder extends RecyclerView.ViewHolder {
         private Button invest;
         private ImageView switchLayout;
-        private LinearLayout first,second,video,colorlayout;
+        private LinearLayout first,second,video,colorlayout,colourlayout2;
         // fields
         private ImageView companylogo;
         private TextView companyname,group,investors;
@@ -244,6 +253,7 @@ public class allshares extends Fragment {
             second=itemView.findViewById(R.id.afterpress);
             video=itemView.findViewById(R.id.video);
             colorlayout=itemView.findViewById(R.id.colorlayout);
+            colourlayout2=itemView.findViewById(R.id.colorlayout2);
 
             //fields
             companylogo=itemView.findViewById(R.id.companylogo);

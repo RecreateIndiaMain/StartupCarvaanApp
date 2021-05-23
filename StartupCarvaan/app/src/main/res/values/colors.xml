@@ -19,7 +19,14 @@
     <color name="goodgrey">#535353</color>
     <color name="yellow">#F8BA0F</color>
     <color name="green">#FF59B563</color>
-    <color name="bluetr">#4E3F68</color>
+    <color name="bluetr">#4E3F68</color>FF7981AE
+    <color name="bluepupr">#FF7981AE</color>
+
+    <color name="purp20">#756D77</color>
+
+
+    <color name="purp30">#847B87</color>
+
 
     <color name="purple">#693B71</color>
     <color name="orange">#F48E6E</color>
