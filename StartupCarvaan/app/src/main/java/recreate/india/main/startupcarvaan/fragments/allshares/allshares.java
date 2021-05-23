@@ -228,10 +228,11 @@ public class allshares extends Fragment {
                     holder.invest.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.purp20));
                     holder.colourlayout2.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.purp20));
 
-                } else
+                } else {
                     holder.colorlayout.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.bluepupr));
-                holder.invest.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.bluepupr));
-                holder.colourlayout2.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.bluepupr));
+                    holder.invest.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.bluepupr));
+                    holder.colourlayout2.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.bluepupr));
+                }
             }
         };
         recyclerView.setAdapter(adapter);

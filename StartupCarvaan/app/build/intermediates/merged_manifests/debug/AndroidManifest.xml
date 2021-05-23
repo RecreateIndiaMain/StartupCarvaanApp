@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="recreate.india.main.startupcarvaan"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="30" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name="androidx.multidex.MultiDexApplication"
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:icon="@drawable/startupcarvaanlogo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/startupcarvaanlogo"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/Theme.StartupCarvaan" >
+        <activity android:name="recreate.india.main.startupcarvaan.mainActivities.comments_list" />
+        <activity android:name="recreate.india.main.startupcarvaan.coin_exchange.rci_exchange" />
+        <activity android:name="recreate.india.main.startupcarvaan.Levels" />
+        <activity android:name="recreate.india.main.startupcarvaan.mainActivities.RecyclerActivity" />
+        <activity android:name="recreate.india.main.startupcarvaan.payments.payout" />
+        <activity android:name="recreate.india.main.startupcarvaan.payments.payin" />
+        <activity android:name="recreate.india.main.startupcarvaan.Helppage" />
+        <activity android:name="recreate.india.main.startupcarvaan.coin_exchange.buy_rci" />
+        <activity android:name="recreate.india.main.startupcarvaan.mainActivities.IntroSliderActivity" />
+        <activity android:name="recreate.india.main.startupcarvaan.user.CreateProfile" />
+        <activity
+            android:name="recreate.india.main.startupcarvaan.loginsignup.PhoneAuthActivity"
+            android:parentActivityName="recreate.india.main.startupcarvaan.loginsignup.loginActivity" />
+        <activity android:name="recreate.india.main.startupcarvaan.user.ProfileActivity" />
+        <activity
+            android:name="recreate.india.main.startupcarvaan.aboutshare.blogging"
+            android:parentActivityName="recreate.india.main.startupcarvaan.mainActivities.MainActivity" />
+        <activity android:name="recreate.india.main.startupcarvaan.mainActivities.MainActivity" />
+        <activity android:name="recreate.india.main.startupcarvaan.mainActivities.PrivacyPolicy" />
+        <activity
+            android:name="recreate.india.main.startupcarvaan.loginsignup.loginActivity"
+            android:theme="@style/Theme.StartupCarvaan.Fullscreen" /> <!-- <<<<<<< HEAD -->
+        <activity android:name="recreate.india.main.startupcarvaan.mainActivities.SplashScreen" >
+
+            <!-- ======= -->
+            <!-- <activity android:name=".mainActivities.SplashScreen" -->
+            <!-- android:theme="@style/Theme.StartupCarvaan.Fullscreen"> -->
+            <!-- &gt;>>>>>> 0c661d126c4e77d292c1bb611717ada2366be325 -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity
+            android:name="com.shreyaspatil.EasyUpiPayment.ui.PaymentUiActivity"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+
+        <receiver android:name="com.razorpay.RzpTokenReceiver" >
+            <intent-filter>
+                <action android:name="rzp.device_token.share" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.razorpay.CheckoutActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@style/CheckoutTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <data
+                    android:host="rzp.io"
+                    android:scheme="io.rzp" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!--
+            Service handling Google Sign-In user revocation. For apps that do not integrate with
+            Google Sign-In, this service will never be started.
+        -->
+        <service
+            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+            android:exported="true"
+            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+            android:visibleToInstantApps="true" />
+
+        <activity
+            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="firebase.auth"
+                    android:path="/"
+                    android:scheme="genericidp" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="firebase.auth"
+                    android:path="/"
+                    android:scheme="recaptcha" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.google.firebase.auth.api.fallback.service.FirebaseAuthFallbackService"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.firebase.auth.api.gms.service.START" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.google.firebase.components.ComponentDiscoveryService"
+            android:directBootAware="true"
+            android:exported="false" >
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <!--
+                This registrar is not defined in the dynamic-module-support sdk itself to allow non-firebase
+                clients to use it as well, by defining this registrar in their own core/common library.
+            -->
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+        </service>
+
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:authorities="recreate.india.main.startupcarvaan.firebaseinitprovider"
+            android:directBootAware="true"
+            android:exported="false"
+            android:initOrder="100" />
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>

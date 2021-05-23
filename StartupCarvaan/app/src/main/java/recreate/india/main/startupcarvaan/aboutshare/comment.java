@@ -13,6 +13,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
@@ -61,35 +63,21 @@ public class comment extends DialogFragment {
                     public void onEvent(@Nullable @org.jetbrains.annotations.Nullable DocumentSnapshot value, @Nullable @org.jetbrains.annotations.Nullable FirebaseFirestoreException error) {
                         blogdetails=value.toObject(recreate.india.main.startupcarvaan.aboutshare.models.blogdetails.class);
                         comment_map[0] =blogdetails.getComments();
+                        Toast.makeText(getContext(), String.valueOf(blogdetails.getComments().size()), Toast.LENGTH_SHORT).show();
+                        ArrayList<name_comment> content=new ArrayList<>();
+                        for (Map.Entry<String,String> set: comment_map[0].entrySet()) {
+                            name_comment name = new name_comment(set.getKey(),set.getValue());
+                            content.add(name);
+                        }
+//                        Toast.makeText(getContext(), "size of comment map"+String.valueOf(comment_map[0].size()), Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(getContext(), "size of content is"+String.valueOf(content.size()), Toast.LENGTH_SHORT).show();
+                        RecyclerView.Adapter commentAdapter=new CommentAdapter(getContext(),content);
+                        commentList.setAdapter(commentAdapter);
+                        commentList.setLayoutManager(new LinearLayoutManager(getContext()));
+                        DividerItemDecoration dividerItemDecoration=new DividerItemDecoration(getContext(),DividerItemDecoration.VERTICAL);
+                        commentList.addItemDecoration(dividerItemDecoration);
                     }
                 });
-
-
-        ArrayList<name_comment> content=new ArrayList<>();
-//        if(comment_map[0]==null)
-//            Toast.makeText(getActivity(), "NULLLLLLLL", Toast.LENGTH_SHORT).show();
-//        name_comment name1 = new name_comment("Hello","HII");
-//        name_comment name2 = new name_comment("Hello","HII");
-//        name_comment name3 = new name_comment("Hello","HII");
-//        name_comment name4 = new name_comment("Hello","HII");
-//        name_comment name5 = new name_comment("Hello","HII");
-//        name_comment name6 = new name_comment("Hello","HII");
-//        name_comment name7 = new name_comment("Hello","HII");
-//        content.add(name1);
-//        content.add(name2);
-//        content.add(name3);
-//        content.add(name4);
-//        content.add(name5);
-//        content.add(name6);
-
-        for (Map.Entry<String,String> set: comment_map[0].entrySet()) {
-//            Toast.makeText(getContext(), set.getKey(), Toast.LENGTH_SHORT).show();
-            name_comment name = new name_comment(set.getKey(),set.getValue());
-//            Log.d("tag",name.getComment());
-            content.add(name);
-        }
-            RecyclerView.Adapter commentAdapter=new CommentAdapter(getContext(),content);
-            commentList.setAdapter(commentAdapter);
         builder.setView(view);
         return builder.create();
 
