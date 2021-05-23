@@ -6,28 +6,36 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardCornerRadius="20dp"
-    android:layout_margin="7dp"
+    android:layout_margin="12dp"
     app:cardElevation="15dp"
     android:elevation="15dp">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/grey"
+android:background="@color/grey"
+
         android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-       >
+            android:layout_height="wrap_content">
 
             <LinearLayout
+                android:id="@+id/colorlayout"
                 android:layout_width="match_parent"
                 android:layout_height="180dp"
-                android:id="@+id/colorlayout"
-                android:background="#FF59B563"
-                android:visibility="visible"
-                android:orientation="vertical" />
+                android:background="@color/bluetr"
+                android:orientation="vertical"
+                android:visibility="visible" />
 
+            <LinearLayout
+                android:id="@+id/colorlayout2"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:background="#FF59B563"
+                android:orientation="vertical"
+                android:visibility="invisible" />
 
 
             <RelativeLayout
@@ -62,7 +70,6 @@
                         android:src="@drawable/ic_baseline_arrow_drop_down_circle_24" />
 
 
-
                 </LinearLayout>
             </RelativeLayout>
 
@@ -84,16 +91,17 @@
 
                     <TextView
                         android:id="@+id/companyname"
-                        android:fontFamily="@font/proximanovaregular"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="4dp"
                         android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/proximanovaregular"
                         android:text="Company Name"
                         android:textColor="@color/white"
                         android:textSize="20sp"
                         android:textStyle="bold" />
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -101,6 +109,7 @@
                         android:gravity="right"
 
                         android:orientation="vertical">
+
                         <TextView
                             android:id="@+id/group"
                             android:layout_width="wrap_content"
@@ -128,8 +137,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/lcompany"
 
-                android:layout_marginTop="15dp"
                 android:layout_marginLeft="18dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginRight="18dp"
 
                 android:visibility="visible">
@@ -142,48 +151,48 @@
             </LinearLayout>
 
         </RelativeLayout>
+
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:orientation="vertical"
             android:id="@+id/growth"
-            android:visibility="visible"
+            android:layout_width="match_parent"
 
-            android:paddingRight="25dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
             android:paddingLeft="25dp"
+
+            android:paddingTop="10dp"
+            android:paddingRight="25dp"
             android:paddingBottom="10dp"
-            android:paddingTop="10dp">
+            android:visibility="visible">
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
-                android:weightSum="2"
-                android:background="@drawable/circularbordersolid"
                 android:layout_marginTop="14dp"
+                android:background="@drawable/circularbordersolid"
+                android:orientation="horizontal"
                 android:padding="6dp"
-                android:orientation="horizontal">
+                android:weightSum="2">
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
                     android:layout_weight="1"
-
-
+                    android:gravity="center"
 
 
                     android:orientation="vertical">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Investors"
                         android:gravity="center"
+                        android:text="Investors"
                         android:textColor="#000000"
-                        android:textStyle="bold"
                         android:textSize="19sp"
+                        android:textStyle="bold"
 
 
                         />
@@ -199,33 +208,34 @@
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:background="@drawable/newr"
-                            android:text="30000"
+                            android:gravity="center"
 
-                         android:gravity="center"
+                            android:text="30000"
                             android:textColor="#FF533D78"
-                            android:textStyle="bold"
-                        />
+                            android:textStyle="bold" />
 
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
                     android:layout_weight="1"
+                    android:gravity="center"
 
 
                     android:orientation="vertical">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Growth"
                         android:gravity="center"
+                        android:text="Growth"
                         android:textColor="#000000"
-                        android:textStyle="bold"
                         android:textSize="19sp"
+                        android:textStyle="bold"
 
 
                         />
@@ -234,8 +244,8 @@
                         android:id="@+id/relativeLayout"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:background="@drawable/newr"
-                        android:layout_marginTop="3dp">
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/newr">
 
                         <ProgressBar
                             android:id="@+id/growthbar"
@@ -243,66 +253,61 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_gravity="center"
-                            android:progress="30"
                             android:max="100"
+                            android:progress="30"
                             android:progressDrawable="@drawable/circle"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintLeft_toLeftOf="parent"
                             app:layout_constraintRight_toRightOf="parent"
-                            app:layout_constraintTop_toTopOf="parent">
-                        </ProgressBar>
+                            app:layout_constraintTop_toTopOf="parent"></ProgressBar>
 
                         <TextView
                             android:id="@+id/growthtext"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginRight="5dp"
+                            android:text="30"
                             android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="#FF533D78"
+                            android:textStyle="bold"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.5"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            android:text="30"
-                            android:textColor="#FF533D78"
-                            android:textStyle="bold"/>
+                            app:layout_constraintTop_toTopOf="parent" />
+
                         <TextView
 
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:text="%"
                             android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                            app:layout_constraintBottom_toBottomOf="parent"
 
+                            android:textColor="#FF533D78"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintHorizontal_bias="0.5"
                             app:layout_constraintStart_toEndOf="@id/growthtext"
-                            app:layout_constraintTop_toTopOf="parent"
-                            android:text="%"
-                            android:textColor="#FF533D78"
-                            android:textStyle="bold"/>
+                            app:layout_constraintTop_toTopOf="parent" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </LinearLayout>
 
 
-
-
             </LinearLayout>
-
-
-
 
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:paddingBottom="6dp"
-                android:paddingTop="6dp"
-                android:gravity="center"
-                android:paddingLeft="10dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="18dp"
                 android:background="@drawable/circularbordersolid"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingTop="6dp"
                 android:paddingRight="10dp"
-                android:layout_height="wrap_content">
+                android:paddingBottom="6dp">
 
                 <TextView
                     android:id="@+id/tags"
@@ -316,35 +321,34 @@
             </LinearLayout>
 
 
-
-
-
         </LinearLayout>
 
         <!--Linear Layout 2-->
         <LinearLayout
+            android:id="@+id/afterpress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/afterpress"
-            android:visibility="gone"
             android:layout_marginTop="10dp"
+            android:orientation="vertical"
 
-            android:orientation="vertical">
+            android:visibility="gone">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="12dp"
-                android:layout_marginRight="30dp">
+                android:layout_marginRight="30dp"
+                android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Buying price :  "
-                    android:textSize="17sp"
                     android:textColor="@color/greyish"
+                    android:textSize="17sp"
 
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/buyingprice"
@@ -358,56 +362,60 @@
                     android:textSize="17sp"
                     android:textStyle="bold" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginRight="30dp">
+                android:layout_marginRight="30dp"
+                android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Selling price :  "
-                    android:textSize="17sp"
                     android:textColor="@color/greyish"
+                    android:textSize="17sp"
 
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
+
                 <TextView
+                    android:id="@+id/sellingprice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="10"
-                    android:id="@+id/sellingprice"
-                    android:textSize="17sp"
                     android:textColor="@color/black"
+                    android:textSize="17sp"
 
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <TextView
                 android:id="@+id/nextslot"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="NextSlot "
-                android:textSize="17sp"
-                android:layout_marginTop="10dp"
                 android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:text="NextSlot "
                 android:textColor="@color/greyish"
+                android:textSize="17sp"
 
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="12dp"
+                android:layout_marginRight="30dp"
                 android:gravity="center_vertical"
-                android:layout_marginRight="30dp">
+                android:orientation="horizontal">
+
                 <ImageView
                     android:layout_width="45dp"
                     android:layout_height="45dp"
-                    android:src="@drawable/idea"
-                    />
+                    android:src="@drawable/idea" />
 
                 <TextView
                     android:id="@+id/advice"
@@ -429,25 +437,24 @@
             android:layout_width="match_parent"
 
             android:layout_height="wrap_content">
+
             <Button
                 android:id="@+id/invest"
                 android:layout_width="match_parent"
                 android:layout_height="54dp"
+                android:layout_marginLeft="30dp"
                 android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="18dp"
                 android:backgroundTint="#293859"
                 android:fontFamily="@font/proximanovaregular"
                 android:text="Invest In me"
+                android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="16sp"
-                android:layout_marginRight="30dp"
-                android:layout_marginLeft="30dp"
-                android:textAllCaps="false"
-                android:layout_marginBottom="14dp"
                 android:textStyle="bold" />
 
         </LinearLayout>
-
-
 
 
     </LinearLayout>
