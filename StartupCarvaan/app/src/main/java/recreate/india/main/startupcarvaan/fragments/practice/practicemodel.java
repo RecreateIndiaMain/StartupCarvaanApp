@@ -3,18 +3,27 @@ package recreate.india.main.startupcarvaan.fragments.practice;
 import java.util.Map;
 
 public class practicemodel {
-    private Integer buyingprice;
     private Map<String,Boolean> currentvotes;
     private String  description;
-    private Map<String,String>holdings;
+    private Map<String,Integer>holders;
     private String introvideourl,logourl,name;
-    private Integer neededvotes;
+    private Integer rate;
 
-    public Map<String,Boolean> getCurrentvotes() {
+    public practicemodel(Map<String, Boolean> currentvotes, String description, Map<String, Integer> holders, String introvideourl, String logourl, String name, Integer rate) {
+        this.currentvotes = currentvotes;
+        this.description = description;
+        this.holders = holders;
+        this.introvideourl = introvideourl;
+        this.logourl = logourl;
+        this.name = name;
+        this.rate = rate;
+    }
+
+    public Map<String, Boolean> getCurrentvotes() {
         return currentvotes;
     }
 
-    public void setCurrentvotes(Map<String,Boolean> currentvotes) {
+    public void setCurrentvotes(Map<String, Boolean> currentvotes) {
         this.currentvotes = currentvotes;
     }
 
@@ -26,12 +35,12 @@ public class practicemodel {
         this.description = description;
     }
 
-    public Map<String, String> getHoldings() {
-        return holdings;
+    public Map<String, Integer> getHolders() {
+        return holders;
     }
 
-    public void setHoldings(Map<String, String> holdings) {
-        this.holdings = holdings;
+    public void setHolders(Map<String, Integer> holders) {
+        this.holders = holders;
     }
 
     public String getIntrovideourl() {
@@ -58,31 +67,12 @@ public class practicemodel {
         this.name = name;
     }
 
-    public Integer getNeededvotes() {
-        return neededvotes;
+    public Integer getRate() {
+        return rate;
     }
 
-    public void setNeededvotes(Integer neededvotes) {
-        this.neededvotes = neededvotes;
-    }
-
-    public Integer getBuyingprice() {
-        return buyingprice;
-    }
-
-    public void setBuyingprice(Integer buyingprice) {
-        this.buyingprice = buyingprice;
-    }
-
-    public practicemodel(Integer buyingprice, Map<String,Boolean> currentvotes, String description, Map<String, String> holdings, String introvideourl, String logourl, String name, Integer neededvotes) {
-        this.buyingprice = buyingprice;
-        this.currentvotes = currentvotes;
-        this.description = description;
-        this.holdings = holdings;
-        this.introvideourl = introvideourl;
-        this.logourl = logourl;
-        this.name = name;
-        this.neededvotes = neededvotes;
+    public void setRate(Integer rate) {
+        this.rate = rate;
     }
 
     public practicemodel() {

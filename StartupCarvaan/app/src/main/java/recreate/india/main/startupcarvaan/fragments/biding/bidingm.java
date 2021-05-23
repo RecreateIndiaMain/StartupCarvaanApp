@@ -1,15 +1,15 @@
 package recreate.india.main.startupcarvaan.fragments.biding;
 
 public class bidingm {
-    Integer closedin;
+    String closedin;
     Integer currentbid;
     String currentwinner,producttitle,productdesc,productimage,winnerid;
 
-    public Integer getClosedin() {
+    public String  getClosedin() {
         return closedin;
     }
 
-    public void setClosedin(Integer closedin) {
+    public void setClosedin(String closedin) {
         this.closedin = closedin;
     }
 
@@ -61,7 +61,7 @@ public class bidingm {
         this.winnerid = winnerid;
     }
 
-    public bidingm(Integer closedin, Integer currentbid, String currentwinner, String producttitle, String productdesc, String productimage, String winnerid) {
+    public bidingm(String closedin, Integer currentbid, String currentwinner, String producttitle, String productdesc, String productimage, String winnerid) {
         this.closedin = closedin;
         this.currentbid = currentbid;
         this.currentwinner = currentwinner;

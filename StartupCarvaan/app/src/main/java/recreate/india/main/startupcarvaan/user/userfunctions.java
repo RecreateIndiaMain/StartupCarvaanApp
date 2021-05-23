@@ -60,7 +60,7 @@ public class userfunctions {
                 .document(new user().user().getUid())
                 .collection("others")
                 .document("coins")
-                .update("bonus",current+bonus);
+                .update("bonus",current-bonus);
     }
     public void addPoints(Double increase){
         ff.collection("users")

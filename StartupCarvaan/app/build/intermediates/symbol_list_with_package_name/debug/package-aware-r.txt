@@ -2086,6 +2086,8 @@ id baseline
 id beforefaq
 id beginOnFirstDraw
 id beginning
+id bet
+id betting
 id biding
 id bidingrecyclerview
 id bidprice
@@ -2095,7 +2097,6 @@ id bonus
 id bottom
 id bottom_to_top
 id bounce
-id bp
 id browser_actions_header_text
 id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
@@ -2161,8 +2162,9 @@ id crop_image_menu_flip_horizontally
 id crop_image_menu_flip_vertically
 id crop_image_menu_rotate_left
 id crop_image_menu_rotate_right
-id current
+id currentbet
 id currentprice
+id currentvotes
 id currentwinner
 id custom
 id customPanel
@@ -2253,7 +2255,6 @@ id headerCoins
 id headerWinnings
 id heading_about_rci
 id hideable
-id holding
 id home
 id homeAsUp
 id honorRequest
@@ -2441,6 +2442,7 @@ id progressid7
 id progressid8
 id progressid9
 id radio
+id rate
 id rateText
 id ratio
 id rci
@@ -2450,7 +2452,6 @@ id rectangles
 id recycler_view
 id redeemImage
 id relativeLayout
-id required
 id reverseSawtooth
 id review
 id right
@@ -2574,6 +2575,7 @@ id textinput_suffix_text
 id textview_first
 id textview_second
 id time
+id timer
 id title
 id titleDividerNoCustom
 id title_template
@@ -2612,6 +2614,7 @@ id viewPager
 id view_offset_helper
 id visible
 id visible_removing_fragment_view_tag
+id vote
 id webview
 id wide
 id withText

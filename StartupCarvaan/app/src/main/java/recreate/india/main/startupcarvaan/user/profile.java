@@ -161,6 +161,7 @@ public class profile {
         map.put("resume",this.resume);
         map.put("title",this.title);
         map.put("phone",this.phone);
+        map.put("reward",this.reward);
         return  map;
     }
 }

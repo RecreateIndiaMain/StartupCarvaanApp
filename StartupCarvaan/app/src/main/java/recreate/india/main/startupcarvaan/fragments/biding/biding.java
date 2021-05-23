@@ -29,10 +29,13 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.storage.FirebaseStorage;
 
+import org.jetbrains.annotations.NotNull;
+
 import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.fragments.mycoins.coin;
 import recreate.india.main.startupcarvaan.fragments.progressdialogue.CustomProgressDialogue;
 import recreate.india.main.startupcarvaan.user.user;
+import recreate.india.main.startupcarvaan.user.userfunctions;
 
 public class biding extends Fragment {
     private RecyclerView myshare;
@@ -76,11 +79,10 @@ public class biding extends Fragment {
                     @Override
                     public void onComplete(@NonNull Task<Uri> task) {
                         Glide.with(getContext()).load(task.getResult()).into(holder.productimage);
-                        // 11-05-21 Written by Siddharth start
                         cpd.dismiss();
-                        // 11-05-21 Written by Siddharth start
                     }
                 });
+                holder.timer.setText(model.getClosedin());
                 holder.title.setText(model.getProducttitle());
                 holder.description.setText(model.getProductdesc());
                 holder.price.setText(String.valueOf(model.getCurrentbid()));
@@ -95,15 +97,16 @@ public class biding extends Fragment {
                         else{
                             Integer price=Integer.valueOf(holder.bid.getText().toString());
                             if(Double.valueOf(price)>Double.valueOf(model.getCurrentbid()+(.1*model.getCurrentbid()))){
+
                                 FirebaseFirestore.getInstance()
                                         .collection("users")
                                         .document(new user().user().getUid())
                                         .collection("others")
                                         .document("coins")
-                                        .addSnapshotListener(new EventListener<DocumentSnapshot>() {
-                                            @Override
-                                            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                                                coin coin=value.toObject(coin.class);
+                                        .get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                                    @Override
+                                    public void onComplete(@NonNull @NotNull Task<DocumentSnapshot> task) {
+                                        coin coin=task.getResult().toObject(coin.class);
                                                 if(price<coin.getBonus()){
                                                     Toast.makeText(getContext(), "you are currently a winner do not spend any bonus coin before next winner arrives", Toast.LENGTH_SHORT).show();
                                                     String id=getSnapshots().getSnapshot(position).getId();
@@ -115,6 +118,7 @@ public class biding extends Fragment {
                                                 else{
                                                     Toast.makeText(getContext(), "you do not have enough coins ", Toast.LENGTH_SHORT).show();
                                                 }
+                                                new userfunctions().removeBonus(coin.getBonus(),price);
                                             }
                                         });
                             }
@@ -133,14 +137,14 @@ public class biding extends Fragment {
 
     private class viewholder extends RecyclerView.ViewHolder {
         private ImageView productimage;
-        private TextView title,description,price,winner,join;
+        private TextView title,description,price,winner,join,timer;
         private EditText bid;
         public viewholder(@NonNull View itemView) {
             super(itemView);
             productimage=itemView.findViewById(R.id.productimage);
             title=itemView.findViewById(R.id.title);
             description=itemView.findViewById(R.id.description);
-
+            timer=itemView.findViewById(R.id.timer);
 
             price=itemView.findViewById(R.id.currentprice);
             winner=itemView.findViewById(R.id.currentwinner);
