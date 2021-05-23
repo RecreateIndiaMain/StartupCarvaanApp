@@ -1,3 +1,4 @@
+
 package recreate.india.main.startupcarvaan.fragments.allshares;
 
 import android.app.ProgressDialog;
@@ -228,9 +229,9 @@ public class allshares extends Fragment {
                     holder.colourlayout2.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.purp20));
 
                 } else
-                    holder.colorlayout.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.greyish));
-                holder.invest.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.greyish));
-                holder.colourlayout2.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.greyish));
+                    holder.colorlayout.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.bluepupr));
+                holder.invest.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.bluepupr));
+                holder.colourlayout2.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.bluepupr));
             }
         };
         recyclerView.setAdapter(adapter);
