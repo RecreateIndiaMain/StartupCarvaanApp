@@ -223,6 +223,7 @@ public class allshares extends Fragment {
 
                 } else if (model.getType().equals("mediocre")) {
                     holder.colorlayout.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.purp20));
+                    holder.invest.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.purp20));
                 } else
                     holder.colorlayout.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.greyish));
             }
