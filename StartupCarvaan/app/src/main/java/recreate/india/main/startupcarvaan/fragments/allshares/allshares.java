@@ -64,8 +64,7 @@ public class allshares extends Fragment {
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        ProgressDialog pDailog;
+    public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
     }
 
@@ -219,13 +218,19 @@ public class allshares extends Fragment {
                         });
 //                Toast.makeText(getContext(), sharedetails[0].getBuyingprice(), Toast.LENGTH_SHORT).show();
                 if (model.getType().equals("elite")) {
-                    holder.colorlayout.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.blue));
+                    holder.colorlayout.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.bluetr));
+                    holder.invest.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.bluetr));
+                    holder.colourlayout2.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.bluetr));
 
                 } else if (model.getType().equals("mediocre")) {
                     holder.colorlayout.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.purp20));
                     holder.invest.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.purp20));
+                    holder.colourlayout2.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.purp20));
+
                 } else
                     holder.colorlayout.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.greyish));
+                holder.invest.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.greyish));
+                holder.colourlayout2.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.greyish));
             }
         };
         recyclerView.setAdapter(adapter);

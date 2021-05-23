@@ -93,6 +93,7 @@ public class blogging extends AppCompatActivity {
 
             @Override
             protected void onBindViewHolder(@NonNull PostViewHolder holder, int position, @NonNull blogdetails model) {
+
                 holder.title.setText(model.getTitle());
                 holder.description.setText(model.getDescription());
                 holder.num_likes.setText(String.valueOf(model.getLikes().size()));
@@ -135,6 +136,17 @@ public class blogging extends AppCompatActivity {
                                 }
                             });
                         }
+                    }
+                });
+
+                holder.commentimage.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        comment comments=new comment();
+                        Bundle bd=new Bundle();
+                        bd.putString("shareid",shareid);
+                        bd.putString("blogid",getSnapshots().getSnapshot(position).getId());
+                        comments.setArguments(bd);
                     }
                 });
 
@@ -223,7 +235,7 @@ public class blogging extends AppCompatActivity {
         private ImageView imageView;
         private TextView title,description,num_likes,num_comments;
         private EditText addcomment;
-        private ImageView commentbutton,likeimage;
+        private ImageView commentbutton,likeimage,commentimage;
         public PostViewHolder(@NonNull View itemView) {
             super(itemView);
             videoplayer=itemView.findViewById(R.id.videoplayer);
@@ -235,6 +247,7 @@ public class blogging extends AppCompatActivity {
             addcomment=itemView.findViewById(R.id.addcomment);
             commentbutton=itemView.findViewById(R.id.commentButton);
             likeimage=itemView.findViewById(R.id.likeimage);
+            commentimage=itemView.findViewById(R.id.commentimage);
         }
     }
     private BottomNavigationView.OnNavigationItemSelectedListener onNavigationItemReselectedListener= new BottomNavigationView.OnNavigationItemSelectedListener() {
