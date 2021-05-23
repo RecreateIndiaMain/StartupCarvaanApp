@@ -248,6 +248,10 @@
         "source": "C:\\Users\\Siddharth Chaudhary\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_attach_money_24.png"
     },
     {
+        "merged": "C:\\Users\\Siddharth Chaudhary\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\layout_comment_dialogue.xml.flat",
+        "source": "C:\\Users\\Siddharth Chaudhary\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\layout\\comment_dialogue.xml"
+    },
+    {
         "merged": "C:\\Users\\Siddharth Chaudhary\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\navigation_nav_graph.xml.flat",
         "source": "C:\\Users\\Siddharth Chaudhary\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\navigation\\nav_graph.xml"
     },

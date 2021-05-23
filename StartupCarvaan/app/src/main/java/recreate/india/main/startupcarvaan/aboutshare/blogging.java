@@ -3,6 +3,7 @@ package recreate.india.main.startupcarvaan.aboutshare;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -147,6 +148,8 @@ public class blogging extends AppCompatActivity {
                         bd.putString("shareid",shareid);
                         bd.putString("blogid",getSnapshots().getSnapshot(position).getId());
                         comments.setArguments(bd);
+                        comments.show(getSupportFragmentManager(),"Comment Dialogue");
+
                     }
                 });
 
