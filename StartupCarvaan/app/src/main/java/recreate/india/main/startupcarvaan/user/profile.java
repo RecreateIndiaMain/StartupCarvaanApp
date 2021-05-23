@@ -145,6 +145,11 @@ public class profile {
     }
 
     public Map<String,Object> giveNewUser(){
+        this.reward.put("1",20);
+        this.reward.put("2",50);
+        this.reward.put("3",100);
+        this.reward.put("4",200);
+        this.reward.put("5",500);
         Map<String,Object> map=new HashMap<>();
         map.put("address",this.address);
         map.put("description",this.description);

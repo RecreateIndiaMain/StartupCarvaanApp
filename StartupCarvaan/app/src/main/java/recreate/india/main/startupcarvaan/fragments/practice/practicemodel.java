@@ -4,17 +4,17 @@ import java.util.Map;
 
 public class practicemodel {
     private Integer buyingprice;
-    private Integer currentvotes;
+    private Map<String,Boolean> currentvotes;
     private String  description;
     private Map<String,String>holdings;
     private String introvideourl,logourl,name;
     private Integer neededvotes;
 
-    public Integer getCurrentvotes() {
+    public Map<String,Boolean> getCurrentvotes() {
         return currentvotes;
     }
 
-    public void setCurrentvotes(Integer currentvotes) {
+    public void setCurrentvotes(Map<String,Boolean> currentvotes) {
         this.currentvotes = currentvotes;
     }
 
@@ -74,7 +74,7 @@ public class practicemodel {
         this.buyingprice = buyingprice;
     }
 
-    public practicemodel(Integer buyingprice, Integer currentvotes, String description, Map<String, String> holdings, String introvideourl, String logourl, String name, Integer neededvotes) {
+    public practicemodel(Integer buyingprice, Map<String,Boolean> currentvotes, String description, Map<String, String> holdings, String introvideourl, String logourl, String name, Integer neededvotes) {
         this.buyingprice = buyingprice;
         this.currentvotes = currentvotes;
         this.description = description;

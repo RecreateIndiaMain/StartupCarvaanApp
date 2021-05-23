@@ -23,7 +23,7 @@ import recreate.india.main.startupcarvaan.fragments.mycoins.coin;
 
 public class userfunctions {
     private FirebaseFirestore ff=FirebaseFirestore.getInstance();
-    private Integer level[]={100,500,1000,2000,5000};
+    private Integer level[]={200,400,600,800,1000};
     private profile profile=new profile();
     public void userfunctions(){
         ff.collection("users").document(new user().user().getUid()).addSnapshotListener(new EventListener<DocumentSnapshot>() {
@@ -73,7 +73,7 @@ public class userfunctions {
                 Double currentpoints=profile.getCurrentpoints();
                 currentpoints=currentpoints+increase;
 
-                if(currentpoints>level[profile.getI()-1]){
+                if(currentpoints>=level[profile.getI()-1]){
                     currentpoints=currentpoints-level[profile.getI()-1];
                     profile.setI(profile.getI()+1);
                     final coin[] coin = {new coin()};
@@ -91,6 +91,11 @@ public class userfunctions {
                                     .update("points",profile.getPoints()+increase,"currentpoints", finalCurrentpoints,"i",profile.getI());
                         }
                     });
+                }
+                else{
+                    ff.collection("users")
+                            .document(new user().user().getUid())
+                            .update("points",profile.getPoints()+increase,"currentpoints", currentpoints);
                 }
             }
         });
