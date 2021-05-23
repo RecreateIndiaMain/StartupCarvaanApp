@@ -223,7 +223,7 @@ public class allshares extends Fragment {
 
                 } else if (model.getType().equals("mediocre")) {
                     holder.colorlayout.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.purp20));
-                    holder.invest.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.purp20));
+
                 } else
                     holder.colorlayout.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.greyish));
             }
@@ -253,12 +253,11 @@ public class allshares extends Fragment {
             second=itemView.findViewById(R.id.afterpress);
             video=itemView.findViewById(R.id.video);
             colorlayout=itemView.findViewById(R.id.colorlayout);
-<<<<<<< HEAD
+
             colourlayout2=itemView.findViewById(R.id.colorlayout2);
 
             //fields
-=======
->>>>>>> d116aafdd0dbd42dbbabb036fc659262a41e9c4f
+
             companylogo=itemView.findViewById(R.id.companylogo);
             companyname=itemView.findViewById(R.id.companyname);
             investors=itemView.findViewById(R.id.investors);
