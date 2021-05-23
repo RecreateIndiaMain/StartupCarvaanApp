@@ -63,7 +63,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth'
     implementation 'com.google.firebase:firebase-firestore'
     implementation 'com.google.firebase:firebase-storage:19.2.1'
-    implementation 'com.google.firebase:firebase-storage:16.0.4'
+//    implementation 'com.google.firebase:firebase-storage:16.0.4'
 
 
     //youtube player

@@ -1049,6 +1049,7 @@ color background_material_light
 color black
 color black_overlay
 color blue
+color bluepupr
 color bluetr
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
@@ -1228,6 +1229,8 @@ color primary_text_default_material_dark
 color primary_text_default_material_light
 color primary_text_disabled_material_dark
 color primary_text_disabled_material_light
+color purp20
+color purp30
 color purple
 color purple_200
 color purple_500
@@ -2136,8 +2139,10 @@ id closesellsuccess
 id coin
 id collapseActionView
 id colorlayout
+id colorlayout2
 id comment
 id commentButton
+id comment_list
 id commentimage
 id companylogo
 id companyname
@@ -2187,7 +2192,7 @@ id disableHome
 id disablePostScroll
 id disableScroll
 id displayName
-id displayname
+id displayname1
 id document
 id dotLayout
 id dragDown
@@ -2703,6 +2708,7 @@ layout ayp_player_menu
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout buysuccess
+layout comment_dialogue
 layout confirmotp
 layout crop_image_activity
 layout crop_image_view
