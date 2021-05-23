@@ -25,7 +25,7 @@ android:background="@color/grey"
                 android:id="@+id/colorlayout"
                 android:layout_width="match_parent"
                 android:layout_height="180dp"
-                android:background="#847B87"
+                android:background="@color/bluetr"
                 android:orientation="vertical"
                 android:visibility="visible" />
 
