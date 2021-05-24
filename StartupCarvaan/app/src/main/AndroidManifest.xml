@@ -39,11 +39,12 @@
         <activity
             android:name=".loginsignup.loginActivity"
             android:theme="@style/Theme.StartupCarvaan.Fullscreen" /> <!-- <<<<<<< HEAD -->
-        <activity android:name=".mainActivities.SplashScreen">
+        <activity android:name=".mainActivities.SplashScreen"
+            android:theme="@style/MyTheme">
 
             <!-- ======= -->
-            <!-- <activity android:name=".mainActivities.SplashScreen" -->
-            <!-- android:theme="@style/Theme.StartupCarvaan.Fullscreen"> -->
+
+
             <!-- &gt;>>>>>> 0c661d126c4e77d292c1bb611717ada2366be325 -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

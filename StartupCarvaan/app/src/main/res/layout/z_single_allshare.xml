@@ -141,7 +141,7 @@ android:background="@color/grey"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="18dp"
 
-                android:visibility="visible">
+                android:visibility="gone">
 
                 <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
                     android:id="@+id/introvideo"
@@ -163,7 +163,7 @@ android:background="@color/grey"
             android:paddingTop="10dp"
             android:paddingRight="25dp"
             android:paddingBottom="10dp"
-            android:visibility="visible">
+            android:visibility="gone">
 
 
             <LinearLayout
@@ -331,7 +331,7 @@ android:background="@color/grey"
             android:layout_marginTop="10dp"
             android:orientation="vertical"
 
-            android:visibility="gone">
+            android:visibility="visible">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -390,6 +390,18 @@ android:background="@color/grey"
 
                     android:textStyle="bold" />
             </LinearLayout>
+            <com.github.mikephil.charting.charts.LineChart
+
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_marginTop="12sp"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/lineChart_rci"
+                >
+
+            </com.github.mikephil.charting.charts.LineChart>
 
             <TextView
                 android:id="@+id/nextslot"
