@@ -2296,6 +2296,7 @@ id likeimage
 id line
 id line1
 id line3
+id lineChart_price
 id lineChart_rci
 id linear
 id linear1
