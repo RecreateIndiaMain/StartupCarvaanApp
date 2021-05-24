@@ -13,7 +13,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-android:background="@color/grey"
+        android:background="@color/grey"
 
         android:orientation="vertical">
 
@@ -141,7 +141,7 @@ android:background="@color/grey"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="18dp"
 
-                android:visibility="gone">
+                android:visibility="visible">
 
                 <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
                     android:id="@+id/introvideo"
@@ -163,7 +163,7 @@ android:background="@color/grey"
             android:paddingTop="10dp"
             android:paddingRight="25dp"
             android:paddingBottom="10dp"
-            android:visibility="gone">
+            android:visibility="visible">
 
 
             <LinearLayout
@@ -212,7 +212,8 @@ android:background="@color/grey"
 
                             android:text="30000"
                             android:textColor="#FF533D78"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            tools:ignore="MissingConstraints" />
 
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -331,7 +332,7 @@ android:background="@color/grey"
             android:layout_marginTop="10dp"
             android:orientation="vertical"
 
-            android:visibility="visible">
+            android:visibility="gone">
 
             <LinearLayout
                 android:layout_width="match_parent"
