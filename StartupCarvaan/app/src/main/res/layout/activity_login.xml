@@ -25,7 +25,7 @@ android:gravity="bottom|center_horizontal"
             android:layout_marginTop="35dp"
 
             android:layout_height="match_parent"
-            android:src="@drawable/imrt"/>
+            android:src="@drawable/imrtnew"/>
 
 
 
