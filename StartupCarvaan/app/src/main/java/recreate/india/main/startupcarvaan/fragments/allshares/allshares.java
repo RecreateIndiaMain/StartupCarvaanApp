@@ -2,6 +2,7 @@
 package recreate.india.main.startupcarvaan.fragments.allshares;
 
 import android.app.ProgressDialog;
+import android.content.Entity;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
@@ -29,6 +30,11 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.data.Entry;
+import com.github.mikephil.charting.data.LineData;
+import com.github.mikephil.charting.data.LineDataSet;
+import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -36,6 +42,7 @@ import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.Query;
+import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.FirebaseStorage;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.PlayerConstants;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer;
@@ -45,6 +52,7 @@ import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTube
 import org.jetbrains.annotations.NotNull;
 
 import java.nio.charset.IllegalCharsetNameException;
+import java.util.ArrayList;
 
 import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.aboutshare.blogging;
@@ -58,7 +66,9 @@ public class allshares extends Fragment {
     private RecyclerView recyclerView;
     private CustomProgressDialogue pDialog;
     private boolean loaded=false;
-
+    private LineChart lineChart;
+    ArrayList<Integer> graph=new ArrayList<>();
+    ArrayList<Entry> data=new ArrayList<>();
 
     public allshares() {
         // Required empty public constructor
@@ -99,9 +109,42 @@ public class allshares extends Fragment {
                     public void onClick(View v) {
                         String shareid = getSnapshots().getSnapshot(position).getId();
                         startActivity(new Intent(getContext(), blogging.class).putExtra("shareid", shareid));
+                        getActivity().finish();
+
                     }
                 });
+                graph= (ArrayList<Integer>) model.getGraph();
+                lineChart.setTouchEnabled(true);
+                lineChart.setPinchZoom(true);
+                for (int i=0;i<graph.size();i++){
+                    data.add(new Entry(i+1,graph.get(i)));
+                }
+                LineDataSet set1;
+                if (lineChart.getData() != null &&
+                        lineChart.getData().getDataSetCount() > 0) {
+                    set1 = (LineDataSet) lineChart.getData().getDataSetByIndex(0);
+                    set1.setValues(data);
+                    lineChart.getData().notifyDataChanged();
+                    lineChart.notifyDataSetChanged();
+                } else {
+                    set1 = new LineDataSet(data, "Price");
+                    set1.setDrawIcons(false);
+                    set1.enableDashedLine(10f, 5f, 0f);
+                    set1.enableDashedHighlightLine(10f, 5f, 0f);
+                    set1.setColor(Color.BLUE);
+                    set1.setCircleColor(Color.BLUE);
+                    set1.setLineWidth(1f);
+                    set1.setCircleRadius(1f);
+                    set1.setDrawCircleHole(false);
+                    set1.setValueTextSize(7f);
+                    set1.setDrawFilled(true);
+                    set1.setFormLineWidth(1f);
+                    ArrayList<ILineDataSet> dataSets = new ArrayList<>();
+                    dataSets.add(set1);
+                    LineData data2 = new LineData(dataSets);
+                    lineChart.setData(data2);
 
+                }
                 holder.switchLayout.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -273,6 +316,7 @@ public class allshares extends Fragment {
             nextslot=itemView.findViewById(R.id.nextslot);
             buyingprice=itemView.findViewById(R.id.buyingprice);
             sellingprice=itemView.findViewById(R.id.sellingprice);
+            lineChart=itemView.findViewById(R.id.lineChart_price);
         }
     }
     public void showProgress() {
@@ -307,4 +351,5 @@ public class allshares extends Fragment {
         adapter.stopListening();
         dismissDialog();
     }
+
 }

@@ -71,8 +71,6 @@ public class rci_exchange extends AppCompatActivity {
                         lineChart.getData().notifyDataChanged();
                         lineChart.notifyDataSetChanged();
                     } else {
-                        for (Entry i:values)
-                            Log.i("my_values", String.valueOf(i));
                         set1 = new LineDataSet(values, "Price");
                         set1.setDrawIcons(false);
                         set1.enableDashedLine(10f, 5f, 0f);

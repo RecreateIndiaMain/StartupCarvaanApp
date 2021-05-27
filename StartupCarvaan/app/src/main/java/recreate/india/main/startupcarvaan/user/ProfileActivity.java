@@ -31,6 +31,7 @@ import com.google.firebase.storage.StorageReference;
 
 
 import recreate.india.main.startupcarvaan.R;
+import recreate.india.main.startupcarvaan.aboutshare.blogging;
 import recreate.india.main.startupcarvaan.loginsignup.loginActivity;
 import recreate.india.main.startupcarvaan.mainActivities.MainActivity;
 
@@ -105,5 +106,10 @@ public class ProfileActivity extends AppCompatActivity {
                 });
 
 
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(ProfileActivity.this, MainActivity.class));
     }
 }

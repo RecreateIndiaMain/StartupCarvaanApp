@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:2:1-60:12
-INJECTED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:2:1-60:12
-INJECTED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:2:1-60:12
-INJECTED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:2:1-60:12
+ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:2:1-63:12
+INJECTED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:2:1-63:12
+INJECTED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:2:1-63:12
+INJECTED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:2:1-63:12
 MERGED from [androidx.multidex:multidex:2.0.1] C:\Users\avkg0\.gradle\caches\transforms-3\13a43c7809accd5295d0bf3d73b3614f\transformed\multidex-2.0.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-ui:2.3.2] C:\Users\avkg0\.gradle\caches\transforms-3\8829918a3b1c2c74ee14be8afc24bf3a\transformed\navigation-ui-2.3.2\AndroidManifest.xml:17:1-24:12
 MERGED from [com.shreyaspatil:EasyUpiPayment:2.0] C:\Users\avkg0\.gradle\caches\transforms-3\74bf93474c281850ccf76f375b97d503\transformed\jetified-EasyUpiPayment-2.0\AndroidManifest.xml:2:1-17:12
@@ -83,20 +83,20 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\avkg0\.gradle\caches\transform
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\avkg0\.gradle\caches\transforms-3\8eea09ce550851af69fa1288bfab8c5f\transformed\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [io.grpc:grpc-android:1.28.0] C:\Users\avkg0\.gradle\caches\transforms-3\8b6a02baf45775c3a039571cb8c9bbb8\transformed\jetified-grpc-android-1.28.0\AndroidManifest.xml:2:1-13:12
 MERGED from [com.google.firebase:protolite-well-known-types:17.1.1] C:\Users\avkg0\.gradle\caches\transforms-3\13ae36ded7f774149fd44c2acaab5f0c\transformed\jetified-protolite-well-known-types-17.1.1\AndroidManifest.xml:2:1-11:12
-INJECTED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:2:1-60:12
-INJECTED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:2:1-60:12
-INJECTED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:2:1-60:12
+INJECTED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:2:1-63:12
+INJECTED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:2:1-63:12
+INJECTED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:2:1-63:12
 	package
 		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:3:5-49
 		INJECTED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:2:1-60:12
+		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:2:1-63:12
 		INJECTED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:2:1-60:12
+		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:2:1-63:12
 		INJECTED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:2:11-69
@@ -131,7 +131,7 @@ ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanAp
 	android:name
 		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:10:9-47
 application
-ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:13:5-58:19
+ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:13:5-61:19
 MERGED from [com.shreyaspatil:EasyUpiPayment:2.0] C:\Users\avkg0\.gradle\caches\transforms-3\74bf93474c281850ccf76f375b97d503\transformed\jetified-EasyUpiPayment-2.0\AndroidManifest.xml:11:5-15:19
 MERGED from [com.shreyaspatil:EasyUpiPayment:2.0] C:\Users\avkg0\.gradle\caches\transforms-3\74bf93474c281850ccf76f375b97d503\transformed\jetified-EasyUpiPayment-2.0\AndroidManifest.xml:11:5-15:19
 MERGED from [com.google.android.material:material:1.2.1] C:\Users\avkg0\.gradle\caches\transforms-3\e5bba7de4c6c6c1f4d49bf10807d6b0a\transformed\material-1.2.1\AndroidManifest.xml:22:5-20
@@ -186,18 +186,16 @@ MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\avkg0\.gradle
 		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:14:9-35
 	android:theme
 		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:19:9-52
-activity#recreate.india.main.startupcarvaan.mainActivities.comments_list
-ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:20:9-75
-	android:name
-		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:20:19-63
 activity#recreate.india.main.startupcarvaan.coin_exchange.rci_exchange
-ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:21:9-73
+ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:20:9-73
 	android:name
-		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:21:19-61
+		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:20:19-61
 activity#recreate.india.main.startupcarvaan.Levels
-ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:22:9-44
+ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:21:9-22:72
+	android:parentActivityName
+		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:22:13-70
 	android:name
-		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:22:19-41
+		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:21:19-41
 activity#recreate.india.main.startupcarvaan.mainActivities.RecyclerActivity
 ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:23:9-69
 	android:name
@@ -233,51 +231,57 @@ ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanAp
 	android:name
 		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:31:13-58
 activity#recreate.india.main.startupcarvaan.user.ProfileActivity
-ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:33:9-58
+ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:33:9-34:72
+	android:parentActivityName
+		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:34:13-70
 	android:name
 		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:33:19-55
 activity#recreate.india.main.startupcarvaan.aboutshare.blogging
-ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:34:9-36:73
+ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:35:9-37:73
 	android:parentActivityName
-		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:36:13-70
+		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:37:13-70
 	android:name
-		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:35:13-48
+		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:36:13-48
 activity#recreate.india.main.startupcarvaan.mainActivities.MainActivity
-ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:37:9-65
+ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:38:9-39:72
+	android:parentActivityName
+		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:39:13-70
 	android:name
-		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:37:19-62
+		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:38:19-62
 activity#recreate.india.main.startupcarvaan.mainActivities.PrivacyPolicy
-ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:38:9-66
+ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:40:9-41:73
+	android:parentActivityName
+		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:41:13-70
 	android:name
-		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:38:19-63
+		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:40:19-63
 activity#recreate.india.main.startupcarvaan.loginsignup.loginActivity
-ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:39:9-41:70
+ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:42:9-44:70
 	android:theme
-		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:41:13-67
+		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:44:13-67
 	android:name
-		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:40:13-54
+		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:43:13-54
 activity#recreate.india.main.startupcarvaan.mainActivities.SplashScreen
-ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:42:9-54:20
+ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:45:9-57:20
 	android:theme
-		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:43:13-43
+		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:46:13-43
 	android:name
-		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:42:19-62
+		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:45:19-62
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:49:13-53:29
+ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:52:13-56:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:50:17-69
+ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:53:17-69
 	android:name
-		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:50:25-66
+		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:53:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:52:17-77
+ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:55:17-77
 	android:name
-		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:52:27-74
+		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:55:27-74
 activity#com.theartofdev.edmodo.cropper.CropImageActivity
-ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:55:9-57:59
+ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:58:9-60:59
 	android:theme
-		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:57:13-56
+		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:60:13-56
 	android:name
-		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:56:13-76
+		ADDED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:59:13-76
 uses-sdk
 INJECTED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\avkg0\Anubhav_Goyal_Projects\StartupCarvaan\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml

@@ -36,6 +36,7 @@ import java.io.File;
 
 import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.compressor.Compressor;
+import recreate.india.main.startupcarvaan.fragments.progressdialogue.CustomProgressDialogue;
 import recreate.india.main.startupcarvaan.loginsignup.loginActivity;
 import recreate.india.main.startupcarvaan.mainActivities.MainActivity;
 
@@ -52,6 +53,7 @@ public class CreateProfile extends AppCompatActivity {
     private profile profile=new profile();
     private int document_request_code=002;
     private File compressFile;
+    private CustomProgressDialogue cpd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +61,7 @@ public class CreateProfile extends AppCompatActivity {
         setContentView(R.layout.activity_create_profile);
         //edit text declaration
         FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
+        cpd=new CustomProgressDialogue(CreateProfile.this);
         display_name=findViewById(R.id.displayName);
         title=findViewById(R.id.title);
         desc=findViewById(R.id.description);
@@ -135,7 +138,7 @@ public class CreateProfile extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Dialog newDailog = new Dialog(CreateProfile.this);
+                cpd.show();
                 if(imageUri!=null){
                     StorageReference userimage=fs.getReference().child("users").child(user.getUid()).child("image");
                     imageurl=userimage.getPath();
@@ -149,10 +152,12 @@ public class CreateProfile extends AppCompatActivity {
                                 userdoc.putFile(documentUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                                     @Override
                                     public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
+                                        cpd.dismiss();
                                         Toast.makeText(CreateProfile.this, "document successfully", Toast.LENGTH_SHORT).show();
                                     }
                                 });
                             }
+                            cpd.dismiss();
                             startActivity(new Intent(CreateProfile.this, MainActivity.class));
                             finish();
                         }
@@ -160,11 +165,13 @@ public class CreateProfile extends AppCompatActivity {
                 }
                 else{
                     if(documentUri!=null){
+                        cpd.show();
                         StorageReference userdoc=fs.getReference().child("users").child(user.getUid()).child("doc");
                         documenturl=userdoc.getPath();
                         userdoc.putFile(documentUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                             @Override
                             public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
+                                cpd.dismiss();
                                 Toast.makeText(CreateProfile.this, "document successfully uploaded ", Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(CreateProfile.this, MainActivity.class));
                                 finish();

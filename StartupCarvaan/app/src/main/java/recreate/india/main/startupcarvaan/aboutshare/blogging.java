@@ -55,6 +55,7 @@ import recreate.india.main.startupcarvaan.aboutshare.models.blogdetails;
 import recreate.india.main.startupcarvaan.fragments.allshares.allshare;
 import recreate.india.main.startupcarvaan.fragments.allshares.allshares;
 import recreate.india.main.startupcarvaan.fragments.mycoins.coin;
+import recreate.india.main.startupcarvaan.mainActivities.MainActivity;
 import recreate.india.main.startupcarvaan.user.profile;
 import recreate.india.main.startupcarvaan.user.user;
 import recreate.india.main.startupcarvaan.user.userfunctions;
@@ -294,5 +295,11 @@ public class blogging extends AppCompatActivity {
     public void onStop() {
         super.onStop();
         adapter.stopListening();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(blogging.this, MainActivity.class));
     }
 }
