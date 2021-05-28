@@ -1,5 +1,4 @@
-    package recreate.india.main.startupcarvaan.mainActivities;
-
+package recreate.india.main.startupcarvaan.mainActivities;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -82,23 +81,29 @@ public class MainActivity extends AppCompatActivity{
                 case R.id.logout:
                     FirebaseAuth.getInstance().signOut();
                     startActivity(new Intent(MainActivity.this,loginActivity.class));
+                    finish();
                     break;
                 case R.id.howtoplay:
                     startActivity(new Intent(MainActivity.this, Helppage.class));
+                    finish();
                     break;
                 case R.id.profile:
                     startActivity(new Intent(MainActivity.this, ProfileActivity.class));
+                    finish();
                     break;
 
                 case R.id.growth:
                     startActivity(new Intent(MainActivity.this, Levels.class));
+                    finish();
                     break;
 
                 case R.id.aboutRci:
                     startActivity(new Intent(MainActivity.this, rci_exchange.class));
+                    finish();
                     break;
                 case R.id.privacypolicy:
                     startActivity(new Intent(MainActivity.this,PrivacyPolicy.class));
+                    finish();
                     break;
             }
             return false;
@@ -151,4 +156,10 @@ public class MainActivity extends AppCompatActivity{
         Paper.book().write("first","true");
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(MainActivity.this,MainActivity.class));
+        finish();
+    }
 }

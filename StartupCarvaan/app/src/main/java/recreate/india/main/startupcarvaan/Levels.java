@@ -3,6 +3,8 @@ package recreate.india.main.startupcarvaan;
 import androidx.annotation.IntegerRes;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.telecom.Call;
@@ -17,6 +19,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import recreate.india.main.startupcarvaan.aboutshare.blogging;
+import recreate.india.main.startupcarvaan.mainActivities.MainActivity;
 import recreate.india.main.startupcarvaan.user.profile;
 import recreate.india.main.startupcarvaan.user.user;
 
@@ -164,5 +168,10 @@ public class Levels extends AppCompatActivity {
         }
 
 
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(Levels.this, MainActivity.class));
     }
 }

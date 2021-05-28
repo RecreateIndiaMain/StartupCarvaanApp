@@ -109,13 +109,15 @@ public class allshares extends Fragment {
                     public void onClick(View v) {
                         String shareid = getSnapshots().getSnapshot(position).getId();
                         startActivity(new Intent(getContext(), blogging.class).putExtra("shareid", shareid));
+                        getActivity().finish();
+
                     }
                 });
                 graph= (ArrayList<Integer>) model.getGraph();
                 lineChart.setTouchEnabled(true);
                 lineChart.setPinchZoom(true);
                 for (int i=0;i<graph.size();i++){
-                    data.add(new Entry(i,graph.get(i)));
+                    data.add(new Entry(i+1,graph.get(i)));
                 }
                 LineDataSet set1;
                 if (lineChart.getData() != null &&
@@ -129,12 +131,12 @@ public class allshares extends Fragment {
                     set1.setDrawIcons(false);
                     set1.enableDashedLine(10f, 5f, 0f);
                     set1.enableDashedHighlightLine(10f, 5f, 0f);
-                    set1.setColor(Color.DKGRAY);
-                    set1.setCircleColor(Color.DKGRAY);
+                    set1.setColor(Color.BLUE);
+                    set1.setCircleColor(Color.BLUE);
                     set1.setLineWidth(1f);
-                    set1.setCircleRadius(3f);
+                    set1.setCircleRadius(1f);
                     set1.setDrawCircleHole(false);
-                    set1.setValueTextSize(9f);
+                    set1.setValueTextSize(7f);
                     set1.setDrawFilled(true);
                     set1.setFormLineWidth(1f);
                     ArrayList<ILineDataSet> dataSets = new ArrayList<>();
@@ -349,4 +351,5 @@ public class allshares extends Fragment {
         adapter.stopListening();
         dismissDialog();
     }
+
 }

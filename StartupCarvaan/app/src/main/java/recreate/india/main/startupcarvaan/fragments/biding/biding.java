@@ -1,5 +1,6 @@
 package recreate.india.main.startupcarvaan.fragments.biding;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -32,8 +33,10 @@ import com.google.firebase.storage.FirebaseStorage;
 import org.jetbrains.annotations.NotNull;
 
 import recreate.india.main.startupcarvaan.R;
+import recreate.india.main.startupcarvaan.aboutshare.blogging;
 import recreate.india.main.startupcarvaan.fragments.mycoins.coin;
 import recreate.india.main.startupcarvaan.fragments.progressdialogue.CustomProgressDialogue;
+import recreate.india.main.startupcarvaan.mainActivities.MainActivity;
 import recreate.india.main.startupcarvaan.user.user;
 import recreate.india.main.startupcarvaan.user.userfunctions;
 
@@ -114,11 +117,11 @@ public class biding extends Fragment {
                                                             .collection("biding")
                                                             .document(id)
                                                             .update("winnerid",new user().user().getUid(),"currentbid",price);
+                                                    new userfunctions().removeBonus(coin.getBonus(),price);
                                                 }
                                                 else{
                                                     Toast.makeText(getContext(), "you do not have enough coins ", Toast.LENGTH_SHORT).show();
                                                 }
-                                                new userfunctions().removeBonus(coin.getBonus(),price);
                                             }
                                         });
                             }
