@@ -7,6 +7,7 @@
     android:layout_height="wrap_content"
     app:cardCornerRadius="20dp"
     android:layout_margin="12dp"
+    app:cardBackgroundColor="?attr/bidbackground"
     app:cardElevation="15dp"
     android:elevation="15dp">
     <LinearLayout
@@ -44,7 +45,7 @@
                     android:layout_height="wrap_content"
 
                     android:gravity="start"
-                    android:layout_marginTop="18dp"
+                    android:layout_marginTop="10dp"
                     android:orientation="horizontal">
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:layout_width="45dp"
@@ -69,7 +70,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:layout_marginTop="5dp"
+
                     android:layout_marginLeft="25dp"
                     android:layout_marginRight="25dp"
                     android:text="gduijb ff3eud fduf2uduegdi3ge gfdu3efue3duevudv du3efud"
@@ -105,7 +106,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:gravity="center"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     android:layout_marginRight="30dp">
                     <TextView
                         android:layout_width="wrap_content"
@@ -129,7 +130,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:gravity="center"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     android:layout_marginRight="30dp">
                     <TextView
                         android:layout_width="wrap_content"
@@ -143,10 +144,11 @@
                         android:inputType="number"
                         android:id="@+id/betting"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:hint="100 bonus coin"
                         android:textColor="@color/black"
-                        android:textSize="17sp"
+                        android:textColorHint="@color/black"
+                        android:textSize="15sp"
                         android:textStyle="bold" />
                 </LinearLayout>
                 <LinearLayout
@@ -154,7 +156,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:gravity="center"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     android:layout_marginRight="30dp">
                     <TextView
                         android:layout_width="wrap_content"

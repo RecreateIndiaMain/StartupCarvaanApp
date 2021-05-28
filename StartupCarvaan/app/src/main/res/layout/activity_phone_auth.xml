@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="?attr/backgroundcolourmain"
     tools:context=".loginsignup.PhoneAuthActivity">
     <ImageView
         android:layout_width="match_parent"
@@ -16,8 +17,8 @@
         android:gravity="center"
         android:layout_marginTop="28dp"
         android:layout_height="wrap_content"
-        android:textColor="@color/greyish"
 
+        android:textColor="?attr/txtsugestion"
         android:textSize="27sp"
         android:text="Phone Verification"
         android:textStyle="bold"/>
@@ -25,7 +26,7 @@
         android:layout_width="wrap_content"
 
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
+        android:textColor="?attr/txtsugestion"
         android:layout_marginLeft="45dp"
         android:layout_marginTop="8dp"
         android:textSize="14sp"
@@ -53,9 +54,10 @@
             android:layout_marginTop="25dp"
         android:textSize="15sp"
             android:gravity="center"
-        android:textColorHint="@color/greyish"
+        android:textColorHint="?attr/txtsugestion"
         android:hint="Enter Phone Number"
         android:paddingLeft="10dp"
+            android:textColor="?attr/txtsugestion"
 
         android:inputType="textPersonName"
        android:background="@drawable/input" />
@@ -84,11 +86,11 @@ android:layout_marginTop="12dp"
         android:ems="10"
         android:layout_marginRight="35dp"
         android:layout_marginLeft="35dp"
-
+        android:textColor="?attr/txtsugestion"
         android:layout_marginTop="25dp"
         android:textSize="15sp"
         android:gravity="center"
-        android:textColorHint="@color/greyish"
+        android:textColorHint="?attr/txtsugestion"
         android:hint="Enter OTP"
         android:paddingLeft="10dp"
 

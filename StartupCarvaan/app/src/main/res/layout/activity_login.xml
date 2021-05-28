@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="10"
-    android:background="@color/white"
+    android:background="?attr/backgroundlogin_suggest"
     android:orientation="vertical"
 
     android:theme="@style/Theme.AppCompat.Light.NoActionBar"

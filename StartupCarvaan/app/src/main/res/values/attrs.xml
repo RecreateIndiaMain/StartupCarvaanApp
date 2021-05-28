@@ -2,7 +2,11 @@
     <declare-styleable name="FullscreenAttrs">
         <attr name="fullscreenBackgroundColor" format="color" />
         <attr name="fullscreenTextColor" format="color" />
+        <attr name="backgroundlogin_suggest" format="color" />
+        <attr name="txtsugestion" format="color" />
         <attr name="backgroundcolourmain" format="color" />
         <attr name="maintextcolour" format="color" />
+        <attr name="cointextcolour" format="color" />
+        <attr name="bidbackground" format="color" />
     </declare-styleable>
 </resources>
