@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -37,7 +38,7 @@ import recreate.india.main.startupcarvaan.user.CreateProfile;
 import recreate.india.main.startupcarvaan.user.profile;
 
 public class loginActivity extends AppCompatActivity {
-
+private CheckBox privacy;
     private static final int RC_SIGN_IN = 001;
     private static final String TAG = "startup carvaan";
     FirebaseAuth firebaseAuth=FirebaseAuth.getInstance();
@@ -46,6 +47,7 @@ public class loginActivity extends AppCompatActivity {
     private EditText username,password;
     private ImageView login;
     private TextView register;
+
     private FirebaseAuth mAuth=FirebaseAuth.getInstance();
 
     //google signin
@@ -58,6 +60,21 @@ public class loginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         getSupportActionBar().hide();
+        privacy=findViewById(R.id.checkprivacy);
+        privacy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(privacy.isChecked())
+                {
+                    privacy.setTextColor(getResources().getColor(R.color.green));
+
+                }
+                else
+                {
+                    privacy.setTextColor(getResources().getColor(R.color.black));
+                }
+            }
+        });
 
         // google signin options
         // Configure Google Sign In

@@ -190,7 +190,7 @@ public class allshares extends Fragment {
                     tag += model.getTags().get(i) + "  ";
                 }
                 holder.tags.setText(tag);
-                holder.advice.setText("Advice  " + model.getAdvice());
+                holder.advice.setText("Advice \n " + model.getAdvice());
                 holder.nextslot.setText("Next slot   " + String.valueOf(model.getNextslot().toDate()));
                 holder.introvideo.addYouTubePlayerListener(new YouTubePlayerListener() {
                     @Override

@@ -22,11 +22,11 @@
             android:background="@color/blue">
             <EditText
                 android:id="@+id/coins"
-                android:layout_width="140dp"
+                android:layout_width="150dp"
                 android:layout_height="38dp"
                 android:layout_marginRight="11dp"
                 android:ems="10"
-                android:textColorHint=""
+                android:textColorHint="@color/black"
                 android:background="@drawable/inputtype"
                 android:inputType="number"
                 android:textSize="16sp"
