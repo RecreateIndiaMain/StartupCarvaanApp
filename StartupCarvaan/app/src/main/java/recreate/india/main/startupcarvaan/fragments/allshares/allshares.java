@@ -178,6 +178,7 @@ public class allshares extends Fragment {
 
                         }
 
+
                     }
                 });
                 holder.companyname.setText(model.getName());
