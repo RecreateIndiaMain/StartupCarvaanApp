@@ -1,16 +1,16 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
+            "outputFile": "C:\\Users\\Siddharth Chaudhary\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\values-night\\colors.xml",
+                    "source": "C:\\Users\\Siddharth Chaudhary\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\values-night\\colors.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
-                        "startOffsets": "55",
+                        "startOffsets": "57",
                         "endColumns": "55",
-                        "endOffsets": "106"
+                        "endOffsets": "108"
                     },
                     "to": {
                         "startLines": "2",
@@ -21,13 +21,49 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\values-night\\strings.xml",
+                    "source": "C:\\Users\\Siddharth Chaudhary\\.gradle\\caches\\transforms-3\\f171f7e182e41efdcff43d15cb947e21\\transformed\\appcompat-1.2.0\\res\\values-night-v8\\values-night-v8.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,125,209,293,389,491,593,687",
+                        "endColumns": "69,83,83,95,101,101,93,88",
+                        "endOffsets": "120,204,288,384,486,588,682,771"
+                    },
+                    "to": {
+                        "startLines": "7,8,9,10,11,12,13,50",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "455,525,609,693,789,891,993,4025",
+                        "endColumns": "69,83,83,95,101,101,93,88",
+                        "endOffsets": "520,604,688,784,886,988,1082,4109"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Siddharth Chaudhary\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\values-night\\themes.xml",
+                    "from": {
+                        "startLines": "2,23",
+                        "startColumns": "4,4",
+                        "startOffsets": "102,1202",
+                        "endLines": "21,26",
+                        "endColumns": "12,12",
+                        "endOffsets": "1194,1437"
+                    },
+                    "to": {
+                        "startLines": "30,52",
+                        "startColumns": "4,4",
+                        "startOffsets": "2949,4252",
+                        "endLines": "49,55",
+                        "endColumns": "12,12",
+                        "endOffsets": "4020,4484"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Siddharth Chaudhary\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\values-night\\strings.xml",
                     "from": {
                         "startLines": "5,2,4,3",
                         "startColumns": "4,4,4,4",
-                        "startOffsets": "231,55,185,119",
+                        "startOffsets": "236,57,189,122",
                         "endColumns": "122,63,45,65",
-                        "endOffsets": "349,114,226,180"
+                        "endOffsets": "354,116,230,183"
                     },
                     "to": {
                         "startLines": "3,4,5,6",
@@ -38,43 +74,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\avkg0\\.gradle\\caches\\transforms-3\\f171f7e182e41efdcff43d15cb947e21\\transformed\\appcompat-1.2.0\\res\\values-night-v8\\values-night-v8.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,125,209,293,389,491,593,687",
-                        "endColumns": "69,83,83,95,101,101,93,88",
-                        "endOffsets": "120,204,288,384,486,588,682,771"
-                    },
-                    "to": {
-                        "startLines": "7,8,9,10,11,12,13,43",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "455,525,609,693,789,891,993,3675",
-                        "endColumns": "69,83,83,95,101,101,93,88",
-                        "endOffsets": "520,604,688,784,886,988,1082,3759"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\values-night\\themes.xml",
-                    "from": {
-                        "startLines": "2,16",
-                        "startColumns": "4,4",
-                        "startOffsets": "100,829",
-                        "endLines": "14,19",
-                        "endColumns": "12,12",
-                        "endOffsets": "823,1061"
-                    },
-                    "to": {
-                        "startLines": "30,45",
-                        "startColumns": "4,4",
-                        "startOffsets": "2949,3902",
-                        "endLines": "42,48",
-                        "endColumns": "12,12",
-                        "endOffsets": "3670,4134"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\avkg0\\.gradle\\caches\\transforms-3\\e5bba7de4c6c6c1f4d49bf10807d6b0a\\transformed\\material-1.2.1\\res\\values-night-v8\\values-night-v8.xml",
+                    "source": "C:\\Users\\Siddharth Chaudhary\\.gradle\\caches\\transforms-3\\e5bba7de4c6c6c1f4d49bf10807d6b0a\\transformed\\material-1.2.1\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -83,11 +83,11 @@
                         "endOffsets": "138,262,364,466,582,684,798,926,1042,1164,1300,1420,1554,1674,1786,1912,2050,2174,2304,2426,2564,2680,2800"
                     },
                     "to": {
-                        "startLines": "14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,44,49,50,51,52,53,54",
+                        "startLines": "14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,51,56,57,58,59,60,61",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "1087,1175,1299,1401,1503,1619,1721,1835,1963,2079,2201,2337,2457,2591,2711,2823,3764,4139,4263,4393,4515,4653,4769",
+                        "startOffsets": "1087,1175,1299,1401,1503,1619,1721,1835,1963,2079,2201,2337,2457,2591,2711,2823,4114,4489,4613,4743,4865,5003,5119",
                         "endColumns": "87,123,101,101,115,101,113,127,115,121,135,119,133,119,111,125,137,123,129,121,137,115,119",
-                        "endOffsets": "1170,1294,1396,1498,1614,1716,1830,1958,2074,2196,2332,2452,2586,2706,2818,2944,3897,4258,4388,4510,4648,4764,4884"
+                        "endOffsets": "1170,1294,1396,1498,1614,1716,1830,1958,2074,2196,2332,2452,2586,2706,2818,2944,4247,4608,4738,4860,4998,5114,5234"
                     }
                 }
             ]
