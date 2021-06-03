@@ -32,7 +32,14 @@
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_200</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorOnPrimary">@color/blue</item>
+        <item name="maintextcolour">@color/green</item>
+        <item name="backgroundcolourmain">@color/black</item>
+        <item name="txtsugestion">@color/white</item>
+        <item name="backgroundlogin_suggest">@color/greyish</item>
+        <item name="cointextcolour">@color/white</item>
+        <item name="bidbackground">@color/black</item>
+
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_200</item>

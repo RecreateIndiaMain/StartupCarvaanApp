@@ -377,8 +377,11 @@
     <bool name="abc_action_bar_embed_tabs">true</bool>
     <bool name="abc_allow_stacked_button_bar">false</bool>
     <bool name="abc_config_actionMenuItemAllCaps">true</bool>
+    <bool name="enable_system_alarm_service_default">true</bool>
+    <bool name="enable_system_job_service_default">false</bool>
     <bool name="isTablet">false</bool>
     <bool name="mtrl_btn_textappearance_all_caps">true</bool>
+    <bool name="workmanager_test_configuration">false</bool>
     <color name="abc_decor_view_status_guard">#ff000000</color>
     <color name="abc_decor_view_status_guard_light">#ffffffff</color>
     <color name="abc_search_url_text_normal">#7fa87f</color>
@@ -1059,6 +1062,7 @@
     <string name="allshares">allshares</string>
     <string name="app_name">StartupCarvaan</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="appid">ca-app-pub-5245859690369666~7981162028</string>
     <string name="ayp_custom_action_left">YouTube player Custom action left</string>
     <string name="ayp_custom_action_right">YouTube player custom action right</string>
     <string name="ayp_full_screen_button">Full screen button</string>
@@ -1178,6 +1182,20 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="next">Next</string>
+    <string description="Text of the notification which directs the user to the landing page of the ad. [CHAR_LIMIT=NONE]" name="offline_notification_text">
+      Tap to open ad</string>
+    <string description="Title of the notification which directs the user to the landing page of the ad. [CHAR_LIMIT=NONE]" name="offline_notification_title">
+      View the ad you saved when you were offline</string>
+    <string description="Label on the button to opt in to a notification later when the user is back online. [CHAR_LIMIT=12]" name="offline_opt_in_confirm">
+      OK</string>
+    <string description="Confirmation text displayed when the user opts in to get a notification. [CHAR_LIMIT=NONE]" name="offline_opt_in_confirmation">
+      You\'ll get a notification with the link when you\'re back online</string>
+    <string description="Label on the button to decline to get a notification later when the user is back online. [CHAR_LIMIT=12]" name="offline_opt_in_decline">
+      No thanks</string>
+    <string description="Body of the dialog presented when an ad is clicked while offline. [CHAR_LIMIT=NONE]" name="offline_opt_in_message">
+      We\'ll send you a notification with a link to the advertiser site.</string>
+    <string description="Title of the dialog presented when an ad is clicked while offline. [CHAR_LIMIT=NONE]" name="offline_opt_in_title">
+      Open ad when you\'re back online.</string>
     <string name="open">open</string>
     <string name="password_toggle_content_description">Show password</string>
     <string name="path_password_eye" translatable="false">M12,4.5C7,4.5 2.73,7.61 1,12c1.73,4.39 6,7.5 11,7.5s9.27,-3.11 11,-7.5c-1.73,-4.39 -6,-7.5 -11,-7.5zM12,17c-2.76,0 -5,-2.24 -5,-5s2.24,-5 5,-5 5,2.24 5,5 -2.24,5 -5,5zM12,9c-1.66,0 -3,1.34 -3,3s1.34,3 3,3 3,-1.34 3,-3 -1.34,-3 -3,-3z</string>
@@ -1190,6 +1208,14 @@
     <string name="previous">Previous</string>
     <string name="project_id" translatable="false">startup-carvaan-4c5db</string>
     <string name="ratings">Star Ratings</string>
+    <string name="rewardid">ca-app-pub-5245859690369666/1031776146</string>
+    <string name="s1">Save image</string>
+    <string name="s2">"Allow Ad to store image in Picture gallery?"</string>
+    <string name="s3">Accept</string>
+    <string name="s4">Decline</string>
+    <string name="s5">Create calendar event</string>
+    <string name="s6">Allow Ad to create a calendar event?</string>
+    <string name="s7">Test Ad</string>
     <string name="samplereview">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium bibendum sapien, ut euismod massa. Duis convallis sem sed turpis elementum auctor.</string>
     <string name="search_menu_title">Search</string>
     <string name="second_fragment_label">Second Fragment</string>
@@ -1197,6 +1223,7 @@
     <string name="seek_to_hint">Seconds</string>
     <string name="skills">Skills</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="testRewardid">ca-app-pub-3940256099942544/5224354917</string>
     <string name="text_pay_using">Pay Using</string>
     <string name="text_payment_cancel">Cancel</string>
     <string name="title_activity_fullscreen">FullscreenActivity</string>
@@ -3896,6 +3923,14 @@
     <item name="windowActionBar">false</item>
     <item name="windowNoTitle">true</item>
   </style>
+    <style name="Theme.IAPTheme" parent="android:Theme">
+<item name="android:windowIsTranslucent">true</item>
+<item name="android:windowBackground">@android:color/transparent</item>
+<item name="android:windowContentOverlay">@null</item>
+<item name="android:windowNoTitle">true</item>
+<item name="android:windowIsFloating">true</item>
+<item name="android:backgroundDimEnabled">false</item>
+</style>
     <style name="Theme.MaterialComponents" parent="Base.Theme.MaterialComponents"/>
     <style name="Theme.MaterialComponents.BottomSheetDialog" parent="Theme.MaterialComponents.Dialog">
     <item name="android:windowBackground">@android:color/transparent</item>
@@ -3998,6 +4033,12 @@
         <item name="colorPrimary">@color/blue</item>
         <item name="colorPrimaryVariant">@color/blue</item>
         <item name="colorOnPrimary">@color/white</item>
+        <item name="maintextcolour">@color/teal_200</item>
+        <item name="backgroundcolourmain">@color/white</item>
+        <item name="txtsugestion">@color/black</item>
+        <item name="backgroundlogin_suggest">@color/white</item>
+        <item name="cointextcolour">@color/purple</item>
+        <item name="bidbackground">@color/grey</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_700</item>
@@ -5126,6 +5167,13 @@
         <attr format="string" name="dataPattern"/>
         <attr format="string" name="targetPackage"/>
     </declare-styleable>
+    <declare-styleable name="AdsAttrs">
+<attr format="string" name="adSize"/>
+
+<attr format="string" name="adSizes"/>
+
+<attr format="string" name="adUnitId"/>
+</declare-styleable>
     <declare-styleable name="AlertDialog">
         <attr name="android:layout"/>
         <attr format="reference" name="buttonPanelSideLayout"/>
@@ -6622,6 +6670,12 @@
     <declare-styleable name="FullscreenAttrs">
         <attr format="color" name="fullscreenBackgroundColor"/>
         <attr format="color" name="fullscreenTextColor"/>
+        <attr format="color" name="backgroundlogin_suggest"/>
+        <attr format="color" name="txtsugestion"/>
+        <attr format="color" name="backgroundcolourmain"/>
+        <attr format="color" name="maintextcolour"/>
+        <attr format="color" name="cointextcolour"/>
+        <attr format="color" name="bidbackground"/>
     </declare-styleable>
     <declare-styleable name="GradientColor">
         <!-- Start color of the gradient. -->
