@@ -30,16 +30,28 @@ import java.util.Map;
 
 import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.fragments.models.RciValue;
+import recreate.india.main.startupcarvaan.fragments.progressdialogue.CustomProgressDialogue;
 
 public class rci_exchange extends AppCompatActivity {
     private LineChart lineChart;
     private TextView desc_rci,price_rci;
     private RciValue rciValue=new RciValue();
     FirebaseFirestore ff=FirebaseFirestore.getInstance();
+    CustomProgressDialogue cpd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rci_exchange);
+        cpd=new CustomProgressDialogue(this);
+        cpd.show();
+        Runnable runnable=new Runnable() {
+            @Override
+            public void run() {
+                cpd.dismiss();
+            }
+        };
+        Handler handler=new Handler();
+
         lineChart=findViewById(R.id.lineChart_rci);
         lineChart.setTouchEnabled(true);
         lineChart.setPinchZoom(true);
@@ -54,6 +66,8 @@ public class rci_exchange extends AppCompatActivity {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
                 if (value != null) {
+                    handler.postDelayed(runnable,2000);
+                    Toast.makeText(rci_exchange.this, "Please tap on the graph is not visible", Toast.LENGTH_SHORT).show();
                     rciValue = value.toObject(RciValue.class);
                     price_rci.setText(String.valueOf(rciValue.getCurrentvalue()));
                     desc_rci.setText(String.valueOf(rciValue.getDescription()));
@@ -64,13 +78,13 @@ public class rci_exchange extends AppCompatActivity {
                         values.add(new Entry(s1[0], s2[0]));
                     }
                     LineDataSet set1;
-                    if (lineChart.getData() != null &&
-                            lineChart.getData().getDataSetCount() > 0) {
-                        set1 = (LineDataSet) lineChart.getData().getDataSetByIndex(0);
-                        set1.setValues(values);
-                        lineChart.getData().notifyDataChanged();
-                        lineChart.notifyDataSetChanged();
-                    } else {
+//                    if (lineChart.getData() != null &&
+//                            lineChart.getData().getDataSetCount() > 0) {
+//                        set1 = (LineDataSet) lineChart.getData().getDataSetByIndex(0);
+//                        set1.setValues(values);
+//                        lineChart.getData().notifyDataChanged();
+//                        lineChart.notifyDataSetChanged();
+//                    } else {
                         set1 = new LineDataSet(values, "Price");
                         set1.setDrawIcons(false);
                         set1.enableDashedLine(10f, 5f, 0f);
@@ -87,7 +101,8 @@ public class rci_exchange extends AppCompatActivity {
                         dataSets.add(set1);
                         LineData data = new LineData(dataSets);
                         lineChart.setData(data);
-                    }
+//                    }
+
                     if(lineChart.getData()==null && lineChart.getData().getDataSetCount()==0)
                         showGraph(values);
                 }

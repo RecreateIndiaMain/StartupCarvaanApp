@@ -49,7 +49,10 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.StartupCarvaan" >
-        <activity android:name="recreate.india.main.startupcarvaan.coin_exchange.rci_exchange" />
+        <activity
+            android:name="recreate.india.main.startupcarvaan.coin_exchange.rci_exchange"
+            android:parentActivityName="recreate.india.main.startupcarvaan.Levels" >
+        </activity>
         <activity
             android:name="recreate.india.main.startupcarvaan.Levels"
             android:parentActivityName="recreate.india.main.startupcarvaan.mainActivities.MainActivity" />
@@ -77,15 +80,10 @@
             android:parentActivityName="recreate.india.main.startupcarvaan.mainActivities.MainActivity" />
         <activity
             android:name="recreate.india.main.startupcarvaan.loginsignup.loginActivity"
-            android:theme="@style/Theme.StartupCarvaan.Fullscreen" /> <!-- <<<<<<< HEAD -->
+            android:theme="@style/Theme.StartupCarvaan.Fullscreen" />
         <activity
             android:name="recreate.india.main.startupcarvaan.mainActivities.SplashScreen"
             android:theme="@style/MyTheme" >
-
-            <!-- ======= -->
-
-
-            <!-- &gt;>>>>>> 0c661d126c4e77d292c1bb611717ada2366be325 -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

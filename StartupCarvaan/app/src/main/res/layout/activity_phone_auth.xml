@@ -59,7 +59,7 @@
         android:paddingLeft="10dp"
             android:textColor="?attr/txtsugestion"
 
-        android:inputType="textPersonName"
+        android:inputType="number"
        android:background="@drawable/input" />
 
     <Button
