@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -58,23 +59,23 @@ public class comment extends DialogFragment {
                 .document(shareid)
                 .collection("blogs")
                 .document(blogid)
-                .addSnapshotListener(new EventListener<DocumentSnapshot>() {
-                    @Override
-                    public void onEvent(@Nullable @org.jetbrains.annotations.Nullable DocumentSnapshot value, @Nullable @org.jetbrains.annotations.Nullable FirebaseFirestoreException error) {
-                        blogdetails=value.toObject(recreate.india.main.startupcarvaan.aboutshare.models.blogdetails.class);
-                        comment_map[0] =blogdetails.getComments();
-                        ArrayList<name_comment> content=new ArrayList<>();
-                        for (Map.Entry<String,String> set: comment_map[0].entrySet()) {
-                            name_comment name = new name_comment(set.getKey(),set.getValue());
-                            content.add(name);
-                        }
+                .get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                blogdetails=documentSnapshot.toObject(recreate.india.main.startupcarvaan.aboutshare.models.blogdetails.class);
+                comment_map[0] =blogdetails.getComments();
+                ArrayList<name_comment> content=new ArrayList<>();
+                for (Map.Entry<String,String> set: comment_map[0].entrySet()) {
+                    name_comment name = new name_comment(set.getKey(),set.getValue());
+                    content.add(name);
+                }
 //                        Toast.makeText(getContext(), "size of comment map"+String.valueOf(comment_map[0].size()), Toast.LENGTH_SHORT).show();
 //                        Toast.makeText(getContext(), "size of content is"+String.valueOf(content.size()), Toast.LENGTH_SHORT).show();
-                        RecyclerView.Adapter commentAdapter=new CommentAdapter(getContext(),content);
-                        commentList.setAdapter(commentAdapter);
-                        commentList.setLayoutManager(new LinearLayoutManager(getContext()));
-                        DividerItemDecoration dividerItemDecoration=new DividerItemDecoration(getContext(),DividerItemDecoration.VERTICAL);
-                        commentList.addItemDecoration(dividerItemDecoration);
+                RecyclerView.Adapter commentAdapter=new CommentAdapter(getContext(),content);
+                commentList.setAdapter(commentAdapter);
+                commentList.setLayoutManager(new LinearLayoutManager(getContext()));
+                DividerItemDecoration dividerItemDecoration=new DividerItemDecoration(getContext(),DividerItemDecoration.VERTICAL);
+                commentList.addItemDecoration(dividerItemDecoration);
                     }
                 });
         builder.setView(view);

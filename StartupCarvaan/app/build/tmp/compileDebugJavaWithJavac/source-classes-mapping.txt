@@ -46,15 +46,12 @@ recreate/india/main/startupcarvaan/aboutshare/modals/sell.java
  recreate.india.main.startupcarvaan.aboutshare.modals.sell$3
  recreate.india.main.startupcarvaan.aboutshare.modals.sell$4
  recreate.india.main.startupcarvaan.aboutshare.modals.sell$5
-recreate/india/main/startupcarvaan/fragments/allshares/allshares.java
- recreate.india.main.startupcarvaan.fragments.allshares.allshares
- recreate.india.main.startupcarvaan.fragments.allshares.allshares$1
- recreate.india.main.startupcarvaan.fragments.allshares.allshares$1$1
- recreate.india.main.startupcarvaan.fragments.allshares.allshares$1$2
- recreate.india.main.startupcarvaan.fragments.allshares.allshares$1$3
- recreate.india.main.startupcarvaan.fragments.allshares.allshares$1$4
- recreate.india.main.startupcarvaan.fragments.allshares.allshares$1$5
- recreate.india.main.startupcarvaan.fragments.allshares.allshares$PostViewHolder
+recreate/india/main/startupcarvaan/Helppage.java
+ recreate.india.main.startupcarvaan.Helppage
+ recreate.india.main.startupcarvaan.Helppage$1
+ recreate.india.main.startupcarvaan.Helppage$2
+ recreate.india.main.startupcarvaan.Helppage$3
+ recreate.india.main.startupcarvaan.Helppage$4
 recreate/india/main/startupcarvaan/loginsignup/PhoneAuthActivity.java
  recreate.india.main.startupcarvaan.loginsignup.PhoneAuthActivity
  recreate.india.main.startupcarvaan.loginsignup.PhoneAuthActivity$1
@@ -88,18 +85,17 @@ recreate/india/main/startupcarvaan/coin_exchange/rci_exchange.java
  recreate.india.main.startupcarvaan.coin_exchange.rci_exchange
  recreate.india.main.startupcarvaan.coin_exchange.rci_exchange$1
  recreate.india.main.startupcarvaan.coin_exchange.rci_exchange$2
-recreate/india/main/startupcarvaan/aboutshare/blogging.java
- recreate.india.main.startupcarvaan.aboutshare.blogging
- recreate.india.main.startupcarvaan.aboutshare.blogging$1
- recreate.india.main.startupcarvaan.aboutshare.blogging$1$1
- recreate.india.main.startupcarvaan.aboutshare.blogging$1$2
- recreate.india.main.startupcarvaan.aboutshare.blogging$1$2$1
- recreate.india.main.startupcarvaan.aboutshare.blogging$1$3
- recreate.india.main.startupcarvaan.aboutshare.blogging$1$4
- recreate.india.main.startupcarvaan.aboutshare.blogging$1$5
- recreate.india.main.startupcarvaan.aboutshare.blogging$2
- recreate.india.main.startupcarvaan.aboutshare.blogging$2$1
- recreate.india.main.startupcarvaan.aboutshare.blogging$PostViewHolder
+recreate/india/main/startupcarvaan/fragments/mycoins/mycoins.java
+ recreate.india.main.startupcarvaan.fragments.mycoins.mycoins
+ recreate.india.main.startupcarvaan.fragments.mycoins.mycoins$1
+ recreate.india.main.startupcarvaan.fragments.mycoins.mycoins$2
+ recreate.india.main.startupcarvaan.fragments.mycoins.mycoins$3
+ recreate.india.main.startupcarvaan.fragments.mycoins.mycoins$4
+ recreate.india.main.startupcarvaan.fragments.mycoins.mycoins$5
+ recreate.india.main.startupcarvaan.fragments.mycoins.mycoins$5$1
+ recreate.india.main.startupcarvaan.fragments.mycoins.mycoins$5$1$1
+ recreate.india.main.startupcarvaan.fragments.mycoins.mycoins$5$1$1$1
+ recreate.india.main.startupcarvaan.fragments.mycoins.mycoins$6
 recreate/india/main/startupcarvaan/user/profile.java
  recreate.india.main.startupcarvaan.user.profile
 recreate/india/main/startupcarvaan/introSlider/SecondFragment.java
@@ -166,9 +162,15 @@ recreate/india/main/startupcarvaan/mainActivities/RecyclerActivity.java
  recreate.india.main.startupcarvaan.mainActivities.RecyclerActivity
 recreate/india/main/startupcarvaan/aboutshare/modals/name_comment.java
  recreate.india.main.startupcarvaan.aboutshare.modals.name_comment
-recreate/india/main/startupcarvaan/aboutshare/comment.java
- recreate.india.main.startupcarvaan.aboutshare.comment
- recreate.india.main.startupcarvaan.aboutshare.comment$1
+recreate/india/main/startupcarvaan/fragments/allshares/allshares.java
+ recreate.india.main.startupcarvaan.fragments.allshares.allshares
+ recreate.india.main.startupcarvaan.fragments.allshares.allshares$1
+ recreate.india.main.startupcarvaan.fragments.allshares.allshares$1$1
+ recreate.india.main.startupcarvaan.fragments.allshares.allshares$1$2
+ recreate.india.main.startupcarvaan.fragments.allshares.allshares$1$3
+ recreate.india.main.startupcarvaan.fragments.allshares.allshares$1$4
+ recreate.india.main.startupcarvaan.fragments.allshares.allshares$1$5
+ recreate.india.main.startupcarvaan.fragments.allshares.allshares$PostViewHolder
 recreate/india/main/startupcarvaan/aboutshare/models/blogdetails.java
  recreate.india.main.startupcarvaan.aboutshare.models.blogdetails
 recreate/india/main/startupcarvaan/introSlider/FirstFragment.java
@@ -194,6 +196,17 @@ recreate/india/main/startupcarvaan/user/user.java
  recreate.india.main.startupcarvaan.user.user
 recreate/india/main/startupcarvaan/BuildConfig.java
  recreate.india.main.startupcarvaan.BuildConfig
+recreate/india/main/startupcarvaan/payments/payout.java
+ recreate.india.main.startupcarvaan.payments.payout
+ recreate.india.main.startupcarvaan.payments.payout$1
+ recreate.india.main.startupcarvaan.payments.payout$2
+ recreate.india.main.startupcarvaan.payments.payout$3
+ recreate.india.main.startupcarvaan.payments.payout$4
+ recreate.india.main.startupcarvaan.payments.payout$4$1
+recreate/india/main/startupcarvaan/fragments/biding/bidingm.java
+ recreate.india.main.startupcarvaan.fragments.biding.bidingm
+recreate/india/main/startupcarvaan/aboutshare/modals/sell_success.java
+ recreate.india.main.startupcarvaan.aboutshare.modals.sell_success
 recreate/india/main/startupcarvaan/fragments/myshares/myshares.java
  recreate.india.main.startupcarvaan.fragments.myshares.myshares
  recreate.india.main.startupcarvaan.fragments.myshares.myshares$1
@@ -203,30 +216,18 @@ recreate/india/main/startupcarvaan/fragments/myshares/myshares.java
  recreate.india.main.startupcarvaan.fragments.myshares.myshares$1$3
  recreate.india.main.startupcarvaan.fragments.myshares.myshares$1$4
  recreate.india.main.startupcarvaan.fragments.myshares.myshares$viewholder
-recreate/india/main/startupcarvaan/fragments/biding/bidingm.java
- recreate.india.main.startupcarvaan.fragments.biding.bidingm
-recreate/india/main/startupcarvaan/aboutshare/modals/sell_success.java
- recreate.india.main.startupcarvaan.aboutshare.modals.sell_success
-recreate/india/main/startupcarvaan/Helppage.java
- recreate.india.main.startupcarvaan.Helppage
- recreate.india.main.startupcarvaan.Helppage$1
- recreate.india.main.startupcarvaan.Helppage$2
- recreate.india.main.startupcarvaan.Helppage$3
- recreate.india.main.startupcarvaan.Helppage$4
-recreate/india/main/startupcarvaan/fragments/mycoins/mycoins.java
- recreate.india.main.startupcarvaan.fragments.mycoins.mycoins
- recreate.india.main.startupcarvaan.fragments.mycoins.mycoins$1
- recreate.india.main.startupcarvaan.fragments.mycoins.mycoins$2
- recreate.india.main.startupcarvaan.fragments.mycoins.mycoins$3
- recreate.india.main.startupcarvaan.fragments.mycoins.mycoins$4
- recreate.india.main.startupcarvaan.fragments.mycoins.mycoins$5
- recreate.india.main.startupcarvaan.fragments.mycoins.mycoins$5$1
- recreate.india.main.startupcarvaan.fragments.mycoins.mycoins$5$1$1
- recreate.india.main.startupcarvaan.fragments.mycoins.mycoins$5$1$1$1
- recreate.india.main.startupcarvaan.fragments.mycoins.mycoins$6
-recreate/india/main/startupcarvaan/payments/payout.java
- recreate.india.main.startupcarvaan.payments.payout
- recreate.india.main.startupcarvaan.payments.payout$1
- recreate.india.main.startupcarvaan.payments.payout$2
- recreate.india.main.startupcarvaan.payments.payout$3
- recreate.india.main.startupcarvaan.payments.payout$4
+recreate/india/main/startupcarvaan/aboutshare/comment.java
+ recreate.india.main.startupcarvaan.aboutshare.comment
+ recreate.india.main.startupcarvaan.aboutshare.comment$1
+recreate/india/main/startupcarvaan/aboutshare/blogging.java
+ recreate.india.main.startupcarvaan.aboutshare.blogging
+ recreate.india.main.startupcarvaan.aboutshare.blogging$1
+ recreate.india.main.startupcarvaan.aboutshare.blogging$1$1
+ recreate.india.main.startupcarvaan.aboutshare.blogging$1$2
+ recreate.india.main.startupcarvaan.aboutshare.blogging$1$2$1
+ recreate.india.main.startupcarvaan.aboutshare.blogging$1$3
+ recreate.india.main.startupcarvaan.aboutshare.blogging$1$4
+ recreate.india.main.startupcarvaan.aboutshare.blogging$1$5
+ recreate.india.main.startupcarvaan.aboutshare.blogging$2
+ recreate.india.main.startupcarvaan.aboutshare.blogging$2$1
+ recreate.india.main.startupcarvaan.aboutshare.blogging$PostViewHolder
