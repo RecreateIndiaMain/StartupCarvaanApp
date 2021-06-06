@@ -262,60 +262,64 @@
 
 
 
-            <LinearLayout
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="25dp"
-               android:layout_marginTop="25dp"
+                android:layout_marginTop="25dp"
                 android:id="@+id/linear13"
                 android:layout_marginRight="20dp"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
                 <WebView
+                    android:isScrollContainer="false"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="match_parent"
                     android:id="@+id/termsandcondition"
                     tools:ignore="WebViewLayout" />
 
 
 
-            </LinearLayout>
-            <LinearLayout
+            </ScrollView>
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="25dp"
                 android:layout_marginTop="25dp"
                 android:id="@+id/linear14"
                 android:layout_marginRight="20dp"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
                 <WebView
+                    android:isScrollContainer="false"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="match_parent"
                     android:id="@+id/refud_policy"
                     tools:ignore="WebViewLayout" />
 
 
 
-            </LinearLayout>
-            <LinearLayout
+            </ScrollView>
+            <ScrollView
+                android:layout_marginBottom="80dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="25dp"
                 android:layout_marginTop="25dp"
                 android:id="@+id/linear12"
                 android:layout_marginRight="20dp"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
                 <WebView
+                    android:isScrollContainer="false"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="match_parent"
                     android:id="@+id/privacypolicy"
                     tools:ignore="WebViewLayout" />
 
 
 
-            </LinearLayout>
+            </ScrollView>
 
 
 

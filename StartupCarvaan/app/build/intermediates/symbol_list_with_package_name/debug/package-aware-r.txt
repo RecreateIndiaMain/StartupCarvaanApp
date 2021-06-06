@@ -1995,8 +1995,6 @@ id Pulse
 id PulseRing
 id RedeemNow
 id Redeemtext
-id Refundpolicy
-id Refundpolicytext
 id RotatingCircle
 id RotatingPlane
 id SHIFT
@@ -2332,6 +2330,7 @@ id list_item
 id live_video_indicator
 id ll_loader
 id login
+id logintext
 id loglayout
 id logout
 id main_bottom_nav
@@ -2391,6 +2390,7 @@ id navigation_header_container
 id navigation_home
 id navigation_notifications
 id never
+id newly
 id nextBtn
 id nextslot
 id noScroll
@@ -2441,7 +2441,6 @@ id price
 id price_of_RCI
 id price_of_shares
 id privacypolicy
-id privacypolicytext
 id productimage
 id profile
 id progress
@@ -2469,6 +2468,7 @@ id rectangle
 id rectangles
 id recycler_view
 id redeemImage
+id refud_policy
 id relativeLayout
 id reverseSawtooth
 id review
@@ -2563,9 +2563,7 @@ id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id tags
-id termsbutton
-id termsconditions
-id termsconditionstext
+id termsandcondition
 id test_checkbox_android_button_tint
 id test_checkbox_app_button_tint
 id test_radiobutton_android_button_tint
