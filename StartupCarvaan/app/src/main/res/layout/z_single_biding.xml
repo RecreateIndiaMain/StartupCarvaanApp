@@ -57,7 +57,7 @@ android:layout_marginBottom="4dp"
                 android:lines="1"
                 android:layout_marginLeft="18dp"
                 android:textStyle="bold"
-                android:text="watch 200dghk "
+                android:text="watch 200dg "
                 android:textColor="@color/black"
                 android:textSize="15.5sp"
                 tools:autoSizeTextType="uniform"></TextView>
@@ -120,7 +120,8 @@ android:layout_marginLeft="10dp"
                         android:inputType="number"
                         android:gravity="center"
                         android:hint="Enter your bid"
-                        android:textColor="#000000" />
+                        android:textColor="#000000"
+                        android:maxLength="8"/>
                 </LinearLayout>
                 <LinearLayout
 

@@ -27,12 +27,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="38dp"
                 android:ems="10"
-                android:textColorHint="@color/black"
+
                 android:background="@drawable/inputtype"
                 android:inputType="number"
                 android:textSize="16sp"
                 android:gravity="center"
-                android:hint="Enter No.of coins"
+                android:hint="min 500 coins maxi 10000 coins"
                 />
         </LinearLayout>
         <LinearLayout
@@ -86,7 +86,6 @@
                     android:background="@drawable/inputtype"
                     android:inputType="textPersonName"
                     android:gravity="center"
-                    android:textColorHint="#000000"
                     android:layout_marginTop="20dp"
                     android:hint="Enter your Full Name"
                     />
@@ -101,7 +100,6 @@
                     android:background="@drawable/inputtype"
                     android:inputType="textPersonName"
                     android:gravity="center"
-                    android:textColorHint="#000000"
                     android:layout_marginTop="25dp"
                     android:hint="Enter your phone number"
                     />
@@ -117,7 +115,6 @@
                     android:background="@drawable/inputtype"
                     android:inputType="textPersonName"
                     android:gravity="center"
-                    android:textColorHint="#000000"
                     android:layout_marginTop="25dp"
                     android:hint="Enter upi id"
                     />

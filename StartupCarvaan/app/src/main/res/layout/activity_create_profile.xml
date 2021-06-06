@@ -94,7 +94,8 @@
                         android:hint="Display Name"
                         android:textColor="#424242"
                         android:textSize="21sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:maxLength="25"/>
 
                     <EditText
                         android:id="@+id/title"
@@ -102,7 +103,8 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/proximanovaregular"
                         android:hint="Title / Designation/"
-                        android:textSize="14sp" />
+                        android:textSize="14sp"
+                        android:maxLength="15"/>
 
 
                 </LinearLayout>
@@ -161,7 +163,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:hint="enter anything about you that shows your personality" />
+                            android:hint="enter anything about you that shows your personality"
+                            android:maxLength="50"/>
                     </LinearLayout>
 
                 </LinearLayout>
@@ -226,6 +229,8 @@
                                 android:hint="enter your contact number"
                                 android:textSize="15sp"
                                 android:textColor="@color/goodgrey"
+                                android:inputType="numberDecimal"
+                                android:maxLength="10"
                                 android:fontFamily="@font/proximanovaregular" />
                         </LinearLayout>
 
@@ -251,7 +256,9 @@
                                 android:textColor="@color/goodgrey"
                                 android:hint="enter professing email id"
                                 android:textSize="15sp"
-                                android:fontFamily="@font/proximanovaregular" />
+                                android:inputType="textEmailAddress"
+                                android:fontFamily="@font/proximanovaregular"
+                                android:maxLength="25"/>
                         </LinearLayout>
 
                         <LinearLayout
@@ -276,7 +283,9 @@
                                 android:hint="your address here"
                                 android:textSize="15sp"
                                 android:textColor="@color/goodgrey"
-                                android:fontFamily="@font/proximanovaregular" />
+                                android:inputType="textPostalAddress"
+                                android:fontFamily="@font/proximanovaregular"
+                                android:maxLength="30"/>
                         </LinearLayout>
 
                     </LinearLayout>
