@@ -3,6 +3,7 @@ package recreate.india.main.startupcarvaan;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -24,6 +25,7 @@ import java.util.Map;
 
 import recreate.india.main.startupcarvaan.fragments.allshares.allshare;
 import recreate.india.main.startupcarvaan.mainActivities.IntroSliderActivity;
+import recreate.india.main.startupcarvaan.mainActivities.MainActivity;
 
 public class Helppage extends AppCompatActivity {
 
@@ -183,5 +185,13 @@ public class Helppage extends AppCompatActivity {
 //                    }
 //                });
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent=new Intent(Helppage.this, MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

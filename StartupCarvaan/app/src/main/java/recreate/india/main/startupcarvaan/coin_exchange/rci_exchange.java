@@ -71,8 +71,7 @@ public class rci_exchange extends AppCompatActivity {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
                 if (value != null) {
-                    handler.postDelayed(runnable,2000);
-                    Toast.makeText(rci_exchange.this, "Please tap on the graph is not visible", Toast.LENGTH_SHORT).show();
+                    handler.postDelayed(runnable,1000);
                     rciValue = value.toObject(RciValue.class);
                     price_rci.setText(String.valueOf(rciValue.getCurrentvalue()));
                     desc_rci.setText(String.valueOf(rciValue.getDescription()));

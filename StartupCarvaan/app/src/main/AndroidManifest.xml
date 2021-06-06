@@ -17,12 +17,10 @@
         android:roundIcon="@drawable/startupcarvaanlogo"
         android:supportsRtl="true"
         android:theme="@style/Theme.StartupCarvaan">
-        <activity android:name=".coin_exchange.rci_exchange"
-            android:parentActivityName=".mainActivities.MainActivity">
+        <activity android:name=".coin_exchange.rci_exchange">
 
         </activity>
-        <activity android:name=".Levels"
-            android:parentActivityName=".mainActivities.MainActivity"/>
+        <activity android:name=".Levels"/>
         <activity android:name=".mainActivities.RecyclerActivity" />
         <activity android:name=".payments.payout" />
         <activity android:name=".payments.payin" />
@@ -32,18 +30,18 @@
         <activity android:name=".user.CreateProfile"
             android:theme="@style/MyTheme"/>
         <activity
-            android:name=".loginsignup.PhoneAuthActivity"
-            android:parentActivityName=".loginsignup.loginActivity" />
+            android:name=".loginsignup.PhoneAuthActivity" />
         <activity android:name=".user.ProfileActivity"
             android:parentActivityName=".mainActivities.MainActivity"
-            android:theme="@style/MyTheme"/>
+            android:theme="@style/MyTheme">
+
+        </activity>
         <activity
             android:name=".aboutshare.blogging"
             android:parentActivityName=".mainActivities.MainActivity" />
         <activity android:name=".mainActivities.MainActivity"
             android:parentActivityName=".mainActivities.MainActivity"/>
-        <activity android:name=".mainActivities.PrivacyPolicy"
-            android:parentActivityName=".mainActivities.MainActivity" />
+        <activity android:name=".mainActivities.PrivacyPolicy" />
         <activity
             android:name=".loginsignup.loginActivity"
             android:theme="@style/Theme.StartupCarvaan.Fullscreen" />

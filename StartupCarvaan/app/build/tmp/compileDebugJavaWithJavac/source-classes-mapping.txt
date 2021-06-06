@@ -70,10 +70,11 @@ recreate/india/main/startupcarvaan/mainActivities/IntroSliderActivity.java
  recreate.india.main.startupcarvaan.mainActivities.IntroSliderActivity$1
  recreate.india.main.startupcarvaan.mainActivities.IntroSliderActivity$2
  recreate.india.main.startupcarvaan.mainActivities.IntroSliderActivity$3
-recreate/india/main/startupcarvaan/mainActivities/MyRecyclerViewAdapter.java
- recreate.india.main.startupcarvaan.mainActivities.MyRecyclerViewAdapter
- recreate.india.main.startupcarvaan.mainActivities.MyRecyclerViewAdapter$ItemClickListener
- recreate.india.main.startupcarvaan.mainActivities.MyRecyclerViewAdapter$ViewHolder
+recreate/india/main/startupcarvaan/aboutshare/CommentAdapter.java
+ recreate.india.main.startupcarvaan.aboutshare.CommentAdapter
+ recreate.india.main.startupcarvaan.aboutshare.CommentAdapter$1
+ recreate.india.main.startupcarvaan.aboutshare.CommentAdapter$1$1
+ recreate.india.main.startupcarvaan.aboutshare.CommentAdapter$MyViewHolder
 recreate/india/main/startupcarvaan/fragments/allshares/allshare.java
  recreate.india.main.startupcarvaan.fragments.allshares.allshare
 recreate/india/main/startupcarvaan/payments/payin.java
@@ -162,15 +163,9 @@ recreate/india/main/startupcarvaan/mainActivities/RecyclerActivity.java
  recreate.india.main.startupcarvaan.mainActivities.RecyclerActivity
 recreate/india/main/startupcarvaan/aboutshare/modals/name_comment.java
  recreate.india.main.startupcarvaan.aboutshare.modals.name_comment
-recreate/india/main/startupcarvaan/fragments/myshares/myshares.java
- recreate.india.main.startupcarvaan.fragments.myshares.myshares
- recreate.india.main.startupcarvaan.fragments.myshares.myshares$1
- recreate.india.main.startupcarvaan.fragments.myshares.myshares$1$1
- recreate.india.main.startupcarvaan.fragments.myshares.myshares$1$2
- recreate.india.main.startupcarvaan.fragments.myshares.myshares$1$2$1
- recreate.india.main.startupcarvaan.fragments.myshares.myshares$1$3
- recreate.india.main.startupcarvaan.fragments.myshares.myshares$1$4
- recreate.india.main.startupcarvaan.fragments.myshares.myshares$viewholder
+recreate/india/main/startupcarvaan/aboutshare/comment.java
+ recreate.india.main.startupcarvaan.aboutshare.comment
+ recreate.india.main.startupcarvaan.aboutshare.comment$1
 recreate/india/main/startupcarvaan/aboutshare/models/blogdetails.java
  recreate.india.main.startupcarvaan.aboutshare.models.blogdetails
 recreate/india/main/startupcarvaan/introSlider/FirstFragment.java
@@ -217,11 +212,16 @@ recreate/india/main/startupcarvaan/Helppage.java
  recreate.india.main.startupcarvaan.Helppage$2
  recreate.india.main.startupcarvaan.Helppage$3
  recreate.india.main.startupcarvaan.Helppage$4
-recreate/india/main/startupcarvaan/aboutshare/comment.java
- recreate.india.main.startupcarvaan.aboutshare.comment
- recreate.india.main.startupcarvaan.aboutshare.comment$1
-recreate/india/main/startupcarvaan/aboutshare/CommentAdapter.java
- recreate.india.main.startupcarvaan.aboutshare.CommentAdapter
- recreate.india.main.startupcarvaan.aboutshare.CommentAdapter$1
- recreate.india.main.startupcarvaan.aboutshare.CommentAdapter$1$1
- recreate.india.main.startupcarvaan.aboutshare.CommentAdapter$MyViewHolder
+recreate/india/main/startupcarvaan/mainActivities/MyRecyclerViewAdapter.java
+ recreate.india.main.startupcarvaan.mainActivities.MyRecyclerViewAdapter
+ recreate.india.main.startupcarvaan.mainActivities.MyRecyclerViewAdapter$ItemClickListener
+ recreate.india.main.startupcarvaan.mainActivities.MyRecyclerViewAdapter$ViewHolder
+recreate/india/main/startupcarvaan/fragments/myshares/myshares.java
+ recreate.india.main.startupcarvaan.fragments.myshares.myshares
+ recreate.india.main.startupcarvaan.fragments.myshares.myshares$1
+ recreate.india.main.startupcarvaan.fragments.myshares.myshares$1$1
+ recreate.india.main.startupcarvaan.fragments.myshares.myshares$1$2
+ recreate.india.main.startupcarvaan.fragments.myshares.myshares$1$2$1
+ recreate.india.main.startupcarvaan.fragments.myshares.myshares$1$3
+ recreate.india.main.startupcarvaan.fragments.myshares.myshares$1$4
+ recreate.india.main.startupcarvaan.fragments.myshares.myshares$viewholder
