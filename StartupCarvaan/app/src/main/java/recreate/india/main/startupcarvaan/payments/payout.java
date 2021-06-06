@@ -63,13 +63,13 @@ public class payout extends AppCompatActivity {
         transact_coins.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
+                convertedmoney.setText("0");
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if(s.length()>0){
-                    convertedmoney.setText(String.valueOf(Integer.valueOf(transact_coins.getText().toString())*rciValue.getCurrentvalue()));
+                    convertedmoney.setText(String.valueOf(Integer.parseInt(transact_coins.getText().toString())*rciValue.getCurrentvalue()));
                 }
             }
 
