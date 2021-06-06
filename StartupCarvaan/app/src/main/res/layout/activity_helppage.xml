@@ -37,7 +37,7 @@
                 android:layout_marginTop="14dp"
                 android:gravity="center"
                 android:text="FAQ"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="28dp"
                 android:textColor="@color/blue"
                 android:textSize="25sp"
                 android:textStyle="bold" />
@@ -52,7 +52,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="25dp"
                     android:id="@+id/linear11"
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="20dp"
@@ -69,7 +69,8 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="right|center_vertical">
+                        android:gravity="right|center_vertical"
+                      >
 
                         <ImageView
                             android:layout_width="30dp"
@@ -91,9 +92,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="28dp"
                     android:layout_marginTop="2dp"
-                    android:layout_marginRight="20dp"
+                    android:layout_marginRight="28dp"
                     android:layout_marginBottom="6dp"
                     android:text="• There is a create or edit profile page where you can complete your profile or by uploading resumes. These are directly seen by our listing startups if any startup needs any intern or anything that matches your profile they can contact you."
                     android:textColor="@color/black"
@@ -176,7 +177,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="25dp"
                     android:layout_marginTop="8dp"
                     android:id="@+id/linear12"
                     android:layout_marginRight="20dp"
@@ -216,9 +217,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
+                        android:layout_marginLeft="28dp"
                         android:layout_marginTop="5dp"
-                        android:layout_marginRight="20dp"
+                        android:layout_marginRight="28dp"
 
                         android:text="• Go to the coin page and click on the buy rci button.
 "
@@ -270,9 +271,9 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="25dp"
                     android:layout_marginTop="8dp"
-                    android:layout_marginRight="20dp"
+                    android:layout_marginRight="20"
                     android:id="@+id/linear13"
                     android:orientation="horizontal">
 
@@ -310,9 +311,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
+                        android:layout_marginLeft="28dp"
                         android:layout_marginTop="5dp"
-                        android:layout_marginRight="20dp"
+                        android:layout_marginRight="28dp"
 
                         android:text="• As you are already aware of the rules of a startup share, one thing to remember is the following shares are not the actual shares of a startup, these are made to reflect the startup.
 "
@@ -365,7 +366,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="25dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="20dp"
                     android:id="@+id/linear14"
@@ -404,9 +405,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
+                        android:layout_marginLeft="28dp"
                         android:layout_marginTop="5dp"
-                        android:layout_marginRight="20dp"
+                        android:layout_marginRight="28dp"
 
                         android:text="• For buying the shares with rci of your favorite startup .Go to the invest in me button shown in the all shares section of that particular startup then a blog page appears where you can like and comment on the post posted by that startup and there is a section  of sell click on that then enter the amount of the share you want to buy and then click on buy button.
 "
