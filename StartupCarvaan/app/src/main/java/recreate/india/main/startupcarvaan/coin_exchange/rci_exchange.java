@@ -6,11 +6,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.data.Entry;
@@ -30,16 +33,30 @@ import java.util.Map;
 
 import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.fragments.models.RciValue;
+import recreate.india.main.startupcarvaan.fragments.progressdialogue.CustomProgressDialogue;
+import recreate.india.main.startupcarvaan.mainActivities.MainActivity;
 
 public class rci_exchange extends AppCompatActivity {
     private LineChart lineChart;
-    private TextView desc_rci,price_rci;
-    private RciValue rciValue=new RciValue();
-    FirebaseFirestore ff=FirebaseFirestore.getInstance();
+    private TextView desc_rci, price_rci;
+    Toolbar toolbar;
+    private RciValue rciValue = new RciValue();
+    FirebaseFirestore ff = FirebaseFirestore.getInstance();
+    CustomProgressDialogue cpd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rci_exchange);
+        cpd=new CustomProgressDialogue(this);
+        cpd.show();
+        Runnable runnable=new Runnable() {
+            @Override
+            public void run() {
+                cpd.dismiss();
+            }
+        };
+        Handler handler=new Handler();
+
         lineChart=findViewById(R.id.lineChart_rci);
         lineChart.setTouchEnabled(true);
         lineChart.setPinchZoom(true);
@@ -54,6 +71,8 @@ public class rci_exchange extends AppCompatActivity {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
                 if (value != null) {
+                    handler.postDelayed(runnable,2000);
+                    Toast.makeText(rci_exchange.this, "Please tap on the graph is not visible", Toast.LENGTH_SHORT).show();
                     rciValue = value.toObject(RciValue.class);
                     price_rci.setText(String.valueOf(rciValue.getCurrentvalue()));
                     desc_rci.setText(String.valueOf(rciValue.getDescription()));
@@ -87,7 +106,9 @@ public class rci_exchange extends AppCompatActivity {
                         dataSets.add(set1);
                         LineData data = new LineData(dataSets);
                         lineChart.setData(data);
+                        lineChart.invalidate();
                     }
+
                     if(lineChart.getData()==null && lineChart.getData().getDataSetCount()==0)
                         showGraph(values);
                 }
@@ -121,6 +142,14 @@ public class rci_exchange extends AppCompatActivity {
             dataSets.add(set1);
             LineData data = new LineData(dataSets);
             lineChart.setData(data);
+            lineChart.invalidate();
         }
     }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(rci_exchange.this,MainActivity.class));
+        finish();
+    }
+
 }

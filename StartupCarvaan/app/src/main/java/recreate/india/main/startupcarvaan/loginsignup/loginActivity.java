@@ -162,13 +162,12 @@ private CheckBox privacy;
                         FirebaseFirestore.getInstance().collection("users").document(user.getUid()).set(profile.giveNewUser());
                         Map<String,Double> coins=new HashMap<>();
                         coins.put("bonus", Double.valueOf(1000));
-                        coins.put("rci", Double.valueOf(0));
+                        coins.put("rci", Double.valueOf(100));
                         coins.put("winnings", Double.valueOf(0));
                         FirebaseFirestore.getInstance().collection("users").document(user.getUid())
                                 .collection("others").document("coins").set(coins);
                         startActivity(new Intent(loginActivity.this, CreateProfile.class));
                         finish();
-
                     }
                     else{
                         startActivity(new Intent(loginActivity.this,MainActivity.class));

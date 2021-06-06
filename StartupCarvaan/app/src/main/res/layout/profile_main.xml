@@ -56,7 +56,7 @@
                 android:id="@+id/updateprofile"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:background="@drawable/profilelogo">
+                android:background="@drawable/ic_baseline_edit_24">
             </ImageView>
         </RelativeLayout>
 
@@ -96,7 +96,7 @@
                         android:layout_width="200dp"
                         android:layout_height="200dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/pp" />
+                        android:src="@drawable/userimage" />
 
                 </androidx.cardview.widget.CardView>
 
