@@ -1,20 +1,39 @@
 package recreate.india.main.startupcarvaan.aboutshare;
 
 import android.content.Context;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 import java.util.zip.Inflater;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.aboutshare.modals.name_comment;
+import recreate.india.main.startupcarvaan.user.ProfileActivity;
+import recreate.india.main.startupcarvaan.user.profile;
 
 public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.MyViewHolder> {
 
@@ -36,9 +55,30 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.MyViewHo
 
     @Override
     public void onBindViewHolder(@NonNull CommentAdapter.MyViewHolder holder, int position) {
-        holder.comment.setText(display(commentArrayList.get(position).getName()));
-        holder.username.setText(commentArrayList.get(position).getComment());
-
+        String id = commentArrayList.get(position).getName().split("java")[0];
+        final profile[] profile = {new profile()};
+        FirebaseFirestore.getInstance().collection("users")
+                .document(id).addSnapshotListener(new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable @org.jetbrains.annotations.Nullable DocumentSnapshot value, @Nullable @org.jetbrains.annotations.Nullable FirebaseFirestoreException error) {
+                profile[0] = value.toObject(profile.class);
+                holder.comment.setText(display(commentArrayList.get(position).getComment()));
+                holder.username.setText(profile[0].getName());
+                StorageReference imageurl= FirebaseStorage.getInstance().getReference().child(profile[0].getImageurl());
+                imageurl.getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Uri> task) {
+                        if(task.getResult()!=null)
+                            Glide.with(context)
+                                    .load(task.getResult())
+                                    .into(holder.imageView);
+                        else{
+                            Toast.makeText(context, "file does not exists", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+            }
+        });
     }
 
     @Override
@@ -49,12 +89,14 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.MyViewHo
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
         public TextView username,comment;
+        private CircleImageView imageView;
 
         public MyViewHolder(View itemview){
 
             super(itemview);
             comment=(TextView)itemview.findViewById(R.id.comment);
             username=(TextView)itemview.findViewById(R.id.displayname1);
+            imageView=itemview.findViewById(R.id.image);
 
 
         }
