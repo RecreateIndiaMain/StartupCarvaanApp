@@ -12,12 +12,9 @@ import java.util.PrimitiveIterator;
 
 public class sharedetails {
     private Integer availableforbuying,availableforselling,buyingprice;
-    private String buyingtips;
-    private Boolean increased;
-    private Map<String,String> price;
+    private String reason;
     private Integer sellingprice;
-    private String sellingtips;
-    private Integer totalinvested,totalsharesatusers,totalsharesonmarket;
+    private Integer totalsharesatusers;
 
     public Integer getAvailableforbuying() {
         return availableforbuying;
@@ -43,28 +40,12 @@ public class sharedetails {
         this.buyingprice = buyingprice;
     }
 
-    public String getBuyingtips() {
-        return buyingtips;
+    public String getReason() {
+        return reason;
     }
 
-    public void setBuyingtips(String buyingtips) {
-        this.buyingtips = buyingtips;
-    }
-
-    public Boolean getIncreased() {
-        return increased;
-    }
-
-    public void setIncreased(Boolean increased) {
-        this.increased = increased;
-    }
-
-    public Map<String, String> getPrice() {
-        return price;
-    }
-
-    public void setPrice(Map<String, String> price) {
-        this.price = price;
+    public void setReason(String reason) {
+        this.reason = reason;
     }
 
     public Integer getSellingprice() {
@@ -75,22 +56,6 @@ public class sharedetails {
         this.sellingprice = sellingprice;
     }
 
-    public String getSellingtips() {
-        return sellingtips;
-    }
-
-    public void setSellingtips(String sellingtips) {
-        this.sellingtips = sellingtips;
-    }
-
-    public Integer getTotalinvested() {
-        return totalinvested;
-    }
-
-    public void setTotalinvested(Integer totalinvested) {
-        this.totalinvested = totalinvested;
-    }
-
     public Integer getTotalsharesatusers() {
         return totalsharesatusers;
     }
@@ -99,26 +64,13 @@ public class sharedetails {
         this.totalsharesatusers = totalsharesatusers;
     }
 
-    public Integer getTotalsharesonmarket() {
-        return totalsharesonmarket;
-    }
-
-    public void setTotalsharesonmarket(Integer totalsharesonmarket) {
-        this.totalsharesonmarket = totalsharesonmarket;
-    }
-
-    public sharedetails(Integer availableforbuying, Integer availableforselling, Integer buyingprice, String buyingtips, Boolean increased, Map<String, String> price, Integer sellingprice, String sellingtips, Integer totalinvested, Integer totalsharesatusers, Integer totalsharesonmarket) {
+    public sharedetails(Integer availableforbuying, Integer availableforselling, Integer buyingprice, String reason, Integer sellingprice, Integer totalsharesatusers) {
         this.availableforbuying = availableforbuying;
         this.availableforselling = availableforselling;
         this.buyingprice = buyingprice;
-        this.buyingtips = buyingtips;
-        this.increased = increased;
-        this.price = price;
+        this.reason = reason;
         this.sellingprice = sellingprice;
-        this.sellingtips = sellingtips;
-        this.totalinvested = totalinvested;
         this.totalsharesatusers = totalsharesatusers;
-        this.totalsharesonmarket = totalsharesonmarket;
     }
 
     public sharedetails() {

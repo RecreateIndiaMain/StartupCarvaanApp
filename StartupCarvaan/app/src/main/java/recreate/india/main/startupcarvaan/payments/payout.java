@@ -3,8 +3,9 @@ package recreate.india.main.startupcarvaan.payments;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,13 +13,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
-
-import java.security.spec.ECField;
 
 import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.fragments.models.RciValue;
@@ -30,8 +28,11 @@ public class payout extends AppCompatActivity {
     private EditText transact_coins,userName,userphone,userupi;
     private TextView convertedmoney;
     private Button btnWithdraw;
-    private Integer user_current_rci,rci_current_price,to_get;
+    private Integer user_current_rci;
+    private Integer rci_current_price;
+    private double to_get;
     private RciValue rciValue = new RciValue();
+    private coin coin=new coin();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,10 +48,7 @@ public class payout extends AppCompatActivity {
                 .addSnapshotListener(new EventListener<DocumentSnapshot>() {
                     @Override
                     public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                        coin coin=new coin();
                         coin=value.toObject(coin.class);
-//                        rci.setText(String.valueOf(coin.getRci()));
-                        user_current_rci=coin.getRci();
                     }
                 });
         FirebaseFirestore.getInstance().collection("AboutRci").document("details").addSnapshotListener(new EventListener<DocumentSnapshot>() {
@@ -59,19 +57,31 @@ public class payout extends AppCompatActivity {
                 if(value!=null)
                 {
                     rciValue=value.toObject(RciValue.class);
-                    rci_current_price=Integer.parseInt(String.valueOf(rciValue.getCurrentvalue()));
-
                 }
             }
         });
-        String coins = String.valueOf(transact_coins.getText());   // Might be possible text contains decimal to Integer.parse will give error thus app can crash
-        if(!coins.contains(".")) {
-            to_get=Integer.parseInt(coins);
-            convertedmoney.setText(String.valueOf(rci_current_price * to_get));
-        }
+        transact_coins.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if(s.length()>0){
+                    convertedmoney.setText(String.valueOf(Integer.valueOf(transact_coins.getText().toString())*rciValue.getCurrentvalue()));
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
         btnWithdraw.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                    String coins=String.valueOf(transact_coins.getText());
                     String name=String.valueOf(userName.getText());
                     String phoneNumber=String.valueOf(userphone.getText());
                     String upi=String.valueOf(userupi.getText());
@@ -89,11 +99,11 @@ public class payout extends AppCompatActivity {
                         if(int_coins<500 || int_coins >10000)
                             showError(transact_coins,"Please input in range of 500 to 10000");
                         else{
-                            if(int_coins>user_current_rci){
+                            if(int_coins>coin.getRci()){
                                 Toast.makeText(payout.this, "You dont have enough coins", Toast.LENGTH_SHORT).show();
                             }
                             else{
-                                to_get=rci_current_price*int_coins;
+                                to_get=rciValue.getCurrentvalue()*int_coins;
                                 convertedmoney.setText(String.valueOf(to_get));
 
                             }

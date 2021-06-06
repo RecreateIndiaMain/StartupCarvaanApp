@@ -290,32 +290,6 @@
 
                     </LinearLayout>
                 </LinearLayout>
-                <LinearLayout
-                    android:padding="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="20dp"
-                    android:background="@drawable/circularbordersolid"
-                    android:orientation="vertical">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="upload cv / resume "
-                        android:fontFamily="@font/proximanovaregular"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-                    <Button
-                        android:layout_marginTop="10dp"
-                        android:id="@+id/document"
-                        android:layout_gravity="center"
-                        android:textSize="15dp"
-                        android:text="upload"
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content">
-                    </Button>
-
-                </LinearLayout>
                 <Button
                     android:id="@+id/submit"
                     android:layout_marginBottom="20dp"

@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -35,34 +36,38 @@ public class Helppage extends AppCompatActivity {
     private ImageView im1,im2,im3,im4,im5;
     private LinearLayout before,after;
     private int count=0,count2=0,count3=0,count4=0;
+    private WebView webView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_helppage);
-
+//        webView=findViewById(R.id.webview);
+//        webView.getSettings().setJavaScriptEnabled(true);
+//        webView.loadUrl("https://www.termsandconditionsgenerator.com/live.php?token=0WwI2zNxvD2pJTzuKS5Jqu4k9xKVzVoH");
+//        setContentView(webView);
         before=findViewById(R.id.beforefaq);
         after=findViewById(R.id.afterfaq);
         l1=findViewById(R.id.linear1);
         l2=findViewById(R.id.linear2);
         l3=findViewById(R.id.linear3);
         l4=findViewById(R.id.linear4);
-        l5=findViewById(R.id.linear5);
+
         l11=findViewById(R.id.linear11);
         l12=findViewById(R.id.linear12);
         l13=findViewById(R.id.linear13);
         l14=findViewById(R.id.linear14);
-        l15=findViewById(R.id.linear15);
+
         text1=findViewById(R.id.text1);
         text2=findViewById(R.id.text2);
         text3=findViewById(R.id.text3);
         text4=findViewById(R.id.text4);
-        text5=findViewById(R.id.text5);
+
         im1=findViewById(R.id.im1);
         im2=findViewById(R.id.im2);
         im3=findViewById(R.id.im3);
         im4=findViewById(R.id.im4);
-        im5=findViewById(R.id.im5);
+
         l11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

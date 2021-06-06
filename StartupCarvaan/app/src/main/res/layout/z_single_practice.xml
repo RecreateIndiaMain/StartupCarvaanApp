@@ -34,89 +34,94 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="205dp"
+                android:layout_marginTop="-10dp"
+                android:layout_below="@+id/videoplayer"
                 android:background="@drawable/circularbordersolid"
-
                 android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
 
-                    android:gravity="center_vertical"
                     android:layout_marginTop="15dp"
+                    android:gravity="center_vertical"
 
                     android:orientation="horizontal">
+
                     <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/companylogo"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:id="@+id/companylogo"
                         android:layout_marginLeft="40dp"
-                        android:src="@drawable/logonew"/>
+                        android:src="@drawable/logonew" />
+
                     <TextView
 
-                        android:layout_height="wrap_content"
+                        android:id="@+id/companyname"
                         android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:text="The comoany gidge"
-                        android:textSize="18sp"
-                        android:id="@+id/companyname"
-                        android:textStyle="bold"
                         android:textColor="#293859"
-                        />
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
+
                 <TextView
                     android:id="@+id/description"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-
                     android:layout_marginLeft="25dp"
+
                     android:layout_marginRight="25dp"
+                    android:gravity="center"
                     android:text="gduijb ff3eud fduf2uduegdi3ge gfdu3efue3duevudv du3efud"
-                    android:textSize="16sp"
                     android:textColor="@color/black"
-                    />
+                    android:textSize="16sp" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center"
                     android:layout_marginTop="10dp"
-                    android:layout_marginRight="30dp">
+                    android:layout_marginRight="30dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Current Votes: "
-                        android:textSize="17sp"
                         android:textColor="@color/greyish"
-                        android:textStyle="bold"/>
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/currentvotes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:hint="100"
-                        android:textColorHint="@color/greyish"
                         android:textColor="@color/black"
+                        android:textColorHint="@color/greyish"
                         android:textSize="17sp"
                         android:textStyle="bold" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center"
                     android:layout_marginTop="5dp"
-                    android:layout_marginRight="30dp">
+                    android:layout_marginRight="30dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Your bet: "
-                        android:textSize="17sp"
-
                         android:textColor="@color/greyish"
-                        android:textStyle="bold"/>
+
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/currentbet"
@@ -128,85 +133,93 @@
                         android:textSize="17sp"
                         android:textStyle="bold" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center"
                     android:layout_marginTop="5dp"
-                    android:layout_marginRight="30dp">
+                    android:layout_marginRight="30dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
                     <TextView
+                        android:layout_marginTop="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Bet Now: "
-                        android:textSize="17sp"
                         android:textColor="@color/greyish"
-                        android:textStyle="bold"/>
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
 
                     <EditText
-                        android:inputType="number"
+                        android:layout_marginTop="10dp"
                         android:id="@+id/betting"
                         android:layout_width="wrap_content"
-                        android:layout_height="35dp"
+                        android:layout_height="wrap_content"
                         android:hint="example 100 bonus coins"
-                        android:textColorHint="@color/greyish"
+                        android:inputType="number"
+                        android:maxLength="8"
                         android:textColor="@color/black"
+                        android:textColorHint="@color/greyish"
                         android:textSize="15sp"
-                        android:textStyle="bold"
-                        android:maxLength="8"/>
+                        android:textStyle="bold" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center"
                     android:layout_marginTop="5dp"
-                    android:layout_marginRight="30dp">
+                    android:layout_marginRight="30dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="rate of return: "
-                        android:textSize="17sp"
                         android:textColor="@color/greyish"
-                        android:textStyle="bold"/>
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/rate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:hint="100"
-                        android:textColorHint="@color/greyish"
                         android:textColor="@color/black"
+                        android:textColorHint="@color/greyish"
                         android:textSize="17sp"
                         android:textStyle="bold" />
                 </LinearLayout>
+
                 <Button
                     android:id="@+id/bet"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
+                    android:layout_marginLeft="25dp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginBottom="4dp"
                     android:backgroundTint="#FF59B563"
                     android:text="Confirm bet"
+                    android:textAllCaps="false"
                     android:textColor="@color/white"
                     android:textSize="16sp"
-                    android:layout_marginRight="25dp"
-                    android:layout_marginLeft="25dp"
-                    android:textAllCaps="false"
-                    android:layout_marginBottom="4dp"
                     android:textStyle="bold" />
+
                 <Button
                     android:id="@+id/vote"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
+                    android:layout_marginLeft="25dp"
                     android:layout_marginTop="2dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginBottom="4dp"
                     android:backgroundTint="#FF59B563"
                     android:text="Vote now"
+                    android:textAllCaps="false"
                     android:textColor="@color/white"
                     android:textSize="16sp"
-                    android:layout_marginRight="25dp"
-                    android:layout_marginLeft="25dp"
-                    android:textAllCaps="false"
-                    android:layout_marginBottom="4dp"
                     android:textStyle="bold" />
 
             </LinearLayout>
