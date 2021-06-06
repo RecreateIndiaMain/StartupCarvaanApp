@@ -50,7 +50,11 @@ public class PhoneAuthActivity extends AppCompatActivity {
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks verificationStateChangedCallbacks;
     private String verificationId;
     private profile profile=new profile();
-private TextView counter,resend;
+
+private TextView counter,editphone;
+
+private TextView resend;
+
 private CountDownTimer mcounter;
 private boolean timer;
 private long mtimeleft=start_time;
@@ -67,6 +71,15 @@ private long mtimeleft=start_time;
         otp=findViewById(R.id.otp);
         login=findViewById(R.id.login);
         counter=findViewById(R.id.counter);
+        editphone=findViewById(R.id.phonenumberpage);
+        editphone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                phone_layout.setVisibility(View.VISIBLE);
+                otp_layout.setVisibility(View.GONE);
+            }
+        });
+
 
         verificationStateChangedCallbacks=new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
             @Override

@@ -80,6 +80,15 @@ public class Helppage extends AppCompatActivity {
                     l1.setBackgroundColor(Color.parseColor("#E9EAEE"));
                     before.setVisibility(View.GONE);
                     after.setVisibility(View.VISIBLE);
+                    im2.setImageResource(R.drawable.ic_baseline_arrow_drop_down_24);
+                    text2.setVisibility(View.GONE);
+                    l2.setBackgroundColor(Color.parseColor("#FFFFFF"));
+                    im3.setImageResource(R.drawable.ic_baseline_arrow_drop_down_24);
+                    text3.setVisibility(View.GONE);
+                    l3.setBackgroundColor(Color.parseColor("#FFFFFF"));
+                    im4.setImageResource(R.drawable.ic_baseline_arrow_drop_down_24);
+                    text4.setVisibility(View.GONE);
+                    l4.setBackgroundColor(Color.parseColor("#FFFFFF"));
 
                 }
                 else
@@ -103,6 +112,15 @@ public class Helppage extends AppCompatActivity {
                     l2.setBackgroundColor(Color.parseColor("#E9EAEE"));
                     before.setVisibility(View.GONE);
                     after.setVisibility(View.VISIBLE);
+                    im3.setImageResource(R.drawable.ic_baseline_arrow_drop_down_24);
+                    text3.setVisibility(View.GONE);
+                    l3.setBackgroundColor(Color.parseColor("#FFFFFF"));
+                    im4.setImageResource(R.drawable.ic_baseline_arrow_drop_down_24);
+                    text4.setVisibility(View.GONE);
+                    l4.setBackgroundColor(Color.parseColor("#FFFFFF"));
+                    im1.setImageResource(R.drawable.ic_baseline_arrow_drop_down_24);
+                    text1.setVisibility(View.GONE);
+                    l1.setBackgroundColor(Color.parseColor("#FFFFFF"));
 
                 }
                 else
@@ -126,6 +144,16 @@ public class Helppage extends AppCompatActivity {
                     l3.setBackgroundColor(Color.parseColor("#E9EAEE"));
                     before.setVisibility(View.GONE);
                     after.setVisibility(View.VISIBLE);
+                    im4.setImageResource(R.drawable.ic_baseline_arrow_drop_down_24);
+                    text4.setVisibility(View.GONE);
+                    l4.setBackgroundColor(Color.parseColor("#FFFFFF"));
+                    im1.setImageResource(R.drawable.ic_baseline_arrow_drop_down_24);
+                    text1.setVisibility(View.GONE);
+                    l1.setBackgroundColor(Color.parseColor("#FFFFFF"));
+                    im2.setImageResource(R.drawable.ic_baseline_arrow_drop_down_24);
+                    text2.setVisibility(View.GONE);
+                    l2.setBackgroundColor(Color.parseColor("#FFFFFF"));
+
 
                 }
                 else
@@ -149,6 +177,16 @@ public class Helppage extends AppCompatActivity {
                     l4.setBackgroundColor(Color.parseColor("#E9EAEE"));
                     before.setVisibility(View.GONE);
                     after.setVisibility(View.VISIBLE);
+                    im1.setImageResource(R.drawable.ic_baseline_arrow_drop_down_24);
+                    text1.setVisibility(View.GONE);
+                    l1.setBackgroundColor(Color.parseColor("#FFFFFF"));
+                    im2.setImageResource(R.drawable.ic_baseline_arrow_drop_down_24);
+                    text2.setVisibility(View.GONE);
+                    l2.setBackgroundColor(Color.parseColor("#FFFFFF"));
+                    im3.setImageResource(R.drawable.ic_baseline_arrow_drop_down_24);
+                    text3.setVisibility(View.GONE);
+                    l3.setBackgroundColor(Color.parseColor("#FFFFFF"));
+
 
                 }
                 else
