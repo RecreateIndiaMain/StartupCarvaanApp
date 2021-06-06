@@ -6,11 +6,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.data.Entry;
@@ -34,9 +37,10 @@ import recreate.india.main.startupcarvaan.fragments.progressdialogue.CustomProgr
 
 public class rci_exchange extends AppCompatActivity {
     private LineChart lineChart;
-    private TextView desc_rci,price_rci;
-    private RciValue rciValue=new RciValue();
-    FirebaseFirestore ff=FirebaseFirestore.getInstance();
+    private TextView desc_rci, price_rci;
+    Toolbar toolbar;
+    private RciValue rciValue = new RciValue();
+    FirebaseFirestore ff = FirebaseFirestore.getInstance();
     CustomProgressDialogue cpd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,13 +82,13 @@ public class rci_exchange extends AppCompatActivity {
                         values.add(new Entry(s1[0], s2[0]));
                     }
                     LineDataSet set1;
-//                    if (lineChart.getData() != null &&
-//                            lineChart.getData().getDataSetCount() > 0) {
-//                        set1 = (LineDataSet) lineChart.getData().getDataSetByIndex(0);
-//                        set1.setValues(values);
-//                        lineChart.getData().notifyDataChanged();
-//                        lineChart.notifyDataSetChanged();
-//                    } else {
+                    if (lineChart.getData() != null &&
+                            lineChart.getData().getDataSetCount() > 0) {
+                        set1 = (LineDataSet) lineChart.getData().getDataSetByIndex(0);
+                        set1.setValues(values);
+                        lineChart.getData().notifyDataChanged();
+                        lineChart.notifyDataSetChanged();
+                    } else {
                         set1 = new LineDataSet(values, "Price");
                         set1.setDrawIcons(false);
                         set1.enableDashedLine(10f, 5f, 0f);
@@ -101,7 +105,8 @@ public class rci_exchange extends AppCompatActivity {
                         dataSets.add(set1);
                         LineData data = new LineData(dataSets);
                         lineChart.setData(data);
-//                    }
+                        lineChart.invalidate();
+                    }
 
                     if(lineChart.getData()==null && lineChart.getData().getDataSetCount()==0)
                         showGraph(values);
@@ -136,6 +141,7 @@ public class rci_exchange extends AppCompatActivity {
             dataSets.add(set1);
             LineData data = new LineData(dataSets);
             lineChart.setData(data);
+            lineChart.invalidate();
         }
     }
 }
