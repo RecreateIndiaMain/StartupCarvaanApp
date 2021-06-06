@@ -47,22 +47,22 @@ public class Helppage extends AppCompatActivity {
         l2=findViewById(R.id.linear2);
         l3=findViewById(R.id.linear3);
         l4=findViewById(R.id.linear4);
-        l5=findViewById(R.id.linear5);
+
         l11=findViewById(R.id.linear11);
         l12=findViewById(R.id.linear12);
         l13=findViewById(R.id.linear13);
         l14=findViewById(R.id.linear14);
-        l15=findViewById(R.id.linear15);
+
         text1=findViewById(R.id.text1);
         text2=findViewById(R.id.text2);
         text3=findViewById(R.id.text3);
         text4=findViewById(R.id.text4);
-        text5=findViewById(R.id.text5);
+
         im1=findViewById(R.id.im1);
         im2=findViewById(R.id.im2);
         im3=findViewById(R.id.im3);
         im4=findViewById(R.id.im4);
-        im5=findViewById(R.id.im5);
+
         l11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -75,6 +75,15 @@ public class Helppage extends AppCompatActivity {
                     l1.setBackgroundColor(Color.parseColor("#E9EAEE"));
                     before.setVisibility(View.GONE);
                     after.setVisibility(View.VISIBLE);
+                    im2.setImageResource(R.drawable.ic_baseline_arrow_drop_down_24);
+                    text2.setVisibility(View.GONE);
+                    l2.setBackgroundColor(Color.parseColor("#FFFFFF"));
+                    im3.setImageResource(R.drawable.ic_baseline_arrow_drop_down_24);
+                    text3.setVisibility(View.GONE);
+                    l3.setBackgroundColor(Color.parseColor("#FFFFFF"));
+                    im4.setImageResource(R.drawable.ic_baseline_arrow_drop_down_24);
+                    text4.setVisibility(View.GONE);
+                    l4.setBackgroundColor(Color.parseColor("#FFFFFF"));
 
                 }
                 else
@@ -98,6 +107,15 @@ public class Helppage extends AppCompatActivity {
                     l2.setBackgroundColor(Color.parseColor("#E9EAEE"));
                     before.setVisibility(View.GONE);
                     after.setVisibility(View.VISIBLE);
+                    im3.setImageResource(R.drawable.ic_baseline_arrow_drop_down_24);
+                    text3.setVisibility(View.GONE);
+                    l3.setBackgroundColor(Color.parseColor("#FFFFFF"));
+                    im4.setImageResource(R.drawable.ic_baseline_arrow_drop_down_24);
+                    text4.setVisibility(View.GONE);
+                    l4.setBackgroundColor(Color.parseColor("#FFFFFF"));
+                    im1.setImageResource(R.drawable.ic_baseline_arrow_drop_down_24);
+                    text1.setVisibility(View.GONE);
+                    l1.setBackgroundColor(Color.parseColor("#FFFFFF"));
 
                 }
                 else
@@ -121,6 +139,16 @@ public class Helppage extends AppCompatActivity {
                     l3.setBackgroundColor(Color.parseColor("#E9EAEE"));
                     before.setVisibility(View.GONE);
                     after.setVisibility(View.VISIBLE);
+                    im4.setImageResource(R.drawable.ic_baseline_arrow_drop_down_24);
+                    text4.setVisibility(View.GONE);
+                    l4.setBackgroundColor(Color.parseColor("#FFFFFF"));
+                    im1.setImageResource(R.drawable.ic_baseline_arrow_drop_down_24);
+                    text1.setVisibility(View.GONE);
+                    l1.setBackgroundColor(Color.parseColor("#FFFFFF"));
+                    im2.setImageResource(R.drawable.ic_baseline_arrow_drop_down_24);
+                    text2.setVisibility(View.GONE);
+                    l2.setBackgroundColor(Color.parseColor("#FFFFFF"));
+
 
                 }
                 else
@@ -144,6 +172,16 @@ public class Helppage extends AppCompatActivity {
                     l4.setBackgroundColor(Color.parseColor("#E9EAEE"));
                     before.setVisibility(View.GONE);
                     after.setVisibility(View.VISIBLE);
+                    im1.setImageResource(R.drawable.ic_baseline_arrow_drop_down_24);
+                    text1.setVisibility(View.GONE);
+                    l1.setBackgroundColor(Color.parseColor("#FFFFFF"));
+                    im2.setImageResource(R.drawable.ic_baseline_arrow_drop_down_24);
+                    text2.setVisibility(View.GONE);
+                    l2.setBackgroundColor(Color.parseColor("#FFFFFF"));
+                    im3.setImageResource(R.drawable.ic_baseline_arrow_drop_down_24);
+                    text3.setVisibility(View.GONE);
+                    l3.setBackgroundColor(Color.parseColor("#FFFFFF"));
+
 
                 }
                 else
