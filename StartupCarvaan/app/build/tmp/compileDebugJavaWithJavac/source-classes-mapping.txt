@@ -11,6 +11,7 @@ recreate/india/main/startupcarvaan/loginsignup/loginActivity.java
  recreate.india.main.startupcarvaan.loginsignup.loginActivity$3
  recreate.india.main.startupcarvaan.loginsignup.loginActivity$4
  recreate.india.main.startupcarvaan.loginsignup.loginActivity$5
+ recreate.india.main.startupcarvaan.loginsignup.loginActivity$6
 recreate/india/main/startupcarvaan/mainActivities/RecyclerData.java
  recreate.india.main.startupcarvaan.mainActivities.RecyclerData
 recreate/india/main/startupcarvaan/fragments/mycoins/coin.java
@@ -25,10 +26,10 @@ recreate/india/main/startupcarvaan/user/ProfileActivity.java
  recreate.india.main.startupcarvaan.user.ProfileActivity$3$1
 recreate/india/main/startupcarvaan/compressor/FileUtil.java
  recreate.india.main.startupcarvaan.compressor.FileUtil
-recreate/india/main/startupcarvaan/mainActivities/MainActivity.java
- recreate.india.main.startupcarvaan.mainActivities.MainActivity
- recreate.india.main.startupcarvaan.mainActivities.MainActivity$1
- recreate.india.main.startupcarvaan.mainActivities.MainActivity$2
+recreate/india/main/startupcarvaan/mainActivities/MyRecyclerViewAdapter.java
+ recreate.india.main.startupcarvaan.mainActivities.MyRecyclerViewAdapter
+ recreate.india.main.startupcarvaan.mainActivities.MyRecyclerViewAdapter$ItemClickListener
+ recreate.india.main.startupcarvaan.mainActivities.MyRecyclerViewAdapter$ViewHolder
 recreate/india/main/startupcarvaan/user/CreateProfile.java
  recreate.india.main.startupcarvaan.user.CreateProfile
  recreate.india.main.startupcarvaan.user.CreateProfile$1
@@ -106,12 +107,22 @@ recreate/india/main/startupcarvaan/introSlider/SecondFragment.java
  recreate.india.main.startupcarvaan.introSlider.SecondFragment$1
 recreate/india/main/startupcarvaan/fragments/models/RciValue.java
  recreate.india.main.startupcarvaan.fragments.models.RciValue
+<<<<<<< HEAD
 recreate/india/main/startupcarvaan/Helppage.java
  recreate.india.main.startupcarvaan.Helppage
  recreate.india.main.startupcarvaan.Helppage$1
  recreate.india.main.startupcarvaan.Helppage$2
  recreate.india.main.startupcarvaan.Helppage$3
  recreate.india.main.startupcarvaan.Helppage$4
+=======
+recreate/india/main/startupcarvaan/payments/payout.java
+ recreate.india.main.startupcarvaan.payments.payout
+ recreate.india.main.startupcarvaan.payments.payout$1
+ recreate.india.main.startupcarvaan.payments.payout$2
+ recreate.india.main.startupcarvaan.payments.payout$3
+ recreate.india.main.startupcarvaan.payments.payout$4
+ recreate.india.main.startupcarvaan.payments.payout$4$1
+>>>>>>> a6fff54a3b0f49902dc425ed92018bcaa45127f5
 recreate/india/main/startupcarvaan/fragments/progressdialogue/CustomProgressDialogue.java
  recreate.india.main.startupcarvaan.fragments.progressdialogue.CustomProgressDialogue
 recreate/india/main/startupcarvaan/fragments/practice/practicemodel.java
@@ -222,6 +233,7 @@ recreate/india/main/startupcarvaan/fragments/mycoins/mycoins.java
  recreate.india.main.startupcarvaan.fragments.mycoins.mycoins$5$1$1
  recreate.india.main.startupcarvaan.fragments.mycoins.mycoins$5$1$1$1
  recreate.india.main.startupcarvaan.fragments.mycoins.mycoins$6
+<<<<<<< HEAD
 recreate/india/main/startupcarvaan/payments/payin.java
  recreate.india.main.startupcarvaan.payments.payin
  recreate.india.main.startupcarvaan.payments.payin$1
@@ -230,3 +242,28 @@ recreate/india/main/startupcarvaan/payments/payin.java
  recreate.india.main.startupcarvaan.payments.payin$4
  recreate.india.main.startupcarvaan.payments.payin$5
  recreate.india.main.startupcarvaan.payments.payin$5$1
+=======
+recreate/india/main/startupcarvaan/fragments/biding/bidingm.java
+ recreate.india.main.startupcarvaan.fragments.biding.bidingm
+recreate/india/main/startupcarvaan/aboutshare/modals/sell_success.java
+ recreate.india.main.startupcarvaan.aboutshare.modals.sell_success
+recreate/india/main/startupcarvaan/fragments/myshares/myshares.java
+ recreate.india.main.startupcarvaan.fragments.myshares.myshares
+ recreate.india.main.startupcarvaan.fragments.myshares.myshares$1
+ recreate.india.main.startupcarvaan.fragments.myshares.myshares$1$1
+ recreate.india.main.startupcarvaan.fragments.myshares.myshares$1$2
+ recreate.india.main.startupcarvaan.fragments.myshares.myshares$1$2$1
+ recreate.india.main.startupcarvaan.fragments.myshares.myshares$1$3
+ recreate.india.main.startupcarvaan.fragments.myshares.myshares$1$4
+ recreate.india.main.startupcarvaan.fragments.myshares.myshares$viewholder
+recreate/india/main/startupcarvaan/Helppage.java
+ recreate.india.main.startupcarvaan.Helppage
+ recreate.india.main.startupcarvaan.Helppage$1
+ recreate.india.main.startupcarvaan.Helppage$2
+ recreate.india.main.startupcarvaan.Helppage$3
+ recreate.india.main.startupcarvaan.Helppage$4
+recreate/india/main/startupcarvaan/mainActivities/MainActivity.java
+ recreate.india.main.startupcarvaan.mainActivities.MainActivity
+ recreate.india.main.startupcarvaan.mainActivities.MainActivity$1
+ recreate.india.main.startupcarvaan.mainActivities.MainActivity$2
+>>>>>>> a6fff54a3b0f49902dc425ed92018bcaa45127f5

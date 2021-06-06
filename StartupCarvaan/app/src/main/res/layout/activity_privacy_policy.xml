@@ -21,6 +21,7 @@
             tools:ignore="Orientation">
         </LinearLayout>
 
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -53,7 +54,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:src="@drawable/ic_baseline_arrow_drop_down_24"
-                    android:id="@+id/im1"/>
+                    android:id="@+id/im11"/>
 
             </LinearLayout>
 
@@ -264,58 +265,151 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="25dp"
+
                android:layout_marginTop="25dp"
-                android:id="@+id/linear13"
+                android:id="@+id/privacy"
                 android:layout_marginRight="20dp"
                 android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Privacy Policy"
+                    android:textColor="#2C9FD3"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
 
-                <WebView
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:id="@+id/termsandcondition"
-                    tools:ignore="WebViewLayout" />
+                    android:layout_height="wrap_content"
+                    android:gravity="right|center_vertical"
+                    >
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_baseline_arrow_drop_down_24"
+                        android:id="@+id/im22"/>
+
+                </LinearLayout>
+
+
+
+
 
 
 
             </LinearLayout>
-            <LinearLayout
+            <WebView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
+                android:id="@+id/privacypolicy"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                tools:ignore="WebViewLayout" />
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="25dp"
                 android:layout_marginTop="25dp"
-                android:id="@+id/linear14"
+                android:id="@+id/terms"
                 android:layout_marginRight="20dp"
                 android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Terms and Condition"
+                    android:textColor="#2C9FD3"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
 
-                <WebView
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:id="@+id/refud_policy"
-                    tools:ignore="WebViewLayout" />
+                    android:layout_height="wrap_content"
+                    android:gravity="right|center_vertical"
+                    >
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_baseline_arrow_drop_down_24"
+                        android:id="@+id/im33"/>
+
+                </LinearLayout>
+
+
 
 
 
             </LinearLayout>
-            <LinearLayout
+            <WebView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:id="@+id/termsandcondition"
+                tools:ignore="WebViewLayout" />
+
+
+            <LinearLayout
+                android:layout_marginBottom="80dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="25dp"
                 android:layout_marginTop="25dp"
-                android:id="@+id/linear12"
+                android:id="@+id/refund"
                 android:layout_marginRight="20dp"
-                android:orientation="horizontal">
 
-                <WebView
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Refund Policy"
+                    android:textColor="#2C9FD3"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:id="@+id/privacypolicy"
-                    tools:ignore="WebViewLayout" />
+                    android:layout_height="wrap_content"
+                    android:gravity="right|center_vertical"
+                    >
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_baseline_arrow_drop_down_24"
+                        android:id="@+id/im44"/>
+
+                </LinearLayout>
+
+
+
+
 
 
 
             </LinearLayout>
+
+
+            <WebView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:id="@+id/refud_policy"
+                tools:ignore="WebViewLayout" />
 
 
 

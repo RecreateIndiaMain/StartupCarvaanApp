@@ -2330,6 +2330,7 @@ id list_item
 id live_video_indicator
 id ll_loader
 id login
+id logintext
 id loglayout
 id logout
 id main_bottom_nav

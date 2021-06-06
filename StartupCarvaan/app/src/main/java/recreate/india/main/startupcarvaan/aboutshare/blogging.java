@@ -228,6 +228,7 @@ public class blogging extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<Uri> task) {
                             Glide.with(blogging.this).load(task.getResult()).into(holder.imageView);
+                            pd.dismiss();
                         }
                     });
 
