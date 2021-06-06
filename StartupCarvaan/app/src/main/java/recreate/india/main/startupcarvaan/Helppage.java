@@ -42,10 +42,6 @@ public class Helppage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_helppage);
-//        webView=findViewById(R.id.webview);
-//        webView.getSettings().setJavaScriptEnabled(true);
-//        webView.loadUrl("https://www.termsandconditionsgenerator.com/live.php?token=0WwI2zNxvD2pJTzuKS5Jqu4k9xKVzVoH");
-//        setContentView(webView);
         before=findViewById(R.id.beforefaq);
         after=findViewById(R.id.afterfaq);
         l1=findViewById(R.id.linear1);

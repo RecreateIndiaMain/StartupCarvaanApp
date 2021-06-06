@@ -34,6 +34,7 @@ import java.util.Map;
 
 import recreate.india.main.startupcarvaan.mainActivities.MainActivity;
 import recreate.india.main.startupcarvaan.R;
+import recreate.india.main.startupcarvaan.mainActivities.PrivacyPolicy;
 import recreate.india.main.startupcarvaan.user.CreateProfile;
 import recreate.india.main.startupcarvaan.user.profile;
 
@@ -53,31 +54,43 @@ private CheckBox privacy;
     //google signin
     private GoogleSignInClient mGoogleSignInClient;
     private SignInButton signInButton;
-    private TextView phonebutton;
+    private TextView phonebutton,logintext;
     private recreate.india.main.startupcarvaan.user.profile profile=new profile();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         getSupportActionBar().hide();
+        signInButton = findViewById(R.id.sign_in_button);
+        logintext=findViewById(R.id.logintext);
+        phonebutton=findViewById(R.id.phonebutton);
+        logintext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(loginActivity.this, PrivacyPolicy.class));
+                finish();
+            }
+        });
         privacy=findViewById(R.id.checkprivacy);
+        privacy.setChecked(true);
         privacy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(privacy.isChecked())
-                {
+                if(privacy.isChecked()){
+                    signInButton.setEnabled(true);
+                    phonebutton.setEnabled(true);
                     privacy.setTextColor(getResources().getColor(R.color.green));
 
                 }
-                else
-                {
+                else{
+                    signInButton.setEnabled(false);
+                    phonebutton.setEnabled(false);
                     privacy.setTextColor(getResources().getColor(R.color.black));
                 }
             }
         });
 
-        // google signin options
-        // Configure Google Sign In
+
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
@@ -87,7 +100,7 @@ private CheckBox privacy;
         // Check for existing Google Sign In account, if the user is already signed in
 // the GoogleSignInAccount will be non-null.
         // Set the dimensions of the sign-in button.
-        signInButton = findViewById(R.id.sign_in_button);
+
         signInButton.setSize(SignInButton.SIZE_STANDARD);
         findViewById(R.id.sign_in_button).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,7 +108,7 @@ private CheckBox privacy;
                 signIn();
             }
         });
-        phonebutton=findViewById(R.id.phonebutton);
+
         phonebutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

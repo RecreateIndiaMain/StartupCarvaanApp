@@ -97,6 +97,8 @@ public class biding extends Fragment {
                         if(s_price.equals("")){
                             Toast.makeText(getContext(), "enter bid amount 10 percent greater then current price ", Toast.LENGTH_SHORT).show();
                         }
+                        else if(s_price.contains("."))
+                            holder.bid.setError("invalid amount");
                         else{
                             Integer price=Integer.valueOf(holder.bid.getText().toString());
                             if(Double.valueOf(price)>Double.valueOf(model.getCurrentbid()+(.1*model.getCurrentbid()))){

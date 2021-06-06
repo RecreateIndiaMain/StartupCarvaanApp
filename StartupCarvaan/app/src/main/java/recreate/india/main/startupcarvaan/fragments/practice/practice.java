@@ -103,6 +103,8 @@ public class practice extends Fragment {
                         if(holder.betting.getText().toString().equalsIgnoreCase("")){
                             Toast.makeText(getContext(),"please enter some amount",Toast.LENGTH_LONG).show();
                         }
+                        else if(holder.betting.getText().toString().contains("."))
+                            holder.betting.setError("Invalid bonus coins");
                         else{
                             final coin[] coin = {new coin()};
                             FirebaseFirestore.getInstance().collection("users")
