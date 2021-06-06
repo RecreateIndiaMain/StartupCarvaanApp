@@ -97,6 +97,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:hint="100"
+                        android:textColorHint="@color/greyish"
                         android:textColor="@color/black"
                         android:textSize="17sp"
                         android:textStyle="bold" />
@@ -113,15 +114,17 @@
                         android:layout_height="wrap_content"
                         android:text="Your bet: "
                         android:textSize="17sp"
+
                         android:textColor="@color/greyish"
                         android:textStyle="bold"/>
 
                     <TextView
                         android:id="@+id/currentbet"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:hint="100"
                         android:textColor="@color/black"
+                        android:textColorHint="@color/greyish"
                         android:textSize="17sp"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -145,7 +148,8 @@
                         android:id="@+id/betting"
                         android:layout_width="wrap_content"
                         android:layout_height="35dp"
-                        android:hint="100 bonus coin"
+                        android:hint="example 100 bonus coins"
+                        android:textColorHint="@color/greyish"
                         android:textColor="@color/black"
                         android:textSize="15sp"
                         android:textStyle="bold"
@@ -171,6 +175,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:hint="100"
+                        android:textColorHint="@color/greyish"
                         android:textColor="@color/black"
                         android:textSize="17sp"
                         android:textStyle="bold" />

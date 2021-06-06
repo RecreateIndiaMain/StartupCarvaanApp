@@ -6,11 +6,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -29,6 +31,7 @@ import org.apache.commons.codec.language.bm.PhoneticEngine;
 
 import java.sql.Time;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
@@ -41,12 +44,16 @@ import recreate.india.main.startupcarvaan.user.profile;
 public class PhoneAuthActivity extends AppCompatActivity {
     private FirebaseAuth firebaseAuth=FirebaseAuth.getInstance();
     private EditText number,otp;
+    private static final long start_time=30000;
     private Button getotp,login;
     private PhoneAuthProvider.ForceResendingToken forceResendingToken;
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks verificationStateChangedCallbacks;
     private String verificationId;
     private profile profile=new profile();
-
+private TextView counter;
+private CountDownTimer mcounter;
+private boolean timer;
+private long mtimeleft=start_time;
     private LinearLayout phone_layout,otp_layout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +66,8 @@ public class PhoneAuthActivity extends AppCompatActivity {
         getotp=findViewById(R.id.getotp);
         otp=findViewById(R.id.otp);
         login=findViewById(R.id.login);
+        counter=findViewById(R.id.counter);
+
         verificationStateChangedCallbacks=new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
             @Override
             public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
@@ -88,6 +97,7 @@ public class PhoneAuthActivity extends AppCompatActivity {
                 }
                 else {
                     startPhoneVerification(phone);
+                    startTimer();
                 }
             }
         });
@@ -151,6 +161,32 @@ public class PhoneAuthActivity extends AppCompatActivity {
             Toast.makeText(PhoneAuthActivity.this, "there is some error in logging into your account", Toast.LENGTH_LONG).show();
         }
     }
+private void startTimer()
+{
+    mcounter=new CountDownTimer(mtimeleft,1000) {
+        @Override
+        public void onTick(long l) {
+            mtimeleft=l;
+            updatecountdowntext();
+
+        }
+
+        @Override
+        public void onFinish() {
+
+        }
+    }.start();
+
+}
+
+    private void updatecountdowntext() {
+        int minutes=(int)(mtimeleft/1000)/60;
+        int second=(int)(mtimeleft/1000)%60;
+        String time=String.format(Locale.getDefault(),"%02d:%02d",minutes,second);
+        counter.setText(time);
+
+    }
+
 
     @Override
     public void onBackPressed() {
