@@ -103,14 +103,17 @@ public class blogging extends AppCompatActivity {
                 holder.commentbutton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-
+                        if(holder.addcomment.getText().toString().isEmpty())
+                            Toast.makeText(blogging.this, "please enter some text", Toast.LENGTH_SHORT).show();
+                        else{
                             model.getComments().put(new user().user().getUid()+new Random().toString(),holder.addcomment.getText().toString());
                             FirebaseFirestore.getInstance().collection("allshares")
                                     .document(shareid)
                                     .collection("blogs")
                                     .document(getSnapshots().getSnapshot(position).getId())
                                     .update("comments",model.getComments());
-                            }
+                        }
+                    }
                 });
                 holder.likeimage.setOnClickListener(new View.OnClickListener() {
                     @Override

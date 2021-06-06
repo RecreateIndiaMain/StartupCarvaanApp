@@ -32,6 +32,8 @@ import com.google.firebase.storage.UploadTask;
 import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.io.File;
 
 import recreate.india.main.startupcarvaan.R;
@@ -47,7 +49,7 @@ public class CreateProfile extends AppCompatActivity {
     private EditText display_name,title,desc,phone,email,address;
     private ImageView userImage;
     private Button document,submit;
-    private Uri imageUri,documentUri;
+    private Uri imageUri;
 
     private FirebaseFirestore ff=FirebaseFirestore.getInstance();
     private FirebaseStorage fs= FirebaseStorage.getInstance();
@@ -103,18 +105,6 @@ public class CreateProfile extends AppCompatActivity {
         //end here
 
         //document upload work
-        document=findViewById(R.id.document);
-        document.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent galleryIntent = new Intent();
-                galleryIntent.setAction(Intent.ACTION_GET_CONTENT);
-
-                // We will be redirected to choose pdf
-                galleryIntent.setType("application/pdf");
-                startActivityForResult(galleryIntent, document_request_code);
-            }
-        });
         //end here
 
 
@@ -131,41 +121,37 @@ public class CreateProfile extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
                             Toast.makeText(CreateProfile.this, "image successfully uploaded", Toast.LENGTH_SHORT).show();
-                            if(documentUri!=null){
-                                StorageReference userdoc=fs.getReference().child("users").child(user.getUid()).child("doc");
-                                documenturl=userdoc.getPath();
-                                userdoc.putFile(documentUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
-                                    @Override
-                                    public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
-                                        cpd.dismiss();
-                                        Toast.makeText(CreateProfile.this, "document successfully", Toast.LENGTH_SHORT).show();
-                                    }
-                                });
-                            }
                             cpd.dismiss();
-                            startActivity(new Intent(CreateProfile.this, MainActivity.class));
+                            String name_tobeuploaded=display_name.getText().toString().length()==0?profile.getName():display_name.getText().toString();
+                            String title_tobeuploaded=title.getText().toString().length()==0?profile.getTitle():title.getText().toString();
+                            String desc_tobeuploaded=desc.getText().toString().length()==0?profile.getDescription():desc.getText().toString();
+                            String phone_tobeuploaded=phone.getText().toString().length()==0?profile.getPhone():phone.getText().toString();
+                            String email_tobeuploaded=email.getText().toString().length()==0?profile.getEmail():email.getText().toString();
+                            String address_tobeuploaded=address.getText().toString().length()==0?profile.getAddress():address.getText().toString();
+
+                            profile.setName(name_tobeuploaded);
+                            profile.setAddress(address_tobeuploaded);
+                            profile.setDescription(desc_tobeuploaded);
+                            profile.setEmail(email_tobeuploaded);
+                            profile.setPhone(phone_tobeuploaded);
+                            profile.setTitle(title_tobeuploaded);
+                            if(imageUri!=null)
+                                profile.setImageurl(imageurl);
+
+                            ff.collection("users")
+                                    .document(user.getUid())
+                                    .set(profile).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull @NotNull Task<Void> task) {
+                                    startActivity(new Intent(CreateProfile.this, MainActivity.class));
+                                }
+                            });
+
                             finish();
                         }
                     });
                 }
                 else{
-                    if(documentUri!=null){
-                        cpd.show();
-                        StorageReference userdoc=fs.getReference().child("users").child(user.getUid()).child("doc");
-                        documenturl=userdoc.getPath();
-                        userdoc.putFile(documentUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
-                            @Override
-                            public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
-                                cpd.dismiss();
-                                Toast.makeText(CreateProfile.this, "document successfully uploaded ", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(CreateProfile.this, MainActivity.class));
-                                finish();
-                            }
-                        });
-                    }
-                }
-
-                    //getting all the required fields
                     String name_tobeuploaded=display_name.getText().toString().length()==0?profile.getName():display_name.getText().toString();
                     String title_tobeuploaded=title.getText().toString().length()==0?profile.getTitle():title.getText().toString();
                     String desc_tobeuploaded=desc.getText().toString().length()==0?profile.getDescription():desc.getText().toString();
@@ -181,14 +167,16 @@ public class CreateProfile extends AppCompatActivity {
                     profile.setTitle(title_tobeuploaded);
                     if(imageUri!=null)
                         profile.setImageurl(imageurl);
-                    if(documentUri!=null)
-                        profile.setResume(documenturl);
 
                     ff.collection("users")
                             .document(user.getUid())
-                            .set(profile);
-                    if(imageUri==null && documentUri==null)
-                        startActivity(new Intent(CreateProfile.this, MainActivity.class));
+                            .set(profile).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull @NotNull Task<Void> task) {
+                            startActivity(new Intent(CreateProfile.this, MainActivity.class));
+                        }
+                    });
+                }
             }
         });
     }
@@ -201,13 +189,10 @@ public class CreateProfile extends AppCompatActivity {
             CropImage.activity(imageUri)
                     .setAspectRatio(1,1)
                     .setCropShape(CropImageView.CropShape.RECTANGLE)
+                    .setMaxCropResultSize(4000,4000)
                     .start(this);
 //            userImage.setImageURI(imageUri);
 
-        }
-        else if(requestCode==document_request_code&& resultCode==RESULT_OK && data!=null){
-            documentUri=data.getData();
-            document.setText(documentUri.getLastPathSegment());
         }
         else if(requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE){
             CropImage.ActivityResult result = CropImage.getActivityResult(data);

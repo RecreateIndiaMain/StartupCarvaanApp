@@ -63,7 +63,6 @@ public class comment extends DialogFragment {
                     public void onEvent(@Nullable @org.jetbrains.annotations.Nullable DocumentSnapshot value, @Nullable @org.jetbrains.annotations.Nullable FirebaseFirestoreException error) {
                         blogdetails=value.toObject(recreate.india.main.startupcarvaan.aboutshare.models.blogdetails.class);
                         comment_map[0] =blogdetails.getComments();
-                        Toast.makeText(getContext(), String.valueOf(blogdetails.getComments().size()), Toast.LENGTH_SHORT).show();
                         ArrayList<name_comment> content=new ArrayList<>();
                         for (Map.Entry<String,String> set: comment_map[0].entrySet()) {
                             name_comment name = new name_comment(set.getKey(),set.getValue());

@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -35,12 +36,16 @@ public class Helppage extends AppCompatActivity {
     private ImageView im1,im2,im3,im4,im5;
     private LinearLayout before,after;
     private int count=0,count2=0,count3=0,count4=0;
+    private WebView webView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_helppage);
-
+//        webView=findViewById(R.id.webview);
+//        webView.getSettings().setJavaScriptEnabled(true);
+//        webView.loadUrl("https://www.termsandconditionsgenerator.com/live.php?token=0WwI2zNxvD2pJTzuKS5Jqu4k9xKVzVoH");
+//        setContentView(webView);
         before=findViewById(R.id.beforefaq);
         after=findViewById(R.id.afterfaq);
         l1=findViewById(R.id.linear1);

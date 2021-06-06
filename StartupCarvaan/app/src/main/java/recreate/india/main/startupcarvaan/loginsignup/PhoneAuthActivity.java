@@ -50,7 +50,11 @@ public class PhoneAuthActivity extends AppCompatActivity {
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks verificationStateChangedCallbacks;
     private String verificationId;
     private profile profile=new profile();
+
 private TextView counter,editphone;
+
+private TextView resend;
+
 private CountDownTimer mcounter;
 private boolean timer;
 private long mtimeleft=start_time;
@@ -59,7 +63,7 @@ private long mtimeleft=start_time;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_phone_auth);
-
+        resend=findViewById(R.id.otpresend);
         phone_layout=findViewById(R.id.phoneverify);
         otp_layout=findViewById(R.id.otpverify);
         number=findViewById(R.id.number);
@@ -98,6 +102,19 @@ private long mtimeleft=start_time;
             }
         };
         getotp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String phone=number.getText().toString();
+                if(phone.length()!=10){
+                    number.setError("Invalid Number");
+                }
+                else {
+                    startPhoneVerification(phone);
+                    startTimer();
+                }
+            }
+        });
+        resend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String phone=number.getText().toString();
