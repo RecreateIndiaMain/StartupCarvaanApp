@@ -17,8 +17,7 @@
         android:roundIcon="@drawable/startupcarvaanlogo"
         android:supportsRtl="true"
         android:theme="@style/Theme.StartupCarvaan">
-        <activity android:name=".coin_exchange.rci_exchange"
-            android:parentActivityName=".mainActivities.MainActivity">
+        <activity android:name=".coin_exchange.rci_exchange">
 
         </activity>
         <activity android:name=".Levels"
@@ -33,8 +32,7 @@
         <activity
             android:name=".loginsignup.PhoneAuthActivity"
             android:parentActivityName=".loginsignup.loginActivity" />
-        <activity android:name=".user.ProfileActivity"
-            android:parentActivityName=".mainActivities.MainActivity"/>
+        <activity android:name=".user.ProfileActivity"/>
         <activity
             android:name=".aboutshare.blogging"
             android:parentActivityName=".mainActivities.MainActivity" />

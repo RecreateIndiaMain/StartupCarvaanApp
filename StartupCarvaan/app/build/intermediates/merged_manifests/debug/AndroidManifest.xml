@@ -49,9 +49,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.StartupCarvaan" >
-        <activity
-            android:name="recreate.india.main.startupcarvaan.coin_exchange.rci_exchange"
-            android:parentActivityName="recreate.india.main.startupcarvaan.mainActivities.MainActivity" >
+        <activity android:name="recreate.india.main.startupcarvaan.coin_exchange.rci_exchange" >
         </activity>
         <activity
             android:name="recreate.india.main.startupcarvaan.Levels"
