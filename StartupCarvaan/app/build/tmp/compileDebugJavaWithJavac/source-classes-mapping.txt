@@ -75,11 +75,10 @@ recreate/india/main/startupcarvaan/aboutshare/CommentAdapter.java
  recreate.india.main.startupcarvaan.aboutshare.CommentAdapter$MyViewHolder
 recreate/india/main/startupcarvaan/fragments/allshares/allshare.java
  recreate.india.main.startupcarvaan.fragments.allshares.allshare
-recreate/india/main/startupcarvaan/payments/payin.java
- recreate.india.main.startupcarvaan.payments.payin
- recreate.india.main.startupcarvaan.payments.payin$1
- recreate.india.main.startupcarvaan.payments.payin$2
- recreate.india.main.startupcarvaan.payments.payin$3
+recreate/india/main/startupcarvaan/mainActivities/MainActivity.java
+ recreate.india.main.startupcarvaan.mainActivities.MainActivity
+ recreate.india.main.startupcarvaan.mainActivities.MainActivity$1
+ recreate.india.main.startupcarvaan.mainActivities.MainActivity$2
 recreate/india/main/startupcarvaan/coin_exchange/rci_exchange.java
  recreate.india.main.startupcarvaan.coin_exchange.rci_exchange
  recreate.india.main.startupcarvaan.coin_exchange.rci_exchange$1
@@ -217,7 +216,8 @@ recreate/india/main/startupcarvaan/fragments/mycoins/mycoins.java
  recreate.india.main.startupcarvaan.fragments.mycoins.mycoins$5$1$1
  recreate.india.main.startupcarvaan.fragments.mycoins.mycoins$5$1$1$1
  recreate.india.main.startupcarvaan.fragments.mycoins.mycoins$6
-recreate/india/main/startupcarvaan/mainActivities/MainActivity.java
- recreate.india.main.startupcarvaan.mainActivities.MainActivity
- recreate.india.main.startupcarvaan.mainActivities.MainActivity$1
- recreate.india.main.startupcarvaan.mainActivities.MainActivity$2
+recreate/india/main/startupcarvaan/payments/payin.java
+ recreate.india.main.startupcarvaan.payments.payin
+ recreate.india.main.startupcarvaan.payments.payin$1
+ recreate.india.main.startupcarvaan.payments.payin$2
+ recreate.india.main.startupcarvaan.payments.payin$3

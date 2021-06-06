@@ -34,6 +34,8 @@ public class payin extends AppCompatActivity implements PaymentResultListener {
     private coin coin=new coin();
     private Integer pay=10000;
 
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
