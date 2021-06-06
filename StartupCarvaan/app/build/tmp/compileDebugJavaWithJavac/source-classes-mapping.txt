@@ -25,10 +25,10 @@ recreate/india/main/startupcarvaan/user/ProfileActivity.java
  recreate.india.main.startupcarvaan.user.ProfileActivity$3$1
 recreate/india/main/startupcarvaan/compressor/FileUtil.java
  recreate.india.main.startupcarvaan.compressor.FileUtil
-recreate/india/main/startupcarvaan/mainActivities/MyRecyclerViewAdapter.java
- recreate.india.main.startupcarvaan.mainActivities.MyRecyclerViewAdapter
- recreate.india.main.startupcarvaan.mainActivities.MyRecyclerViewAdapter$ItemClickListener
- recreate.india.main.startupcarvaan.mainActivities.MyRecyclerViewAdapter$ViewHolder
+recreate/india/main/startupcarvaan/mainActivities/MainActivity.java
+ recreate.india.main.startupcarvaan.mainActivities.MainActivity
+ recreate.india.main.startupcarvaan.mainActivities.MainActivity$1
+ recreate.india.main.startupcarvaan.mainActivities.MainActivity$2
 recreate/india/main/startupcarvaan/user/CreateProfile.java
  recreate.india.main.startupcarvaan.user.CreateProfile
  recreate.india.main.startupcarvaan.user.CreateProfile$1
@@ -80,15 +80,11 @@ recreate/india/main/startupcarvaan/payments/payin.java
  recreate.india.main.startupcarvaan.payments.payin$1
  recreate.india.main.startupcarvaan.payments.payin$2
  recreate.india.main.startupcarvaan.payments.payin$3
-recreate/india/main/startupcarvaan/fragments/myshares/myshares.java
- recreate.india.main.startupcarvaan.fragments.myshares.myshares
- recreate.india.main.startupcarvaan.fragments.myshares.myshares$1
- recreate.india.main.startupcarvaan.fragments.myshares.myshares$1$1
- recreate.india.main.startupcarvaan.fragments.myshares.myshares$1$2
- recreate.india.main.startupcarvaan.fragments.myshares.myshares$1$2$1
- recreate.india.main.startupcarvaan.fragments.myshares.myshares$1$3
- recreate.india.main.startupcarvaan.fragments.myshares.myshares$1$4
- recreate.india.main.startupcarvaan.fragments.myshares.myshares$viewholder
+ recreate.india.main.startupcarvaan.payments.payin$3$1
+recreate/india/main/startupcarvaan/coin_exchange/rci_exchange.java
+ recreate.india.main.startupcarvaan.coin_exchange.rci_exchange
+ recreate.india.main.startupcarvaan.coin_exchange.rci_exchange$1
+ recreate.india.main.startupcarvaan.coin_exchange.rci_exchange$2
 recreate/india/main/startupcarvaan/aboutshare/blogging.java
  recreate.india.main.startupcarvaan.aboutshare.blogging
  recreate.india.main.startupcarvaan.aboutshare.blogging$1
@@ -214,11 +210,16 @@ recreate/india/main/startupcarvaan/Helppage.java
  recreate.india.main.startupcarvaan.Helppage$2
  recreate.india.main.startupcarvaan.Helppage$3
  recreate.india.main.startupcarvaan.Helppage$4
-recreate/india/main/startupcarvaan/coin_exchange/rci_exchange.java
- recreate.india.main.startupcarvaan.coin_exchange.rci_exchange
- recreate.india.main.startupcarvaan.coin_exchange.rci_exchange$1
- recreate.india.main.startupcarvaan.coin_exchange.rci_exchange$2
-recreate/india/main/startupcarvaan/mainActivities/MainActivity.java
- recreate.india.main.startupcarvaan.mainActivities.MainActivity
- recreate.india.main.startupcarvaan.mainActivities.MainActivity$1
- recreate.india.main.startupcarvaan.mainActivities.MainActivity$2
+recreate/india/main/startupcarvaan/mainActivities/MyRecyclerViewAdapter.java
+ recreate.india.main.startupcarvaan.mainActivities.MyRecyclerViewAdapter
+ recreate.india.main.startupcarvaan.mainActivities.MyRecyclerViewAdapter$ItemClickListener
+ recreate.india.main.startupcarvaan.mainActivities.MyRecyclerViewAdapter$ViewHolder
+recreate/india/main/startupcarvaan/fragments/myshares/myshares.java
+ recreate.india.main.startupcarvaan.fragments.myshares.myshares
+ recreate.india.main.startupcarvaan.fragments.myshares.myshares$1
+ recreate.india.main.startupcarvaan.fragments.myshares.myshares$1$1
+ recreate.india.main.startupcarvaan.fragments.myshares.myshares$1$2
+ recreate.india.main.startupcarvaan.fragments.myshares.myshares$1$2$1
+ recreate.india.main.startupcarvaan.fragments.myshares.myshares$1$3
+ recreate.india.main.startupcarvaan.fragments.myshares.myshares$1$4
+ recreate.india.main.startupcarvaan.fragments.myshares.myshares$viewholder

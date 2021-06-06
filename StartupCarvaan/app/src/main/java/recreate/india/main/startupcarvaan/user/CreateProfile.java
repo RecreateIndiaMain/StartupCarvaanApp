@@ -40,6 +40,8 @@ import recreate.india.main.startupcarvaan.fragments.progressdialogue.CustomProgr
 import recreate.india.main.startupcarvaan.loginsignup.loginActivity;
 import recreate.india.main.startupcarvaan.mainActivities.MainActivity;
 
+import static com.google.android.gms.common.internal.safeparcel.SafeParcelable.NULL;
+
 public class CreateProfile extends AppCompatActivity {
     private static final int CROP_PIC_REQUEST_CODE = 001 ;
     private EditText display_name,title,desc,phone,email,address;
@@ -69,23 +71,6 @@ public class CreateProfile extends AppCompatActivity {
         email=findViewById(R.id.userEmail);
         address=findViewById(R.id.userAddress);
         userImage=findViewById(R.id.userImage);
-
-        // end here
-
-//        StorageReference irl=fs.getReference().child(profile.getImageurl());
-//        irl.getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
-//            @Override
-//            public void onComplete(@NonNull Task<Uri> task) {
-//                if(task.getResult()!=null)
-//                    Glide.with(CreateProfile.this)
-//                            .load(task.getResult())
-//                            .into(userImage);
-//                else{
-//                    Toast.makeText(CreateProfile.this, "file does not exists", Toast.LENGTH_SHORT).show();
-//                }
-//            }
-//        });
-
         imageurl=profile.getImageurl();
         documenturl=profile.getResume();
         //getting current user all data from firestore
@@ -96,12 +81,12 @@ public class CreateProfile extends AppCompatActivity {
                     public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
                         profile=value.toObject(recreate.india.main.startupcarvaan.user.profile.class);
                         //setting all the fields first
-                        display_name.setText(profile.getName());
-                        title.setText(profile.getTitle());
-                        desc.setText(profile.getDescription());
-                        phone.setText(profile.getPhone());
-                        email.setText(profile.getEmail());
-                        address.setText(profile.getAddress());
+                        display_name.setHint(profile.getName());
+                        title.setHint(profile.getTitle());
+                        desc.setHint(profile.getDescription());
+                        phone.setHint(profile.getPhone());
+                        email.setHint(profile.getEmail());
+                        address.setHint(profile.getAddress());
                     }
                 });
         //end here
@@ -181,12 +166,12 @@ public class CreateProfile extends AppCompatActivity {
                 }
 
                     //getting all the required fields
-                    String name_tobeuploaded=display_name.getText().toString();
-                    String title_tobeuploaded=title.getText().toString();
-                    String desc_tobeuploaded=desc.getText().toString();
-                    String phone_tobeuploaded=phone.getText().toString();
-                    String email_tobeuploaded=email.getText().toString();
-                    String address_tobeuploaded=address.getText().toString();
+                    String name_tobeuploaded=display_name.getText().toString().length()==0?profile.getName():display_name.getText().toString();
+                    String title_tobeuploaded=title.getText().toString().length()==0?profile.getTitle():title.getText().toString();
+                    String desc_tobeuploaded=desc.getText().toString().length()==0?profile.getDescription():desc.getText().toString();
+                    String phone_tobeuploaded=phone.getText().toString().length()==0?profile.getPhone():phone.getText().toString();
+                    String email_tobeuploaded=email.getText().toString().length()==0?profile.getEmail():email.getText().toString();
+                    String address_tobeuploaded=address.getText().toString().length()==0?profile.getAddress():address.getText().toString();
 
                     profile.setName(name_tobeuploaded);
                     profile.setAddress(address_tobeuploaded);
