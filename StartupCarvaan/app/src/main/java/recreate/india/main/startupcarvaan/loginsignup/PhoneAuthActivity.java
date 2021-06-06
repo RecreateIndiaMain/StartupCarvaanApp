@@ -33,6 +33,7 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import recreate.india.main.startupcarvaan.R;
+import recreate.india.main.startupcarvaan.fragments.progressdialogue.CustomProgressDialogue;
 import recreate.india.main.startupcarvaan.mainActivities.MainActivity;
 import recreate.india.main.startupcarvaan.user.CreateProfile;
 import recreate.india.main.startupcarvaan.user.profile;
@@ -82,7 +83,12 @@ public class PhoneAuthActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String phone=number.getText().toString();
-                startPhoneVerification(phone);
+                if(phone.length()!=10){
+                    number.setError("Invalid Number");
+                }
+                else {
+                    startPhoneVerification(phone);
+                }
             }
         });
         login.setOnClickListener(new View.OnClickListener() {
@@ -144,5 +150,11 @@ public class PhoneAuthActivity extends AppCompatActivity {
         } else {
             Toast.makeText(PhoneAuthActivity.this, "there is some error in logging into your account", Toast.LENGTH_LONG).show();
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(PhoneAuthActivity.this,loginActivity.class));
     }
 }

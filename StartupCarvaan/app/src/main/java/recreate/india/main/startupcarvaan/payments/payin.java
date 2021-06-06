@@ -21,6 +21,7 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.razorpay.Checkout;
 import com.razorpay.PaymentResultListener;
 
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONObject;
 
 import recreate.india.main.startupcarvaan.R;
@@ -49,7 +50,7 @@ public class payin extends AppCompatActivity implements PaymentResultListener {
                         coin=value.toObject(coin.class);
                     }
                 });
-        checkout.setKeyID("rzp_test_svuTeislmr3GfE");
+        checkout.setKeyID("rzp_test_49JR35RUaeyRyr");
         // Payment button created by you in XML layout
         Button button = (Button) findViewById(R.id.btn_pay);
         button.setOnClickListener(new View.OnClickListener() {
@@ -87,8 +88,8 @@ public class payin extends AppCompatActivity implements PaymentResultListener {
     @Override
     public void onPaymentSuccess(String razorpayPaymentID) {
         try {
-            Toast.makeText(this, "completed   " + coin.getRci(), Toast.LENGTH_SHORT).show();
             increment();
+
         }
         catch (Exception e){
 
@@ -117,7 +118,12 @@ public class payin extends AppCompatActivity implements PaymentResultListener {
                         .document(new user().user().getUid())
                         .collection("others")
                         .document("coins")
-                        .update("rci",coin.getRci()+(pay/100));
+                        .update("rci",coin.getRci()+(pay/100)).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull @NotNull Task<Void> task) {
+                        Toast.makeText(payin.this, "your current rci" + (coin.getRci()+(pay/100)), Toast.LENGTH_SHORT).show();
+                    }
+                });
             }
         });
     }
