@@ -2627,6 +2627,7 @@ id up
 id updateprofile
 id upi_id
 id upiname
+id upiphonenumber
 id useLogo
 id userAddress
 id userEmail

@@ -108,6 +108,7 @@ recreate/india/main/startupcarvaan/fragments/models/RciValue.java
  recreate.india.main.startupcarvaan.fragments.models.RciValue
 recreate/india/main/startupcarvaan/payments/payout.java
  recreate.india.main.startupcarvaan.payments.payout
+ recreate.india.main.startupcarvaan.payments.payout$1
 recreate/india/main/startupcarvaan/fragments/progressdialogue/CustomProgressDialogue.java
  recreate.india.main.startupcarvaan.fragments.progressdialogue.CustomProgressDialogue
 recreate/india/main/startupcarvaan/fragments/practice/practicemodel.java
