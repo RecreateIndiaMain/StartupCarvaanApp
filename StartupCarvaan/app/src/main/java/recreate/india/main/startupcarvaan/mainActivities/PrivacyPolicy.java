@@ -26,15 +26,14 @@ public class PrivacyPolicy extends AppCompatActivity {
 
     private static final int RC_SIGN_IN = 001;
 
-   private int c1=0,c2=0,c3=0,c4=0;
-    private LinearLayout rules,newly,privacy,terms,refund;
+    private int c1 = 0, c2 = 0, c3 = 0, c4 = 0;
+    private LinearLayout rules, newly, privacy, terms, refund;
     private LinearLayout rulest;
-    private ImageView im11,im22,im33,im44;
-    private WebView privacypolicy,termand,refundpolicy;
+    private ImageView im11, im22, im33, im44;
+    private WebView privacypolicy, termand, refundpolicy;
 
 
-
-    private TextView privacybutton,termsbutton,paymentbutton;
+    private TextView privacybutton, termsbutton, paymentbutton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,20 +41,19 @@ public class PrivacyPolicy extends AppCompatActivity {
         setContentView(R.layout.activity_privacy_policy);
 
 
-
-        rules=findViewById(R.id.rule);
-        newly=findViewById(R.id.newly);
-        im11=findViewById(R.id.im11);
-        im22=findViewById(R.id.im22);
-        im33=findViewById(R.id.im33);
-        im44=findViewById(R.id.im44);
-privacy=findViewById(R.id.privacy);
-terms=findViewById(R.id.terms);
-refund=findViewById(R.id.refund);
-privacypolicy=findViewById(R.id.privacypolicy);
-termand=findViewById(R.id.termsandcondition);
-refundpolicy=findViewById(R.id.refud_policy);
-        rulest=findViewById(R.id.ruletext);
+        rules = findViewById(R.id.rule);
+        newly = findViewById(R.id.newly);
+        im11 = findViewById(R.id.im11);
+        im22 = findViewById(R.id.im22);
+        im33 = findViewById(R.id.im33);
+        im44 = findViewById(R.id.im44);
+        privacy = findViewById(R.id.privacy);
+        terms = findViewById(R.id.terms);
+        refund = findViewById(R.id.refund);
+        privacypolicy = findViewById(R.id.privacypolicy);
+        termand = findViewById(R.id.termsandcondition);
+        refundpolicy = findViewById(R.id.refud_policy);
+        rulest = findViewById(R.id.ruletext);
         privacypolicy.getSettings().setJavaScriptEnabled(true);
         privacypolicy.loadUrl("https://www.privacypolicygenerator.info/live.php?token=Qk5tYKKzXzNauXqnmPWOD7pXpxOG8xQL ");
 
@@ -110,15 +108,12 @@ refundpolicy=findViewById(R.id.refud_policy);
             @Override
             public void onClick(View view) {
                 c2++;
-                if(c2 %2==1)
-                {
+                if (c2 % 2 == 1) {
                     termand.setVisibility(View.VISIBLE);
                     newly.setVisibility(View.GONE);
                     im33.setImageResource(R.drawable.ic_baseline_arrow_drop_up_24);
 
-                }
-                else
-                {
+                } else {
                     termand.setVisibility(View.GONE);
                     newly.setVisibility(View.VISIBLE);
                     im33.setImageResource(R.drawable.ic_baseline_arrow_drop_down_24);
@@ -130,15 +125,12 @@ refundpolicy=findViewById(R.id.refud_policy);
             @Override
             public void onClick(View view) {
                 c1++;
-                if(c1 %2==1)
-                {
+                if (c1 % 2 == 1) {
                     refundpolicy.setVisibility(View.VISIBLE);
                     newly.setVisibility(View.GONE);
                     im44.setImageResource(R.drawable.ic_baseline_arrow_drop_up_24);
 
-                }
-                else
-                {
+                } else {
                     refundpolicy.setVisibility(View.GONE);
                     newly.setVisibility(View.VISIBLE);
                     im44.setImageResource(R.drawable.ic_baseline_arrow_drop_down_24);
@@ -149,5 +141,12 @@ refundpolicy=findViewById(R.id.refud_policy);
 
 
         // Choose authentication providers
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(PrivacyPolicy.this,MainActivity.class));
+        finish();
     }
 }
