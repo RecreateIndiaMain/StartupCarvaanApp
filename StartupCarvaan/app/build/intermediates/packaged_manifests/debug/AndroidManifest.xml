@@ -16,9 +16,14 @@
         android:name="android.hardware.camera"
         android:required="false" />
 
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Android package visibility setting -->
-    <queries>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.CHOOSER" />
+
+            <data android:scheme="upi" />
+        </intent>
         <!-- For browser content -->
         <intent>
             <action android:name="android.intent.action.VIEW" />
@@ -26,13 +31,11 @@
             <category android:name="android.intent.category.BROWSABLE" />
 
             <data android:scheme="https" />
-        </intent>
-        <!-- End of browser content -->
+        </intent> <!-- End of browser content -->
         <!-- For CustomTabsService -->
         <intent>
             <action android:name="android.support.customtabs.action.CustomTabsService" />
         </intent>
-        <!-- End of CustomTabsService -->
     </queries>
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -49,8 +52,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.StartupCarvaan" >
-        <activity android:name="recreate.india.main.startupcarvaan.coin_exchange.rci_exchange" >
-        </activity>
+        <activity android:name="recreate.india.main.startupcarvaan.coin_exchange.rci_exchange" />
         <activity android:name="recreate.india.main.startupcarvaan.Levels" />
         <activity android:name="recreate.india.main.startupcarvaan.mainActivities.RecyclerActivity" />
         <activity android:name="recreate.india.main.startupcarvaan.payments.payout" />
@@ -65,8 +67,7 @@
         <activity
             android:name="recreate.india.main.startupcarvaan.user.ProfileActivity"
             android:parentActivityName="recreate.india.main.startupcarvaan.mainActivities.MainActivity"
-            android:theme="@style/MyTheme" >
-        </activity>
+            android:theme="@style/MyTheme" />
         <activity
             android:name="recreate.india.main.startupcarvaan.aboutshare.blogging"
             android:parentActivityName="recreate.india.main.startupcarvaan.mainActivities.MainActivity" />
@@ -97,6 +98,9 @@
         <activity
             android:name="com.shreyaspatil.EasyUpiPayment.ui.PaymentUiActivity"
             android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+        <activity
+            android:name="dev.shreyaspatil.easyupipayment.ui.PaymentUiActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
 
         <receiver android:name="com.razorpay.RzpTokenReceiver" >
             <intent-filter>

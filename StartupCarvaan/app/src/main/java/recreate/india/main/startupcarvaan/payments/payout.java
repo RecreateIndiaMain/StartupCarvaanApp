@@ -1,5 +1,6 @@
 package recreate.india.main.startupcarvaan.payments;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,12 +15,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.storage.FirebaseStorage;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -111,6 +116,22 @@ public class payout extends AppCompatActivity {
                             }
                             else{
                                 to_get=rciValue.getCurrentvalue()*int_coins;
+
+                                FirebaseFirestore.getInstance().collection("users")
+                                        .document(new user().user().getUid())
+                                        .collection("others")
+                                        .document("coins")
+                                        .get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                                    @Override
+                                    public void onComplete(@NonNull @NotNull Task<DocumentSnapshot> task) {
+                                        coin coin=task.getResult().toObject(coin.class);
+                                        FirebaseFirestore.getInstance().collection("users")
+                                                .document(new user().user().getUid())
+                                                .collection("others")
+                                                .document("coins")
+                                                .update("rci",coin.getRci()-int_coins);
+                                    }
+                                });
                                 convertedmoney.setText(String.valueOf(to_get));
                                 Map<String,String> trans=new HashMap<>();
                                 trans.put("name",name);
@@ -120,12 +141,12 @@ public class payout extends AppCompatActivity {
 
                                 FirebaseFirestore.getInstance().collection("users")
                                         .document(new user().user().getUid())
-                                        .collection("transactions")
+                                        .collection("payments")
                                         .document("withdrawl").set(trans);
                                 FirebaseFirestore.getInstance().collection("users")
                                         .document(new user().user().getUid())
-                                        .collection("transactions")
-                                        .document("all").set(trans).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                        .collection("all")
+                                        .document().set(trans).addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override
                                     public void onSuccess(Void unused) {
                                         Toast.makeText(payout.this, "request successfully added", Toast.LENGTH_SHORT).show();

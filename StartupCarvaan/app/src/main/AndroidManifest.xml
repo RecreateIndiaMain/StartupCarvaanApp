@@ -17,40 +17,38 @@
         android:roundIcon="@drawable/startupcarvaanlogo"
         android:supportsRtl="true"
         android:theme="@style/Theme.StartupCarvaan">
-        <activity android:name=".coin_exchange.rci_exchange">
-
-        </activity>
-        <activity android:name=".Levels"/>
+        <activity android:name=".coin_exchange.rci_exchange" />
+        <activity android:name=".Levels" />
         <activity android:name=".mainActivities.RecyclerActivity" />
         <activity android:name=".payments.payout" />
         <activity android:name=".payments.payin" />
         <activity android:name=".Helppage" />
         <activity android:name=".coin_exchange.buy_rci" />
         <activity android:name=".mainActivities.IntroSliderActivity" />
-        <activity android:name=".user.CreateProfile"
-            android:theme="@style/MyTheme"/>
         <activity
-            android:name=".loginsignup.PhoneAuthActivity" />
-        <activity android:name=".user.ProfileActivity"
+            android:name=".user.CreateProfile"
+            android:theme="@style/MyTheme" />
+        <activity android:name=".loginsignup.PhoneAuthActivity" />
+        <activity
+            android:name=".user.ProfileActivity"
             android:parentActivityName=".mainActivities.MainActivity"
-            android:theme="@style/MyTheme">
-
-        </activity>
+            android:theme="@style/MyTheme" />
         <activity
             android:name=".aboutshare.blogging"
             android:parentActivityName=".mainActivities.MainActivity" />
-        <activity android:name=".mainActivities.MainActivity"
-            android:parentActivityName=".mainActivities.MainActivity"/>
+        <activity
+            android:name=".mainActivities.MainActivity"
+            android:parentActivityName=".mainActivities.MainActivity" />
         <activity android:name=".mainActivities.PrivacyPolicy" />
         <activity
             android:name=".loginsignup.loginActivity"
             android:theme="@style/Theme.StartupCarvaan.Fullscreen" />
-        <activity android:name=".mainActivities.SplashScreen"
+        <activity
+            android:name=".mainActivities.SplashScreen"
             android:theme="@style/MyTheme">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="android.intent.category.LAUNCHER"></category>
             </intent-filter>
         </activity>
         <activity
@@ -59,8 +57,7 @@
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-5245859690369666~7981162028"/>
-
+            android:value="ca-app-pub-5245859690369666~7981162028" />
     </application>
 
 </manifest>

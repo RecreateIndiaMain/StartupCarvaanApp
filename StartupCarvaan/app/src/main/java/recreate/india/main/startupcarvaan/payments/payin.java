@@ -28,6 +28,9 @@ import com.razorpay.PaymentResultListener;
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONObject;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.fragments.models.RciValue;
 import recreate.india.main.startupcarvaan.fragments.mycoins.coin;
@@ -134,13 +137,14 @@ public class payin extends AppCompatActivity implements PaymentResultListener {
 
     public void startPayment() {
         try {
+            Double inr= Double.valueOf(convertedMoney.getText().toString());
             JSONObject options = new JSONObject();
             options.put("name", "Razorpay Corp");
             options.put("description", "Demoing Charges");
             //You can omit the image option to fetch the image from dashboard
             options.put("image", "https://s3.amazonaws.com/rzp-mobile/images/rzp.png");
             options.put("currency", "INR");
-            options.put("amount", pay);
+            options.put("amount", inr*100);
 
             JSONObject preFill = new JSONObject();
             preFill.put("email", "test@razorpay.com");
@@ -189,10 +193,25 @@ public class payin extends AppCompatActivity implements PaymentResultListener {
                         .document(new user().user().getUid())
                         .collection("others")
                         .document("coins")
-                        .update("rci",coin.getRci()+(pay/100)).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        .update("rci",coin.getRci()+Integer.valueOf((coins.getText().toString()))).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull @NotNull Task<Void> task) {
-                        Toast.makeText(payin.this, "your current rci" + (coin.getRci()+(pay/100)), Toast.LENGTH_SHORT).show();
+                        Map<String,String> map=new HashMap<>();
+                        map.put("name",name.getText().toString());
+                        map.put("number",phoneNumber.getText().toString());
+                        map.put("money",convertedMoney.getText().toString());
+                        map.put("current rci value",String.valueOf(rciValue.getCurrentvalue()));
+
+                        FirebaseFirestore.getInstance().collection("users")
+                                .document(new user().user().getUid())
+                                .collection("all")
+                                .document()
+                                .set(map);
+                        FirebaseFirestore.getInstance().collection("users")
+                                .document(new user().user().getUid())
+                                .collection("payments")
+                                .document("payin")
+                                .set(map);
                     }
                 });
             }

@@ -44,7 +44,7 @@ import recreate.india.main.startupcarvaan.user.profile;
 public class PhoneAuthActivity extends AppCompatActivity {
     private FirebaseAuth firebaseAuth=FirebaseAuth.getInstance();
     private EditText number,otp;
-    private static final long start_time=30000;
+    private static final long start_time=60000;
     private Button getotp,login;
     private PhoneAuthProvider.ForceResendingToken forceResendingToken;
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks verificationStateChangedCallbacks;
@@ -57,7 +57,7 @@ private TextView resend;
 
 private CountDownTimer mcounter;
 private boolean timer;
-private long mtimeleft=start_time;
+    private long mtimeleft=start_time;
     private LinearLayout phone_layout,otp_layout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -122,7 +122,9 @@ private long mtimeleft=start_time;
                     number.setError("Invalid Number");
                 }
                 else {
+                    Toast.makeText(PhoneAuthActivity.this, "otp resend", Toast.LENGTH_SHORT).show();
                     startPhoneVerification(phone);
+                    mtimeleft=start_time;
                     startTimer();
                 }
             }

@@ -29,6 +29,9 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
 task prepareKotlinBuildScriptModel {
 
@@ -109,5 +112,9 @@ dependencies {
 
     //Google ads
     implementation 'com.google.android.gms:play-services-ads:20.1.0'
+
+    implementation 'dev.shreyaspatil.EasyUpiPayment:EasyUpiPayment:3.0.2'
+
+    implementation 'com.wangsun.upi.payment:upi-payment:0.0.2'
 
 }

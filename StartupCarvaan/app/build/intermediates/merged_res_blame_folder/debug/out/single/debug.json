@@ -12,26 +12,16 @@
         "source": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\drawable\\tab_selector.xml"
     },
     {
-<<<<<<< HEAD
-        "merged": "C:\\Users\\Siddharth Chaudhary\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\drawable_inputtype.xml.flat",
-        "source": "C:\\Users\\Siddharth Chaudhary\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\drawable\\inputtype.xml"
-=======
         "merged": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\drawable_presentation.png.flat",
         "source": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\drawable\\presentation.png"
->>>>>>> a6fff54a3b0f49902dc425ed92018bcaa45127f5
     },
     {
         "merged": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_home_black_24dp.png.flat",
         "source": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_home_black_24dp.png"
     },
     {
-<<<<<<< HEAD
-        "merged": "C:\\Users\\Siddharth Chaudhary\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\drawable_cross.png.flat",
-        "source": "C:\\Users\\Siddharth Chaudhary\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\drawable\\cross.png"
-=======
         "merged": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\drawable_button.png.flat",
         "source": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\drawable\\button.png"
->>>>>>> a6fff54a3b0f49902dc425ed92018bcaa45127f5
     },
     {
         "merged": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_arrow_drop_up_24.png.flat",
@@ -118,34 +108,20 @@
         "source": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_email_24dp.png"
     },
     {
-<<<<<<< HEAD
-        "merged": "C:\\Users\\Siddharth Chaudhary\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_arrow_drop_up_24.png.flat",
-        "source": "C:\\Users\\Siddharth Chaudhary\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_arrow_drop_up_24.png"
-=======
         "merged": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bidprice.xml.flat",
         "source": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\drawable\\bidprice.xml"
     },
     {
         "merged": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_arrow_drop_down_24.png.flat",
         "source": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_arrow_drop_down_24.png"
->>>>>>> a6fff54a3b0f49902dc425ed92018bcaa45127f5
     },
     {
         "merged": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_baseline_attach_money_24.xml.flat",
         "source": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_attach_money_24.xml"
     },
     {
-<<<<<<< HEAD
-        "merged": "C:\\Users\\Siddharth Chaudhary\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_email_24dp.png.flat",
-        "source": "C:\\Users\\Siddharth Chaudhary\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_email_24dp.png"
-    },
-    {
-        "merged": "C:\\Users\\Siddharth Chaudhary\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Siddharth Chaudhary\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
-=======
         "merged": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\layout_singlecomment.xml.flat",
         "source": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\layout\\singlecomment.xml"
->>>>>>> a6fff54a3b0f49902dc425ed92018bcaa45127f5
     },
     {
         "merged": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_arrow_back_24dp.xml.flat",
@@ -180,18 +156,6 @@
         "source": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
-<<<<<<< HEAD
-        "merged": "C:\\Users\\Siddharth Chaudhary\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Siddharth Chaudhary\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "C:\\Users\\Siddharth Chaudhary\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Siddharth Chaudhary\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "C:\\Users\\Siddharth Chaudhary\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_dashboard_black_24dp.png.flat",
-        "source": "C:\\Users\\Siddharth Chaudhary\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_dashboard_black_24dp.png"
-=======
         "merged": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_tickinsidecircle.png.flat",
         "source": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\drawable-v24\\tickinsidecircle.png"
     },
@@ -202,7 +166,6 @@
     {
         "merged": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logonew.png.flat",
         "source": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\drawable\\logonew.png"
->>>>>>> a6fff54a3b0f49902dc425ed92018bcaa45127f5
     },
     {
         "merged": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_sendbutton.png.flat",
@@ -217,18 +180,6 @@
         "source": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_home_black_24dp.png"
     },
     {
-<<<<<<< HEAD
-        "merged": "C:\\Users\\Siddharth Chaudhary\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\layout_buysuccess.xml.flat",
-        "source": "C:\\Users\\Siddharth Chaudhary\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\layout\\buysuccess.xml"
-    },
-    {
-        "merged": "C:\\Users\\Siddharth Chaudhary\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\Siddharth Chaudhary\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_launcher_background.xml"
-    },
-    {
-        "merged": "C:\\Users\\Siddharth Chaudhary\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\layout_loading_layout.xml.flat",
-        "source": "C:\\Users\\Siddharth Chaudhary\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\layout\\loading_layout.xml"
-=======
         "merged": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_thumb_up_24.png.flat",
         "source": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_thumb_up_24.png"
     },
@@ -239,7 +190,6 @@
     {
         "merged": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_attach_money_24.png.flat",
         "source": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_attach_money_24.png"
->>>>>>> a6fff54a3b0f49902dc425ed92018bcaa45127f5
     },
     {
         "merged": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_phone_auth.xml.flat",
@@ -504,6 +454,10 @@
     {
         "merged": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\drawable_startupcarvaanlogo.png.flat",
         "source": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\drawable\\startupcarvaanlogo.png"
+    },
+    {
+        "merged": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\layout_content_main.xml.flat",
+        "source": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\layout\\content_main.xml"
     },
     {
         "merged": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\drawable_input.xml.flat",
@@ -988,6 +942,10 @@
     {
         "merged": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_notifications_black_24dp.xml.flat",
         "source": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_notifications_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\navigation_nav_graph2.xml.flat",
+        "source": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\navigation\\nav_graph2.xml"
     },
     {
         "merged": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\drawable_information.png.flat",

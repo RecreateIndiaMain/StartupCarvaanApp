@@ -96,7 +96,7 @@ public class allshares extends Fragment {
             @NonNull
             @Override
             public PostViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                showProgress();
+
                 loaded=true;
                 View view=LayoutInflater.from(parent.getContext()).inflate(R.layout.z_single_allshare,parent,false);
                 return new PostViewHolder(view);
@@ -171,8 +171,9 @@ public class allshares extends Fragment {
                     @Override
                     public void onComplete(@NonNull Task<Uri> task) {
                         if (task.getResult() != null) {
-                            Glide.with(getContext())
+                            Glide.with(view.getContext())
                                     .load(task.getResult())
+                                    .placeholder(R.drawable.userimage)
                                     .into(holder.companylogo);
                             dismissDialog();
 
