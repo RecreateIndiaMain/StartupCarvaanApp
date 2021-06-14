@@ -76,7 +76,7 @@ public class myshares extends Fragment {
 
             @Override
             protected void onBindViewHolder(@NonNull viewholder holder, int position, @NonNull holdings model) {
-                cpd.show();
+
                 List<String> list = new ArrayList<String>();
                 list.add(0, "Price of a share : No. of shares");
                 Map<String,Integer> holding=model.getHoldings();
@@ -125,7 +125,7 @@ public class myshares extends Fragment {
                                     @Override
                                     public void onComplete(@NonNull Task<Uri> task) {
                                         if(task.isSuccessful()){
-                                            Glide.with(getContext()).load(task.getResult()).into(holder.companylogo);
+                                            Glide.with(view.getContext()).load(task.getResult()).placeholder(R.drawable.userimage).into(holder.companylogo);
                                             cpd.dismiss();
                                         }
                                     }

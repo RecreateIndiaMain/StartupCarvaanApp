@@ -20,22 +20,29 @@
             android:gravity="center_horizontal|bottom"
             android:orientation="horizontal"
             android:background="@color/blue">
+
             <EditText
-                android:layout_marginRight="50dp"
-                android:layout_marginLeft="50dp"
                 android:id="@+id/coins"
                 android:layout_width="match_parent"
                 android:layout_height="38dp"
+<<<<<<< HEAD
                 android:ems="10"
 android:textColor="@color/black"
                 android:textColorHint="@color/hinttext"
 
+=======
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+>>>>>>> 5145ca716fb53663595275e043983f4b4410ff5a
                 android:background="@drawable/inputtype"
-                android:inputType="number"
-                android:textSize="16sp"
+                android:ems="10"
+                android:maxLength="5"
                 android:gravity="center"
                 android:hint="min 500 coins maxi 10000 coins"
-                />
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textColorHint="@color/greyish"
+                android:textSize="16sp" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -85,7 +92,11 @@ android:textColor="@color/black"
                     android:layout_marginRight="50dp"
                     android:layout_marginLeft="50dp"
                     android:ems="10"
+<<<<<<< HEAD
                     android:textColorHint="@color/hinttext"
+=======
+                    android:maxLength="20"
+>>>>>>> 5145ca716fb53663595275e043983f4b4410ff5a
                     android:textColor="@color/black"
 
                     android:textSize="15sp"
@@ -104,11 +115,15 @@ android:textColor="@color/black"
                     android:layout_marginLeft="50dp"
                     android:ems="10"
                     android:textSize="15sp"
+<<<<<<< HEAD
                     android:textColorHint="@color/hinttext"
+=======
+                    android:maxLength="10"
+>>>>>>> 5145ca716fb53663595275e043983f4b4410ff5a
                     android:textColor="@color/black"
 
                     android:background="@drawable/inputtype"
-                    android:inputType="textPersonName"
+                    android:inputType="number"
                     android:gravity="center"
                     android:layout_marginTop="25dp"
                     android:hint="Enter your phone number"

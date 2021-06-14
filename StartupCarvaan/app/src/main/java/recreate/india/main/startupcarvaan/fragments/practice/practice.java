@@ -63,7 +63,7 @@ public class practice extends Fragment {
         View view= inflater.inflate(R.layout.fragment_practice, container, false);
         cpd=new CustomProgressDialogue(getActivity());
         myshare=view.findViewById(R.id.practicerecyclerview);
-        cpd.show();
+
         Query query= FirebaseFirestore.getInstance().collection("validators");
         FirestoreRecyclerOptions<practicemodel> option=new FirestoreRecyclerOptions.Builder<practicemodel>().setQuery(query,practicemodel.class).build();
         adapter= new FirestoreRecyclerAdapter<practicemodel, practice.viewholder>(option) {
@@ -142,7 +142,7 @@ public class practice extends Fragment {
                 FirebaseStorage.getInstance().getReference().child(model.getLogourl()).getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
                     @Override
                     public void onComplete(@NonNull Task<Uri> task) {
-                        Glide.with(getContext()).load(task.getResult()).into(holder.logo);
+                        Glide.with(view.getContext()).load(task.getResult()).placeholder(R.drawable.userimage).into(holder.logo);
                         cpd.dismiss();
 
                     }

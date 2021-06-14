@@ -63,7 +63,6 @@ public class biding extends Fragment {
         // 11-05-21 Written by Siddharth end
         View view= inflater.inflate(R.layout.fragment_biding, container, false);
         // 11-05-21 Written by Siddharth start
-        cpd.show();
         // 11-05-21 Written by Siddharth end
         myshare=view.findViewById(R.id.bidingrecyclerview);
         Query query= FirebaseFirestore.getInstance().collection("biding");
@@ -81,7 +80,7 @@ public class biding extends Fragment {
                 FirebaseStorage.getInstance().getReference().child(model.getProductimage()).getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
                     @Override
                     public void onComplete(@NonNull Task<Uri> task) {
-                        Glide.with(getContext()).load(task.getResult()).into(holder.productimage);
+                        Glide.with(view.getContext()).load(task.getResult()).into(holder.productimage);
                         cpd.dismiss();
                     }
                 });
