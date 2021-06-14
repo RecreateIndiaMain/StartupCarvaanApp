@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ru-rRU\\values-ru-rRU.xml",
+            "outputFile": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ru-rRU\\values-ru-rRU.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\avkg0\\.gradle\\caches\\transforms-3\\3d305333169ae529de8632260b7a68fa\\transformed\\jetified-android-image-cropper-2.7.0\\res\\values-ru-rRU\\values-ru-rRU.xml",
+                    "source": "C:\\Program Files\\Java\\jdk-12.0.2\\caches\\transforms-3\\2d557b8bda5e48a47eb6d6c7e0c9ea0e\\transformed\\jetified-android-image-cropper-2.7.0\\res\\values-ru-rRU\\values-ru-rRU.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8",
                         "startColumns": "4,4,4,4,4,4,4",

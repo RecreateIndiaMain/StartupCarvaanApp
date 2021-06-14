@@ -144,6 +144,7 @@ attr badgeGravity
 attr badgeStyle
 attr badgeTextColor
 attr barLength
+attr barcolour
 attr barrierAllowsGoneWidgets
 attr barrierDirection
 attr barrierMargin
@@ -1145,6 +1146,7 @@ color grey
 color greyish
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color hinttext
 color light_blue_600
 color light_blue_900
 color light_blue_A200
@@ -1737,6 +1739,7 @@ drawable ayp_ic_youtube_24dp
 drawable ayp_shape_rounded_corners
 drawable bidding
 drawable bidprice
+drawable bonuscoin
 drawable bottomsheet_back
 drawable bsw
 drawable btn_checkbox_checked_mtrl
@@ -1793,6 +1796,7 @@ drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable googlesign
 drawable gs
+drawable helper
 drawable ic_arrow_back_24dp
 drawable ic_baseline_account_circle_24
 drawable ic_baseline_arrow_drop_down_24
@@ -1884,6 +1888,7 @@ drawable paintbrush
 drawable person1
 drawable person2
 drawable person3
+drawable phoneau
 drawable phonesign
 drawable playstore
 drawable pp
@@ -1891,6 +1896,7 @@ drawable presentation
 drawable privacy
 drawable profilelogo
 drawable purpledot
+drawable rci
 drawable rzp_border
 drawable rzp_border_bottom
 drawable rzp_green_button
@@ -2528,6 +2534,7 @@ id secondLayout
 id select_dialog_listview
 id selected
 id sell
+id sellclose
 id sellingPrice
 id sellingprice
 id sharename
@@ -3900,7 +3907,7 @@ styleable ForegroundLinearLayout android_foreground android_foregroundGravity fo
 styleable Fragment android_name android_id android_tag
 styleable FragmentContainerView android_name android_tag
 styleable FragmentNavigator android_name
-styleable FullscreenAttrs backgroundcolourmain backgroundlogin_suggest bidbackground cointextcolour fullscreenBackgroundColor fullscreenTextColor maintextcolour txtsugestion
+styleable FullscreenAttrs backgroundcolourmain backgroundlogin_suggest barcolour bidbackground cointextcolour fullscreenBackgroundColor fullscreenTextColor maintextcolour txtsugestion
 styleable GradientColor android_startColor android_endColor android_type android_centerX android_centerY android_gradientRadius android_tileMode android_centerColor android_startX android_startY android_endX android_endY
 styleable GradientColorItem android_color android_offset
 styleable ImageFilterView altSrc brightness contrast crossfade overlay round roundPercent saturation warmth
