@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/backgroundcolourmain"
     tools:context=".coin_exchange.rci_exchange">
   <ScrollView
       android:layout_width="match_parent"
@@ -17,44 +18,59 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_weight="6">
+        android:layout_weight="3.5">
         <TextView
-        android:layout_weight="1"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/heading_about_rci"
         android:text="About RCI "
+
         android:textStyle="bold"
-        android:textColor="@color/black"
-        android:textSize="30dp"
+        android:textColor="?attr/cointextcolour"
+        android:textSize="25dp"
         android:textAlignment="center"
-        android:layout_marginLeft="10sp"
-        android:layout_marginRight="10sp"
-        android:layout_marginTop="5sp"/>
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="22dp"/>
         <TextView
-            android:layout_weight="2"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
             android:id="@+id/desc_aboutRci"
-            android:textColor="@color/black"
+            android:textColor="?attr/txtsugestion"
             android:text="@string/about_rci"
             android:textSize="14sp"
-            android:layout_margin="8sp" />
+            android:layout_marginTop="8dp" />
 
-    <com.github.mikephil.charting.charts.LineChart
-        android:layout_weight="4"
-        android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:layout_marginLeft="10sp"
-        android:layout_marginRight="10sp"
-        android:layout_marginTop="5sp"
-        android:id="@+id/lineChart_rci"
-        >
 
-    </com.github.mikephil.charting.charts.LineChart>
 
 
     </LinearLayout>
+        <com.github.mikephil.charting.charts.LineChart
+            android:layout_weight="3.5"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/lineChart_rci"
+            >
+
+        </com.github.mikephil.charting.charts.LineChart>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/input"
+            android:orientation="vertical">
         <LinearLayout
             android:layout_weight="2"
             android:layout_width="match_parent"
@@ -62,25 +78,29 @@
             android:orientation="horizontal"
             android:layout_marginLeft="10sp"
             android:layout_marginRight="10sp"
-            android:layout_marginTop="5sp"
+
+
             android:id="@+id/Price">
 
             <TextView
-                android:layout_width="197dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Current Price of RCI:     "
                 android:textAlignment="center"
-                android:textColor="@color/black" />
+                android:textSize="18sp"
+                android:layout_marginLeft="20dp"
+                android:textStyle="bold"
+                android:textColor="?attr/cointextcolour" />
             <TextView
-                android:layout_width="120dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="50"
                 android:textAlignment="center"
-                android:layout_marginStart="25sp"
-                android:textColor="@color/black"
-                android:textSize="15sp"
+
+                android:textColor="?attr/txtsugestion"
+                android:textSize="19sp"
                 android:textStyle="bold"
-                android:layout_marginLeft="10sp"
+
                 android:id="@+id/price_of_RCI"/>
         </LinearLayout>
     <LinearLayout
@@ -96,23 +116,24 @@
             android:textColor="@color/white"
             android:textStyle="bold"
             android:layout_width="120dp"
-            android:layout_height="25dp"
+            android:layout_height="35dp"
             android:text="BUY"
             android:gravity="center"
             android:layout_marginRight="30sp"
-            android:background="@drawable/timer"/>
+            android:background="@drawable/joinbu"/>
         <TextView
             android:textColor="@color/white"
             android:textStyle="bold"
-            android:textAlignment="center"
+          android:gravity="center"
             android:layout_width="120dp"
-            android:layout_height="25dp"
+            android:layout_height="35dp"
             android:text="SELL"
+
             android:layout_marginLeft="30sp"
-            android:background="@drawable/timer"/>
+            android:background="@drawable/joinbu"/>
 
     </LinearLayout>
-
+        </LinearLayout>
     </LinearLayout>
   </ScrollView>
 </RelativeLayout>

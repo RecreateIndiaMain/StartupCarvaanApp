@@ -123,7 +123,7 @@ private long mtimeleft=start_time;
                 }
                 else {
                     startPhoneVerification(phone);
-                    startTimer();
+                  resettimer();
                 }
             }
         });
@@ -134,6 +134,13 @@ private long mtimeleft=start_time;
                 verifyPhoneNumberWithCode(verificationId,code);
             }
         });
+    }
+
+    private void resettimer() {
+        mcounter.cancel();
+        mtimeleft=start_time;
+        startTimer();
+
     }
 
     private void signinUser(PhoneAuthCredential phoneAuthCredential) {

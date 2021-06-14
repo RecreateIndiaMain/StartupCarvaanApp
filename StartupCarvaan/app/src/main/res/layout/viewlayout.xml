@@ -64,6 +64,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/proximanovaregular"
                         android:text="Android Developer"
+                        android:textColor="@color/goodgrey"
                         android:textSize="14sp" />
 
 
@@ -100,6 +101,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="97%"
+                                android:textColor="@color/goodgrey"
                                 android:textSize="12sp"
                                 android:textStyle="bold" />
 
@@ -108,6 +110,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="2dp"
                                 android:text="@string/job_success"
+                                android:textColor="@color/goodgrey"
                                 android:textSize="12sp" />
                         </LinearLayout>
                     </LinearLayout>
@@ -136,6 +139,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="4.8/5"
+                                android:textColor="@color/goodgrey"
                                 android:textSize="12sp"
                                 android:textStyle="bold" />
 
@@ -144,6 +148,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="2dp"
                                 android:text="@string/ratings"
+                                android:textColor="@color/goodgrey"
                                 android:textSize="12sp" />
                         </LinearLayout>
                     </LinearLayout>
@@ -190,8 +195,9 @@
                     android:gravity="center"
                     android:padding="13dp"
                     android:text="Experience"
+                    android:textColor="@color/goodgrey"
                     android:textAllCaps="true"
-                    android:textColor="@color/lightgrey"
+
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
@@ -231,6 +237,7 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/proximanovaregular"
                                 android:text="@string/about_me"
+                                android:textColor="@color/goodgrey"
                                 android:textSize="17sp"
                                 android:textStyle="bold" />
 
@@ -244,6 +251,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
+                            android:textColor="@color/goodgrey"
                             android:text="@string/my_desc" />
                     </LinearLayout>
 
@@ -267,6 +275,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/proximanovaregular"
                             android:text="@string/contact"
+                            android:textColor="@color/goodgrey"
                             android:textSize="17sp"
                             android:textStyle="bold" />
 
@@ -373,6 +382,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/skills"
+                            android:textColor="@color/goodgrey"
                             android:textSize="17sp"
                             android:textStyle="bold" />
 
@@ -405,6 +415,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="20dp"
+                                android:textColor="@color/goodgrey"
                                 android:text="Expert in Photoshop, Adobe XD"
                                 android:textSize="15sp" />
                         </LinearLayout>
@@ -427,6 +438,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="20dp"
+                                android:textColor="@color/goodgrey"
                                 android:text="sanskar@theindianappguy.com"
                                 android:textSize="15sp" />
                         </LinearLayout>
@@ -449,6 +461,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="20dp"
+                                android:textColor="@color/goodgrey"
                                 android:text="Leeds, United Kingdom"
                                 android:textSize="15sp" />
                         </LinearLayout>
@@ -496,12 +509,14 @@
                                 android:fontFamily="@font/proximanovaregular"
                                 android:text="Android Developer"
                                 android:textSize="14sp"
+                                android:textColor="@color/goodgrey"
                                 android:textStyle="bold" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="3dp"
+                                android:textColor="@color/goodgrey"
                                 android:fontFamily="@font/proximanovaregular"
                                 android:text="at TheIndianAppGuy"
                                 android:textSize="12sp" />
@@ -524,6 +539,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="5dp"
+                            android:textColor="@color/goodgrey"
                             android:text="Sep 2010 - Jan 2013"
                             android:textSize="12sp"
                             android:textStyle="bold" />
@@ -563,12 +579,14 @@
                                 android:fontFamily="@font/proximanovaregular"
                                 android:text="Android Developer"
                                 android:textSize="14sp"
+                                android:textColor="@color/goodgrey"
                                 android:textStyle="bold" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="3dp"
+                                android:textColor="@color/goodgrey"
                                 android:fontFamily="@font/proximanovaregular"
                                 android:text="at TheIndianAppGuy"
                                 android:textSize="12sp" />
@@ -593,6 +611,7 @@
                             android:layout_marginStart="5dp"
                             android:text="Sep 2010 - Jan 2013"
                             android:textSize="12sp"
+                            android:textColor="@color/goodgrey"
                             android:textStyle="bold" />
                     </LinearLayout>
 
@@ -630,12 +649,14 @@
                                 android:fontFamily="@font/proximanovaregular"
                                 android:text="Android Developer"
                                 android:textSize="14sp"
+                                android:textColor="@color/goodgrey"
                                 android:textStyle="bold" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="3dp"
+                                android:textColor="@color/goodgrey"
                                 android:fontFamily="@font/proximanovaregular"
                                 android:text="at TheIndianAppGuy"
                                 android:textSize="12sp" />
@@ -659,6 +680,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="5dp"
                             android:text="Sep 2010 - Jan 2013"
+                            android:textColor="@color/goodgrey"
                             android:textSize="12sp"
                             android:textStyle="bold" />
                     </LinearLayout>
@@ -713,6 +735,7 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/proximanovaregular"
                                 android:maxLines="3"
+                                android:textColor="@color/goodgrey"
                                 android:text="@string/samplereview"
                                 android:textSize="14sp" />
 
@@ -722,6 +745,7 @@
                                 android:layout_marginTop="3dp"
                                 android:fontFamily="@font/proximanovaregular"
                                 android:text="Saswat Tiwari"
+                                android:textColor="@color/goodgrey"
                                 android:textSize="12sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
@@ -768,6 +792,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:maxLines="3"
+                                android:textColor="@color/goodgrey"
                                 android:text="@string/samplereview"
                                 android:textSize="14sp" />
 
@@ -776,6 +801,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="3dp"
                                 android:text="Mr Sk TATA"
+                                android:textColor="@color/goodgrey"
                                 android:textSize="12sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
@@ -822,6 +848,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:maxLines="3"
+                                android:textColor="@color/goodgrey"
                                 android:text="@string/samplereview"
                                 android:textSize="14sp" />
 
@@ -830,6 +857,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="3dp"
                                 android:text="Shikha Tiwari"
+                                android:textColor="@color/goodgrey"
                                 android:textSize="12sp"
                                 android:textStyle="bold" />
                         </LinearLayout>

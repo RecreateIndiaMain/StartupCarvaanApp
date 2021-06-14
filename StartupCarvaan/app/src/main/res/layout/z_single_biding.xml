@@ -71,6 +71,7 @@ android:layout_marginBottom="4dp"
                 android:layout_marginTop="3.5dp"
                 android:text="this is a very good item with super base and good qwality music it is worth the amount and it is absolutely free just use your bonus coin as much as possible"
                 android:textSize="12.5sp"
+                android:layout_marginBottom="4dp"
                 tools:autoSizeTextType="uniform">
             </TextView>
             <LinearLayout
@@ -110,18 +111,20 @@ android:layout_marginLeft="10dp"
                             android:layout_marginLeft="5dp"
                             android:textColor="@color/black"></TextView>
                     </LinearLayout>
+
                     <EditText
                         android:id="@+id/bidprice"
                         android:layout_width="120dp"
                         android:layout_height="32dp"
-                        android:textSize="12.5sp"
                         android:layout_marginTop="10dp"
                         android:background="@drawable/bidprice"
-                        android:inputType="number"
                         android:gravity="center"
                         android:hint="Enter your bid"
+                        android:inputType="number"
+                        android:maxLength="8"
                         android:textColor="#000000"
-                        android:maxLength="8"/>
+                        android:textColorHint="#8E8D8D"
+                        android:textSize="12.5sp" />
                 </LinearLayout>
                 <LinearLayout
 

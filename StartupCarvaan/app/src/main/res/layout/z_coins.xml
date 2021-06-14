@@ -34,7 +34,7 @@
                 android:layout_marginLeft="20dp"
 
 
-                android:src="@drawable/vsm_coin" />
+                android:src="@drawable/bonuscoin" />
 
             <TextView
                 android:id="@+id/Redeemtext"

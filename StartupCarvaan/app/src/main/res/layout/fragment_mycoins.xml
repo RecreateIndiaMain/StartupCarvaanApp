@@ -97,6 +97,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
+                        android:gravity="center_vertical"
                         android:orientation="horizontal">
 
                         <TextView
@@ -116,7 +117,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="17dp"
-                            android:text="32$"
+                            android:text="32"
                             android:textColor="@color/white"
 
                             android:textSize="20sp"
@@ -124,6 +125,11 @@
 
 
                         </TextView>
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/rci"/>
 
 
                     </LinearLayout>
@@ -245,13 +251,19 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
-                        android:text="32$"
+                        android:text="32"
                         android:textColor="@color/white"
                         android:textSize="20sp"
                         android:textStyle="bold">
 
 
                     </TextView>
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/bonuscoin"/>
+
 
 
                 </LinearLayout>
