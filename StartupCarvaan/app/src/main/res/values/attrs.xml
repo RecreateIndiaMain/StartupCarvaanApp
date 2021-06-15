@@ -9,6 +9,7 @@
         <attr name="cointextcolour" format="color" />
         <attr name="bidbackground" format="color" />
         <attr name="barcolour" format="color" />
+        <attr name="helppagery" format="color" />
     </declare-styleable>
     <string name="appid">ca-app-pub-5245859690369666~7981162028</string>
     <string name="rewardid">ca-app-pub-5245859690369666/1031776146</string>

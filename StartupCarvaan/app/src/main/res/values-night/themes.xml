@@ -11,8 +11,8 @@
         <item name="backgroundlogin_suggest">@color/greyish</item>
         <item name="cointextcolour">@color/white</item>
         <item name="bidbackground">@color/black</item>
+        <item name="helppagery">@color/black</item>
         <item name="barcolour">@color/black</item>
-
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_200</item>
