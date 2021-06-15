@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
@@ -21,10 +22,14 @@ public final class FragmentMysharesBinding implements ViewBinding {
   @NonNull
   public final RecyclerView mysharerecyclerview;
 
+  @NonNull
+  public final TextView sample;
+
   private FragmentMysharesBinding(@NonNull FrameLayout rootView,
-      @NonNull RecyclerView mysharerecyclerview) {
+      @NonNull RecyclerView mysharerecyclerview, @NonNull TextView sample) {
     this.rootView = rootView;
     this.mysharerecyclerview = mysharerecyclerview;
+    this.sample = sample;
   }
 
   @Override
@@ -60,7 +65,13 @@ public final class FragmentMysharesBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentMysharesBinding((FrameLayout) rootView, mysharerecyclerview);
+      id = R.id.sample;
+      TextView sample = rootView.findViewById(id);
+      if (sample == null) {
+        break missingId;
+      }
+
+      return new FragmentMysharesBinding((FrameLayout) rootView, mysharerecyclerview, sample);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

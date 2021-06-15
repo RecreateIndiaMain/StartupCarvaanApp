@@ -35,7 +35,7 @@ public class SplashScreen extends AppCompatActivity {
 
     }
     private void gotonextpage() {
-        Paper.book().write("version","1.20");
+        Paper.book().write("version","1.10");
         if(FirebaseAuth.getInstance().getCurrentUser()!=null){
             startActivity(new Intent(SplashScreen.this,MainActivity.class));
             finish();

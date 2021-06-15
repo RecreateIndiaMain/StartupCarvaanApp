@@ -45,6 +45,7 @@ import recreate.india.main.startupcarvaan.user.user;
 
 public class myshares extends Fragment {
     private RecyclerView myshare;
+    private TextView sample;
     private FirestoreRecyclerAdapter adapter;
     private CustomProgressDialogue cpd;
     public myshares() {
@@ -62,7 +63,7 @@ public class myshares extends Fragment {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_myshares, container, false);
         myshare=view.findViewById(R.id.mysharerecyclerview);
-
+        sample=view.findViewById(R.id.sample);
         cpd= new CustomProgressDialogue(getActivity());
         Query query= FirebaseFirestore.getInstance().collection("users").document(new user().user().getUid()).collection("myshares");
         FirestoreRecyclerOptions<holdings> option=new FirestoreRecyclerOptions.Builder<holdings>().setQuery(query,holdings.class).build();
@@ -76,7 +77,6 @@ public class myshares extends Fragment {
 
             @Override
             protected void onBindViewHolder(@NonNull viewholder holder, int position, @NonNull holdings model) {
-
                 List<String> list = new ArrayList<String>();
                 list.add(0, "Price of a share : No. of shares");
                 Map<String,Integer> holding=model.getHoldings();
@@ -142,6 +142,7 @@ public class myshares extends Fragment {
                                 sharedetails[0] =value.toObject(sharedetails.class);
                                 holder.buyp.setText(String.valueOf(sharedetails[0].getBuyingprice()));
                                 holder.sellp.setText(String.valueOf(sharedetails[0].getSellingprice()));
+                                sample.setVisibility(View.GONE);
                             }
                         });
 
@@ -162,11 +163,12 @@ public class myshares extends Fragment {
 
     private class viewholder extends RecyclerView.ViewHolder {
         private CircleImageView companylogo;
-        private TextView sharename,buyp,sellp;
+        private TextView sharename,buyp,sellp,sample;
         private Button trade;
         private Spinner spin1;
         public viewholder(@NonNull View itemView) {
             super(itemView);
+
             sharename=itemView.findViewById(R.id.sharename);
             companylogo=itemView.findViewById(R.id.companylogo);
             buyp=itemView.findViewById(R.id.buyingPrice);

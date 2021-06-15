@@ -510,6 +510,7 @@ attr helperText
 attr helperTextEnabled
 attr helperTextTextAppearance
 attr helperTextTextColor
+attr helppagery
 attr hideLineWhenFilled
 attr hideMotionSpec
 attr hideOnContentScroll
@@ -1256,6 +1257,7 @@ color secondary_text_default_material_dark
 color secondary_text_default_material_light
 color secondary_text_disabled_material_dark
 color secondary_text_disabled_material_light
+color skyblue
 color switch_thumb_disabled_material_dark
 color switch_thumb_disabled_material_light
 color switch_thumb_material_dark
@@ -2510,6 +2512,7 @@ id rzp_innerbox
 id rzp_outerbox
 id rzp_securedpayments
 id rzp_theMainMagicView
+id sample
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -3907,7 +3910,7 @@ styleable ForegroundLinearLayout android_foreground android_foregroundGravity fo
 styleable Fragment android_name android_id android_tag
 styleable FragmentContainerView android_name android_tag
 styleable FragmentNavigator android_name
-styleable FullscreenAttrs backgroundcolourmain backgroundlogin_suggest barcolour bidbackground cointextcolour fullscreenBackgroundColor fullscreenTextColor maintextcolour txtsugestion
+styleable FullscreenAttrs backgroundcolourmain backgroundlogin_suggest barcolour bidbackground cointextcolour fullscreenBackgroundColor fullscreenTextColor helppagery maintextcolour txtsugestion
 styleable GradientColor android_startColor android_endColor android_type android_centerX android_centerY android_gradientRadius android_tileMode android_centerColor android_startX android_startY android_endX android_endY
 styleable GradientColorItem android_color android_offset
 styleable ImageFilterView altSrc brightness contrast crossfade overlay round roundPercent saturation warmth

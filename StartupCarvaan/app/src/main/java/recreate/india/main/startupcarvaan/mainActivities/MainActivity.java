@@ -1,5 +1,6 @@
 package recreate.india.main.startupcarvaan.mainActivities;
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -17,6 +19,10 @@ import android.widget.Toolbar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 
 import io.paperdb.Paper;
 import recreate.india.main.startupcarvaan.Helppage;
@@ -154,6 +160,20 @@ public class MainActivity extends AppCompatActivity{
     protected void onStart() {
         super.onStart();
         Paper.book().write("first","true");
+
+        String current=Paper.book().read("version");
+        FirebaseFirestore.getInstance().collection("version")
+                .document("version")
+                .addSnapshotListener(new EventListener<DocumentSnapshot>() {
+                    @Override
+                    public void onEvent(@Nullable @org.jetbrains.annotations.Nullable DocumentSnapshot value, @Nullable @org.jetbrains.annotations.Nullable FirebaseFirestoreException error) {
+                        String latest=value.getString("current");
+                        if(!current.equals(latest)){
+                            startActivity(new Intent(Intent.ACTION_VIEW,
+                                    Uri.parse("https://play.google.com/store/apps/details?id=recreate.india.main.startupcarvaan")));
+                        }
+                    }
+                });
     }
 
     @Override
