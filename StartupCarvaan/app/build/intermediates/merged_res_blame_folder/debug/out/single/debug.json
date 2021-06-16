@@ -784,6 +784,10 @@
         "source": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\drawable-v24\\star.png"
     },
     {
+        "merged": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\drawable_splash.png.flat",
+        "source": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\drawable\\splash.png"
+    },
+    {
         "merged": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_levels.xml.flat",
         "source": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\layout\\activity_levels.xml"
     },
@@ -854,6 +858,10 @@
     {
         "merged": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_biding.xml.flat",
         "source": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\layout\\fragment_biding.xml"
+    },
+    {
+        "merged": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\drawable_proiflebue.xml.flat",
+        "source": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\drawable\\proiflebue.xml"
     },
     {
         "merged": "C:\\Users\\avkg0\\Anubhav_Goyal_Projects\\StartupCarvaan\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_payin.xml.flat",

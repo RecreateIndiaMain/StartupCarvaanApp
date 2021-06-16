@@ -3,20 +3,22 @@
     <style name="Theme.StartupCarvaan" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryVariant">@color/black</item>
-        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/darkgrey</item>
+        <item name="colorOnPrimary">@color/darkgrey</item>
         <item name="maintextcolour">@color/green</item>
         <item name="backgroundcolourmain">@color/black</item>
         <item name="txtsugestion">@color/white</item>
-        <item name="backgroundlogin_suggest">@color/greyish</item>
+        <item name="backgroundlogin_suggest">@color/backdark</item>
         <item name="cointextcolour">@color/white</item>
         <item name="bidbackground">@color/black</item>
         <item name="helppagery">@color/black</item>
-        <item name="barcolour">@color/black</item>
+        <item name="barcolour">@color/newblack</item>
+        <item name="darkwhiteback">@color/darkwhite</item>
+        <item name="greyback">@color/darkgrey</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_200</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorOnSecondary">@color/darkgrey</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->

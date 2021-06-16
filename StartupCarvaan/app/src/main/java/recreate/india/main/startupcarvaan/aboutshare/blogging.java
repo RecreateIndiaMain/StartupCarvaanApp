@@ -73,6 +73,7 @@ public class blogging extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blogging);
+        
         ProgressDialog pd=new ProgressDialog(blogging.this);
         pd.setMessage("this is blogging");
         pd.show();
