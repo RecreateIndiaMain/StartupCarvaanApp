@@ -23,6 +23,13 @@
     <color name="bluepupr">#FF7981AE</color>
     <color name="hinttext">#FF8E8D8D</color>
     <color name="skyblue">#E9EAEE</color>
+    <color name="newblack">#282b30</color>
+    <color name="backdark">#3e4148</color>
+    <color name="darkgrey">#72777d</color>
+    <color name="darkwhite">#babbbf</color>
+
+
+
 
 
     <color name="purp20">#756D77</color>
