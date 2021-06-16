@@ -371,6 +371,7 @@ attr customIntegerValue
 attr customNavigationLayout
 attr customPixelDimension
 attr customStringValue
+attr darkwhiteback
 attr data
 attr dataPattern
 attr dayInvalidStyle
@@ -501,6 +502,7 @@ attr gapBetweenBars
 attr gestureInsetBottomIgnored
 attr goIcon
 attr graph
+attr greyback
 attr haloColor
 attr haloRadius
 attr handleNetworkEvents
@@ -510,6 +512,7 @@ attr helperText
 attr helperTextEnabled
 attr helperTextTextAppearance
 attr helperTextTextColor
+attr helppagery
 attr hideLineWhenFilled
 attr hideMotionSpec
 attr hideOnContentScroll
@@ -1055,6 +1058,7 @@ color ayp_item_selected
 color ayp_menu_icons
 color ayp_menu_text
 color ayp_red
+color backdark
 color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
@@ -1094,6 +1098,8 @@ color common_google_signin_btn_text_light_disabled
 color common_google_signin_btn_text_light_focused
 color common_google_signin_btn_text_light_pressed
 color common_google_signin_btn_tint
+color darkgrey
+color darkwhite
 color design_bottom_navigation_shadow_color
 color design_box_stroke_color
 color design_dark_default_color_background
@@ -1231,6 +1237,7 @@ color mtrl_textinput_disabled_color
 color mtrl_textinput_filled_box_default_background_color
 color mtrl_textinput_focused_box_stroke_color
 color mtrl_textinput_hovered_box_stroke_color
+color newblack
 color notification_action_color_filter
 color notification_icon_bg_color
 color notification_material_background_media_default_color
@@ -1256,6 +1263,7 @@ color secondary_text_default_material_dark
 color secondary_text_default_material_light
 color secondary_text_disabled_material_dark
 color secondary_text_disabled_material_light
+color skyblue
 color switch_thumb_disabled_material_dark
 color switch_thumb_disabled_material_light
 color switch_thumb_material_dark
@@ -1895,6 +1903,7 @@ drawable pp
 drawable presentation
 drawable privacy
 drawable profilelogo
+drawable proiflebue
 drawable purpledot
 drawable rci
 drawable rzp_border
@@ -2229,7 +2238,6 @@ id direct
 id disableHome
 id disablePostScroll
 id disableScroll
-id displayName
 id displayname1
 id dotLayout
 id dragDown
@@ -2510,6 +2518,7 @@ id rzp_innerbox
 id rzp_outerbox
 id rzp_securedpayments
 id rzp_theMainMagicView
+id sample
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -2578,7 +2587,6 @@ id status_bar_latest_event_content
 id stop
 id stretch
 id submenuarrow
-id submit
 id submit_area
 id tabMode
 id tag_accessibility_actions
@@ -2653,10 +2661,7 @@ id upi_id
 id upiname
 id upiphonenumber
 id useLogo
-id userAddress
-id userEmail
 id userImage
-id userPhone
 id userPostImage
 id video
 id video_title
@@ -3907,7 +3912,7 @@ styleable ForegroundLinearLayout android_foreground android_foregroundGravity fo
 styleable Fragment android_name android_id android_tag
 styleable FragmentContainerView android_name android_tag
 styleable FragmentNavigator android_name
-styleable FullscreenAttrs backgroundcolourmain backgroundlogin_suggest barcolour bidbackground cointextcolour fullscreenBackgroundColor fullscreenTextColor maintextcolour txtsugestion
+styleable FullscreenAttrs backgroundcolourmain backgroundlogin_suggest barcolour bidbackground cointextcolour darkwhiteback fullscreenBackgroundColor fullscreenTextColor greyback helppagery maintextcolour txtsugestion
 styleable GradientColor android_startColor android_endColor android_type android_centerX android_centerY android_gradientRadius android_tileMode android_centerColor android_startX android_startY android_endX android_endY
 styleable GradientColorItem android_color android_offset
 styleable ImageFilterView altSrc brightness contrast crossfade overlay round roundPercent saturation warmth

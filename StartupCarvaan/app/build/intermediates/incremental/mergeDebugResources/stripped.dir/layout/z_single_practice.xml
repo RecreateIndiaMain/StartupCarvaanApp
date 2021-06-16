@@ -34,8 +34,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="-10dp"
                 android:layout_below="@+id/videoplayer"
+                android:layout_marginTop="-10dp"
                 android:background="@drawable/circularbordersolid"
                 android:orientation="vertical">
 
@@ -132,18 +132,19 @@
                         android:textColorHint="@color/greyish"
                         android:textSize="17sp"
                         android:textStyle="bold" />
+
                     <ImageView
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_marginLeft="8dp"
-                        android:src="@drawable/bonuscoin"/>
+                        android:src="@drawable/bonuscoin" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-             android:layout_marginTop="8dp"
+                    android:layout_marginTop="8dp"
                     android:layout_marginRight="30dp"
                     android:gravity="center"
                     android:orientation="horizontal">
@@ -161,18 +162,23 @@
                         android:id="@+id/betting"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:hint="example 100 bonus coins"
+                        android:hint="ex: 100 bonus coins"
                         android:inputType="number"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="10dp"
+                        android:background="@drawable/input"
                         android:maxLength="8"
                         android:textColor="@color/black"
                         android:textColorHint="@color/hinttext"
-                        android:textSize="14sp"
-                       />
+                        android:textSize="14sp" />
+
                     <ImageView
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_marginLeft="8dp"
-                        android:src="@drawable/bonuscoin"/>
+                        android:src="@drawable/bonuscoin" />
                 </LinearLayout>
 
                 <LinearLayout

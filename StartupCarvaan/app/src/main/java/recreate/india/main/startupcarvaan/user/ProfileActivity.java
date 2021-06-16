@@ -28,11 +28,7 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
-
-
 import recreate.india.main.startupcarvaan.R;
-import recreate.india.main.startupcarvaan.aboutshare.blogging;
-import recreate.india.main.startupcarvaan.loginsignup.loginActivity;
 import recreate.india.main.startupcarvaan.mainActivities.MainActivity;
 
 public class ProfileActivity extends AppCompatActivity {

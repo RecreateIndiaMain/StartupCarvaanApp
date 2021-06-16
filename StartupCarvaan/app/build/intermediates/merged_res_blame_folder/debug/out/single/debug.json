@@ -600,6 +600,10 @@
         "source": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\layout\\z_coins.xml"
     },
     {
+        "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\drawable_proiflebue.xml.flat",
+        "source": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\drawable\\proiflebue.xml"
+    },
+    {
         "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_baseline_edit_24.png.flat",
         "source": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_edit_24.png"
     },

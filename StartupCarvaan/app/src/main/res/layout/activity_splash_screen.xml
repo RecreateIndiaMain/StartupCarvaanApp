@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/logijkr"
+    android:background="@drawable/splash"
     android:paddingTop="28dp">
 
     <ImageView
@@ -42,6 +42,7 @@
         android:gravity="center"
         android:textSize="15sp"
         android:textStyle="bold"
+        android:textColor="?attr/txtsugestion"
         android:text="Crowd funding platorm for all startups to start with"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
