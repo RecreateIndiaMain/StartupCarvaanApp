@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
 
         android:gravity="center"
-        android:background="?attr/barcolour"
+        android:background="@color/blue"
         android:padding="16dp">
 
 
