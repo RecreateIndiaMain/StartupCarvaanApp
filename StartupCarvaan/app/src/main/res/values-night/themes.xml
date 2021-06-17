@@ -14,7 +14,7 @@
         <item name="helppagery">@color/black</item>
         <item name="barcolour">@color/newblack</item>
         <item name="darkwhiteback">@color/darkwhite</item>
-        <item name="greyback">@color/darkgrey</item>
+        <item name="greyback">@color/grey</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_200</item>

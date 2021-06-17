@@ -11,7 +11,7 @@
     android:layout_marginTop="15dp"
     android:layout_marginRight="20dp"
     android:layout_marginLeft="20dp"
-app:cardBackgroundColor="@color/white"
+app:cardBackgroundColor="?attr/greyback"
 android:layout_marginBottom="4dp"
 
 
@@ -55,6 +55,7 @@ android:layout_marginBottom="4dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:lines="1"
+                android:layout_marginTop="12dp"
                 android:layout_marginLeft="18dp"
                 android:textStyle="bold"
                 android:text="watch 200dg "

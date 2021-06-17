@@ -1925,6 +1925,7 @@ drawable siginput
 drawable signup
 drawable spinnerbord
 drawable spinwhite
+drawable splash
 drawable star
 drawable startupcarvaanlogo
 drawable swend
@@ -2238,6 +2239,7 @@ id direct
 id disableHome
 id disablePostScroll
 id disableScroll
+id displayName
 id displayname1
 id dotLayout
 id dragDown
@@ -2587,6 +2589,7 @@ id status_bar_latest_event_content
 id stop
 id stretch
 id submenuarrow
+id submit
 id submit_area
 id tabMode
 id tag_accessibility_actions
@@ -2661,7 +2664,10 @@ id upi_id
 id upiname
 id upiphonenumber
 id useLogo
+id userAddress
+id userEmail
 id userImage
+id userPhone
 id userPostImage
 id video
 id video_title

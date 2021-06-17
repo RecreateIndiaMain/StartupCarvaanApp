@@ -4,6 +4,9 @@ package recreate.india.main.startupcarvaan.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -18,12 +21,51 @@ public final class ActivityCreateProfileBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
+  public final EditText description;
+
+  @NonNull
+  public final EditText displayName;
+
+  @NonNull
+  public final LinearLayout personalinfo;
+
+  @NonNull
+  public final Button submit;
+
+  @NonNull
+  public final EditText title;
+
+  @NonNull
   public final LinearLayout topbar;
 
+  @NonNull
+  public final EditText userAddress;
+
+  @NonNull
+  public final EditText userEmail;
+
+  @NonNull
+  public final ImageView userImage;
+
+  @NonNull
+  public final EditText userPhone;
+
   private ActivityCreateProfileBinding(@NonNull LinearLayout rootView,
-      @NonNull LinearLayout topbar) {
+      @NonNull EditText description, @NonNull EditText displayName,
+      @NonNull LinearLayout personalinfo, @NonNull Button submit, @NonNull EditText title,
+      @NonNull LinearLayout topbar, @NonNull EditText userAddress, @NonNull EditText userEmail,
+      @NonNull ImageView userImage, @NonNull EditText userPhone) {
     this.rootView = rootView;
+    this.description = description;
+    this.displayName = displayName;
+    this.personalinfo = personalinfo;
+    this.submit = submit;
+    this.title = title;
     this.topbar = topbar;
+    this.userAddress = userAddress;
+    this.userEmail = userEmail;
+    this.userImage = userImage;
+    this.userPhone = userPhone;
   }
 
   @Override
@@ -53,13 +95,68 @@ public final class ActivityCreateProfileBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.description;
+      EditText description = rootView.findViewById(id);
+      if (description == null) {
+        break missingId;
+      }
+
+      id = R.id.displayName;
+      EditText displayName = rootView.findViewById(id);
+      if (displayName == null) {
+        break missingId;
+      }
+
+      id = R.id.personalinfo;
+      LinearLayout personalinfo = rootView.findViewById(id);
+      if (personalinfo == null) {
+        break missingId;
+      }
+
+      id = R.id.submit;
+      Button submit = rootView.findViewById(id);
+      if (submit == null) {
+        break missingId;
+      }
+
+      id = R.id.title;
+      EditText title = rootView.findViewById(id);
+      if (title == null) {
+        break missingId;
+      }
+
       id = R.id.topbar;
       LinearLayout topbar = rootView.findViewById(id);
       if (topbar == null) {
         break missingId;
       }
 
-      return new ActivityCreateProfileBinding((LinearLayout) rootView, topbar);
+      id = R.id.userAddress;
+      EditText userAddress = rootView.findViewById(id);
+      if (userAddress == null) {
+        break missingId;
+      }
+
+      id = R.id.userEmail;
+      EditText userEmail = rootView.findViewById(id);
+      if (userEmail == null) {
+        break missingId;
+      }
+
+      id = R.id.userImage;
+      ImageView userImage = rootView.findViewById(id);
+      if (userImage == null) {
+        break missingId;
+      }
+
+      id = R.id.userPhone;
+      EditText userPhone = rootView.findViewById(id);
+      if (userPhone == null) {
+        break missingId;
+      }
+
+      return new ActivityCreateProfileBinding((LinearLayout) rootView, description, displayName,
+          personalinfo, submit, title, topbar, userAddress, userEmail, userImage, userPhone);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

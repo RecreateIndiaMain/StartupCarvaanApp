@@ -136,12 +136,12 @@
         "source": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\drawable\\helper.png"
     },
     {
-        "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
-    },
-    {
         "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\layout_sellsuccess.xml.flat",
         "source": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\layout\\sellsuccess.xml"
+    },
+    {
+        "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_thumb_up_24.png.flat",
@@ -778,6 +778,10 @@
     {
         "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\drawable_input.xml.flat",
         "source": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\drawable\\input.xml"
+    },
+    {
+        "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\drawable_splash.png.flat",
+        "source": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\drawable\\splash.png"
     },
     {
         "merged": "C:\\Users\\Prachi Singhal\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_email_24dp.png.flat",
