@@ -87,7 +87,11 @@
                                 android:layout_width="32dp"
                                 android:layout_height="32dp"
                                 android:layout_marginRight="50dp"
+<<<<<<< HEAD
                                 android:src="@drawable/purpledot"/>
+=======
+                                android:src="@drawable/rci"/>
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
                             </LinearLayout>
 
                         </LinearLayout>

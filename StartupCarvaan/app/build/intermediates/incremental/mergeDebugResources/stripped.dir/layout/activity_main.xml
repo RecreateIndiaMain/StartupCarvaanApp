@@ -35,7 +35,11 @@
         app:itemTextColor="#ffffff"
         android:layout_marginBottom="0dp"
         app:itemIconTint="@color/white"
+<<<<<<< HEAD
         android:background="@color/blue"
+=======
+        android:background="?attr/barcolour"
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
         app:menu="@menu/bottom_nav_menu">
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 

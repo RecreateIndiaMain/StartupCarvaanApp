@@ -3,7 +3,7 @@
     android:height="24dp"
     android:viewportWidth="26"
     android:viewportHeight="26"
-    android:tint="@color/black">
+    android:tint="?attr/txtsugestion">
   <path
       android:fillColor="@android:color/white"
       android:pathData="M7,14l5,-5 5,5z"/>

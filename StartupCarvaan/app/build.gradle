@@ -7,15 +7,14 @@ android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
 
+
     defaultConfig {
         applicationId "recreate.india.main.startupcarvaan"
         minSdkVersion 19
         targetSdkVersion 30
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.10"
         multiDexEnabled true
-
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 

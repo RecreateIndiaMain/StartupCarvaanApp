@@ -124,8 +124,11 @@ private boolean timer;
                 else {
                     Toast.makeText(PhoneAuthActivity.this, "otp resend", Toast.LENGTH_SHORT).show();
                     startPhoneVerification(phone);
-                    mtimeleft=start_time;
-                    startTimer();
+
+                  resettimer();
+
+
+
                 }
             }
         });
@@ -136,6 +139,13 @@ private boolean timer;
                 verifyPhoneNumberWithCode(verificationId,code);
             }
         });
+    }
+
+    private void resettimer() {
+        mcounter.cancel();
+        mtimeleft=start_time;
+        startTimer();
+
     }
 
     private void signinUser(PhoneAuthCredential phoneAuthCredential) {

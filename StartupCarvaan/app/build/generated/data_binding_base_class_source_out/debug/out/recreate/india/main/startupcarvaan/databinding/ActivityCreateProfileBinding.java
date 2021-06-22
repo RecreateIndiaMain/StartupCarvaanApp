@@ -8,7 +8,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
@@ -19,7 +18,7 @@ import recreate.india.main.startupcarvaan.R;
 
 public final class ActivityCreateProfileBinding implements ViewBinding {
   @NonNull
-  private final RelativeLayout rootView;
+  private final LinearLayout rootView;
 
   @NonNull
   public final EditText description;
@@ -51,7 +50,7 @@ public final class ActivityCreateProfileBinding implements ViewBinding {
   @NonNull
   public final EditText userPhone;
 
-  private ActivityCreateProfileBinding(@NonNull RelativeLayout rootView,
+  private ActivityCreateProfileBinding(@NonNull LinearLayout rootView,
       @NonNull EditText description, @NonNull EditText displayName,
       @NonNull LinearLayout personalinfo, @NonNull Button submit, @NonNull EditText title,
       @NonNull LinearLayout topbar, @NonNull EditText userAddress, @NonNull EditText userEmail,
@@ -71,7 +70,7 @@ public final class ActivityCreateProfileBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public RelativeLayout getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -156,7 +155,7 @@ public final class ActivityCreateProfileBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityCreateProfileBinding((RelativeLayout) rootView, description, displayName,
+      return new ActivityCreateProfileBinding((LinearLayout) rootView, description, displayName,
           personalinfo, submit, title, topbar, userAddress, userEmail, userImage, userPhone);
     }
     String missingId = rootView.getResources().getResourceName(id);

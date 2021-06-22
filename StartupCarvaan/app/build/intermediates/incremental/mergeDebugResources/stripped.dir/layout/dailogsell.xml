@@ -9,7 +9,26 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:gravity="center"
+=======
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="20dp"
+        android:gravity="right">
+
+        <ImageView
+            android:id="@+id/sellclose"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/cross" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
         android:orientation="horizontal">
 
         <TextView
@@ -22,6 +41,10 @@
 
             android:gravity="right"
             android:text="$ 2.15"
+<<<<<<< HEAD
+=======
+            android:textStyle="bold"
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
             android:textColor="#E8D63C"
             android:textSize="45sp" />
 
@@ -40,6 +63,10 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="5dp"
+<<<<<<< HEAD
+=======
+        android:layout_marginTop="12dp"
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
         android:background="#000000" />
 
     <TextView

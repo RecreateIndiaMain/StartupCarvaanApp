@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+=======
+<FrameLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"

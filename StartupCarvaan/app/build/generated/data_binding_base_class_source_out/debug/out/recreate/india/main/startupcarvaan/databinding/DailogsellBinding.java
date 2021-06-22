@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -31,6 +32,9 @@ public final class DailogsellBinding implements ViewBinding {
   public final TextView priceOfShares;
 
   @NonNull
+  public final ImageView sellclose;
+
+  @NonNull
   public final EditText shares;
 
   @NonNull
@@ -40,12 +44,13 @@ public final class DailogsellBinding implements ViewBinding {
   public final TextView totalsharestosell;
 
   private DailogsellBinding(@NonNull LinearLayout rootView, @NonNull Button btnSell,
-      @NonNull TextView price, @NonNull TextView priceOfShares, @NonNull EditText shares,
-      @NonNull Spinner spinner3, @NonNull TextView totalsharestosell) {
+      @NonNull TextView price, @NonNull TextView priceOfShares, @NonNull ImageView sellclose,
+      @NonNull EditText shares, @NonNull Spinner spinner3, @NonNull TextView totalsharestosell) {
     this.rootView = rootView;
     this.btnSell = btnSell;
     this.price = price;
     this.priceOfShares = priceOfShares;
+    this.sellclose = sellclose;
     this.shares = shares;
     this.spinner3 = spinner3;
     this.totalsharestosell = totalsharestosell;
@@ -96,6 +101,12 @@ public final class DailogsellBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.sellclose;
+      ImageView sellclose = rootView.findViewById(id);
+      if (sellclose == null) {
+        break missingId;
+      }
+
       id = R.id.shares;
       EditText shares = rootView.findViewById(id);
       if (shares == null) {
@@ -114,8 +125,8 @@ public final class DailogsellBinding implements ViewBinding {
         break missingId;
       }
 
-      return new DailogsellBinding((LinearLayout) rootView, btnSell, price, priceOfShares, shares,
-          spinner3, totalsharestosell);
+      return new DailogsellBinding((LinearLayout) rootView, btnSell, price, priceOfShares,
+          sellclose, shares, spinner3, totalsharestosell);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

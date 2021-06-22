@@ -80,7 +80,11 @@
                        "
                             android:textSize="16sp"
                             android:textStyle="bold"
+<<<<<<< HEAD
                             android:textColor="@color/black"/>
+=======
+                            android:textColor="?attr/txtsugestion"/>
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -94,7 +98,11 @@
                        "
                                 android:textSize="14sp"
 
+<<<<<<< HEAD
                                 android:textColor="@color/black"/>
+=======
+                                android:textColor="?attr/txtsugestion"/>
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -108,7 +116,11 @@
                        "
                                 android:textSize="14sp"
 
+<<<<<<< HEAD
                                 android:textColor="@color/black"/>
+=======
+                                android:textColor="?attr/txtsugestion"/>
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -121,7 +133,11 @@
                        "
                             android:textSize="16sp"
                             android:textStyle="bold"
+<<<<<<< HEAD
                             android:textColor="@color/black"/>
+=======
+                            android:textColor="?attr/txtsugestion"/>
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -134,7 +150,11 @@
                        "
                                 android:textSize="14sp"
 
+<<<<<<< HEAD
                                 android:textColor="@color/black"/>
+=======
+                                android:textColor="?attr/txtsugestion"/>
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -147,7 +167,11 @@
                 "
                                 android:textSize="14sp"
 
+<<<<<<< HEAD
                                 android:textColor="@color/black"/>
+=======
+                                android:textColor="?attr/txtsugestion"/>
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -161,7 +185,11 @@
                        "
                                 android:textSize="16sp"
                                 android:textStyle="bold"
+<<<<<<< HEAD
                                 android:textColor="@color/black"/>
+=======
+                                android:textColor="?attr/txtsugestion"/>
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -175,7 +203,11 @@
                        "
                                 android:textSize="14sp"
 
+<<<<<<< HEAD
                                 android:textColor="@color/black"/>
+=======
+                                android:textColor="?attr/txtsugestion"/>
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -188,7 +220,11 @@
             "
                                 android:textSize="14sp"
 
+<<<<<<< HEAD
                                 android:textColor="@color/black"/>
+=======
+                                android:textColor="?attr/txtsugestion"/>
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -203,7 +239,11 @@
                        "
                                 android:textSize="16sp"
                                 android:textStyle="bold"
+<<<<<<< HEAD
                                 android:textColor="@color/black"/>
+=======
+                                android:textColor="?attr/txtsugestion"/>
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -216,7 +256,11 @@
                        "
                                 android:textSize="14sp"
 
+<<<<<<< HEAD
                                 android:textColor="@color/black"/>
+=======
+                                android:textColor="?attr/txtsugestion"/>
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -229,7 +273,11 @@
             "
                                 android:textSize="14sp"
 
+<<<<<<< HEAD
                                 android:textColor="@color/black"/>
+=======
+                                android:textColor="?attr/txtsugestion"/>
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -243,7 +291,11 @@
                        "
                                 android:textSize="16sp"
                                 android:textStyle="bold"
+<<<<<<< HEAD
                                 android:textColor="@color/black"/>
+=======
+                                android:textColor="?attr/txtsugestion"/>
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -257,7 +309,11 @@
                        "
                                 android:textSize="14sp"
 
+<<<<<<< HEAD
                                 android:textColor="@color/black"/>
+=======
+                                android:textColor="?attr/txtsugestion"/>
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
 
                         </LinearLayout>
 

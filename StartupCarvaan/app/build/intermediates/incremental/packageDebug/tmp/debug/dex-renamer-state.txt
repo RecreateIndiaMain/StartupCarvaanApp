@@ -1,13 +1,31 @@
+<<<<<<< HEAD
 #Sun Jun 20 11:43:08 IST 2021
+=======
+<<<<<<< HEAD
+#Wed Jun 16 19:08:07 IST 2021
+path.3=classes4.dex
+path.2=classes3.dex
+path.1=classes2.dex
+=======
+#Wed Jun 16 19:25:59 IST 2021
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
 path.3=classes3.dex
 path.2=classes2.dex
 path.1=classes.dex
+>>>>>>> b384e5d0e425d4bd8358e588282a1edfe0b938ab
 path.0=classes.dex
 renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
+<<<<<<< HEAD
 base.3=C\:\\Users\\Siddharth Chaudhary\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
 base.2=C\:\\Users\\Siddharth Chaudhary\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
 base.1=C\:\\Users\\Siddharth Chaudhary\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex
 base.0=C\:\\Users\\Siddharth Chaudhary\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+=======
+base.3=C\:\\Users\\Prachi Singhal\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes4.dex
+base.2=C\:\\Users\\Prachi Singhal\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes3.dex
+base.1=C\:\\Users\\Prachi Singhal\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes2.dex
+base.0=C\:\\Users\\Prachi Singhal\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff

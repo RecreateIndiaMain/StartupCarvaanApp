@@ -87,7 +87,7 @@
                                 android:layout_width="32dp"
                                 android:layout_height="32dp"
                                 android:layout_marginRight="50dp"
-                                android:src="@drawable/purpledot" />
+                                android:src="@drawable/rci" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -97,6 +97,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
+                        android:gravity="center_vertical"
                         android:orientation="horizontal">
 
                         <TextView
@@ -116,7 +117,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="17dp"
-                            android:text="32$"
+                            android:text="32"
                             android:textColor="@color/white"
 
                             android:textSize="20sp"
@@ -124,6 +125,7 @@
 
 
                         </TextView>
+
 
 
                     </LinearLayout>
@@ -214,7 +216,7 @@
                             android:layout_height="32dp"
 
                             android:layout_marginRight="50dp"
-                            android:src="@drawable/orangedot" />
+                            android:src="@drawable/bonuscoin" />
                     </LinearLayout>
 
 
@@ -245,13 +247,15 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
-                        android:text="32$"
+                        android:text="32"
                         android:textColor="@color/white"
                         android:textSize="20sp"
                         android:textStyle="bold">
 
 
                     </TextView>
+              
+
 
 
                 </LinearLayout>

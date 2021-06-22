@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <RelativeLayout
+=======
+<LinearLayout
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     android:background="@color/grey"
     android:orientation="vertical"
     tools:context=".user.ProfileActivity">
@@ -15,10 +20,24 @@
         android:background="#293859" />
 
     <!--Top Header Layout-->
+=======
+
+    android:orientation="vertical"
+    tools:context=".user.CreateProfile">
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="240dp"-->
+<!--        android:background="?attr/barcolour" />-->
+
+
+
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
     <LinearLayout
         android:id="@+id/topbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_alignParentTop="true"
         android:gravity="center_vertical"
         android:padding="16dp">
@@ -27,6 +46,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
+=======
+
+        android:gravity="center"
+        android:background="@color/blue"
+        android:padding="16dp">
+
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
 
         <TextView
             android:layout_width="wrap_content"
@@ -36,10 +62,13 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
+<<<<<<< HEAD
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
+=======
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
 
     </LinearLayout>
 
@@ -147,6 +176,10 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/about_me"
+<<<<<<< HEAD
+=======
+                                android:textColor="@color/goodgrey"
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
                                 android:fontFamily="@font/proximanovaregular"
                                 android:textSize="17sp"
                                 android:textStyle="bold" />
@@ -163,6 +196,11 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
+<<<<<<< HEAD
+=======
+                            android:textColor="@color/goodgrey"
+                            android:textColorHint="@color/goodgrey"
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
                             android:hint="enter anything about you that shows your personality"
                             android:maxLength="50"/>
                     </LinearLayout>
@@ -187,6 +225,10 @@
                             android:layout_height="wrap_content"
                             android:text="@string/contact"
                             android:textSize="17sp"
+<<<<<<< HEAD
+=======
+                            android:textColor="@color/goodgrey"
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
                             android:fontFamily="@font/proximanovaregular"
                             android:textStyle="bold" />
 
@@ -218,6 +260,10 @@
                             <TextView
                                 android:layout_marginLeft="20dp"
                                 android:text="+91"
+<<<<<<< HEAD
+=======
+                                android:textColor="@color/goodgrey"
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content">
 
@@ -228,6 +274,10 @@
                                 android:layout_height="wrap_content"
                                 android:hint="enter your contact number"
                                 android:textSize="15sp"
+<<<<<<< HEAD
+=======
+                                android:textColorHint="@color/goodgrey"
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
                                 android:textColor="@color/goodgrey"
                                 android:inputType="numberDecimal"
                                 android:maxLength="10"
@@ -253,6 +303,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="20dp"
+<<<<<<< HEAD
+=======
+                                android:textColorHint="@color/goodgrey"
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
                                 android:textColor="@color/goodgrey"
                                 android:hint="enter professing email id"
                                 android:textSize="15sp"
@@ -282,6 +336,10 @@
                                 android:layout_marginLeft="20dp"
                                 android:hint="your address here"
                                 android:textSize="15sp"
+<<<<<<< HEAD
+=======
+                                android:textColorHint="@color/goodgrey"
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
                                 android:textColor="@color/goodgrey"
                                 android:inputType="textPostalAddress"
                                 android:fontFamily="@font/proximanovaregular"
@@ -305,4 +363,8 @@
     </ScrollView>
 
 
+<<<<<<< HEAD
 </RelativeLayout>
+=======
+</LinearLayout>
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff

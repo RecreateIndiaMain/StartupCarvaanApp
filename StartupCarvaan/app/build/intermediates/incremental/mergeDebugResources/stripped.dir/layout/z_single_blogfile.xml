@@ -10,7 +10,11 @@
         xmlns:tools="http://schemas.android.com/tools"
         app:cardCornerRadius="10dp"
         app:cardElevation="5dp"
+<<<<<<< HEAD
         app:cardBackgroundColor="#FFFFFF"
+=======
+        app:cardBackgroundColor="?attr/greyback"
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
         >
 
         <LinearLayout
@@ -19,7 +23,11 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginBottom="15dp"
+<<<<<<< HEAD
             android:background="#FFFFFF"
+=======
+
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
             >
             <LinearLayout
                 android:layout_width="match_parent"
@@ -174,6 +182,10 @@
                         android:layout_gravity="center"
                         android:text="23"
                         android:textSize="16sp"
+<<<<<<< HEAD
+=======
+                        android:textColor="@color/black"
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
                         android:layout_marginLeft="7dp"
                         android:textStyle="bold" />
 

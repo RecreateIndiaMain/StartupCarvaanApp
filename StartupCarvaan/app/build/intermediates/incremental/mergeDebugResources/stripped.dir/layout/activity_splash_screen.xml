@@ -4,9 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
+<<<<<<< HEAD
     android:background="@drawable/logijkr"
     android:paddingTop="28dp">
 
+=======
+    android:background="@drawable/splash"
+    android:paddingTop="28dp">
+
+    
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="90dp"
@@ -42,6 +49,10 @@
         android:gravity="center"
         android:textSize="15sp"
         android:textStyle="bold"
+<<<<<<< HEAD
+=======
+        android:textColor="@color/black"
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
         android:text="Crowd funding platorm for all startups to start with"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

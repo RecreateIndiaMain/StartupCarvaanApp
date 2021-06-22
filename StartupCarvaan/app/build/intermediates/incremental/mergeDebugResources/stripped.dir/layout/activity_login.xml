@@ -194,6 +194,10 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
                 android:orientation="horizontal">
             <CheckBox
                 android:layout_width="wrap_content"
@@ -219,6 +223,10 @@
                 android:text="Sign in with Phone Number"
                 android:textColor="@color/white"
                 android:gravity="center"
+<<<<<<< HEAD
+=======
+                android:layout_marginTop="14dp"
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
                 android:background="@drawable/phonesign"
                 android:textSize="17sp"/>
             <com.google.android.gms.common.SignInButton

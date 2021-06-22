@@ -25,16 +25,35 @@
                 android:id="@+id/coins"
                 android:layout_width="match_parent"
                 android:layout_height="38dp"
+<<<<<<< HEAD
                 android:layout_marginLeft="50dp"
                 android:layout_marginRight="50dp"
                 android:background="@drawable/inputtype"
                 android:ems="10"
+=======
+
+
+                android:ems="10"
+android:textColor="@color/black"
+                android:textColorHint="@color/hinttext"
+
+
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+
+                android:background="@drawable/inputtype"
+
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
                 android:maxLength="5"
                 android:gravity="center"
                 android:hint="min 500 coins maxi 10000 coins"
                 android:inputType="number"
+<<<<<<< HEAD
                 android:textColor="@color/black"
                 android:textColorHint="@color/greyish"
+=======
+
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
                 android:textSize="16sp" />
         </LinearLayout>
         <LinearLayout
@@ -59,6 +78,10 @@
                 android:gravity="center"
                 android:layout_marginLeft="8dp"
                 android:textStyle="bold"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
                 android:textColor="#FFFFFF"
                 android:layout_marginTop="20dp"
                 android:text="0"
@@ -84,9 +107,19 @@
                     android:layout_marginRight="50dp"
                     android:layout_marginLeft="50dp"
                     android:ems="10"
+<<<<<<< HEAD
                     android:maxLength="20"
                     android:textColor="@color/black"
                     android:textColorHint="@color/greyish"
+=======
+
+                    android:textColorHint="@color/hinttext"
+
+                    android:maxLength="20"
+
+                    android:textColor="@color/black"
+
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
                     android:textSize="15sp"
                     android:background="@drawable/inputtype"
                     android:inputType="textPersonName"
@@ -103,9 +136,19 @@
                     android:layout_marginLeft="50dp"
                     android:ems="10"
                     android:textSize="15sp"
+<<<<<<< HEAD
                     android:maxLength="10"
                     android:textColor="@color/black"
                     android:textColorHint="@color/greyish"
+=======
+
+                    android:textColorHint="@color/hinttext"
+
+                    android:maxLength="10"
+
+                    android:textColor="@color/black"
+
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
                     android:background="@drawable/inputtype"
                     android:inputType="number"
                     android:gravity="center"

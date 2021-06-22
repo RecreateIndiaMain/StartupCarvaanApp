@@ -25,16 +25,23 @@
                 android:id="@+id/coins"
                 android:layout_width="match_parent"
                 android:layout_height="38dp"
+
+
+                android:ems="10"
+android:textColor="@color/black"
+                android:textColorHint="@color/hinttext"
+
+
                 android:layout_marginLeft="50dp"
                 android:layout_marginRight="50dp"
+
                 android:background="@drawable/inputtype"
-                android:ems="10"
+
                 android:maxLength="5"
                 android:gravity="center"
                 android:hint="min 500 coins maxi 10000 coins"
                 android:inputType="number"
-                android:textColor="@color/black"
-                android:textColorHint="@color/greyish"
+
                 android:textSize="16sp" />
         </LinearLayout>
         <LinearLayout
@@ -59,6 +66,7 @@
                 android:gravity="center"
                 android:layout_marginLeft="8dp"
                 android:textStyle="bold"
+
                 android:textColor="#FFFFFF"
                 android:layout_marginTop="20dp"
                 android:text="0"
@@ -84,9 +92,13 @@
                     android:layout_marginRight="50dp"
                     android:layout_marginLeft="50dp"
                     android:ems="10"
+
+                    android:textColorHint="@color/hinttext"
+
                     android:maxLength="20"
+
                     android:textColor="@color/black"
-                    android:textColorHint="@color/greyish"
+
                     android:textSize="15sp"
                     android:background="@drawable/inputtype"
                     android:inputType="textPersonName"
@@ -103,9 +115,13 @@
                     android:layout_marginLeft="50dp"
                     android:ems="10"
                     android:textSize="15sp"
+
+                    android:textColorHint="@color/hinttext"
+
                     android:maxLength="10"
+
                     android:textColor="@color/black"
-                    android:textColorHint="@color/greyish"
+
                     android:background="@drawable/inputtype"
                     android:inputType="number"
                     android:gravity="center"

@@ -7,13 +7,21 @@
     android:layout_height="wrap_content"
     app:cardCornerRadius="20dp"
     android:layout_margin="14dp"
+<<<<<<< HEAD
     app:cardBackgroundColor="#FFFFFF"
+=======
+    app:cardBackgroundColor="?greyback"
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
     app:cardElevation="15dp"
     android:elevation="15dp">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+<<<<<<< HEAD
         android:background="#FFFFFF"
+=======
+
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
         android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"

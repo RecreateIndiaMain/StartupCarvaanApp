@@ -8,6 +8,10 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+<<<<<<< HEAD
+=======
+        android:id="@+id/sample"
+>>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
         android:gravity="center"
         android:layout_gravity="center"
         android:layout_width="match_parent"
