@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="10"
+    android:background="?attr/backgroundlogin_suggest"
+    android:orientation="vertical"
+
+    android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+
+    tools:context=".loginsignup.loginActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5.2"
+        android:orientation="vertical"
+        android:gravity="bottom|center_horizontal"
+
+
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_marginTop="30dp"
+
+            android:layout_height="match_parent"
+            android:src="@drawable/imrtnew"/>
+
+
+
+
+    </LinearLayout>
+
+
+
+<!--    <EditText-->
+
+<!--        android:id="@+id/Username"-->
+<!--        android:layout_marginTop="50dp"-->
+
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@drawable/input"-->
+<!--        android:ems="10"-->
+<!--        android:layout_marginLeft="30dp"-->
+<!--        android:layout_marginRight="50dp"-->
+<!--        android:inputType="textPersonName"-->
+<!--        android:hint="Username"-->
+<!--        android:paddingLeft="8dp"-->
+<!--        android:paddingBottom="7dp"-->
+<!--        android:textColorHint="@color/greyish"-->
+<!--     />-->
+<!--        <EditText-->
+<!--        android:id="@+id/password"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@drawable/input"-->
+<!--            android:ems="10"-->
+<!--            android:layout_marginLeft="30dp"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_marginRight="50dp"-->
+<!--            android:inputType="textPassword"-->
+<!--            android:hint="Password"-->
+<!--            android:paddingLeft="8dp"-->
+<!--            android:paddingBottom="7dp"-->
+<!--            android:textColorHint="@color/greyish"-->
+<!--            />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/requestOtp"-->
+<!--        android:layout_width="70dp"-->
+<!--        android:layout_height="70dp"-->
+<!--       android:layout_marginTop="12dp"-->
+<!--        android:background="@drawable/button"-->
+
+<!--     />-->
+
+<!--<LinearLayout-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:orientation="horizontal"-->
+<!--    android:weightSum="10"-->
+<!--    android:layout_marginTop="20dp"-->
+<!--    android:gravity="center">-->
+<!--    <EditText-->
+<!--        android:id="@+id/otp"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_weight="6"-->
+<!--        android:layout_height="wrap_content"-->
+
+<!--        android:ems="10"-->
+<!--        android:inputType="textPersonName"-->
+<!--        android:hint="Enter otp"-->
+<!--        android:paddingLeft="12dp"-->
+<!--        android:paddingBottom="7dp"-->
+<!--        android:textColorHint="@color/greyish"-->
+<!--        android:background="@drawable/input"-->
+<!--        />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/verifyOtp"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--android:layout_marginLeft="20dp"-->
+<!--        android:backgroundTint="@color/greyish"-->
+<!--        android:textColor="#FFFFFF"-->
+<!--        android:text="Verify OTP"-->
+<!--         />-->
+<!--</LinearLayout>-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical"-->
+<!--            android:gravity="start">-->
+<!--<LinearLayout-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_marginTop="40dp"-->
+
+<!--    android:gravity="center_vertical">-->
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textColor="@color/greyish"-->
+<!--        android:layout_marginLeft="45dp"-->
+<!--        android:textSize="24sp"-->
+<!--        android:text="Sign In"-->
+<!--        android:textStyle="bold"/>-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginRight="30dp"-->
+<!--        android:gravity="right">-->
+<!--    <ImageView-->
+<!--        android:id="@+id/login"-->
+<!--        android:layout_width="70dp"-->
+<!--        android:layout_height="70dp"-->
+<!--        android:layout_marginRight="22dp"-->
+<!--        android:src="@drawable/but"/>-->
+<!--    </LinearLayout>-->
+
+<!--</LinearLayout>-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginBottom="0dp"-->
+
+<!--            android:gravity="center_vertical">-->
+<!--            <TextView-->
+<!--                android:id="@+id/gotoregister"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textColor="@color/greyish"-->
+<!--                android:layout_marginLeft="45dp"-->
+<!--                android:textSize="25dp"-->
+<!--                android:text="@string/Signup"-->
+<!--                android:textStyle="bold"/>-->
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginRight="45dp"-->
+<!--                android:gravity="right">-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textColor="@color/greyish"-->
+
+<!--                android:textSize="25dp"-->
+<!--                android:text="@string/forget"-->
+
+<!--                android:textStyle="bold"/>-->
+<!--            </LinearLayout>-->
+<!--        </LinearLayout>-->
+<!--        </LinearLayout>-->
+<!--        <ImageView-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="150dp"-->
+<!--            android:src="@drawable/logo"/>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4.8"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="bottom"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkprivacy"
+               android:text="• "
+                android:layout_marginBottom="20dp"/>
+                <TextView
+                    android:id="@+id/logintext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Privacy policy ,Terms and Conditions,Rules and Regulations"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="?attr/txtsugestion"
+
+                    />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/phonebutton"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:text="Sign in with Phone Number"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:background="@drawable/phonesign"
+                android:textSize="17sp"/>
+            <com.google.android.gms.common.SignInButton
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/sign_in_button"
+                android:elevation="10dp"
+                android:layout_marginBottom="75dp"
+                android:background="@drawable/googlesign"
+                android:layout_width="match_parent"
+
+                android:layout_height="46dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

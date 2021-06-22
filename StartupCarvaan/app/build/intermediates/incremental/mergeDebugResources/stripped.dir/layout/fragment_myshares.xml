@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/backgroundcolourmain"
+    tools:context=".fragments.myshares.myshares">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="You do not have any share please buy some in all shares section">
+    </TextView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mysharerecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/z_single_myshare">
+    </androidx.recyclerview.widget.RecyclerView>
+
+</FrameLayout>

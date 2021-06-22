@@ -1,0 +1,1535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/deh"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".Levels">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            app:cardBackgroundColor="@color/greyish"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:src="@drawable/unlock"
+                    android:id="@+id/L1Lock">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/proximanovaregular"
+                        android:gravity="center"
+                        android:text="Level 1"
+
+                        android:textColor="@color/white"
+
+                        android:textSize="27sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp">
+
+                        <ProgressBar
+                            android:id="@+id/progressid"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_margin="4dp"
+                            android:max="100"
+
+                            android:progressBackgroundTint="@color/green"
+                            android:progressTint="@color/yellow"
+                            android:scaleY="3.5">
+
+
+                        </ProgressBar>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@id/progressid"
+                            android:layout_alignTop="@id/progressid"
+                            android:layout_alignRight="@id/progressid"
+                            android:layout_alignBottom="@id/progressid"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="#00000000"
+                                android:gravity="center"
+                                android:text="gewfudfuwvd"
+                                android:textColor="@color/white"
+                                android:textSize="9sp"
+                                android:id="@+id/L1txt1"
+
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:background="#00000000"
+                                android:gravity="center"
+                                android:text="ksdhfjjldskfh"
+                                android:textColor="@color/white"
+                                android:textSize="9sp"
+                                android:id="@+id/L1txt2"
+                                />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="6dp"
+                        android:fontFamily="@font/proximanovaregular"
+                        android:gravity="center"
+                        android:text="Unlock it and get 50 coins"
+
+                        android:textColor="@color/white"
+
+                        android:textSize="18sp"
+                        android:id="@+id/L1txt3"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/green" />
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/green" />
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/green" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="20dp"
+            app:cardBackgroundColor="@color/greyish"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:src="@drawable/padlock"
+                    android:id="@+id/L2Lock">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/proximanovaregular"
+                        android:gravity="center"
+                        android:text="Level 2"
+
+                        android:textColor="@color/white"
+
+                        android:textSize="27sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp">
+
+                        <ProgressBar
+                            android:id="@+id/progressid2"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_margin="4dp"
+                            android:max="100"
+                            android:progressBackgroundTint="@color/green"
+                            android:progressTint="@color/yellow"
+                            android:scaleY="3">
+
+
+                        </ProgressBar>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@id/progressid2"
+                            android:layout_alignTop="@id/progressid2"
+                            android:layout_alignRight="@id/progressid2"
+                            android:layout_alignBottom="@id/progressid2"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="#00000000"
+                                android:gravity="center"
+                                android:text="gewfudfuwvd"
+                                android:textColor="@color/white"
+                                android:textSize="9sp"
+                                android:id="@+id/L2txt1"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:background="#00000000"
+                                android:gravity="center"
+                                android:text="gewfudfuwvd"
+                                android:textColor="@color/white"
+                                android:textSize="9sp"
+                                android:id="@+id/L2txt2"
+                                />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="6dp"
+                        android:fontFamily="@font/proximanovaregular"
+                        android:gravity="center"
+                        android:text="Unlock it and get 50 coins"
+
+                        android:textColor="@color/white"
+
+                        android:textSize="18sp"
+                        android:id="@+id/L2txt3"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/yellow" />
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/yellow" />
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/yellow" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="20dp"
+            app:cardBackgroundColor="@color/greyish"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:src="@drawable/padlock"
+                    android:id="@+id/L3Lock">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/proximanovaregular"
+                        android:gravity="center"
+                        android:text="Level 3"
+
+                        android:textColor="@color/white"
+
+                        android:textSize="27sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp">
+
+                        <ProgressBar
+                            android:id="@+id/progressid3"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_margin="4dp"
+                            android:max="100"
+                            android:progressBackgroundTint="@color/green"
+                            android:progressTint="@color/yellow"
+                            android:scaleY="3">
+
+                        </ProgressBar>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@id/progressid3"
+                            android:layout_alignTop="@id/progressid3"
+                            android:layout_alignRight="@id/progressid3"
+                            android:layout_alignBottom="@id/progressid3"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="#00000000"
+                                android:gravity="center"
+                                android:text="gewfudfuwvd"
+                                android:textColor="@color/white"
+                                android:textSize="9sp"
+                                android:id="@+id/L3txt1"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:background="#00000000"
+                                android:gravity="center"
+                                android:text="gewfudfuwvd"
+                                android:textColor="@color/white"
+                                android:textSize="9sp"
+                                android:id="@+id/L3txt2"
+                                />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="6dp"
+                        android:fontFamily="@font/proximanovaregular"
+                        android:gravity="center"
+                        android:text="Unlock it and get 50 coins"
+
+                        android:textColor="@color/white"
+
+                        android:textSize="18sp"
+                        android:id="@+id/L3txt3"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/yellow" />
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/yellow" />
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/yellow" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="20dp"
+            app:cardBackgroundColor="@color/greyish"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:src="@drawable/padlock"
+                    android:id="@+id/L4Lock">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/proximanovaregular"
+                        android:gravity="center"
+                        android:text="Level 4"
+
+                        android:textColor="@color/white"
+
+                        android:textSize="27sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp">
+
+                        <ProgressBar
+                            android:id="@+id/progressid4"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_margin="4dp"
+                            android:max="100"
+                            android:progressBackgroundTint="@color/green"
+                            android:progressTint="@color/yellow"
+                            android:scaleY="3">
+
+
+                        </ProgressBar>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@id/progressid4"
+                            android:layout_alignTop="@id/progressid4"
+                            android:layout_alignRight="@id/progressid4"
+                            android:layout_alignBottom="@id/progressid4"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="#00000000"
+                                android:gravity="center"
+                                android:text="gewfudfuwvd"
+                                android:textColor="@color/white"
+                                android:textSize="9sp"
+                                android:id="@+id/L4txt1"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:background="#00000000"
+                                android:gravity="center"
+                                android:text="gewfudfuwvd"
+                                android:textColor="@color/white"
+                                android:textSize="9sp"
+                                android:id="@+id/L4txt2"
+                                />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="6dp"
+                        android:fontFamily="@font/proximanovaregular"
+                        android:gravity="center"
+                        android:text="Unlock it and get 50 coins"
+
+                        android:textColor="@color/white"
+
+                        android:textSize="18sp"
+                        android:id="@+id/L4txt3"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/yellow" />
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/yellow" />
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/yellow" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="20dp"
+            app:cardBackgroundColor="@color/greyish"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:src="@drawable/padlock"
+                    android:id="@+id/L5Lock">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/proximanovaregular"
+                        android:gravity="center"
+                        android:text="Level 5"
+
+                        android:textColor="@color/white"
+
+                        android:textSize="27sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp">
+
+                        <ProgressBar
+                            android:id="@+id/progressid5"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:max="100"
+                            android:progressBackgroundTint="@color/green"
+                            android:progressTint="@color/yellow"
+                            android:scaleY="3">
+
+
+                        </ProgressBar>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@id/progressid5"
+                            android:layout_alignTop="@id/progressid5"
+                            android:layout_alignRight="@id/progressid5"
+                            android:layout_alignBottom="@id/progressid5"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="#00000000"
+                                android:gravity="center"
+                                android:text="gewfudfuwvd"
+                                android:textColor="@color/white"
+                                android:textSize="9sp"
+                                android:id="@+id/L5txt1"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:background="#00000000"
+                                android:gravity="center"
+                                android:text="gewfudfuwvd"
+                                android:textColor="@color/white"
+                                android:textSize="9sp"
+                                android:id="@+id/L5txt2"
+                                />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="6dp"
+                        android:fontFamily="@font/proximanovaregular"
+                        android:gravity="center"
+                        android:text="Unlock it and get 50 coins"
+
+                        android:textColor="@color/white"
+
+                        android:textSize="18sp"
+                        android:id="@+id/L5txt3"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/yellow" />
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/yellow" />
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/yellow" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="20dp"
+            app:cardBackgroundColor="@color/greyish"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:src="@drawable/padlock"
+                    android:id="@+id/L6Lock">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/proximanovaregular"
+                        android:gravity="center"
+                        android:text="Level 6"
+
+                        android:textColor="@color/white"
+
+                        android:textSize="27sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp">
+
+                        <ProgressBar
+                            android:id="@+id/progressid6"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:max="100"
+                            android:progressBackgroundTint="@color/green"
+                            android:progressTint="@color/yellow"
+                            android:scaleY="3">
+
+
+                        </ProgressBar>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@id/progressid6"
+                            android:layout_alignTop="@id/progressid6"
+                            android:layout_alignRight="@id/progressid6"
+                            android:layout_alignBottom="@id/progressid6"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="#00000000"
+                                android:gravity="center"
+                                android:text="gewfudfuwvd"
+                                android:textColor="@color/white"
+                                android:textSize="9sp"
+                                android:id="@+id/L6txt1"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:background="#00000000"
+                                android:gravity="center"
+                                android:text="gewfudfuwvd"
+                                android:textColor="@color/white"
+                                android:textSize="9sp"
+                                android:id="@+id/L6txt2"
+                                />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="6dp"
+                        android:fontFamily="@font/proximanovaregular"
+                        android:gravity="center"
+                        android:text="Unlock it and get 50 coins"
+
+                        android:textColor="@color/white"
+
+                        android:textSize="18sp"
+                        android:id="@+id/L6txt3"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/yellow" />
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/yellow" />
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/yellow" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="20dp"
+            app:cardBackgroundColor="@color/greyish"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:src="@drawable/padlock"
+                    android:id="@+id/L7Lock">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/proximanovaregular"
+                        android:gravity="center"
+                        android:text="Level 7"
+
+                        android:textColor="@color/white"
+
+                        android:textSize="27sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp">
+
+                        <ProgressBar
+                            android:id="@+id/progressid7"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_margin="4dp"
+                            android:max="100"
+                            android:progressBackgroundTint="@color/green"
+                            android:progressTint="@color/yellow"
+                            android:scaleY="3">
+
+
+                        </ProgressBar>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@id/progressid7"
+                            android:layout_alignTop="@id/progressid7"
+                            android:layout_alignRight="@id/progressid7"
+                            android:layout_alignBottom="@id/progressid7"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="#00000000"
+                                android:gravity="center"
+                                android:text="gewfudfuwvd"
+                                android:textColor="@color/white"
+                                android:textSize="9sp"
+                                android:id="@+id/L7txt1"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:background="#00000000"
+                                android:gravity="center"
+                                android:text="gewfudfuwvd"
+                                android:textColor="@color/white"
+                                android:textSize="9sp"
+                                android:id="@+id/L7txt2"
+                                />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="6dp"
+                        android:fontFamily="@font/proximanovaregular"
+                        android:gravity="center"
+                        android:text="Unlock it and get 50 coins"
+
+                        android:textColor="@color/white"
+
+                        android:textSize="18sp"
+                        android:id="@+id/L7txt3"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/yellow" />
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/yellow" />
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/yellow" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="20dp"
+            app:cardBackgroundColor="@color/greyish"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:src="@drawable/padlock"
+                    android:id="@+id/L8Lock">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/proximanovaregular"
+                        android:gravity="center"
+                        android:text="Level 8"
+
+                        android:textColor="@color/white"
+
+                        android:textSize="27sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp">
+
+                        <ProgressBar
+                            android:id="@+id/progressid8"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:max="100"
+                            android:progressBackgroundTint="@color/green"
+                            android:progressTint="@color/yellow"
+                            android:scaleY="3">
+
+
+                        </ProgressBar>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@id/progressid8"
+                            android:layout_alignTop="@id/progressid8"
+                            android:layout_alignRight="@id/progressid8"
+                            android:layout_alignBottom="@id/progressid8"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="#00000000"
+                                android:gravity="center"
+                                android:text="gewfudfuwvd"
+                                android:textColor="@color/white"
+                                android:textSize="9sp"
+                                android:id="@+id/L8txt1"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:background="#00000000"
+                                android:gravity="center"
+                                android:text="gewfudfuwvd"
+                                android:textColor="@color/white"
+                                android:textSize="9sp"
+                                android:id="@+id/L8txt2"
+                                />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="6dp"
+                        android:fontFamily="@font/proximanovaregular"
+                        android:gravity="center"
+                        android:text="Unlock it and get 50 coins"
+
+                        android:textColor="@color/white"
+
+                        android:textSize="18sp"
+                        android:id="@+id/L8txt3"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    <View
+        android:layout_width="8dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/yellow"/>
+
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/yellow" />
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/yellow" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="20dp"
+            app:cardBackgroundColor="@color/greyish"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:src="@drawable/padlock"
+                    android:id="@+id/L9Lock">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/proximanovaregular"
+                        android:gravity="center"
+                        android:text="Level 9"
+
+                        android:textColor="@color/white"
+
+                        android:textSize="27sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp">
+
+                        <ProgressBar
+                            android:id="@+id/progressid9"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:max="100"
+                            android:progressBackgroundTint="@color/green"
+                            android:progressTint="@color/yellow"
+                            android:scaleY="3">
+
+
+                        </ProgressBar>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@id/progressid9"
+                            android:layout_alignTop="@id/progressid9"
+                            android:layout_alignRight="@id/progressid9"
+                            android:layout_alignBottom="@id/progressid9"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="#00000000"
+                                android:gravity="center"
+                                android:text="gewfudfuwvd"
+                                android:textColor="@color/white"
+                                android:textSize="9sp"
+                                android:id="@+id/L9txt1"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:background="#00000000"
+                                android:gravity="center"
+                                android:text="gewfudfuwvd"
+                                android:textColor="@color/white"
+                                android:textSize="9sp"
+                                android:id="@+id/L9txt2"
+                                />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="6dp"
+                        android:fontFamily="@font/proximanovaregular"
+                        android:gravity="center"
+                        android:text="Unlock it and get 50 coins"
+
+                        android:textColor="@color/white"
+
+                        android:textSize="18sp"
+                        android:id="@+id/L9txt3"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/yellow" />
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/yellow" />
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/yellow" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="20dp"
+            app:cardBackgroundColor="@color/greyish"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:src="@drawable/padlock"
+                    android:id="@+id/L10Lock">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/proximanovaregular"
+                        android:gravity="center"
+                        android:text="Level 10"
+
+                        android:textColor="@color/white"
+
+                        android:textSize="27sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp">
+
+                        <ProgressBar
+                            android:id="@+id/progressid10"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:max="100"
+                            android:progressBackgroundTint="@color/green"
+                            android:progressTint="@color/yellow"
+                            android:scaleY="3">
+
+
+                        </ProgressBar>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@id/progressid10"
+                            android:layout_alignTop="@id/progressid10"
+                            android:layout_alignRight="@id/progressid10"
+                            android:layout_alignBottom="@id/progressid10"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="#00000000"
+                                android:gravity="center"
+                                android:text="gewfudfuwvd"
+                                android:textColor="@color/white"
+                                android:textSize="9sp"
+                                android:id="@+id/L10txt1"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:background="#00000000"
+                                android:gravity="center"
+                                android:text="gewfudfuwvd"
+                                android:textColor="@color/white"
+                                android:textSize="9sp"
+                                android:id="@+id/L10txt2"
+                                />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="6dp"
+                        android:fontFamily="@font/proximanovaregular"
+                        android:gravity="center"
+                        android:text="Unlock it and get 50 coins"
+
+                        android:textColor="@color/white"
+
+                        android:textSize="18sp"
+                        android:id="@+id/L10txt3"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/yellow" />
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/yellow" />
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/yellow" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="20dp"
+            app:cardBackgroundColor="@color/greyish"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:src="@drawable/padlock"
+                    android:id="@+id/L11Lock">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/proximanovaregular"
+                        android:gravity="center"
+                        android:text="Level 11"
+
+                        android:textColor="@color/white"
+
+                        android:textSize="27sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp">
+
+                        <ProgressBar
+                            android:id="@+id/progressid11"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:max="100"
+                            android:progressBackgroundTint="@color/green"
+                            android:progressTint="@color/yellow"
+                            android:scaleY="3">
+
+
+                        </ProgressBar>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@id/progressid11"
+                            android:layout_alignTop="@id/progressid11"
+                            android:layout_alignRight="@id/progressid11"
+                            android:layout_alignBottom="@id/progressid11"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="#00000000"
+                                android:gravity="center"
+                                android:text="gewfudfuwvd"
+                                android:textColor="@color/white"
+                                android:textSize="9sp"
+                                android:id="@+id/L11txt1"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:background="#00000000"
+                                android:gravity="center"
+                                android:text="gewfudfuwvd"
+                                android:textColor="@color/white"
+                                android:textSize="9sp"
+                                android:id="@+id/L11txt2"
+                                />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="6dp"
+                        android:fontFamily="@font/proximanovaregular"
+                        android:gravity="center"
+                        android:text="Unlock it and get 50 coins"
+
+                        android:textColor="@color/white"
+
+                        android:textSize="18sp"
+                        android:id="@+id/L11txt3"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>
