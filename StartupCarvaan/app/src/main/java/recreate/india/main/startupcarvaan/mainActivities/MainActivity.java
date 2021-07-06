@@ -36,6 +36,7 @@ import recreate.india.main.startupcarvaan.fragments.myshares.myshares;
 import recreate.india.main.startupcarvaan.fragments.practice.practice;
 import recreate.india.main.startupcarvaan.loginsignup.loginActivity;
 import recreate.india.main.startupcarvaan.user.ProfileActivity;
+import recreate.india.main.startupcarvaan.user.Transactions;
 
 public class MainActivity extends AppCompatActivity{
     private BottomNavigationView bnv;
@@ -110,6 +111,9 @@ public class MainActivity extends AppCompatActivity{
                 case R.id.privacypolicy:
                     startActivity(new Intent(MainActivity.this,PrivacyPolicy.class));
                     finish();
+                    break;
+                case R.id.transactions:
+                    startActivity(new Intent(MainActivity.this, Transactions.class));
                     break;
             }
             return false;

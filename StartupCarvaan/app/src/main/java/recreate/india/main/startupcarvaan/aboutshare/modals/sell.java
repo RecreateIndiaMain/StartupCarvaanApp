@@ -20,6 +20,9 @@ import androidx.fragment.app.DialogFragment;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.Timestamp;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -53,6 +56,9 @@ public class sell extends DialogFragment {
     private coin coin=new coin();
     private user_share_functions user_share_functions=new user_share_functions();
 
+    private String shareid;
+    private FirebaseFirestore ff= FirebaseFirestore.getInstance();
+    private FirebaseUser mUser;
 
     private holdings holdings=new holdings();
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
@@ -60,13 +66,15 @@ public class sell extends DialogFragment {
         LayoutInflater inflater = getActivity().getLayoutInflater();
         final View view = inflater.inflate(R.layout.dailogsell,null,false);
         Bundle bundle=getArguments();
-        String shareid=bundle.getString("shareid");
+        shareid=bundle.getString("shareid");
         share=view.findViewById(R.id.shares);
         price=view.findViewById(R.id.price);
         spin=view.findViewById(R.id.spinner3);
         available=view.findViewById(R.id.totalsharestosell);
         price_of_share=view.findViewById(R.id.price_of_shares);
         btnsell=view.findViewById(R.id.btn_sell);
+
+        mUser=FirebaseAuth.getInstance().getCurrentUser();
         List<String> list = new ArrayList<String>();
         list.add(0, "Price of a share : No. of shares");
         //retrieve holdings
@@ -167,6 +175,51 @@ public class sell extends DialogFragment {
         });
         builder.setView(view);
         return builder.create();
-
     }
+
+    public void completed_transaction(String startupName,String quantity,String price){
+        Timestamp timestamp=Timestamp.now();
+        transaction_details transaction_details=new transaction_details(startupName,quantity,price,false,timestamp);
+        ff.collection("users").document(mUser.getUid()).collection("transactions").document("details").update("completed",transaction_details).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if(task.isSuccessful())
+                {
+                    ff.collection("allshares")
+                            .document(shareid).collection("transactions")
+                            .document("details")
+                            .update("completed",transaction_details)
+                            .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    Toast.makeText(getContext(), "Successfully bought", Toast.LENGTH_SHORT).show();
+                                }
+                            });
+                }
+            }
+        });
+    }
+    public void sell_request(String startupName,String quantity,String price){
+        Timestamp timestamp=Timestamp.now();
+        transaction_details transaction_details=new transaction_details(startupName,quantity,price,false,timestamp);
+        ff.collection("users").document(mUser.getUid()).collection("transactions").document("details").update("pending",transaction_details).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if(task.isSuccessful())
+                {
+                    ff.collection("allshares")
+                            .document("shareid")
+                            .collection("transactions")
+                            .document("details").update("pending",transaction_details).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            Toast.makeText(getContext(), "Request sent", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+
+                }
+            }
+        });
+    }
+
 }

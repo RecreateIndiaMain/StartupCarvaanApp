@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
-<merger version="3"><dataSet config="main" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\jniLibs"/></dataSet><dataSet config="debug" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\debug\jniLibs"/></dataSet></merger>
-=======
-<merger version="3"><dataSet config="main" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\jniLibs"/></dataSet><dataSet config="debug" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\debug\jniLibs"/></dataSet></merger>
->>>>>>> 271cf46d5fc8dc3b0e776a4d8318af9864a354ff
