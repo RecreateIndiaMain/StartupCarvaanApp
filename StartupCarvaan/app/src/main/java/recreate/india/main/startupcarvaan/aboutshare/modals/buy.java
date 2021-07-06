@@ -25,11 +25,9 @@ import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 
-import java.sql.Time;
-import java.util.HashMap;
-
 import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.aboutshare.models.sharedetails;
+import recreate.india.main.startupcarvaan.allmodels.share.sharedetails.TransactionDetails;
 import recreate.india.main.startupcarvaan.fragments.models.sharefunctions;
 import recreate.india.main.startupcarvaan.fragments.mycoins.coin;
 import recreate.india.main.startupcarvaan.user.user_share_functions;
@@ -165,10 +163,14 @@ public class buy extends DialogFragment {
         return builder.create();
     }
 
+    // Model is changed please look at the transactions_detals
+
+    /*
+
     public void completed_transaction(String startupName,String quantity,String price){
         Timestamp timestamp=Timestamp.now();
-        transaction_details transaction_details=new transaction_details(startupName,quantity,price,true,timestamp);
-       ff.collection("users").document(mUser.getUid()).collection("transactions").document("details").update("completed",transaction_details).addOnCompleteListener(new OnCompleteListener<Void>() {
+        TransactionDetails TransactionDetails =new TransactionDetails(startupName,quantity,price,true,timestamp);
+       ff.collection("users").document(mUser.getUid()).collection("transactions").document("details").update("completed", TransactionDetails).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if(task.isSuccessful())
@@ -176,7 +178,7 @@ public class buy extends DialogFragment {
                     ff.collection("allshares")
                             .document(shareid).collection("transactions")
                             .document("details")
-                            .update("completed",transaction_details)
+                            .update("completed", TransactionDetails)
                             .addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
@@ -189,8 +191,8 @@ public class buy extends DialogFragment {
     }
     public void buy_request(String startupName,String quantity,String price){
         Timestamp timestamp=Timestamp.now();
-        transaction_details transaction_details=new transaction_details(startupName,quantity,price,true,timestamp);
-        ff.collection("users").document(mUser.getUid()).collection("transactions").document("details").update("pending",transaction_details).addOnCompleteListener(new OnCompleteListener<Void>() {
+        TransactionDetails TransactionDetails =new TransactionDetails(startupName,quantity,price,true,timestamp);
+        ff.collection("users").document(mUser.getUid()).collection("transactions").document("details").update("pending", TransactionDetails).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if(task.isSuccessful())
@@ -198,7 +200,7 @@ public class buy extends DialogFragment {
                 ff.collection("allshares")
                         .document("shareid")
                         .collection("transactions")
-                        .document("details").update("pending",transaction_details).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        .document("details").update("pending", TransactionDetails).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         Toast.makeText(getContext(), "Request sent", Toast.LENGTH_SHORT).show();
@@ -209,4 +211,5 @@ public class buy extends DialogFragment {
             }
         });
     }
+    */
 }

@@ -19,7 +19,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 
 import recreate.india.main.startupcarvaan.R;
-import recreate.india.main.startupcarvaan.aboutshare.modals.transaction_details;
+import recreate.india.main.startupcarvaan.allmodels.share.sharedetails.TransactionDetails;
 
 public class comfirmed_transactions extends Fragment {
 
@@ -40,6 +40,8 @@ public class comfirmed_transactions extends Fragment {
         user = FirebaseAuth.getInstance().getCurrentUser();
     }
 
+    // model is changed modify it
+/*
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -50,9 +52,9 @@ public class comfirmed_transactions extends Fragment {
 
 
         Query query = ff.collection("users").document(user.getUid()).collection("transactions").orderBy("details");
-        FirestoreRecyclerOptions<transaction_details> options = new FirestoreRecyclerOptions.Builder<transaction_details>().setQuery(query, transaction_details.class).build();
+        FirestoreRecyclerOptions<TransactionDetails> options = new FirestoreRecyclerOptions.Builder<TransactionDetails>().setQuery(query, TransactionDetails.class).build();
 
-        adapter = new FirestoreRecyclerAdapter<transaction_details, PostViewHolder>(options) {
+        adapter = new FirestoreRecyclerAdapter<TransactionDetails, PostViewHolder>(options) {
             @NonNull
             @Override
             public comfirmed_transactions.PostViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -61,7 +63,7 @@ public class comfirmed_transactions extends Fragment {
             }
 
             @Override
-            protected void onBindViewHolder(@NonNull comfirmed_transactions.PostViewHolder holder, int position, @NonNull transaction_details model) {
+            protected void onBindViewHolder(@NonNull comfirmed_transactions.PostViewHolder holder, int position, @NonNull TransactionDetails model) {
                 holder.startupname.setText(model.getStartupName());
                 holder.quantity.setText(model.getQuantity());
                 holder.price.setText(model.getPrice());
@@ -91,4 +93,6 @@ public class comfirmed_transactions extends Fragment {
             bought = itemView.findViewById(R.id.bought_sold_trs);
         }
     }
+
+ */
 }

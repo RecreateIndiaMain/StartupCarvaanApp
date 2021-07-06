@@ -14,13 +14,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.Timestamp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -177,49 +173,51 @@ public class sell extends DialogFragment {
         return builder.create();
     }
 
-    public void completed_transaction(String startupName,String quantity,String price){
-        Timestamp timestamp=Timestamp.now();
-        transaction_details transaction_details=new transaction_details(startupName,quantity,price,false,timestamp);
-        ff.collection("users").document(mUser.getUid()).collection("transactions").document("details").update("completed",transaction_details).addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-                if(task.isSuccessful())
-                {
-                    ff.collection("allshares")
-                            .document(shareid).collection("transactions")
-                            .document("details")
-                            .update("completed",transaction_details)
-                            .addOnCompleteListener(new OnCompleteListener<Void>() {
-                                @Override
-                                public void onComplete(@NonNull Task<Void> task) {
-                                    Toast.makeText(getContext(), "Successfully bought", Toast.LENGTH_SHORT).show();
-                                }
-                            });
-                }
-            }
-        });
-    }
-    public void sell_request(String startupName,String quantity,String price){
-        Timestamp timestamp=Timestamp.now();
-        transaction_details transaction_details=new transaction_details(startupName,quantity,price,false,timestamp);
-        ff.collection("users").document(mUser.getUid()).collection("transactions").document("details").update("pending",transaction_details).addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-                if(task.isSuccessful())
-                {
-                    ff.collection("allshares")
-                            .document("shareid")
-                            .collection("transactions")
-                            .document("details").update("pending",transaction_details).addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-                            Toast.makeText(getContext(), "Request sent", Toast.LENGTH_SHORT).show();
-                        }
-                    });
-
-                }
-            }
-        });
-    }
+    // Model changed please look at the transaction details model
+//
+//    public void completed_transaction(String startupName,String quantity,String price){
+//        Timestamp timestamp=Timestamp.now();
+//        transaction_details transaction_details=new transaction_details(startupName,quantity,price,false,timestamp);
+//        ff.collection("users").document(mUser.getUid()).collection("transactions").document("details").update("completed",transaction_details).addOnCompleteListener(new OnCompleteListener<Void>() {
+//            @Override
+//            public void onComplete(@NonNull Task<Void> task) {
+//                if(task.isSuccessful())
+//                {
+//                    ff.collection("allshares")
+//                            .document(shareid).collection("transactions")
+//                            .document("details")
+//                            .update("completed",transaction_details)
+//                            .addOnCompleteListener(new OnCompleteListener<Void>() {
+//                                @Override
+//                                public void onComplete(@NonNull Task<Void> task) {
+//                                    Toast.makeText(getContext(), "Successfully bought", Toast.LENGTH_SHORT).show();
+//                                }
+//                            });
+//                }
+//            }
+//        });
+//    }
+//    public void sell_request(String startupName,String quantity,String price){
+//        Timestamp timestamp=Timestamp.now();
+//        transaction_details transaction_details=new transaction_details(startupName,quantity,price,false,timestamp);
+//        ff.collection("users").document(mUser.getUid()).collection("transactions").document("details").update("pending",transaction_details).addOnCompleteListener(new OnCompleteListener<Void>() {
+//            @Override
+//            public void onComplete(@NonNull Task<Void> task) {
+//                if(task.isSuccessful())
+//                {
+//                    ff.collection("allshares")
+//                            .document("shareid")
+//                            .collection("transactions")
+//                            .document("details").update("pending",transaction_details).addOnCompleteListener(new OnCompleteListener<Void>() {
+//                        @Override
+//                        public void onComplete(@NonNull Task<Void> task) {
+//                            Toast.makeText(getContext(), "Request sent", Toast.LENGTH_SHORT).show();
+//                        }
+//                    });
+//
+//                }
+//            }
+//        });
+//    }
 
 }
