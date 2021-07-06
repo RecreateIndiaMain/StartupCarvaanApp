@@ -88,7 +88,7 @@ public class allshares extends Fragment {
         if(loaded==false)
             dismissDialog();
         final int[] count = {1};
-        Query query=ff.collection("allshares").orderBy("users");
+        Query query=ff.collection("allshares");
         FirestoreRecyclerOptions<allshare> option= new FirestoreRecyclerOptions.
                 Builder<allshare>().setQuery(query,allshare.class).
                 build();
