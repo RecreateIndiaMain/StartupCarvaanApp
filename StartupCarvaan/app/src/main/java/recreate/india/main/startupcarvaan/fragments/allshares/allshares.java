@@ -66,7 +66,7 @@ public class allshares extends Fragment {
     private RecyclerView recyclerView;
     private CustomProgressDialogue pDialog;
     private boolean loaded=false;
-    private LineChart lineChart;
+
     ArrayList<Integer> graph=new ArrayList<>();
     ArrayList<Entry> data=new ArrayList<>();
 
@@ -113,19 +113,22 @@ public class allshares extends Fragment {
 
                     }
                 });
+                graph.clear();
+                data.clear();
                 graph= (ArrayList<Integer>) model.getGraph();
-                lineChart.setTouchEnabled(true);
-                lineChart.setPinchZoom(true);
+                holder.lineChart.setTouchEnabled(true);
+                holder.lineChart.setPinchZoom(true);
                 for (int i=0;i<graph.size();i++){
                     data.add(new Entry(i+1,graph.get(i)));
                 }
                 LineDataSet set1;
-                if (lineChart.getData() != null &&
-                        lineChart.getData().getDataSetCount() > 0) {
-                    set1 = (LineDataSet) lineChart.getData().getDataSetByIndex(0);
+                if (holder.lineChart.getData() != null &&
+                        holder.lineChart.getData().getDataSetCount() > 0) {
+                    set1 = (LineDataSet) holder.lineChart.getData().getDataSetByIndex(0);
                     set1.setValues(data);
-                    lineChart.getData().notifyDataChanged();
-                    lineChart.notifyDataSetChanged();
+                    holder.lineChart.getData().notifyDataChanged();
+                    holder.lineChart.notifyDataSetChanged();
+                    holder.lineChart.invalidate();
                 } else {
                     set1 = new LineDataSet(data, "Price");
                     set1.setDrawIcons(false);
@@ -142,7 +145,8 @@ public class allshares extends Fragment {
                     ArrayList<ILineDataSet> dataSets = new ArrayList<>();
                     dataSets.add(set1);
                     LineData data2 = new LineData(dataSets);
-                    lineChart.setData(data2);
+                    holder.lineChart.setData(data2);
+                    holder.lineChart.invalidate();
 
                 }
                 holder.switchLayout.setOnClickListener(new View.OnClickListener() {
@@ -295,7 +299,7 @@ public class allshares extends Fragment {
         private TextView growthtext,tags;
         private ProgressBar growthbar;
         private TextView advice,nextslot,buyingprice,sellingprice;
-
+        private LineChart lineChart;
         private boolean on=true;
         public PostViewHolder(@NonNull View itemView) {
             super(itemView);
