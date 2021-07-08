@@ -65,7 +65,7 @@ public class UserFunctions {
                 }
             }
         });
-        return ans[0];
+        return !ans[0];
     }
 
     public void add_ShareForNewUser(String shareid, Integer quantity, Integer price) {
