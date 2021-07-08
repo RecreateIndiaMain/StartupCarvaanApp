@@ -67,6 +67,8 @@ public class blogging extends AppCompatActivity {
     private FirestoreRecyclerAdapter adapter;
     private FirebaseUser firebaseUser=FirebaseAuth.getInstance().getCurrentUser();
     private String shareid;
+    String ans;
+    private Button invest;
 
 
     @Override
@@ -77,9 +79,22 @@ public class blogging extends AppCompatActivity {
         pd.setMessage("this is blogging");
         pd.show();
         bottomNavigationView=findViewById(R.id.buy_sell_bottom_nav);
+        invest=findViewById(R.id.investbutton);
         bottomNavigationView.setOnNavigationItemSelectedListener(onNavigationItemReselectedListener);
         recyclerView=findViewById(R.id.aboutshare);
         shareid=getIntent().getStringExtra("shareid");
+        if(ans=="Investment")
+        {
+            invest.setVisibility(View.VISIBLE);
+            bottomNavigationView.setVisibility(View.GONE);
+
+        }
+        if(ans!="Investment")
+        {
+            invest.setVisibility(View.GONE);
+            bottomNavigationView.setVisibility(View.VISIBLE);
+
+        }
 
         Query query=ff.collection("allshares").document(shareid).collection("blogs");
         FirestoreRecyclerOptions<blogdetails> option= new FirestoreRecyclerOptions.
