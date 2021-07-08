@@ -159,12 +159,7 @@ public class UserFunctions {
        // ff.collection("users").document(firebaseUser.getUid()).update("investments", userProfile.getInvestmentcount());
     }
 
-<<<<<<< HEAD
-    private void giveRewards(Double investment) {
-        RewardFunction rewardFunction=new RewardFunction();
-=======
     public void giveRewards(Double investment) {
->>>>>>> 00056fa7e913e17ff21a3c1f15c4470992e3cf93
 
         userProfile.setCurrentpoints(userProfile.getCurrentpoints()+(investment*0.1));
         userProfile.setTotalpoints(userProfile.getTotalpoints()+(investment*0.1));
