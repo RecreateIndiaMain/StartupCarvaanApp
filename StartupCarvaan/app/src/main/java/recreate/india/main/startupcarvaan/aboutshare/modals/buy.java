@@ -50,8 +50,6 @@ public class buy extends DialogFragment {
     private sharefunctions sharefunctions=new sharefunctions();
     private userfunctions userfunctions=new userfunctions();
 
-
-
     public buy() {
     }
 
