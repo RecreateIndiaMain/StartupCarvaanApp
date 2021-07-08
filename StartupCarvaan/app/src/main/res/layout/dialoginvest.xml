@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/teal_700"
+    android:background="#C6B145"
     android:orientation="vertical"
 
     >
@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="19dp"
         android:layout_marginRight="20dp"
         android:gravity="right">
 
@@ -24,9 +24,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:layout_marginTop="18dp"
         android:layout_marginBottom="10dp"
+        android:gravity="center"
         android:orientation="horizontal">
 
         <TextView
@@ -39,9 +39,9 @@
 
             android:gravity="right"
             android:text="$ 2.15"
-            android:textStyle="bold"
-            android:textColor="#E8D63C"
-            android:textSize="50sp" />
+            android:textColor="@color/blue"
+            android:textSize="50sp"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -51,7 +51,7 @@
             android:layout_marginRight="5dp"
 
             android:text="Per Share"
-            android:textColor="#FFE8D63C"
+            android:textColor="@color/blue"
             android:textSize="26sp" />
     </LinearLayout>
 
@@ -60,7 +60,17 @@
         android:layout_height="5dp"
         android:background="#000000" />
 
+    <TextView
+        android:id="@+id/availableforbuying"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
 
+        android:text="Available:1000"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
 
     <!--    <TextView-->
     <!--        android:layout_width="wrap_content"-->
@@ -78,28 +88,28 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/sellinput"
         android:gravity="center"
-        android:layout_marginTop="20dp"
         android:hint="Enter no of shares"
         android:inputType="number"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white" />
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
 
     <Button
         android:id="@+id/btn_buy"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="25dp"
-        android:backgroundTint="@color/teal_200"
+        android:layout_marginBottom="22dp"
+        android:backgroundTint="@color/blue"
 
         android:text="Buy"
         android:textAllCaps="false"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="19sp" />
 
 

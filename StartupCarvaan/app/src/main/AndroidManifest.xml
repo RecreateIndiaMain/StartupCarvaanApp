@@ -40,7 +40,8 @@
             android:name=".user.ProfileActivity"
             android:parentActivityName=".mainActivities.MainActivity"
             android:theme="@style/MyTheme" />
-        <activity android:name=".aboutshare.blogging" />
+        <activity android:name=".aboutshare.blogging"
+            android:theme="@style/MyTheme"/>
         <activity
             android:name=".mainActivities.MainActivity"
             android:parentActivityName=".mainActivities.MainActivity" />

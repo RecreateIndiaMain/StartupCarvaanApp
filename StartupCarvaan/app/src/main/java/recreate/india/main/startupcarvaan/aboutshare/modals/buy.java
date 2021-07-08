@@ -63,7 +63,7 @@ public class buy extends DialogFragment {
 
         //assigning id to variables
         priceofshare=view.findViewById(R.id.price_of_shares);
-        availableforbuying=view.findViewById(R.id.availableforbuying);
+
         no_of_shares=view.findViewById(R.id.noofshares);
         buy_now=view.findViewById(R.id.btn_buy);
         closebuy=view.findViewById(R.id.close68);
