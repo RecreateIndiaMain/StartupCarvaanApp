@@ -9,4 +9,7 @@
 -keep class com.bumptech.glide.load.data.ParcelFileDescriptorRewinder$InternalRewinder {
   *** rewind();
 }
+# Rules for Instamojo SDK
+-keep class com.instamojo.android.**{*;}
+
 -keepresourcexmlelements manifest/application/meta-data@value=GlideModule
