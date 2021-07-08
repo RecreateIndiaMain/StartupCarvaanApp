@@ -1,69 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="20dp"
+    android:layout_margin="10dp"
+    app:cardBackgroundColor="?greyback"
+    app:cardElevation="15dp"
+    android:elevation="15dp">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:padding="5dp"
-        android:layout_margin="5dp"
-        app:cardCornerRadius="10dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@drawable/my"
+          android:padding="10dp"
+          android:gravity="center_horizontal"
+          android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_margin="5dp">
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:hint="Startupname"
+                    android:layout_height="wrap_content"
+                    android:text="Startupname"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="@color/blue"
+                    android:textStyle="bold"
+
                     android:id="@+id/startup_name_trs"
-                    android:layout_weight="3"/>
+                 />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:gravity="right">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="Quantity"
-                    android:id="@+id/quantity_trs"
-                    android:layout_weight="2"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="Price"
-                    android:id="@+id/price_trs"
-                    android:layout_weight="1"/>
+                    android:text="Bought/sold"
+                    android:textColor="@color/black"
+                    android:id="@+id/bought_sold_trs"
+                    />
+                </LinearLayout>
+
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal"
+
                 android:layout_margin="5dp">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:hint="Bought/sold"
-                    android:id="@+id/bought_sold_trs"
-                    android:layout_weight="3"/>
+                    android:text="Quantity :"
+                    android:textSize="13dp"
+                    android:layout_marginLeft="10dp"
+
+                    android:textColor="@color/black"
+                   />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="Total Amount"
+                    android:text="100"
+                    android:textColor="@color/goodgrey"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="7dp"
+                    android:id="@+id/quantity_trs"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Price :"
+                    android:textSize="13dp"
+                    android:layout_marginLeft="20dp"
+
+                    android:textColor="@color/black"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="100"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="@color/goodgrey"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    android:id="@+id/price_trs"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Total amount :"
+                    android:textSize="13dp"
+                    android:layout_marginLeft="20dp"
+
+                    android:textColor="@color/black"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="100000"
                     android:id="@+id/amount_trs"
-                    android:layout_weight="2"/>
+                    android:layout_marginLeft="8dp"
+                    android:textColor="@color/goodgrey"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+
+
+                    />
             </LinearLayout>
+          <Button
+              android:layout_width="wrap_content"
+              android:layout_height="40dp"
+              android:text="Delete"
+              android:layout_marginTop="10dp"
+              android:textColor="@color/white"
+              />
 
         </LinearLayout>
-    </androidx.cardview.widget.CardView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
