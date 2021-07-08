@@ -46,14 +46,17 @@ public class Levels extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 //        pro = findViewById(R.id.progressid);
-        Thread thread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-//                startProgress();
-            }
-        });
-        thread.start();
+//        Thread thread = new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+////                startProgress();
+//            }
+//        });
+//        thread.start();
+
+
         initialise();
+
 //        showLevel(5,4000d);
 //        l[1].setProgress(100);
 //        l[2].setProgress(80);

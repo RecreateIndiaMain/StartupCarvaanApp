@@ -6,97 +6,102 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
-8-->C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml
+8-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="30" />
-9-->C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml
+9-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:5:5-67
-11-->C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:5:22-64
+11-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:5:5-67
+11-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:5:22-64
 12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-12-->C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:6:5-79
-12-->C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:6:22-76
+12-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:6:5-79
+12-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:6:22-76
 13    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-13-->C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:7:5-75
-13-->C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:7:22-72
+13-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:7:5-75
+13-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:7:22-72
 14    <uses-permission android:name="android.permission.READ_SMS" />
-14-->C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:8:5-67
-14-->C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:8:22-64
+14-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:8:5-67
+14-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:8:22-64
 15    <uses-permission android:name="android.permission.RECEIVE_SMS" />
-15-->C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:9:5-70
-15-->C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:9:22-67
+15-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:9:5-70
+15-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:9:22-67
 16
 17    <uses-feature
-17-->C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:11:5-13:36
+17-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:11:5-13:36
 18        android:name="android.hardware.camera"
-18-->C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:12:9-47
+18-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:12:9-47
 19        android:required="false" />
-19-->C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:13:9-33
+19-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:13:9-33
 20
 21    <!-- Telephony is optional (Auto-read SMS) -->
 22    <uses-feature
-22-->[com.instamojo:android-sdk:3.5.0] C:\Users\A\.gradle\caches\transforms-3\8e98a9cc2bc806bbe2d6ea32354e9dfe\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:18:5-20:36
+22-->[com.instamojo:android-sdk:3.5.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\33cd1fb2398de9867ed66c547098654f\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:18:5-20:36
 23        android:name="android.hardware.telephony"
-23-->[com.instamojo:android-sdk:3.5.0] C:\Users\A\.gradle\caches\transforms-3\8e98a9cc2bc806bbe2d6ea32354e9dfe\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:19:9-50
+23-->[com.instamojo:android-sdk:3.5.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\33cd1fb2398de9867ed66c547098654f\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:19:9-50
 24        android:required="false" />
-24-->[com.instamojo:android-sdk:3.5.0] C:\Users\A\.gradle\caches\transforms-3\8e98a9cc2bc806bbe2d6ea32354e9dfe\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:20:9-33
+24-->[com.instamojo:android-sdk:3.5.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\33cd1fb2398de9867ed66c547098654f\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:20:9-33
 25
 26    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-26-->[in.juspay:godel:0.6.25.4.1423] C:\Users\A\.gradle\caches\transforms-3\d1686f8c7ec9ceb36455344150128744\transformed\jetified-godel-0.6.25.4.1423\AndroidManifest.xml:9:5-81
-26-->[in.juspay:godel:0.6.25.4.1423] C:\Users\A\.gradle\caches\transforms-3\d1686f8c7ec9ceb36455344150128744\transformed\jetified-godel-0.6.25.4.1423\AndroidManifest.xml:9:22-78
+26-->[in.juspay:godel:0.6.25.4.1423] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\3ea757b69128cf38facdf75d0d731432\transformed\jetified-godel-0.6.25.4.1423\AndroidManifest.xml:9:5-81
+26-->[in.juspay:godel:0.6.25.4.1423] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\3ea757b69128cf38facdf75d0d731432\transformed\jetified-godel-0.6.25.4.1423\AndroidManifest.xml:9:22-78
 27    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- Android package visibility setting -->
-27-->[in.juspay:godel:0.6.25.4.1423] C:\Users\A\.gradle\caches\transforms-3\d1686f8c7ec9ceb36455344150128744\transformed\jetified-godel-0.6.25.4.1423\AndroidManifest.xml:10:5-76
-27-->[in.juspay:godel:0.6.25.4.1423] C:\Users\A\.gradle\caches\transforms-3\d1686f8c7ec9ceb36455344150128744\transformed\jetified-godel-0.6.25.4.1423\AndroidManifest.xml:10:22-73
+27-->[in.juspay:godel:0.6.25.4.1423] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\3ea757b69128cf38facdf75d0d731432\transformed\jetified-godel-0.6.25.4.1423\AndroidManifest.xml:10:5-76
+27-->[in.juspay:godel:0.6.25.4.1423] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\3ea757b69128cf38facdf75d0d731432\transformed\jetified-godel-0.6.25.4.1423\AndroidManifest.xml:10:22-73
 28    <queries>
-28-->[com.google.android.gms:play-services-ads-lite:20.1.0] C:\Users\A\.gradle\caches\transforms-3\4ca489b9110848c1c4d16da65dec0fd7\transformed\jetified-play-services-ads-lite-20.1.0\AndroidManifest.xml:27:5-43:15
+28-->[com.google.android.gms:play-services-ads-lite:20.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\4ca489b9110848c1c4d16da65dec0fd7\transformed\jetified-play-services-ads-lite-20.1.0\AndroidManifest.xml:27:5-43:15
 29
 30        <!-- For browser content -->
 31        <intent>
-31-->[com.google.android.gms:play-services-ads-lite:20.1.0] C:\Users\A\.gradle\caches\transforms-3\4ca489b9110848c1c4d16da65dec0fd7\transformed\jetified-play-services-ads-lite-20.1.0\AndroidManifest.xml:30:9-36:18
+31-->[com.google.android.gms:play-services-ads-lite:20.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\4ca489b9110848c1c4d16da65dec0fd7\transformed\jetified-play-services-ads-lite-20.1.0\AndroidManifest.xml:30:9-36:18
 32            <action android:name="android.intent.action.VIEW" />
-32-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\A\.gradle\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:34:17-69
-32-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\A\.gradle\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:34:25-66
+32-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:34:17-69
+32-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:34:25-66
 33
 34            <category android:name="android.intent.category.BROWSABLE" />
-34-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\A\.gradle\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:37:17-78
-34-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\A\.gradle\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:37:27-75
+34-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:37:17-78
+34-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:37:27-75
 35
 36            <data android:scheme="https" />
-36-->[com.razorpay:checkout:1.6.6] C:\Users\A\.gradle\caches\transforms-3\ef631643bead73c70d3d72b463795ab4\transformed\jetified-checkout-1.6.6\AndroidManifest.xml:25:17-27:47
-36-->[com.razorpay:checkout:1.6.6] C:\Users\A\.gradle\caches\transforms-3\ef631643bead73c70d3d72b463795ab4\transformed\jetified-checkout-1.6.6\AndroidManifest.xml:27:21-44
+36-->[com.razorpay:checkout:1.6.6] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\ef631643bead73c70d3d72b463795ab4\transformed\jetified-checkout-1.6.6\AndroidManifest.xml:25:17-27:47
+36-->[com.razorpay:checkout:1.6.6] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\ef631643bead73c70d3d72b463795ab4\transformed\jetified-checkout-1.6.6\AndroidManifest.xml:27:21-44
 37        </intent>
 38        <!-- End of browser content -->
 39        <!-- For CustomTabsService -->
 40        <intent>
-40-->[com.google.android.gms:play-services-ads-lite:20.1.0] C:\Users\A\.gradle\caches\transforms-3\4ca489b9110848c1c4d16da65dec0fd7\transformed\jetified-play-services-ads-lite-20.1.0\AndroidManifest.xml:39:9-41:18
+40-->[com.google.android.gms:play-services-ads-lite:20.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\4ca489b9110848c1c4d16da65dec0fd7\transformed\jetified-play-services-ads-lite-20.1.0\AndroidManifest.xml:39:9-41:18
 41            <action android:name="android.support.customtabs.action.CustomTabsService" />
-41-->[com.google.android.gms:play-services-ads-lite:20.1.0] C:\Users\A\.gradle\caches\transforms-3\4ca489b9110848c1c4d16da65dec0fd7\transformed\jetified-play-services-ads-lite-20.1.0\AndroidManifest.xml:40:13-90
-41-->[com.google.android.gms:play-services-ads-lite:20.1.0] C:\Users\A\.gradle\caches\transforms-3\4ca489b9110848c1c4d16da65dec0fd7\transformed\jetified-play-services-ads-lite-20.1.0\AndroidManifest.xml:40:21-87
+41-->[com.google.android.gms:play-services-ads-lite:20.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\4ca489b9110848c1c4d16da65dec0fd7\transformed\jetified-play-services-ads-lite-20.1.0\AndroidManifest.xml:40:13-90
+41-->[com.google.android.gms:play-services-ads-lite:20.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\4ca489b9110848c1c4d16da65dec0fd7\transformed\jetified-play-services-ads-lite-20.1.0\AndroidManifest.xml:40:21-87
 42        </intent>
 43        <!-- End of CustomTabsService -->
 44    </queries>
 45
 46    <uses-permission android:name="android.permission.WAKE_LOCK" />
-46-->[com.google.android.gms:play-services-measurement-sdk-api:18.0.0] C:\Users\A\.gradle\caches\transforms-3\53f313d31175d99e0afb2269edaef74c\transformed\jetified-play-services-measurement-sdk-api-18.0.0\AndroidManifest.xml:25:5-68
-46-->[com.google.android.gms:play-services-measurement-sdk-api:18.0.0] C:\Users\A\.gradle\caches\transforms-3\53f313d31175d99e0afb2269edaef74c\transformed\jetified-play-services-measurement-sdk-api-18.0.0\AndroidManifest.xml:25:22-65
+46-->[com.google.android.gms:play-services-measurement-sdk-api:18.0.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\53f313d31175d99e0afb2269edaef74c\transformed\jetified-play-services-measurement-sdk-api-18.0.0\AndroidManifest.xml:25:5-68
+46-->[com.google.android.gms:play-services-measurement-sdk-api:18.0.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\53f313d31175d99e0afb2269edaef74c\transformed\jetified-play-services-measurement-sdk-api-18.0.0\AndroidManifest.xml:25:22-65
 47    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-47-->[androidx.work:work-runtime:2.1.0] C:\Users\A\.gradle\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:27:5-81
-47-->[androidx.work:work-runtime:2.1.0] C:\Users\A\.gradle\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:27:22-78
+47-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:27:5-81
+47-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:27:22-78
 48
 49    <application
+<<<<<<< HEAD
 49-->C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:15:5-68:19
+=======
+49-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:15:5-67:19
+>>>>>>> fa1c1795e1e17555417cb8dcfd5dc5c8822b2430
 50        android:allowBackup="true"
-50-->C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:16:9-35
+50-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:16:9-35
 51        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-51-->[androidx.core:core:1.3.1] C:\Users\A\.gradle\caches\transforms-3\93ad5fb70247950b640af4a3898b5cce\transformed\core-1.3.1\AndroidManifest.xml:24:18-86
+51-->[androidx.core:core:1.3.1] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\93ad5fb70247950b640af4a3898b5cce\transformed\core-1.3.1\AndroidManifest.xml:24:18-86
 52        android:debuggable="true"
 53        android:icon="@drawable/startupcarvaanlogo"
-53-->C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:17:9-52
+53-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:17:9-52
 54        android:label="@string/app_name"
-54-->C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:18:9-41
+54-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:18:9-41
 55        android:roundIcon="@drawable/startupcarvaanlogo"
-55-->C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:19:9-57
+55-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:19:9-57
 56        android:supportsRtl="true"
+<<<<<<< HEAD
 56-->C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:20:9-35
 57        android:testOnly="true"
 58        android:theme="@style/Theme.StartupCarvaan" >
@@ -667,3 +672,574 @@
 352    </application>
 353
 354</manifest>
+=======
+56-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:20:9-35
+57        android:theme="@style/Theme.StartupCarvaan" >
+57-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:21:9-52
+58        <activity android:name="recreate.india.main.startupcarvaan.instamojo" >
+58-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:22:9-29:20
+58-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:22:19-44
+59            <intent-filter>
+59-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:23:13-28:29
+60                <action android:name="android.intent.action.MAIN" />
+60-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:25:17-69
+60-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:25:25-66
+61
+62                <category android:name="android.intent.category.LAUNCHER" />
+62-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:27:17-77
+62-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:27:27-74
+63            </intent-filter>
+64        </activity>
+65        <activity android:name="recreate.india.main.startupcarvaan.allmodels.user.Example" />
+65-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:30:9-60
+65-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:30:19-57
+66        <activity android:name="recreate.india.main.startupcarvaan.user.Transactions" />
+66-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:31:9-55
+66-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:31:19-52
+67        <activity android:name="recreate.india.main.startupcarvaan.coin_exchange.rci_exchange" />
+67-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:32:9-64
+67-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:32:19-61
+68        <activity android:name="recreate.india.main.startupcarvaan.Levels" />
+68-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:33:9-44
+68-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:33:19-41
+69        <activity android:name="recreate.india.main.startupcarvaan.mainActivities.RecyclerActivity" />
+69-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:34:9-69
+69-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:34:19-66
+70        <activity android:name="recreate.india.main.startupcarvaan.payments.payout" />
+70-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:35:9-53
+70-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:35:19-50
+71        <activity android:name="recreate.india.main.startupcarvaan.payments.payin" />
+71-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:36:9-52
+71-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:36:19-49
+72        <activity android:name="recreate.india.main.startupcarvaan.Helppage" />
+72-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:37:9-46
+72-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:37:19-43
+73        <activity android:name="recreate.india.main.startupcarvaan.coin_exchange.buy_rci" />
+73-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:38:9-59
+73-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:38:19-56
+74        <activity android:name="recreate.india.main.startupcarvaan.mainActivities.IntroSliderActivity" />
+74-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:39:9-72
+74-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:39:19-69
+75        <activity
+75-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:40:9-42:46
+76            android:name="recreate.india.main.startupcarvaan.user.CreateProfile"
+76-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:41:13-47
+77            android:theme="@style/MyTheme" />
+77-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:42:13-43
+78        <activity android:name="recreate.india.main.startupcarvaan.loginsignup.PhoneAuthActivity" />
+78-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:43:9-67
+78-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:43:19-64
+79        <activity
+79-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:44:9-47:46
+80            android:name="recreate.india.main.startupcarvaan.user.ProfileActivity"
+80-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:45:13-49
+81            android:parentActivityName="recreate.india.main.startupcarvaan.mainActivities.MainActivity"
+81-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:46:13-70
+82            android:theme="@style/MyTheme" />
+82-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:47:13-43
+83        <activity android:name="recreate.india.main.startupcarvaan.aboutshare.blogging" />
+83-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:48:9-57
+83-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:48:19-54
+84        <activity
+84-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:49:9-51:73
+85            android:name="recreate.india.main.startupcarvaan.mainActivities.MainActivity"
+85-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:50:13-56
+86            android:parentActivityName="recreate.india.main.startupcarvaan.mainActivities.MainActivity" />
+86-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:51:13-70
+87        <activity android:name="recreate.india.main.startupcarvaan.mainActivities.PrivacyPolicy" />
+87-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:52:9-66
+87-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:52:19-63
+88        <activity
+88-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:53:9-55:70
+89            android:name="recreate.india.main.startupcarvaan.loginsignup.loginActivity"
+89-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:54:13-54
+90            android:theme="@style/Theme.StartupCarvaan.Fullscreen" />
+90-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:55:13-67
+91        <activity
+91-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:56:9-59:20
+92            android:name="recreate.india.main.startupcarvaan.mainActivities.SplashScreen"
+92-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:57:13-56
+93            android:theme="@style/MyTheme" >
+93-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:58:13-43
+94        </activity>
+95        <activity
+95-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:60:9-62:59
+96            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+96-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:61:13-76
+97            android:theme="@style/Base.Theme.AppCompat" />
+97-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:62:13-56
+98
+99        <meta-data
+99-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:64:9-66:70
+100            android:name="com.google.android.gms.ads.APPLICATION_ID"
+100-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:65:13-69
+101            android:value="ca-app-pub-5245859690369666~7981162028" />
+101-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:66:13-67
+102
+103        <activity
+103-->[com.shreyaspatil:EasyUpiPayment:2.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\74bf93474c281850ccf76f375b97d503\transformed\jetified-EasyUpiPayment-2.0\AndroidManifest.xml:12:9-14:81
+104            android:name="com.shreyaspatil.EasyUpiPayment.ui.PaymentUiActivity"
+104-->[com.shreyaspatil:EasyUpiPayment:2.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\74bf93474c281850ccf76f375b97d503\transformed\jetified-EasyUpiPayment-2.0\AndroidManifest.xml:13:13-80
+105            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+105-->[com.shreyaspatil:EasyUpiPayment:2.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\74bf93474c281850ccf76f375b97d503\transformed\jetified-EasyUpiPayment-2.0\AndroidManifest.xml:14:13-78
+106        <activity
+106-->[com.instamojo:android-sdk:3.5.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\33cd1fb2398de9867ed66c547098654f\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:26:9-37:20
+107            android:name="com.instamojo.android.activities.PaymentDetailsActivity"
+107-->[com.instamojo:android-sdk:3.5.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\33cd1fb2398de9867ed66c547098654f\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:27:13-83
+108            android:screenOrientation="portrait"
+108-->[com.instamojo:android-sdk:3.5.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\33cd1fb2398de9867ed66c547098654f\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:28:13-49
+109            android:theme="@style/SdkTheme" >
+109-->[com.instamojo:android-sdk:3.5.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\33cd1fb2398de9867ed66c547098654f\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:29:13-44
+110            <meta-data
+110-->[com.instamojo:android-sdk:3.5.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\33cd1fb2398de9867ed66c547098654f\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:30:13-32:54
+111                android:name="android.app.searchable"
+111-->[com.instamojo:android-sdk:3.5.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\33cd1fb2398de9867ed66c547098654f\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:31:17-54
+112                android:resource="@xml/searchable" />
+112-->[com.instamojo:android-sdk:3.5.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\33cd1fb2398de9867ed66c547098654f\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:32:17-51
+113
+114            <intent-filter>
+114-->[com.instamojo:android-sdk:3.5.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\33cd1fb2398de9867ed66c547098654f\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:34:13-36:29
+115                <action android:name="android.intent.action.SEARCH" />
+115-->[com.instamojo:android-sdk:3.5.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\33cd1fb2398de9867ed66c547098654f\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:35:17-71
+115-->[com.instamojo:android-sdk:3.5.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\33cd1fb2398de9867ed66c547098654f\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:35:25-68
+116            </intent-filter>
+117        </activity>
+118        <activity
+118-->[com.instamojo:android-sdk:3.5.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\33cd1fb2398de9867ed66c547098654f\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:38:9-44:58
+119            android:name="com.instamojo.android.activities.PaymentActivity"
+119-->[com.instamojo:android-sdk:3.5.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\33cd1fb2398de9867ed66c547098654f\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:39:13-76
+120            android:hardwareAccelerated="true"
+120-->[com.instamojo:android-sdk:3.5.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\33cd1fb2398de9867ed66c547098654f\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:40:13-47
+121            android:label="Payment"
+121-->[com.instamojo:android-sdk:3.5.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\33cd1fb2398de9867ed66c547098654f\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:41:13-36
+122            android:screenOrientation="portrait"
+122-->[com.instamojo:android-sdk:3.5.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\33cd1fb2398de9867ed66c547098654f\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:42:13-49
+123            android:theme="@style/SdkTheme"
+123-->[com.instamojo:android-sdk:3.5.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\33cd1fb2398de9867ed66c547098654f\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:43:13-44
+124            android:windowSoftInputMode="adjustResize" />
+124-->[com.instamojo:android-sdk:3.5.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\33cd1fb2398de9867ed66c547098654f\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:44:13-55
+125
+126        <uses-library
+126-->[in.juspay:godel:0.6.25.4.1423] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\3ea757b69128cf38facdf75d0d731432\transformed\jetified-godel-0.6.25.4.1423\AndroidManifest.xml:13:9-15:40
+127            android:name="org.apache.http.legacy"
+127-->[in.juspay:godel:0.6.25.4.1423] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\3ea757b69128cf38facdf75d0d731432\transformed\jetified-godel-0.6.25.4.1423\AndroidManifest.xml:14:13-50
+128            android:required="false" />
+128-->[in.juspay:godel:0.6.25.4.1423] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\3ea757b69128cf38facdf75d0d731432\transformed\jetified-godel-0.6.25.4.1423\AndroidManifest.xml:15:13-37
+129
+130        <receiver android:name="com.razorpay.RzpTokenReceiver" >
+130-->[com.razorpay:checkout:1.6.6] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\ef631643bead73c70d3d72b463795ab4\transformed\jetified-checkout-1.6.6\AndroidManifest.xml:12:9-16:20
+130-->[com.razorpay:checkout:1.6.6] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\ef631643bead73c70d3d72b463795ab4\transformed\jetified-checkout-1.6.6\AndroidManifest.xml:12:19-63
+131            <intent-filter>
+131-->[com.razorpay:checkout:1.6.6] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\ef631643bead73c70d3d72b463795ab4\transformed\jetified-checkout-1.6.6\AndroidManifest.xml:13:13-15:29
+132                <action android:name="rzp.device_token.share" />
+132-->[com.razorpay:checkout:1.6.6] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\ef631643bead73c70d3d72b463795ab4\transformed\jetified-checkout-1.6.6\AndroidManifest.xml:14:17-65
+132-->[com.razorpay:checkout:1.6.6] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\ef631643bead73c70d3d72b463795ab4\transformed\jetified-checkout-1.6.6\AndroidManifest.xml:14:25-62
+133            </intent-filter>
+134        </receiver>
+135
+136        <activity
+136-->[com.razorpay:checkout:1.6.6] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\ef631643bead73c70d3d72b463795ab4\transformed\jetified-checkout-1.6.6\AndroidManifest.xml:18:9-29:20
+137            android:name="com.razorpay.CheckoutActivity"
+137-->[com.razorpay:checkout:1.6.6] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\ef631643bead73c70d3d72b463795ab4\transformed\jetified-checkout-1.6.6\AndroidManifest.xml:19:13-57
+138            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+138-->[com.razorpay:checkout:1.6.6] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\ef631643bead73c70d3d72b463795ab4\transformed\jetified-checkout-1.6.6\AndroidManifest.xml:20:13-83
+139            android:theme="@style/CheckoutTheme" >
+139-->[com.razorpay:checkout:1.6.6] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\ef631643bead73c70d3d72b463795ab4\transformed\jetified-checkout-1.6.6\AndroidManifest.xml:21:13-49
+140            <intent-filter>
+140-->[com.razorpay:checkout:1.6.6] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\ef631643bead73c70d3d72b463795ab4\transformed\jetified-checkout-1.6.6\AndroidManifest.xml:22:13-28:29
+141                <action android:name="android.intent.action.MAIN" />
+141-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:25:17-69
+141-->C:\Users\Prachi Singhal\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:25:25-66
+142
+143                <data
+143-->[com.razorpay:checkout:1.6.6] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\ef631643bead73c70d3d72b463795ab4\transformed\jetified-checkout-1.6.6\AndroidManifest.xml:25:17-27:47
+144                    android:host="rzp.io"
+144-->[com.razorpay:checkout:1.6.6] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\ef631643bead73c70d3d72b463795ab4\transformed\jetified-checkout-1.6.6\AndroidManifest.xml:26:21-42
+145                    android:scheme="io.rzp" />
+145-->[com.razorpay:checkout:1.6.6] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\ef631643bead73c70d3d72b463795ab4\transformed\jetified-checkout-1.6.6\AndroidManifest.xml:27:21-44
+146            </intent-filter>
+147        </activity>
+148        <activity
+148-->[com.google.android.gms:play-services-auth:19.0.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\b1d3d8805390cc49e6bb7cfae0267802\transformed\jetified-play-services-auth-19.0.0\AndroidManifest.xml:23:9-27:75
+149            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+149-->[com.google.android.gms:play-services-auth:19.0.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\b1d3d8805390cc49e6bb7cfae0267802\transformed\jetified-play-services-auth-19.0.0\AndroidManifest.xml:24:13-93
+150            android:excludeFromRecents="true"
+150-->[com.google.android.gms:play-services-auth:19.0.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\b1d3d8805390cc49e6bb7cfae0267802\transformed\jetified-play-services-auth-19.0.0\AndroidManifest.xml:25:13-46
+151            android:exported="false"
+151-->[com.google.android.gms:play-services-auth:19.0.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\b1d3d8805390cc49e6bb7cfae0267802\transformed\jetified-play-services-auth-19.0.0\AndroidManifest.xml:26:13-37
+152            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+152-->[com.google.android.gms:play-services-auth:19.0.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\b1d3d8805390cc49e6bb7cfae0267802\transformed\jetified-play-services-auth-19.0.0\AndroidManifest.xml:27:13-72
+153        <!--
+154            Service handling Google Sign-In user revocation. For apps that do not integrate with
+155            Google Sign-In, this service will never be started.
+156        -->
+157        <service
+157-->[com.google.android.gms:play-services-auth:19.0.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\b1d3d8805390cc49e6bb7cfae0267802\transformed\jetified-play-services-auth-19.0.0\AndroidManifest.xml:33:9-37:51
+158            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+158-->[com.google.android.gms:play-services-auth:19.0.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\b1d3d8805390cc49e6bb7cfae0267802\transformed\jetified-play-services-auth-19.0.0\AndroidManifest.xml:34:13-89
+159            android:exported="true"
+159-->[com.google.android.gms:play-services-auth:19.0.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\b1d3d8805390cc49e6bb7cfae0267802\transformed\jetified-play-services-auth-19.0.0\AndroidManifest.xml:35:13-36
+160            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+160-->[com.google.android.gms:play-services-auth:19.0.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\b1d3d8805390cc49e6bb7cfae0267802\transformed\jetified-play-services-auth-19.0.0\AndroidManifest.xml:36:13-107
+161            android:visibleToInstantApps="true" />
+161-->[com.google.android.gms:play-services-auth:19.0.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\b1d3d8805390cc49e6bb7cfae0267802\transformed\jetified-play-services-auth-19.0.0\AndroidManifest.xml:37:13-48
+162
+163        <activity
+163-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:27:9-44:20
+164            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+164-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:28:13-80
+165            android:excludeFromRecents="true"
+165-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:29:13-46
+166            android:exported="true"
+166-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:30:13-36
+167            android:launchMode="singleTask"
+167-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:31:13-44
+168            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+168-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:32:13-72
+169            <intent-filter>
+169-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:33:13-43:29
+170                <action android:name="android.intent.action.VIEW" />
+170-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:34:17-69
+170-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:34:25-66
+171
+172                <category android:name="android.intent.category.DEFAULT" />
+172-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:36:17-76
+172-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:36:27-73
+173                <category android:name="android.intent.category.BROWSABLE" />
+173-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:37:17-78
+173-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:37:27-75
+174
+175                <data
+175-->[com.razorpay:checkout:1.6.6] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\ef631643bead73c70d3d72b463795ab4\transformed\jetified-checkout-1.6.6\AndroidManifest.xml:25:17-27:47
+176                    android:host="firebase.auth"
+176-->[com.razorpay:checkout:1.6.6] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\ef631643bead73c70d3d72b463795ab4\transformed\jetified-checkout-1.6.6\AndroidManifest.xml:26:21-42
+177                    android:path="/"
+178                    android:scheme="genericidp" />
+178-->[com.razorpay:checkout:1.6.6] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\ef631643bead73c70d3d72b463795ab4\transformed\jetified-checkout-1.6.6\AndroidManifest.xml:27:21-44
+179            </intent-filter>
+180        </activity>
+181        <activity
+181-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:45:9-62:20
+182            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+182-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:46:13-79
+183            android:excludeFromRecents="true"
+183-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:47:13-46
+184            android:exported="true"
+184-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:48:13-36
+185            android:launchMode="singleTask"
+185-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:49:13-44
+186            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+186-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:50:13-72
+187            <intent-filter>
+187-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:51:13-61:29
+188                <action android:name="android.intent.action.VIEW" />
+188-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:34:17-69
+188-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:34:25-66
+189
+190                <category android:name="android.intent.category.DEFAULT" />
+190-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:36:17-76
+190-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:36:27-73
+191                <category android:name="android.intent.category.BROWSABLE" />
+191-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:37:17-78
+191-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:37:27-75
+192
+193                <data
+193-->[com.razorpay:checkout:1.6.6] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\ef631643bead73c70d3d72b463795ab4\transformed\jetified-checkout-1.6.6\AndroidManifest.xml:25:17-27:47
+194                    android:host="firebase.auth"
+194-->[com.razorpay:checkout:1.6.6] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\ef631643bead73c70d3d72b463795ab4\transformed\jetified-checkout-1.6.6\AndroidManifest.xml:26:21-42
+195                    android:path="/"
+196                    android:scheme="recaptcha" />
+196-->[com.razorpay:checkout:1.6.6] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\ef631643bead73c70d3d72b463795ab4\transformed\jetified-checkout-1.6.6\AndroidManifest.xml:27:21-44
+197            </intent-filter>
+198        </activity>
+199
+200        <service
+200-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:64:9-73:19
+201            android:name="com.google.firebase.auth.api.fallback.service.FirebaseAuthFallbackService"
+201-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:65:13-101
+202            android:enabled="true"
+202-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:66:13-35
+203            android:exported="false" >
+203-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:67:13-37
+204            <intent-filter>
+204-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:68:13-72:29
+205                <action android:name="com.google.firebase.auth.api.gms.service.START" />
+205-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:69:17-89
+205-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:69:25-86
+206
+207                <category android:name="android.intent.category.DEFAULT" />
+207-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:36:17-76
+207-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:36:27-73
+208            </intent-filter>
+209        </service>
+210        <service
+210-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:74:9-80:19
+211            android:name="com.google.firebase.components.ComponentDiscoveryService"
+211-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:75:13-84
+212            android:directBootAware="true"
+212-->[com.google.firebase:firebase-common:19.5.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\6acebc79f6a3bfa727d94c98b437b773\transformed\jetified-firebase-common-19.5.0\AndroidManifest.xml:35:13-43
+213            android:exported="false" >
+213-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:76:13-37
+214            <meta-data
+214-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:77:13-79:85
+215                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+215-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:78:17-109
+216                android:value="com.google.firebase.components.ComponentRegistrar" />
+216-->[com.google.firebase:firebase-auth:20.0.3] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:79:17-82
+217            <meta-data
+217-->[com.google.firebase:firebase-firestore:22.1.1] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\44b5e06ac430537c6cec32f796ef6e59\transformed\jetified-firebase-firestore-22.1.1\AndroidManifest.xml:20:13-22:85
+218                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+218-->[com.google.firebase:firebase-firestore:22.1.1] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\44b5e06ac430537c6cec32f796ef6e59\transformed\jetified-firebase-firestore-22.1.1\AndroidManifest.xml:21:17-111
+219                android:value="com.google.firebase.components.ComponentRegistrar" />
+219-->[com.google.firebase:firebase-firestore:22.1.1] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\44b5e06ac430537c6cec32f796ef6e59\transformed\jetified-firebase-firestore-22.1.1\AndroidManifest.xml:22:17-82
+220            <meta-data
+220-->[com.google.firebase:firebase-storage:19.2.1] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\b004ce35a91a90394772843563b5a263\transformed\jetified-firebase-storage-19.2.1\AndroidManifest.xml:33:13-35:85
+221                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+221-->[com.google.firebase:firebase-storage:19.2.1] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\b004ce35a91a90394772843563b5a263\transformed\jetified-firebase-storage-19.2.1\AndroidManifest.xml:34:17-107
+222                android:value="com.google.firebase.components.ComponentRegistrar" />
+222-->[com.google.firebase:firebase-storage:19.2.1] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\b004ce35a91a90394772843563b5a263\transformed\jetified-firebase-storage-19.2.1\AndroidManifest.xml:35:17-82
+223            <!--
+224                This registrar is not defined in the dynamic-module-support sdk itself to allow non-firebase
+225                clients to use it as well, by defining this registrar in their own core/common library.
+226            -->
+227            <meta-data
+227-->[com.google.firebase:firebase-common:19.5.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\6acebc79f6a3bfa727d94c98b437b773\transformed\jetified-firebase-common-19.5.0\AndroidManifest.xml:43:13-45:85
+228                android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar"
+228-->[com.google.firebase:firebase-common:19.5.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\6acebc79f6a3bfa727d94c98b437b773\transformed\jetified-firebase-common-19.5.0\AndroidManifest.xml:44:17-121
+229                android:value="com.google.firebase.components.ComponentRegistrar" />
+229-->[com.google.firebase:firebase-common:19.5.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\6acebc79f6a3bfa727d94c98b437b773\transformed\jetified-firebase-common-19.5.0\AndroidManifest.xml:45:17-82
+230        </service>
+231
+232        <provider
+232-->[com.google.firebase:firebase-common:19.5.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\6acebc79f6a3bfa727d94c98b437b773\transformed\jetified-firebase-common-19.5.0\AndroidManifest.xml:26:9-31:39
+233            android:name="com.google.firebase.provider.FirebaseInitProvider"
+233-->[com.google.firebase:firebase-common:19.5.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\6acebc79f6a3bfa727d94c98b437b773\transformed\jetified-firebase-common-19.5.0\AndroidManifest.xml:27:13-77
+234            android:authorities="recreate.india.main.startupcarvaan.firebaseinitprovider"
+234-->[com.google.firebase:firebase-common:19.5.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\6acebc79f6a3bfa727d94c98b437b773\transformed\jetified-firebase-common-19.5.0\AndroidManifest.xml:28:13-72
+235            android:directBootAware="true"
+235-->[com.google.firebase:firebase-common:19.5.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\6acebc79f6a3bfa727d94c98b437b773\transformed\jetified-firebase-common-19.5.0\AndroidManifest.xml:29:13-43
+236            android:exported="false"
+236-->[com.google.firebase:firebase-common:19.5.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\6acebc79f6a3bfa727d94c98b437b773\transformed\jetified-firebase-common-19.5.0\AndroidManifest.xml:30:13-37
+237            android:initOrder="100" />
+237-->[com.google.firebase:firebase-common:19.5.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\6acebc79f6a3bfa727d94c98b437b773\transformed\jetified-firebase-common-19.5.0\AndroidManifest.xml:31:13-36
+238
+239        <activity
+239-->[com.google.android.gms:play-services-base:17.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\e8b304bbb6199db2eacb9fa35410888e\transformed\jetified-play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
+240            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+240-->[com.google.android.gms:play-services-base:17.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\e8b304bbb6199db2eacb9fa35410888e\transformed\jetified-play-services-base-17.1.0\AndroidManifest.xml:24:13-79
+241            android:exported="false"
+241-->[com.google.android.gms:play-services-base:17.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\e8b304bbb6199db2eacb9fa35410888e\transformed\jetified-play-services-base-17.1.0\AndroidManifest.xml:25:13-37
+242            android:theme="@android:style/Theme.Translucent.NoTitleBar" /> <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
+242-->[com.google.android.gms:play-services-base:17.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\e8b304bbb6199db2eacb9fa35410888e\transformed\jetified-play-services-base-17.1.0\AndroidManifest.xml:26:13-72
+243        <activity
+243-->[com.google.android.gms:play-services-ads-lite:20.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\4ca489b9110848c1c4d16da65dec0fd7\transformed\jetified-play-services-ads-lite-20.1.0\AndroidManifest.xml:48:9-52:64
+244            android:name="com.google.android.gms.ads.AdActivity"
+244-->[com.google.android.gms:play-services-ads-lite:20.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\4ca489b9110848c1c4d16da65dec0fd7\transformed\jetified-play-services-ads-lite-20.1.0\AndroidManifest.xml:49:13-65
+245            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+245-->[com.google.android.gms:play-services-ads-lite:20.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\4ca489b9110848c1c4d16da65dec0fd7\transformed\jetified-play-services-ads-lite-20.1.0\AndroidManifest.xml:50:13-122
+246            android:exported="false"
+246-->[com.google.android.gms:play-services-ads-lite:20.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\4ca489b9110848c1c4d16da65dec0fd7\transformed\jetified-play-services-ads-lite-20.1.0\AndroidManifest.xml:51:13-37
+247            android:theme="@android:style/Theme.Translucent" />
+247-->[com.google.android.gms:play-services-ads-lite:20.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\4ca489b9110848c1c4d16da65dec0fd7\transformed\jetified-play-services-ads-lite-20.1.0\AndroidManifest.xml:52:13-61
+248
+249        <provider
+249-->[com.google.android.gms:play-services-ads-lite:20.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\4ca489b9110848c1c4d16da65dec0fd7\transformed\jetified-play-services-ads-lite-20.1.0\AndroidManifest.xml:54:9-58:39
+250            android:name="com.google.android.gms.ads.MobileAdsInitProvider"
+250-->[com.google.android.gms:play-services-ads-lite:20.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\4ca489b9110848c1c4d16da65dec0fd7\transformed\jetified-play-services-ads-lite-20.1.0\AndroidManifest.xml:55:13-76
+251            android:authorities="recreate.india.main.startupcarvaan.mobileadsinitprovider"
+251-->[com.google.android.gms:play-services-ads-lite:20.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\4ca489b9110848c1c4d16da65dec0fd7\transformed\jetified-play-services-ads-lite-20.1.0\AndroidManifest.xml:56:13-73
+252            android:exported="false"
+252-->[com.google.android.gms:play-services-ads-lite:20.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\4ca489b9110848c1c4d16da65dec0fd7\transformed\jetified-play-services-ads-lite-20.1.0\AndroidManifest.xml:57:13-37
+253            android:initOrder="100" />
+253-->[com.google.android.gms:play-services-ads-lite:20.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\4ca489b9110848c1c4d16da65dec0fd7\transformed\jetified-play-services-ads-lite-20.1.0\AndroidManifest.xml:58:13-36
+254
+255        <service
+255-->[com.google.android.gms:play-services-ads-lite:20.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\4ca489b9110848c1c4d16da65dec0fd7\transformed\jetified-play-services-ads-lite-20.1.0\AndroidManifest.xml:60:9-63:40
+256            android:name="com.google.android.gms.ads.AdService"
+256-->[com.google.android.gms:play-services-ads-lite:20.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\4ca489b9110848c1c4d16da65dec0fd7\transformed\jetified-play-services-ads-lite-20.1.0\AndroidManifest.xml:61:13-64
+257            android:enabled="true"
+257-->[com.google.android.gms:play-services-ads-lite:20.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\4ca489b9110848c1c4d16da65dec0fd7\transformed\jetified-play-services-ads-lite-20.1.0\AndroidManifest.xml:62:13-35
+258            android:exported="false" />
+258-->[com.google.android.gms:play-services-ads-lite:20.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\4ca489b9110848c1c4d16da65dec0fd7\transformed\jetified-play-services-ads-lite-20.1.0\AndroidManifest.xml:63:13-37
+259
+260        <meta-data
+260-->[com.google.android.gms:play-services-basement:17.6.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\1c146cdeb05f31fd38861fedd1d886cb\transformed\jetified-play-services-basement-17.6.0\AndroidManifest.xml:23:9-25:69
+261            android:name="com.google.android.gms.version"
+261-->[com.google.android.gms:play-services-basement:17.6.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\1c146cdeb05f31fd38861fedd1d886cb\transformed\jetified-play-services-basement-17.6.0\AndroidManifest.xml:24:13-58
+262            android:value="@integer/google_play_services_version" />
+262-->[com.google.android.gms:play-services-basement:17.6.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\1c146cdeb05f31fd38861fedd1d886cb\transformed\jetified-play-services-basement-17.6.0\AndroidManifest.xml:25:13-66
+263
+264        <provider
+264-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:30:9-36:35
+265            android:name="androidx.work.impl.WorkManagerInitializer"
+265-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:31:13-69
+266            android:authorities="recreate.india.main.startupcarvaan.workmanager-init"
+266-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:32:13-68
+267            android:directBootAware="false"
+267-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:33:13-44
+268            android:exported="false"
+268-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:34:13-37
+269            android:multiprocess="true" />
+269-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:35:13-40
+270
+271        <service
+271-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:38:9-43:35
+272            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+272-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:39:13-88
+273            android:directBootAware="false"
+273-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:40:13-44
+274            android:enabled="@bool/enable_system_alarm_service_default"
+274-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:41:13-72
+275            android:exported="false" />
+275-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:42:13-37
+276        <service
+276-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:44:9-50:35
+277            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+277-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:45:13-84
+278            android:directBootAware="false"
+278-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:46:13-44
+279            android:enabled="@bool/enable_system_job_service_default"
+279-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:47:13-70
+280            android:exported="true"
+280-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:48:13-36
+281            android:permission="android.permission.BIND_JOB_SERVICE" />
+281-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:49:13-69
+282
+283        <receiver
+283-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:52:9-57:35
+284            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+284-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:53:13-88
+285            android:directBootAware="false"
+285-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:54:13-44
+286            android:enabled="true"
+286-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:55:13-35
+287            android:exported="false" />
+287-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:56:13-37
+288        <receiver
+288-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:58:9-68:20
+289            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+289-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:59:13-106
+290            android:directBootAware="false"
+290-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:60:13-44
+291            android:enabled="false"
+291-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:61:13-36
+292            android:exported="false" >
+292-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:62:13-37
+293            <intent-filter>
+293-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:64:13-67:29
+294                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+294-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:65:17-87
+294-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:65:25-84
+295                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+295-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:66:17-90
+295-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:66:25-87
+296            </intent-filter>
+297        </receiver>
+298        <receiver
+298-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:69:9-79:20
+299            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+299-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:70:13-104
+300            android:directBootAware="false"
+300-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:71:13-44
+301            android:enabled="false"
+301-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:72:13-36
+302            android:exported="false" >
+302-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:73:13-37
+303            <intent-filter>
+303-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:75:13-78:29
+304                <action android:name="android.intent.action.BATTERY_OKAY" />
+304-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:76:17-77
+304-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:76:25-74
+305                <action android:name="android.intent.action.BATTERY_LOW" />
+305-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:77:17-76
+305-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:77:25-73
+306            </intent-filter>
+307        </receiver>
+308        <receiver
+308-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:80:9-90:20
+309            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+309-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:81:13-104
+310            android:directBootAware="false"
+310-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:82:13-44
+311            android:enabled="false"
+311-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:83:13-36
+312            android:exported="false" >
+312-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:84:13-37
+313            <intent-filter>
+313-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:86:13-89:29
+314                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+314-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:87:17-83
+314-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:87:25-80
+315                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+315-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:88:17-82
+315-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:88:25-79
+316            </intent-filter>
+317        </receiver>
+318        <receiver
+318-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:91:9-100:20
+319            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+319-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:92:13-103
+320            android:directBootAware="false"
+320-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:93:13-44
+321            android:enabled="false"
+321-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:94:13-36
+322            android:exported="false" >
+322-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:95:13-37
+323            <intent-filter>
+323-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:97:13-99:29
+324                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+324-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:98:17-79
+324-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:98:25-76
+325            </intent-filter>
+326        </receiver>
+327        <receiver
+327-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:101:9-112:20
+328            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+328-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:102:13-88
+329            android:directBootAware="false"
+329-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:103:13-44
+330            android:enabled="false"
+330-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:104:13-36
+331            android:exported="false" >
+331-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:105:13-37
+332            <intent-filter>
+332-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:107:13-111:29
+333                <action android:name="android.intent.action.BOOT_COMPLETED" />
+333-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:108:17-79
+333-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:108:25-76
+334                <action android:name="android.intent.action.TIME_SET" />
+334-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:109:17-73
+334-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:109:25-70
+335                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+335-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:110:17-81
+335-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:110:25-78
+336            </intent-filter>
+337        </receiver>
+338        <receiver
+338-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:113:9-122:20
+339            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+339-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:114:13-99
+340            android:directBootAware="false"
+340-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:115:13-44
+341            android:enabled="@bool/enable_system_alarm_service_default"
+341-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:116:13-72
+342            android:exported="false" >
+342-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:117:13-37
+343            <intent-filter>
+343-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:119:13-121:29
+344                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+344-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:120:17-98
+344-->[androidx.work:work-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:120:25-95
+345            </intent-filter>
+346        </receiver>
+347
+348        <service
+348-->[androidx.room:room-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\fd93c97c23ffb5bfea60caa7f8653cb5\transformed\room-runtime-2.1.0\AndroidManifest.xml:25:9-27:40
+349            android:name="androidx.room.MultiInstanceInvalidationService"
+349-->[androidx.room:room-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\fd93c97c23ffb5bfea60caa7f8653cb5\transformed\room-runtime-2.1.0\AndroidManifest.xml:26:13-74
+350            android:exported="false" />
+350-->[androidx.room:room-runtime:2.1.0] C:\Program Files\Java\jdk-12.0.2\caches\transforms-3\fd93c97c23ffb5bfea60caa7f8653cb5\transformed\room-runtime-2.1.0\AndroidManifest.xml:27:13-37
+351    </application>
+352
+353</manifest>
+>>>>>>> fa1c1795e1e17555417cb8dcfd5dc5c8822b2430
