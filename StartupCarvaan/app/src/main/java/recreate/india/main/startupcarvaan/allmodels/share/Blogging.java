@@ -1,4 +1,4 @@
-package recreate.india.main.startupcarvaan.allmodels.share.sharedetails;
+package recreate.india.main.startupcarvaan.allmodels.share;
 
 import com.google.firebase.Timestamp;
 

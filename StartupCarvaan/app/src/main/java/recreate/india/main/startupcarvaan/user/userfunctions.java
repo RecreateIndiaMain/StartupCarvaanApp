@@ -37,8 +37,6 @@ public class userfunctions {
     public void removeRci(Integer current,Integer rci){
         ff.collection("users")
                 .document(new user().user().getUid())
-                .collection("others")
-                .document("coins")
                 .update("rci",current-rci);
     }
     public void addRci(Integer current,Integer rci){
