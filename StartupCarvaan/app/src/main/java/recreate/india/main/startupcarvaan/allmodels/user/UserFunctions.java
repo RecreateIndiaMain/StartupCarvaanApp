@@ -14,10 +14,11 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import java.util.HashMap;
 
 import recreate.india.main.startupcarvaan.allmodels.share.Share;
-import recreate.india.main.startupcarvaan.allmodels.share.ShareFunctions;
 
 public class UserFunctions {
-    public UserProfile userProfile = new UserProfile();
+
+    private Integer levels[] = {200, 400, 600, 800, 1000};
+    public UserProfile userProfile = new UserProfile();  // user profile class for storing profile
     public FirebaseFirestore ff = FirebaseFirestore.getInstance();
     public FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
     public FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
@@ -33,15 +34,26 @@ public class UserFunctions {
             }
         });
     }
+// All functions decalaration :
+    /**
+     * 1.checkrci()
+     * 2.deductRci()
+     * 3.checknewUser()
+     * 4.addShareforNewUser()
+     * 5.addShareForPresentUser()
+     * 6.giveRewards()   (private)
 
+*/
 
     // check Function for Rci
+
     public boolean check_rci(Double investment) {
         // Updating RCI after investing this much amount will be done by calling deduct Functions
         return userProfile.getAddedrci() + userProfile.getProfit() >= investment;
     }
 
     // Function to deduct rci upon buying is confirmed or investing
+
     public void deduct_rci(Double investment) {
         if (userProfile.getAddedrci() >= investment) {
             userProfile.setAddedrci(userProfile.getAddedrci() - investment);
@@ -50,6 +62,7 @@ public class UserFunctions {
             userProfile.setAddedrci(0.0);
         }
         ff.collection("users").document(firebaseUser.getUid()).update("addedrci", userProfile.getAddedrci(), "profit", userProfile.getProfit());
+        giveRewards(investment);
     }
 
     // cheking new user for given share id or not
@@ -68,19 +81,20 @@ public class UserFunctions {
         return !ans[0];
     }
 
-    public void add_ShareForNewUser(String shareid, Integer quantity, Integer price) {
+    public void add_ShareForNewUser(String shareid, Double quantity, Double price) {
 
         Timestamp timestamp = Timestamp.now();
         String date = timestamp.toDate().toString();
         String days = date.charAt(0) + date.charAt(1) + "";
 
-        HashMap<String, Integer[]> holdings = new HashMap<>();
-        Integer arr[] = new Integer[2];
+        Double Investment=price*quantity;
+        HashMap<String, Double[]> holdings = new HashMap<>();
+        Double arr[] = new Double[2];
         arr[0] = quantity;
         arr[1] = price;
         holdings.put(days, arr);
         // updating the data
-        ff.collection("users").document(firebaseUser.getUid()).collection("myshares").document(shareid).update("holdings",holdings);
+        ff.collection("users").document(firebaseUser.getUid()).collection("myshares").document(shareid).update("holdings", holdings);
 
         //FOR  updating the number of investors we need share details snapshot
 
@@ -88,35 +102,89 @@ public class UserFunctions {
         ff.collection("startup").document(shareid).addSnapshotListener(new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                if(value.exists()){
-                share[0] =value.toObject(Share.class);
+                if (value.exists()) {
+                    share[0] = value.toObject(Share.class);
                 }
             }
         });
         // setting to share[0] model also
-        share[0].setInvestors(share[0].getInvestors()+1);
+        share[0].setInvestors(share[0].getInvestors() + 1);
         // updating number of investors
-        ff.collection("startup").document(shareid).update("investors",share[0].getInvestors());
-   }
-   public void addShareForPresentUser(String shareid,Integer quantity,Integer price){
+        ff.collection("startup").document(shareid).update("investors", share[0].getInvestors());
 
-        if(check_sameDate_sameShare(shareid)){
+        // updating number of investments by the user
+        userProfile.setInvestmentcount(userProfile.getInvestmentcount() + 1);
+        ff.collection("users").document(firebaseUser.getUid()).update("investments", userProfile.getInvestmentcount());
 
-       }
+        // give rewards
+        giveRewards(Investment);
+    }
+        // if user laready holds shares of these startup
+    public void addShareForPresentUser(String shareid, Double quantity, Double price) {
 
-   }
-   public boolean check_sameDate_sameShare(String shareid){
-       final HashMap<String, Integer[]>[] holdings = new HashMap[]{new HashMap<>()};
+//      TODO: please look into investment of more than a month
+        Double investment=quantity*price;
+
+        Timestamp timestamp = Timestamp.now();
+        String date = timestamp.toDate().toString();
+        String days = date.charAt(0) + date.charAt(1) + "";
+
+
+        final ShareHoldings[] shareHoldings = {new ShareHoldings()};
         ff.collection("users").document(firebaseUser.getUid()).collection("myshares").document(shareid).addSnapshotListener(new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-            if(value!=null) {
-            // Yet to complete
-            }
+                if (value != null) {
+                    shareHoldings[0] = value.toObject(ShareHoldings.class);
+
+                }
             }
         });
+        Double initaltotalAmount, finalTotalAmount;
+        HashMap<String, Double[]> holdings = shareHoldings[0].getHoldings();
 
-        return false;
-   }
+        if (holdings.containsKey(days)) {
+            // if someone has invested on the same day in the same share
+            Double n[] = new Double[2];
+            n = holdings.get(days);
+            initaltotalAmount = n[0] * n[1];
+            n[0] = n[0] + quantity;
+            finalTotalAmount = initaltotalAmount + quantity * price;
+            n[1] = finalTotalAmount / n[0];
+            ff.collection("users").document(firebaseUser.getUid()).collection("myshares").document(shareid).update("holdings", holdings);
+        } else {
+            // no shares of same day present
+            Double[] p = new Double[2];
+            p[0] = price;
+            p[1] = quantity;
+            HashMap<String, Double[]> holdings2 = new HashMap<>();
+            holdings2.put(days, p);
+            ff.collection("users").document(firebaseUser.getUid()).collection("myshares").document(shareid)
+                    .update("holdings", holdings2);
+        }
+
+        // updating number of investments by the user
+        userProfile.setInvestmentcount(userProfile.getInvestmentcount() + 1);
+        ff.collection("users").document(firebaseUser.getUid()).update("investments", userProfile.getInvestmentcount());
+
+        giveRewards(investment);
+    }
+
+    private void giveRewards(Double investment) {
+        // give reward and increase level if needed
+        Double points = userProfile.getCurrentpoints();
+        Double prize=investment*0.1;
+        points=points+prize;
+        userProfile.setCurrentpoints(points);
+        final Integer level = userProfile.getLevel();
+        if(points>=levels[level-1]){
+            userProfile.setLevel(level+1);
+            userProfile.setAddedrci(userProfile.getAddedrci()+50);
+        }
+        // updating level
+        ff.collection("users").document(firebaseUser.getUid()).update("currentpoints",points,"level",userProfile.getLevel(),"addedrci",userProfile.getAddedrci());
+
+
+    }
 
 }
