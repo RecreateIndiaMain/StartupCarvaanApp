@@ -1,5 +1,4 @@
 package recreate.india.main.startupcarvaan.user;
-
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
