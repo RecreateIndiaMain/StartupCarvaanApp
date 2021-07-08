@@ -20,6 +20,4 @@ public class holdings {
 
     public holdings() {
     }
-
-
 }

@@ -5,9 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Pair;
 import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 import io.paperdb.Paper;
 import recreate.india.main.startupcarvaan.R;
@@ -49,10 +56,24 @@ public class SplashScreen extends AppCompatActivity {
             finish();
         }
     }
-
+    class object {
+        int date;
+        int quantity;
+        int price;
+        object(int date,int quantity,int price){
+            this.date=date;
+            this.quantity=quantity;
+            this.price=price;
+        }
+    }
     @Override
     protected void onStart() {
         super.onStart();
+        Map<String, Array> holdings=new HashMap<>();
+
+        FirebaseFirestore.getInstance().collection("random")
+                .document("random")
+                .set(holdings);
     }
         // COMMENTED OUT LOGOUT CODE FOR NOW
 //        logout=findViewById(R.id.logout);
