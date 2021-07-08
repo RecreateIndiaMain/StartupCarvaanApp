@@ -2,19 +2,15 @@ package recreate.india.main.startupcarvaan.coin_exchange;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
 import android.util.Log;
-import android.view.View;
+import android.view.MenuItem;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.Toolbar;
-
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
@@ -24,16 +20,11 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
-
-import java.sql.Time;
-import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-
 import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.fragments.models.RciValue;
-import recreate.india.main.startupcarvaan.fragments.progressdialogue.CustomProgressDialogue;
 import recreate.india.main.startupcarvaan.mainActivities.MainActivity;
 
 public class rci_exchange extends AppCompatActivity {
@@ -42,21 +33,12 @@ public class rci_exchange extends AppCompatActivity {
     Toolbar toolbar;
     private RciValue rciValue = new RciValue();
     FirebaseFirestore ff = FirebaseFirestore.getInstance();
-    CustomProgressDialogue cpd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rci_exchange);
-        cpd=new CustomProgressDialogue(this);
-        cpd.show();
-        Runnable runnable=new Runnable() {
-            @Override
-            public void run() {
-                cpd.dismiss();
-            }
-        };
-        Handler handler=new Handler();
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        getSupportActionBar().setHomeButtonEnabled(true);
         lineChart=findViewById(R.id.lineChart_rci);
         lineChart.setTouchEnabled(true);
         lineChart.setPinchZoom(true);
@@ -71,7 +53,6 @@ public class rci_exchange extends AppCompatActivity {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
                 if (value != null) {
-                    handler.postDelayed(runnable,1000);
                     rciValue = value.toObject(RciValue.class);
                     price_rci.setText(String.valueOf(rciValue.getCurrentvalue()));
                     desc_rci.setText(String.valueOf(rciValue.getDescription()));
@@ -144,11 +125,21 @@ public class rci_exchange extends AppCompatActivity {
             lineChart.invalidate();
         }
     }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
     @Override
     public void onBackPressed() {
         super.onBackPressed();
         startActivity(new Intent(rci_exchange.this,MainActivity.class));
         finish();
     }
-
 }

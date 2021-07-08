@@ -17,7 +17,9 @@ import androidx.fragment.app.DialogFragment;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.Timestamp;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -25,6 +27,7 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 
 import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.aboutshare.models.sharedetails;
+import recreate.india.main.startupcarvaan.allmodels.share.sharedetails.TransactionDetails;
 import recreate.india.main.startupcarvaan.fragments.models.sharefunctions;
 import recreate.india.main.startupcarvaan.fragments.mycoins.coin;
 import recreate.india.main.startupcarvaan.user.user_share_functions;
@@ -36,8 +39,9 @@ public class buy extends DialogFragment {
     private EditText no_of_shares;
     private Button buy_now;
     private ImageView closebuy;
-
-
+    private String shareid;
+    private FirebaseUser mUser;
+    private FirebaseFirestore ff=FirebaseFirestore.getInstance();
 
     // constructor declaration
     private user_share_functions usersharefunctions= new user_share_functions();
@@ -57,7 +61,7 @@ public class buy extends DialogFragment {
         final View view = inflater.inflate(R.layout.dailogbuy,null,false);
         // from intent
         Bundle bundle=getArguments();
-        String shareid=bundle.getString("shareid");
+        shareid=bundle.getString("shareid");
 
         //assigning id to variables
         priceofshare=view.findViewById(R.id.price_of_shares);
@@ -65,6 +69,7 @@ public class buy extends DialogFragment {
         no_of_shares=view.findViewById(R.id.noofshares);
         buy_now=view.findViewById(R.id.btn_buy);
         closebuy=view.findViewById(R.id.close68);
+        mUser=FirebaseAuth.getInstance().getCurrentUser();
         closebuy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -157,4 +162,54 @@ public class buy extends DialogFragment {
         builder.setView(view);
         return builder.create();
     }
+
+    // Model is changed please look at the transactions_detals
+
+    /*
+
+    public void completed_transaction(String startupName,String quantity,String price){
+        Timestamp timestamp=Timestamp.now();
+        TransactionDetails TransactionDetails =new TransactionDetails(startupName,quantity,price,true,timestamp);
+       ff.collection("users").document(mUser.getUid()).collection("transactions").document("details").update("completed", TransactionDetails).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if(task.isSuccessful())
+                {
+                    ff.collection("allshares")
+                            .document(shareid).collection("transactions")
+                            .document("details")
+                            .update("completed", TransactionDetails)
+                            .addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            Toast.makeText(getContext(), "Successfully bought", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                }
+            }
+        });
+    }
+    public void buy_request(String startupName,String quantity,String price){
+        Timestamp timestamp=Timestamp.now();
+        TransactionDetails TransactionDetails =new TransactionDetails(startupName,quantity,price,true,timestamp);
+        ff.collection("users").document(mUser.getUid()).collection("transactions").document("details").update("pending", TransactionDetails).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if(task.isSuccessful())
+                {
+                ff.collection("allshares")
+                        .document("shareid")
+                        .collection("transactions")
+                        .document("details").update("pending", TransactionDetails).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        Toast.makeText(getContext(), "Request sent", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+                }
+            }
+        });
+    }
+    */
 }

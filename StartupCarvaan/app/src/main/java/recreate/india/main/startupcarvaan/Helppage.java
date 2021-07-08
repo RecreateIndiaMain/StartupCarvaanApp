@@ -1,11 +1,13 @@
 package recreate.india.main.startupcarvaan;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.ImageView;
@@ -42,6 +44,7 @@ public class Helppage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_helppage);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         before=findViewById(R.id.beforefaq);
         after=findViewById(R.id.afterfaq);
         l1=findViewById(R.id.linear1);
@@ -225,6 +228,15 @@ public class Helppage extends AppCompatActivity {
 
     }
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
     @Override
     public void onBackPressed() {
         super.onBackPressed();

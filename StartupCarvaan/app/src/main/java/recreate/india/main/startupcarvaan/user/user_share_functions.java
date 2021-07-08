@@ -20,9 +20,6 @@ public class user_share_functions {
 
     public user_share_functions() {
     }
-
-
-
     private FirebaseFirestore ff=FirebaseFirestore.getInstance();
     private FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
     public boolean isUser(String shareid){
@@ -80,6 +77,7 @@ public class user_share_functions {
                     }
                 });
     }
+
     public void updateShare(String shareid,Integer price,Integer quantity){
         ff.collection("users")
                 .document(user.getUid())

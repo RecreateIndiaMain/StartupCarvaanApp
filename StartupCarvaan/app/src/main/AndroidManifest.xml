@@ -2,9 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="recreate.india.main.startupcarvaan">
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
 
     <uses-feature
         android:name="android.hardware.camera"
@@ -17,6 +19,16 @@
         android:roundIcon="@drawable/startupcarvaanlogo"
         android:supportsRtl="true"
         android:theme="@style/Theme.StartupCarvaan">
+        <activity android:name=".instamojo">
+            <intent-filter>
+
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".allmodels.user.Example" />
+        <activity android:name=".user.Transactions" />
         <activity android:name=".coin_exchange.rci_exchange" />
         <activity android:name=".Levels" />
         <activity android:name=".mainActivities.RecyclerActivity" />
@@ -33,9 +45,7 @@
             android:name=".user.ProfileActivity"
             android:parentActivityName=".mainActivities.MainActivity"
             android:theme="@style/MyTheme" />
-        <activity
-            android:name=".aboutshare.blogging"
-            android:parentActivityName=".mainActivities.MainActivity" />
+        <activity android:name=".aboutshare.blogging" />
         <activity
             android:name=".mainActivities.MainActivity"
             android:parentActivityName=".mainActivities.MainActivity" />
@@ -46,10 +56,6 @@
         <activity
             android:name=".mainActivities.SplashScreen"
             android:theme="@style/MyTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"></action>
-                <category android:name="android.intent.category.LAUNCHER"></category>
-            </intent-filter>
         </activity>
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"

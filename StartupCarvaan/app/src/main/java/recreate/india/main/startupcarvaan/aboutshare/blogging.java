@@ -73,7 +73,6 @@ public class blogging extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blogging);
-        
         ProgressDialog pd=new ProgressDialog(blogging.this);
         pd.setMessage("this is blogging");
         pd.show();
@@ -300,6 +299,16 @@ public class blogging extends AppCompatActivity {
     public void onStop() {
         super.onStop();
         adapter.stopListening();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
