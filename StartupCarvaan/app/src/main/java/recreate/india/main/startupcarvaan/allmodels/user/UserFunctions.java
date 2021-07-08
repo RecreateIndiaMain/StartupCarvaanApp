@@ -14,6 +14,7 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import java.util.HashMap;
 import java.util.Map;
 
+import recreate.india.main.startupcarvaan.allmodels.RewardFunction;
 import recreate.india.main.startupcarvaan.allmodels.share.Share;
 import recreate.india.main.startupcarvaan.allmodels.share.ShareFunctions;
 
@@ -166,17 +167,20 @@ public class UserFunctions {
     }
 
     private void giveRewards(Double investment) {
+        RewardFunction rewardFunction=new RewardFunction();
 
         userProfile.setCurrentpoints(userProfile.getCurrentpoints()+(investment*0.1));
         userProfile.setTotalpoints(userProfile.getTotalpoints()+(investment*0.1));
-
         final Integer level = userProfile.getLevel();
-        if(points>=levels[level-1]){
+
+        Integer points=rewardFunction.level.getLevel().get(level-1);
+        if(userProfile.getCurrentpoints()>=points){
             userProfile.setLevel(level+1);
-            userProfile.setAddedrci(userProfile.getAddedrci()+50);
+            userProfile.setAddedrci(userProfile.getAddedrci()+rewardFunction.reward.getReward().get(level-1));
+            userProfile.setCurrentpoints(userProfile.getCurrentpoints()-points);
         }
         // updating level
-        ff.collection("users").document(firebaseUser.getUid()).update("currentpoints",points,"level",userProfile.getLevel(),"addedrci",userProfile.getAddedrci());
+        ff.collection("users").document(firebaseUser.getUid()).update("currentpoints",userProfile.getCurrentpoints(),"level",userProfile.getLevel(),"addedrci",userProfile.getAddedrci());
 
 
     }
