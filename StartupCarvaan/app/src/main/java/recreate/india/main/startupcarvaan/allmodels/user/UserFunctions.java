@@ -199,6 +199,4 @@ public class UserFunctions {
                 .collection("pendingtransactions")
                 .document().set(userShareTransaction);
     }
-
-
 }
