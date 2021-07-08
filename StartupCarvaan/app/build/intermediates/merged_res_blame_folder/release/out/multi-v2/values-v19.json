@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\A\\ANUBHAV_GOYAL_PROJECTS\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-v19\\values-v19.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\A\\.gradle\\caches\\transforms-3\\8e98a9cc2bc806bbe2d6ea32354e9dfe\\transformed\\jetified-android-sdk-3.5.0\\res\\values-v19\\values-v19.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,104",
+                        "endLines": "2,5",
+                        "endColumns": "48,12",
+                        "endOffsets": "99,231"
+                    }
+                }
+            ]
+        }
+    ]
+}

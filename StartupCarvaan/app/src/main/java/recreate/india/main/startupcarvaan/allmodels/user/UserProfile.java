@@ -4,20 +4,30 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class UserProfile {
+    private Double addedrci=0.0;
     private String addharnumber="your aadhar";
     private String address="your address";
+    private Double bonus=100.0;
     private Double currentpoints=0.0;
     private String description="your description here";
     private String email="your professional email";
     private String imageurl="/userimage.png";
+    private Integer investmentcount=0;
     private Integer level=1;
     private String phonenumber="your phone number";
+    private Double profit=0.0;
     private String title="your title";
     private Double totalpoints=0.0;
     private String username="username";
-    private Double rci=0.0;
-    private Double bonus=0.0;
     public UserProfile() {
+    }
+
+    public Double getAddedrci() {
+        return addedrci;
+    }
+
+    public void setAddedrci(Double addedrci) {
+        this.addedrci = addedrci;
     }
 
     public String getAddharnumber() {
@@ -34,6 +44,14 @@ public class UserProfile {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public Double getBonus() {
+        return bonus;
+    }
+
+    public void setBonus(Double bonus) {
+        this.bonus = bonus;
     }
 
     public Double getCurrentpoints() {
@@ -68,6 +86,14 @@ public class UserProfile {
         this.imageurl = imageurl;
     }
 
+    public Integer getInvestmentcount() {
+        return investmentcount;
+    }
+
+    public void setInvestmentcount(Integer investmentcount) {
+        this.investmentcount = investmentcount;
+    }
+
     public Integer getLevel() {
         return level;
     }
@@ -82,6 +108,14 @@ public class UserProfile {
 
     public void setPhonenumber(String phonenumber) {
         this.phonenumber = phonenumber;
+    }
+
+    public Double getProfit() {
+        return profit;
+    }
+
+    public void setProfit(Double profit) {
+        this.profit = profit;
     }
 
     public String getTitle() {
@@ -108,38 +142,23 @@ public class UserProfile {
         this.username = username;
     }
 
-    public Double getRci() {
-        return rci;
-    }
-
-    public void setRci(Double rci) {
-        this.rci = rci;
-    }
-
-    public Double getBonus() {
-        return bonus;
-    }
-
-    public void setBonus(Double bonus) {
-        this.bonus = bonus;
-    }
-
-    public UserProfile(String addharnumber, String address, Double currentpoints, String description, String email, String imageurl, Integer level, String phonenumber, String title, Double totalpoints, String username, Double rci, Double bonus) {
+    public UserProfile(Double addedrci, String addharnumber, String address, Double bonus, Double currentpoints, String description, String email, String imageurl, Integer investmentcount, Integer level, String phonenumber, Double profit, String title, Double totalpoints, String username) {
+        this.addedrci = addedrci;
         this.addharnumber = addharnumber;
         this.address = address;
+        this.bonus = bonus;
         this.currentpoints = currentpoints;
         this.description = description;
         this.email = email;
         this.imageurl = imageurl;
+        this.investmentcount = investmentcount;
         this.level = level;
         this.phonenumber = phonenumber;
+        this.profit = profit;
         this.title = title;
         this.totalpoints = totalpoints;
         this.username = username;
-        this.rci = rci;
-        this.bonus = bonus;
     }
-
 
     public Map<String,Object> giveNewUser(){
         Map<String,Object> map=new HashMap<>();
@@ -154,8 +173,10 @@ public class UserProfile {
         map.put("title",this.title);
         map.put("phonenumber",this.phonenumber);
         map.put("totalpoints",this.totalpoints);
-        map.put("rci",this.rci);
         map.put("bonus",this.bonus);
+        map.put("addedrci",this.addedrci);
+        map.put("profit",this.profit);
+        map.put("investmentcount",this.investmentcount);
         return  map;
     }
 }

@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class UserShare {
     private String shareid;
-    private Map<Integer, Pair<Integer,Integer>> holdings=new HashMap<>();
+    private Map<Integer, Pair<Integer,Double>> holdings=new HashMap<>();
 
     public UserShare() {
     }
@@ -20,15 +20,15 @@ public class UserShare {
         this.shareid = shareid;
     }
 
-    public Map<Integer, Pair<Integer, Integer>> getHoldings() {
+    public Map<Integer, Pair<Integer, Double>> getHoldings() {
         return holdings;
     }
 
-    public void setHoldings(Map<Integer, Pair<Integer, Integer>> holdings) {
+    public void setHoldings(Map<Integer, Pair<Integer, Double>> holdings) {
         this.holdings = holdings;
     }
 
-    public UserShare(String shareid, Map<Integer, Pair<Integer, Integer>> holdings) {
+    public UserShare(String shareid, Map<Integer, Pair<Integer, Double>> holdings) {
         this.shareid = shareid;
         this.holdings = holdings;
     }

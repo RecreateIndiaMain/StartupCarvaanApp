@@ -3,7 +3,7 @@ package recreate.india.main.startupcarvaan.allmodels.user;
 import com.google.firebase.Timestamp;
 
 public class UserShareTransaction {
-    private String status;
+    private Boolean status;
     private String type;
     private Double price;
     private Number quantity;
@@ -13,11 +13,11 @@ public class UserShareTransaction {
     private Timestamp added;
     private Timestamp completed;
 
-    public String getStatus() {
+    public Boolean getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(Boolean status) {
         this.status = status;
     }
 
@@ -85,7 +85,7 @@ public class UserShareTransaction {
         this.completed = completed;
     }
 
-    public UserShareTransaction(String status, String type, Double price, Number quantity, Double value, String shareid, String userid, Timestamp added, Timestamp completed) {
+    public UserShareTransaction(Boolean status, String type, Double price, Number quantity, Double value, String shareid, String userid, Timestamp added, Timestamp completed) {
         this.status = status;
         this.type = type;
         this.price = price;

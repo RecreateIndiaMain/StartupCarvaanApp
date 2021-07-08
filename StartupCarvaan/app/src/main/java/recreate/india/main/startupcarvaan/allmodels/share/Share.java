@@ -5,6 +5,7 @@ import com.google.firebase.Timestamp;
 import java.util.ArrayList;
 
 public class Share {
+    private String description;
     private Integer growth;
     private Integer investors;
     private String logourl;
@@ -18,7 +19,9 @@ public class Share {
     public Share() {
     }
 
-    public Share(Integer growth, Integer investors, String logourl, String name, boolean performance, String pitchurl, Timestamp timestamp, ArrayList<String> tags, String beginner) {
+
+    public Share(String description,Integer growth, Integer investors, String logourl, String name, boolean performance, String pitchurl, Timestamp timestamp, ArrayList<String> tags, String beginner) {
+        this.description=description;
         this.growth = growth;
         this.investors = investors;
         this.logourl = logourl;
@@ -28,6 +31,14 @@ public class Share {
         this.timestamp = timestamp;
         this.tags = tags;
         this.beginner = beginner;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public Integer getGrowth() {
