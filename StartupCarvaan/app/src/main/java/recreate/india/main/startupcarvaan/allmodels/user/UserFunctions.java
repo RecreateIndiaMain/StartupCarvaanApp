@@ -120,19 +120,13 @@ public class UserFunctions {
 
 //      TODO: please look into investment of more than a month
         Double investment=quantity*price;
-
-        Timestamp timestamp = Timestamp.now();
-        String date = timestamp.toDate().toString();
-        String days = date.charAt(0) + date.charAt(1) + "";
-
-
+        String days=getDay();
         final ShareHoldings[] shareHoldings = {new ShareHoldings()};
         ff.collection("users").document(firebaseUser.getUid()).collection("myshares").document(shareid).addSnapshotListener(new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
                 if (value != null) {
                     shareHoldings[0] = value.toObject(ShareHoldings.class);
-
                 }
             }
         });
@@ -141,11 +135,13 @@ public class UserFunctions {
 
         if (holdings.containsKey(days)) {
             // if someone has invested on the same day in the same share
-            Double n[] = new Double[2];
-            n = holdings.get(days);
+
+            Double[] n = new Double[2];
+            n[0] = holdings.get(days)[0];
+            n[1]=holdings.get(days)[1];
             initaltotalAmount = n[0] * n[1];
             n[0] = n[0] + quantity;
-            finalTotalAmount = initaltotalAmount + quantity * price;
+            finalTotalAmount = initaltotalAmount + (quantity * price);
             n[1] = finalTotalAmount / n[0];
             ff.collection("users").document(firebaseUser.getUid()).collection("myshares").document(shareid).update("holdings", holdings);
         } else {
@@ -160,14 +156,16 @@ public class UserFunctions {
         }
 
         // updating number of investments by the user
-        userProfile.setInvestmentcount(userProfile.getInvestmentcount() + 1);
-        ff.collection("users").document(firebaseUser.getUid()).update("investments", userProfile.getInvestmentcount());
-
-        giveRewards(investment);
+       // userProfile.setInvestmentcount(userProfile.getInvestmentcount() + 1);
+       // ff.collection("users").document(firebaseUser.getUid()).update("investments", userProfile.getInvestmentcount());
     }
 
+<<<<<<< HEAD
     private void giveRewards(Double investment) {
         RewardFunction rewardFunction=new RewardFunction();
+=======
+    public void giveRewards(Double investment) {
+>>>>>>> 00056fa7e913e17ff21a3c1f15c4470992e3cf93
 
         userProfile.setCurrentpoints(userProfile.getCurrentpoints()+(investment*0.1));
         userProfile.setTotalpoints(userProfile.getTotalpoints()+(investment*0.1));
@@ -184,5 +182,22 @@ public class UserFunctions {
 
 
     }
+
+
+
+    //
+    public void addPendingTransaction(String shareid,Integer quantity,Double price){
+        UserShareTransaction userShareTransaction=new UserShareTransaction();
+        userShareTransaction.setStatus(false);
+        userShareTransaction.setType("investment");
+        userShareTransaction.setPrice(price);
+        userShareTransaction.setQuantity(quantity);
+        userShareTransaction.setValue(price*quantity);
+        userShareTransaction.setShareid(shareid);
+        userShareTransaction.setUserid(firebaseUser.getUid());
+        private Timestamp added;
+        private Timestamp completed;
+    }
+
 
 }

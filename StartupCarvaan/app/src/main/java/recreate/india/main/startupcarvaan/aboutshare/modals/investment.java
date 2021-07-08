@@ -113,6 +113,7 @@ public class investment extends DialogFragment {
                         else{
                             add_new_user_share_relation;
                         }
+
                         add_pending_transaction_to_share(shareid,quantity,price);
                         add_pending_transaction_to_user(shareid,quantity,price);
                     }

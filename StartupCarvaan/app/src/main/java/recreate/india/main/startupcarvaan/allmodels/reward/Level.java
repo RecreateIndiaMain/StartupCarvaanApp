@@ -1,4 +1,4 @@
-package recreate.india.main.startupcarvaan.allmodels;
+package recreate.india.main.startupcarvaan.allmodels.reward;
 
 import java.util.ArrayList;
 
