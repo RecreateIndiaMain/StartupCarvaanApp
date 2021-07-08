@@ -6,7 +6,7 @@ public class UserShareTransaction {
     private Boolean status;
     private String type;
     private Double price;
-    private Number quantity;
+    private Integer quantity;
     private Double value;
     private String shareid;
     private String userid;
@@ -29,19 +29,17 @@ public class UserShareTransaction {
         this.type = type;
     }
 
-    public Double getPrice() {
-        return price;
-    }
+    public Double getPrice() { return price; }
 
     public void setPrice(Double price) {
         this.price = price;
     }
 
-    public Number getQuantity() {
+    public Integer getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(Number quantity) {
+    public void setQuantity(Integer quantity) {
         this.quantity = quantity;
     }
 
@@ -85,7 +83,7 @@ public class UserShareTransaction {
         this.completed = completed;
     }
 
-    public UserShareTransaction(Boolean status, String type, Double price, Number quantity, Double value, String shareid, String userid, Timestamp added, Timestamp completed) {
+    public UserShareTransaction(Boolean status, String type, Double price, Integer quantity, Double value, String shareid, String userid, Timestamp added, Timestamp completed) {
         this.status = status;
         this.type = type;
         this.price = price;

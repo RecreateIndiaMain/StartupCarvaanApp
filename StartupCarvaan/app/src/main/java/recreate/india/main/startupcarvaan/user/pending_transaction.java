@@ -1,8 +1,10 @@
 package recreate.india.main.startupcarvaan.user;
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -54,7 +56,12 @@ public class pending_transaction extends Fragment {
         adapter=new FirestoreRecyclerAdapter<UserShareTransaction,PostViewHolder>(options) {
             @Override
             protected void onBindViewHolder(@NonNull @NotNull PostViewHolder holder, int position, @NonNull @NotNull UserShareTransaction model) {
-
+                holder.startupname.setText(model.getShareid()); // share id is visible need to figure it out
+                holder.quantity.setText(model.getQuantity().toString());
+                holder.price.setText(model.getPrice().toString());
+                holder.amount.setText(String.valueOf(model.getPrice()*model.getQuantity()));
+                 holder.deletebtn.setVisibility(View.GONE);
+                 holder.bought.setText(model.getType());
             }
 
             @NonNull
@@ -71,6 +78,7 @@ public class pending_transaction extends Fragment {
     public class PostViewHolder extends RecyclerView.ViewHolder {
 
         private TextView startupname,quantity,price,amount,bought;
+        private Button deletebtn;
         public PostViewHolder(@NonNull View itemView) {
             super(itemView);
             startupname=itemView.findViewById(R.id.startup_name_trs);
