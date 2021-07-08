@@ -13,6 +13,7 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 
 import recreate.india.main.startupcarvaan.allmodels.share.sharedetails.Investment;
 import recreate.india.main.startupcarvaan.allmodels.share.sharedetails.TotalShareVolume;
+import recreate.india.main.startupcarvaan.allmodels.share.sharedetails.Trading;
 
 public class ShareFunctions {
 
@@ -21,6 +22,7 @@ public class ShareFunctions {
     public TotalShareVolume totalShareVolume=new TotalShareVolume();
     public FirebaseUser firebaseUser= FirebaseAuth.getInstance().getCurrentUser();
     public FirebaseFirestore ff=FirebaseFirestore.getInstance();
+    public Trading trading=new Trading();
 
     // constructor gets share id and gets the share details
     public ShareFunctions(String shareid){
@@ -43,6 +45,16 @@ public class ShareFunctions {
                 else{
                     totalShareVolume=null;
                 }
+            }
+        });
+        ff.collection("startup").document(shareid).collection("sharedetails").document("trading").addSnapshotListener(new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                if(value!=null){
+                    trading=value.toObject(Trading.class);
+                }
+                else
+                    trading=null;
             }
         });
     }

@@ -3,6 +3,8 @@ package recreate.india.main.startupcarvaan.allmodels.share.sharedetails;
 import java.util.ArrayList;
 
 public class Trading {
+    public Trading(){
+    }
     private Double buyingprice;
     private Integer buyvolume;
     private ArrayList<Double> pricelist=new ArrayList<>();
