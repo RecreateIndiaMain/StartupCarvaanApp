@@ -96,7 +96,6 @@ public class UserFunctions {
         arr[0] = quantity;
         arr[1] = price;
         holdings.put(days, arr);
-
         // updating the data
         ff.collection("users").document(firebaseUser.getUid()).collection("myshares").document(shareid).set(holdings);
 
@@ -178,17 +177,24 @@ public class UserFunctions {
 
 
     //
-    public void addPendingTransaction(String shareid,Integer quantity,Double price){
+    public void addPendingTransaction(String shareid,Integer quantity,Double price,String type){
         UserShareTransaction userShareTransaction=new UserShareTransaction();
         userShareTransaction.setStatus(false);
-        userShareTransaction.setType("investment");
+        userShareTransaction.setType(type);
         userShareTransaction.setPrice(price);
         userShareTransaction.setQuantity(quantity);
         userShareTransaction.setValue(price*quantity);
         userShareTransaction.setShareid(shareid);
         userShareTransaction.setUserid(firebaseUser.getUid());
-        private Timestamp added;
-        private Timestamp completed;
+        userShareTransaction.setAdded(Timestamp.now());
+        userShareTransaction.setAdded(Timestamp.now());
+
+        ff.collection("users").document(firebaseUser.getUid())
+                .collection("pendingtransactions")
+                .document().set(userShareTransaction);
+        ff.collection("startup").document(shareid)
+                .collection("pendingtransactions")
+                .document().set(userShareTransaction);
     }
 
 

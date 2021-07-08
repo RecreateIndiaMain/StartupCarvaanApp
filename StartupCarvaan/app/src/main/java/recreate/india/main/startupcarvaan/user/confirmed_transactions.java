@@ -23,14 +23,14 @@ import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.allmodels.share.sharedetails.TransactionDetails;
 import recreate.india.main.startupcarvaan.allmodels.user.UserShareTransaction;
 
-public class pending_transaction extends Fragment {
+public class confirmed_transactions extends Fragment {
 
     private RecyclerView recyclerView;
     private FirebaseUser user;
     private FirebaseFirestore ff = FirebaseFirestore.getInstance();
     private FirestoreRecyclerAdapter adapter;
 
-    public pending_transaction() {
+    public confirmed_transactions() {
 // Required empty public constructor
     }
 
@@ -45,11 +45,11 @@ public class pending_transaction extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_pending, container, false);
+        View view = inflater.inflate(R.layout.fragment_comfirmed_transactions, container, false);
 
-        recyclerView = view.findViewById(R.id.pending_transactions_recyclerView);
+        recyclerView = view.findViewById(R.id.confirmed_transactions_recyclerView);
 
-        Query query= ff.collection("users").document(user.getUid()).collection("pendingtransactions");
+        Query query= ff.collection("users").document(user.getUid()).collection("completedtransactions");
         FirestoreRecyclerOptions<UserShareTransaction> options=new FirestoreRecyclerOptions.Builder<UserShareTransaction>().setQuery(query, UserShareTransaction.class).build();
         adapter=new FirestoreRecyclerAdapter<UserShareTransaction,PostViewHolder>(options) {
             @Override
