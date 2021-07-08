@@ -10,11 +10,9 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
-
 import java.util.HashMap;
 import java.util.Map;
-
-import recreate.india.main.startupcarvaan.allmodels.RewardFunction;
+import recreate.india.main.startupcarvaan.allmodels.reward.RewardFunction;
 import recreate.india.main.startupcarvaan.allmodels.share.Share;
 import recreate.india.main.startupcarvaan.allmodels.share.ShareFunctions;
 
@@ -161,6 +159,7 @@ public class UserFunctions {
 
     public void giveRewards(Double investment) {
 
+        RewardFunction rewardFunction=new RewardFunction();
         userProfile.setCurrentpoints(userProfile.getCurrentpoints()+(investment*0.1));
         userProfile.setTotalpoints(userProfile.getTotalpoints()+(investment*0.1));
         final Integer level = userProfile.getLevel();
