@@ -4,6 +4,7 @@ import android.security.identity.EphemeralPublicKeyNotFoundException;
 
 import androidx.annotation.Nullable;
 
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -14,11 +15,12 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import recreate.india.main.startupcarvaan.allmodels.share.sharedetails.Investment;
 import recreate.india.main.startupcarvaan.allmodels.share.sharedetails.TotalShareVolume;
 import recreate.india.main.startupcarvaan.allmodels.share.sharedetails.Trading;
+import recreate.india.main.startupcarvaan.allmodels.user.Example;
 
 public class ShareFunctions {
 
     public Investment investment=new Investment();  // for all investment details
-
+    public Share share=new Share();
     public TotalShareVolume totalShareVolume=new TotalShareVolume();
     public FirebaseUser firebaseUser= FirebaseAuth.getInstance().getCurrentUser();
     public FirebaseFirestore ff=FirebaseFirestore.getInstance();
@@ -26,6 +28,13 @@ public class ShareFunctions {
 
     // constructor gets share id and gets the share details
     public ShareFunctions(String shareid){
+
+        ff.collection("startup").document(shareid).get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                share=documentSnapshot.toObject(Share.class);
+            }
+        });
             // getting investment details
         ff.collection("startup").document(shareid).collection("sharedetails").document("investment").addSnapshotListener(new EventListener<DocumentSnapshot>() {
             @Override

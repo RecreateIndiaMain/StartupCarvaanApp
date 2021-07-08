@@ -20,12 +20,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StartupCarvaan">
         <activity android:name=".instamojo">
-            <intent-filter>
 
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".allmodels.user.Example" />
         <activity android:name=".user.Transactions" />
@@ -45,7 +40,8 @@
             android:name=".user.ProfileActivity"
             android:parentActivityName=".mainActivities.MainActivity"
             android:theme="@style/MyTheme" />
-        <activity android:name=".aboutshare.blogging" />
+        <activity android:name=".aboutshare.blogging"
+            android:theme="@style/MyTheme"/>
         <activity
             android:name=".mainActivities.MainActivity"
             android:parentActivityName=".mainActivities.MainActivity" />
@@ -56,6 +52,12 @@
         <activity
             android:name=".mainActivities.SplashScreen"
             android:theme="@style/MyTheme">
+            <intent-filter>
+
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
