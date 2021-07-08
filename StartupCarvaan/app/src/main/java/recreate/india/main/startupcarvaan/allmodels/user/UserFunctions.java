@@ -65,6 +65,9 @@ public class UserFunctions {
         }
         ff.collection("users").document(firebaseUser.getUid()).update("addedrci", userProfile.getAddedrci(), "profit", userProfile.getProfit());
     }
+    public void addRci(Double investment) {
+        ff.collection("users").document(firebaseUser.getUid()).update("profit", userProfile.getProfit()+investment);
+    }
 
     // cheking new user for given share id or not
     //investment (4)
@@ -176,10 +179,32 @@ public class UserFunctions {
 
     }
 
+    public void removeShares(String shareid,String day,Double quantity,Double price){
+        final ShareHoldings[] shareHoldings = {new ShareHoldings()};
+        ff.collection("users").document(firebaseUser.getUid()).collection("myshares").document(shareid).addSnapshotListener(new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                if (value != null) {
+                    shareHoldings[0] = value.toObject(ShareHoldings.class);
+                }
+            }
+        });
 
+        Double[] a=new Double[2];
+        a=shareHoldings[0].getHoldings().get(day);
+        a[0]-=quantity;
+        if(a[0]==0)
+            shareHoldings[0].getHoldings().remove(day);
+        else{
+            shareHoldings[0].getHoldings().put(day,a);
+        }
+        ff.collection("users").document(firebaseUser.getUid()).collection("myshares")
+                .document(shareid)
+                .update("holdings",shareHoldings[0].getHoldings());
+    }
 
     //
-    public void addPendingTransaction(String shareid,Integer quantity,Double price,String type){
+    public void addPendingTransaction(String shareid,Double quantity,Double price,String type){
         UserShareTransaction userShareTransaction=new UserShareTransaction();
         userShareTransaction.setStatus(false);
         userShareTransaction.setType(type);
@@ -197,5 +222,20 @@ public class UserFunctions {
         ff.collection("startup").document(shareid)
                 .collection("pendingtransactions")
                 .document().set(userShareTransaction);
+    }
+
+    public void addCompletedTransaction(UserShareTransaction userShareTransaction,String shareid){
+        ff.collection("users").document(firebaseUser.getUid())
+                .collection("completedtransactions")
+                .document().set(userShareTransaction);
+        ff.collection("startup").document(shareid)
+                .collection("completedtransactions")
+                .document().set(userShareTransaction);
+    }
+    public  void delete(String id){
+        // delete the transaction from share also from web
+        ff.collection("users").document(firebaseUser.getUid())
+                .collection("pendingtransactions")
+                .document(id).delete();
     }
 }

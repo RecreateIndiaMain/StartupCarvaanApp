@@ -23,14 +23,18 @@ import org.jetbrains.annotations.NotNull;
 
 import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.allmodels.share.sharedetails.TransactionDetails;
+import recreate.india.main.startupcarvaan.allmodels.user.UserFunctions;
 import recreate.india.main.startupcarvaan.allmodels.user.UserShareTransaction;
 
+
 public class pending_transaction extends Fragment {
+
 
     private RecyclerView recyclerView;
     private FirebaseUser user;
     private FirebaseFirestore ff = FirebaseFirestore.getInstance();
     private FirestoreRecyclerAdapter adapter;
+    private UserFunctions userFunctions=new UserFunctions();
 
     public pending_transaction() {
 // Required empty public constructor
@@ -50,18 +54,42 @@ public class pending_transaction extends Fragment {
         View view = inflater.inflate(R.layout.fragment_pending, container, false);
 
         recyclerView = view.findViewById(R.id.pending_transactions_recyclerView);
-
         Query query= ff.collection("users").document(user.getUid()).collection("pendingtransactions");
         FirestoreRecyclerOptions<UserShareTransaction> options=new FirestoreRecyclerOptions.Builder<UserShareTransaction>().setQuery(query, UserShareTransaction.class).build();
         adapter=new FirestoreRecyclerAdapter<UserShareTransaction,PostViewHolder>(options) {
             @Override
             protected void onBindViewHolder(@NonNull @NotNull PostViewHolder holder, int position, @NonNull @NotNull UserShareTransaction model) {
-                holder.startupname.setText(model.getShareid()); // share id is visible need to figure it out
-                holder.quantity.setText(model.getQuantity().toString());
-                holder.price.setText(model.getPrice().toString());
-                holder.amount.setText(String.valueOf(model.getPrice()*model.getQuantity()));
-                 holder.deletebtn.setVisibility(View.GONE);
-                 holder.bought.setText(model.getType());
+                if(!model.getStatus()) {
+                    holder.startupname.setText(model.getShareid()); // share id is visible need to figure it out
+                    holder.quantity.setText(model.getQuantity().toString());
+                    holder.price.setText(model.getPrice().toString());
+                    holder.amount.setText(String.valueOf(model.getPrice() * model.getQuantity()));
+                    holder.deletebtn.setVisibility(View.GONE);
+                    holder.bought.setText(model.getType());
+                }
+                else{
+                    String id=getSnapshots().getSnapshot(position).getId();
+                    userFunctions.delete(id);
+                    userFunctions.addCompletedTransaction(model,model.getShareid());
+                    if(model.getType()=="buy"){
+                        if(userFunctions.check_newUser(model.getShareid())){
+                            userFunctions.addShareNewUser(model.getShareid(),model.getQuantity(), model.getPrice());
+                            // update share investor count
+                        }
+                        else{
+                            userFunctions.updateUserShare(model.getShareid(),model.getQuantity(), model.getPrice());
+                        }
+                        userFunctions.giveRewards((model.getPrice()*model.getQuantity()));
+                    }
+
+                    if(model.getType()=="sell"){
+                        userFunctions.addRci(model.getPrice()*model.getQuantity());
+                    }
+
+                    if(model.getType()=="investment"){
+
+                    }
+                }
             }
 
             @NonNull

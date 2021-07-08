@@ -89,5 +89,4 @@ public class confirmed_transactions extends Fragment {
             deletebtn=itemView.findViewById(R.id.delete_btn_trs);
         }
     }
-
 }

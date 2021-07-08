@@ -22,7 +22,6 @@
         <activity android:name=".instamojo">
 
         </activity>
-        <activity android:name=".allmodels.user.Example" />
         <activity android:name=".user.Transactions" />
         <activity android:name=".coin_exchange.rci_exchange" />
         <activity android:name=".Levels" />

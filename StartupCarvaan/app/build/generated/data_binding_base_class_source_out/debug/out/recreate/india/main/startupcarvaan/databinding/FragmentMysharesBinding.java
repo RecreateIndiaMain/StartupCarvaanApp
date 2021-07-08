@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,16 +21,33 @@ public final class FragmentMysharesBinding implements ViewBinding {
   private final FrameLayout rootView;
 
   @NonNull
+  public final LinearLayout ll1;
+
+  @NonNull
   public final RecyclerView mysharerecyclerview;
+
+  @NonNull
+  public final TextView profit;
 
   @NonNull
   public final TextView sample;
 
-  private FragmentMysharesBinding(@NonNull FrameLayout rootView,
-      @NonNull RecyclerView mysharerecyclerview, @NonNull TextView sample) {
+  @NonNull
+  public final TextView totalinvest;
+
+  @NonNull
+  public final TextView totalprofit;
+
+  private FragmentMysharesBinding(@NonNull FrameLayout rootView, @NonNull LinearLayout ll1,
+      @NonNull RecyclerView mysharerecyclerview, @NonNull TextView profit, @NonNull TextView sample,
+      @NonNull TextView totalinvest, @NonNull TextView totalprofit) {
     this.rootView = rootView;
+    this.ll1 = ll1;
     this.mysharerecyclerview = mysharerecyclerview;
+    this.profit = profit;
     this.sample = sample;
+    this.totalinvest = totalinvest;
+    this.totalprofit = totalprofit;
   }
 
   @Override
@@ -59,9 +77,21 @@ public final class FragmentMysharesBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.ll1;
+      LinearLayout ll1 = rootView.findViewById(id);
+      if (ll1 == null) {
+        break missingId;
+      }
+
       id = R.id.mysharerecyclerview;
       RecyclerView mysharerecyclerview = rootView.findViewById(id);
       if (mysharerecyclerview == null) {
+        break missingId;
+      }
+
+      id = R.id.profit;
+      TextView profit = rootView.findViewById(id);
+      if (profit == null) {
         break missingId;
       }
 
@@ -71,7 +101,20 @@ public final class FragmentMysharesBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentMysharesBinding((FrameLayout) rootView, mysharerecyclerview, sample);
+      id = R.id.totalinvest;
+      TextView totalinvest = rootView.findViewById(id);
+      if (totalinvest == null) {
+        break missingId;
+      }
+
+      id = R.id.totalprofit;
+      TextView totalprofit = rootView.findViewById(id);
+      if (totalprofit == null) {
+        break missingId;
+      }
+
+      return new FragmentMysharesBinding((FrameLayout) rootView, ll1, mysharerecyclerview, profit,
+          sample, totalinvest, totalprofit);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

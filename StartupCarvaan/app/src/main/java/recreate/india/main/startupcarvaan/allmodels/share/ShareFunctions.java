@@ -1,7 +1,5 @@
 package recreate.india.main.startupcarvaan.allmodels.share;
 
-import android.security.identity.EphemeralPublicKeyNotFoundException;
-
 import androidx.annotation.Nullable;
 
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -15,7 +13,6 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import recreate.india.main.startupcarvaan.allmodels.share.sharedetails.Investment;
 import recreate.india.main.startupcarvaan.allmodels.share.sharedetails.TotalShareVolume;
 import recreate.india.main.startupcarvaan.allmodels.share.sharedetails.Trading;
-import recreate.india.main.startupcarvaan.allmodels.user.Example;
 
 public class ShareFunctions {
 

@@ -2056,6 +2056,7 @@ drawable mtrl_ic_error
 drawable mtrl_popupmenu_background
 drawable mtrl_popupmenu_background_dark
 drawable mtrl_tabs_default_indicator
+drawable my
 drawable mysharespin
 drawable navigation_empty_icon
 drawable newr
@@ -2297,6 +2298,7 @@ id animateToEnd
 id animateToStart
 id appIconView
 id appNameView
+id applayout
 id asConfigured
 id async
 id auto
@@ -2304,6 +2306,7 @@ id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
 id availableforbuying
+id backblog
 id backprofile
 id barrier
 id baseline
@@ -2422,6 +2425,7 @@ id decelerateAndComplete
 id decor_content_parent
 id default_activity_button
 id default_wait
+id delete_btn_trs
 id deltaRelative
 id dependency_ordering
 id desc_aboutRci
@@ -2540,6 +2544,7 @@ id imageview
 id info
 id introvideo
 id invest
+id investbutton
 id investors
 id invisible
 id italic
@@ -2587,6 +2592,7 @@ id listMode
 id list_container
 id list_item
 id live_video_indicator
+id ll1
 id ll_loader
 id login
 id logintext
@@ -2654,6 +2660,8 @@ id navigation_home
 id navigation_notifications
 id net_banking_layout
 id netbanking_default_fragment
+id netinvest
+id netprofit
 id never
 id newly
 id nextBtn
@@ -2758,6 +2766,8 @@ id privacy
 id privacypolicy
 id productimage
 id profile
+id profit
+id profitorloss
 id progress
 id progressBar
 id progress_bar
@@ -2940,6 +2950,8 @@ id topPanel
 id top_line
 id top_to_bottom
 id topbar
+id totalinvest
+id totalprofit
 id totalsharestosell
 id touch_outside
 id trade
@@ -3121,6 +3133,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dialoginvest
 layout emi_option_view
 layout fragment_allshares
 layout fragment_biding
@@ -3252,6 +3265,7 @@ menu buy_sell
 menu crop_image_menu
 menu drawer_menu
 menu home
+menu invest
 menu menu_payment_options
 menu transaction_menu
 mipmap ic_launcher

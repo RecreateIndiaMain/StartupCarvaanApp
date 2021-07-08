@@ -75,7 +75,9 @@
             android:name="recreate.india.main.startupcarvaan.user.ProfileActivity"
             android:parentActivityName="recreate.india.main.startupcarvaan.mainActivities.MainActivity"
             android:theme="@style/MyTheme" />
-        <activity android:name="recreate.india.main.startupcarvaan.aboutshare.blogging" />
+        <activity
+            android:name="recreate.india.main.startupcarvaan.aboutshare.blogging"
+            android:theme="@style/MyTheme" />
         <activity
             android:name="recreate.india.main.startupcarvaan.mainActivities.MainActivity"
             android:parentActivityName="recreate.india.main.startupcarvaan.mainActivities.MainActivity" />
