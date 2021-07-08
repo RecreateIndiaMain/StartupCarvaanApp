@@ -32,10 +32,29 @@
             <LinearLayout
                 android:id="@+id/colorlayout2"
                 android:layout_width="match_parent"
-                android:layout_height="140dp"
+                android:layout_height="160dp"
                 android:background="#FF59B563"
-                android:orientation="vertical"
-                android:visibility="invisible" />
+                android:orientation="horizontal"
+                android:gravity="bottom|center_vertical"
+                android:paddingBottom="12dp"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Performance"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="19sp"
+                    android:layout_marginLeft="26dp"/>
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_baseline_arrow_drop_up_24"/>
+
+
+
+            </LinearLayout>
 
 
             <RelativeLayout
