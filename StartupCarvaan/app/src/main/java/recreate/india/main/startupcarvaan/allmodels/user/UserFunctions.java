@@ -18,7 +18,6 @@ import recreate.india.main.startupcarvaan.allmodels.share.ShareFunctions;
 
 public class UserFunctions {
 
-    private Integer levels[] = {200, 400, 600, 800, 1000};
     public UserProfile userProfile = new UserProfile();  // user profile class for storing profile
     public FirebaseFirestore ff = FirebaseFirestore.getInstance();
     public FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();

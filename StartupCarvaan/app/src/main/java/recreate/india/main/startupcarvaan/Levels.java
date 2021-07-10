@@ -21,6 +21,8 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import recreate.india.main.startupcarvaan.aboutshare.blogging;
+import recreate.india.main.startupcarvaan.allmodels.user.UserFunctions;
+import recreate.india.main.startupcarvaan.allmodels.user.UserProfile;
 import recreate.india.main.startupcarvaan.mainActivities.MainActivity;
 import recreate.india.main.startupcarvaan.user.profile;
 import recreate.india.main.startupcarvaan.user.user;
@@ -30,13 +32,13 @@ public class Levels extends AppCompatActivity {
     int status;
     // Date: 19th May 2021
     // Written By Siddharth
-    private int coins = 250,level;
+    private int level;
     private ProgressBar l[]=new ProgressBar[12];
     private TextView lt[]=new TextView[12];
     private TextView rt[]=new TextView[12];
     private TextView txt3[]=new TextView[12];
     private ImageView img[]=new ImageView[12];
-    private  int []levels={0,100,500,1000,2000,5000,10000,20000,30000,40000,50000,70000,850000,100000};
+    private  int []levels={0,100,200,500,1000,2500,5000,10000,20000,40000,50000,70000,850000,100000};
 //    private Double TestPoints[]={0d,80d,400d,950d,1500d};
     FirebaseFirestore ff=FirebaseFirestore.getInstance();
     @Override
@@ -60,6 +62,10 @@ public class Levels extends AppCompatActivity {
 //        showLevel(5,4000d);
 //        l[1].setProgress(100);
 //        l[2].setProgress(80);
+        UserFunctions userFunctions=new UserFunctions();
+        UserProfile userProfile=userFunctions.userProfile;
+
+       /*
         ff.collection("users")
                 .document(new user().user().getUid())
                 .get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
@@ -75,6 +81,8 @@ public class Levels extends AppCompatActivity {
             }
         });
 
+        */
+        showLevel(userProfile.getLevel(),userProfile.getCurrentpoints());
     }
 
     public void initialise() {

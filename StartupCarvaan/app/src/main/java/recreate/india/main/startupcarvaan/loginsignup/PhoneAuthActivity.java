@@ -36,6 +36,7 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import recreate.india.main.startupcarvaan.R;
+import recreate.india.main.startupcarvaan.allmodels.user.UserProfile;
 import recreate.india.main.startupcarvaan.fragments.progressdialogue.CustomProgressDialogue;
 import recreate.india.main.startupcarvaan.mainActivities.MainActivity;
 import recreate.india.main.startupcarvaan.user.CreateProfile;
@@ -179,13 +180,14 @@ private boolean timer;
                 @Override
                 public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                     if (!task.getResult().exists()) {
-                        FirebaseFirestore.getInstance().collection("users").document(user.getUid()).set(profile.giveNewUser());
-                        Map<String,Double> coins=new HashMap<>();
-                        coins.put("bonus", Double.valueOf(1000));
-                        coins.put("rci", Double.valueOf(0));
-                        coins.put("winnings", Double.valueOf(0));
-                        FirebaseFirestore.getInstance().collection("users").document(user.getUid())
-                                .collection("others").document("coins").set(coins);
+                        FirebaseFirestore.getInstance().collection("users").document(user.getUid()).set(new UserProfile().giveNewUser());
+
+//                        Map<String,Double> coins=new HashMap<>();
+//                        coins.put("bonus", Double.valueOf(1000));
+//                        coins.put("rci", Double.valueOf(0));
+//                        coins.put("winnings", Double.valueOf(0));
+//                        FirebaseFirestore.getInstance().collection("users").document(user.getUid())
+//                                .collection("others").document("coins").set(coins);
                         startActivity(new Intent(PhoneAuthActivity.this, CreateProfile.class));
                         finish();
                     }

@@ -55,7 +55,7 @@ public class confirmed_transactions extends Fragment {
         adapter=new FirestoreRecyclerAdapter<UserShareTransaction,PostViewHolder>(options) {
             @Override
             protected void onBindViewHolder(@NonNull @NotNull PostViewHolder holder, int position, @NonNull @NotNull UserShareTransaction model) {
-                holder.startupname.setText(model.getShareid()); // share id is visible need to figure it out
+                holder.startupname.setText(model.getStartupname());
                 holder.quantity.setText(model.getQuantity().toString());
                 holder.price.setText(model.getPrice().toString());
                 holder.amount.setText(String.valueOf(model.getPrice()*model.getQuantity()));
