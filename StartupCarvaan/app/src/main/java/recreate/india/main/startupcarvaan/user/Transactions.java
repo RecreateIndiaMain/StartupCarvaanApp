@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.navigation.NavigationView;
 
 import recreate.india.main.startupcarvaan.R;
 
@@ -30,7 +29,7 @@ public class Transactions extends AppCompatActivity {
                     switchFragment(fragment);
                      return true;
                 case R.id.confirmed:
-                    fragment=new comfirmed_transactions();
+                    fragment=new confirmed_transactions();
                     switchFragment(fragment);
                     return true;
             }

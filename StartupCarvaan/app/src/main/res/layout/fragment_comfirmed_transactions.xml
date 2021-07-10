@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".user.comfirmed_transactions"
+    tools:context=".user.confirmed_transactions"
     android:background="?attr/backgroundcolourmain">
 
 <androidx.recyclerview.widget.RecyclerView

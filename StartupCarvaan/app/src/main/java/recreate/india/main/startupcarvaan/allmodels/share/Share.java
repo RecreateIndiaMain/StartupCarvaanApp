@@ -11,6 +11,7 @@ public class Share {
     private String logourl;
     private String name;
     private boolean performance;
+    private String period;
     private String pitchurl;
     private Timestamp timestamp;
     private ArrayList<String>tags=new ArrayList<>();
@@ -20,12 +21,21 @@ public class Share {
     }
 
 
-    public Share(String description,Integer growth, Integer investors, String logourl, String name, boolean performance, String pitchurl, Timestamp timestamp, ArrayList<String> tags, String beginner) {
+    public String getPeriod() {
+        return period;
+    }
+
+    public void setPeriod(String period) {
+        this.period = period;
+    }
+
+    public Share(String description, Integer growth, Integer investors, String logourl, String name, String period, boolean performance, String pitchurl, Timestamp timestamp, ArrayList<String> tags, String beginner) {
         this.description=description;
         this.growth = growth;
         this.investors = investors;
         this.logourl = logourl;
         this.name = name;
+        this.period=period;
         this.performance = performance;
         this.pitchurl = pitchurl;
         this.timestamp = timestamp;

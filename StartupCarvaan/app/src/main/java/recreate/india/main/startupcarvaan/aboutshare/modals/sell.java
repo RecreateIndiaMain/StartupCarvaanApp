@@ -23,6 +23,7 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.auth.User;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,6 +31,9 @@ import java.util.Map;
 
 import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.aboutshare.models.sharedetails;
+import recreate.india.main.startupcarvaan.allmodels.share.ShareFunctions;
+import recreate.india.main.startupcarvaan.allmodels.user.UserFunctions;
+import recreate.india.main.startupcarvaan.allmodels.user.UserShare;
 import recreate.india.main.startupcarvaan.fragments.models.sharefunctions;
 import recreate.india.main.startupcarvaan.fragments.myshares.holdings;
 import recreate.india.main.startupcarvaan.fragments.mycoins.coin;
@@ -148,22 +152,18 @@ public class sell extends DialogFragment {
                     if(quan.equals(""))
                         Toast.makeText(getContext(), "please select a amount", Toast.LENGTH_SHORT).show();
                     else{
-                        Integer price=sharedetails.getSellingprice();
-                        Integer quantity=Integer.valueOf(String.valueOf(share.getText().toString()));
+                        Double price=new ShareFunctions(shareid).trading.getSellingprice();
+                        Double quantity=Double.valueOf(String.valueOf(share.getText().toString()));
+                        String day="1.0";
                         if(quantity>Double.valueOf(holdings.getHoldings().get(price_)))
                             Toast.makeText(getContext(), "do not have "+ quantity + " shares for price "+price_, Toast.LENGTH_SHORT).show();
                         else if(quantity*price>sharedetails.getAvailableforselling())
                             Toast.makeText(getContext(),"sorry this much share is not available for selling",Toast.LENGTH_LONG).show();
                         else{
-                            list.clear();
-                            Integer resultant_price=price*quantity;
-                            userfunctions.addRci(coin.getRci(),resultant_price);
-                            user_share_functions.removeSomeShares(shareid,quantity,Integer.valueOf(price_));
-                            sharefunctions.removeAvailableSell(shareid,sharedetails.getAvailableforselling(),resultant_price);
-                            sell_success sell_success=new sell_success();
-                            sell_success.show(getParentFragmentManager(),"sell_success");
+                            UserFunctions userFunctions=new UserFunctions();
+                            userFunctions.addPendingTransaction(shareid,quantity,price,"sell");
+                            userFunctions.removeShares(shareid,day,quantity,price);
                             dismiss();
-
                         }
                     }
                 }

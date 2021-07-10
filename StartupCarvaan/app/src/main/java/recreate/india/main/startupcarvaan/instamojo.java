@@ -1,30 +1,36 @@
 package recreate.india.main.startupcarvaan;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.webkit.WebView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.instamojo.android.Instamojo;
 
-import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-
-import retrofit2.http.Url;
-
-public class instamojo extends AppCompatActivity{
-    WebView payment;
+public class instamojo extends AppCompatActivity implements Instamojo.InstamojoPaymentCallback{
+    TextView tv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_instamojo);
-        payment=findViewById(R.id.payment);
-        payment.getSettings().setJavaScriptEnabled(true);
-        payment.loadUrl("https://www.instamojo.com/@startup_carvaan/b07d022524284bb291f0c5df09a32b27");
+        tv=findViewById(R.id.test);
+        Instamojo.getInstance().initialize(this, Instamojo.Environment.PRODUCTION);
+        Instamojo.getInstance().initiatePayment(this, "03d58c35-cab1-48f4-a1d3-ae7a338f807d", this);
+    }
+
+    @Override
+    public void onInstamojoPaymentComplete(String s, String s1, String s2, String s3) {
+        tv.setText("\n s: "+s+"\n s1: "+s1+"\n s2: "+s2+"\n s3: "+s3);
+    }
+    @Override
+    public void onPaymentCancelled() {
+        Toast.makeText(this, "cancelled", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onInitiatePaymentFailure(String s) {
+        Toast.makeText(this, s, Toast.LENGTH_SHORT).show();
     }
 }

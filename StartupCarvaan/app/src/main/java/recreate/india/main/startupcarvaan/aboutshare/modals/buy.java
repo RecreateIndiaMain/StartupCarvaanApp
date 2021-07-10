@@ -27,7 +27,9 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 
 import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.aboutshare.models.sharedetails;
+import recreate.india.main.startupcarvaan.allmodels.share.ShareFunctions;
 import recreate.india.main.startupcarvaan.allmodels.share.sharedetails.TransactionDetails;
+import recreate.india.main.startupcarvaan.allmodels.user.UserFunctions;
 import recreate.india.main.startupcarvaan.fragments.models.sharefunctions;
 import recreate.india.main.startupcarvaan.fragments.mycoins.coin;
 import recreate.india.main.startupcarvaan.user.user_share_functions;
@@ -42,15 +44,14 @@ public class buy extends DialogFragment {
     private String shareid;
     private FirebaseUser mUser;
     private FirebaseFirestore ff=FirebaseFirestore.getInstance();
-
+    public ShareFunctions shareFunctions;
+    public UserFunctions userFunctions=new UserFunctions();
     // constructor declaration
     private user_share_functions usersharefunctions= new user_share_functions();
     private sharedetails sharedetails=new sharedetails();
     private coin coin=new coin();
     private sharefunctions sharefunctions=new sharefunctions();
     private userfunctions userfunctions=new userfunctions();
-
-
 
     public buy() {
     }
@@ -156,6 +157,25 @@ public class buy extends DialogFragment {
                     else{
                         Toast.makeText(getContext(), "sorry these much share are not available for buying right now", Toast.LENGTH_SHORT).show();
                     }
+                }
+            }
+        });
+
+        buy_now.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(no_of_shares.getText().toString().equals(""))
+                    Toast.makeText(getContext(), "please enter a valid quantity", Toast.LENGTH_SHORT).show();
+                else{
+                    shareFunctions=new ShareFunctions(shareid);
+                    Double price=shareFunctions.trading.getBuyingprice();
+                    Double quantity=Double.valueOf(no_of_shares.getText().toString());
+                    Double amount=price*quantity;
+                    if(userFunctions.check_rci(amount)){
+                        userFunctions.deduct_rci(amount);
+                        userFunctions.addPendingTransaction(shareid,quantity,price,"buy");
+                    }
+                    else Toast.makeText(getContext(), "you do not have enough amount", Toast.LENGTH_SHORT).show();
                 }
             }
         });

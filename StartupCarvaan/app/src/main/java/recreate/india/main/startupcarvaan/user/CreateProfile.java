@@ -37,6 +37,7 @@ import org.jetbrains.annotations.NotNull;
 import java.io.File;
 
 import recreate.india.main.startupcarvaan.R;
+import recreate.india.main.startupcarvaan.allmodels.user.UserProfile;
 import recreate.india.main.startupcarvaan.compressor.Compressor;
 import recreate.india.main.startupcarvaan.fragments.progressdialogue.CustomProgressDialogue;
 import recreate.india.main.startupcarvaan.loginsignup.loginActivity;
@@ -81,7 +82,7 @@ public class CreateProfile extends AppCompatActivity {
                 .addSnapshotListener(new EventListener<DocumentSnapshot>() {
                     @Override
                     public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                        profile = value.toObject(recreate.india.main.startupcarvaan.user.profile.class);
+                        profile = value.toObject(UserProfile.class);
                         //setting all the fields first
                         display_name.setHint(profile.getName());
                         title.setHint(profile.getTitle());

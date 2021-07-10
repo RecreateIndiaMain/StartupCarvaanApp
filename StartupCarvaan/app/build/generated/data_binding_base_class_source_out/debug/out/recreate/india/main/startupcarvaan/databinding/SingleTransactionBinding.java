@@ -4,10 +4,11 @@ package recreate.india.main.startupcarvaan.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.cardview.widget.CardView;
 import androidx.viewbinding.ViewBinding;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -16,13 +17,16 @@ import recreate.india.main.startupcarvaan.R;
 
 public final class SingleTransactionBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final CardView rootView;
 
   @NonNull
   public final TextView amountTrs;
 
   @NonNull
   public final TextView boughtSoldTrs;
+
+  @NonNull
+  public final Button deleteBtnTrs;
 
   @NonNull
   public final TextView priceTrs;
@@ -33,12 +37,13 @@ public final class SingleTransactionBinding implements ViewBinding {
   @NonNull
   public final TextView startupNameTrs;
 
-  private SingleTransactionBinding(@NonNull ConstraintLayout rootView, @NonNull TextView amountTrs,
-      @NonNull TextView boughtSoldTrs, @NonNull TextView priceTrs, @NonNull TextView quantityTrs,
-      @NonNull TextView startupNameTrs) {
+  private SingleTransactionBinding(@NonNull CardView rootView, @NonNull TextView amountTrs,
+      @NonNull TextView boughtSoldTrs, @NonNull Button deleteBtnTrs, @NonNull TextView priceTrs,
+      @NonNull TextView quantityTrs, @NonNull TextView startupNameTrs) {
     this.rootView = rootView;
     this.amountTrs = amountTrs;
     this.boughtSoldTrs = boughtSoldTrs;
+    this.deleteBtnTrs = deleteBtnTrs;
     this.priceTrs = priceTrs;
     this.quantityTrs = quantityTrs;
     this.startupNameTrs = startupNameTrs;
@@ -46,7 +51,7 @@ public final class SingleTransactionBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public CardView getRoot() {
     return rootView;
   }
 
@@ -83,6 +88,12 @@ public final class SingleTransactionBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.delete_btn_trs;
+      Button deleteBtnTrs = rootView.findViewById(id);
+      if (deleteBtnTrs == null) {
+        break missingId;
+      }
+
       id = R.id.price_trs;
       TextView priceTrs = rootView.findViewById(id);
       if (priceTrs == null) {
@@ -101,8 +112,8 @@ public final class SingleTransactionBinding implements ViewBinding {
         break missingId;
       }
 
-      return new SingleTransactionBinding((ConstraintLayout) rootView, amountTrs, boughtSoldTrs,
-          priceTrs, quantityTrs, startupNameTrs);
+      return new SingleTransactionBinding((CardView) rootView, amountTrs, boughtSoldTrs,
+          deleteBtnTrs, priceTrs, quantityTrs, startupNameTrs);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

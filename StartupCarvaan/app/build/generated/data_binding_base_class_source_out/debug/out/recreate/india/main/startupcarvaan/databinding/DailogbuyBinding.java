@@ -22,9 +22,6 @@ public final class DailogbuyBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final TextView availableforbuying;
-
-  @NonNull
   public final Button btnBuy;
 
   @NonNull
@@ -36,11 +33,9 @@ public final class DailogbuyBinding implements ViewBinding {
   @NonNull
   public final TextView priceOfShares;
 
-  private DailogbuyBinding(@NonNull LinearLayout rootView, @NonNull TextView availableforbuying,
-      @NonNull Button btnBuy, @NonNull ImageView close68, @NonNull EditText noofshares,
-      @NonNull TextView priceOfShares) {
+  private DailogbuyBinding(@NonNull LinearLayout rootView, @NonNull Button btnBuy,
+      @NonNull ImageView close68, @NonNull EditText noofshares, @NonNull TextView priceOfShares) {
     this.rootView = rootView;
-    this.availableforbuying = availableforbuying;
     this.btnBuy = btnBuy;
     this.close68 = close68;
     this.noofshares = noofshares;
@@ -74,12 +69,6 @@ public final class DailogbuyBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.availableforbuying;
-      TextView availableforbuying = rootView.findViewById(id);
-      if (availableforbuying == null) {
-        break missingId;
-      }
-
       id = R.id.btn_buy;
       Button btnBuy = rootView.findViewById(id);
       if (btnBuy == null) {
@@ -104,8 +93,8 @@ public final class DailogbuyBinding implements ViewBinding {
         break missingId;
       }
 
-      return new DailogbuyBinding((LinearLayout) rootView, availableforbuying, btnBuy, close68,
-          noofshares, priceOfShares);
+      return new DailogbuyBinding((LinearLayout) rootView, btnBuy, close68, noofshares,
+          priceOfShares);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

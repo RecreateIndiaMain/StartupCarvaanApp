@@ -28,6 +28,15 @@ public final class ZSingleMyshareBinding implements ViewBinding {
   public final CircleImageView companylogo;
 
   @NonNull
+  public final TextView netinvest;
+
+  @NonNull
+  public final TextView netprofit;
+
+  @NonNull
+  public final TextView profitorloss;
+
+  @NonNull
   public final TextView sellingPrice;
 
   @NonNull
@@ -40,11 +49,15 @@ public final class ZSingleMyshareBinding implements ViewBinding {
   public final Button trade;
 
   private ZSingleMyshareBinding(@NonNull CardView rootView, @NonNull TextView buyingPrice,
-      @NonNull CircleImageView companylogo, @NonNull TextView sellingPrice,
+      @NonNull CircleImageView companylogo, @NonNull TextView netinvest,
+      @NonNull TextView netprofit, @NonNull TextView profitorloss, @NonNull TextView sellingPrice,
       @NonNull TextView sharename, @NonNull Spinner spinner4, @NonNull Button trade) {
     this.rootView = rootView;
     this.buyingPrice = buyingPrice;
     this.companylogo = companylogo;
+    this.netinvest = netinvest;
+    this.netprofit = netprofit;
+    this.profitorloss = profitorloss;
     this.sellingPrice = sellingPrice;
     this.sharename = sharename;
     this.spinner4 = spinner4;
@@ -90,6 +103,24 @@ public final class ZSingleMyshareBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.netinvest;
+      TextView netinvest = rootView.findViewById(id);
+      if (netinvest == null) {
+        break missingId;
+      }
+
+      id = R.id.netprofit;
+      TextView netprofit = rootView.findViewById(id);
+      if (netprofit == null) {
+        break missingId;
+      }
+
+      id = R.id.profitorloss;
+      TextView profitorloss = rootView.findViewById(id);
+      if (profitorloss == null) {
+        break missingId;
+      }
+
       id = R.id.sellingPrice;
       TextView sellingPrice = rootView.findViewById(id);
       if (sellingPrice == null) {
@@ -114,8 +145,8 @@ public final class ZSingleMyshareBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ZSingleMyshareBinding((CardView) rootView, buyingPrice, companylogo, sellingPrice,
-          sharename, spinner4, trade);
+      return new ZSingleMyshareBinding((CardView) rootView, buyingPrice, companylogo, netinvest,
+          netprofit, profitorloss, sellingPrice, sharename, spinner4, trade);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
