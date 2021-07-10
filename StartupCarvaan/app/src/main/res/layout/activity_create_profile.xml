@@ -292,10 +292,46 @@
 
                     </LinearLayout>
                 </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Adhar Card Details"
+                        android:textSize="17sp"
+                        android:textColor="@color/goodgrey"
+                        android:fontFamily="@font/proximanovaregular"
+                        android:textStyle="bold" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Enter Adhar Card number"
+                    android:textSize="15sp"
+                    android:id="@+id/adharcard"
+                    android:layout_marginTop="8dp"
+                    android:textColorHint="@color/goodgrey"
+                    android:textColor="@color/goodgrey"
+                    android:gravity="center"
+                    android:maxLength="12"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginRight="25dp"
+                    android:background="@drawable/ad"
+                    />
                 <Button
                     android:id="@+id/submit"
                     android:layout_marginBottom="20dp"
                     android:text="submit"
+                    android:layout_marginTop="12dp"
                     android:textSize="15dp"
                     android:textColor="@color/white"
                     android:textStyle="bold"
