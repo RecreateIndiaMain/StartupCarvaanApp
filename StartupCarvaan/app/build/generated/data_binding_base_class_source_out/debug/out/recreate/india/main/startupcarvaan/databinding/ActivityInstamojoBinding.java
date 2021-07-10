@@ -4,7 +4,7 @@ package recreate.india.main.startupcarvaan.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -19,11 +19,11 @@ public final class ActivityInstamojoBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final WebView payment;
+  public final TextView test;
 
-  private ActivityInstamojoBinding(@NonNull ConstraintLayout rootView, @NonNull WebView payment) {
+  private ActivityInstamojoBinding(@NonNull ConstraintLayout rootView, @NonNull TextView test) {
     this.rootView = rootView;
-    this.payment = payment;
+    this.test = test;
   }
 
   @Override
@@ -53,13 +53,13 @@ public final class ActivityInstamojoBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.payment;
-      WebView payment = rootView.findViewById(id);
-      if (payment == null) {
+      id = R.id.test;
+      TextView test = rootView.findViewById(id);
+      if (test == null) {
         break missingId;
       }
 
-      return new ActivityInstamojoBinding((ConstraintLayout) rootView, payment);
+      return new ActivityInstamojoBinding((ConstraintLayout) rootView, test);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

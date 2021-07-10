@@ -20,13 +20,10 @@ allprojects {
         google()
         jcenter()
         maven { url 'https://jitpack.io' }
-    }
-    repositories {
         maven {
             url "https://s3-ap-southeast-1.amazonaws.com/godel-release/godel/"
         }
     }
-
 }
 
 task clean(type: Delete) {
