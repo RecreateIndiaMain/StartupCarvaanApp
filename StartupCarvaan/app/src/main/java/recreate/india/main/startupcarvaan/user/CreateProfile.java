@@ -26,6 +26,7 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.auth.User;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -55,7 +56,7 @@ public class CreateProfile extends AppCompatActivity {
     private FirebaseFirestore ff = FirebaseFirestore.getInstance();
     private FirebaseStorage fs = FirebaseStorage.getInstance();
     private String imageurl = "", documenturl = "";
-    private profile profile = new profile();
+    private UserProfile profile = new UserProfile();
     private int document_request_code = 002;
     private File compressFile;
     private CustomProgressDialogue cpd;
@@ -75,7 +76,7 @@ public class CreateProfile extends AppCompatActivity {
         address = findViewById(R.id.userAddress);
         userImage = findViewById(R.id.userImage);
         imageurl = profile.getImageurl();
-        documenturl = profile.getResume();
+//        documenturl = profile.getResume();
         //getting current user all data from firestore
         ff.collection("users")
                 .document(user.getUid())
@@ -84,10 +85,10 @@ public class CreateProfile extends AppCompatActivity {
                     public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
                         profile = value.toObject(UserProfile.class);
                         //setting all the fields first
-                        display_name.setHint(profile.getName());
+                        display_name.setHint(profile.getUsername());
                         title.setHint(profile.getTitle());
                         desc.setHint(profile.getDescription());
-                        phone.setHint(profile.getPhone());
+                        phone.setHint(profile.getPhonenumber());
                         email.setHint(profile.getEmail());
                         address.setHint(profile.getAddress());
                     }
@@ -133,18 +134,18 @@ public class CreateProfile extends AppCompatActivity {
                             public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
                                 Toast.makeText(CreateProfile.this, "image successfully uploaded", Toast.LENGTH_SHORT).show();
                                 cpd.dismiss();
-                                String name_tobeuploaded = display_name.getText().toString().length() == 0 ? profile.getName() : display_name.getText().toString();
+                                String name_tobeuploaded = display_name.getText().toString().length() == 0 ? profile.getUsername() : display_name.getText().toString();
                                 String title_tobeuploaded = title.getText().toString().length() == 0 ? profile.getTitle() : title.getText().toString();
                                 String desc_tobeuploaded = desc.getText().toString().length() == 0 ? profile.getDescription() : desc.getText().toString();
-                                String phone_tobeuploaded = phone.getText().toString().length() == 0 ? profile.getPhone() : phone.getText().toString();
+                                String phone_tobeuploaded = phone.getText().toString().length() == 0 ? profile.getPhonenumber() : phone.getText().toString();
                                 String email_tobeuploaded = email.getText().toString().length() == 0 ? profile.getEmail() : email.getText().toString();
                                 String address_tobeuploaded = address.getText().toString().length() == 0 ? profile.getAddress() : address.getText().toString();
 
-                                profile.setName(name_tobeuploaded);
+                                profile.setUsername(name_tobeuploaded);
                                 profile.setAddress(address_tobeuploaded);
                                 profile.setDescription(desc_tobeuploaded);
                                 profile.setEmail(email_tobeuploaded);
-                                profile.setPhone(phone_tobeuploaded);
+                                profile.setPhonenumber(phone_tobeuploaded);
                                 profile.setTitle(title_tobeuploaded);
                                 if (imageUri != null)
                                     profile.setImageurl(imageurl);
@@ -162,18 +163,18 @@ public class CreateProfile extends AppCompatActivity {
                             }
                         });
                     } else {
-                        String name_tobeuploaded = display_name.getText().toString().length() == 0 ? profile.getName() : display_name.getText().toString();
+                        String name_tobeuploaded = display_name.getText().toString().length() == 0 ? profile.getUsername() : display_name.getText().toString();
                         String title_tobeuploaded = title.getText().toString().length() == 0 ? profile.getTitle() : title.getText().toString();
                         String desc_tobeuploaded = desc.getText().toString().length() == 0 ? profile.getDescription() : desc.getText().toString();
-                        String phone_tobeuploaded = phone.getText().toString().length() == 0 ? profile.getPhone() : phone.getText().toString();
+                        String phone_tobeuploaded = phone.getText().toString().length() == 0 ? profile.getPhonenumber() : phone.getText().toString();
                         String email_tobeuploaded = email.getText().toString().length() == 0 ? profile.getEmail() : email.getText().toString();
                         String address_tobeuploaded = address.getText().toString().length() == 0 ? profile.getAddress() : address.getText().toString();
 
-                        profile.setName(name_tobeuploaded);
+                        profile.setUsername(name_tobeuploaded);
                         profile.setAddress(address_tobeuploaded);
                         profile.setDescription(desc_tobeuploaded);
                         profile.setEmail(email_tobeuploaded);
-                        profile.setPhone(phone_tobeuploaded);
+                        profile.setPhonenumber(phone_tobeuploaded);
                         profile.setTitle(title_tobeuploaded);
                         if (imageUri != null)
                             profile.setImageurl(imageurl);

@@ -29,6 +29,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
 import recreate.india.main.startupcarvaan.R;
+import recreate.india.main.startupcarvaan.allmodels.user.UserProfile;
 import recreate.india.main.startupcarvaan.mainActivities.MainActivity;
 
 public class ProfileActivity extends AppCompatActivity {
@@ -38,7 +39,7 @@ public class ProfileActivity extends AppCompatActivity {
     private FirebaseFirestore ff=FirebaseFirestore.getInstance();
     private FirebaseStorage fs= FirebaseStorage.getInstance();
 
-    private profile profile=new profile();
+    private UserProfile profile=new UserProfile();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,16 +76,16 @@ public class ProfileActivity extends AppCompatActivity {
                 .addSnapshotListener(new EventListener<DocumentSnapshot>() {
                     @Override
                     public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                        profile=value.toObject(recreate.india.main.startupcarvaan.user.profile.class);
+                        profile=value.toObject(UserProfile.class);
                         //setting all the fields first
-                        name.setText(profile.getName());
+                        name.setText(profile.getUsername());
                         title.setText(profile.getTitle());
                         desc.setText(profile.getDescription());
-                        phone.setText(profile.getPhone());
+                        phone.setText(profile.getPhonenumber());
                         email.setText(profile.getEmail());
                         address.setText(profile.getAddress());
-                        level.setText(profile.getRank());
-                        points.setText(String.valueOf(profile.getPoints()));
+                        level.setText(profile.getLevel());
+                        points.setText(String.valueOf(profile.getCurrentpoints()));
                         StorageReference imageurl=fs.getReference().child(profile.getImageurl());
                         imageurl.getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
                             @Override
