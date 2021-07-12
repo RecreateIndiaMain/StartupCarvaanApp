@@ -29,7 +29,7 @@ import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.allmodels.RciValue;
 import recreate.india.main.startupcarvaan.mainActivities.MainActivity;
 
-public class rci_exchange extends AppCompatActivity {
+public class AboutRCI extends AppCompatActivity {
     private LineChart lineChart;
     private TextView desc_rci, price_rci, btn_buy, btn_sell;
     Toolbar toolbar;
@@ -164,7 +164,7 @@ public class rci_exchange extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        startActivity(new Intent(rci_exchange.this, MainActivity.class));
+        startActivity(new Intent(AboutRCI.this, MainActivity.class));
         finish();
     }
 }

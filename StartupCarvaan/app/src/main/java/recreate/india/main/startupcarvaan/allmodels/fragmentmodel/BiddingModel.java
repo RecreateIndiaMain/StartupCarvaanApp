@@ -1,6 +1,6 @@
 package recreate.india.main.startupcarvaan.allmodels.fragmentmodel;
 
-public class bidding {
+public class BiddingModel {
     String closedin;
     Integer currentbid;
     String currentwinner,producttitle,productdesc,productimage,winnerid;
@@ -61,7 +61,7 @@ public class bidding {
         this.winnerid = winnerid;
     }
 
-    public bidding(String closedin, Integer currentbid, String currentwinner, String producttitle, String productdesc, String productimage, String winnerid) {
+    public BiddingModel(String closedin, Integer currentbid, String currentwinner, String producttitle, String productdesc, String productimage, String winnerid) {
         this.closedin = closedin;
         this.currentbid = currentbid;
         this.currentwinner = currentwinner;
@@ -71,6 +71,6 @@ public class bidding {
         this.winnerid = winnerid;
     }
 
-    public bidding() {
+    public BiddingModel() {
     }
 }

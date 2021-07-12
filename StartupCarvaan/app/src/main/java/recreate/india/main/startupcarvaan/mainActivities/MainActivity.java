@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity{
                     break;
 
 //                case R.id.aboutRci:
-//                    startActivity(new Intent(MainActivity.this, rci_exchange.class));
+//                    startActivity(new Intent(MainActivity.this, AboutRCI.class));
 //                    finish();
 //                    break;
                 case R.id.privacypolicy:

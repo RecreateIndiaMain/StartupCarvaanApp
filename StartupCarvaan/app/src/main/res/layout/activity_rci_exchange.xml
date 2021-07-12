@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/backgroundcolourmain"
-    tools:context=".coin_exchange.rci_exchange">
+    tools:context=".coin_exchange.AboutRCI">
   <ScrollView
       android:layout_width="match_parent"
       android:layout_height="match_parent">
