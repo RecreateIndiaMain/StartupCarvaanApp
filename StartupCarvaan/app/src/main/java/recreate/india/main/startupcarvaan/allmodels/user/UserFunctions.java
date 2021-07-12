@@ -24,6 +24,8 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ScheduledExecutorService;
+
 import recreate.india.main.startupcarvaan.allmodels.reward.RewardFunction;
 import recreate.india.main.startupcarvaan.allmodels.share.Share;
 import recreate.india.main.startupcarvaan.allmodels.share.ShareFunctions;
@@ -68,6 +70,7 @@ public class UserFunctions {
     // Function to deduct rci upon buying is confirmed or investing
     // investment (2)
     public void deduct_rci(Double investment) {
+        new UserProfile();
         if (userProfile.getAddedrci() >= investment) {
             userProfile.setAddedrci(userProfile.getAddedrci() - investment);
         } else {
@@ -77,6 +80,7 @@ public class UserFunctions {
         ff.collection("users").document(firebaseUser.getUid()).update("addedrci", userProfile.getAddedrci(), "profit", userProfile.getProfit());
     }
     public void addRci(Double investment) {
+        new UserProfile();
         ff.collection("users").document(firebaseUser.getUid()).update("profit", userProfile.getProfit()+investment);
     }
 
@@ -187,29 +191,27 @@ public class UserFunctions {
 
     }
 
-//    public void removeShares(String shareid,String day,Double quantity,Double price){
-//        final ShareHoldings[] shareHoldings = {new ShareHoldings()};
-//        ff.collection("users").document(firebaseUser.getUid()).collection("myshares").document(shareid).addSnapshotListener(new EventListener<DocumentSnapshot>() {
-//            @Override
-//            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-//                if (value != null) {
-//                    shareHoldings[0] = value.toObject(ShareHoldings.class);
-//                }
-//            }
-//        });
-//
-//        ArrayList<Double> a;
-//        a=shareHoldings[0].getHoldings().get("holdings").get(day);
-//        a.set(0,a.get(0)-quantity);
-//        if(a.get(0)==0)
-//            shareHoldings[0].getHoldings().remove(day);
-//        else{
-//            shareHoldings[0].getHoldings().get("holdings").put(day,a);
-//        }
-//        ff.collection("users").document(firebaseUser.getUid()).collection("myshares")
-//                .document(shareid)
-//                .update("holdings",shareHoldings[0].getHoldings());
-//    }
+    public void removeShares(String shareid,String day,Double quantity,Double price){
+        final ShareHoldings[] shareHoldings = {new ShareHoldings()};
+        ff.collection("users").document(firebaseUser.getUid()).collection("myshares").document(shareid).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull @NotNull Task<DocumentSnapshot> task) {
+                if (task.getResult().exists()) {
+                    shareHoldings[0] = task.getResult().toObject(ShareHoldings.class);
+                    Map<String ,ArrayList<Double>> holdings=shareHoldings[0].getHoldings();
+                    ArrayList<Double> two=holdings.get(day);
+                    two.set(0,two.get(0)-quantity);
+                    if(two.get(0)==0){
+                        holdings.remove(day);
+                    }
+                    else holdings.put(day,two);
+                    ff.collection("users").document(firebaseUser.getUid()).collection("myshares")
+                            .document(shareid)
+                            .update("holdings",holdings);
+                }
+            }
+        });
+    }
 
     //
     public void addPendingTransaction(String shareid,Double quantity,Double price,String type){
@@ -223,6 +225,7 @@ public class UserFunctions {
         userShareTransaction.setUserid(firebaseUser.getUid());
         userShareTransaction.setAdded(Timestamp.now());
         userShareTransaction.setAdded(Timestamp.now());
+
 
         ff.collection("users").document(firebaseUser.getUid())
                 .collection("pendingtransactions")
