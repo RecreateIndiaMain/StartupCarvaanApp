@@ -13,7 +13,6 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 import java.util.Map;
 
-import recreate.india.main.startupcarvaan.fragments.allshares.allshare;
 import recreate.india.main.startupcarvaan.fragments.myshares.holdings;
 
 public class user_share_functions {
@@ -102,19 +101,19 @@ public class user_share_functions {
             }
         });
     }
-    public void addUser(String shareid){
-        ff.collection("allshares")
-                .document("shareid")
-                .get()
-                .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                        allshare allshare=new allshare();
-                        allshare=task.getResult().toObject(allshare.class);
-                        ff.collection("allshares")
-                                .document(shareid)
-                                .update("users",allshare.getUsers()+1);
-                    }
-                });
-    }
+//    public void addUser(String shareid){
+//        ff.collection("allshares")
+//                .document("shareid")
+//                .get()
+//                .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+//                    @Override
+//                    public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+//                        allshare allshare=new allshare();
+//                        allshare=task.getResult().toObject(allshare.class);
+//                        ff.collection("allshares")
+//                                .document(shareid)
+//                                .update("users",allshare.getUsers()+1);
+//                    }
+//                });
+//    }
 }

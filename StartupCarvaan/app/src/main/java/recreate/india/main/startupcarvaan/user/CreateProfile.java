@@ -3,6 +3,8 @@ package recreate.india.main.startupcarvaan.user;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -30,6 +32,8 @@ import com.theartofdev.edmodo.cropper.CropImageView;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
 
 import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.allmodels.user.UserProfile;
@@ -86,7 +90,38 @@ public class CreateProfile extends AppCompatActivity {
                     }
                 });
         //end here
+        display_name.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                FirebaseFirestore.getInstance().collection("usernames")
+                        .document(s.toString())
+                        .get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull @NotNull Task<DocumentSnapshot> task) {
+                        if(task.getResult().exists()){
+                            Toast.makeText(CreateProfile.this, "this user name is already taken please find another one for you", Toast.LENGTH_SHORT).show();
+                        }
+                        else{
+                            Map<String , String> m=new HashMap<>();
+                            m.put("userid",FirebaseAuth.getInstance().getCurrentUser().getUid());
+                            FirebaseFirestore.getInstance().collection("usernames")
+                                    .document(s.toString())
+                                    .set(m);
+                        }
+                    }
+                });
+            }
+        });
         //image upload work
         userImage = findViewById(R.id.userImage);
         userImage.setOnClickListener(new View.OnClickListener() {

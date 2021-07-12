@@ -23,7 +23,6 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
-import com.google.firebase.firestore.auth.User;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,13 +32,11 @@ import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.aboutshare.models.sharedetails;
 import recreate.india.main.startupcarvaan.allmodels.share.ShareFunctions;
 import recreate.india.main.startupcarvaan.allmodels.user.UserFunctions;
-import recreate.india.main.startupcarvaan.allmodels.user.UserShare;
 import recreate.india.main.startupcarvaan.fragments.models.sharefunctions;
 import recreate.india.main.startupcarvaan.fragments.myshares.holdings;
-import recreate.india.main.startupcarvaan.fragments.mycoins.coin;
 import recreate.india.main.startupcarvaan.user.user;
 import recreate.india.main.startupcarvaan.user.user_share_functions;
-import recreate.india.main.startupcarvaan.user.userfunctions;
+
 
 public class sell extends DialogFragment {
     private TextView shares,price,available,price_of_share;
@@ -51,9 +48,8 @@ public class sell extends DialogFragment {
     String price_ ="";
     String share_;
     private sharedetails sharedetails=new sharedetails();
-    private userfunctions userfunctions=new userfunctions();
+
     private sharefunctions sharefunctions=new sharefunctions();
-    private coin coin=new coin();
     private user_share_functions user_share_functions=new user_share_functions();
 
     private String shareid;
@@ -108,15 +104,6 @@ public class sell extends DialogFragment {
             }
         });
         // retrieving coin details
-        FirebaseFirestore.getInstance()
-                .collection("users")
-                .document(new user().user().getUid())
-                .collection("others").document("coins").addSnapshotListener(new EventListener<DocumentSnapshot>() {
-            @Override
-            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                coin=value.toObject(coin.class);
-            }
-        });
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, list);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spin.setAdapter(arrayAdapter);
@@ -160,8 +147,6 @@ public class sell extends DialogFragment {
                         String day="1.0";
                         if(quantity>Double.valueOf(holdings.getHoldings().get(price_)))
                             Toast.makeText(getContext(), "do not have "+ quantity + " shares for price "+price_, Toast.LENGTH_SHORT).show();
-                        else if(quantity*price>sharedetails.getAvailableforselling())
-                            Toast.makeText(getContext(),"sorry this much share is not available for selling",Toast.LENGTH_LONG).show();
                         else{
                             UserFunctions userFunctions=new UserFunctions();
                             userFunctions.addPendingTransaction(shareid,quantity,price,"sell");

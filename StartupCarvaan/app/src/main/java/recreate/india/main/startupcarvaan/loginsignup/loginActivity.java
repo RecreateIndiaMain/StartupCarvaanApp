@@ -175,12 +175,6 @@ private CheckBox privacy;
                 public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                     if(!task.getResult().exists()){
                         FirebaseFirestore.getInstance().collection("users").document(user.getUid()).set(userProfile.giveNewUser());
-//                        Map<String,Double> coins=new HashMap<>();
-//                        coins.put("bonus", Double.valueOf(1000));
-//                        coins.put("rci", Double.valueOf(100));
-//                        coins.put("winnings", Double.valueOf(0));
-//                        FirebaseFirestore.getInstance().collection("users").document(user.getUid())
-//                                .collection("others").document("coins").set(coins);
                         startActivity(new Intent(loginActivity.this, CreateProfile.class));
                         finish();
                     }

@@ -17,7 +17,6 @@ import androidx.fragment.app.DialogFragment;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.Timestamp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -28,12 +27,9 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.aboutshare.models.sharedetails;
 import recreate.india.main.startupcarvaan.allmodels.share.ShareFunctions;
-import recreate.india.main.startupcarvaan.allmodels.share.sharedetails.TransactionDetails;
 import recreate.india.main.startupcarvaan.allmodels.user.UserFunctions;
 import recreate.india.main.startupcarvaan.fragments.models.sharefunctions;
-import recreate.india.main.startupcarvaan.fragments.mycoins.coin;
 import recreate.india.main.startupcarvaan.user.user_share_functions;
-import recreate.india.main.startupcarvaan.user.userfunctions;
 
 public class buy extends DialogFragment {
     //local variables declaration
@@ -49,9 +45,7 @@ public class buy extends DialogFragment {
     // constructor declaration
     private user_share_functions usersharefunctions= new user_share_functions();
     private sharedetails sharedetails=new sharedetails();
-    private coin coin=new coin();
     private sharefunctions sharefunctions=new sharefunctions();
-    private userfunctions userfunctions=new userfunctions();
 
     public buy() {
     }
@@ -98,66 +92,6 @@ public class buy extends DialogFragment {
                 .collection("others").document("coins").addSnapshotListener(new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                coin=value.toObject(coin.class);
-            }
-        });
-
-        buy_now.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(no_of_shares.getText().toString().equals(""))
-                    Toast.makeText(getContext(), "please enter a valid quantity", Toast.LENGTH_SHORT).show();
-                else{
-                    Integer share_price=Integer.valueOf(sharedetails.getBuyingprice());
-                    Integer quantity=Integer.valueOf(no_of_shares.getText().toString());
-                    if(quantity<=sharedetails.getAvailableforbuying()) {
-                        Integer resultant_price=share_price*quantity;
-                        Integer resultant67= Integer.valueOf((int) Math.floor((resultant_price*67)/100));
-                        if(resultant_price>coin.getRci()){
-                            Toast.makeText(getContext(), "you do not have sufficient funds, please add some", Toast.LENGTH_SHORT).show();
-                        }
-                        else{
-                            // checking is user already a investor
-                            FirebaseFirestore.getInstance().collection("users")
-                                    .document(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                                    .collection("myshares")
-                                    .document(shareid).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-                                @Override
-                                public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                                    if(task.getResult().exists()){
-                                        usersharefunctions.updateShare(shareid,share_price,quantity);
-                                        sharefunctions.removeAvailableBuy(shareid,sharedetails.getAvailableforbuying(),quantity);
-                                        userfunctions.removeRci(coin.getRci(),resultant_price);
-                                        try {
-                                            userfunctions.addPoints(.1*resultant_price);
-                                        }
-                                        catch (Error e){
-
-                                        }
-                                        sharefunctions.addSell(shareid,sharedetails.getAvailableforselling(),resultant67);
-                                        buy_success buy_success=new buy_success();
-                                        buy_success.show(getParentFragmentManager(),"buy_success");
-                                    }
-                                    else{
-                                        usersharefunctions.addNewShare(shareid,share_price,quantity);
-                                        usersharefunctions.addUser(shareid);
-                                        sharefunctions.removeAvailableBuy(shareid,sharedetails.getAvailableforbuying(),quantity);
-                                       // sharefunctions.updatetotalinvested(shareid,resultant67);
-                                        userfunctions.removeRci(coin.getRci(),resultant_price);
-                                        userfunctions.addPoints(.1*resultant_price);
-                                        sharefunctions.addSell(shareid,sharedetails.getAvailableforselling(),resultant67);
-                                        buy_success buy_success=new buy_success();
-                                        buy_success.show(getParentFragmentManager(),"buy_success");
-                                    }
-                                    dismiss();
-                                }
-                            });
-                        }
-                    }
-                    else{
-                        Toast.makeText(getContext(), "sorry these much share are not available for buying right now", Toast.LENGTH_SHORT).show();
-                    }
-                }
             }
         });
 

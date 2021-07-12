@@ -43,9 +43,7 @@ import recreate.india.main.startupcarvaan.aboutshare.blogging;
 import recreate.india.main.startupcarvaan.aboutshare.models.sharedetails;
 import recreate.india.main.startupcarvaan.allmodels.share.Share;
 import recreate.india.main.startupcarvaan.allmodels.user.ShareHoldings;
-import recreate.india.main.startupcarvaan.fragments.allshares.allshare;
 import recreate.india.main.startupcarvaan.fragments.progressdialogue.CustomProgressDialogue;
-import recreate.india.main.startupcarvaan.user.user;
 
 public class myshares extends Fragment {
     private RecyclerView myshare;
@@ -128,13 +126,13 @@ public class myshares extends Fragment {
                 });
                 String shareid=getSnapshots().getSnapshot(position).getId();
                 final sharedetails[] sharedetails = {new sharedetails()};
-                final allshare[] allshare = {new allshare()};
+                final Share[] allshare = {new Share()};
                 FirebaseFirestore.getInstance().collection("allshares")
                         .document(shareid)
                         .addSnapshotListener(new EventListener<DocumentSnapshot>() {
                             @Override
                             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                                allshare[0] =value.toObject(allshare.class);
+                                allshare[0] =value.toObject(Share.class);
                                 holder.sharename.setText(allshare[0].getName());
                                 FirebaseStorage.getInstance().getReference().child(allshare[0].getLogourl()).getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
                                     @Override

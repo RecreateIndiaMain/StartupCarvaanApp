@@ -253,8 +253,8 @@ public class allshares extends Fragment {
                     }
                 });
 
-                holder.sellingprice.setText(shareFunctions.trading.getSellingprice().toString());
-                holder.buyingprice.setText(shareFunctions.trading.getBuyingprice().toString());
+                holder.sellingprice.setText(String.valueOf(shareFunctions.trading.getSellingprice()));
+                holder.buyingprice.setText(String.valueOf(shareFunctions.trading.getBuyingprice()));
 
 
                 // old one

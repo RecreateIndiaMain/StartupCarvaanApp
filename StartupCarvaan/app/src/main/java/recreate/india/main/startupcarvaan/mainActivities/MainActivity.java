@@ -30,10 +30,10 @@ import recreate.india.main.startupcarvaan.Levels;
 import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.coin_exchange.rci_exchange;
 import recreate.india.main.startupcarvaan.fragments.allshares.allshares;
-import recreate.india.main.startupcarvaan.fragments.biding.biding;
+
 import recreate.india.main.startupcarvaan.fragments.mycoins.mycoins;
 import recreate.india.main.startupcarvaan.fragments.myshares.myshares;
-import recreate.india.main.startupcarvaan.fragments.practice.practice;
+
 import recreate.india.main.startupcarvaan.loginsignup.loginActivity;
 import recreate.india.main.startupcarvaan.user.ProfileActivity;
 import recreate.india.main.startupcarvaan.user.Transactions;
@@ -62,18 +62,18 @@ public class MainActivity extends AppCompatActivity{
                     fragment = new myshares();
                     switchFragment(fragment);
                     return true;
-                case R.id.practice:
-                    fragment = new practice();
-                    switchFragment(fragment);
-                    return true;
+//                case R.id.practice:
+//                    fragment = new practice();
+//                    switchFragment(fragment);
+//                    return true;
                 case R.id.mycoins:
                     fragment = new mycoins();
                     switchFragment(fragment);
                     return true;
-                case R.id.biding:
-                    fragment = new biding();
-                    switchFragment(fragment);
-                    return true;
+//                case R.id.biding:
+//                    fragment = new biding();
+//                    switchFragment(fragment);
+//                    return true;
             }
             return false;
         }
@@ -165,19 +165,19 @@ public class MainActivity extends AppCompatActivity{
         super.onStart();
         Paper.book().write("first","true");
 
-        String current=Paper.book().read("version");
-        FirebaseFirestore.getInstance().collection("version")
-                .document("version")
-                .addSnapshotListener(new EventListener<DocumentSnapshot>() {
-                    @Override
-                    public void onEvent(@Nullable @org.jetbrains.annotations.Nullable DocumentSnapshot value, @Nullable @org.jetbrains.annotations.Nullable FirebaseFirestoreException error) {
-                        String latest=value.getString("current");
-                        if(!current.equals(latest)){
-                            startActivity(new Intent(Intent.ACTION_VIEW,
-                                    Uri.parse("https://play.google.com/store/apps/details?id=recreate.india.main.startupcarvaan")));
-                        }
-                    }
-                });
+//        String current=Paper.book().read("version");
+//        FirebaseFirestore.getInstance().collection("version")
+//                .document("version")
+//                .addSnapshotListener(new EventListener<DocumentSnapshot>() {
+//                    @Override
+//                    public void onEvent(@Nullable @org.jetbrains.annotations.Nullable DocumentSnapshot value, @Nullable @org.jetbrains.annotations.Nullable FirebaseFirestoreException error) {
+//                        String latest=value.getString("current");
+//                        if(!current.equals(latest)){
+//                            startActivity(new Intent(Intent.ACTION_VIEW,
+//                                    Uri.parse("https://play.google.com/store/apps/details?id=recreate.india.main.startupcarvaan")));
+//                        }
+//                    }
+//                });
     }
 
     @Override

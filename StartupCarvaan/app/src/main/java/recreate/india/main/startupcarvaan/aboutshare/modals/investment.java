@@ -9,15 +9,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.Timestamp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -27,11 +22,8 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 
 import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.aboutshare.models.sharedetails;
-import recreate.india.main.startupcarvaan.allmodels.share.sharedetails.TransactionDetails;
 import recreate.india.main.startupcarvaan.fragments.models.sharefunctions;
-import recreate.india.main.startupcarvaan.fragments.mycoins.coin;
 import recreate.india.main.startupcarvaan.user.user_share_functions;
-import recreate.india.main.startupcarvaan.user.userfunctions;
 
 public class investment extends DialogFragment {
     //local variables declaration
@@ -46,9 +38,7 @@ public class investment extends DialogFragment {
     // constructor declaration
     private user_share_functions usersharefunctions= new user_share_functions();
     private sharedetails sharedetails=new sharedetails();
-    private coin coin=new coin();
     private sharefunctions sharefunctions=new sharefunctions();
-    private userfunctions userfunctions=new userfunctions();
 
     public investment() {
     }
@@ -85,17 +75,6 @@ public class investment extends DialogFragment {
                 sharedetails=value.toObject(sharedetails.class);
                 priceofshare.setText(String.valueOf(sharedetails.getBuyingprice()+" Rci"));
                 availableforbuying.setText(String.valueOf("Available :"+sharedetails.getAvailableforbuying()));
-            }
-        });
-
-        // retrieving coin details
-        FirebaseFirestore.getInstance()
-                .collection("users")
-                .document(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                .collection("others").document("coins").addSnapshotListener(new EventListener<DocumentSnapshot>() {
-            @Override
-            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                coin=value.toObject(coin.class);
             }
         });
 
