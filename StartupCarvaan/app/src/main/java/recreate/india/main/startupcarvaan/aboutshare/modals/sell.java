@@ -82,9 +82,9 @@ public class sell extends DialogFragment {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
                 holdings = value.toObject(ShareHoldings.class);
-                Map<String,ArrayList<Double>>holding=holdings.getHoldings();
-                for (Map.Entry<String, ArrayList<Double>> entry : holding.entrySet())
-                    list.add(String.valueOf(entry.getKey()+" : "+entry.getValue()));
+                Map<String ,Map<String,ArrayList<Double>>>holding=holdings.getHoldings();
+//                for (Map.Entry<String, ArrayList<Double>> entry : holding.entrySet())
+//                    list.add(String.valueOf(entry.getKey()+" : "+entry.getValue()));
             }
         });
         //retrieving share details
