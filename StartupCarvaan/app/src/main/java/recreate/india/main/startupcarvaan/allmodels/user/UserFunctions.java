@@ -95,21 +95,19 @@ public class UserFunctions {
     public void addShareNewUser(String shareid, Double quantity, Double price) {
         String days=getDay();
         Double investment=price*quantity;
-        Map<String, Double[]> holdings = new HashMap<>();
-        Double arr[] = new Double[2];
-        arr[0] = quantity;
-        arr[1] = price;
-        holdings.put(days, arr);
+        Map<String,Map<String,ArrayList<Double>>> holdings=new HashMap<>();
+        Map<String, ArrayList<Double>> holding = new HashMap<>();
+        ArrayList<Double> arr = new ArrayList<Double>();
+        arr.add(quantity);
+        arr.add(price);
+        holding.put(days,arr);
+        holdings.put("holdings",holding);
         // updating the data
         ff.collection("users").document(firebaseUser.getUid()).collection("myshares").document(shareid).set(holdings);
 
         //FOR  updating the number of investors we need share details snapshot
          ShareFunctions shareFunctions=new ShareFunctions(shareid);
-         Share share=shareFunctions.share;
-        // setting to share[0] model also
-        share.setInvestors(share.getInvestors() + 1);
-        // updating number of investors
-        ff.collection("startup").document(shareid).update("investors", share.getInvestors());
+//        ff.collection("startup").document(shareid).update("investors", share.getInvestors());
 
         // updating number of investments by the user
     //    userProfile.setInvestmentcount(userProfile.getInvestmentcount() + 1);
@@ -121,42 +119,38 @@ public class UserFunctions {
     public void updateUserShare(String shareid, Double quantity, Double price) {
 
 //      TODO: please look into investment of more than a month
+
         Double investment=quantity*price;
         String days=getDay();
         final ShareHoldings[] shareHoldings = {new ShareHoldings()};
         ff.collection("users").document(firebaseUser.getUid()).collection("myshares").document(shareid).addSnapshotListener(new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                if (value != null) {
                     shareHoldings[0] = value.toObject(ShareHoldings.class);
-                }
+                    Double initaltotalAmount, finalTotalAmount;
+                    HashMap<String, ArrayList<Double>> holdings = shareHoldings[0].getHoldings();
+                    if (holdings.containsKey(days)) {
+                        // if someone has invested on the same day in the same share
+                        ArrayList<Double> n = new ArrayList<Double>(2);
+                        n.add(holdings.get(days).get(0));
+                        n.add(holdings.get(days).get(1));
+                        initaltotalAmount = n.get(0) * n.get(1);
+                        n.set(0, n.get(0) + quantity);
+                        finalTotalAmount = initaltotalAmount + (quantity * price);
+                        n.set(1,finalTotalAmount / n.get(0));
+                        ff.collection("users").document(firebaseUser.getUid()).collection("myshares").document(shareid).update("holdings", "holdings");
+                    } else {
+                        // no shares of same day present
+                        ArrayList<Double> p=null;
+                        p.add(price);
+                        p.add(quantity);
+                        HashMap<String, ArrayList<Double>> holdings2 = new HashMap<>();
+                        holdings2.put(days, p);
+                        ff.collection("users").document(firebaseUser.getUid()).collection("myshares").document(shareid)
+                                .update("holdings", holdings2);
+                    }
             }
         });
-        Double initaltotalAmount, finalTotalAmount;
-        HashMap<String, ArrayList<Double>> holdings = shareHoldings[0].getHoldings();
-
-        if (holdings.containsKey(days)) {
-            // if someone has invested on the same day in the same share
-
-            ArrayList<Double> n = new ArrayList<Double>(2);
-            n.add(holdings.get(days).get(0));
-            n.add(holdings.get(days).get(1));
-            initaltotalAmount = n.get(0) * n.get(1);
-            n.set(0, n.get(0) + quantity);
-            finalTotalAmount = initaltotalAmount + (quantity * price);
-            n.set(1,finalTotalAmount / n.get(0));
-            ff.collection("users").document(firebaseUser.getUid()).collection("myshares").document(shareid).update("holdings", holdings);
-        } else {
-            // no shares of same day present
-            Double[] p = new Double[2];
-            p[0] = price;
-            p[1] = quantity;
-            HashMap<String, Double[]> holdings2 = new HashMap<>();
-            holdings2.put(days, p);
-            ff.collection("users").document(firebaseUser.getUid()).collection("myshares").document(shareid)
-                    .update("holdings", holdings2);
-        }
-
         // updating number of investments by the user
        // userProfile.setInvestmentcount(userProfile.getInvestmentcount() + 1);
        // ff.collection("users").document(firebaseUser.getUid()).update("investments", userProfile.getInvestmentcount());
