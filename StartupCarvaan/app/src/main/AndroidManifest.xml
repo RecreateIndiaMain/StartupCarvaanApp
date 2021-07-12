@@ -23,10 +23,7 @@
 
         </activity>
         <activity android:name=".user.Transactions" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
         <activity android:name=".coin_exchange.rci_exchange" />
         <activity android:name=".Levels" />
@@ -56,6 +53,10 @@
         <activity
             android:name=".mainActivities.SplashScreen"
             android:theme="@style/MyTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"

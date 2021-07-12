@@ -112,25 +112,29 @@
         android:layout_marginRight="10sp"
         android:layout_marginTop="10sp"
         >
-        <TextView
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:layout_width="120dp"
-            android:layout_height="35dp"
-            android:text="BUY"
-            android:gravity="center"
-            android:layout_marginRight="30sp"
-            android:background="@drawable/joinbu"/>
-        <TextView
-            android:textColor="@color/white"
-            android:textStyle="bold"
-          android:gravity="center"
-            android:layout_width="120dp"
-            android:layout_height="35dp"
-            android:text="SELL"
 
+        <TextView
+            android:id="@+id/buy_aboutRci"
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="30sp"
+            android:background="@drawable/joinbu"
+            android:gravity="center"
+            android:text="BUY"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/sell_aboutRci"
+            android:layout_width="120dp"
+            android:layout_height="35dp"
             android:layout_marginLeft="30sp"
-            android:background="@drawable/joinbu"/>
+            android:background="@drawable/joinbu"
+            android:gravity="center"
+
+            android:text="SELL"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
 
     </LinearLayout>
         </LinearLayout>
