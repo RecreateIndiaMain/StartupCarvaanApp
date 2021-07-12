@@ -32,13 +32,14 @@ import java.util.Map;
 import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.aboutshare.modals.name_comment;
 import recreate.india.main.startupcarvaan.aboutshare.models.blogdetails;
+import recreate.india.main.startupcarvaan.allmodels.share.BloggingDetails;
 
-// Siddharth -->date :23rd may 2021
+    // Siddharth -->date :23rd may 2021
 public class comment extends DialogFragment {
 
     FirebaseFirestore ff=FirebaseFirestore.getInstance();
     private RecyclerView commentList;
-    private blogdetails blogdetails=new blogdetails();
+    private BloggingDetails blogdetails=new BloggingDetails();
     public comment(){}
 
     @NonNull
@@ -62,7 +63,7 @@ public class comment extends DialogFragment {
                 .get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
-                blogdetails=documentSnapshot.toObject(recreate.india.main.startupcarvaan.aboutshare.models.blogdetails.class);
+                blogdetails=documentSnapshot.toObject(BloggingDetails.class);
                 comment_map[0] =blogdetails.getComments();
                 ArrayList<name_comment> content=new ArrayList<>();
                 for (Map.Entry<String,String> set: comment_map[0].entrySet()) {

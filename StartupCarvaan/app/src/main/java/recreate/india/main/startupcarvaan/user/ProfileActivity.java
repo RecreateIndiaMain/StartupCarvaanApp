@@ -34,7 +34,7 @@ import recreate.india.main.startupcarvaan.mainActivities.MainActivity;
 
 public class ProfileActivity extends AppCompatActivity {
     private ImageView user_image,updateprofile,back;
-    private TextView name,title,points,level,desc,phone,email,address;
+    private TextView name,title,points,level,desc,phone,email,address,aadharCard;
     private WebView webView;
     private FirebaseFirestore ff=FirebaseFirestore.getInstance();
     private FirebaseStorage fs= FirebaseStorage.getInstance();

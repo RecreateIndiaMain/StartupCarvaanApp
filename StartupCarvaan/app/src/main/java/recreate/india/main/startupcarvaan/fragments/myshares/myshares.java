@@ -24,6 +24,8 @@ import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -39,6 +41,8 @@ import de.hdodenhof.circleimageview.CircleImageView;
 import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.aboutshare.blogging;
 import recreate.india.main.startupcarvaan.aboutshare.models.sharedetails;
+import recreate.india.main.startupcarvaan.allmodels.share.Share;
+import recreate.india.main.startupcarvaan.allmodels.user.ShareHoldings;
 import recreate.india.main.startupcarvaan.fragments.allshares.allshare;
 import recreate.india.main.startupcarvaan.fragments.progressdialogue.CustomProgressDialogue;
 import recreate.india.main.startupcarvaan.user.user;
@@ -48,6 +52,8 @@ public class myshares extends Fragment {
     private TextView sample;
     private FirestoreRecyclerAdapter adapter;
     private CustomProgressDialogue cpd;
+    private  FirebaseFirestore ff=FirebaseFirestore.getInstance();
+    FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
     public myshares() {
         // Required empty public constructor
     }
@@ -65,9 +71,9 @@ public class myshares extends Fragment {
         myshare=view.findViewById(R.id.mysharerecyclerview);
         sample=view.findViewById(R.id.sample);
         cpd= new CustomProgressDialogue(getActivity());
-        Query query= FirebaseFirestore.getInstance().collection("users").document(new user().user().getUid()).collection("myshares");
-        FirestoreRecyclerOptions<holdings> option=new FirestoreRecyclerOptions.Builder<holdings>().setQuery(query,holdings.class).build();
-        adapter= new FirestoreRecyclerAdapter<holdings, viewholder>(option) {
+        Query query= FirebaseFirestore.getInstance().collection("users").document(user.getUid()).collection("myshares");
+        FirestoreRecyclerOptions<ShareHoldings> option=new FirestoreRecyclerOptions.Builder<ShareHoldings>().setQuery(query, ShareHoldings.class).build();
+        adapter= new FirestoreRecyclerAdapter<ShareHoldings, viewholder>(option) {
             @NonNull
             @Override
             public viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -76,12 +82,21 @@ public class myshares extends Fragment {
             }
 
             @Override
-            protected void onBindViewHolder(@NonNull viewholder holder, int position, @NonNull holdings model) {
+            protected void onBindViewHolder(@NonNull viewholder holder, int position, @NonNull ShareHoldings model) {
                 List<String> list = new ArrayList<String>();
                 list.add(0, "Price of a share : No. of shares");
-                Map<String,Integer> holding=model.getHoldings();
-                for (Map.Entry<String,Integer> entry : holding.entrySet())
-                    list.add(String.valueOf(entry.getKey()+" : "+entry.getValue()));
+                Map<String,Double[]> holding=model.getHoldings();
+                for (Map.Entry<String,Double[]> entry : holding.entrySet())
+                    // TODO: ........please check it
+                {
+                    String date=entry.getKey();
+                    Double quantity=entry.getValue()[0];
+                    Double price=entry.getValue()[1];
+
+                    // checking date then adding it to the spinner
+                    checkDate(date);
+                    list.add(String.valueOf(entry.getKey() + " : " + entry.getValue()[0]));
+                }
                 final String[] item = new String[1];
                 ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, list);
                 arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -161,9 +176,14 @@ public class myshares extends Fragment {
         return view;
     }
 
+    // TODO:  complete this function
+    private void checkDate(String date) {
+
+    }
+
     private class viewholder extends RecyclerView.ViewHolder {
         private CircleImageView companylogo;
-        private TextView sharename,buyp,sellp,sample;
+        private TextView sharename,buyp,sellp,sample,netInvestment,netProfit;
         private Button trade;
         private Spinner spin1;
         public viewholder(@NonNull View itemView) {
@@ -175,6 +195,8 @@ public class myshares extends Fragment {
             sellp=itemView.findViewById(R.id.sellingPrice);
             trade=itemView.findViewById(R.id.trade);
             spin1=itemView.findViewById(R.id.spinner4);
+            netInvestment=itemView.findViewById(R.id.netinvest);
+            netProfit=itemView.findViewById(R.id.netprofit);
         }
     }
 

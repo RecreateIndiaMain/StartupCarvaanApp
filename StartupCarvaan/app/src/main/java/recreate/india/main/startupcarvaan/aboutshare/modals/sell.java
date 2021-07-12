@@ -77,6 +77,9 @@ public class sell extends DialogFragment {
         mUser=FirebaseAuth.getInstance().getCurrentUser();
         List<String> list = new ArrayList<String>();
         list.add(0, "Price of a share : No. of shares");
+
+        // TODO:  Share details need to be fetched and worked out
+
         //retrieve holdings
         FirebaseFirestore.getInstance()
                 .collection("users")

@@ -3,7 +3,7 @@ package recreate.india.main.startupcarvaan.allmodels.user;
 import java.util.HashMap;
 
 public class ShareHoldings {
-    HashMap<String,Double[]> holdings=new HashMap<>();
+    HashMap<String,Double[]> holdings=new HashMap<>();  // String is date and at 0 it is quantity and at 1 it is price
 
     public ShareHoldings(){
 

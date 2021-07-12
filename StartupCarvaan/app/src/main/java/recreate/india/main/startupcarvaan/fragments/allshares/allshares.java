@@ -1,17 +1,13 @@
 
 package recreate.india.main.startupcarvaan.fragments.allshares;
 
-import android.app.ProgressDialog;
-import android.content.Entity;
+
 import android.content.Intent;
-import android.content.res.ColorStateList;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -25,7 +21,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
@@ -37,12 +32,8 @@ import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.Query;
-import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.FirebaseStorage;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.PlayerConstants;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer;
@@ -50,15 +41,13 @@ import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.You
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView;
 
 import org.jetbrains.annotations.NotNull;
-
-import java.nio.charset.IllegalCharsetNameException;
 import java.util.ArrayList;
 
 import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.aboutshare.blogging;
-import recreate.india.main.startupcarvaan.aboutshare.models.sharedetails;
+import recreate.india.main.startupcarvaan.allmodels.share.Share;
+import recreate.india.main.startupcarvaan.allmodels.share.ShareFunctions;
 import recreate.india.main.startupcarvaan.fragments.progressdialogue.CustomProgressDialogue;
-import recreate.india.main.startupcarvaan.user.ProfileActivity;
 
 public class allshares extends Fragment {
     private FirebaseFirestore ff= FirebaseFirestore.getInstance();
@@ -67,7 +56,7 @@ public class allshares extends Fragment {
     private CustomProgressDialogue pDialog;
     private boolean loaded=false;
 
-    ArrayList<Integer> graph=new ArrayList<>();
+    ArrayList<Double> graph=new ArrayList<>();
     ArrayList<Entry> data=new ArrayList<>();
 
     public allshares() {
@@ -87,12 +76,14 @@ public class allshares extends Fragment {
         recyclerView=view.findViewById(R.id.allsharerecyclerview);
         if(loaded==false)
             dismissDialog();
+
+
         final int[] count = {1};
-        Query query=ff.collection("allshares");
-        FirestoreRecyclerOptions<allshare> option= new FirestoreRecyclerOptions.
-                Builder<allshare>().setQuery(query,allshare.class).
+        Query query=ff.collection("startup");  // changed
+        FirestoreRecyclerOptions<Share> option= new FirestoreRecyclerOptions.  // changed
+                Builder<Share>().setQuery(query,Share.class).
                 build();
-        adapter= new FirestoreRecyclerAdapter<allshare, PostViewHolder>(option) {
+        adapter= new FirestoreRecyclerAdapter<Share, PostViewHolder>(option) {
             @NonNull
             @Override
             public PostViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -103,23 +94,32 @@ public class allshares extends Fragment {
             }
 
             @Override
-            protected void onBindViewHolder(@NonNull PostViewHolder holder, int position, @NonNull allshare model) {
+            protected void onBindViewHolder(@NonNull PostViewHolder holder, int position, @NonNull Share model) {
+
+                String shareid = getSnapshots().getSnapshot(position).getId();
+                ShareFunctions shareFunctions=new ShareFunctions(shareid);
+
                 holder.invest.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        String shareid = getSnapshots().getSnapshot(position).getId();
-                        startActivity(new Intent(getContext(), blogging.class).putExtra("shareid", shareid));
+                        Intent intent=new Intent(getContext(),blogging.class);
+                        intent.putExtra("shareid",shareid);
+                        intent.putExtra("type",shareFunctions.share.getPeriod());
+                        startActivity(intent);
                         getActivity().finish();
 
                     }
                 });
                 graph.clear();
                 data.clear();
-                graph= (ArrayList<Integer>) model.getGraph();
+
+
+                graph= shareFunctions.trading.getPricelist();
                 holder.lineChart.setTouchEnabled(true);
                 holder.lineChart.setPinchZoom(true);
                 for (int i=0;i<graph.size();i++){
-                    data.add(new Entry(i+1,graph.get(i)));
+                    Integer t=(int)Math.round(graph.get(i));
+                    data.add(new Entry(i+1,t));
                 }
                 LineDataSet set1;
                 if (holder.lineChart.getData() != null &&
@@ -147,8 +147,8 @@ public class allshares extends Fragment {
                     LineData data2 = new LineData(dataSets);
                     holder.lineChart.setData(data2);
                     holder.lineChart.invalidate();
-
                 }
+
                 holder.switchLayout.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -188,20 +188,20 @@ public class allshares extends Fragment {
                 });
                 holder.companyname.setText(model.getName());
                 holder.growthtext.setText(String.valueOf(model.getGrowth()));
-                holder.growthbar.setProgress(Integer.valueOf(model.getGrowth()));
-                holder.investors.setText(String.valueOf(model.getUsers()));
+                holder.growthbar.setProgress(model.getGrowth());
+                holder.investors.setText(String.valueOf(model.getInvestors()));
                 holder.group.setText(model.getType());
                 String tag = "";
                 for (int i = 0; i < model.getTags().size(); i++) {
                     tag += model.getTags().get(i) + "  ";
                 }
                 holder.tags.setText(tag);
-                holder.advice.setText("Advice \n " + model.getAdvice());
-                holder.nextslot.setText("Next slot   " + String.valueOf(model.getNextslot().toDate()));
+                holder.advice.setText("Advice \n " + model.getDescription());
+                holder.nextslot.setText("Next slot   " + String.valueOf(model.getSlot().toDate()));
                 holder.introvideo.addYouTubePlayerListener(new YouTubePlayerListener() {
                     @Override
                     public void onReady(@NotNull YouTubePlayer youTubePlayer) {
-                        String url = model.getIntrovideourl();
+                        String url = model.getPitchurl();
                         youTubePlayer.cueVideo(url, 0);
 
 
@@ -252,7 +252,13 @@ public class allshares extends Fragment {
 
                     }
                 });
-                String shareid = getSnapshots().getSnapshot(position).getId();
+
+                holder.sellingprice.setText(shareFunctions.trading.getSellingprice().toString());
+                holder.buyingprice.setText(shareFunctions.trading.getBuyingprice().toString());
+
+
+                // old one
+                /*
                 FirebaseFirestore.getInstance()
                         .collection("allshares")
                         .document(shareid)
@@ -266,7 +272,10 @@ public class allshares extends Fragment {
                                 holder.buyingprice.setText(String.valueOf(sharedetails.getBuyingprice()));
                             }
                         });
+
+                 */
 //                Toast.makeText(getContext(), sharedetails[0].getBuyingprice(), Toast.LENGTH_SHORT).show();
+
                 if (model.getType().equals("elite")) {
                     holder.colorlayout.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.bluetr));
                     holder.invest.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.bluetr));
