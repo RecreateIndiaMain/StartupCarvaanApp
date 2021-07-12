@@ -42,6 +42,7 @@ import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.aboutshare.blogging;
 import recreate.india.main.startupcarvaan.aboutshare.models.sharedetails;
 import recreate.india.main.startupcarvaan.allmodels.share.Share;
+import recreate.india.main.startupcarvaan.allmodels.share.ShareFunctions;
 import recreate.india.main.startupcarvaan.allmodels.user.ShareHoldings;
 import recreate.india.main.startupcarvaan.fragments.allshares.allshare;
 import recreate.india.main.startupcarvaan.fragments.progressdialogue.CustomProgressDialogue;
@@ -54,6 +55,9 @@ public class myshares extends Fragment {
     private CustomProgressDialogue cpd;
     private  FirebaseFirestore ff=FirebaseFirestore.getInstance();
     FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
+    ShareFunctions shareFunctions;
+    private Double netProfit=0.0,netInvestment=0.0;
+    private TextView profit,investment;
     public myshares() {
         // Required empty public constructor
     }
@@ -70,6 +74,10 @@ public class myshares extends Fragment {
         View view= inflater.inflate(R.layout.fragment_myshares, container, false);
         myshare=view.findViewById(R.id.mysharerecyclerview);
         sample=view.findViewById(R.id.sample);
+        profit=view.findViewById(R.id.totalprofit);
+        investment=view.findViewById(R.id.totalinvest);
+
+
         cpd= new CustomProgressDialogue(getActivity());
         Query query= FirebaseFirestore.getInstance().collection("users").document(user.getUid()).collection("myshares");
         FirestoreRecyclerOptions<ShareHoldings> option=new FirestoreRecyclerOptions.Builder<ShareHoldings>().setQuery(query, ShareHoldings.class).build();
@@ -83,20 +91,32 @@ public class myshares extends Fragment {
 
             @Override
             protected void onBindViewHolder(@NonNull viewholder holder, int position, @NonNull ShareHoldings model) {
+                String shareid=getSnapshots().getSnapshot(position).getId();
+                shareFunctions=new ShareFunctions(shareid);
+                Double sellingPrice=shareFunctions.trading.getSellingprice();
+                Double buyingPrice=shareFunctions.trading.getBuyingprice();
+                String startupName=shareFunctions.share.getName();
+                String startupLogo=shareFunctions.share.getLogourl();
+                Double totalInvestment=0.0,totalProfit=0.0;
+
+
                 List<String> list = new ArrayList<String>();
                 list.add(0, "Price of a share : No. of shares");
                 Map<String,Double[]> holding=model.getHoldings();
+
                 for (Map.Entry<String,Double[]> entry : holding.entrySet())
-                    // TODO: ........please check it
                 {
-                    String date=entry.getKey();
+//                    String date=entry.getKey();   not needed
                     Double quantity=entry.getValue()[0];
                     Double price=entry.getValue()[1];
-
-                    // checking date then adding it to the spinner
-                    checkDate(date);
-                    list.add(String.valueOf(entry.getKey() + " : " + entry.getValue()[0]));
+                    totalInvestment+=quantity*price;
+                    totalProfit+=totalInvestment-quantity*sellingPrice;
+                    list.add(quantity + " : " + price);
                 }
+
+                netInvestment+=totalInvestment;
+                netProfit+=totalProfit;
+
                 final String[] item = new String[1];
                 ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, list);
                 arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -126,7 +146,17 @@ public class myshares extends Fragment {
 
                     }
                 });
-                String shareid=getSnapshots().getSnapshot(position).getId();
+                holder.netProfit.setText(String.valueOf(totalProfit));
+                holder.netInvestment.setText(String.valueOf(totalInvestment));
+                Glide.with(view.getContext()).load(startupLogo).
+                        placeholder(R.drawable.userimage).
+                        into(holder.companylogo);
+                holder.sellp.setText(String.valueOf(sellingPrice));
+                holder.buyp.setText(String.valueOf(buyingPrice));
+                holder.sharename.setText(String.valueOf(startupName));
+
+                // Old code
+                /*
                 final sharedetails[] sharedetails = {new sharedetails()};
                 final allshare[] allshare = {new allshare()};
                 FirebaseFirestore.getInstance().collection("allshares")
@@ -161,6 +191,9 @@ public class myshares extends Fragment {
                             }
                         });
 
+
+                 */
+
                 // loading values
                 holder.trade.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -173,12 +206,9 @@ public class myshares extends Fragment {
         };
         myshare.setAdapter(adapter);
         myshare.setLayoutManager(new LinearLayoutManager(getContext()));
+        profit.setText(String.valueOf(netProfit));
+        investment.setText(String.valueOf(netInvestment));
         return view;
-    }
-
-    // TODO:  complete this function
-    private void checkDate(String date) {
-
     }
 
     private class viewholder extends RecyclerView.ViewHolder {
