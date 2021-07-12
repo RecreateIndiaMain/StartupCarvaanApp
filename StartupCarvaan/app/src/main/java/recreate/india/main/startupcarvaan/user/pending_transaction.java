@@ -16,14 +16,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 
 import org.jetbrains.annotations.NotNull;
 
 import recreate.india.main.startupcarvaan.R;
+import recreate.india.main.startupcarvaan.allmodels.user.ShareHoldings;
 import recreate.india.main.startupcarvaan.allmodels.user.UserFunctions;
 import recreate.india.main.startupcarvaan.allmodels.user.UserShareTransaction;
 
@@ -69,20 +73,30 @@ public class pending_transaction extends Fragment {
                     holder.bought.setText(model.getType());
                 } else {
                     String id = getSnapshots().getSnapshot(position).getId();
-//                    userFunctions.delete(id);
-
+                    userFunctions.delete(id);
                     userFunctions.addCompletedTransaction(model, model.getShareid());
                     if (!model.getType().equals("sell")) {
-                        if (userFunctions.check_newUser(model.getShareid())) {
-                            userFunctions.addShareNewUser(model.getShareid(), model.getQuantity(), model.getPrice());
-                            // update share investor count
-                        }
-                        else {
-                            userFunctions.updateUserShare(model.getShareid(), model.getQuantity(), model.getPrice());
-                        }
+                        FirebaseFirestore.getInstance().collection("users")
+                                .document(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                .collection("myshares")
+                                .document(model.getShareid())
+                                .get()
+                                .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                                    @Override
+                                    public void onComplete(@NonNull @NotNull Task<DocumentSnapshot> task) {
+
+                                        if(task.getResult().exists()==false){
+                                            Toast.makeText(getContext(), "I will add new share", Toast.LENGTH_SHORT).show();
+                                            userFunctions.addShareNewUser(model.getShareid(), model.getQuantity(), model.getPrice());
+                                        }
+                                        else{
+                                            Toast.makeText(getContext(), "I will update the share now", Toast.LENGTH_SHORT).show();
+                                            userFunctions.updateUserShare(model.getShareid(), model.getQuantity(), model.getPrice());
+                                        }
+                                    }
+                                });
                         //userFunctions.giveRewards((model.getPrice() * model.getQuantity()));
                     }
-
                     else{
                         userFunctions.addRci(model.getPrice() * model.getQuantity());
                     }
