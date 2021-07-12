@@ -55,12 +55,12 @@ public class pending_transaction extends Fragment {
         View view = inflater.inflate(R.layout.fragment_pending, container, false);
 
         recyclerView = view.findViewById(R.id.pending_transactions_recyclerView);
-        Query query = ff.collection("users").document("vuLwlBEFpheXKdtEu8Q23KWya8y1").collection("pendingtransactions");
+        Query query = ff.collection("users").document(user.getUid()).collection("pendingtransactions");
         FirestoreRecyclerOptions<UserShareTransaction> options = new FirestoreRecyclerOptions.Builder<UserShareTransaction>().setQuery(query, UserShareTransaction.class).build();
         adapter = new FirestoreRecyclerAdapter<UserShareTransaction, PostViewHolder>(options) {
             @Override
             protected void onBindViewHolder(@NonNull @NotNull PostViewHolder holder, int position, @NonNull @NotNull UserShareTransaction model) {
-                if (model.getStatus()==false) {
+                if (!model.getStatus()) {
                     holder.startupname.setText(model.getStartupname());
                     holder.quantity.setText(model.getQuantity().toString());
                     holder.price.setText(model.getPrice().toString());
@@ -69,18 +69,18 @@ public class pending_transaction extends Fragment {
                     holder.bought.setText(model.getType());
                 } else {
                     String id = getSnapshots().getSnapshot(position).getId();
-                    userFunctions.delete(id);
+//                    userFunctions.delete(id);
 
                     userFunctions.addCompletedTransaction(model, model.getShareid());
-
                     if (!model.getType().equals("sell")) {
                         if (userFunctions.check_newUser(model.getShareid())) {
                             userFunctions.addShareNewUser(model.getShareid(), model.getQuantity(), model.getPrice());
                             // update share investor count
-                        } else {
+                        }
+                        else {
                             userFunctions.updateUserShare(model.getShareid(), model.getQuantity(), model.getPrice());
                         }
-                        userFunctions.giveRewards((model.getPrice() * model.getQuantity()));
+                        //userFunctions.giveRewards((model.getPrice() * model.getQuantity()));
                     }
 
                     else{
