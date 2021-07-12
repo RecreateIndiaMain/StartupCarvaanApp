@@ -22,11 +22,6 @@
             >
 
         </item>
-        <item
-            android:id="@+id/transactions"
-            android:title="Your Transactions">
-
-        </item>
     </group>
     <group android:checkableBehavior="single">
         <item
@@ -44,6 +39,20 @@
                 <item android:id="@+id/logout"
                     android:title="Logout"></item>
 
+            </menu>
+        </item>
+
+    </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:title="Transaction Section">
+            <menu>
+
+                <item android:id="@+id/money_transactions"
+                    android:title="Money Transactions"></item>
+
+                <item android:id="@+id/shares_transactions"
+                    android:title="Shares Transactions"></item>
             </menu>
         </item>
 

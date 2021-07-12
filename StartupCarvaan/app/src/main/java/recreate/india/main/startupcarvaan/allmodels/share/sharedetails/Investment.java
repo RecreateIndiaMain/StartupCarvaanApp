@@ -2,14 +2,14 @@ package recreate.india.main.startupcarvaan.allmodels.share.sharedetails;
 
 public class Investment {
 
-    private Double collectedinvestment,sellingprice,totalinvestment;
+    private Double collectedinvestment,buyingprice,totalinvestment;
     public Investment(){
 
     }
 
     public Investment(Double collectedinvestment, Double sellingprice, Double totalinvestment) {
         this.collectedinvestment = collectedinvestment;
-        this.sellingprice = sellingprice;
+        this.buyingprice = sellingprice;
         this.totalinvestment = totalinvestment;
     }
 
@@ -21,12 +21,12 @@ public class Investment {
         this.collectedinvestment = collectedinvestment;
     }
 
-    public Double getSellingprice() {
-        return sellingprice;
+    public Double getBuyingprice() {
+        return buyingprice;
     }
 
-    public void setSellingprice(Double sellingprice) {
-        this.sellingprice = sellingprice;
+    public void setBuyingprice(Double sellingprice) {
+        this.buyingprice = sellingprice;
     }
 
     public Double getTotalinvestment() {

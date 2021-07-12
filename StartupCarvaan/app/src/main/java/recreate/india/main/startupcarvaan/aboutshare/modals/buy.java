@@ -25,11 +25,8 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 
 import recreate.india.main.startupcarvaan.R;
-import recreate.india.main.startupcarvaan.aboutshare.models.sharedetails;
 import recreate.india.main.startupcarvaan.allmodels.share.ShareFunctions;
 import recreate.india.main.startupcarvaan.allmodels.user.UserFunctions;
-import recreate.india.main.startupcarvaan.fragments.models.sharefunctions;
-import recreate.india.main.startupcarvaan.user.user_share_functions;
 
 public class buy extends DialogFragment {
     //local variables declaration
@@ -43,10 +40,6 @@ public class buy extends DialogFragment {
     public ShareFunctions shareFunctions;
     public UserFunctions userFunctions=new UserFunctions();
     // constructor declaration
-    private user_share_functions usersharefunctions= new user_share_functions();
-    private sharedetails sharedetails=new sharedetails();
-    private sharefunctions sharefunctions=new sharefunctions();
-
     public buy() {
     }
 
@@ -57,14 +50,15 @@ public class buy extends DialogFragment {
         // from intent
         Bundle bundle=getArguments();
         shareid=bundle.getString("shareid");
-
+        shareFunctions=new ShareFunctions(shareid);
+        Toast.makeText(getContext(), String.valueOf(shareFunctions.trading.getBuyvolume()), Toast.LENGTH_SHORT).show();
         //assigning id to variables
         priceofshare=view.findViewById(R.id.price_of_shares);
-
         no_of_shares=view.findViewById(R.id.noofshares);
         buy_now=view.findViewById(R.id.btn_buy);
         closebuy=view.findViewById(R.id.close68);
         mUser=FirebaseAuth.getInstance().getCurrentUser();
+        priceofshare.setText(String.valueOf(shareFunctions.trading.getBuyingprice())+" rci");
         closebuy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -72,36 +66,19 @@ public class buy extends DialogFragment {
             }
         });
 
-        // retrieving share details
-        FirebaseFirestore.getInstance()
-                .collection("allshares")
-                .document(shareid)
-                .collection("sharedetails").document("sharedetails").addSnapshotListener(new EventListener<DocumentSnapshot>() {
-            @Override
-            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                sharedetails=value.toObject(sharedetails.class);
-                priceofshare.setText(String.valueOf(sharedetails.getBuyingprice()+" Rci"));
-                availableforbuying.setText(String.valueOf("Available :"+sharedetails.getAvailableforbuying()));
-            }
-        });
 
-        // retrieving coin details
-        FirebaseFirestore.getInstance()
-                .collection("users")
-                .document(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                .collection("others").document("coins").addSnapshotListener(new EventListener<DocumentSnapshot>() {
-            @Override
-            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-            }
-        });
+
+
+
+
 
         buy_now.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(no_of_shares.getText().toString().equals(""))
-                    Toast.makeText(getContext(), "please enter a valid quantity", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "please enter a valid quantity"+String.valueOf(shareFunctions.trading.getBuyingprice()), Toast.LENGTH_SHORT).show();
                 else{
-                    shareFunctions=new ShareFunctions(shareid);
+
                     Double price=shareFunctions.trading.getBuyingprice();
                     Double quantity=Double.valueOf(no_of_shares.getText().toString());
                     Double amount=price*quantity;
@@ -113,6 +90,15 @@ public class buy extends DialogFragment {
                 }
             }
         });
+
+
+
+
+
+
+
+
+
         builder.setView(view);
         return builder.create();
     }

@@ -58,7 +58,13 @@
         android:theme="@style/Theme.StartupCarvaan" >
         <activity android:name="recreate.india.main.startupcarvaan.instamojo" >
         </activity>
-        <activity android:name="recreate.india.main.startupcarvaan.user.Transactions" />
+        <activity android:name="recreate.india.main.startupcarvaan.user.Transactions" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name="recreate.india.main.startupcarvaan.coin_exchange.rci_exchange" />
         <activity android:name="recreate.india.main.startupcarvaan.Levels" />
         <activity android:name="recreate.india.main.startupcarvaan.mainActivities.RecyclerActivity" />
@@ -88,11 +94,6 @@
         <activity
             android:name="recreate.india.main.startupcarvaan.mainActivities.SplashScreen"
             android:theme="@style/MyTheme" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"

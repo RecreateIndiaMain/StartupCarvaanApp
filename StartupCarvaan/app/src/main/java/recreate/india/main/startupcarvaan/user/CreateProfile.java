@@ -37,7 +37,7 @@ import java.util.Map;
 
 import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.allmodels.user.UserProfile;
-import recreate.india.main.startupcarvaan.fragments.progressdialogue.CustomProgressDialogue;
+import recreate.india.main.startupcarvaan.fragments.CustomProgressDialogue;
 import recreate.india.main.startupcarvaan.mainActivities.MainActivity;
 
 public class CreateProfile extends AppCompatActivity {

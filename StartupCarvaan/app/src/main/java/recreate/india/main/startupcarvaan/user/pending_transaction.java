@@ -6,10 +6,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
@@ -53,12 +55,12 @@ public class pending_transaction extends Fragment {
         View view = inflater.inflate(R.layout.fragment_pending, container, false);
 
         recyclerView = view.findViewById(R.id.pending_transactions_recyclerView);
-        Query query = ff.collection("users").document(user.getUid()).collection("pendingtransactions");
+        Query query = ff.collection("users").document("vuLwlBEFpheXKdtEu8Q23KWya8y1").collection("pendingtransactions");
         FirestoreRecyclerOptions<UserShareTransaction> options = new FirestoreRecyclerOptions.Builder<UserShareTransaction>().setQuery(query, UserShareTransaction.class).build();
         adapter = new FirestoreRecyclerAdapter<UserShareTransaction, PostViewHolder>(options) {
             @Override
             protected void onBindViewHolder(@NonNull @NotNull PostViewHolder holder, int position, @NonNull @NotNull UserShareTransaction model) {
-                if (!model.getStatus()) {
+                if (model.getStatus()==false) {
                     holder.startupname.setText(model.getStartupname());
                     holder.quantity.setText(model.getQuantity().toString());
                     holder.price.setText(model.getPrice().toString());
@@ -68,8 +70,10 @@ public class pending_transaction extends Fragment {
                 } else {
                     String id = getSnapshots().getSnapshot(position).getId();
                     userFunctions.delete(id);
+
                     userFunctions.addCompletedTransaction(model, model.getShareid());
-                    if (model.getType().equals("buy")) {
+
+                    if (!model.getType().equals("sell")) {
                         if (userFunctions.check_newUser(model.getShareid())) {
                             userFunctions.addShareNewUser(model.getShareid(), model.getQuantity(), model.getPrice());
                             // update share investor count
@@ -79,12 +83,8 @@ public class pending_transaction extends Fragment {
                         userFunctions.giveRewards((model.getPrice() * model.getQuantity()));
                     }
 
-                    if (model.getType().equals("sell")) {
+                    else{
                         userFunctions.addRci(model.getPrice() * model.getQuantity());
-                    }
-
-                    if (model.getType().equals("investment")) {
-
                     }
                 }
             }
@@ -96,6 +96,8 @@ public class pending_transaction extends Fragment {
                 return new PostViewHolder(view1);
             }
         };
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         return view;
     }
@@ -116,4 +118,15 @@ public class pending_transaction extends Fragment {
         }
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        adapter.startListening();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        adapter.stopListening();
+    }
 }

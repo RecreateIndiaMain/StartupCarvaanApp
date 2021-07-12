@@ -22,13 +22,13 @@ public final class DialoginvestBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final TextView availableforbuying;
-
-  @NonNull
   public final Button btnBuy;
 
   @NonNull
   public final ImageView close68;
+
+  @NonNull
+  public final TextView collectedInvestment;
 
   @NonNull
   public final EditText noofshares;
@@ -36,15 +36,20 @@ public final class DialoginvestBinding implements ViewBinding {
   @NonNull
   public final TextView priceOfShares;
 
-  private DialoginvestBinding(@NonNull LinearLayout rootView, @NonNull TextView availableforbuying,
-      @NonNull Button btnBuy, @NonNull ImageView close68, @NonNull EditText noofshares,
-      @NonNull TextView priceOfShares) {
+  @NonNull
+  public final TextView requiredInvestment;
+
+  private DialoginvestBinding(@NonNull LinearLayout rootView, @NonNull Button btnBuy,
+      @NonNull ImageView close68, @NonNull TextView collectedInvestment,
+      @NonNull EditText noofshares, @NonNull TextView priceOfShares,
+      @NonNull TextView requiredInvestment) {
     this.rootView = rootView;
-    this.availableforbuying = availableforbuying;
     this.btnBuy = btnBuy;
     this.close68 = close68;
+    this.collectedInvestment = collectedInvestment;
     this.noofshares = noofshares;
     this.priceOfShares = priceOfShares;
+    this.requiredInvestment = requiredInvestment;
   }
 
   @Override
@@ -74,12 +79,6 @@ public final class DialoginvestBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.availableforbuying;
-      TextView availableforbuying = rootView.findViewById(id);
-      if (availableforbuying == null) {
-        break missingId;
-      }
-
       id = R.id.btn_buy;
       Button btnBuy = rootView.findViewById(id);
       if (btnBuy == null) {
@@ -89,6 +88,12 @@ public final class DialoginvestBinding implements ViewBinding {
       id = R.id.close68;
       ImageView close68 = rootView.findViewById(id);
       if (close68 == null) {
+        break missingId;
+      }
+
+      id = R.id.collected_investment;
+      TextView collectedInvestment = rootView.findViewById(id);
+      if (collectedInvestment == null) {
         break missingId;
       }
 
@@ -104,8 +109,14 @@ public final class DialoginvestBinding implements ViewBinding {
         break missingId;
       }
 
-      return new DialoginvestBinding((LinearLayout) rootView, availableforbuying, btnBuy, close68,
-          noofshares, priceOfShares);
+      id = R.id.required_investment;
+      TextView requiredInvestment = rootView.findViewById(id);
+      if (requiredInvestment == null) {
+        break missingId;
+      }
+
+      return new DialoginvestBinding((LinearLayout) rootView, btnBuy, close68, collectedInvestment,
+          noofshares, priceOfShares, requiredInvestment);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -2308,7 +2308,6 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
-id availableforbuying
 id backblog
 id backprofile
 id barrier
@@ -2321,6 +2320,7 @@ id betting
 id biding
 id bidingrecyclerview
 id bidprice
+id bla
 id blocking
 id blogtitle
 id bonus
@@ -2379,6 +2379,7 @@ id closesellsuccess
 id coin
 id coins
 id collapseActionView
+id collected_investment
 id colorlayout
 id colorlayout2
 id comment
@@ -2547,7 +2548,6 @@ id imageview
 id info
 id introvideo
 id invest
-id investbutton
 id investors
 id invisible
 id italic
@@ -2614,6 +2614,7 @@ id mid_line
 id middle
 id mini
 id mobile_navigation
+id money_transactions
 id month_grid
 id month_navigation_bar
 id month_navigation_fragment_toggle
@@ -2666,6 +2667,7 @@ id netbanking_default_fragment
 id netinvest
 id netprofit
 id never
+id newButton
 id newly
 id nextBtn
 id next_action_button
@@ -2801,6 +2803,7 @@ id refund
 id relativeLayout
 id reload_image_button
 id report_issue_edittext
+id required_investment
 id reverseSawtooth
 id review
 id right
@@ -2847,6 +2850,7 @@ id sellingPrice
 id sellingprice
 id sharename
 id shares
+id shares_transactions
 id shortcut
 id showCustom
 id showHome
@@ -2957,7 +2961,6 @@ id totalprofit
 id totalsharestosell
 id touch_outside
 id trade
-id transactions
 id transactions_frame
 id transitionToEnd
 id transitionToStart

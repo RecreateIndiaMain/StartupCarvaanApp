@@ -24,18 +24,20 @@ import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 
+import java.util.AbstractList;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.aboutshare.models.sharedetails;
+import recreate.india.main.startupcarvaan.allmodels.reward.Level;
 import recreate.india.main.startupcarvaan.allmodels.share.ShareFunctions;
+import recreate.india.main.startupcarvaan.allmodels.user.ShareHoldings;
 import recreate.india.main.startupcarvaan.allmodels.user.UserFunctions;
-import recreate.india.main.startupcarvaan.fragments.models.sharefunctions;
-import recreate.india.main.startupcarvaan.fragments.myshares.holdings;
+
 import recreate.india.main.startupcarvaan.user.user;
-import recreate.india.main.startupcarvaan.user.user_share_functions;
+
 
 
 public class sell extends DialogFragment {
@@ -48,15 +50,10 @@ public class sell extends DialogFragment {
     String price_ ="";
     String share_;
     private sharedetails sharedetails=new sharedetails();
-
-    private sharefunctions sharefunctions=new sharefunctions();
-    private user_share_functions user_share_functions=new user_share_functions();
-
     private String shareid;
     private FirebaseFirestore ff= FirebaseFirestore.getInstance();
     private FirebaseUser mUser;
-
-    private holdings holdings=new holdings();
+    ShareHoldings holdings;
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = getActivity().getLayoutInflater();
@@ -84,9 +81,9 @@ public class sell extends DialogFragment {
                 .document(shareid).addSnapshotListener(new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                holdings=value.toObject(holdings.class);
-                Map<String,Integer>holding=holdings.getHoldings();
-                for (Map.Entry<String,Integer> entry : holding.entrySet())
+                holdings = value.toObject(ShareHoldings.class);
+                Map<String,ArrayList<Double>>holding=holdings.getHoldings();
+                for (Map.Entry<String, ArrayList<Double>> entry : holding.entrySet())
                     list.add(String.valueOf(entry.getKey()+" : "+entry.getValue()));
             }
         });
@@ -145,14 +142,14 @@ public class sell extends DialogFragment {
                         Double price=new ShareFunctions(shareid).trading.getSellingprice();
                         Double quantity=Double.valueOf(String.valueOf(share.getText().toString()));
                         String day="1.0";
-                        if(quantity>Double.valueOf(holdings.getHoldings().get(price_)))
-                            Toast.makeText(getContext(), "do not have "+ quantity + " shares for price "+price_, Toast.LENGTH_SHORT).show();
-                        else{
-                            UserFunctions userFunctions=new UserFunctions();
-                            userFunctions.addPendingTransaction(shareid,quantity,price,"sell");
-                            userFunctions.removeShares(shareid,day,quantity,price);
-                            dismiss();
-                        }
+//                        if(quantity>Double.valueOf(holdings.getHoldings().get(price_)))
+//                            Toast.makeText(getContext(), "do not have "+ quantity + " shares for price "+price_, Toast.LENGTH_SHORT).show();
+//                        else{
+//                            UserFunctions userFunctions=new UserFunctions();
+//                            userFunctions.addPendingTransaction(shareid,quantity,price,"sell");
+//                            userFunctions.removeShares(shareid,day,quantity,price);
+//                            dismiss();
+//                        }
                     }
                 }
             }

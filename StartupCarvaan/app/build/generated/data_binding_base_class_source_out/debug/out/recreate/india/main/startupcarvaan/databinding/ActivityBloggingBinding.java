@@ -32,21 +32,25 @@ public final class ActivityBloggingBinding implements ViewBinding {
   public final ImageView backblog;
 
   @NonNull
+  public final Button bla;
+
+  @NonNull
   public final BottomNavigationView buySellBottomNav;
 
   @NonNull
-  public final Button investbutton;
+  public final Button newButton;
 
   private ActivityBloggingBinding(@NonNull RelativeLayout rootView,
       @NonNull RecyclerView aboutshare, @NonNull LinearLayout applayout,
-      @NonNull ImageView backblog, @NonNull BottomNavigationView buySellBottomNav,
-      @NonNull Button investbutton) {
+      @NonNull ImageView backblog, @NonNull Button bla,
+      @NonNull BottomNavigationView buySellBottomNav, @NonNull Button newButton) {
     this.rootView = rootView;
     this.aboutshare = aboutshare;
     this.applayout = applayout;
     this.backblog = backblog;
+    this.bla = bla;
     this.buySellBottomNav = buySellBottomNav;
-    this.investbutton = investbutton;
+    this.newButton = newButton;
   }
 
   @Override
@@ -94,20 +98,26 @@ public final class ActivityBloggingBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.bla;
+      Button bla = rootView.findViewById(id);
+      if (bla == null) {
+        break missingId;
+      }
+
       id = R.id.buy_sell_bottom_nav;
       BottomNavigationView buySellBottomNav = rootView.findViewById(id);
       if (buySellBottomNav == null) {
         break missingId;
       }
 
-      id = R.id.investbutton;
-      Button investbutton = rootView.findViewById(id);
-      if (investbutton == null) {
+      id = R.id.newButton;
+      Button newButton = rootView.findViewById(id);
+      if (newButton == null) {
         break missingId;
       }
 
       return new ActivityBloggingBinding((RelativeLayout) rootView, aboutshare, applayout, backblog,
-          buySellBottomNav, investbutton);
+          bla, buySellBottomNav, newButton);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

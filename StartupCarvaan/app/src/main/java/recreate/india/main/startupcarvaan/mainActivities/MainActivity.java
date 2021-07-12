@@ -1,38 +1,29 @@
 package recreate.india.main.startupcarvaan.mainActivities;
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
-import android.widget.Toolbar;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.EventListener;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.FirebaseFirestoreException;
 
 import io.paperdb.Paper;
 import recreate.india.main.startupcarvaan.Helppage;
 import recreate.india.main.startupcarvaan.Levels;
 import recreate.india.main.startupcarvaan.R;
-import recreate.india.main.startupcarvaan.coin_exchange.rci_exchange;
-import recreate.india.main.startupcarvaan.fragments.allshares.allshares;
 
-import recreate.india.main.startupcarvaan.fragments.mycoins.mycoins;
-import recreate.india.main.startupcarvaan.fragments.myshares.myshares;
+import recreate.india.main.startupcarvaan.fragments.allshares;
+
+import recreate.india.main.startupcarvaan.fragments.mycoins;
+import recreate.india.main.startupcarvaan.fragments.myshares;
 
 import recreate.india.main.startupcarvaan.loginsignup.loginActivity;
 import recreate.india.main.startupcarvaan.user.ProfileActivity;
@@ -104,17 +95,17 @@ public class MainActivity extends AppCompatActivity{
                     finish();
                     break;
 
-                case R.id.aboutRci:
-                    startActivity(new Intent(MainActivity.this, rci_exchange.class));
-                    finish();
-                    break;
+//                case R.id.aboutRci:
+//                    startActivity(new Intent(MainActivity.this, rci_exchange.class));
+//                    finish();
+//                    break;
                 case R.id.privacypolicy:
                     startActivity(new Intent(MainActivity.this,PrivacyPolicy.class));
                     finish();
                     break;
-                case R.id.transactions:
-                    startActivity(new Intent(MainActivity.this, Transactions.class));
-                    break;
+//                case R.id.transactions:
+//                    startActivity(new Intent(MainActivity.this, Transactions.class));
+//                    break;
             }
             return false;
         }

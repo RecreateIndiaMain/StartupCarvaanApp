@@ -10,7 +10,10 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
+
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import recreate.india.main.startupcarvaan.allmodels.reward.RewardFunction;
 import recreate.india.main.startupcarvaan.allmodels.share.Share;
@@ -130,18 +133,18 @@ public class UserFunctions {
             }
         });
         Double initaltotalAmount, finalTotalAmount;
-        HashMap<String, Double[]> holdings = shareHoldings[0].getHoldings();
+        HashMap<String, ArrayList<Double>> holdings = shareHoldings[0].getHoldings();
 
         if (holdings.containsKey(days)) {
             // if someone has invested on the same day in the same share
 
-            Double[] n = new Double[2];
-            n[0] = holdings.get(days)[0];
-            n[1]=holdings.get(days)[1];
-            initaltotalAmount = n[0] * n[1];
-            n[0] = n[0] + quantity;
+            ArrayList<Double> n = new ArrayList<Double>(2);
+            n.add(holdings.get(days).get(0));
+            n.add(holdings.get(days).get(1));
+            initaltotalAmount = n.get(0) * n.get(1);
+            n.set(0, n.get(0) + quantity);
             finalTotalAmount = initaltotalAmount + (quantity * price);
-            n[1] = finalTotalAmount / n[0];
+            n.set(1,finalTotalAmount / n.get(0));
             ff.collection("users").document(firebaseUser.getUid()).collection("myshares").document(shareid).update("holdings", holdings);
         } else {
             // no shares of same day present
@@ -189,10 +192,10 @@ public class UserFunctions {
             }
         });
 
-        Double[] a=new Double[2];
+        ArrayList<Double> a;
         a=shareHoldings[0].getHoldings().get(day);
-        a[0]-=quantity;
-        if(a[0]==0)
+        a.set(0,a.get(0)-quantity);
+        if(a.get(0)==0)
             shareHoldings[0].getHoldings().remove(day);
         else{
             shareHoldings[0].getHoldings().put(day,a);
@@ -231,6 +234,7 @@ public class UserFunctions {
                 .collection("completedtransactions")
                 .document().set(userShareTransaction);
     }
+
     public  void delete(String id){
         // delete the transaction from share also from web
         ff.collection("users").document(firebaseUser.getUid())

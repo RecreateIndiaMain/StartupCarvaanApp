@@ -12,6 +12,7 @@ public class UserShare {
     public UserShare() {
     }
 
+
     public String getShareid() {
         return shareid;
     }

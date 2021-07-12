@@ -42,6 +42,7 @@ import java.util.Random;
 
 import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.aboutshare.modals.buy;
+import recreate.india.main.startupcarvaan.aboutshare.modals.investment;
 import recreate.india.main.startupcarvaan.aboutshare.modals.sell;
 import recreate.india.main.startupcarvaan.allmodels.share.BloggingDetails;
 import recreate.india.main.startupcarvaan.allmodels.user.UserFunctions;
@@ -66,13 +67,24 @@ public class blogging extends AppCompatActivity {
         pd.setMessage("This is BloggingDetails");
         pd.show();
         bottomNavigationView = findViewById(R.id.buy_sell_bottom_nav);
-        invest = findViewById(R.id.investbutton);
-        bottomNavigationView.setOnNavigationItemSelectedListener(onNavigationItemReselectedListener);
-        recyclerView = findViewById(R.id.aboutshare);
-
+        invest = findViewById(R.id.bla);
         shareid = getIntent().getStringExtra("shareid");
         ans = getIntent().getStringExtra("type");
+//
+//        findViewById(R.id.newButton).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Toast.makeText(blogging.this, "invest", Toast.LENGTH_SHORT).show();
+//                investment investment = new investment();
+//                Bundle bundle1 = new Bundle();
+//                bundle1.putString("shareid", shareid);
+//                investment.setArguments(bundle1);
+//                investment.show(getSupportFragmentManager(), "Invest");
+//            }
+//        });
 
+        bottomNavigationView.setOnNavigationItemSelectedListener(onNavigationItemReselectedListener);
+        recyclerView = findViewById(R.id.aboutshare);
         if (ans.equalsIgnoreCase("Investment")) {
             invest.setVisibility(View.VISIBLE);
             bottomNavigationView.setVisibility(View.GONE);
