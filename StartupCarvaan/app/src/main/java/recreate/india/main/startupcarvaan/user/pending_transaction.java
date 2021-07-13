@@ -73,7 +73,7 @@ public class pending_transaction extends Fragment {
                     holder.bought.setText(model.getType());
                 } else {
                     String id = getSnapshots().getSnapshot(position).getId();
-                   // userFunctions.delete(id);
+                    userFunctions.delete(id);
                     userFunctions.addCompletedTransaction(model, model.getShareid());
                     if (!model.getType().equals("sell")) {
                         FirebaseFirestore.getInstance().collection("users")
@@ -95,7 +95,7 @@ public class pending_transaction extends Fragment {
                                         }
                                     }
                                 });
-                        //userFunctions.giveRewards((model.getPrice() * model.getQuantity()));
+                        userFunctions.giveRewards((model.getPrice() * model.getQuantity()));
                     }
                     else{
                         Toast.makeText(getContext(), "selling in progress", Toast.LENGTH_SHORT).show();

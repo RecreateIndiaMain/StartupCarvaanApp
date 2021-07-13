@@ -128,7 +128,7 @@ public class myshares extends Fragment {
                                 holder.spin1.setAdapter(arrayAdapter);
 
                                 // Setting up the fields
-                                holder.netProfit.setText(String.valueOf(totalProfit));
+                                holder.netProfit.setText(String.valueOf(-totalProfit));
                                 holder.netInvestment.setText(String.valueOf(totalInvestment));
                                 Glide.with(view.getContext()).load(startupLogo).
                                         placeholder(R.drawable.userimage).
@@ -140,8 +140,6 @@ public class myshares extends Fragment {
                         });
                     }
                 });
-
-
                 holder.spin1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {

@@ -72,7 +72,6 @@ public class UserFunctions {
     // Function to deduct rci upon buying is confirmed or investing
     // investment (2)
     public void deduct_rci(Double investment) {
-        new UserProfile();
         if (userProfile.getAddedrci() >= investment) {
             userProfile.setAddedrci(userProfile.getAddedrci() - investment);
         } else {
@@ -82,8 +81,7 @@ public class UserFunctions {
         ff.collection("users").document(firebaseUser.getUid()).update("addedrci", userProfile.getAddedrci(), "profit", userProfile.getProfit());
     }
     public void addRci(Double investment) {
-        new UserProfile();
-        ff.collection("users").document(firebaseUser.getUid()).update("profit", userProfile.getProfit()+investment);
+        ff.collection("users").document(firebaseUser.getUid()).update("profit", new UserFunctions().userProfile.getProfit()+investment);
     }
 
     // cheking new user for given share id or not
