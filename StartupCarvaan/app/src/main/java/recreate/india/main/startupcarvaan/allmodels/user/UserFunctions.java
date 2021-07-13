@@ -26,6 +26,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ScheduledExecutorService;
 
+import recreate.india.main.startupcarvaan.allmodels.reward.Level;
+import recreate.india.main.startupcarvaan.allmodels.reward.Reward;
 import recreate.india.main.startupcarvaan.allmodels.reward.RewardFunction;
 import recreate.india.main.startupcarvaan.allmodels.share.Share;
 import recreate.india.main.startupcarvaan.allmodels.share.ShareFunctions;
@@ -119,8 +121,15 @@ public class UserFunctions {
         ff.collection("users").document(firebaseUser.getUid()).collection("myshares").document(shareid).set(holdings);
 
         //FOR  updating the number of investors we need share details snapshot
-         ShareFunctions shareFunctions=new ShareFunctions(shareid);
-//        ff.collection("startup").document(shareid).update("investors", share.getInvestors());
+        ff.collection("startup").document(shareid).get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                    Share share=new Share();
+                    share=documentSnapshot.toObject(Share.class);
+                ff.collection("startup").document(shareid).update("investors", share.getInvestors()+1);
+            }
+        });
+
 
         // updating number of investments by the user
     //    userProfile.setInvestmentcount(userProfile.getInvestmentcount() + 1);
@@ -173,22 +182,31 @@ public class UserFunctions {
     }
 
     public void giveRewards(Double investment) {
-
-        RewardFunction rewardFunction=new RewardFunction();
-        userProfile.setCurrentpoints(userProfile.getCurrentpoints()+(investment*0.1));
-        userProfile.setTotalpoints(userProfile.getTotalpoints()+(investment*0.1));
-        final Integer level = userProfile.getLevel();
-
-        Integer points=rewardFunction.level.getLevel().get(level-1);
-        if(userProfile.getCurrentpoints()>=points){
-            userProfile.setLevel(level+1);
-            userProfile.setAddedrci(userProfile.getAddedrci()+rewardFunction.reward.getReward().get(level-1));
-            userProfile.setCurrentpoints(userProfile.getCurrentpoints()-points);
-        }
-        // updating level
-        ff.collection("users").document(firebaseUser.getUid()).update("currentpoints",userProfile.getCurrentpoints(),"level",userProfile.getLevel(),"addedrci",userProfile.getAddedrci());
-
-
+        final Level[] level = {new Level()};
+        final Reward[] reward = {new Reward()};
+        ff.collection("reward").document("level").get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                level[0] =documentSnapshot.toObject(Level.class);
+                ff.collection("reward").document("reward").get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                    @Override
+                    public void onSuccess(DocumentSnapshot documentSnapshot) {
+                             reward[0] =documentSnapshot.toObject(Reward.class);
+                        userProfile.setCurrentpoints(userProfile.getCurrentpoints()+(investment*0.1));
+                        userProfile.setTotalpoints(userProfile.getTotalpoints()+(investment*0.1));
+                        final Integer userlevel = userProfile.getLevel();
+                        Integer points= level[0].getLevel().get(userlevel-1);
+                        if(userProfile.getCurrentpoints()>=points){
+                            userProfile.setLevel(userlevel+1);
+                            userProfile.setAddedrci(userProfile.getAddedrci()+reward[0].getReward().get(userlevel-1));
+                            userProfile.setCurrentpoints(userProfile.getCurrentpoints()-points);
+                            // updating level
+                            ff.collection("users").document(firebaseUser.getUid()).update("currentpoints",userProfile.getCurrentpoints(),"level",userProfile.getLevel(),"addedrci",userProfile.getAddedrci());
+                        }
+                    }
+                });
+            }
+        });
     }
 
     public void removeShares(String shareid,String day,Double quantity,Double price){
@@ -216,23 +234,34 @@ public class UserFunctions {
     //
     public void addPendingTransaction(String shareid,Double quantity,Double price,String type){
         UserShareTransaction userShareTransaction=new UserShareTransaction();
-        userShareTransaction.setStatus(false);
-        userShareTransaction.setType(type);
-        userShareTransaction.setPrice(price);
-        userShareTransaction.setQuantity(quantity);
-        userShareTransaction.setValue(price*quantity);
-        userShareTransaction.setShareid(shareid);
-        userShareTransaction.setUserid(firebaseUser.getUid());
-        userShareTransaction.setAdded(Timestamp.now());
-        userShareTransaction.setAdded(Timestamp.now());
+        final Share[] share = {new Share()};
+
+        ff.collection("startup").document(shareid).get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                 share[0] =documentSnapshot.toObject(Share.class);
+                 String startupName=share[0].getName();
+                userShareTransaction.setStatus(false);
+                userShareTransaction.setType(type);
+                userShareTransaction.setPrice(price);
+                userShareTransaction.setQuantity(quantity);
+                userShareTransaction.setValue(price*quantity);
+                userShareTransaction.setShareid(shareid);
+                userShareTransaction.setUserid(firebaseUser.getUid());
+                userShareTransaction.setStartupname(startupName);
+                userShareTransaction.setAdded(Timestamp.now());
+                userShareTransaction.setAdded(Timestamp.now());
+                ff.collection("users").document(firebaseUser.getUid())
+                        .collection("pendingtransactions")
+                        .document().set(userShareTransaction);
+                ff.collection("startup").document(shareid)
+                        .collection("pendingtransactions")
+                        .document().set(userShareTransaction);
+            }
+        });
 
 
-        ff.collection("users").document(firebaseUser.getUid())
-                .collection("pendingtransactions")
-                .document().set(userShareTransaction);
-        ff.collection("startup").document(shareid)
-                .collection("pendingtransactions")
-                .document().set(userShareTransaction);
+
     }
 
     public void addCompletedTransaction(UserShareTransaction userShareTransaction,String shareid){

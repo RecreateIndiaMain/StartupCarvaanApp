@@ -10,6 +10,7 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import recreate.india.main.startupcarvaan.allmodels.reward.Level;
 import recreate.india.main.startupcarvaan.allmodels.reward.Reward;
 
+// THIS FUNCTION HAS NO USE NOW
 public class RewardFunction {
 
     FirebaseFirestore ff=FirebaseFirestore.getInstance();

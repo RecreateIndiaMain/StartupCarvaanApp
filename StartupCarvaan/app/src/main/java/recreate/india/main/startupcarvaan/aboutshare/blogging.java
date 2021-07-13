@@ -70,18 +70,18 @@ public class blogging extends AppCompatActivity {
         invest = findViewById(R.id.bla);
         shareid = getIntent().getStringExtra("shareid");
         ans = getIntent().getStringExtra("type");
-//
-//        findViewById(R.id.newButton).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Toast.makeText(blogging.this, "invest", Toast.LENGTH_SHORT).show();
-//                investment investment = new investment();
-//                Bundle bundle1 = new Bundle();
-//                bundle1.putString("shareid", shareid);
-//                investment.setArguments(bundle1);
-//                investment.show(getSupportFragmentManager(), "Invest");
-//            }
-//        });
+
+        invest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(blogging.this, "invest", Toast.LENGTH_SHORT).show();
+                investment investment = new investment();
+                Bundle bundle1 = new Bundle();
+                bundle1.putString("shareid", shareid);
+                investment.setArguments(bundle1);
+                investment.show(getSupportFragmentManager(), "Invest");
+            }
+        });
 
         bottomNavigationView.setOnNavigationItemSelectedListener(onNavigationItemReselectedListener);
         recyclerView = findViewById(R.id.aboutshare);
