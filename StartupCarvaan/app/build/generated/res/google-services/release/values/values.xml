@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">132130200533-4bng9rjr6ki745er8gb0i8hui17fl2b6.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">132130200533</string>
+    <string name="google_api_key" translatable="false">AIzaSyDHsonNW1ADToAXyYruiLnLiVD7a5JeAh0</string>
+    <string name="google_app_id" translatable="false">1:132130200533:android:3542e25592723681947b5c</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDHsonNW1ADToAXyYruiLnLiVD7a5JeAh0</string>
+    <string name="google_storage_bucket" translatable="false">startup-carvaan-bbfe2.appspot.com</string>
+    <string name="project_id" translatable="false">startup-carvaan-bbfe2</string>
+</resources>
