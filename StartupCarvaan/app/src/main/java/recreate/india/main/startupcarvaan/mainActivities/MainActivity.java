@@ -94,6 +94,9 @@ public class MainActivity extends AppCompatActivity{
                     startActivity(new Intent(MainActivity.this, Levels.class));
                     finish();
                     break;
+                case R.id.shares_transactions:
+                    startActivity(new Intent(MainActivity.this,Transactions.class));
+                    break;
 
 //                case R.id.aboutRci:
 //                    startActivity(new Intent(MainActivity.this, AboutRCI.class));

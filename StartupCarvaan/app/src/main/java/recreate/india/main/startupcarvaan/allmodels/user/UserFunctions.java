@@ -1,8 +1,14 @@
 package recreate.india.main.startupcarvaan.allmodels.user;
 
+import android.util.Log;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.Timestamp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -11,10 +17,15 @@ import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ScheduledExecutorService;
+
 import recreate.india.main.startupcarvaan.allmodels.reward.RewardFunction;
 import recreate.india.main.startupcarvaan.allmodels.share.Share;
 import recreate.india.main.startupcarvaan.allmodels.share.ShareFunctions;
@@ -25,7 +36,7 @@ public class UserFunctions {
     public FirebaseFirestore ff = FirebaseFirestore.getInstance();
     public FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
     public FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
-
+    public Boolean new_user;
     // gets the complete profile and sets it to userProfile variable in the constructor
     public UserFunctions() {
         ff.collection("users")
@@ -59,6 +70,7 @@ public class UserFunctions {
     // Function to deduct rci upon buying is confirmed or investing
     // investment (2)
     public void deduct_rci(Double investment) {
+        new UserProfile();
         if (userProfile.getAddedrci() >= investment) {
             userProfile.setAddedrci(userProfile.getAddedrci() - investment);
         } else {
@@ -68,30 +80,31 @@ public class UserFunctions {
         ff.collection("users").document(firebaseUser.getUid()).update("addedrci", userProfile.getAddedrci(), "profit", userProfile.getProfit());
     }
     public void addRci(Double investment) {
+        new UserProfile();
         ff.collection("users").document(firebaseUser.getUid()).update("profit", userProfile.getProfit()+investment);
     }
 
     // cheking new user for given share id or not
     //investment (4)
-    public boolean check_newUser(String shareid) {
-        final boolean[] ans = {true};
-        ff.collection("users").document(firebaseUser.getUid()).collection("myshares").document(shareid).addSnapshotListener(new EventListener<DocumentSnapshot>() {
+    public Boolean check_newUser(String shareid) {
+        new_user = true;
+        ff.collection("users").document(firebaseUser.getUid()).collection("myshares").document(shareid).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
-            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                if (value.exists()) {
-                    ans[0] = false;
-                }
+            public void onComplete(@NonNull @NotNull Task<DocumentSnapshot> task) {
+                if(task.getResult().exists()==true)
+                    new_user=false;
             }
         });
-        return ans[0];
+        return new_user;
     }
 
     public String  getDay(){
-        Timestamp timestamp = Timestamp.now();
-        String date = timestamp.toDate().toString();
-        String days = date.charAt(0) + date.charAt(1) + "";
+        Date day=Timestamp.now().toDate();
+        String days = day.toString().charAt(0)+"2";
         return days;
     }
+
+
     public void addShareNewUser(String shareid, Double quantity, Double price) {
         String days=getDay();
         Double investment=price*quantity;
@@ -123,33 +136,35 @@ public class UserFunctions {
         Double investment=quantity*price;
         String days=getDay();
         final ShareHoldings[] shareHoldings = {new ShareHoldings()};
-        ff.collection("users").document(firebaseUser.getUid()).collection("myshares").document(shareid).addSnapshotListener(new EventListener<DocumentSnapshot>() {
-            @Override
-            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                    shareHoldings[0] = value.toObject(ShareHoldings.class);
-                    Double initaltotalAmount, finalTotalAmount;
-                    Map<String ,Map<String,ArrayList<Double>>> temp = shareHoldings[0].getHoldings();
-                    Map<String,ArrayList<Double>> holdings=temp.get("holdings");
-                    if (holdings.containsKey(days)) {
-                        // if someone has invested on the same day in the same share
-                        ArrayList<Double> n = new ArrayList<Double>(2);
-                        n.add(holdings.get(days).get(0));
-                        n.add(holdings.get(days).get(1));
-                        initaltotalAmount = n.get(0) * n.get(1);
-                        n.set(0, n.get(0) + quantity);
-                        finalTotalAmount = initaltotalAmount + (quantity * price);
-                        n.set(1,finalTotalAmount / n.get(0));
-                        ff.collection("users").document(firebaseUser.getUid()).collection("myshares").document(shareid).update("holdings", "holdings");
-                    } else {
-                        // no shares of same day present
-                        ArrayList<Double> p=null;
-                        p.add(price);
-                        p.add(quantity);
-                        HashMap<String, ArrayList<Double>> holdings2 = new HashMap<>();
-                        holdings2.put(days, p);
-                        ff.collection("users").document(firebaseUser.getUid()).collection("myshares").document(shareid)
-                                .update("holdings", holdings2);
-                    }
+        ff.collection("users").document(firebaseUser.getUid()).collection("myshares").document(shareid).get()
+                .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull @NotNull Task<DocumentSnapshot> task) {
+                        shareHoldings[0]=task.getResult().toObject(ShareHoldings.class);
+                Double initaltotalAmount, finalTotalAmount;
+
+                Map<String,ArrayList<Double>> holdings=shareHoldings[0].getHoldings();
+                if (holdings.containsKey(days)) {
+                    // if someone has invested on the same day in the same share
+                    ArrayList<Double> n = new ArrayList<Double>(2);
+                    n.add(holdings.get(days).get(0));
+                    n.add(holdings.get(days).get(1));
+                    initaltotalAmount = n.get(0) * n.get(1);
+                    n.set(0, n.get(0) + quantity);
+                    finalTotalAmount = initaltotalAmount + (quantity * price);
+                    n.set(1,finalTotalAmount / n.get(0));
+                    holdings.put(days,n);
+
+                    ff.collection("users").document(firebaseUser.getUid()).collection("myshares").document(shareid).update("holdings", holdings);
+                } else {
+                    // no shares of same day present
+                    ArrayList<Double> p=new ArrayList<Double>(2);
+                    p.add(quantity);
+                    p.add(price);
+                    holdings.put(days,p);
+                    ff.collection("users").document(firebaseUser.getUid()).collection("myshares").document(shareid)
+                            .update("holdings", holdings);
+                }
             }
         });
         // updating number of investments by the user
@@ -178,26 +193,24 @@ public class UserFunctions {
 
     public void removeShares(String shareid,String day,Double quantity,Double price){
         final ShareHoldings[] shareHoldings = {new ShareHoldings()};
-        ff.collection("users").document(firebaseUser.getUid()).collection("myshares").document(shareid).addSnapshotListener(new EventListener<DocumentSnapshot>() {
+        ff.collection("users").document(firebaseUser.getUid()).collection("myshares").document(shareid).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
-            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                if (value != null) {
-                    shareHoldings[0] = value.toObject(ShareHoldings.class);
+            public void onComplete(@NonNull @NotNull Task<DocumentSnapshot> task) {
+                if (task.getResult().exists()) {
+                    shareHoldings[0] = task.getResult().toObject(ShareHoldings.class);
+                    Map<String ,ArrayList<Double>> holdings=shareHoldings[0].getHoldings();
+                    ArrayList<Double> two=holdings.get(day);
+                    two.set(0,two.get(0)-quantity);
+                    if(two.get(0)==0){
+                        holdings.remove(day);
+                    }
+                    else holdings.put(day,two);
+                    ff.collection("users").document(firebaseUser.getUid()).collection("myshares")
+                            .document(shareid)
+                            .update("holdings",holdings);
                 }
             }
         });
-
-        ArrayList<Double> a;
-        a=shareHoldings[0].getHoldings().get("holdings").get(day);
-        a.set(0,a.get(0)-quantity);
-        if(a.get(0)==0)
-            shareHoldings[0].getHoldings().remove(day);
-        else{
-            shareHoldings[0].getHoldings().get("holdings").put(day,a);
-        }
-        ff.collection("users").document(firebaseUser.getUid()).collection("myshares")
-                .document(shareid)
-                .update("holdings",shareHoldings[0].getHoldings());
     }
 
     //
@@ -212,6 +225,7 @@ public class UserFunctions {
         userShareTransaction.setUserid(firebaseUser.getUid());
         userShareTransaction.setAdded(Timestamp.now());
         userShareTransaction.setAdded(Timestamp.now());
+
 
         ff.collection("users").document(firebaseUser.getUid())
                 .collection("pendingtransactions")
@@ -234,6 +248,11 @@ public class UserFunctions {
         // delete the transaction from share also from web
         ff.collection("users").document(firebaseUser.getUid())
                 .collection("pendingtransactions")
-                .document(id).delete();
+                .document(id).delete().addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull @NotNull Task<Void> task) {
+
+            }
+        });
     }
 }
