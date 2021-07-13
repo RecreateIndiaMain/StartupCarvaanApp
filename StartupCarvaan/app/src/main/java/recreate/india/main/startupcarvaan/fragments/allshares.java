@@ -110,10 +110,10 @@ public class allshares extends Fragment {
                             share=value.toObject(Share.class);
                             boolean performance=share.isPerformance();
                             if(performance) {
-                                holder.performance.setImageResource(R.drawable.ic_baseline_arrow_drop_up_24);
+                                holder.performance.setImageResource(R.drawable.growup);
                             }
                             else{
-                                holder.performance.setImageResource(R.drawable.ic_baseline_arrow_drop_down_24);
+                                holder.performance.setImageResource(R.drawable.growdown);
                             }
 
                         }
