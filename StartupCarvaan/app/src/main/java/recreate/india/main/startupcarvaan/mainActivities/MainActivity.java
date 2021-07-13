@@ -20,11 +20,14 @@ import recreate.india.main.startupcarvaan.Helppage;
 import recreate.india.main.startupcarvaan.Levels;
 import recreate.india.main.startupcarvaan.R;
 
+import recreate.india.main.startupcarvaan.coin_exchange.AboutRCI;
 import recreate.india.main.startupcarvaan.fragments.allshares;
 
+import recreate.india.main.startupcarvaan.fragments.biding;
 import recreate.india.main.startupcarvaan.fragments.mycoins;
 import recreate.india.main.startupcarvaan.fragments.myshares;
 
+import recreate.india.main.startupcarvaan.fragments.practice;
 import recreate.india.main.startupcarvaan.loginsignup.loginActivity;
 import recreate.india.main.startupcarvaan.user.ProfileActivity;
 import recreate.india.main.startupcarvaan.user.Transactions;
@@ -53,18 +56,18 @@ public class MainActivity extends AppCompatActivity{
                     fragment = new myshares();
                     switchFragment(fragment);
                     return true;
-//                case R.id.practice:
-//                    fragment = new practice();
-//                    switchFragment(fragment);
-//                    return true;
+                case R.id.practice:
+                    fragment = new practice();
+                    switchFragment(fragment);
+                    return true;
                 case R.id.mycoins:
                     fragment = new mycoins();
                     switchFragment(fragment);
                     return true;
-//                case R.id.biding:
-//                    fragment = new biding();
-//                    switchFragment(fragment);
-//                    return true;
+                case R.id.biding:
+                    fragment = new biding();
+                    switchFragment(fragment);
+                    return true;
             }
             return false;
         }
@@ -98,17 +101,17 @@ public class MainActivity extends AppCompatActivity{
                     startActivity(new Intent(MainActivity.this,Transactions.class));
                     break;
 
-//                case R.id.aboutRci:
-//                    startActivity(new Intent(MainActivity.this, AboutRCI.class));
-//                    finish();
-//                    break;
+                case R.id.aboutRci:
+                    startActivity(new Intent(MainActivity.this, AboutRCI.class));
+                    finish();
+                    break;
                 case R.id.privacypolicy:
                     startActivity(new Intent(MainActivity.this,PrivacyPolicy.class));
                     finish();
                     break;
-//                case R.id.transactions:
-//                    startActivity(new Intent(MainActivity.this, Transactions.class));
-//                    break;
+                case R.id.money_transactions:
+                    startActivity(new Intent(MainActivity.this, Transactions.class));
+                    break;
             }
             return false;
         }
