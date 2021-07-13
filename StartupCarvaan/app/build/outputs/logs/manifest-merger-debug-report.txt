@@ -267,10 +267,10 @@ activity#recreate.india.main.startupcarvaan.user.Transactions
 ADDED from C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:25:9-27:20
 	android:name
 		ADDED from C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:25:19-52
-activity#recreate.india.main.startupcarvaan.coin_exchange.rci_exchange
-ADDED from C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:28:9-64
+activity#recreate.india.main.startupcarvaan.coin_exchange.AboutRCI
+ADDED from C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:28:9-60
 	android:name
-		ADDED from C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:28:19-61
+		ADDED from C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:28:19-57
 activity#recreate.india.main.startupcarvaan.Levels
 ADDED from C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:29:9-44
 	android:name

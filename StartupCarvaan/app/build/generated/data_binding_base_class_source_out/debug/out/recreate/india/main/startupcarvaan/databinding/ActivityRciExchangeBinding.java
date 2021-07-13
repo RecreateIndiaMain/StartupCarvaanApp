@@ -24,6 +24,9 @@ public final class ActivityRciExchangeBinding implements ViewBinding {
   public final LinearLayout Price;
 
   @NonNull
+  public final TextView buyAboutRci;
+
+  @NonNull
   public final TextView descAboutRci;
 
   @NonNull
@@ -35,15 +38,21 @@ public final class ActivityRciExchangeBinding implements ViewBinding {
   @NonNull
   public final TextView priceOfRCI;
 
+  @NonNull
+  public final TextView sellAboutRci;
+
   private ActivityRciExchangeBinding(@NonNull RelativeLayout rootView, @NonNull LinearLayout Price,
-      @NonNull TextView descAboutRci, @NonNull TextView headingAboutRci,
-      @NonNull LineChart lineChartRci, @NonNull TextView priceOfRCI) {
+      @NonNull TextView buyAboutRci, @NonNull TextView descAboutRci,
+      @NonNull TextView headingAboutRci, @NonNull LineChart lineChartRci,
+      @NonNull TextView priceOfRCI, @NonNull TextView sellAboutRci) {
     this.rootView = rootView;
     this.Price = Price;
+    this.buyAboutRci = buyAboutRci;
     this.descAboutRci = descAboutRci;
     this.headingAboutRci = headingAboutRci;
     this.lineChartRci = lineChartRci;
     this.priceOfRCI = priceOfRCI;
+    this.sellAboutRci = sellAboutRci;
   }
 
   @Override
@@ -79,6 +88,12 @@ public final class ActivityRciExchangeBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.buy_aboutRci;
+      TextView buyAboutRci = rootView.findViewById(id);
+      if (buyAboutRci == null) {
+        break missingId;
+      }
+
       id = R.id.desc_aboutRci;
       TextView descAboutRci = rootView.findViewById(id);
       if (descAboutRci == null) {
@@ -103,8 +118,14 @@ public final class ActivityRciExchangeBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityRciExchangeBinding((RelativeLayout) rootView, Price, descAboutRci,
-          headingAboutRci, lineChartRci, priceOfRCI);
+      id = R.id.sell_aboutRci;
+      TextView sellAboutRci = rootView.findViewById(id);
+      if (sellAboutRci == null) {
+        break missingId;
+      }
+
+      return new ActivityRciExchangeBinding((RelativeLayout) rootView, Price, buyAboutRci,
+          descAboutRci, headingAboutRci, lineChartRci, priceOfRCI, sellAboutRci);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

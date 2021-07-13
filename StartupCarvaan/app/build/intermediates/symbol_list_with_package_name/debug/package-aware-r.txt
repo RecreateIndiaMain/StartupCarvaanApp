@@ -2343,6 +2343,7 @@ id button_first
 id button_panel
 id button_second
 id buy
+id buy_aboutRci
 id buy_sell_bottom_nav
 id buyc
 id buyingPrice
@@ -2845,6 +2846,7 @@ id select_dialog_listview
 id selected
 id selected_view
 id sell
+id sell_aboutRci
 id sellclose
 id sellingPrice
 id sellingprice

@@ -109,9 +109,9 @@
 61-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:25:9-27:20
 61-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:25:19-52
 62        </activity>
-63        <activity android:name="recreate.india.main.startupcarvaan.coin_exchange.rci_exchange" />
-63-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:28:9-64
-63-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:28:19-61
+63        <activity android:name="recreate.india.main.startupcarvaan.coin_exchange.AboutRCI" />
+63-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:28:9-60
+63-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:28:19-57
 64        <activity android:name="recreate.india.main.startupcarvaan.Levels" />
 64-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:29:9-44
 64-->C:\Users\Siddharth Chaudhary\AndroidStudioProjects\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:29:19-41

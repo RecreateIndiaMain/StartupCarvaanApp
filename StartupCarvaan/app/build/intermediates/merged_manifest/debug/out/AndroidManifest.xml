@@ -60,7 +60,7 @@
         </activity>
         <activity android:name="recreate.india.main.startupcarvaan.user.Transactions" >
         </activity>
-        <activity android:name="recreate.india.main.startupcarvaan.coin_exchange.rci_exchange" />
+        <activity android:name="recreate.india.main.startupcarvaan.coin_exchange.AboutRCI" />
         <activity android:name="recreate.india.main.startupcarvaan.Levels" />
         <activity android:name="recreate.india.main.startupcarvaan.mainActivities.RecyclerActivity" />
         <activity android:name="recreate.india.main.startupcarvaan.payments.payout" />

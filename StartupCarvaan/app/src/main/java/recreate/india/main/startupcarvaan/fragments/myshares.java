@@ -89,8 +89,9 @@ public class myshares extends Fragment {
 
                 List<String> list = new ArrayList<String>();
                 list.add(0, "Price of a share : No. of shares");
-                Map<String,ArrayList<Double>> holding=model.getHoldings();
+                Map<String,Map<String,ArrayList<Double>>>temp=model.getHoldings();
 
+                Map<String,ArrayList<Double>> holding=temp.get("holdings");
                 for (Map.Entry<String,ArrayList<Double>> entry : holding.entrySet())
                 {
 //                    String date=entry.getKey();   not needed

@@ -128,7 +128,8 @@ public class UserFunctions {
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
                     shareHoldings[0] = value.toObject(ShareHoldings.class);
                     Double initaltotalAmount, finalTotalAmount;
-                    HashMap<String, ArrayList<Double>> holdings = shareHoldings[0].getHoldings();
+                    Map<String ,Map<String,ArrayList<Double>>> temp = shareHoldings[0].getHoldings();
+                    Map<String,ArrayList<Double>> holdings=temp.get("holdings");
                     if (holdings.containsKey(days)) {
                         // if someone has invested on the same day in the same share
                         ArrayList<Double> n = new ArrayList<Double>(2);
@@ -187,12 +188,12 @@ public class UserFunctions {
         });
 
         ArrayList<Double> a;
-        a=shareHoldings[0].getHoldings().get(day);
+        a=shareHoldings[0].getHoldings().get("holdings").get(day);
         a.set(0,a.get(0)-quantity);
         if(a.get(0)==0)
             shareHoldings[0].getHoldings().remove(day);
         else{
-            shareHoldings[0].getHoldings().put(day,a);
+            shareHoldings[0].getHoldings().get("holdings").put(day,a);
         }
         ff.collection("users").document(firebaseUser.getUid()).collection("myshares")
                 .document(shareid)
