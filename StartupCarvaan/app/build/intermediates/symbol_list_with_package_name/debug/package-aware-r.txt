@@ -1941,6 +1941,8 @@ drawable fab_shadow
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable googlesign
+drawable growdown
+drawable growup
 drawable gs
 drawable helper
 drawable ic_accepted_cards
@@ -2743,6 +2745,7 @@ id peekHeight
 id pending
 id pending_transactions_recyclerView
 id percent
+id performance
 id permission_fragment_help_text
 id permission_instructions_layout
 id permission_instructions_text

@@ -36,18 +36,6 @@
         "source": "C:\\Users\\A\\ANUBHAV_GOYAL_PROJECTS\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\layout\\activity_blogging.xml"
     },
     {
-<<<<<<< HEAD
-        "merged": "C:\\Users\\Siddharth Chaudhary\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\z_single_biding.xml",
-        "source": "C:\\Users\\Siddharth Chaudhary\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\layout\\z_single_biding.xml"
-    },
-    {
-        "merged": "C:\\Users\\Siddharth Chaudhary\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_privacy_policy.xml",
-        "source": "C:\\Users\\Siddharth Chaudhary\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\layout\\activity_privacy_policy.xml"
-    },
-    {
-        "merged": "C:\\Users\\Siddharth Chaudhary\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_blogging.xml",
-        "source": "C:\\Users\\Siddharth Chaudhary\\AndroidStudioProjects\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\layout\\activity_blogging.xml"
-=======
         "merged": "C:\\Users\\A\\ANUBHAV_GOYAL_PROJECTS\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
         "source": "C:\\Users\\A\\ANUBHAV_GOYAL_PROJECTS\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
@@ -58,7 +46,6 @@
     {
         "merged": "C:\\Users\\A\\ANUBHAV_GOYAL_PROJECTS\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_rci_exchange.xml",
         "source": "C:\\Users\\A\\ANUBHAV_GOYAL_PROJECTS\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\layout\\activity_rci_exchange.xml"
->>>>>>> b0c0238f99d9c155a3291f2c16151d7aa8531b26
     },
     {
         "merged": "C:\\Users\\A\\ANUBHAV_GOYAL_PROJECTS\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_mycoins.xml",

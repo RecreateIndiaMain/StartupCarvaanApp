@@ -81,6 +81,9 @@ public final class ZSingleAllshareBinding implements ViewBinding {
   public final TextView nextslot;
 
   @NonNull
+  public final ImageView performance;
+
+  @NonNull
   public final ConstraintLayout relativeLayout;
 
   @NonNull
@@ -102,7 +105,7 @@ public final class ZSingleAllshareBinding implements ViewBinding {
       @NonNull LinearLayout growth, @NonNull ProgressBar growthbar, @NonNull TextView growthtext,
       @NonNull YouTubePlayerView introvideo, @NonNull Button invest, @NonNull TextView investors,
       @NonNull LinearLayout lcompany, @NonNull LineChart lineChartPrice,
-      @NonNull RelativeLayout loglayout, @NonNull TextView nextslot,
+      @NonNull RelativeLayout loglayout, @NonNull TextView nextslot, @NonNull ImageView performance,
       @NonNull ConstraintLayout relativeLayout, @NonNull ImageView secondLayout,
       @NonNull TextView sellingprice, @NonNull TextView tags, @NonNull LinearLayout video) {
     this.rootView = rootView;
@@ -124,6 +127,7 @@ public final class ZSingleAllshareBinding implements ViewBinding {
     this.lineChartPrice = lineChartPrice;
     this.loglayout = loglayout;
     this.nextslot = nextslot;
+    this.performance = performance;
     this.relativeLayout = relativeLayout;
     this.secondLayout = secondLayout;
     this.sellingprice = sellingprice;
@@ -266,6 +270,12 @@ public final class ZSingleAllshareBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.performance;
+      ImageView performance = rootView.findViewById(id);
+      if (performance == null) {
+        break missingId;
+      }
+
       id = R.id.relativeLayout;
       ConstraintLayout relativeLayout = rootView.findViewById(id);
       if (relativeLayout == null) {
@@ -298,7 +308,7 @@ public final class ZSingleAllshareBinding implements ViewBinding {
 
       return new ZSingleAllshareBinding((CardView) rootView, advice, afterpress, buyingprice,
           colorlayout, colorlayout2, companylogo, companyname, group, growth, growthbar, growthtext,
-          introvideo, invest, investors, lcompany, lineChartPrice, loglayout, nextslot,
+          introvideo, invest, investors, lcompany, lineChartPrice, loglayout, nextslot, performance,
           relativeLayout, secondLayout, sellingprice, tags, video);
     }
     String missingId = rootView.getResources().getResourceName(id);

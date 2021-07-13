@@ -114,11 +114,11 @@ public class practice extends Fragment {
                             holder.betting.setError("Invalid bonus coins");
                         else {
                             Integer betp = Integer.valueOf(holder.betting.getText().toString());
-                            ff.collection("users").document(firebaseUser.getUid()).addSnapshotListener(new EventListener<DocumentSnapshot>() {
+                            ff.collection("users").document(firebaseUser.getUid()).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                                 @Override
-                                public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                                    if (value != null)
-                                        userProfile = value.toObject(UserProfile.class);
+                                public void onComplete(@NonNull @NotNull Task<DocumentSnapshot> task) {
+                                    if (task.getResult().exists())
+                                        userProfile = task.getResult().toObject(UserProfile.class);
                                     Double bonus = userProfile.getBonus();
                                     if (betp < bonus) {
                                         userProfile.setBonus(bonus - betp);

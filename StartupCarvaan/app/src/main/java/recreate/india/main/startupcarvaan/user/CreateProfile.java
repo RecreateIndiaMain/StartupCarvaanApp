@@ -46,7 +46,7 @@ public class CreateProfile extends AppCompatActivity {
     private ImageView userImage;
     private Button document, submit;
     private Uri imageUri;
-
+    private String final_username="";
     private FirebaseFirestore ff = FirebaseFirestore.getInstance();
     private FirebaseStorage fs = FirebaseStorage.getInstance();
     private String imageurl = "", documenturl = "";
@@ -112,11 +112,8 @@ public class CreateProfile extends AppCompatActivity {
                             Toast.makeText(CreateProfile.this, "this user name is already taken please find another one for you", Toast.LENGTH_SHORT).show();
                         }
                         else{
-                            Map<String , String> m=new HashMap<>();
-                            m.put("userid",FirebaseAuth.getInstance().getCurrentUser().getUid());
-                            FirebaseFirestore.getInstance().collection("usernames")
-                                    .document(s.toString())
-                                    .set(m);
+                            Toast.makeText(CreateProfile.this, "username available", Toast.LENGTH_SHORT).show();
+                            final_username=s.toString();
                         }
                     }
                 });
@@ -212,7 +209,11 @@ public class CreateProfile extends AppCompatActivity {
                         profile.setAddharnumber(aadhar_tobeuploaded);
                         if (imageUri != null)
                             profile.setImageurl(imageurl);
-
+                        Map<String , String> m=new HashMap<>();
+                        m.put("userid",FirebaseAuth.getInstance().getCurrentUser().getUid());
+                        FirebaseFirestore.getInstance().collection("usernames")
+                                .document(final_username)
+                                .set(m);
                         ff.collection("users")
                                 .document(user.getUid())
                                 .set(profile).addOnCompleteListener(new OnCompleteListener<Void>() {
