@@ -10,15 +10,9 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.READ_SMS" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
-
-    <uses-feature
-        android:name="android.hardware.camera"
-        android:required="false" />
-
-    <!-- Telephony is optional (Auto-read SMS) -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- Telephony is optional (Auto-read SMS) -->
     <uses-feature
         android:name="android.hardware.telephony"
         android:required="false" />
@@ -57,14 +51,10 @@
         android:testOnly="true"
         android:theme="@style/Theme.StartupCarvaan" >
         <activity android:name="recreate.india.main.startupcarvaan.instamojo" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-        <activity android:name="recreate.india.main.startupcarvaan.user.Transactions" />
-        <activity android:name="recreate.india.main.startupcarvaan.coin_exchange.rci_exchange" />
+        <activity android:name="recreate.india.main.startupcarvaan.user.Transactions" >
+        </activity>
+        <activity android:name="recreate.india.main.startupcarvaan.coin_exchange.AboutRCI" />
         <activity android:name="recreate.india.main.startupcarvaan.Levels" />
         <activity android:name="recreate.india.main.startupcarvaan.mainActivities.RecyclerActivity" />
         <activity android:name="recreate.india.main.startupcarvaan.payments.payout" />
@@ -93,6 +83,11 @@
         <activity
             android:name="recreate.india.main.startupcarvaan.mainActivities.SplashScreen"
             android:theme="@style/MyTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
@@ -101,6 +96,9 @@
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-5245859690369666~7981162028" />
+        <meta-data
+            android:name="com.google.android.gms.wallet.api.enabled"
+            android:value="true" />
 
         <activity
             android:name="com.shreyaspatil.EasyUpiPayment.ui.PaymentUiActivity"

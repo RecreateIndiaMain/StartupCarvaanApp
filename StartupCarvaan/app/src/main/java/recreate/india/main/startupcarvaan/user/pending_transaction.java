@@ -6,22 +6,28 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 
 import org.jetbrains.annotations.NotNull;
 
 import recreate.india.main.startupcarvaan.R;
+import recreate.india.main.startupcarvaan.allmodels.user.ShareHoldings;
 import recreate.india.main.startupcarvaan.allmodels.user.UserFunctions;
 import recreate.india.main.startupcarvaan.allmodels.user.UserShareTransaction;
 
@@ -69,21 +75,31 @@ public class pending_transaction extends Fragment {
                     String id = getSnapshots().getSnapshot(position).getId();
                     userFunctions.delete(id);
                     userFunctions.addCompletedTransaction(model, model.getShareid());
-                    if (model.getType().equals("buy")) {
-                        if (userFunctions.check_newUser(model.getShareid())) {
-                            userFunctions.addShareNewUser(model.getShareid(), model.getQuantity(), model.getPrice());
-                            // update share investor count
-                        } else {
-                            userFunctions.updateUserShare(model.getShareid(), model.getQuantity(), model.getPrice());
-                        }
+                    if (!model.getType().equals("sell")) {
+                        FirebaseFirestore.getInstance().collection("users")
+                                .document(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                .collection("myshares")
+                                .document(model.getShareid())
+                                .get()
+                                .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                                    @Override
+                                    public void onComplete(@NonNull @NotNull Task<DocumentSnapshot> task) {
+
+                                        if(task.getResult().exists()==false){
+                                            Toast.makeText(getContext(), "I will add new share", Toast.LENGTH_SHORT).show();
+                                            userFunctions.addShareNewUser(model.getShareid(), model.getQuantity(), model.getPrice());
+                                        }
+                                        else{
+                                            Toast.makeText(getContext(), "I will update the share now", Toast.LENGTH_SHORT).show();
+                                            userFunctions.updateUserShare(model.getShareid(), model.getQuantity(), model.getPrice());
+                                        }
+                                    }
+                                });
                         userFunctions.giveRewards((model.getPrice() * model.getQuantity()));
                     }
-
-                    if (model.getType().equals("sell")) {
+                    else{
+                        Toast.makeText(getContext(), "selling in progress", Toast.LENGTH_SHORT).show();
                         userFunctions.addRci(model.getPrice() * model.getQuantity());
-                    }
-
-                    if (model.getType().equals("investment")) {
 
                     }
                 }
@@ -96,6 +112,8 @@ public class pending_transaction extends Fragment {
                 return new PostViewHolder(view1);
             }
         };
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         return view;
     }
@@ -116,4 +134,15 @@ public class pending_transaction extends Fragment {
         }
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        adapter.startListening();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        adapter.stopListening();
+    }
 }

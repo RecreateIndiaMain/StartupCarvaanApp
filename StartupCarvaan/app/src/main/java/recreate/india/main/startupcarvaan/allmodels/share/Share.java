@@ -13,9 +13,9 @@ public class Share {
     private boolean performance;
     private String period;
     private String pitchurl;
-    private Timestamp timestamp;
+    private Timestamp slot;
     private ArrayList<String>tags=new ArrayList<>();
-    private String beginner;
+    private String type;
 
     public Share() {
     }
@@ -29,18 +29,18 @@ public class Share {
         this.period = period;
     }
 
-    public Share(String description, Integer growth, Integer investors, String logourl, String name, String period, boolean performance, String pitchurl, Timestamp timestamp, ArrayList<String> tags, String beginner) {
-        this.description=description;
+    public Share(String description, Integer growth, Integer investors, String logourl, String name, boolean performance, String period, String pitchurl, Timestamp slot, ArrayList<String> tags, String type) {
+        this.description = description;
         this.growth = growth;
         this.investors = investors;
         this.logourl = logourl;
         this.name = name;
-        this.period=period;
         this.performance = performance;
+        this.period = period;
         this.pitchurl = pitchurl;
-        this.timestamp = timestamp;
+        this.slot = slot;
         this.tags = tags;
-        this.beginner = beginner;
+        this.type = type;
     }
 
     public String getDescription() {
@@ -99,12 +99,12 @@ public class Share {
         this.pitchurl = pitchurl;
     }
 
-    public Timestamp getTimestamp() {
-        return timestamp;
+    public Timestamp getSlot() {
+        return slot;
     }
 
-    public void setTimestamp(Timestamp timestamp) {
-        this.timestamp = timestamp;
+    public void setSlot(Timestamp slot) {
+        this.slot = slot;
     }
 
     public ArrayList<String> getTags() {
@@ -115,11 +115,11 @@ public class Share {
         this.tags = tags;
     }
 
-    public String getBeginner() {
-        return beginner;
+    public String getType() {
+        return type;
     }
 
-    public void setBeginner(String beginner) {
-        this.beginner = beginner;
+    public void setType(String type) {
+        this.type = type;
     }
 }

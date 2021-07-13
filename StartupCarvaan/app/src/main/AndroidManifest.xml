@@ -2,16 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="recreate.india.main.startupcarvaan">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.READ_SMS" />
-    <uses-permission android:name="android.permission.RECEIVE_SMS" />
-
-    <uses-feature
-        android:name="android.hardware.camera"
-        android:required="false" />
-
     <application
         android:allowBackup="true"
         android:icon="@drawable/startupcarvaanlogo"
@@ -22,8 +12,10 @@
         <activity android:name=".instamojo">
 
         </activity>
-        <activity android:name=".user.Transactions" />
-        <activity android:name=".coin_exchange.rci_exchange" />
+        <activity android:name=".user.Transactions" >
+
+        </activity>
+        <activity android:name=".coin_exchange.AboutRCI" />
         <activity android:name=".Levels" />
         <activity android:name=".mainActivities.RecyclerActivity" />
         <activity android:name=".payments.payout" />
@@ -63,6 +55,9 @@
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-5245859690369666~7981162028" />
+        <meta-data
+            android:name="com.google.android.gms.wallet.api.enabled"
+            android:value="true" />
     </application>
 
 </manifest>

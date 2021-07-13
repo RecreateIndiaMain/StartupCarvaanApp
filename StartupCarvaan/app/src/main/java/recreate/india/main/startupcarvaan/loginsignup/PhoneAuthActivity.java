@@ -37,7 +37,6 @@ import java.util.concurrent.TimeUnit;
 
 import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.allmodels.user.UserProfile;
-import recreate.india.main.startupcarvaan.fragments.progressdialogue.CustomProgressDialogue;
 import recreate.india.main.startupcarvaan.mainActivities.MainActivity;
 import recreate.india.main.startupcarvaan.user.CreateProfile;
 import recreate.india.main.startupcarvaan.user.profile;

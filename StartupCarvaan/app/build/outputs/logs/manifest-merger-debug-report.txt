@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:2:1-67:12
-INJECTED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:2:1-67:12
-INJECTED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:2:1-67:12
-INJECTED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:2:1-67:12
+ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:2:1-63:12
+INJECTED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:2:1-63:12
+INJECTED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:2:1-63:12
+INJECTED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:2:1-63:12
 MERGED from [androidx.databinding:viewbinding:4.1.1] C:\Users\A\.gradle\caches\transforms-3\b0b650b61cc8cd8827966a746d91525a\transformed\jetified-viewbinding-4.1.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-ui:2.3.2] C:\Users\A\.gradle\caches\transforms-3\8829918a3b1c2c74ee14be8afc24bf3a\transformed\navigation-ui-2.3.2\AndroidManifest.xml:17:1-24:12
 MERGED from [com.shreyaspatil:EasyUpiPayment:2.0] C:\Users\A\.gradle\caches\transforms-3\74bf93474c281850ccf76f375b97d503\transformed\jetified-EasyUpiPayment-2.0\AndroidManifest.xml:2:1-17:12
@@ -100,93 +100,25 @@ MERGED from [androidx.sqlite:sqlite-framework:2.0.1] C:\Users\A\.gradle\caches\t
 MERGED from [androidx.sqlite:sqlite:2.0.1] C:\Users\A\.gradle\caches\transforms-3\285a9373e143b8169cd2769a0fcbb3ec\transformed\sqlite-2.0.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\A\.gradle\caches\transforms-3\8eea09ce550851af69fa1288bfab8c5f\transformed\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:protolite-well-known-types:17.1.1] C:\Users\A\.gradle\caches\transforms-3\13ae36ded7f774149fd44c2acaab5f0c\transformed\jetified-protolite-well-known-types-17.1.1\AndroidManifest.xml:2:1-11:12
-INJECTED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:2:1-67:12
-INJECTED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:2:1-67:12
-INJECTED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:2:1-67:12
+INJECTED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:2:1-63:12
+INJECTED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:2:1-63:12
+INJECTED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:2:1-63:12
 	package
 		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:3:5-49
 		INJECTED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:2:1-67:12
+		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:2:1-63:12
 		INJECTED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:2:1-67:12
+		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:2:1-63:12
 		INJECTED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:2:11-69
-uses-permission#android.permission.INTERNET
-ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:5:5-67
-MERGED from [com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5] C:\Users\A\.gradle\caches\transforms-3\bfd941b67c9848bc77551dc616d7c9b9\transformed\jetified-core-10.0.5\AndroidManifest.xml:11:5-67
-MERGED from [com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5] C:\Users\A\.gradle\caches\transforms-3\bfd941b67c9848bc77551dc616d7c9b9\transformed\jetified-core-10.0.5\AndroidManifest.xml:11:5-67
-MERGED from [com.instamojo:android-sdk:3.5.0] C:\Users\A\.gradle\caches\transforms-3\8e98a9cc2bc806bbe2d6ea32354e9dfe\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:11:5-67
-MERGED from [com.instamojo:android-sdk:3.5.0] C:\Users\A\.gradle\caches\transforms-3\8e98a9cc2bc806bbe2d6ea32354e9dfe\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:11:5-67
-MERGED from [com.firebaseui:firebase-ui-firestore:7.1.1] C:\Users\A\.gradle\caches\transforms-3\4320b1b7cb2fbcd53b66ceb2788c8763\transformed\jetified-firebase-ui-firestore-7.1.1\AndroidManifest.xml:11:5-67
-MERGED from [com.firebaseui:firebase-ui-firestore:7.1.1] C:\Users\A\.gradle\caches\transforms-3\4320b1b7cb2fbcd53b66ceb2788c8763\transformed\jetified-firebase-ui-firestore-7.1.1\AndroidManifest.xml:11:5-67
-MERGED from [com.razorpay:checkout:1.6.6] C:\Users\A\.gradle\caches\transforms-3\ef631643bead73c70d3d72b463795ab4\transformed\jetified-checkout-1.6.6\AndroidManifest.xml:9:5-67
-MERGED from [com.razorpay:checkout:1.6.6] C:\Users\A\.gradle\caches\transforms-3\ef631643bead73c70d3d72b463795ab4\transformed\jetified-checkout-1.6.6\AndroidManifest.xml:9:5-67
-MERGED from [com.google.firebase:firebase-auth:20.0.3] C:\Users\A\.gradle\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-auth:20.0.3] C:\Users\A\.gradle\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-firestore:22.1.1] C:\Users\A\.gradle\caches\transforms-3\44b5e06ac430537c6cec32f796ef6e59\transformed\jetified-firebase-firestore-22.1.1\AndroidManifest.xml:14:5-67
-MERGED from [com.google.firebase:firebase-firestore:22.1.1] C:\Users\A\.gradle\caches\transforms-3\44b5e06ac430537c6cec32f796ef6e59\transformed\jetified-firebase-firestore-22.1.1\AndroidManifest.xml:14:5-67
-MERGED from [com.google.firebase:firebase-storage:19.2.1] C:\Users\A\.gradle\caches\transforms-3\b004ce35a91a90394772843563b5a263\transformed\jetified-firebase-storage-19.2.1\AndroidManifest.xml:27:5-67
-MERGED from [com.google.firebase:firebase-storage:19.2.1] C:\Users\A\.gradle\caches\transforms-3\b004ce35a91a90394772843563b5a263\transformed\jetified-firebase-storage-19.2.1\AndroidManifest.xml:27:5-67
-MERGED from [com.google.android.gms:play-services-ads-lite:20.1.0] C:\Users\A\.gradle\caches\transforms-3\4ca489b9110848c1c4d16da65dec0fd7\transformed\jetified-play-services-ads-lite-20.1.0\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-ads-lite:20.1.0] C:\Users\A\.gradle\caches\transforms-3\4ca489b9110848c1c4d16da65dec0fd7\transformed\jetified-play-services-ads-lite-20.1.0\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:18.0.0] C:\Users\A\.gradle\caches\transforms-3\53f313d31175d99e0afb2269edaef74c\transformed\jetified-play-services-measurement-sdk-api-18.0.0\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:18.0.0] C:\Users\A\.gradle\caches\transforms-3\53f313d31175d99e0afb2269edaef74c\transformed\jetified-play-services-measurement-sdk-api-18.0.0\AndroidManifest.xml:23:5-67
-	android:name
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:5:22-64
-uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:6:5-79
-MERGED from [com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5] C:\Users\A\.gradle\caches\transforms-3\bfd941b67c9848bc77551dc616d7c9b9\transformed\jetified-core-10.0.5\AndroidManifest.xml:12:5-79
-MERGED from [com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5] C:\Users\A\.gradle\caches\transforms-3\bfd941b67c9848bc77551dc616d7c9b9\transformed\jetified-core-10.0.5\AndroidManifest.xml:12:5-79
-MERGED from [com.instamojo:android-sdk:3.5.0] C:\Users\A\.gradle\caches\transforms-3\8e98a9cc2bc806bbe2d6ea32354e9dfe\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:14:5-79
-MERGED from [com.instamojo:android-sdk:3.5.0] C:\Users\A\.gradle\caches\transforms-3\8e98a9cc2bc806bbe2d6ea32354e9dfe\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:14:5-79
-MERGED from [com.google.firebase:firebase-auth:20.0.3] C:\Users\A\.gradle\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-auth:20.0.3] C:\Users\A\.gradle\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-firestore:22.1.1] C:\Users\A\.gradle\caches\transforms-3\44b5e06ac430537c6cec32f796ef6e59\transformed\jetified-firebase-firestore-22.1.1\AndroidManifest.xml:13:5-79
-MERGED from [com.google.firebase:firebase-firestore:22.1.1] C:\Users\A\.gradle\caches\transforms-3\44b5e06ac430537c6cec32f796ef6e59\transformed\jetified-firebase-firestore-22.1.1\AndroidManifest.xml:13:5-79
-MERGED from [com.google.firebase:firebase-storage:19.2.1] C:\Users\A\.gradle\caches\transforms-3\b004ce35a91a90394772843563b5a263\transformed\jetified-firebase-storage-19.2.1\AndroidManifest.xml:26:5-79
-MERGED from [com.google.firebase:firebase-storage:19.2.1] C:\Users\A\.gradle\caches\transforms-3\b004ce35a91a90394772843563b5a263\transformed\jetified-firebase-storage-19.2.1\AndroidManifest.xml:26:5-79
-MERGED from [io.grpc:grpc-android:1.28.0] C:\Users\A\.gradle\caches\transforms-3\8b6a02baf45775c3a039571cb8c9bbb8\transformed\jetified-grpc-android-1.28.0\AndroidManifest.xml:11:5-79
-MERGED from [io.grpc:grpc-android:1.28.0] C:\Users\A\.gradle\caches\transforms-3\8b6a02baf45775c3a039571cb8c9bbb8\transformed\jetified-grpc-android-1.28.0\AndroidManifest.xml:11:5-79
-MERGED from [com.google.android.gms:play-services-ads-lite:20.1.0] C:\Users\A\.gradle\caches\transforms-3\4ca489b9110848c1c4d16da65dec0fd7\transformed\jetified-play-services-ads-lite-20.1.0\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-ads-lite:20.1.0] C:\Users\A\.gradle\caches\transforms-3\4ca489b9110848c1c4d16da65dec0fd7\transformed\jetified-play-services-ads-lite-20.1.0\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:18.0.0] C:\Users\A\.gradle\caches\transforms-3\53f313d31175d99e0afb2269edaef74c\transformed\jetified-play-services-measurement-sdk-api-18.0.0\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:18.0.0] C:\Users\A\.gradle\caches\transforms-3\53f313d31175d99e0afb2269edaef74c\transformed\jetified-play-services-measurement-sdk-api-18.0.0\AndroidManifest.xml:24:5-79
-MERGED from [androidx.work:work-runtime:2.1.0] C:\Users\A\.gradle\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:26:5-79
-MERGED from [androidx.work:work-runtime:2.1.0] C:\Users\A\.gradle\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:26:5-79
-	android:name
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:6:22-76
-uses-permission#android.permission.READ_PHONE_STATE
-ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:7:5-75
-MERGED from [com.instamojo:android-sdk:3.5.0] C:\Users\A\.gradle\caches\transforms-3\8e98a9cc2bc806bbe2d6ea32354e9dfe\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:15:5-75
-MERGED from [com.instamojo:android-sdk:3.5.0] C:\Users\A\.gradle\caches\transforms-3\8e98a9cc2bc806bbe2d6ea32354e9dfe\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:15:5-75
-	android:name
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:7:22-72
-uses-permission#android.permission.READ_SMS
-ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:8:5-67
-MERGED from [com.instamojo:android-sdk:3.5.0] C:\Users\A\.gradle\caches\transforms-3\8e98a9cc2bc806bbe2d6ea32354e9dfe\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:12:5-67
-MERGED from [com.instamojo:android-sdk:3.5.0] C:\Users\A\.gradle\caches\transforms-3\8e98a9cc2bc806bbe2d6ea32354e9dfe\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:12:5-67
-	android:name
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:8:22-64
-uses-permission#android.permission.RECEIVE_SMS
-ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:9:5-70
-MERGED from [com.instamojo:android-sdk:3.5.0] C:\Users\A\.gradle\caches\transforms-3\8e98a9cc2bc806bbe2d6ea32354e9dfe\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:13:5-70
-MERGED from [com.instamojo:android-sdk:3.5.0] C:\Users\A\.gradle\caches\transforms-3\8e98a9cc2bc806bbe2d6ea32354e9dfe\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:13:5-70
-	android:name
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:9:22-67
-uses-feature#android.hardware.camera
-ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:11:5-13:36
-	android:required
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:13:9-33
-	android:name
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:12:9-47
 application
-ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:15:5-65:19
+ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:5:5-61:19
 MERGED from [com.shreyaspatil:EasyUpiPayment:2.0] C:\Users\A\.gradle\caches\transforms-3\74bf93474c281850ccf76f375b97d503\transformed\jetified-EasyUpiPayment-2.0\AndroidManifest.xml:11:5-15:19
 MERGED from [com.shreyaspatil:EasyUpiPayment:2.0] C:\Users\A\.gradle\caches\transforms-3\74bf93474c281850ccf76f375b97d503\transformed\jetified-EasyUpiPayment-2.0\AndroidManifest.xml:11:5-15:19
 MERGED from [com.google.android.material:material:1.2.1] C:\Users\A\.gradle\caches\transforms-3\e5bba7de4c6c6c1f4d49bf10807d6b0a\transformed\material-1.2.1\AndroidManifest.xml:22:5-20
@@ -248,125 +180,131 @@ MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\A\.gradle\cac
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.3.1] C:\Users\A\.gradle\caches\transforms-3\93ad5fb70247950b640af4a3898b5cce\transformed\core-1.3.1\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:20:9-35
+		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:10:9-35
 	android:label
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:18:9-41
+		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:8:9-41
 	android:roundIcon
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:19:9-57
+		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:9:9-57
 	android:icon
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:17:9-52
+		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:7:9-52
 	android:allowBackup
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:16:9-35
+		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:6:9-35
 	android:theme
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:21:9-52
+		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:11:9-52
 activity#recreate.india.main.startupcarvaan.instamojo
-ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:22:9-27:20
+ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:12:9-14:20
 	android:name
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:22:19-44
-intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:23:13-26:29
-action#android.intent.action.MAIN
-ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:24:17-69
-	android:name
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:24:25-66
-category#android.intent.category.LAUNCHER
-ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:25:17-77
-	android:name
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:25:27-74
+		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:12:19-44
 activity#recreate.india.main.startupcarvaan.user.Transactions
-ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:28:9-55
+ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:15:9-17:20
 	android:name
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:28:19-52
-activity#recreate.india.main.startupcarvaan.coin_exchange.rci_exchange
-ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:29:9-64
+		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:15:19-52
+activity#recreate.india.main.startupcarvaan.coin_exchange.AboutRCI
+ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:18:9-60
 	android:name
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:29:19-61
+		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:18:19-57
 activity#recreate.india.main.startupcarvaan.Levels
-ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:30:9-44
+ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:19:9-44
 	android:name
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:30:19-41
+		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:19:19-41
 activity#recreate.india.main.startupcarvaan.mainActivities.RecyclerActivity
-ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:31:9-69
+ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:20:9-69
 	android:name
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:31:19-66
+		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:20:19-66
 activity#recreate.india.main.startupcarvaan.payments.payout
-ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:32:9-53
+ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:21:9-53
 	android:name
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:32:19-50
+		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:21:19-50
 activity#recreate.india.main.startupcarvaan.payments.payin
-ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:33:9-52
+ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:22:9-52
 	android:name
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:33:19-49
+		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:22:19-49
 activity#recreate.india.main.startupcarvaan.Helppage
-ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:34:9-46
+ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:23:9-46
 	android:name
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:34:19-43
+		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:23:19-43
 activity#recreate.india.main.startupcarvaan.coin_exchange.buy_rci
-ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:35:9-59
+ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:24:9-59
 	android:name
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:35:19-56
+		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:24:19-56
 activity#recreate.india.main.startupcarvaan.mainActivities.IntroSliderActivity
-ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:36:9-72
+ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:25:9-72
 	android:name
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:36:19-69
+		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:25:19-69
 activity#recreate.india.main.startupcarvaan.user.CreateProfile
-ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:37:9-39:46
+ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:26:9-28:46
 	android:theme
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:39:13-43
+		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:28:13-43
 	android:name
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:38:13-47
+		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:27:13-47
 activity#recreate.india.main.startupcarvaan.loginsignup.PhoneAuthActivity
-ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:40:9-67
+ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:29:9-67
 	android:name
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:40:19-64
+		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:29:19-64
 activity#recreate.india.main.startupcarvaan.user.ProfileActivity
-ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:41:9-44:46
+ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:30:9-33:46
 	android:parentActivityName
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:43:13-70
+		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:32:13-70
 	android:theme
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:44:13-43
+		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:33:13-43
 	android:name
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:42:13-49
+		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:31:13-49
 activity#recreate.india.main.startupcarvaan.aboutshare.blogging
-ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:45:9-46:45
+ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:34:9-35:45
 	android:theme
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:46:13-43
+		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:35:13-43
 	android:name
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:45:19-54
+		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:34:19-54
 activity#recreate.india.main.startupcarvaan.mainActivities.MainActivity
-ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:47:9-49:73
+ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:36:9-38:73
 	android:parentActivityName
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:49:13-70
+		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:38:13-70
 	android:name
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:48:13-56
+		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:37:13-56
 activity#recreate.india.main.startupcarvaan.mainActivities.PrivacyPolicy
-ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:50:9-66
+ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:39:9-66
 	android:name
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:50:19-63
+		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:39:19-63
 activity#recreate.india.main.startupcarvaan.loginsignup.loginActivity
-ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:51:9-53:70
+ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:40:9-42:70
 	android:theme
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:53:13-67
+		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:42:13-67
 	android:name
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:52:13-54
+		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:41:13-54
 activity#recreate.india.main.startupcarvaan.mainActivities.SplashScreen
-ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:54:9-57:20
+ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:43:9-50:20
 	android:theme
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:56:13-43
+		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:45:13-43
 	android:name
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:55:13-56
+		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:44:13-56
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:46:13-49:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:47:17-69
+	android:name
+		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:47:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:48:17-77
+	android:name
+		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:48:27-74
 activity#com.theartofdev.edmodo.cropper.CropImageActivity
-ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:58:9-60:59
+ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:51:9-53:59
 	android:theme
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:60:13-56
+		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:53:13-56
 	android:name
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:59:13-76
+		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:52:13-76
 meta-data#com.google.android.gms.ads.APPLICATION_ID
-ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:62:9-64:70
+ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:55:9-57:70
 	android:value
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:64:13-67
+		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:57:13-67
 	android:name
-		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:63:13-69
+		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:56:13-69
+meta-data#com.google.android.gms.wallet.api.enabled
+ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:58:9-60:36
+	android:value
+		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:60:13-33
+	android:name
+		ADDED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml:59:13-69
 uses-sdk
 INJECTED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\A\ANUBHAV_GOYAL_PROJECTS\StartupCarvaanApp\StartupCarvaan\app\src\main\AndroidManifest.xml
@@ -581,6 +519,58 @@ ADDED from [com.shreyaspatil:EasyUpiPayment:2.0] C:\Users\A\.gradle\caches\trans
 		ADDED from [com.shreyaspatil:EasyUpiPayment:2.0] C:\Users\A\.gradle\caches\transforms-3\74bf93474c281850ccf76f375b97d503\transformed\jetified-EasyUpiPayment-2.0\AndroidManifest.xml:14:13-78
 	android:name
 		ADDED from [com.shreyaspatil:EasyUpiPayment:2.0] C:\Users\A\.gradle\caches\transforms-3\74bf93474c281850ccf76f375b97d503\transformed\jetified-EasyUpiPayment-2.0\AndroidManifest.xml:13:13-80
+uses-permission#android.permission.INTERNET
+ADDED from [com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5] C:\Users\A\.gradle\caches\transforms-3\bfd941b67c9848bc77551dc616d7c9b9\transformed\jetified-core-10.0.5\AndroidManifest.xml:11:5-67
+MERGED from [com.instamojo:android-sdk:3.5.0] C:\Users\A\.gradle\caches\transforms-3\8e98a9cc2bc806bbe2d6ea32354e9dfe\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:11:5-67
+MERGED from [com.instamojo:android-sdk:3.5.0] C:\Users\A\.gradle\caches\transforms-3\8e98a9cc2bc806bbe2d6ea32354e9dfe\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:11:5-67
+MERGED from [com.firebaseui:firebase-ui-firestore:7.1.1] C:\Users\A\.gradle\caches\transforms-3\4320b1b7cb2fbcd53b66ceb2788c8763\transformed\jetified-firebase-ui-firestore-7.1.1\AndroidManifest.xml:11:5-67
+MERGED from [com.firebaseui:firebase-ui-firestore:7.1.1] C:\Users\A\.gradle\caches\transforms-3\4320b1b7cb2fbcd53b66ceb2788c8763\transformed\jetified-firebase-ui-firestore-7.1.1\AndroidManifest.xml:11:5-67
+MERGED from [com.razorpay:checkout:1.6.6] C:\Users\A\.gradle\caches\transforms-3\ef631643bead73c70d3d72b463795ab4\transformed\jetified-checkout-1.6.6\AndroidManifest.xml:9:5-67
+MERGED from [com.razorpay:checkout:1.6.6] C:\Users\A\.gradle\caches\transforms-3\ef631643bead73c70d3d72b463795ab4\transformed\jetified-checkout-1.6.6\AndroidManifest.xml:9:5-67
+MERGED from [com.google.firebase:firebase-auth:20.0.3] C:\Users\A\.gradle\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-auth:20.0.3] C:\Users\A\.gradle\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-firestore:22.1.1] C:\Users\A\.gradle\caches\transforms-3\44b5e06ac430537c6cec32f796ef6e59\transformed\jetified-firebase-firestore-22.1.1\AndroidManifest.xml:14:5-67
+MERGED from [com.google.firebase:firebase-firestore:22.1.1] C:\Users\A\.gradle\caches\transforms-3\44b5e06ac430537c6cec32f796ef6e59\transformed\jetified-firebase-firestore-22.1.1\AndroidManifest.xml:14:5-67
+MERGED from [com.google.firebase:firebase-storage:19.2.1] C:\Users\A\.gradle\caches\transforms-3\b004ce35a91a90394772843563b5a263\transformed\jetified-firebase-storage-19.2.1\AndroidManifest.xml:27:5-67
+MERGED from [com.google.firebase:firebase-storage:19.2.1] C:\Users\A\.gradle\caches\transforms-3\b004ce35a91a90394772843563b5a263\transformed\jetified-firebase-storage-19.2.1\AndroidManifest.xml:27:5-67
+MERGED from [com.google.android.gms:play-services-ads-lite:20.1.0] C:\Users\A\.gradle\caches\transforms-3\4ca489b9110848c1c4d16da65dec0fd7\transformed\jetified-play-services-ads-lite-20.1.0\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-ads-lite:20.1.0] C:\Users\A\.gradle\caches\transforms-3\4ca489b9110848c1c4d16da65dec0fd7\transformed\jetified-play-services-ads-lite-20.1.0\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:18.0.0] C:\Users\A\.gradle\caches\transforms-3\53f313d31175d99e0afb2269edaef74c\transformed\jetified-play-services-measurement-sdk-api-18.0.0\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:18.0.0] C:\Users\A\.gradle\caches\transforms-3\53f313d31175d99e0afb2269edaef74c\transformed\jetified-play-services-measurement-sdk-api-18.0.0\AndroidManifest.xml:23:5-67
+	android:name
+		ADDED from [com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5] C:\Users\A\.gradle\caches\transforms-3\bfd941b67c9848bc77551dc616d7c9b9\transformed\jetified-core-10.0.5\AndroidManifest.xml:11:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5] C:\Users\A\.gradle\caches\transforms-3\bfd941b67c9848bc77551dc616d7c9b9\transformed\jetified-core-10.0.5\AndroidManifest.xml:12:5-79
+MERGED from [com.instamojo:android-sdk:3.5.0] C:\Users\A\.gradle\caches\transforms-3\8e98a9cc2bc806bbe2d6ea32354e9dfe\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:14:5-79
+MERGED from [com.instamojo:android-sdk:3.5.0] C:\Users\A\.gradle\caches\transforms-3\8e98a9cc2bc806bbe2d6ea32354e9dfe\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:14:5-79
+MERGED from [com.google.firebase:firebase-auth:20.0.3] C:\Users\A\.gradle\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-auth:20.0.3] C:\Users\A\.gradle\caches\transforms-3\9be5f53da27da92a2afb4ae2ec2a30f5\transformed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-firestore:22.1.1] C:\Users\A\.gradle\caches\transforms-3\44b5e06ac430537c6cec32f796ef6e59\transformed\jetified-firebase-firestore-22.1.1\AndroidManifest.xml:13:5-79
+MERGED from [com.google.firebase:firebase-firestore:22.1.1] C:\Users\A\.gradle\caches\transforms-3\44b5e06ac430537c6cec32f796ef6e59\transformed\jetified-firebase-firestore-22.1.1\AndroidManifest.xml:13:5-79
+MERGED from [com.google.firebase:firebase-storage:19.2.1] C:\Users\A\.gradle\caches\transforms-3\b004ce35a91a90394772843563b5a263\transformed\jetified-firebase-storage-19.2.1\AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-storage:19.2.1] C:\Users\A\.gradle\caches\transforms-3\b004ce35a91a90394772843563b5a263\transformed\jetified-firebase-storage-19.2.1\AndroidManifest.xml:26:5-79
+MERGED from [io.grpc:grpc-android:1.28.0] C:\Users\A\.gradle\caches\transforms-3\8b6a02baf45775c3a039571cb8c9bbb8\transformed\jetified-grpc-android-1.28.0\AndroidManifest.xml:11:5-79
+MERGED from [io.grpc:grpc-android:1.28.0] C:\Users\A\.gradle\caches\transforms-3\8b6a02baf45775c3a039571cb8c9bbb8\transformed\jetified-grpc-android-1.28.0\AndroidManifest.xml:11:5-79
+MERGED from [com.google.android.gms:play-services-ads-lite:20.1.0] C:\Users\A\.gradle\caches\transforms-3\4ca489b9110848c1c4d16da65dec0fd7\transformed\jetified-play-services-ads-lite-20.1.0\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-ads-lite:20.1.0] C:\Users\A\.gradle\caches\transforms-3\4ca489b9110848c1c4d16da65dec0fd7\transformed\jetified-play-services-ads-lite-20.1.0\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:18.0.0] C:\Users\A\.gradle\caches\transforms-3\53f313d31175d99e0afb2269edaef74c\transformed\jetified-play-services-measurement-sdk-api-18.0.0\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:18.0.0] C:\Users\A\.gradle\caches\transforms-3\53f313d31175d99e0afb2269edaef74c\transformed\jetified-play-services-measurement-sdk-api-18.0.0\AndroidManifest.xml:24:5-79
+MERGED from [androidx.work:work-runtime:2.1.0] C:\Users\A\.gradle\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:26:5-79
+MERGED from [androidx.work:work-runtime:2.1.0] C:\Users\A\.gradle\caches\transforms-3\cbe71da548db15ae305aab1dd23852be\transformed\work-runtime-2.1.0\AndroidManifest.xml:26:5-79
+	android:name
+		ADDED from [com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5] C:\Users\A\.gradle\caches\transforms-3\bfd941b67c9848bc77551dc616d7c9b9\transformed\jetified-core-10.0.5\AndroidManifest.xml:12:22-76
+uses-permission#android.permission.READ_SMS
+ADDED from [com.instamojo:android-sdk:3.5.0] C:\Users\A\.gradle\caches\transforms-3\8e98a9cc2bc806bbe2d6ea32354e9dfe\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:12:5-67
+	android:name
+		ADDED from [com.instamojo:android-sdk:3.5.0] C:\Users\A\.gradle\caches\transforms-3\8e98a9cc2bc806bbe2d6ea32354e9dfe\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:12:22-64
+uses-permission#android.permission.RECEIVE_SMS
+ADDED from [com.instamojo:android-sdk:3.5.0] C:\Users\A\.gradle\caches\transforms-3\8e98a9cc2bc806bbe2d6ea32354e9dfe\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:13:5-70
+	android:name
+		ADDED from [com.instamojo:android-sdk:3.5.0] C:\Users\A\.gradle\caches\transforms-3\8e98a9cc2bc806bbe2d6ea32354e9dfe\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:13:22-67
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from [com.instamojo:android-sdk:3.5.0] C:\Users\A\.gradle\caches\transforms-3\8e98a9cc2bc806bbe2d6ea32354e9dfe\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:15:5-75
+	android:name
+		ADDED from [com.instamojo:android-sdk:3.5.0] C:\Users\A\.gradle\caches\transforms-3\8e98a9cc2bc806bbe2d6ea32354e9dfe\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:15:22-72
 uses-feature#android.hardware.telephony
 ADDED from [com.instamojo:android-sdk:3.5.0] C:\Users\A\.gradle\caches\transforms-3\8e98a9cc2bc806bbe2d6ea32354e9dfe\transformed\jetified-android-sdk-3.5.0\AndroidManifest.xml:18:5-20:36
 	android:required

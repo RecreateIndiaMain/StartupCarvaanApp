@@ -1,22 +1,19 @@
 package recreate.india.main.startupcarvaan.user;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.app.Dialog;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -35,19 +32,17 @@ import com.theartofdev.edmodo.cropper.CropImageView;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
 
 import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.allmodels.user.UserProfile;
-import recreate.india.main.startupcarvaan.compressor.Compressor;
-import recreate.india.main.startupcarvaan.fragments.progressdialogue.CustomProgressDialogue;
-import recreate.india.main.startupcarvaan.loginsignup.loginActivity;
+import recreate.india.main.startupcarvaan.fragments.CustomProgressDialogue;
 import recreate.india.main.startupcarvaan.mainActivities.MainActivity;
-
-import static com.google.android.gms.common.internal.safeparcel.SafeParcelable.NULL;
 
 public class CreateProfile extends AppCompatActivity {
     private static final int CROP_PIC_REQUEST_CODE = 001;
-    private EditText display_name, title, desc, phone, email, address;
+    private EditText display_name, title, desc, phone, email, address, aadharNumber;
     private ImageView userImage;
     private Button document, submit;
     private Uri imageUri;
@@ -55,7 +50,7 @@ public class CreateProfile extends AppCompatActivity {
     private FirebaseFirestore ff = FirebaseFirestore.getInstance();
     private FirebaseStorage fs = FirebaseStorage.getInstance();
     private String imageurl = "", documenturl = "";
-    private profile profile = new profile();
+    private UserProfile profile = new UserProfile();
     private int document_request_code = 002;
     private File compressFile;
     private CustomProgressDialogue cpd;
@@ -74,8 +69,9 @@ public class CreateProfile extends AppCompatActivity {
         email = findViewById(R.id.userEmail);
         address = findViewById(R.id.userAddress);
         userImage = findViewById(R.id.userImage);
+        aadharNumber = findViewById(R.id.adharcard);
         imageurl = profile.getImageurl();
-        documenturl = profile.getResume();
+//        documenturl = profile.getResume();
         //getting current user all data from firestore
         ff.collection("users")
                 .document(user.getUid())
@@ -84,16 +80,48 @@ public class CreateProfile extends AppCompatActivity {
                     public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
                         profile = value.toObject(UserProfile.class);
                         //setting all the fields first
-                        display_name.setHint(profile.getName());
+                        display_name.setHint(profile.getUsername());
                         title.setHint(profile.getTitle());
                         desc.setHint(profile.getDescription());
-                        phone.setHint(profile.getPhone());
+                        phone.setHint(profile.getPhonenumber());
                         email.setHint(profile.getEmail());
                         address.setHint(profile.getAddress());
+                        aadharNumber.setHint(profile.getAddharnumber());
                     }
                 });
         //end here
+        display_name.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                FirebaseFirestore.getInstance().collection("usernames")
+                        .document(s.toString())
+                        .get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull @NotNull Task<DocumentSnapshot> task) {
+                        if(task.getResult().exists()){
+                            Toast.makeText(CreateProfile.this, "this user name is already taken please find another one for you", Toast.LENGTH_SHORT).show();
+                        }
+                        else{
+                            Map<String , String> m=new HashMap<>();
+                            m.put("userid",FirebaseAuth.getInstance().getCurrentUser().getUid());
+                            FirebaseFirestore.getInstance().collection("usernames")
+                                    .document(s.toString())
+                                    .set(m);
+                        }
+                    }
+                });
+            }
+        });
         //image upload work
         userImage = findViewById(R.id.userImage);
         userImage.setOnClickListener(new View.OnClickListener() {
@@ -120,9 +148,10 @@ public class CreateProfile extends AppCompatActivity {
                     showError(phone, "Your number is mandatory");
                 } else if (address.getText().toString().isEmpty()) {
                     showError(address, "Address details are required");
-                }else if(phone.getText().toString().length()!=10){
-                    showError(phone,"Invalid phone number");
-                }
+                } else if (phone.getText().toString().length() != 10) {
+                    showError(phone, "Invalid phone number");
+                } else if (aadharNumber.getText().toString().length() != 12)
+                    showError(aadharNumber, "please enter correct number");
                 else {
                     cpd.show();
                     if (imageUri != null) {
@@ -133,19 +162,23 @@ public class CreateProfile extends AppCompatActivity {
                             public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
                                 Toast.makeText(CreateProfile.this, "image successfully uploaded", Toast.LENGTH_SHORT).show();
                                 cpd.dismiss();
-                                String name_tobeuploaded = display_name.getText().toString().length() == 0 ? profile.getName() : display_name.getText().toString();
+                                String name_tobeuploaded = display_name.getText().toString().length() == 0 ? profile.getUsername() : display_name.getText().toString();
                                 String title_tobeuploaded = title.getText().toString().length() == 0 ? profile.getTitle() : title.getText().toString();
                                 String desc_tobeuploaded = desc.getText().toString().length() == 0 ? profile.getDescription() : desc.getText().toString();
-                                String phone_tobeuploaded = phone.getText().toString().length() == 0 ? profile.getPhone() : phone.getText().toString();
+                                String phone_tobeuploaded = phone.getText().toString().length() == 0 ? profile.getPhonenumber() : phone.getText().toString();
                                 String email_tobeuploaded = email.getText().toString().length() == 0 ? profile.getEmail() : email.getText().toString();
                                 String address_tobeuploaded = address.getText().toString().length() == 0 ? profile.getAddress() : address.getText().toString();
+                                String aadhar_tobeuploaded = aadharNumber.getText().toString().length() == 0 ? profile.getAddharnumber() :
+                                        aadharNumber.getText().toString();
 
-                                profile.setName(name_tobeuploaded);
+                                profile.setUsername(name_tobeuploaded);
                                 profile.setAddress(address_tobeuploaded);
                                 profile.setDescription(desc_tobeuploaded);
                                 profile.setEmail(email_tobeuploaded);
-                                profile.setPhone(phone_tobeuploaded);
+                                profile.setPhonenumber(phone_tobeuploaded);
                                 profile.setTitle(title_tobeuploaded);
+                                profile.setAddharnumber(aadhar_tobeuploaded);
+
                                 if (imageUri != null)
                                     profile.setImageurl(imageurl);
 
@@ -162,19 +195,21 @@ public class CreateProfile extends AppCompatActivity {
                             }
                         });
                     } else {
-                        String name_tobeuploaded = display_name.getText().toString().length() == 0 ? profile.getName() : display_name.getText().toString();
+                        String name_tobeuploaded = display_name.getText().toString().length() == 0 ? profile.getUsername() : display_name.getText().toString();
                         String title_tobeuploaded = title.getText().toString().length() == 0 ? profile.getTitle() : title.getText().toString();
                         String desc_tobeuploaded = desc.getText().toString().length() == 0 ? profile.getDescription() : desc.getText().toString();
-                        String phone_tobeuploaded = phone.getText().toString().length() == 0 ? profile.getPhone() : phone.getText().toString();
+                        String phone_tobeuploaded = phone.getText().toString().length() == 0 ? profile.getPhonenumber() : phone.getText().toString();
                         String email_tobeuploaded = email.getText().toString().length() == 0 ? profile.getEmail() : email.getText().toString();
                         String address_tobeuploaded = address.getText().toString().length() == 0 ? profile.getAddress() : address.getText().toString();
-
-                        profile.setName(name_tobeuploaded);
+                        String aadhar_tobeuploaded = aadharNumber.getText().toString().length() == 0 ? profile.getAddharnumber() :
+                                aadharNumber.getText().toString();
+                        profile.setUsername(name_tobeuploaded);
                         profile.setAddress(address_tobeuploaded);
                         profile.setDescription(desc_tobeuploaded);
                         profile.setEmail(email_tobeuploaded);
-                        profile.setPhone(phone_tobeuploaded);
+                        profile.setPhonenumber(phone_tobeuploaded);
                         profile.setTitle(title_tobeuploaded);
+                        profile.setAddharnumber(aadhar_tobeuploaded);
                         if (imageUri != null)
                             profile.setImageurl(imageurl);
 

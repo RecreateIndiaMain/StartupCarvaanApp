@@ -1,41 +1,33 @@
 {
   "project_info": {
-    "project_number": "581476801467",
-    "project_id": "startup-carvaan-4c5db",
-    "storage_bucket": "startup-carvaan-4c5db.appspot.com"
+    "project_number": "132130200533",
+    "project_id": "startup-carvaan-bbfe2",
+    "storage_bucket": "startup-carvaan-bbfe2.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:581476801467:android:7bef093f4dfc299612829e",
+        "mobilesdk_app_id": "1:132130200533:android:3542e25592723681947b5c",
         "android_client_info": {
           "package_name": "recreate.india.main.startupcarvaan"
         }
       },
       "oauth_client": [
         {
-          "client_id": "581476801467-l8uh5j6evq8p0o28semg6n764i4oog5h.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "recreate.india.main.startupcarvaan",
-            "certificate_hash": "0d4b4100a8ee0e484fc92813b06caa00d633697e"
-          }
-        },
-        {
-          "client_id": "581476801467-o77m0rk821r1t0305cqd0fmipgtg2cei.apps.googleusercontent.com",
+          "client_id": "132130200533-4bng9rjr6ki745er8gb0i8hui17fl2b6.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD5n-1a7vA5Yr7q2sKTUd2GJ0VhcEXoF5s"
+          "current_key": "AIzaSyDHsonNW1ADToAXyYruiLnLiVD7a5JeAh0"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "581476801467-o77m0rk821r1t0305cqd0fmipgtg2cei.apps.googleusercontent.com",
+              "client_id": "132130200533-4bng9rjr6ki745er8gb0i8hui17fl2b6.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

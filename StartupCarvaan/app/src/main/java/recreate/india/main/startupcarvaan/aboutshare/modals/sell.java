@@ -23,23 +23,22 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
-import com.google.firebase.firestore.auth.User;
 
+import java.util.AbstractList;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.aboutshare.models.sharedetails;
+import recreate.india.main.startupcarvaan.allmodels.reward.Level;
 import recreate.india.main.startupcarvaan.allmodels.share.ShareFunctions;
+import recreate.india.main.startupcarvaan.allmodels.user.ShareHoldings;
 import recreate.india.main.startupcarvaan.allmodels.user.UserFunctions;
-import recreate.india.main.startupcarvaan.allmodels.user.UserShare;
-import recreate.india.main.startupcarvaan.fragments.models.sharefunctions;
-import recreate.india.main.startupcarvaan.fragments.myshares.holdings;
-import recreate.india.main.startupcarvaan.fragments.mycoins.coin;
+
 import recreate.india.main.startupcarvaan.user.user;
-import recreate.india.main.startupcarvaan.user.user_share_functions;
-import recreate.india.main.startupcarvaan.user.userfunctions;
+
+
 
 public class sell extends DialogFragment {
     private TextView shares,price,available,price_of_share;
@@ -50,23 +49,20 @@ public class sell extends DialogFragment {
     String item;
     String price_ ="";
     String share_;
+    String day_;
     private sharedetails sharedetails=new sharedetails();
-    private userfunctions userfunctions=new userfunctions();
-    private sharefunctions sharefunctions=new sharefunctions();
-    private coin coin=new coin();
-    private user_share_functions user_share_functions=new user_share_functions();
-
     private String shareid;
     private FirebaseFirestore ff= FirebaseFirestore.getInstance();
     private FirebaseUser mUser;
-
-    private holdings holdings=new holdings();
+    ShareHoldings holdings;
+    ShareFunctions shareFunctions;
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = getActivity().getLayoutInflater();
         final View view = inflater.inflate(R.layout.dailogsell,null,false);
         Bundle bundle=getArguments();
         shareid=bundle.getString("shareid");
+        shareFunctions=new ShareFunctions(shareid);
         share=view.findViewById(R.id.shares);
         price=view.findViewById(R.id.price);
         spin=view.findViewById(R.id.spinner3);
@@ -76,7 +72,10 @@ public class sell extends DialogFragment {
 
         mUser=FirebaseAuth.getInstance().getCurrentUser();
         List<String> list = new ArrayList<String>();
-        list.add(0, "Price of a share : No. of shares");
+        list.add(0, "Price of a share : No. of shares\n");
+
+        // TODO:  Share details need to be fetched and worked out
+
         //retrieve holdings
         FirebaseFirestore.getInstance()
                 .collection("users")
@@ -85,35 +84,13 @@ public class sell extends DialogFragment {
                 .document(shareid).addSnapshotListener(new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                holdings=value.toObject(holdings.class);
-                Map<String,Integer>holding=holdings.getHoldings();
-                for (Map.Entry<String,Integer> entry : holding.entrySet())
-                    list.add(String.valueOf(entry.getKey()+" : "+entry.getValue()));
+                holdings = value.toObject(ShareHoldings.class);
+                Map<String,ArrayList<Double>> holding=holdings.getHoldings();
+                for (Map.Entry<String, ArrayList<Double>> entry : holding.entrySet())
+                    list.add(String.valueOf("day: "+entry.getKey()+" quantity: "+entry.getValue().get(0)+" price: "+entry.getValue().get(1)));
             }
         });
-        //retrieving share details
-        FirebaseFirestore.getInstance()
-                .collection("allshares")
-                .document(shareid)
-                .collection("sharedetails")
-                .document("sharedetails").addSnapshotListener(new EventListener<DocumentSnapshot>() {
-            @Override
-            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                sharedetails=value.toObject(sharedetails.class);
-                available.setText("Available :"+String.valueOf(sharedetails.getAvailableforselling()/sharedetails.getSellingprice()));
-                price_of_share.setText(sharedetails.getSellingprice()+" rci");
-            }
-        });
-        // retrieving coin details
-        FirebaseFirestore.getInstance()
-                .collection("users")
-                .document(new user().user().getUid())
-                .collection("others").document("coins").addSnapshotListener(new EventListener<DocumentSnapshot>() {
-            @Override
-            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                coin=value.toObject(coin.class);
-            }
-        });
+
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, list);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spin.setAdapter(arrayAdapter);
@@ -124,16 +101,16 @@ public class sell extends DialogFragment {
                 } else {
                     item = parent.getItemAtPosition(position).toString();
                     int i;
-                    for(i=0;i<item.length();i++){
-                        if(item.charAt(i)==' '){
-                            break;
-                        }
-                        price_+=item.charAt(i);
-                    }
-                    i+=3    ;
-                    share_=item.substring(i,item.length());
+                    day_=item.substring(5,7);
+                    i=18;
+                    int j=i+1;
+                    while(item.charAt(j++)!='.');
+                    share_=item.substring(i,j-1);
+                        i=j+9;
+                    price_=item.substring(i);
                     price.setText("price: "+price_);
                     share.setText(share_);
+                    Toast.makeText(getContext(),day_,Toast.LENGTH_LONG).show();
                 }
             }
 
@@ -150,19 +127,17 @@ public class sell extends DialogFragment {
                 else {
                     String quan=share.getText().toString();
                     if(quan.equals(""))
-                        Toast.makeText(getContext(), "please select a amount", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(), "please select some quantity", Toast.LENGTH_SHORT).show();
                     else{
-                        Double price=new ShareFunctions(shareid).trading.getSellingprice();
-                        Double quantity=Double.valueOf(String.valueOf(share.getText().toString()));
-                        String day="1.0";
-                        if(quantity>Double.valueOf(holdings.getHoldings().get(price_)))
+                        Double sellingprice=shareFunctions.trading.getSellingprice();
+                        Double quantity=Double.valueOf(String.valueOf(quan));
+                        Double price=Double.valueOf(String.valueOf(price_));
+                        if(quantity>Double.valueOf(share_))
                             Toast.makeText(getContext(), "do not have "+ quantity + " shares for price "+price_, Toast.LENGTH_SHORT).show();
-                        else if(quantity*price>sharedetails.getAvailableforselling())
-                            Toast.makeText(getContext(),"sorry this much share is not available for selling",Toast.LENGTH_LONG).show();
                         else{
                             UserFunctions userFunctions=new UserFunctions();
-                            userFunctions.addPendingTransaction(shareid,quantity,price,"sell");
-                            userFunctions.removeShares(shareid,day,quantity,price);
+                            userFunctions.addPendingTransaction(shareid,quantity,sellingprice,"sell");
+                            userFunctions.removeShares(shareid,day_,quantity,price);
                             dismiss();
                         }
                     }

@@ -11,7 +11,7 @@ public class UserProfile {
     private Double currentpoints=0.0;
     private String description="your description here";
     private String email="your professional email";
-    private String imageurl="/userimage.png";
+    private String imageurl="/userImage.png";
     private Integer investmentcount=0;
     private Integer level=1;
     private String phonenumber="your phone number";
@@ -19,6 +19,7 @@ public class UserProfile {
     private String title="your title";
     private Double totalpoints=0.0;
     private String username="username";
+    private Boolean firstPayment=false;
     public UserProfile() {
     }
 
@@ -142,7 +143,7 @@ public class UserProfile {
         this.username = username;
     }
 
-    public UserProfile(Double addedrci, String addharnumber, String address, Double bonus, Double currentpoints, String description, String email, String imageurl, Integer investmentcount, Integer level, String phonenumber, Double profit, String title, Double totalpoints, String username) {
+    public UserProfile(Double addedrci, String addharnumber, String address, Double bonus, Double currentpoints, String description, String email, String imageurl, Integer investmentcount, Integer level, String phonenumber, Double profit, String title, Double totalpoints, String username,Boolean firstPayment) {
         this.addedrci = addedrci;
         this.addharnumber = addharnumber;
         this.address = address;
@@ -158,6 +159,7 @@ public class UserProfile {
         this.title = title;
         this.totalpoints = totalpoints;
         this.username = username;
+        this.firstPayment=firstPayment;
     }
 
     public Map<String,Object> giveNewUser(){
@@ -177,6 +179,7 @@ public class UserProfile {
         map.put("addedrci",this.addedrci);
         map.put("profit",this.profit);
         map.put("investmentcount",this.investmentcount);
+        map.put("firstPayment",this.firstPayment);
         return  map;
     }
 }
