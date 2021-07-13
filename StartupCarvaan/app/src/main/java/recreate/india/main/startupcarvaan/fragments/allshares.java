@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -32,7 +33,10 @@ import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.storage.FirebaseStorage;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.PlayerConstants;
@@ -47,13 +51,16 @@ import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.aboutshare.blogging;
 import recreate.india.main.startupcarvaan.allmodels.share.Share;
 import recreate.india.main.startupcarvaan.allmodels.share.ShareFunctions;
+import recreate.india.main.startupcarvaan.allmodels.share.sharedetails.Trading;
 
 public class allshares extends Fragment {
     private FirebaseFirestore ff= FirebaseFirestore.getInstance();
     private FirestoreRecyclerAdapter adapter;
     private RecyclerView recyclerView;
     private CustomProgressDialogue pDialog;
+    private Share share=new Share();
     private boolean loaded=false;
+    Trading trading=new Trading();
 
     ArrayList<Double> graph=new ArrayList<>();
     ArrayList<Entry> data=new ArrayList<>();
@@ -96,7 +103,99 @@ public class allshares extends Fragment {
             protected void onBindViewHolder(@NonNull PostViewHolder holder, int position, @NonNull Share model) {
 
                 String shareid = getSnapshots().getSnapshot(position).getId();
-                ShareFunctions shareFunctions=new ShareFunctions(shareid);
+                ff.collection("startup").document(shareid).addSnapshotListener(new EventListener<DocumentSnapshot>() {
+                    @Override
+                    public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                        if(value!=null){
+                            share=value.toObject(Share.class);
+                            boolean performance=share.isPerformance();
+                            if(performance) {
+                                holder.performance.setImageResource(R.drawable.ic_baseline_arrow_drop_up_24);
+                            }
+                            else{
+                                holder.performance.setImageResource(R.drawable.ic_baseline_arrow_drop_down_24);
+                            }
+
+                        }
+
+                    }
+                });
+                ff.collection("startup").document(shareid).collection("sharedetails").document("trading").addSnapshotListener(new EventListener<DocumentSnapshot>() {
+                    @Override
+                    public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                        if(value.exists()){
+                            trading=value.toObject(Trading.class);
+
+
+
+                            holder.sellingprice.setText(String.valueOf(trading.getSellingprice()));
+                            holder.buyingprice.setText(String.valueOf(trading.getBuyingprice()));
+                            // graph
+                            graph.clear();
+                            data.clear();
+
+                            graph= trading.getPricelist();
+                            holder.lineChart.setTouchEnabled(true);
+                            holder.lineChart.setPinchZoom(true);
+                            for (int i=0;i<graph.size();i++){
+                                Integer t=(int)Math.round(graph.get(i));
+                                data.add(new Entry(i+1,t));
+                            }
+                            LineDataSet set1;
+                            if (holder.lineChart.getData() != null &&
+                                    holder.lineChart.getData().getDataSetCount() > 0) {
+                                set1 = (LineDataSet) holder.lineChart.getData().getDataSetByIndex(0);
+                                set1.setValues(data);
+                                holder.lineChart.getData().notifyDataChanged();
+                                holder.lineChart.notifyDataSetChanged();
+                                holder.lineChart.invalidate();
+                            } else {
+                                set1 = new LineDataSet(data, "Price");
+                                set1.setDrawIcons(false);
+                                set1.enableDashedLine(10f, 5f, 0f);
+                                set1.enableDashedHighlightLine(10f, 5f, 0f);
+                                set1.setColor(Color.BLUE);
+                                set1.setCircleColor(Color.BLUE);
+                                set1.setLineWidth(1f);
+                                set1.setCircleRadius(1f);
+                                set1.setDrawCircleHole(false);
+                                set1.setValueTextSize(7f);
+                                set1.setDrawFilled(true);
+                                set1.setFormLineWidth(1f);
+                                ArrayList<ILineDataSet> dataSets = new ArrayList<>();
+                                dataSets.add(set1);
+                                LineData data2 = new LineData(dataSets);
+                                holder.lineChart.setData(data2);
+                                holder.lineChart.invalidate();
+                            }
+
+                            holder.switchLayout.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    if (holder.on) {
+                                        holder.on = false;
+                                        holder.first.setVisibility(View.GONE);
+                                        holder.video.setVisibility(View.GONE);
+                                        holder.colorlayout.setVisibility(View.GONE);
+                                        holder.colourlayout2.setVisibility(View.VISIBLE);
+                                        holder.second.setVisibility(View.VISIBLE);
+                                    } else {
+                                        holder.on = true;
+                                        holder.first.setVisibility(View.VISIBLE);
+                                        holder.video.setVisibility(View.VISIBLE);
+                                        holder.colorlayout.setVisibility(View.VISIBLE);
+                                        holder.colourlayout2.setVisibility(View.GONE);
+                                        holder.second.setVisibility(View.GONE);
+                                    }
+                                }
+                            });
+
+                        }
+                    }
+                });
+
+
+
 
                 holder.invest.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -109,65 +208,10 @@ public class allshares extends Fragment {
 
                     }
                 });
-                graph.clear();
-                data.clear();
 
 
-                graph= shareFunctions.trading.getPricelist();
-                holder.lineChart.setTouchEnabled(true);
-                holder.lineChart.setPinchZoom(true);
-                for (int i=0;i<graph.size();i++){
-                    Integer t=(int)Math.round(graph.get(i));
-                    data.add(new Entry(i+1,t));
-                }
-                LineDataSet set1;
-                if (holder.lineChart.getData() != null &&
-                        holder.lineChart.getData().getDataSetCount() > 0) {
-                    set1 = (LineDataSet) holder.lineChart.getData().getDataSetByIndex(0);
-                    set1.setValues(data);
-                    holder.lineChart.getData().notifyDataChanged();
-                    holder.lineChart.notifyDataSetChanged();
-                    holder.lineChart.invalidate();
-                } else {
-                    set1 = new LineDataSet(data, "Price");
-                    set1.setDrawIcons(false);
-                    set1.enableDashedLine(10f, 5f, 0f);
-                    set1.enableDashedHighlightLine(10f, 5f, 0f);
-                    set1.setColor(Color.BLUE);
-                    set1.setCircleColor(Color.BLUE);
-                    set1.setLineWidth(1f);
-                    set1.setCircleRadius(1f);
-                    set1.setDrawCircleHole(false);
-                    set1.setValueTextSize(7f);
-                    set1.setDrawFilled(true);
-                    set1.setFormLineWidth(1f);
-                    ArrayList<ILineDataSet> dataSets = new ArrayList<>();
-                    dataSets.add(set1);
-                    LineData data2 = new LineData(dataSets);
-                    holder.lineChart.setData(data2);
-                    holder.lineChart.invalidate();
-                }
 
-                holder.switchLayout.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        if (holder.on) {
-                            holder.on = false;
-                            holder.first.setVisibility(View.GONE);
-                            holder.video.setVisibility(View.GONE);
-                            holder.colorlayout.setVisibility(View.GONE);
-                            holder.colourlayout2.setVisibility(View.VISIBLE);
-                            holder.second.setVisibility(View.VISIBLE);
-                        } else {
-                            holder.on = true;
-                            holder.first.setVisibility(View.VISIBLE);
-                            holder.video.setVisibility(View.VISIBLE);
-                            holder.colorlayout.setVisibility(View.VISIBLE);
-                            holder.colourlayout2.setVisibility(View.GONE);
-                            holder.second.setVisibility(View.GONE);
-                        }
-                    }
-                });
+
 
                 // loading all values to holder
                 FirebaseStorage.getInstance().getReference().child(model.getLogourl()).getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
@@ -252,28 +296,8 @@ public class allshares extends Fragment {
                     }
                 });
 
-                holder.sellingprice.setText(String.valueOf(shareFunctions.trading.getSellingprice()));
-                holder.buyingprice.setText(String.valueOf(shareFunctions.trading.getBuyingprice()));
 
 
-                // old one
-                /*
-                FirebaseFirestore.getInstance()
-                        .collection("allshares")
-                        .document(shareid)
-                        .collection("sharedetails")
-                        .document("sharedetails")
-                        .addSnapshotListener(new EventListener<DocumentSnapshot>() {
-                            @Override
-                            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                                sharedetails sharedetails = value.toObject(recreate.india.main.startupcarvaan.aboutshare.models.sharedetails.class);
-                                holder.sellingprice.setText(String.valueOf(sharedetails.getSellingprice()));
-                                holder.buyingprice.setText(String.valueOf(sharedetails.getBuyingprice()));
-                            }
-                        });
-
-                 */
-//                Toast.makeText(getContext(), sharedetails[0].getBuyingprice(), Toast.LENGTH_SHORT).show();
 
                 if (model.getType().equals("elite")) {
                     holder.colorlayout.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.bluetr));
@@ -301,7 +325,7 @@ public class allshares extends Fragment {
         private ImageView switchLayout;
         private LinearLayout first,second,video,colorlayout,colourlayout2;
         // fields
-        private ImageView companylogo;
+        private ImageView companylogo,performance;
         private TextView companyname,group,investors;
         private YouTubePlayerView introvideo;
         private TextView growthtext,tags;
@@ -331,6 +355,7 @@ public class allshares extends Fragment {
             buyingprice=itemView.findViewById(R.id.buyingprice);
             sellingprice=itemView.findViewById(R.id.sellingprice);
             lineChart=itemView.findViewById(R.id.lineChart_price);
+            performance=itemView.findViewById(R.id.performance);
         }
     }
     public void showProgress() {

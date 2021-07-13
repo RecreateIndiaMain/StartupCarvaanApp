@@ -2,6 +2,7 @@ package recreate.india.main.startupcarvaan;
 
 import androidx.annotation.IntegerRes;
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -16,9 +17,14 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.auth.User;
 
 import recreate.india.main.startupcarvaan.aboutshare.blogging;
 import recreate.india.main.startupcarvaan.allmodels.user.UserFunctions;
@@ -38,9 +44,10 @@ public class Levels extends AppCompatActivity {
     private TextView rt[]=new TextView[12];
     private TextView txt3[]=new TextView[12];
     private ImageView img[]=new ImageView[12];
-    private  int []levels={0,100,200,500,1000,2500,5000,10000,20000,40000,50000,70000,850000,100000};
+    private  int []levels_rewards={0,100,200,500,1000,2500,5000,10000,20000,40000,50000,70000,850000,100000};
 //    private Double TestPoints[]={0d,80d,400d,950d,1500d};
     FirebaseFirestore ff=FirebaseFirestore.getInstance();
+    UserProfile userProfile=new UserProfile();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,27 +69,19 @@ public class Levels extends AppCompatActivity {
 //        showLevel(5,4000d);
 //        l[1].setProgress(100);
 //        l[2].setProgress(80);
-        UserFunctions userFunctions=new UserFunctions();
-        UserProfile userProfile=userFunctions.userProfile;
 
-       /*
-        ff.collection("users")
-                .document(new user().user().getUid())
-                .get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+        ff.collection("users").document(FirebaseAuth.getInstance().getCurrentUser().getUid()).get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
-            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                profile profile=task.getResult().toObject(profile.class);
-                showLevel(profile.getI(),profile.getCurrentpoints());
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                userProfile=documentSnapshot.toObject(UserProfile.class);
+                showLevel(userProfile.getLevel(),userProfile.getCurrentpoints());
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                Toast.makeText(Levels.this, "Failed to load\n Check you Internet Connection and try again ", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Levels.this, "Check  Your Internet connection and try again! ", Toast.LENGTH_SHORT).show();
             }
         });
-
-        */
-        showLevel(userProfile.getLevel(),userProfile.getCurrentpoints());
     }
 
     public void initialise() {
@@ -149,7 +148,7 @@ public class Levels extends AppCompatActivity {
 
 
         for (int i=1;i<12;i++){
-            rt[i].setText("/ "+ levels[i]);
+            rt[i].setText("/ "+ levels_rewards[i]);
             lt[i].setText("0");
             img[i].setImageResource(R.drawable.padlock);
 //            l[i].setMax(levels[i]);
@@ -161,12 +160,12 @@ public class Levels extends AppCompatActivity {
         int IntValue;
         for (int i=1;i<level;i++){
             l[i].setProgress(100);
-             IntValue = (int) Math. round(levels[i]);
+             IntValue = (int) Math. round(levels_rewards[i]);
             lt[i].setText(String.valueOf(IntValue));
             img[i].setImageResource(R.drawable.unlock);
             txt3[i].setText("Congratulations..");
         }
-        double Points=currentPoints/levels[level]*100;
+        double Points=currentPoints/levels_rewards[level]*100;
         IntValue = (int) Math. round(Points);
         l[level].setProgress(IntValue);
         IntValue = (int) Math. round(currentPoints);

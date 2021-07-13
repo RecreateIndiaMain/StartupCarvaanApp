@@ -84,8 +84,8 @@ public class ProfileActivity extends AppCompatActivity {
                         phone.setText(profile.getPhonenumber());
                         email.setText(profile.getEmail());
                         address.setText(profile.getAddress());
-                        level.setText(profile.getLevel());
-                        points.setText(String.valueOf(profile.getCurrentpoints()));
+                        level.setText(String.valueOf(profile.getLevel()));
+                        points.setText(String.  valueOf(profile.getCurrentpoints()));
                         StorageReference imageurl=fs.getReference().child(profile.getImageurl());
                         imageurl.getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
                             @Override

@@ -95,9 +95,7 @@ public class UserProfile {
         this.investmentcount = investmentcount;
     }
 
-    public Integer getLevel() {
-        return level;
-    }
+    public Integer getLevel() { return level; }
 
     public void setLevel(Integer level) {
         this.level = level;
