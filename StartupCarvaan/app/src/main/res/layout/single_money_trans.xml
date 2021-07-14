@@ -30,7 +30,7 @@
                 android:text="User ID :"
                 android:textSize="15.5sp"
                 android:layout_marginLeft="10dp"
-                android:textColor="@color/blue"
+                android:textColor="@color/green"
                 android:textStyle="bold"
 
 
@@ -42,7 +42,7 @@
                 android:fontFamily="@font/proximanovaregular"
                 android:textSize="15sp"
                 android:layout_marginLeft="5dp"
-                android:textColor="@color/blue"
+                android:textColor="@color/black"
 
 
                 android:id="@+id/useridtransaction"
