@@ -1,5 +1,6 @@
 package recreate.india.main.startupcarvaan.mainActivities;
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -14,12 +15,18 @@ import android.widget.Toast;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 
 import io.paperdb.Paper;
 import recreate.india.main.startupcarvaan.Helppage;
 import recreate.india.main.startupcarvaan.Levels;
 import recreate.india.main.startupcarvaan.R;
 
+import recreate.india.main.startupcarvaan.allmodels.user.UserProfile;
 import recreate.india.main.startupcarvaan.coin_exchange.AboutRCI;
 import recreate.india.main.startupcarvaan.fragments.allshares;
 
@@ -29,6 +36,8 @@ import recreate.india.main.startupcarvaan.fragments.myshares;
 
 import recreate.india.main.startupcarvaan.fragments.practice;
 import recreate.india.main.startupcarvaan.loginsignup.loginActivity;
+import recreate.india.main.startupcarvaan.user.CreateProfile;
+import recreate.india.main.startupcarvaan.user.MoneyTransactions;
 import recreate.india.main.startupcarvaan.user.ProfileActivity;
 import recreate.india.main.startupcarvaan.user.Transactions;
 
@@ -39,7 +48,9 @@ public class MainActivity extends AppCompatActivity{
     private FragmentTransaction fragmentTransaction;
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle toggle;
-
+    private UserProfile userProfile=new UserProfile();
+    private long pressedTime=0;
+    private FirebaseFirestore ff=FirebaseFirestore.getInstance();
 
     // drawer bottom navigation menu
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -110,8 +121,14 @@ public class MainActivity extends AppCompatActivity{
                     finish();
                     break;
                 case R.id.money_transactions:
-                    startActivity(new Intent(MainActivity.this, Transactions.class));
+                    startActivity(new Intent(MainActivity.this, MoneyTransactions.class));
                     break;
+                case R.id.coin_drawer:
+                case R.id.buyc:
+                    fragment = new mycoins();
+                    switchFragment(fragment);
+                    break;
+
             }
             return false;
         }
@@ -129,7 +146,6 @@ public class MainActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Paper.init(MainActivity.this);
-
 
         navigationView=findViewById(R.id.n11);
         navigationView.setNavigationItemSelectedListener(mOnDNavigationItemSelectedListener);
@@ -179,9 +195,17 @@ public class MainActivity extends AppCompatActivity{
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
-            startActivity(new Intent(MainActivity.this, MainActivity.class));
+        if (pressedTime + 2000 > System.currentTimeMillis()) {
+            super.onBackPressed();
             finish();
+        } else {
+            Toast.makeText(getBaseContext(), "Press back again to exit", Toast.LENGTH_SHORT).show();
+//            startActivity(new Intent(MainActivity.this, MainActivity.class));
+//            finish();
+        }
+        pressedTime = System.currentTimeMillis();
+
+
 
     }
 }

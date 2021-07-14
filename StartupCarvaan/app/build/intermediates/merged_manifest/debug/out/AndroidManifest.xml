@@ -50,10 +50,9 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.StartupCarvaan" >
-        <activity android:name="recreate.india.main.startupcarvaan.instamojo" >
-        </activity>
-        <activity android:name="recreate.india.main.startupcarvaan.user.Transactions" >
-        </activity>
+        <activity android:name="recreate.india.main.startupcarvaan.user.MoneyTransactions" />
+        <activity android:name="recreate.india.main.startupcarvaan.instamojo" />
+        <activity android:name="recreate.india.main.startupcarvaan.user.Transactions" />
         <activity android:name="recreate.india.main.startupcarvaan.coin_exchange.AboutRCI" />
         <activity android:name="recreate.india.main.startupcarvaan.Levels" />
         <activity android:name="recreate.india.main.startupcarvaan.mainActivities.RecyclerActivity" />

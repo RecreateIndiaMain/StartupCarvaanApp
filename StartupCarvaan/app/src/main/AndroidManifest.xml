@@ -9,12 +9,9 @@
         android:roundIcon="@drawable/startupcarvaanlogo"
         android:supportsRtl="true"
         android:theme="@style/Theme.StartupCarvaan">
-        <activity android:name=".instamojo">
-
-        </activity>
-        <activity android:name=".user.Transactions" >
-
-        </activity>
+        <activity android:name=".user.MoneyTransactions"></activity>
+        <activity android:name=".instamojo"></activity>
+        <activity android:name=".user.Transactions"></activity>
         <activity android:name=".coin_exchange.AboutRCI" />
         <activity android:name=".Levels" />
         <activity android:name=".mainActivities.RecyclerActivity" />
@@ -31,8 +28,9 @@
             android:name=".user.ProfileActivity"
             android:parentActivityName=".mainActivities.MainActivity"
             android:theme="@style/MyTheme" />
-        <activity android:name=".aboutshare.blogging"
-            android:theme="@style/MyTheme"/>
+        <activity
+            android:name=".aboutshare.blogging"
+            android:theme="@style/MyTheme" />
         <activity
             android:name=".mainActivities.MainActivity"
             android:parentActivityName=".mainActivities.MainActivity" />
@@ -45,6 +43,7 @@
             android:theme="@style/MyTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
