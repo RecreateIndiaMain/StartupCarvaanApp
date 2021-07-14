@@ -57,10 +57,10 @@ public class PrivacyPolicy extends AppCompatActivity {
         refundpolicy = findViewById(R.id.refud_policy);
         rulest = findViewById(R.id.ruletext);
         privacypolicy.getSettings().setJavaScriptEnabled(true);
-        privacypolicy.loadUrl("https://www.privacypolicygenerator.info/live.php?token=Qk5tYKKzXzNauXqnmPWOD7pXpxOG8xQL ");
+        privacypolicy.loadUrl("https://www.privacypolicygenerator.info/live.php?token=Qk5tYKKzXzNauXqnmPWOD7pXpxOG8xQL");
 
         termand.getSettings().setJavaScriptEnabled(true);
-        termand.loadUrl("https://www.termsandconditionsgenerator.com/live.php?token=0WwI2zNxvD2pJTzuKS5Jqu4k9xKVzVoH ");
+            termand.loadUrl("https://www.termsandconditionsgenerator.com/live.php?token=0WwI2zNxvD2pJTzuKS5Jqu4k9xKVzVoH");
 
         refundpolicy.getSettings().setJavaScriptEnabled(true);
         refundpolicy.loadUrl("https://help.getoccasion.com/article/506-sample-cancellation-and-refund-policies");

@@ -50,15 +50,20 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.StartupCarvaan" >
-        <activity android:name="recreate.india.main.startupcarvaan.instamojo" >
-        </activity>
+        <activity android:name="recreate.india.main.startupcarvaan.instamojo" />
         <activity android:name="recreate.india.main.startupcarvaan.user.Transactions" >
         </activity>
         <activity android:name="recreate.india.main.startupcarvaan.coin_exchange.AboutRCI" />
         <activity android:name="recreate.india.main.startupcarvaan.Levels" />
         <activity android:name="recreate.india.main.startupcarvaan.mainActivities.RecyclerActivity" />
         <activity android:name="recreate.india.main.startupcarvaan.payments.payout" />
-        <activity android:name="recreate.india.main.startupcarvaan.payments.payin" />
+        <activity android:name="recreate.india.main.startupcarvaan.payments.payin" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name="recreate.india.main.startupcarvaan.Helppage" />
         <activity android:name="recreate.india.main.startupcarvaan.coin_exchange.buy_rci" />
         <activity android:name="recreate.india.main.startupcarvaan.mainActivities.IntroSliderActivity" />
@@ -83,11 +88,6 @@
         <activity
             android:name="recreate.india.main.startupcarvaan.mainActivities.SplashScreen"
             android:theme="@style/MyTheme" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
