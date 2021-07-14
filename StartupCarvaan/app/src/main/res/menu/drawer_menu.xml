@@ -14,7 +14,7 @@
         </item>
         <item android:id="@+id/your_coins"
             android:title="Your Coins"
-            >
+            android:visible="false">
 
         </item>
         <item android:id="@+id/privacypolicy"

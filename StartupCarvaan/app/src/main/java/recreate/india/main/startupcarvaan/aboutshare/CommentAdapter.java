@@ -5,8 +5,6 @@ import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,7 +22,6 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
-import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.zip.Inflater;
@@ -32,6 +29,7 @@ import java.util.zip.Inflater;
 import de.hdodenhof.circleimageview.CircleImageView;
 import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.aboutshare.modals.name_comment;
+import recreate.india.main.startupcarvaan.allmodels.user.UserProfile;
 import recreate.india.main.startupcarvaan.user.ProfileActivity;
 import recreate.india.main.startupcarvaan.user.profile;
 
@@ -56,14 +54,14 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.MyViewHo
     @Override
     public void onBindViewHolder(@NonNull CommentAdapter.MyViewHolder holder, int position) {
         String id = commentArrayList.get(position).getName().split("java")[0];
-        final profile[] profile = {new profile()};
+        final UserProfile[] profile = {new UserProfile()};
         FirebaseFirestore.getInstance().collection("users")
                 .document(id).addSnapshotListener(new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable @org.jetbrains.annotations.Nullable DocumentSnapshot value, @Nullable @org.jetbrains.annotations.Nullable FirebaseFirestoreException error) {
-                profile[0] = value.toObject(profile.class);
+                profile[0] = value.toObject(UserProfile.class);
                 holder.comment.setText(display(commentArrayList.get(position).getComment()));
-                holder.username.setText(profile[0].getName());
+                holder.username.setText(profile[0].getUsername());
                 StorageReference imageurl= FirebaseStorage.getInstance().getReference().child(profile[0].getImageurl());
                 imageurl.getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
                     @Override
