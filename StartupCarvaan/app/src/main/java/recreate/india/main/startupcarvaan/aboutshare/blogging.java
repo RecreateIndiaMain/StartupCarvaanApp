@@ -70,7 +70,6 @@ public class blogging extends AppCompatActivity {
         invest = findViewById(R.id.bla);
         shareid = getIntent().getStringExtra("shareid");
         ans = getIntent().getStringExtra("type");
-
         invest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

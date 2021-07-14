@@ -17,12 +17,18 @@ recreate/india/main/startupcarvaan/databinding/FragmentMycoinsBinding.java
  recreate.india.main.startupcarvaan.databinding.FragmentMycoinsBinding
 recreate/india/main/startupcarvaan/allmodels/fragmentmodel/competition.java
  recreate.india.main.startupcarvaan.allmodels.fragmentmodel.competition
-recreate/india/main/startupcarvaan/allmodels/share/BloggingDetails.java
- recreate.india.main.startupcarvaan.allmodels.share.BloggingDetails
+recreate/india/main/startupcarvaan/user/ProfileActivity.java
+ recreate.india.main.startupcarvaan.user.ProfileActivity
+ recreate.india.main.startupcarvaan.user.ProfileActivity$1
+ recreate.india.main.startupcarvaan.user.ProfileActivity$2
+ recreate.india.main.startupcarvaan.user.ProfileActivity$3
+ recreate.india.main.startupcarvaan.user.ProfileActivity$3$1
 recreate/india/main/startupcarvaan/databinding/ContentMainBinding.java
  recreate.india.main.startupcarvaan.databinding.ContentMainBinding
-recreate/india/main/startupcarvaan/user/transactionFragments/BuyFragment.java
- recreate.india.main.startupcarvaan.user.transactionFragments.BuyFragment
+recreate/india/main/startupcarvaan/mainActivities/MainActivity.java
+ recreate.india.main.startupcarvaan.mainActivities.MainActivity
+ recreate.india.main.startupcarvaan.mainActivities.MainActivity$1
+ recreate.india.main.startupcarvaan.mainActivities.MainActivity$2
 recreate/india/main/startupcarvaan/databinding/ActivityLevelsBinding.java
  recreate.india.main.startupcarvaan.databinding.ActivityLevelsBinding
 recreate/india/main/startupcarvaan/databinding/LoadingLayoutBinding.java
@@ -57,10 +63,10 @@ recreate/india/main/startupcarvaan/databinding/ActivityPrivacyPolicyBinding.java
  recreate.india.main.startupcarvaan.databinding.ActivityPrivacyPolicyBinding
 recreate/india/main/startupcarvaan/instamojo.java
  recreate.india.main.startupcarvaan.instamojo
-recreate/india/main/startupcarvaan/compressor/Compressor.java
- recreate.india.main.startupcarvaan.compressor.Compressor
- recreate.india.main.startupcarvaan.compressor.Compressor$1
- recreate.india.main.startupcarvaan.compressor.Compressor$Builder
+recreate/india/main/startupcarvaan/mainActivities/SplashScreen.java
+ recreate.india.main.startupcarvaan.mainActivities.SplashScreen
+ recreate.india.main.startupcarvaan.mainActivities.SplashScreen$1
+ recreate.india.main.startupcarvaan.mainActivities.SplashScreen$object
 recreate/india/main/startupcarvaan/databinding/ConfirmotpBinding.java
  recreate.india.main.startupcarvaan.databinding.ConfirmotpBinding
 recreate/india/main/startupcarvaan/user/transactionFragments/pending_transaction.java
@@ -70,10 +76,10 @@ recreate/india/main/startupcarvaan/user/transactionFragments/pending_transaction
  recreate.india.main.startupcarvaan.user.transactionFragments.pending_transaction$PostViewHolder
 recreate/india/main/startupcarvaan/databinding/ActivityRciExchangeBinding.java
  recreate.india.main.startupcarvaan.databinding.ActivityRciExchangeBinding
-recreate/india/main/startupcarvaan/mainActivities/SplashScreen.java
- recreate.india.main.startupcarvaan.mainActivities.SplashScreen
- recreate.india.main.startupcarvaan.mainActivities.SplashScreen$1
- recreate.india.main.startupcarvaan.mainActivities.SplashScreen$object
+recreate/india/main/startupcarvaan/user/transactionFragments/confirmed_transactions.java
+ recreate.india.main.startupcarvaan.user.transactionFragments.confirmed_transactions
+ recreate.india.main.startupcarvaan.user.transactionFragments.confirmed_transactions$1
+ recreate.india.main.startupcarvaan.user.transactionFragments.confirmed_transactions$PostViewHolder
 recreate/india/main/startupcarvaan/databinding/DailogsellBinding.java
  recreate.india.main.startupcarvaan.databinding.DailogsellBinding
 recreate/india/main/startupcarvaan/databinding/SellsuccessBinding.java
@@ -115,10 +121,9 @@ recreate/india/main/startupcarvaan/allmodels/user/UserProfile.java
  recreate.india.main.startupcarvaan.allmodels.user.UserProfile
 recreate/india/main/startupcarvaan/mainActivities/RecyclerActivity.java
  recreate.india.main.startupcarvaan.mainActivities.RecyclerActivity
-recreate/india/main/startupcarvaan/user/transactionFragments/confirmed_transactions.java
- recreate.india.main.startupcarvaan.user.transactionFragments.confirmed_transactions
- recreate.india.main.startupcarvaan.user.transactionFragments.confirmed_transactions$1
- recreate.india.main.startupcarvaan.user.transactionFragments.confirmed_transactions$PostViewHolder
+recreate/india/main/startupcarvaan/aboutshare/comment.java
+ recreate.india.main.startupcarvaan.aboutshare.comment
+ recreate.india.main.startupcarvaan.aboutshare.comment$1
 recreate/india/main/startupcarvaan/aboutshare/models/blogdetails.java
  recreate.india.main.startupcarvaan.aboutshare.models.blogdetails
 recreate/india/main/startupcarvaan/allmodels/fragmentmodel/BiddingModel.java
@@ -149,10 +154,14 @@ recreate/india/main/startupcarvaan/databinding/ActivityBloggingBinding.java
  recreate.india.main.startupcarvaan.databinding.ActivityBloggingBinding
 recreate/india/main/startupcarvaan/allmodels/fragmentmodel/PractiseModel.java
  recreate.india.main.startupcarvaan.allmodels.fragmentmodel.PractiseModel
-recreate/india/main/startupcarvaan/mainActivities/MyRecyclerViewAdapter.java
- recreate.india.main.startupcarvaan.mainActivities.MyRecyclerViewAdapter
- recreate.india.main.startupcarvaan.mainActivities.MyRecyclerViewAdapter$ItemClickListener
- recreate.india.main.startupcarvaan.mainActivities.MyRecyclerViewAdapter$ViewHolder
+recreate/india/main/startupcarvaan/loginsignup/loginActivity.java
+ recreate.india.main.startupcarvaan.loginsignup.loginActivity
+ recreate.india.main.startupcarvaan.loginsignup.loginActivity$1
+ recreate.india.main.startupcarvaan.loginsignup.loginActivity$2
+ recreate.india.main.startupcarvaan.loginsignup.loginActivity$3
+ recreate.india.main.startupcarvaan.loginsignup.loginActivity$4
+ recreate.india.main.startupcarvaan.loginsignup.loginActivity$5
+ recreate.india.main.startupcarvaan.loginsignup.loginActivity$6
 recreate/india/main/startupcarvaan/mainActivities/RecyclerData.java
  recreate.india.main.startupcarvaan.mainActivities.RecyclerData
 recreate/india/main/startupcarvaan/user/transactionFragments/WithdrawFragment.java
@@ -165,8 +174,16 @@ recreate/india/main/startupcarvaan/databinding/ActivityMainBinding.java
  recreate.india.main.startupcarvaan.databinding.ActivityMainBinding
 recreate/india/main/startupcarvaan/databinding/ZSingleBidingBinding.java
  recreate.india.main.startupcarvaan.databinding.ZSingleBidingBinding
-recreate/india/main/startupcarvaan/databinding/SinglecommentBinding.java
- recreate.india.main.startupcarvaan.databinding.SinglecommentBinding
+recreate/india/main/startupcarvaan/user/CreateProfile.java
+ recreate.india.main.startupcarvaan.user.CreateProfile
+ recreate.india.main.startupcarvaan.user.CreateProfile$1
+ recreate.india.main.startupcarvaan.user.CreateProfile$2
+ recreate.india.main.startupcarvaan.user.CreateProfile$2$1
+ recreate.india.main.startupcarvaan.user.CreateProfile$3
+ recreate.india.main.startupcarvaan.user.CreateProfile$4
+ recreate.india.main.startupcarvaan.user.CreateProfile$4$1
+ recreate.india.main.startupcarvaan.user.CreateProfile$4$1$1
+ recreate.india.main.startupcarvaan.user.CreateProfile$4$2
 recreate/india/main/startupcarvaan/databinding/FragmentSecondBinding.java
  recreate.india.main.startupcarvaan.databinding.FragmentSecondBinding
 recreate/india/main/startupcarvaan/aboutshare/models/work.java
@@ -192,8 +209,16 @@ recreate/india/main/startupcarvaan/aboutshare/modals/sell.java
  recreate.india.main.startupcarvaan.aboutshare.modals.sell$3
 recreate/india/main/startupcarvaan/databinding/ActivityPayoutBinding.java
  recreate.india.main.startupcarvaan.databinding.ActivityPayoutBinding
-recreate/india/main/startupcarvaan/aboutshare/modals/sell_success.java
- recreate.india.main.startupcarvaan.aboutshare.modals.sell_success
+recreate/india/main/startupcarvaan/loginsignup/PhoneAuthActivity.java
+ recreate.india.main.startupcarvaan.loginsignup.PhoneAuthActivity
+ recreate.india.main.startupcarvaan.loginsignup.PhoneAuthActivity$1
+ recreate.india.main.startupcarvaan.loginsignup.PhoneAuthActivity$2
+ recreate.india.main.startupcarvaan.loginsignup.PhoneAuthActivity$3
+ recreate.india.main.startupcarvaan.loginsignup.PhoneAuthActivity$4
+ recreate.india.main.startupcarvaan.loginsignup.PhoneAuthActivity$5
+ recreate.india.main.startupcarvaan.loginsignup.PhoneAuthActivity$6
+ recreate.india.main.startupcarvaan.loginsignup.PhoneAuthActivity$7
+ recreate.india.main.startupcarvaan.loginsignup.PhoneAuthActivity$8
 recreate/india/main/startupcarvaan/mainActivities/SliderAdaptar.java
  recreate.india.main.startupcarvaan.mainActivities.SliderAdaptar
 recreate/india/main/startupcarvaan/mainActivities/IntroSliderActivity.java
@@ -201,9 +226,11 @@ recreate/india/main/startupcarvaan/mainActivities/IntroSliderActivity.java
  recreate.india.main.startupcarvaan.mainActivities.IntroSliderActivity$1
  recreate.india.main.startupcarvaan.mainActivities.IntroSliderActivity$2
  recreate.india.main.startupcarvaan.mainActivities.IntroSliderActivity$3
-recreate/india/main/startupcarvaan/user/Transactions.java
- recreate.india.main.startupcarvaan.user.Transactions
- recreate.india.main.startupcarvaan.user.Transactions$1
+recreate/india/main/startupcarvaan/aboutshare/CommentAdapter.java
+ recreate.india.main.startupcarvaan.aboutshare.CommentAdapter
+ recreate.india.main.startupcarvaan.aboutshare.CommentAdapter$1
+ recreate.india.main.startupcarvaan.aboutshare.CommentAdapter$1$1
+ recreate.india.main.startupcarvaan.aboutshare.CommentAdapter$MyViewHolder
 recreate/india/main/startupcarvaan/fragments/CustomProgressDialogue.java
  recreate.india.main.startupcarvaan.fragments.CustomProgressDialogue
 recreate/india/main/startupcarvaan/databinding/ActivityPhoneAuthBinding.java
@@ -223,8 +250,19 @@ recreate/india/main/startupcarvaan/databinding/ActivityIntroSliderBinding.java
  recreate.india.main.startupcarvaan.databinding.ActivityIntroSliderBinding
 recreate/india/main/startupcarvaan/databinding/FragmentFirstBinding.java
  recreate.india.main.startupcarvaan.databinding.FragmentFirstBinding
-recreate/india/main/startupcarvaan/BuildConfig.java
- recreate.india.main.startupcarvaan.BuildConfig
+recreate/india/main/startupcarvaan/aboutshare/blogging.java
+ recreate.india.main.startupcarvaan.aboutshare.blogging
+ recreate.india.main.startupcarvaan.aboutshare.blogging$1
+ recreate.india.main.startupcarvaan.aboutshare.blogging$2
+ recreate.india.main.startupcarvaan.aboutshare.blogging$2$1
+ recreate.india.main.startupcarvaan.aboutshare.blogging$2$2
+ recreate.india.main.startupcarvaan.aboutshare.blogging$2$3
+ recreate.india.main.startupcarvaan.aboutshare.blogging$2$4
+ recreate.india.main.startupcarvaan.aboutshare.blogging$2$5
+ recreate.india.main.startupcarvaan.aboutshare.blogging$3
+ recreate.india.main.startupcarvaan.aboutshare.blogging$4
+ recreate.india.main.startupcarvaan.aboutshare.blogging$4$1
+ recreate.india.main.startupcarvaan.aboutshare.blogging$PostViewHolder
 recreate/india/main/startupcarvaan/introSlider/SecondFragment.java
  recreate.india.main.startupcarvaan.introSlider.SecondFragment
  recreate.india.main.startupcarvaan.introSlider.SecondFragment$1
@@ -248,8 +286,10 @@ recreate/india/main/startupcarvaan/fragments/practice.java
  recreate.india.main.startupcarvaan.fragments.practice$1$4
  recreate.india.main.startupcarvaan.fragments.practice$1$5
  recreate.india.main.startupcarvaan.fragments.practice$viewholder
-recreate/india/main/startupcarvaan/databinding/BuysuccessBinding.java
- recreate.india.main.startupcarvaan.databinding.BuysuccessBinding
+recreate/india/main/startupcarvaan/Levels.java
+ recreate.india.main.startupcarvaan.Levels
+ recreate.india.main.startupcarvaan.Levels$1
+ recreate.india.main.startupcarvaan.Levels$2
 recreate/india/main/startupcarvaan/databinding/ActivityMoneyTransactionsBinding.java
  recreate.india.main.startupcarvaan.databinding.ActivityMoneyTransactionsBinding
 recreate/india/main/startupcarvaan/databinding/DailogbuyBinding.java
@@ -282,8 +322,11 @@ recreate/india/main/startupcarvaan/databinding/FragmentWithdrawBinding.java
  recreate.india.main.startupcarvaan.databinding.FragmentWithdrawBinding
 recreate/india/main/startupcarvaan/coin_exchange/buy_rci.java
  recreate.india.main.startupcarvaan.coin_exchange.buy_rci
-recreate/india/main/startupcarvaan/user/user.java
- recreate.india.main.startupcarvaan.user.user
+recreate/india/main/startupcarvaan/coin_exchange/AboutRCI.java
+ recreate.india.main.startupcarvaan.coin_exchange.AboutRCI
+ recreate.india.main.startupcarvaan.coin_exchange.AboutRCI$1
+ recreate.india.main.startupcarvaan.coin_exchange.AboutRCI$2
+ recreate.india.main.startupcarvaan.coin_exchange.AboutRCI$3
 recreate/india/main/startupcarvaan/databinding/ActivityBuyRciBinding.java
  recreate.india.main.startupcarvaan.databinding.ActivityBuyRciBinding
 recreate/india/main/startupcarvaan/databinding/FragmentAllsharesBinding.java
@@ -292,86 +335,43 @@ recreate/india/main/startupcarvaan/allmodels/share/sharedetails/Trading.java
  recreate.india.main.startupcarvaan.allmodels.share.sharedetails.Trading
 recreate/india/main/startupcarvaan/aboutshare/modals/name_comment.java
  recreate.india.main.startupcarvaan.aboutshare.modals.name_comment
-recreate/india/main/startupcarvaan/loginsignup/PhoneAuthActivity.java
- recreate.india.main.startupcarvaan.loginsignup.PhoneAuthActivity
- recreate.india.main.startupcarvaan.loginsignup.PhoneAuthActivity$1
- recreate.india.main.startupcarvaan.loginsignup.PhoneAuthActivity$2
- recreate.india.main.startupcarvaan.loginsignup.PhoneAuthActivity$3
- recreate.india.main.startupcarvaan.loginsignup.PhoneAuthActivity$4
- recreate.india.main.startupcarvaan.loginsignup.PhoneAuthActivity$5
- recreate.india.main.startupcarvaan.loginsignup.PhoneAuthActivity$6
- recreate.india.main.startupcarvaan.loginsignup.PhoneAuthActivity$7
- recreate.india.main.startupcarvaan.loginsignup.PhoneAuthActivity$8
+recreate/india/main/startupcarvaan/user/Transactions.java
+ recreate.india.main.startupcarvaan.user.Transactions
+ recreate.india.main.startupcarvaan.user.Transactions$1
 recreate/india/main/startupcarvaan/introSlider/FirstFragment.java
  recreate.india.main.startupcarvaan.introSlider.FirstFragment
  recreate.india.main.startupcarvaan.introSlider.FirstFragment$1
-recreate/india/main/startupcarvaan/user/CreateProfile.java
- recreate.india.main.startupcarvaan.user.CreateProfile
- recreate.india.main.startupcarvaan.user.CreateProfile$1
- recreate.india.main.startupcarvaan.user.CreateProfile$2
- recreate.india.main.startupcarvaan.user.CreateProfile$2$1
- recreate.india.main.startupcarvaan.user.CreateProfile$3
- recreate.india.main.startupcarvaan.user.CreateProfile$4
- recreate.india.main.startupcarvaan.user.CreateProfile$4$1
- recreate.india.main.startupcarvaan.user.CreateProfile$4$1$1
- recreate.india.main.startupcarvaan.user.CreateProfile$4$2
-recreate/india/main/startupcarvaan/Levels.java
- recreate.india.main.startupcarvaan.Levels
- recreate.india.main.startupcarvaan.Levels$1
- recreate.india.main.startupcarvaan.Levels$2
-recreate/india/main/startupcarvaan/loginsignup/loginActivity.java
- recreate.india.main.startupcarvaan.loginsignup.loginActivity
- recreate.india.main.startupcarvaan.loginsignup.loginActivity$1
- recreate.india.main.startupcarvaan.loginsignup.loginActivity$2
- recreate.india.main.startupcarvaan.loginsignup.loginActivity$3
- recreate.india.main.startupcarvaan.loginsignup.loginActivity$4
- recreate.india.main.startupcarvaan.loginsignup.loginActivity$5
- recreate.india.main.startupcarvaan.loginsignup.loginActivity$6
-recreate/india/main/startupcarvaan/Helppage.java
- recreate.india.main.startupcarvaan.Helppage
- recreate.india.main.startupcarvaan.Helppage$1
- recreate.india.main.startupcarvaan.Helppage$2
- recreate.india.main.startupcarvaan.Helppage$3
- recreate.india.main.startupcarvaan.Helppage$4
-recreate/india/main/startupcarvaan/user/ProfileActivity.java
- recreate.india.main.startupcarvaan.user.ProfileActivity
- recreate.india.main.startupcarvaan.user.ProfileActivity$1
- recreate.india.main.startupcarvaan.user.ProfileActivity$2
- recreate.india.main.startupcarvaan.user.ProfileActivity$3
- recreate.india.main.startupcarvaan.user.ProfileActivity$3$1
 recreate/india/main/startupcarvaan/mainActivities/PrivacyPolicy.java
  recreate.india.main.startupcarvaan.mainActivities.PrivacyPolicy
  recreate.india.main.startupcarvaan.mainActivities.PrivacyPolicy$1
  recreate.india.main.startupcarvaan.mainActivities.PrivacyPolicy$2
  recreate.india.main.startupcarvaan.mainActivities.PrivacyPolicy$3
  recreate.india.main.startupcarvaan.mainActivities.PrivacyPolicy$4
-recreate/india/main/startupcarvaan/aboutshare/blogging.java
- recreate.india.main.startupcarvaan.aboutshare.blogging
- recreate.india.main.startupcarvaan.aboutshare.blogging$1
- recreate.india.main.startupcarvaan.aboutshare.blogging$2
- recreate.india.main.startupcarvaan.aboutshare.blogging$2$1
- recreate.india.main.startupcarvaan.aboutshare.blogging$2$2
- recreate.india.main.startupcarvaan.aboutshare.blogging$2$3
- recreate.india.main.startupcarvaan.aboutshare.blogging$2$4
- recreate.india.main.startupcarvaan.aboutshare.blogging$2$5
- recreate.india.main.startupcarvaan.aboutshare.blogging$3
- recreate.india.main.startupcarvaan.aboutshare.blogging$4
- recreate.india.main.startupcarvaan.aboutshare.blogging$4$1
- recreate.india.main.startupcarvaan.aboutshare.blogging$PostViewHolder
-recreate/india/main/startupcarvaan/coin_exchange/AboutRCI.java
- recreate.india.main.startupcarvaan.coin_exchange.AboutRCI
- recreate.india.main.startupcarvaan.coin_exchange.AboutRCI$1
- recreate.india.main.startupcarvaan.coin_exchange.AboutRCI$2
- recreate.india.main.startupcarvaan.coin_exchange.AboutRCI$3
-recreate/india/main/startupcarvaan/mainActivities/MainActivity.java
- recreate.india.main.startupcarvaan.mainActivities.MainActivity
- recreate.india.main.startupcarvaan.mainActivities.MainActivity$1
- recreate.india.main.startupcarvaan.mainActivities.MainActivity$2
-recreate/india/main/startupcarvaan/aboutshare/comment.java
- recreate.india.main.startupcarvaan.aboutshare.comment
- recreate.india.main.startupcarvaan.aboutshare.comment$1
-recreate/india/main/startupcarvaan/aboutshare/CommentAdapter.java
- recreate.india.main.startupcarvaan.aboutshare.CommentAdapter
- recreate.india.main.startupcarvaan.aboutshare.CommentAdapter$1
- recreate.india.main.startupcarvaan.aboutshare.CommentAdapter$1$1
- recreate.india.main.startupcarvaan.aboutshare.CommentAdapter$MyViewHolder
+recreate/india/main/startupcarvaan/compressor/Compressor.java
+ recreate.india.main.startupcarvaan.compressor.Compressor
+ recreate.india.main.startupcarvaan.compressor.Compressor$1
+ recreate.india.main.startupcarvaan.compressor.Compressor$Builder
+recreate/india/main/startupcarvaan/user/transactionFragments/BuyFragment.java
+ recreate.india.main.startupcarvaan.user.transactionFragments.BuyFragment
+recreate/india/main/startupcarvaan/user/user.java
+ recreate.india.main.startupcarvaan.user.user
+recreate/india/main/startupcarvaan/BuildConfig.java
+ recreate.india.main.startupcarvaan.BuildConfig
+recreate/india/main/startupcarvaan/aboutshare/modals/sell_success.java
+ recreate.india.main.startupcarvaan.aboutshare.modals.sell_success
+recreate/india/main/startupcarvaan/Helppage.java
+ recreate.india.main.startupcarvaan.Helppage
+ recreate.india.main.startupcarvaan.Helppage$1
+ recreate.india.main.startupcarvaan.Helppage$2
+ recreate.india.main.startupcarvaan.Helppage$3
+ recreate.india.main.startupcarvaan.Helppage$4
+recreate/india/main/startupcarvaan/allmodels/share/BloggingDetails.java
+ recreate.india.main.startupcarvaan.allmodels.share.BloggingDetails
+recreate/india/main/startupcarvaan/mainActivities/MyRecyclerViewAdapter.java
+ recreate.india.main.startupcarvaan.mainActivities.MyRecyclerViewAdapter
+ recreate.india.main.startupcarvaan.mainActivities.MyRecyclerViewAdapter$ItemClickListener
+ recreate.india.main.startupcarvaan.mainActivities.MyRecyclerViewAdapter$ViewHolder
+recreate/india/main/startupcarvaan/databinding/BuysuccessBinding.java
+ recreate.india.main.startupcarvaan.databinding.BuysuccessBinding
+recreate/india/main/startupcarvaan/databinding/SinglecommentBinding.java
+ recreate.india.main.startupcarvaan.databinding.SinglecommentBinding
