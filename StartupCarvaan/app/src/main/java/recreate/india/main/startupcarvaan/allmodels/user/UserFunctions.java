@@ -189,7 +189,7 @@ public class UserFunctions {
                 ff.collection("reward").document("reward").get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                     @Override
                     public void onSuccess(DocumentSnapshot documentSnapshot) {
-                             reward[0] =documentSnapshot.toObject(Reward.class);
+                        reward[0] =documentSnapshot.toObject(Reward.class);
                         userProfile.setCurrentpoints(userProfile.getCurrentpoints()+(investment*0.1));
                         userProfile.setTotalpoints(userProfile.getTotalpoints()+(investment*0.1));
                         final Integer userlevel = userProfile.getLevel();
@@ -281,5 +281,22 @@ public class UserFunctions {
 
             }
         });
+    }
+    public void checkIfDelete(String shareid){
+        ff.collection("users").document(firebaseUser.getUid()).collection("myshares").document(shareid)
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull @NotNull Task<DocumentSnapshot> task) {
+
+                        if(task.getResult().toObject(ShareHoldings.class).getHoldings().size()==0){
+                            FirebaseFirestore.getInstance().collection("users")
+                                    .document(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                    .collection("myshares")
+                                    .document(shareid)
+                                    .delete();
+                        }
+                    }
+                });
     }
 }
