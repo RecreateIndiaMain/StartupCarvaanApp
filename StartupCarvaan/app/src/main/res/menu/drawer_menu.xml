@@ -28,7 +28,7 @@
             android:title="Coin Section">
             <menu>
 
-                <item android:id="@+id/coin"
+                <item android:id="@+id/coin_drawer"
                     android:title="Redeem coins"></item>
 
                 <item android:id="@+id/buyc"

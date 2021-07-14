@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bought_menu"
+        android:title="Bought"
+        android:icon="@drawable/buy">
+
+    </item>
+    <item
+        android:id="@+id/withdraw_menu"
+        android:icon="@drawable/withdraw"
+        android:title="Withdrawn">
+
+    </item>
+</menu>

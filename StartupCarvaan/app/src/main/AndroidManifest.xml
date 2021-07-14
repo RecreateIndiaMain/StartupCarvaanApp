@@ -11,18 +11,13 @@
         android:theme="@style/Theme.StartupCarvaan">
         <activity android:name=".instamojo"/>
 
-        <activity android:name=".user.Transactions" >
-
-        </activity>
+        <activity android:name=".user.Transactions" ></activity>
+        <activity android:name=".user.MoneyTransactions"></activity>
         <activity android:name=".coin_exchange.AboutRCI" />
         <activity android:name=".Levels" />
         <activity android:name=".mainActivities.RecyclerActivity" />
         <activity android:name=".payments.payout" />
         <activity android:name=".payments.payin" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".Helppage" />
         <activity android:name=".coin_exchange.buy_rci" />
@@ -35,8 +30,9 @@
             android:name=".user.ProfileActivity"
             android:parentActivityName=".mainActivities.MainActivity"
             android:theme="@style/MyTheme" />
-        <activity android:name=".aboutshare.blogging"
-            android:theme="@style/MyTheme"/>
+        <activity
+            android:name=".aboutshare.blogging"
+            android:theme="@style/MyTheme" />
         <activity
             android:name=".mainActivities.MainActivity"
             android:parentActivityName=".mainActivities.MainActivity" />
@@ -47,6 +43,11 @@
         <activity
             android:name=".mainActivities.SplashScreen"
             android:theme="@style/MyTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"

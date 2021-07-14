@@ -1895,6 +1895,7 @@ drawable btn_radio_on_to_off_mtrl_animation
 drawable but
 drawable button
 drawable button_instamojo
+drawable buy
 drawable chat
 drawable circle
 drawable circleyellowfil
@@ -2130,6 +2131,7 @@ drawable unlock
 drawable userimage
 drawable vsm_coin
 drawable wallpaper1
+drawable withdraw
 font proximanovaregular
 id ALT
 id BOTTOM_END
@@ -2328,6 +2330,7 @@ id blogtitle
 id bonus
 id bottom
 id bottom_to_top
+id bought_menu
 id bought_sold_trs
 id bounce
 id browser_actions_header_text
@@ -2346,6 +2349,7 @@ id button_panel
 id button_second
 id buy
 id buy_aboutRci
+id buy_moneyTransaction_recycler_view
 id buy_sell_bottom_nav
 id buyc
 id buyingPrice
@@ -2379,7 +2383,7 @@ id clip_vertical
 id close68
 id closebuy
 id closesellsuccess
-id coin
+id coin_drawer
 id coins
 id collapseActionView
 id collected_investment
@@ -2617,7 +2621,9 @@ id mid_line
 id middle
 id mini
 id mobile_navigation
+id money_btv_transactions
 id money_transactions
+id money_transactions_frame
 id month_grid
 id month_navigation_bar
 id month_navigation_fragment_toggle
@@ -3021,6 +3027,8 @@ id wide
 id winning_rci
 id withText
 id withdrawButton
+id withdraw_menu
+id withdraw_moneyTransaction_recycler_view
 id withinBounds
 id wrap
 id wrap_content
@@ -3102,6 +3110,7 @@ layout activity_intro_slider
 layout activity_levels
 layout activity_login
 layout activity_main
+layout activity_money_transactions
 layout activity_payin
 layout activity_payment_details_instamojo
 layout activity_payment_instamojo
@@ -3148,6 +3157,7 @@ layout dialoginvest
 layout emi_option_view
 layout fragment_allshares
 layout fragment_biding
+layout fragment_buy
 layout fragment_card_form_instamojo
 layout fragment_choose_payment_instamojo
 layout fragment_comfirmed_transactions
@@ -3160,6 +3170,7 @@ layout fragment_pending
 layout fragment_practice
 layout fragment_second
 layout fragment_upi_instamojo
+layout fragment_withdraw
 layout header
 layout item_app
 layout juspay_acs_options_fragment
@@ -3278,6 +3289,7 @@ menu drawer_menu
 menu home
 menu invest
 menu menu_payment_options
+menu money_transaction_menu
 menu transaction_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
