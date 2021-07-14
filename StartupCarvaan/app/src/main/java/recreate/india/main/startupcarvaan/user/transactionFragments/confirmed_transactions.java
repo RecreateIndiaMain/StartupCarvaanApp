@@ -62,7 +62,7 @@ public class confirmed_transactions extends Fragment {
                 holder.amount.setText(String.valueOf(model.getPrice()*model.getQuantity()));
                 holder.deletebtn.setVisibility(View.GONE);
                 holder.bought.setText(model.getType());
-
+                holder.amount.setVisibility(View.VISIBLE);
             }
 
             @NonNull
