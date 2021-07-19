@@ -39,7 +39,7 @@ public class pending_transaction extends Fragment {
     private FirebaseUser user;
     private FirebaseFirestore ff = FirebaseFirestore.getInstance();
     private FirestoreRecyclerAdapter adapter;
-    private UserFunctions userFunctions = new UserFunctions();
+
 
     public pending_transaction() {
 // Required empty public constructor
@@ -64,6 +64,7 @@ public class pending_transaction extends Fragment {
         adapter = new FirestoreRecyclerAdapter<UserShareTransaction, PostViewHolder>(options) {
             @Override
             protected void onBindViewHolder(@NonNull @NotNull PostViewHolder holder, int position, @NonNull @NotNull UserShareTransaction model) {
+                UserFunctions userFunctions = new UserFunctions();
                 if (!model.getStatus()) {
                     holder.startupname.setText(model.getStartupname());
                     holder.quantity.setText(model.getQuantity().toString());
@@ -74,6 +75,7 @@ public class pending_transaction extends Fragment {
                 } else {
                     String id = getSnapshots().getSnapshot(position).getId();
                     userFunctions.delete(id);
+                    userFunctions.giveRewards((model.getPrice() * model.getQuantity()));
                     userFunctions.addCompletedTransaction(model, model.getShareid());
                     if (!model.getType().equals("sell")) {
                         FirebaseFirestore.getInstance().collection("users")
@@ -95,12 +97,11 @@ public class pending_transaction extends Fragment {
                                         }
                                     }
                                 });
-                        userFunctions.giveRewards((model.getPrice() * model.getQuantity()));
                     }
                     else{
                         Toast.makeText(getContext(), "selling in progress", Toast.LENGTH_SHORT).show();
                         userFunctions.addRci(model.getPrice() * model.getQuantity());
-
+                        userFunctions.checkIfDelete(model.getShareid());
                     }
                 }
             }

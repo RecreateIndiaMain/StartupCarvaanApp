@@ -40,7 +40,10 @@ public class comment extends DialogFragment {
     FirebaseFirestore ff=FirebaseFirestore.getInstance();
     private RecyclerView commentList;
     private BloggingDetails blogdetails=new BloggingDetails();
+
+
     public comment(){}
+
 
     @NonNull
     @Override
@@ -72,7 +75,7 @@ public class comment extends DialogFragment {
                 }
 //                        Toast.makeText(getContext(), "size of comment map"+String.valueOf(comment_map[0].size()), Toast.LENGTH_SHORT).show();
 //                        Toast.makeText(getContext(), "size of content is"+String.valueOf(content.size()), Toast.LENGTH_SHORT).show();
-                RecyclerView.Adapter commentAdapter=new CommentAdapter(getContext(),content);
+                CommentAdapter commentAdapter=new CommentAdapter(getContext(),content);
                 commentList.setAdapter(commentAdapter);
                 commentList.setLayoutManager(new LinearLayoutManager(getContext()));
                 DividerItemDecoration dividerItemDecoration=new DividerItemDecoration(getContext(),DividerItemDecoration.VERTICAL);

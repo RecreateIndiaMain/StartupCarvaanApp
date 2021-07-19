@@ -92,7 +92,7 @@ public class UserFunctions {
 
     public String getDay() {
         Date day = Timestamp.now().toDate();
-        String days = day.toString().charAt(0) + "2";
+        String days = String.valueOf(day.toString().charAt(8))+String.valueOf(day.toString().charAt(9));
         return days;
     }
 
@@ -177,7 +177,7 @@ public class UserFunctions {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 userProfile[0] = documentSnapshot.toObject(UserProfile.class);
-                
+
                 final Level[] level = {new Level()};
                 final Reward[] reward = {new Reward()};
                 ff.collection("reward").document("level").get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
@@ -207,26 +207,29 @@ public class UserFunctions {
         });
     }
 
-    public void removeShares(String shareid, String day, Double quantity, Double price) {
-        final ShareHoldings[] shareHoldings = {new ShareHoldings()};
-        ff.collection("users").document(firebaseUser.getUid()).collection("myshares").document(shareid).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-            @Override
-            public void onComplete(@NonNull @NotNull Task<DocumentSnapshot> task) {
-                if (task.getResult().exists()) {
-                    shareHoldings[0] = task.getResult().toObject(ShareHoldings.class);
-                    Map<String, ArrayList<Double>> holdings = shareHoldings[0].getHoldings();
-                    ArrayList<Double> two = holdings.get(day);
-                    two.set(0, two.get(0) - quantity);
-                    if (two.get(0) == 0) {
-                        holdings.remove(day);
-                    } else holdings.put(day, two);
-                    ff.collection("users").document(firebaseUser.getUid()).collection("myshares")
-                            .document(shareid)
-                            .update("holdings", holdings);
-                }
+
+
+
+public void removeShares(String shareid, String day, Double quantity, Double price) {
+    final ShareHoldings[] shareHoldings = {new ShareHoldings()};
+    ff.collection("users").document(firebaseUser.getUid()).collection("myshares").document(shareid).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+        @Override
+        public void onComplete(@NonNull @NotNull Task<DocumentSnapshot> task) {
+            if (task.getResult().exists()) {
+                shareHoldings[0] = task.getResult().toObject(ShareHoldings.class);
+                Map<String, ArrayList<Double>> holdings = shareHoldings[0].getHoldings();
+                ArrayList<Double> two = holdings.get(day);
+                two.set(0, two.get(0) - quantity);
+                if (two.get(0) == 0) {
+                    holdings.remove(day);
+                } else holdings.put(day, two);
+                ff.collection("users").document(firebaseUser.getUid()).collection("myshares")
+                        .document(shareid)
+                        .update("holdings", holdings);
             }
-        });
-    }
+        }
+    });
+}
 
     //
     public void addPendingTransaction(String shareid, Double quantity, Double price, String type) {
@@ -279,5 +282,22 @@ public class UserFunctions {
 
             }
         });
+    }
+    public void checkIfDelete(String shareid){
+        ff.collection("users").document(firebaseUser.getUid()).collection("myshares").document(shareid)
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull @NotNull Task<DocumentSnapshot> task) {
+
+                        if(task.getResult().toObject(ShareHoldings.class).getHoldings().size()==0){
+                            FirebaseFirestore.getInstance().collection("users")
+                                    .document(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                    .collection("myshares")
+                                    .document(shareid)
+                                    .delete();
+                        }
+                    }
+                });
     }
 }

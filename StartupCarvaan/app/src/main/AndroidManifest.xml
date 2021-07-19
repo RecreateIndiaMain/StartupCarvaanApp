@@ -9,15 +9,22 @@
         android:roundIcon="@drawable/startupcarvaanlogo"
         android:supportsRtl="true"
         android:theme="@style/Theme.StartupCarvaan">
+<<<<<<< HEAD
         <activity android:name=".AboutUs"></activity>
         <activity android:name=".user.MoneyTransactions" />
         <activity android:name=".instamojo" />
         <activity android:name=".user.Transactions" />
+=======
+        <activity android:name=".instamojo"/>
+
+        <activity android:name=".user.Transactions" ></activity>
+        <activity android:name=".user.MoneyTransactions"></activity>
+>>>>>>> aeb4557d4b66102cb33f2f396af409123120611d
         <activity android:name=".coin_exchange.AboutRCI" />
         <activity android:name=".Levels" />
         <activity android:name=".mainActivities.RecyclerActivity" />
-        <activity android:name=".payments.payout" />
-        <activity android:name=".payments.payin" />
+        <activity android:name=".payments.payin" >
+        </activity>
         <activity android:name=".Helppage" />
         <activity android:name=".coin_exchange.buy_rci" />
         <activity android:name=".mainActivities.IntroSliderActivity" />

@@ -5,5 +5,6 @@
         android:title="buy"></item>
     <item android:id="@+id/sell"
         android:icon="@drawable/startupcarvaanlogo"
-        android:title="sell"></item>
+
+        android:title="redeem now"></item>
 </menu>

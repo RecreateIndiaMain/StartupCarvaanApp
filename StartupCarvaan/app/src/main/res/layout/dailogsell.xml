@@ -48,7 +48,7 @@
             android:layout_marginRight="5dp"
             android:layout_marginLeft="10dp"
 
-            android:text="Per Share"
+            android:text="Per card"
             android:textColor="#FFE8D63C"
             android:textSize="24sp" />
     </LinearLayout>
@@ -149,7 +149,7 @@ android:layout_marginLeft="20dp"
         android:layout_marginBottom="18dp"
         android:backgroundTint="@color/yellow"
 
-        android:text="Sell"
+        android:text="request redeem"
         android:textAllCaps="false"
         android:textColor="@color/black"
         android:textSize="20sp" />
