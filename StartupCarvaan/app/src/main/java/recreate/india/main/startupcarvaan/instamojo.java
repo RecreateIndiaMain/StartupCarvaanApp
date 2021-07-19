@@ -8,8 +8,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.instamojo.android.Instamojo;
-
 public class instamojo extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {

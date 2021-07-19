@@ -1,15 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
-    <string-array name="connectingWaitMessages">
-        <item>Securely connecting with your Bank</item>
-        <item>Slow network, your patience is appreciated</item>
-        <item>Still waiting for your Bank.</item>
-    </string-array>
-    <string-array name="otpWaitMessages">
-        <item>Your Bank has initiated the OTP</item>
-        <item>Your OTP will appear here shortly</item>
-        <item>Still waiting for your ​Bank</item>
-    </string-array>
     <attr format="reference" name="SpinKitViewStyle"/>
     <attr format="reference" name="animate_relativeTo"/>
     <attr format="reference" name="appBarLayoutStyle"/>
@@ -389,18 +379,14 @@
     <bool name="abc_config_actionMenuItemAllCaps">true</bool>
     <bool name="enable_system_alarm_service_default">true</bool>
     <bool name="enable_system_job_service_default">false</bool>
-    <bool name="godel_debuggable">false</bool>
     <bool name="isTablet">false</bool>
-    <bool name="logsPostingEnabled">true</bool>
     <bool name="mtrl_btn_textappearance_all_caps">true</bool>
-    <bool name="use_local_assets">false</bool>
     <bool name="workmanager_test_configuration">false</bool>
     <color name="abc_decor_view_status_guard">#ff000000</color>
     <color name="abc_decor_view_status_guard_light">#ffffffff</color>
     <color name="abc_search_url_text_normal">#7fa87f</color>
     <color name="abc_search_url_text_pressed">@android:color/black</color>
     <color name="abc_search_url_text_selected">@android:color/black</color>
-    <color name="accent_color">@android:color/black</color>
     <color name="accent_material_dark">@color/material_deep_teal_200</color>
     <color name="accent_material_light">@color/material_deep_teal_500</color>
     <color name="androidx_core_ripple_material_light">#1f000000</color>
@@ -411,12 +397,10 @@
     <color name="ayp_menu_text">#222222</color>
     <color name="ayp_red">#F44336</color>
     <color name="backdark">#3e4148</color>
-    <color name="background">@android:color/white</color>
     <color name="background_floating_material_dark">@color/material_grey_800</color>
     <color name="background_floating_material_light">@android:color/white</color>
     <color name="background_material_dark">@color/material_grey_850</color>
     <color name="background_material_light">@color/material_grey_50</color>
-    <color name="base_dark">#717D8B</color>
     <color name="black">#FF000000</color>
     <color name="black_overlay">#66000000</color>
     <color name="blue">#293859</color>
@@ -432,12 +416,6 @@
     <color name="browser_actions_divider_color">#1E000000</color>
     <color name="browser_actions_text_color">#DE000000</color>
     <color name="browser_actions_title_color">#646464</color>
-    <color name="button_background_disabled_end">#646464</color>
-    <color name="button_background_disabled_start">#7b7b7b</color>
-    <color name="button_background_enabled_end">#1c9ac8</color>
-    <color name="button_background_enabled_start">#1fb6ed</color>
-    <color name="button_background_pressed_end">#f76500</color>
-    <color name="button_background_pressed_start">#FBFDFF</color>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
     <color name="cardview_dark_background">#FF424242</color>
@@ -456,8 +434,6 @@
     <color name="common_google_signin_btn_text_light_pressed">#DE000000</color>
     <color name="darkgrey">#72777d</color>
     <color name="darkwhite">#babbbf</color>
-    <color name="description_bg">#F9EDBE</color>
-    <color name="description_stroke">#F0C36D</color>
     <color name="design_bottom_navigation_shadow_color">#14000000</color>
     <color name="design_dark_default_color_background">#121212</color>
     <color name="design_dark_default_color_error">#CF6679</color>
@@ -497,32 +473,22 @@
     <color name="dim_foreground_disabled_material_light">#80323232</color>
     <color name="dim_foreground_material_dark">#ffbebebe</color>
     <color name="dim_foreground_material_light">#ff323232</color>
-    <color name="edit_text_color">#61000000</color>
     <color name="error_color_material_dark">#ff7043</color>
     <color name="error_color_material_light">#ff5722</color>
     <color name="foreground_material_dark">@android:color/white</color>
     <color name="foreground_material_light">@android:color/black</color>
-    <color name="fragmentSubtitleText">#8A000000</color>
-    <color name="fragmentText">#DE000000</color>
     <color name="goodgrey">#535353</color>
     <color name="green">#FF59B563</color>
     <color name="grey">#E9EAEE</color>
     <color name="greyish">#444851</color>
-    <color name="help_rectangle_stroke">#FBFDFF</color>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
     <color name="hinttext">#FF8E8D8D</color>
-    <color name="holo_blue_dark">#ff0099cc</color>
-    <color name="holo_blue_light">#0f62fa</color>
-    <color name="juspay_blue">#1261d5</color>
-    <color name="juspay_blue_dark">#0B3A7F</color>
-    <color name="juspay_blue_light">#0074FF</color>
     <color name="light_blue_600">#FF039BE5</color>
     <color name="light_blue_900">#FF01579B</color>
     <color name="light_blue_A200">#FF40C4FF</color>
     <color name="light_blue_A400">#FF00B0FF</color>
     <color name="lightgrey">#EEEEEE</color>
-    <color name="manual_otp_edittext_stroke">#e3e3e3</color>
     <color name="material_blue_grey_800">#ff37474f</color>
     <color name="material_blue_grey_900">#ff263238</color>
     <color name="material_blue_grey_950">#ff21272b</color>
@@ -543,18 +509,11 @@
     <color name="mtrl_textinput_filled_box_default_background_color">#0A000000</color>
     <color name="mtrl_textinput_focused_box_stroke_color">#00000000</color>
     <color name="mtrl_textinput_hovered_box_stroke_color">#DE000000</color>
-    <color name="nb_dialog_bg">#282828</color>
-    <color name="netbanking_frag_bg">#282828</color>
-    <color name="netbanking_frag_button">#5E5E5E</color>
     <color name="newblack">#282b30</color>
     <color name="notification_action_color_filter">#ffffffff</color>
     <color name="notification_icon_bg_color">#ff9e9e9e</color>
     <color name="notification_material_background_media_default_color">#ff424242</color>
-    <color name="off_white">#fafafa</color>
     <color name="orange">#F48E6E</color>
-    <color name="otpColor">#1261d5</color>
-    <color name="primary_color">#1B75BB</color>
-    <color name="primary_color_dark">#757575</color>
     <color name="primary_dark_material_dark">@android:color/black</color>
     <color name="primary_dark_material_light">@color/material_grey_600</color>
     <color name="primary_material_dark">@color/material_grey_900</color>
@@ -571,17 +530,10 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="ripple_material_dark">#33ffffff</color>
     <color name="ripple_material_light">#1f000000</color>
-    <color name="row_background_dark_end">#3c3c3c</color>
-    <color name="row_background_dark_start">#4c4c4c</color>
-    <color name="row_background_light_dark_end">#646464</color>
-    <color name="row_background_light_dark_start">#7b7b7b</color>
     <color name="secondary_text_default_material_dark">#b3ffffff</color>
     <color name="secondary_text_default_material_light">#8a000000</color>
     <color name="secondary_text_disabled_material_dark">#36ffffff</color>
     <color name="secondary_text_disabled_material_light">#24000000</color>
-    <color name="separator_color">#CCD1D9</color>
-    <color name="shadow">#46566A65</color>
-    <color name="shadow_color">#b3000000</color>
     <color name="skyblue">#E9EAEE</color>
     <color name="switch_thumb_disabled_material_dark">#ff616161</color>
     <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
@@ -589,19 +541,8 @@
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
-    <color name="text">#333</color>
-    <color name="text_disabled_dark">#4d000000</color>
-    <color name="text_disabled_light">#4dffffff</color>
-    <color name="text_inverted">#FFFFFF</color>
-    <color name="text_primary_dark">#de000000</color>
-    <color name="text_primary_light">#ffffffff</color>
-    <color name="text_secondary_dark">#8a000000</color>
-    <color name="text_secondary_light">#b3ffffff</color>
-    <color name="text_tertiary_dark">#61000000</color>
-    <color name="text_tertiary_light">#4dffffff</color>
     <color name="tooltip_background_dark">#e6616161</color>
     <color name="tooltip_background_light">#e6FFFFFF</color>
-    <color name="uber_button_pressed">#1057C0</color>
     <color name="white">#FFFFFFFF</color>
     <color name="yellow">#F8BA0F</color>
     <dimen name="abc_action_bar_content_inset_material">16dp</dimen>
@@ -682,8 +623,6 @@
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
-    <dimen name="acs_button">86dp</dimen>
-    <dimen name="acs_button_padding">24dp</dimen>
     <dimen name="action_bar_size">16dp</dimen>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
@@ -693,11 +632,8 @@
     <dimen name="ayp_menu_dialog_container_margin">8dp</dimen>
     <dimen name="ayp_menu_item_padding">12dp</dimen>
     <dimen name="ayp_menu_item_text_size">16sp</dimen>
-    <dimen name="bottom_ellipsis_height">4dp</dimen>
-    <dimen name="bottom_text_size">12sp</dimen>
     <dimen name="browser_actions_context_menu_max_width">500dp</dimen>
     <dimen name="browser_actions_context_menu_min_padding">20dp</dimen>
-    <dimen name="button_height_minimum">48dp</dimen>
     <dimen name="cardview_compat_inset_shadow">1dp</dimen>
     <dimen name="cardview_default_elevation">2dp</dimen>
     <dimen name="cardview_default_radius">2dp</dimen>
@@ -710,8 +646,6 @@
     <dimen name="compat_notification_large_icon_max_width">320dp</dimen>
     <dimen name="def_drawer_elevation">10dp</dimen>
     <dimen name="default_dimension">100dp</dimen>
-    <dimen name="default_padding_bottom">8dp</dimen>
-    <dimen name="default_padding_top">8dp</dimen>
     <dimen name="design_appbar_elevation">4dp</dimen>
     <dimen name="design_bottom_navigation_active_item_max_width">168dp</dimen>
     <dimen name="design_bottom_navigation_active_item_min_width">96dp</dimen>
@@ -760,20 +694,10 @@
     <dimen name="design_textinput_caption_translate_y">5dp</dimen>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
-    <dimen name="fab_elevation_lollipop">8dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
-    <dimen name="fab_shadow_radius">9dp</dimen>
-    <dimen name="fab_size_mini">40dp</dimen>
-    <dimen name="fab_size_normal">56dp</dimen>
     <dimen name="fastscroll_default_thickness">8dp</dimen>
     <dimen name="fastscroll_margin">0dp</dimen>
     <dimen name="fastscroll_minimum_range">50dp</dimen>
-    <dimen name="floating_label_text_size">12sp</dimen>
-    <dimen name="fragment_subtitle">14sp</dimen>
-    <dimen name="fragment_title">16sp</dimen>
-    <dimen name="fragment_title_padding">8dp</dimen>
-    <dimen name="fragment_title_padding_10">10dp</dimen>
-    <dimen name="fragment_title_padding_12">12dp</dimen>
     <item format="float" name="highlight_alpha_material_colored" type="dimen">0.26</item>
     <item format="float" name="highlight_alpha_material_dark" type="dimen">0.20</item>
     <item format="float" name="highlight_alpha_material_light" type="dimen">0.12</item>
@@ -781,14 +705,9 @@
     <item format="float" name="hint_alpha_material_light" type="dimen">0.38</item>
     <item format="float" name="hint_pressed_alpha_material_dark" type="dimen">0.70</item>
     <item format="float" name="hint_pressed_alpha_material_light" type="dimen">0.54</item>
-    <dimen name="inner_components_spacing">8dp</dimen>
-    <dimen name="inner_padding_left">0dp</dimen>
-    <dimen name="inner_padding_right">0dp</dimen>
     <dimen name="item_touch_helper_max_drag_scroll_per_frame">20dp</dimen>
     <dimen name="item_touch_helper_swipe_escape_max_velocity">800dp</dimen>
     <dimen name="item_touch_helper_swipe_escape_velocity">120dp</dimen>
-    <dimen name="margin_10">10dp</dimen>
-    <dimen name="margin_16">16dp</dimen>
     <item format="float" name="material_emphasis_disabled" type="dimen">0.38</item>
     <item format="float" name="material_emphasis_high_type" type="dimen">0.87</item>
     <item format="float" name="material_emphasis_medium" type="dimen">0.6</item>
@@ -974,17 +893,11 @@
     <dimen name="notification_subtext_size">13sp</dimen>
     <dimen name="notification_top_pad">10dp</dimen>
     <dimen name="notification_top_pad_large_text">5dp</dimen>
-    <dimen name="osd_collapsed_height">48dp</dimen>
-    <dimen name="osd_header_padding_left">32dp</dimen>
-    <dimen name="osd_header_padding_right">16dp</dimen>
-    <dimen name="osd_scroller_padding_left">40dp</dimen>
     <dimen name="pv_pin_view_cursor_width">2dp</dimen>
     <dimen name="pv_pin_view_item_line_width">2dp</dimen>
     <dimen name="pv_pin_view_item_radius">5dp</dimen>
     <dimen name="pv_pin_view_item_size">48dp</dimen>
     <dimen name="pv_pin_view_item_spacing">5dp</dimen>
-    <dimen name="received_OTP">36sp</dimen>
-    <dimen name="status_bar_height">0dp</dimen>
     <dimen name="subtitle_corner_radius">2dp</dimen>
     <dimen name="subtitle_outline_width">2dp</dimen>
     <dimen name="subtitle_shadow_offset">2dp</dimen>
@@ -998,7 +911,6 @@
     <dimen name="tooltip_vertical_padding">6.5dp</dimen>
     <dimen name="tooltip_y_offset_non_touch">0dp</dimen>
     <dimen name="tooltip_y_offset_touch">16dp</dimen>
-    <dimen name="waiting_bottom_margin">8dp</dimen>
     <item name="ic_menu_camera" type="drawable">@android:drawable/ic_menu_camera</item>
     <item name="ic_menu_gallery" type="drawable">@android:drawable/ic_menu_gallery</item>
     <item name="ic_menu_manage" type="drawable">@android:drawable/ic_menu_manage</item>
@@ -1044,7 +956,6 @@
     <item name="action_bar_spinner" type="id"/>
     <item name="action_menu_divider" type="id"/>
     <item name="action_menu_presenter" type="id"/>
-    <item name="fab_label" type="id"/>
     <item name="fragment_container_view_tag" type="id"/>
     <item name="ghost_view" type="id"/>
     <item name="ghost_view_holder" type="id"/>
@@ -1060,23 +971,12 @@
     <item name="mtrl_motion_snapshot_view" type="id"/>
     <item name="nav_controller_view_tag" type="id"/>
     <item name="nav_host_fragment_container" type="id"/>
-    <item name="osd_amount" type="id"/>
-    <item name="osd_collapsed_background_root" type="id"/>
-    <item name="osd_expand_button" type="id"/>
-    <item name="osd_expanded_root" type="id"/>
-    <item name="osd_expanded_scroller" type="id"/>
-    <item name="osd_journey_onwards_arrow" type="id"/>
-    <item name="osd_journey_onwards_from" type="id"/>
-    <item name="osd_journey_onwards_multi" type="id"/>
-    <item name="osd_journey_onwards_to" type="id"/>
-    <item name="osd_view_root" type="id"/>
     <item name="parent_matrix" type="id"/>
     <item name="progress_circular" type="id"/>
     <item name="progress_horizontal" type="id"/>
     <item name="row_index_key" type="id"/>
     <item name="save_non_transition_alpha" type="id"/>
     <item name="save_overlay_view" type="id"/>
-    <item name="selected_view" type="id"/>
     <item name="snackbar_action" type="id"/>
     <item name="snackbar_text" type="id"/>
     <item name="split_action_bar" type="id"/>
@@ -1110,7 +1010,6 @@
     <integer name="app_bar_elevation_anim_duration">150</integer>
     <integer name="bottom_sheet_slide_duration">150</integer>
     <integer name="cancel_button_image_alpha">127</integer>
-    <integer name="card_max_cvv_length">3</integer>
     <integer name="config_navAnimTime">150</integer>
     <integer name="config_tooltipAnimTime">150</integer>
     <integer name="design_snackbar_text_max_lines">2</integer>
@@ -1133,10 +1032,6 @@
     <item quantity="one"><ns1:g id="count">%d</ns1:g> new notification</item>
     <item quantity="other"><ns1:g id="count">%d</ns1:g> new notifications</item>
   </plurals>
-    <plurals name="tickets">
-        <item quantity="one">1 Ticket</item>
-        <item quantity="other">%d Tickets</item>
-    </plurals>
     <string name="Signin"><u>Sign In</u></string>
     <string name="Signup"><u>Sign Up</u></string>
     <string name="YOUTUBE_API_KEY">AIzaSyCHbEsSjyVMPHNkvBFBnubr29zbW8Jd6n0</string>
@@ -1169,13 +1064,11 @@
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="about_me">About Me</string>
     <string name="about_rci">Rci is the Currency of the app and the future ..vRci is the Currency of the app and the future........Rci is the Currency of the app and the future........Rci is the Currency of the app and the future</string>
-    <string name="acs_filename">v1-acs.jsa</string>
     <string name="action_settings">Settings</string>
     <string name="allshares">allshares</string>
     <string name="app_name">StartupCarvaan</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
     <string name="appid">ca-app-pub-5245859690369666~7981162028</string>
-    <string name="auto_submit_otp">Note: OTP will be auto-submitted</string>
     <string name="ayp_custom_action_left">YouTube player Custom action left</string>
     <string name="ayp_custom_action_right">YouTube player custom action right</string>
     <string name="ayp_full_screen_button">Full screen button</string>
@@ -1185,26 +1078,10 @@
     <string name="ayp_play_button">Play button</string>
     <string name="biding">biding</string>
     <string name="bottom_sheet_behavior" translatable="false">com.google.android.material.bottomsheet.BottomSheetBehavior</string>
-    <string name="brand_trust_logos">Brand trust logos</string>
-    <string name="build_version">1</string>
-    <string name="card_number">Card Number</string>
-    <string name="cd_acs_otp">Click to use otp option</string>
-    <string name="cd_acs_pass">Click to use password option</string>
-    <string name="cd_footer_bank_image">Bank Image</string>
-    <string name="cd_footer_card_brand">Card Brand</string>
-    <string name="cd_footer_jp_secure">Juspay Secure Logo</string>
-    <string name="cd_juspay_logo">Juspay Logo</string>
-    <string name="cd_maximize_fragment">Maximize Fragment</string>
     <string name="character_counter_content_description">Characters entered %1$d of %2$d</string>
     <string name="character_counter_overflowed_content_description">Character limit exceeded %1$d of %2$d</string>
     <string name="character_counter_pattern" translatable="false">%1$d/%2$d</string>
-    <string name="checkout">Checkout</string>
     <string name="chip_text">Chip text</string>
-    <string name="chooseAuthMethod">Select an option for faster payment</string>
-    <string name="choose_an_emi_option">Choose an EMI Option</string>
-    <string name="choose_your_bank">Choose your Bank</string>
-    <string name="choose_your_credit_card">Choose your Credit Card</string>
-    <string name="choose_your_wallet">Choose your Wallet</string>
     <string name="clear_text_end_icon_content_description">Clear text</string>
     <string name="close">close</string>
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Enable</string>
@@ -1225,10 +1102,6 @@
     <string name="common_open_on_phone">Open on phone</string>
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
-    <string name="complete_payment_description">You will receive a notification on your Bank UPI app.\nPlease confirm it to complete the payment.</string>
-    <string name="config_filename">v1-config.jsa</string>
-    <string name="config_gen_filename">v1-config.gen.jsa</string>
-    <string name="connectingToBank">Securely connecting with your Bank</string>
     <string name="contact">Contact Details</string>
     <string name="copy_toast_msg">Link copied to clipboard</string>
     <string name="crop_image_activity_no_permissions">Cancelling, required permissions are not granted</string>
@@ -1239,21 +1112,10 @@
     <string name="crop_image_menu_flip_vertically">Flip vertically</string>
     <string name="crop_image_menu_rotate_left">Rotate counter clockwise</string>
     <string name="crop_image_menu_rotate_right">Rotate</string>
-    <string name="cvv_hint">CVV</string>
-    <string name="date_hint">Expiry MM/YY</string>
     <string name="default_web_client_id" translatable="false">132130200533-4bng9rjr6ki745er8gb0i8hui17fl2b6.apps.googleusercontent.com</string>
-    <string name="doNotClose">Please do not close</string>
-    <string name="dropout_filename">v1-dropout.jsa</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
-    <string name="emi_on_credit_card">EMI on Credit Card</string>
-    <string name="enable_permission_fragment_body">Else, automatic OTP processing won\'t work.</string>
-    <string name="enable_permission_fragment_title">Enable SMS permission (Recommended)</string>
-    <string name="enter_otp_manually"><u>Enter Manually</u></string>
-    <string name="enter_your_virtual_payment_address">Enter your virtual payment address</string>
     <string name="error_icon_content_description">Error</string>
-    <string name="error_message_juspay">Failed to initiate Payment. Please try again!</string>
-    <string name="example_mohit_icici">Example: mohit@icici</string>
     <string name="exposed_dropdown_menu_content_description">Show dropdown menu</string>
     <string name="fab_transformation_scrim_behavior" translatable="false">com.google.android.material.transformation.FabTransformationScrimBehavior</string>
     <string name="fab_transformation_sheet_behavior" translatable="false">com.google.android.material.transformation.FabTransformationSheetBehavior</string>
@@ -1265,8 +1127,6 @@
     <string name="first_fragment_label">First Fragment</string>
     <string name="forget"><u>Forget Password</u></string>
     <string name="gcm_defaultSenderId" translatable="false">132130200533</string>
-    <string name="godel_remotes_version">0.6rc9</string>
-    <string name="godel_version">0.6.25.4</string>
     <string name="google_api_key" translatable="false">AIzaSyDHsonNW1ADToAXyYruiLnLiVD7a5JeAh0</string>
     <string name="google_app_id" translatable="false">1:132130200533:android:3542e25592723681947b5c</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDHsonNW1ADToAXyYruiLnLiVD7a5JeAh0</string>
@@ -1278,12 +1138,6 @@
     <string description="Content description for an icon that appears in the title area of a dialog" name="icon_content_description">Dialog Icon</string>
     <string name="item_view_role_description">Tab</string>
     <string name="job_success">Job Success</string>
-    <string name="juspay_analytics_endpoint">https://logs.juspay.in/godel/analytics</string>
-    <string name="juspay_brand_name">JUSPAY SAFE</string>
-    <string name="juspay_config_location">https://d3e0hckk6jr53z.cloudfront.net/godel/v1-config.zip</string>
-    <string name="juspay_encryption_version">v1</string>
-    <string name="label_approve">APPROVE OTP</string>
-    <string name="loadingPasswordPage">Processing your authentication option</string>
     <string description="Content description for the thumb with the maximum value in a Range slider. [CHAR_LIMIT=NONE]" name="material_slider_range_end">Range end, </string>
     <string description="Content description for the thumb with the minimum value in a Range slider. [CHAR_LIMIT=NONE]" name="material_slider_range_start">Range start, </string>
     <string name="menu_gallery">Gallery</string>
@@ -1334,7 +1188,6 @@
     <string name="nav_header_title">Android Studio</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="net_banking">Net Banking</string>
     <string name="next">Next</string>
     <string description="Text of the notification which directs the user to the landing page of the ad. [CHAR_LIMIT=NONE]" name="offline_notification_text">
       Tap to open ad</string>
@@ -1351,23 +1204,17 @@
     <string description="Title of the dialog presented when an ad is clicked while offline. [CHAR_LIMIT=NONE]" name="offline_opt_in_title">
       Open ad when you\'re back online.</string>
     <string name="open">open</string>
-    <string name="otpReceived">OTP RECEIVED</string>
     <string name="password_toggle_content_description">Show password</string>
     <string name="path_password_eye" translatable="false">M12,4.5C7,4.5 2.73,7.61 1,12c1.73,4.39 6,7.5 11,7.5s9.27,-3.11 11,-7.5c-1.73,-4.39 -6,-7.5 -11,-7.5zM12,17c-2.76,0 -5,-2.24 -5,-5s2.24,-5 5,-5 5,2.24 5,5 -2.24,5 -5,5zM12,9c-1.66,0 -3,1.34 -3,3s1.34,3 3,3 3,-1.34 3,-3 -1.34,-3 -3,-3z</string>
     <string name="path_password_eye_mask_strike_through" translatable="false">M2,4.27 L19.73,22 L22.27,19.46 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_eye_mask_visible" translatable="false">M2,4.27 L2,4.27 L4.54,1.73 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_strike_through" translatable="false">M3.27,4.27 L19.74,20.74</string>
-    <string name="permission_enable_instructions">To enable it, go to Settings > Apps > %s > Permissions.</string>
-    <string name="permission_enable_instructions_default">To enable it, go to Settings > Apps > (App name) > Permissions.</string>
     <string name="pick_image_intent_chooser_title">Select source</string>
     <string name="player_error">Error initializing YouTube player: %s</string>
-    <string name="pleaseWait">Please Wait</string>
-    <string name="please_wait">Please wait…</string>
     <string name="practice">practice</string>
     <string name="previous">Previous</string>
     <string name="project_id" translatable="false">startup-carvaan-bbfe2</string>
     <string name="ratings">Star Ratings</string>
-    <string name="retrieveOTP">Waiting for SMS OTP from Bank</string>
     <string name="rewardid">ca-app-pub-5245859690369666/1031776146</string>
     <string name="s1">Save image</string>
     <string name="s2">"Allow Ad to store image in Picture gallery?"</string>
@@ -1378,41 +1225,21 @@
     <string name="s7">Test Ad</string>
     <string name="samplereview">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium bibendum sapien, ut euismod massa. Duis convallis sem sed turpis elementum auctor.</string>
     <string name="search_menu_title">Search</string>
-    <string name="search_your_bank">Search your Bank</string>
-    <string name="search_your_wallet">Search your Wallet</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="seek_to">Jump To</string>
     <string name="seek_to_hint">Seconds</string>
     <string name="skills">Skills</string>
-    <string name="sms_permission_fragment_body">This is a secure way to enter your OTP faster.</string>
-    <string name="sms_permission_fragment_title">Allow reading OTP (Recommended)</string>
-    <string name="status_bar">Status bar replacement</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="testRewardid">ca-app-pub-3940256099942544/5224354917</string>
     <string name="text_pay_using">Pay Using</string>
     <string name="text_payment_cancel">Cancel</string>
-    <string formatted="false" name="three_pipe">%s | %s | %s</string>
     <string name="title_activity_fullscreen">FullscreenActivity</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_dashboard">Dashboard</string>
-    <string name="title_fragment_choose_payment_option">Choose a Payment Option</string>
-    <string name="title_fragment_credit_card_form">Credit Card</string>
-    <string name="title_fragment_debit_card_form">Debit Card</string>
-    <string name="title_fragment_emi_form">EMI</string>
-    <string name="title_fragment_upi">Enter VPA</string>
     <string name="title_home">Home</string>
     <string name="title_notifications">Notifications</string>
-    <string name="uber_filename">v1-uber.jsa</string>
-    <string name="uber_html_filename">v1-uber_html.jsa</string>
     <string name="ui_ux_designer">UI/UX Designer</string>
-    <string name="upi">UPI</string>
-    <string name="verify_payment">Verify Payment</string>
-    <string name="verify_payment_image_description">Verify Payment Image</string>
-    <string name="wait_bank_otp">Waiting for Bank OTP SMS</string>
-    <string name="waiting">Waiting…</string>
-    <string name="waitingMessage">We Are Preparing Options For You</string>
-    <string name="wallets">Wallets</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="AndroidThemeColorAccentYellow" ns2:ignore="NewApi">
@@ -3295,14 +3122,6 @@
         <item name="android:windowIsFloating">false</item>
         <item name="bottomSheetStyle">@style/BottomSheet</item>
     </style>
-    <style name="BaseTheme" parent="Theme.AppCompat.NoActionBar">
-        <item name="colorPrimary">@color/primary_color</item>
-        <item name="colorAccent">@color/accent_color</item>
-        <item name="autoCompleteTextViewStyle">@style/CustomAutoCompleteStyle</item>
-    </style>
-    <style name="BlackDialogRoundedCorners" parent="android:Theme.Dialog">
-        <item name="android:windowBackground">@drawable/juspay_nb_waiting_black_bg</item>
-    </style>
     <style name="BottomSheet" parent="@style/Widget.Design.BottomSheet.Modal">
         <item name="android:background">@drawable/bottomsheet_back</item>
         <item name="android:layout_margin">8dp</item>
@@ -3316,35 +3135,7 @@
     <style name="CardView.Light">
         <item name="cardBackgroundColor">@color/cardview_light_background</item>
     </style>
-    <style name="CustomAutoCompleteStyle" parent="Widget.AppCompat.Light.AutoCompleteTextView">
-        <item name="android:textCursorDrawable">@drawable/cursor_instamojo</item>
-    </style>
     <style name="EmptyTheme"/>
-    <style name="FormHelperText">
-        <item name="android:paddingLeft">20dp</item>
-        <item name="android:textColor">#ccc</item>
-    </style>
-    <style name="FullScreenDialog" parent="android:Theme.Dialog">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">match_parent</item>
-        <item name="android:windowBackground">@drawable/juspay_black_translucent</item>
-        <item name="android:textColor">@color/off_white</item>
-        <item name="android:windowFullscreen">true</item>
-        <item name="android:windowFrame">@null</item>
-        <item name="android:windowNoTitle">true</item>
-    </style>
-    <style name="GenericDialogRoundedCorners" parent="android:Theme.Dialog">
-        <item name="android:windowBackground">@drawable/juspay_waiting_dialog_generic_bg</item>
-    </style>
-    <style name="HelpDialogAnimation">
-        <item name="android:windowEnterAnimation">@anim/juspay_help_screen_enter</item>
-        <item name="android:windowExitAnimation">@anim/juspay_help_screen_exit</item>
-    </style>
-    <style name="LoginFormContainer">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:padding">16dp</item>
-    </style>
     <style name="MaterialAlertDialog.MaterialComponents" parent="AlertDialog.AppCompat">
     <item name="android:layout">@layout/mtrl_alert_dialog</item>
     <item name="listItemLayout">@layout/mtrl_alert_select_dialog_item</item>
@@ -3396,26 +3187,6 @@
     <style name="MyTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowFullscreen">true</item>
-    </style>
-    <style name="PaymentFormInputControl">
-        <item name="android:paddingBottom">10dp</item>
-        <item name="android:layout_marginBottom">20dp</item>
-        <item name="android:textColor">#666</item>
-    </style>
-    <style name="PaymentFormTitle">
-        <item name="android:layout_marginLeft">10dp</item>
-        <item name="android:textColor">#333</item>
-        <item name="android:layout_marginBottom">5dp</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:textSize">15dp</item>
-    </style>
-    <style name="PaymentOptionButton">
-        <item name="android:clickable">false</item>
-        <item name="android:textSize">18sp</item>
-        <item name="android:textColor">@android:color/black</item>
-        <item name="android:paddingTop">@dimen/margin_10</item>
-        <item name="android:paddingBottom">@dimen/margin_10</item>
-        <item name="android:padding">@dimen/margin_16</item>
     </style>
     <style name="PinWidget"/>
     <style name="PinWidget.PinView" parent="Widget.AppCompat.EditText">
@@ -3641,14 +3412,6 @@
     <style name="RtlUnderlay.Widget.AppCompat.ActionButton.Overflow" parent="Base.Widget.AppCompat.ActionButton">
         <item name="android:paddingLeft">@dimen/abc_action_bar_overflow_padding_start_material</item>
         <item name="android:paddingRight">@dimen/abc_action_bar_overflow_padding_end_material</item>
-    </style>
-    <style name="SdkTheme" parent="@style/BaseTheme"/>
-    <style name="SelectableItemBackground">
-        <item name="android:theme">@style/SelectableItemTheme</item>
-        <item name="android:background">?attr/selectableItemBackground</item>
-    </style>
-    <style name="SelectableItemTheme">
-        <item name="colorControlHighlight">@color/separator_color</item>
     </style>
     <style name="ShapeAppearance.MaterialComponents" parent="">
     <item name="cornerFamily">rounded</item>
@@ -4477,20 +4240,6 @@
     <style name="ThemeOverlayColorAccentRed" ns2:ignore="NewApi">
     <item name="android:colorAccent">#FFFF0000</item>
   </style>
-    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
-        <item name="android:textColor">@android:color/white</item>
-    </style>
-    <style name="VerticalFormControl">
-        <item name="android:layout_marginTop">4dp</item>
-    </style>
-    <style name="VerticalFormLabel">
-        <item name="android:paddingTop">10dp</item>
-        <item name="android:textColor">#666</item>
-    </style>
-    <style name="WhiteCheckBox" parent="Theme.AppCompat.Light">
-        <item name="colorControlNormal">@android:color/white</item>
-        <item name="colorControlActivated">@android:color/white</item>
-    </style>
     <style name="Widget.AppCompat.ActionBar" parent="Base.Widget.AppCompat.ActionBar">
     </style>
     <style name="Widget.AppCompat.ActionBar.Solid" parent="Base.Widget.AppCompat.ActionBar.Solid">
@@ -5304,11 +5053,6 @@
     <style name="Widget.Theme.StartupCarvaan.ButtonBar.Fullscreen" parent="">
         <item name="android:background">@color/black_overlay</item>
         <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
-    </style>
-    <style name="osd_view_root">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">match_parent</item>
-        <item name="android:background">@drawable/juspay_osd_view_root_bg</item>
     </style>
     <declare-styleable name="ActionBar">
         <!-- The type of navigation to use. -->
@@ -6785,17 +6529,52 @@
     <!-- Whether the extended FAB should automatically shrink when there is no space for it. -->
     <attr format="boolean" name="behavior_autoShrink"/>
   </declare-styleable>
-    <declare-styleable name="FloatingActionButton"><attr format="color" name="fab_colorPressed"/><attr format="color" name="fab_colorDisabled"/><attr format="color" name="fab_colorNormal"/><attr format="reference" name="fab_icon"/><attr format="enum" name="fab_size">
-            <enum name="normal" value="0"/>
-            <enum name="mini" value="1"/>
-        </attr><attr format="string" name="fab_title"/><attr format="boolean" name="fab_stroke_visible"/><attr name="android:enabled"/><attr name="backgroundTint"/><attr name="backgroundTintMode"/><attr name="rippleColor"/><attr name="fabSize">
-      
+    <declare-styleable name="FloatingActionButton">
+    <!-- Whether the FloatingActionButton is enabled -->
+    <attr name="android:enabled"/>
+    <!-- Background for the FloatingActionButton -->
+    <attr name="backgroundTint"/>
+    <attr name="backgroundTintMode"/>
+
+    <!-- Ripple color for the FAB. -->
+    <attr name="rippleColor"/>
+
+    <!-- Size for the FAB. If fabCustomSize is set, this will be ignored. -->
+    <attr name="fabSize">
+      <!-- A size which will change based on the window size. -->
       <enum name="auto" value="-1"/>
-      
+      <!-- The normal sized button. -->
       <enum name="normal" value="0"/>
-      
+      <!-- The mini sized button. -->
       <enum name="mini" value="1"/>
-    </attr><attr format="dimension" name="fabCustomSize"/><attr name="elevation"/><attr name="ensureMinTouchTargetSize"/><attr format="dimension" name="hoveredFocusedTranslationZ"/><attr format="dimension" name="pressedTranslationZ"/><attr format="dimension" name="borderWidth"/><attr format="boolean" name="useCompatPadding"/><attr format="dimension" name="maxImageSize"/><attr name="showMotionSpec"/><attr name="hideMotionSpec"/><attr name="shapeAppearance"/><attr name="shapeAppearanceOverlay"/></declare-styleable>
+    </attr>
+    <!-- Custom size for the FAB. If this is set, fabSize will be ignored. -->
+    <attr format="dimension" name="fabCustomSize"/>
+    <!-- Elevation value for the FAB -->
+    <attr name="elevation"/>
+    <!-- Whether to extend the bounds of the FloatingActionButton to meet
+        @dimen/mtrl_fab_min_touch_target. -->
+    <attr name="ensureMinTouchTargetSize"/>
+    <!-- TranslationZ value for the FAB when hovered, focused, or hovered and focused. -->
+    <attr format="dimension" name="hoveredFocusedTranslationZ"/>
+    <!-- TranslationZ value for the FAB when pressed-->
+    <attr format="dimension" name="pressedTranslationZ"/>
+    <!-- The width of the border around the FAB. -->
+    <attr format="dimension" name="borderWidth"/>
+    <!-- Enable compat padding. -->
+    <attr format="boolean" name="useCompatPadding"/>
+    <!-- Maximum icon image size. -->
+    <attr format="dimension" name="maxImageSize"/>
+    <!-- Motion spec for show animation. This should be a MotionSpec resource. -->
+    <attr name="showMotionSpec"/>
+    <!-- Motion spec for hide animation. This should be a MotionSpec resource. -->
+    <attr name="hideMotionSpec"/>
+    <!-- Shape appearance style reference for FloatingActionButton. Attribute declaration
+         is in the shape package. -->
+    <attr name="shapeAppearance"/>
+    <!-- Shape appearance overlay style reference for FloatingActionButton. -->
+    <attr name="shapeAppearanceOverlay"/>
+  </declare-styleable>
     <declare-styleable name="FloatingActionButton_Behavior_Layout">
     <!-- Whether the FAB should automatically hide when there is no space for it. -->
     <attr format="boolean" name="behavior_autoHide"/>
@@ -6965,8 +6744,6 @@
     <attr format="boolean" name="paddingLeftSystemWindowInsets"/>
     <attr format="boolean" name="paddingRightSystemWindowInsets"/>
   </declare-styleable>
-    <declare-styleable name="JuspayThreeLineTextView"><attr format="string" name="three_line_title"/><attr format="string" name="three_line_subtitle"/><attr format="string" name="three_line_caption"/></declare-styleable>
-    <declare-styleable name="JuspayTwoLineTextView"><attr format="string" name="two_line_title"/><attr format="string" name="two_line_subtitle"/></declare-styleable>
     <declare-styleable name="KeyAttribute"><attr name="framePosition"/><attr name="motionTarget"/><attr name="transitionEasing"/><attr name="curveFit"/><attr name="motionProgress"/><attr name="android:alpha"/><attr name="android:elevation"/><attr name="android:rotation"/><attr name="android:rotationX"/><attr name="android:rotationY"/><attr name="android:transformPivotX"/><attr name="android:transformPivotY"/><attr name="transitionPathRotate"/><attr name="android:scaleX"/><attr name="android:scaleY"/><attr name="android:translationX"/><attr name="android:translationY"/><attr name="android:translationZ"/></declare-styleable>
     <declare-styleable name="KeyCycle"><attr name="motionTarget"/><attr name="curveFit"/><attr name="framePosition"/><attr name="transitionEasing"/><attr name="motionProgress"/><attr name="waveShape"/><attr name="wavePeriod"/><attr name="waveOffset"/><attr name="waveVariesBy"/><attr name="transitionPathRotate"/><attr name="android:alpha"/><attr name="android:elevation"/><attr name="android:rotation"/><attr name="android:rotationX"/><attr name="android:rotationY"/><attr name="android:scaleX"/><attr name="android:scaleY"/><attr name="android:translationX"/><attr name="android:translationY"/><attr name="android:translationZ"/></declare-styleable>
     <declare-styleable name="KeyFrame"/>
@@ -7190,7 +6967,6 @@
     <!-- Tint for the checkbox. -->
     <attr name="buttonTint"/>
   </declare-styleable>
-    <declare-styleable name="MaterialEditText"><attr format="color" name="met_baseColor"/><attr format="color" name="met_primaryColor"/><attr name="met_floatingLabel"><enum name="none" value="0"/><enum name="normal" value="1"/><enum name="highlight" value="2"/></attr><attr format="color" name="met_errorColor"/><attr format="integer" name="met_minCharacters"/><attr format="integer" name="met_maxCharacters"/><attr format="boolean" name="met_singleLineEllipsis"/><attr format="integer" name="met_minBottomTextLines"/><attr format="string" name="met_helperText"/><attr format="color" name="met_helperTextColor"/><attr format="string" name="met_accentTypeface"/><attr format="string" name="met_typeface"/><attr format="string" name="met_floatingLabelText"/><attr format="dimension" name="met_floatingLabelPadding"/><attr format="boolean" name="met_hideUnderline"/><attr format="color" name="met_underlineColor"/><attr format="boolean" name="met_autoValidate"/><attr format="reference" name="met_iconLeft"/><attr format="reference" name="met_iconRight"/><attr format="dimension" name="met_iconPadding"/><attr format="boolean" name="met_clearButton"/><attr format="dimension" name="met_floatingLabelTextSize"/><attr format="color" name="met_floatingLabelTextColor"/><attr format="dimension" name="met_bottomTextSize"/><attr format="boolean" name="met_floatingLabelAlwaysShown"/><attr format="boolean" name="met_helperTextAlwaysShown"/><attr format="boolean" name="met_floatingLabelAnimating"/><attr format="color" name="met_textColor"/><attr format="color" name="met_textColorHint"/><attr format="boolean" name="met_validateOnFocusLost"/><attr format="boolean" name="met_checkCharactersCountAtBeginning"/></declare-styleable>
     <declare-styleable name="MaterialRadioButton">
     <!-- When set to true, MaterialRadioButton will tint itself according to
       Material Theme colors. When set to false, Material Theme colors will
@@ -7754,14 +7530,6 @@
     <!-- The height of the track. -->
     <attr format="dimension" name="trackHeight"/>
   </declare-styleable>
-    <declare-styleable name="SlidingLayer"><attr format="boolean" name="jpShadowDrawable"/><attr format="dimension" name="jpShadowWidth"/><attr format="boolean" name="closeOnTapEnabled"/><attr format="boolean" name="openOnTapEnabled"/><attr format="dimension" name="offsetWidth"/><attr format="enum" name="stickTo">
-            <enum name="auto" value="0"/>
-            <enum name="right" value="-1"/>
-            <enum name="left" value="-2"/>
-            <enum name="middle" value="-3"/>
-            <enum name="top" value="-4"/>
-            <enum name="bottom" value="-5"/>
-        </attr></declare-styleable>
     <declare-styleable name="Snackbar">
     <!-- Style to use for Snackbars in this theme. -->
     <attr format="reference" name="snackbarStyle"/>

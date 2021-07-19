@@ -16,7 +16,6 @@
         <activity android:name=".coin_exchange.AboutRCI" />
         <activity android:name=".Levels" />
         <activity android:name=".mainActivities.RecyclerActivity" />
-        <activity android:name=".payments.payout" />
         <activity android:name=".payments.payin" >
         </activity>
         <activity android:name=".Helppage" />

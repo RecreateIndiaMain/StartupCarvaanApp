@@ -1,24 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="recreate.india.main.startupcarvaan"
-    android:versionCode="2"
-    android:versionName="1.10" >
+    android:versionCode="3"
+    android:versionName="1.11" >
 
     <uses-sdk
         android:minSdkVersion="21"
         android:targetSdkVersion="30" />
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.READ_SMS" />
-    <uses-permission android:name="android.permission.RECEIVE_SMS" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- Telephony is optional (Auto-read SMS) -->
-    <uses-feature
-        android:name="android.hardware.telephony"
-        android:required="false" />
-
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- Android package visibility setting -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Android package visibility setting -->
     <queries>
 
         <!-- For browser content -->
@@ -56,7 +47,6 @@
         <activity android:name="recreate.india.main.startupcarvaan.coin_exchange.AboutRCI" />
         <activity android:name="recreate.india.main.startupcarvaan.Levels" />
         <activity android:name="recreate.india.main.startupcarvaan.mainActivities.RecyclerActivity" />
-        <activity android:name="recreate.india.main.startupcarvaan.payments.payout" />
         <activity android:name="recreate.india.main.startupcarvaan.payments.payin" >
         </activity>
         <activity android:name="recreate.india.main.startupcarvaan.Helppage" />
@@ -103,29 +93,6 @@
         <activity
             android:name="com.shreyaspatil.EasyUpiPayment.ui.PaymentUiActivity"
             android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
-        <activity
-            android:name="com.instamojo.android.activities.PaymentDetailsActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/SdkTheme" >
-            <meta-data
-                android:name="android.app.searchable"
-                android:resource="@xml/searchable" />
-
-            <intent-filter>
-                <action android:name="android.intent.action.SEARCH" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.instamojo.android.activities.PaymentActivity"
-            android:hardwareAccelerated="true"
-            android:label="Payment"
-            android:screenOrientation="portrait"
-            android:theme="@style/SdkTheme"
-            android:windowSoftInputMode="adjustResize" />
-
-        <uses-library
-            android:name="org.apache.http.legacy"
-            android:required="false" />
 
         <receiver android:name="com.razorpay.RzpTokenReceiver" >
             <intent-filter>

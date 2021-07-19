@@ -356,6 +356,7 @@
             android:visibility="gone">
 
             <LinearLayout
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
@@ -482,7 +483,7 @@
                 android:layout_marginBottom="18dp"
                 android:backgroundTint="?attr/barcolour"
                 android:fontFamily="@font/proximanovaregular"
-                android:text="Invest In me"
+                android:text="Buy future products"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="16sp"

@@ -92,7 +92,7 @@ public class UserFunctions {
 
     public String getDay() {
         Date day = Timestamp.now().toDate();
-        String days = day.toString().charAt(0) + "2";
+        String days = String.valueOf(day.toString().charAt(8))+String.valueOf(day.toString().charAt(9));
         return days;
     }
 
