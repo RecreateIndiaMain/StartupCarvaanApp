@@ -32,7 +32,8 @@ public class PrivacyPolicy extends AppCompatActivity {
     private LinearLayout rules, newly, privacy, terms, refund;
     private LinearLayout rulest;
     private ImageView im11, im22, im33, im44;
-    private WebView privacypolicy, termand, refundpolicy;
+    private WebView privacypolicy, termand;
+    private LinearLayout refundpolicy;
 
 
     private TextView privacybutton, termsbutton, paymentbutton;
@@ -54,16 +55,15 @@ public class PrivacyPolicy extends AppCompatActivity {
         refund = findViewById(R.id.refund);
         privacypolicy = findViewById(R.id.privacypolicy);
         termand = findViewById(R.id.termsandcondition);
-        refundpolicy = findViewById(R.id.refud_policy);
+        refundpolicy = findViewById(R.id.refundtext);
         rulest = findViewById(R.id.ruletext);
         privacypolicy.getSettings().setJavaScriptEnabled(true);
-        privacypolicy.loadUrl("https://www.privacypolicygenerator.info/live.php?token=Qk5tYKKzXzNauXqnmPWOD7pXpxOG8xQL ");
+        privacypolicy.loadUrl("https://www.privacypolicygenerator.info/live.php?token=Qk5tYKKzXzNauXqnmPWOD7pXpxOG8xQL");
 
         termand.getSettings().setJavaScriptEnabled(true);
-        termand.loadUrl("https://www.termsandconditionsgenerator.com/live.php?token=0WwI2zNxvD2pJTzuKS5Jqu4k9xKVzVoH ");
+            termand.loadUrl("https://www.termsandconditionsgenerator.com/live.php?token=0WwI2zNxvD2pJTzuKS5Jqu4k9xKVzVoH");
 
-        refundpolicy.getSettings().setJavaScriptEnabled(true);
-        refundpolicy.loadUrl("https://help.getoccasion.com/article/506-sample-cancellation-and-refund-policies");
+
 
 
         rules.setOnClickListener(new View.OnClickListener() {

@@ -205,7 +205,7 @@ android:background="@drawable/my"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
                 android:fontFamily="@font/proximanovaregular"
-                android:text="trade"
+                android:text="buy/redeem cards"
                 android:backgroundTint="#FF59B563"
                 android:textColor="@color/white"/>
         </LinearLayout>

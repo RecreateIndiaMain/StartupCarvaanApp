@@ -140,30 +140,30 @@ public class myshares extends Fragment {
                         });
                     }
                 });
-                holder.spin1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                    @Override
-                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                        if (parent.getItemAtPosition(position).equals("Price of a share : No. of shares")) {
-                        } else {
-                            item = parent.getItemAtPosition(position).toString();
-                            int i;
-                            day_ = item.substring(5, 7);
-                            i = 18;
-                            int j = i + 1;
-                            while (item.charAt(j++) != '.') ;
-                            share_ = item.substring(i, j - 1);
-                            i = j + 9;
-                            price_ = item.substring(i);
-//                            price.setText("price: "+price_);
-//                            share.setText(share_);
-                            Toast.makeText(getContext(), day_, Toast.LENGTH_LONG).show();
-                        }
-                    }
-
-                    @Override
-                    public void onNothingSelected(AdapterView<?> parent) {
-                    }
-                });
+//                holder.spin1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//                    @Override
+//                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+//                        if (parent.getItemAtPosition(position).equals("Price of a share : No. of shares")) {
+//                        } else {
+//                            item = parent.getItemAtPosition(position).toString();
+//                            int i;
+//                            day_ = item.substring(5, 7);
+//                            i = 18;
+//                            int j = i + 1;
+//                            while (item.charAt(j++) != '.') ;
+//                            share_ = item.substring(i, j - 1);
+//                            i = j + 9;
+//                            price_ = item.substring(i);
+////                            price.setText("price: "+price_);
+////                            share.setText(share_);
+//                            Toast.makeText(getContext(), day_, Toast.LENGTH_LONG).show();
+//                        }
+//                    }
+//
+//                    @Override
+//                    public void onNothingSelected(AdapterView<?> parent) {
+//                    }
+//                });
                 // loading values
                 holder.trade.setOnClickListener(new View.OnClickListener() {
                     @Override

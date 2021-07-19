@@ -4,6 +4,10 @@
         "source": "C:\\Users\\A\\ANUBHAV_GOYAL_PROJECTS\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\layout\\activity_login.xml"
     },
     {
+        "merged": "C:\\Users\\A\\ANUBHAV_GOYAL_PROJECTS\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\stripped.dir\\layout\\fragment_withdraw.xml",
+        "source": "C:\\Users\\A\\ANUBHAV_GOYAL_PROJECTS\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\layout\\fragment_withdraw.xml"
+    },
+    {
         "merged": "C:\\Users\\A\\ANUBHAV_GOYAL_PROJECTS\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\stripped.dir\\layout\\comment_dialogue.xml",
         "source": "C:\\Users\\A\\ANUBHAV_GOYAL_PROJECTS\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\layout\\comment_dialogue.xml"
     },
@@ -16,12 +20,12 @@
         "source": "C:\\Users\\A\\ANUBHAV_GOYAL_PROJECTS\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\layout\\activity_rci_exchange.xml"
     },
     {
-        "merged": "C:\\Users\\A\\ANUBHAV_GOYAL_PROJECTS\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\stripped.dir\\layout\\slide_layout.xml",
-        "source": "C:\\Users\\A\\ANUBHAV_GOYAL_PROJECTS\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\layout\\slide_layout.xml"
-    },
-    {
         "merged": "C:\\Users\\A\\ANUBHAV_GOYAL_PROJECTS\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\stripped.dir\\layout\\buysuccess.xml",
         "source": "C:\\Users\\A\\ANUBHAV_GOYAL_PROJECTS\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\layout\\buysuccess.xml"
+    },
+    {
+        "merged": "C:\\Users\\A\\ANUBHAV_GOYAL_PROJECTS\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\stripped.dir\\layout\\slide_layout.xml",
+        "source": "C:\\Users\\A\\ANUBHAV_GOYAL_PROJECTS\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\layout\\slide_layout.xml"
     },
     {
         "merged": "C:\\Users\\A\\ANUBHAV_GOYAL_PROJECTS\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\stripped.dir\\layout\\activity_phone_auth.xml",
@@ -30,6 +34,10 @@
     {
         "merged": "C:\\Users\\A\\ANUBHAV_GOYAL_PROJECTS\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\stripped.dir\\layout\\activity_blogging.xml",
         "source": "C:\\Users\\A\\ANUBHAV_GOYAL_PROJECTS\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\layout\\activity_blogging.xml"
+    },
+    {
+        "merged": "C:\\Users\\A\\ANUBHAV_GOYAL_PROJECTS\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\stripped.dir\\layout\\activity_money_transactions.xml",
+        "source": "C:\\Users\\A\\ANUBHAV_GOYAL_PROJECTS\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\layout\\activity_money_transactions.xml"
     },
     {
         "merged": "C:\\Users\\A\\ANUBHAV_GOYAL_PROJECTS\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\stripped.dir\\layout\\sellsuccess.xml",
@@ -96,6 +104,10 @@
         "source": "C:\\Users\\A\\ANUBHAV_GOYAL_PROJECTS\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\layout\\fragment_allshares.xml"
     },
     {
+        "merged": "C:\\Users\\A\\ANUBHAV_GOYAL_PROJECTS\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\stripped.dir\\layout\\fragment_buy.xml",
+        "source": "C:\\Users\\A\\ANUBHAV_GOYAL_PROJECTS\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\layout\\fragment_buy.xml"
+    },
+    {
         "merged": "C:\\Users\\A\\ANUBHAV_GOYAL_PROJECTS\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\stripped.dir\\layout\\activity_helppage.xml",
         "source": "C:\\Users\\A\\ANUBHAV_GOYAL_PROJECTS\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\layout\\activity_helppage.xml"
     },
@@ -110,6 +122,10 @@
     {
         "merged": "C:\\Users\\A\\ANUBHAV_GOYAL_PROJECTS\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\stripped.dir\\layout\\activity_privacy_policy.xml",
         "source": "C:\\Users\\A\\ANUBHAV_GOYAL_PROJECTS\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\layout\\activity_privacy_policy.xml"
+    },
+    {
+        "merged": "C:\\Users\\A\\ANUBHAV_GOYAL_PROJECTS\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\stripped.dir\\layout\\single_money_trans.xml",
+        "source": "C:\\Users\\A\\ANUBHAV_GOYAL_PROJECTS\\StartupCarvaanApp\\StartupCarvaan\\app\\src\\main\\res\\layout\\single_money_trans.xml"
     },
     {
         "merged": "C:\\Users\\A\\ANUBHAV_GOYAL_PROJECTS\\StartupCarvaanApp\\StartupCarvaan\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\stripped.dir\\layout\\activity_splash_screen.xml",

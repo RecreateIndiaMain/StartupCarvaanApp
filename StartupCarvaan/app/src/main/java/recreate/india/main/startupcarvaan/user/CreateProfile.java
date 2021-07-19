@@ -103,19 +103,21 @@ public class CreateProfile extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                FirebaseFirestore.getInstance().collection("usernames")
-                        .document(s.toString())
-                        .get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull @NotNull Task<DocumentSnapshot> task) {
-                        if (task.getResult().exists()) {
-                            Toast.makeText(CreateProfile.this, "this user name is already taken please find another one for you", Toast.LENGTH_SHORT).show();
-                        } else {
-                            Toast.makeText(CreateProfile.this, "username available", Toast.LENGTH_SHORT).show();
-                            final_username = s.toString();
+                if(!s.toString().equals("")){
+                    FirebaseFirestore.getInstance().collection("usernames")
+                            .document(s.toString())
+                            .get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                        @Override
+                        public void onComplete(@NonNull @NotNull Task<DocumentSnapshot> task) {
+                            if (task.getResult().exists()) {
+                                Toast.makeText(CreateProfile.this, "this user name is already taken please find another one for you", Toast.LENGTH_SHORT).show();
+                            } else {
+                                final_username = s.toString();
+                            }
                         }
-                    }
-                });
+                    });
+                }
+
             }
         });
         //image upload work
