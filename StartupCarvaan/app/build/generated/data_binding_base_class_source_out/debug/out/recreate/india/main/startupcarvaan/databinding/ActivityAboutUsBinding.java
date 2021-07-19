@@ -21,10 +21,16 @@ public final class ActivityAboutUsBinding implements ViewBinding {
   private final ScrollView rootView;
 
   @NonNull
-  public final ImageView contactImg;
+  public final ImageView contactImg1;
 
   @NonNull
-  public final TextView contactText;
+  public final ImageView contactImg2;
+
+  @NonNull
+  public final TextView contactText1;
+
+  @NonNull
+  public final TextView contactText2;
 
   @NonNull
   public final LinearLayout newly;
@@ -32,13 +38,21 @@ public final class ActivityAboutUsBinding implements ViewBinding {
   @NonNull
   public final LinearLayout rule;
 
-  private ActivityAboutUsBinding(@NonNull ScrollView rootView, @NonNull ImageView contactImg,
-      @NonNull TextView contactText, @NonNull LinearLayout newly, @NonNull LinearLayout rule) {
+  @NonNull
+  public final LinearLayout rule1;
+
+  private ActivityAboutUsBinding(@NonNull ScrollView rootView, @NonNull ImageView contactImg1,
+      @NonNull ImageView contactImg2, @NonNull TextView contactText1,
+      @NonNull TextView contactText2, @NonNull LinearLayout newly, @NonNull LinearLayout rule,
+      @NonNull LinearLayout rule1) {
     this.rootView = rootView;
-    this.contactImg = contactImg;
-    this.contactText = contactText;
+    this.contactImg1 = contactImg1;
+    this.contactImg2 = contactImg2;
+    this.contactText1 = contactText1;
+    this.contactText2 = contactText2;
     this.newly = newly;
     this.rule = rule;
+    this.rule1 = rule1;
   }
 
   @Override
@@ -68,15 +82,27 @@ public final class ActivityAboutUsBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.contact_img;
-      ImageView contactImg = rootView.findViewById(id);
-      if (contactImg == null) {
+      id = R.id.contact_img1;
+      ImageView contactImg1 = rootView.findViewById(id);
+      if (contactImg1 == null) {
         break missingId;
       }
 
-      id = R.id.contact_text;
-      TextView contactText = rootView.findViewById(id);
-      if (contactText == null) {
+      id = R.id.contact_img2;
+      ImageView contactImg2 = rootView.findViewById(id);
+      if (contactImg2 == null) {
+        break missingId;
+      }
+
+      id = R.id.contact_text1;
+      TextView contactText1 = rootView.findViewById(id);
+      if (contactText1 == null) {
+        break missingId;
+      }
+
+      id = R.id.contact_text2;
+      TextView contactText2 = rootView.findViewById(id);
+      if (contactText2 == null) {
         break missingId;
       }
 
@@ -92,8 +118,14 @@ public final class ActivityAboutUsBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityAboutUsBinding((ScrollView) rootView, contactImg, contactText, newly,
-          rule);
+      id = R.id.rule1;
+      LinearLayout rule1 = rootView.findViewById(id);
+      if (rule1 == null) {
+        break missingId;
+      }
+
+      return new ActivityAboutUsBinding((ScrollView) rootView, contactImg1, contactImg2,
+          contactText1, contactText2, newly, rule, rule1);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -25,16 +25,8 @@ recreate/india/main/startupcarvaan/user/ProfileActivity.java
  recreate.india.main.startupcarvaan.user.ProfileActivity$3$1
 recreate/india/main/startupcarvaan/databinding/ContentMainBinding.java
  recreate.india.main.startupcarvaan.databinding.ContentMainBinding
-<<<<<<< HEAD
 recreate/india/main/startupcarvaan/databinding/SinglecommentBinding.java
  recreate.india.main.startupcarvaan.databinding.SinglecommentBinding
-=======
-recreate/india/main/startupcarvaan/mainActivities/MainActivity.java
- recreate.india.main.startupcarvaan.mainActivities.MainActivity
- recreate.india.main.startupcarvaan.mainActivities.MainActivity$1
- recreate.india.main.startupcarvaan.mainActivities.MainActivity$2
- recreate.india.main.startupcarvaan.mainActivities.MainActivity$3
->>>>>>> aeb4557d4b66102cb33f2f396af409123120611d
 recreate/india/main/startupcarvaan/databinding/ActivityLevelsBinding.java
  recreate.india.main.startupcarvaan.databinding.ActivityLevelsBinding
 recreate/india/main/startupcarvaan/databinding/LoadingLayoutBinding.java
@@ -396,6 +388,8 @@ recreate/india/main/startupcarvaan/mainActivities/MainActivity.java
  recreate.india.main.startupcarvaan.mainActivities.MainActivity
  recreate.india.main.startupcarvaan.mainActivities.MainActivity$1
  recreate.india.main.startupcarvaan.mainActivities.MainActivity$2
+ recreate.india.main.startupcarvaan.mainActivities.MainActivity$3
 recreate/india/main/startupcarvaan/AboutUs.java
  recreate.india.main.startupcarvaan.AboutUs
  recreate.india.main.startupcarvaan.AboutUs$1
+ recreate.india.main.startupcarvaan.AboutUs$2

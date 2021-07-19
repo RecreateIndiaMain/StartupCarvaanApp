@@ -2209,8 +2209,10 @@ id companyname
 id confirm_button
 id confirmed
 id confirmed_transactions_recyclerView
-id contact_img
-id contact_text
+id contact_img1
+id contact_img2
+id contact_text1
+id contact_text2
 id container
 id content
 id contentPanel
@@ -2240,10 +2242,6 @@ id cv2
 id dark
 id date_picker_actions
 id date_transaction
-<<<<<<< HEAD
-id debit_card_layout
-=======
->>>>>>> aeb4557d4b66102cb33f2f396af409123120611d
 id decelerate
 id decelerateAndComplete
 id decor_content_parent
@@ -2398,10 +2396,6 @@ id menu_button
 id menu_root
 id message
 id method_trans
-<<<<<<< HEAD
-id mid_line
-=======
->>>>>>> aeb4557d4b66102cb33f2f396af409123120611d
 id middle
 id mini
 id mobile_navigation
@@ -2544,8 +2538,8 @@ id rectangle
 id rectangles
 id recycler_view
 id redeemImage
-id refud_policy
 id refund
+id refundtext
 id relativeLayout
 id required_investment
 id reverseSawtooth
@@ -2557,6 +2551,7 @@ id right_to_left
 id rounded
 id row_index_key
 id rule
+id rule1
 id ruletext
 id rzp_innerbox
 id rzp_outerbox
@@ -2717,11 +2712,6 @@ id userImage
 id userPhone
 id userPostImage
 id useridtransaction
-<<<<<<< HEAD
-id vbv_password_option
-id verify_payment
-=======
->>>>>>> aeb4557d4b66102cb33f2f396af409123120611d
 id video
 id video_title
 id videoplayer
