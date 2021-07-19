@@ -18,26 +18,36 @@
 
         </item>
         <item android:id="@+id/privacypolicy"
-            android:title="Term and Conditions"
-            >
+            android:title="Term and Conditions">
+
+        </item>
+        <item
+            android:id="@+id/about_us"
+            android:title="About Us">
+
+        </item>
+        <item android:id="@+id/logout"
+            android:title="Logout">
 
         </item>
     </group>
     <group android:checkableBehavior="single">
         <item
-            android:title="Coin Section">
+            android:title="Coin Section"
+            android:visible="false">
             <menu>
 
                 <item android:id="@+id/coin_drawer"
-                    android:title="Redeem coins"></item>
+                    android:title="Redeem coins">
+
+                </item>
 
                 <item android:id="@+id/buyc"
                     android:title="Buy coins"></item>
 
                 <item android:id="@+id/aboutRci"
                     android:title="About Rci"></item>
-                <item android:id="@+id/logout"
-                    android:title="Logout"></item>
+
 
             </menu>
         </item>

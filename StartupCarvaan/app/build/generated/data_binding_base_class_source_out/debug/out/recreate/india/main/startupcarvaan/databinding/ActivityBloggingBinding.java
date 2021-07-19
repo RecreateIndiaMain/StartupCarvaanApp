@@ -35,22 +35,22 @@ public final class ActivityBloggingBinding implements ViewBinding {
   public final Button bla;
 
   @NonNull
-  public final Button blaaa;
+  public final BottomNavigationView buySellBottomNav;
 
   @NonNull
-  public final BottomNavigationView buySellBottomNav;
+  public final Button newButton;
 
   private ActivityBloggingBinding(@NonNull RelativeLayout rootView,
       @NonNull RecyclerView aboutshare, @NonNull LinearLayout applayout,
-      @NonNull ImageView backblog, @NonNull Button bla, @NonNull Button blaaa,
-      @NonNull BottomNavigationView buySellBottomNav) {
+      @NonNull ImageView backblog, @NonNull Button bla,
+      @NonNull BottomNavigationView buySellBottomNav, @NonNull Button newButton) {
     this.rootView = rootView;
     this.aboutshare = aboutshare;
     this.applayout = applayout;
     this.backblog = backblog;
     this.bla = bla;
-    this.blaaa = blaaa;
     this.buySellBottomNav = buySellBottomNav;
+    this.newButton = newButton;
   }
 
   @Override
@@ -104,20 +104,20 @@ public final class ActivityBloggingBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.blaaa;
-      Button blaaa = rootView.findViewById(id);
-      if (blaaa == null) {
-        break missingId;
-      }
-
       id = R.id.buy_sell_bottom_nav;
       BottomNavigationView buySellBottomNav = rootView.findViewById(id);
       if (buySellBottomNav == null) {
         break missingId;
       }
 
+      id = R.id.newButton;
+      Button newButton = rootView.findViewById(id);
+      if (newButton == null) {
+        break missingId;
+      }
+
       return new ActivityBloggingBinding((RelativeLayout) rootView, aboutshare, applayout, backblog,
-          bla, blaaa, buySellBottomNav);
+          bla, buySellBottomNav, newButton);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

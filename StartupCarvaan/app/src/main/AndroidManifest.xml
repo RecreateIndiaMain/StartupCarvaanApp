@@ -9,9 +9,10 @@
         android:roundIcon="@drawable/startupcarvaanlogo"
         android:supportsRtl="true"
         android:theme="@style/Theme.StartupCarvaan">
-        <activity android:name=".user.MoneyTransactions"></activity>
-        <activity android:name=".instamojo"></activity>
-        <activity android:name=".user.Transactions"></activity>
+        <activity android:name=".AboutUs"></activity>
+        <activity android:name=".user.MoneyTransactions" />
+        <activity android:name=".instamojo" />
+        <activity android:name=".user.Transactions" />
         <activity android:name=".coin_exchange.AboutRCI" />
         <activity android:name=".Levels" />
         <activity android:name=".mainActivities.RecyclerActivity" />

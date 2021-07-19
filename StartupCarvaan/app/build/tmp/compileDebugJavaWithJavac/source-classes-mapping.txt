@@ -25,10 +25,8 @@ recreate/india/main/startupcarvaan/user/ProfileActivity.java
  recreate.india.main.startupcarvaan.user.ProfileActivity$3$1
 recreate/india/main/startupcarvaan/databinding/ContentMainBinding.java
  recreate.india.main.startupcarvaan.databinding.ContentMainBinding
-recreate/india/main/startupcarvaan/mainActivities/MainActivity.java
- recreate.india.main.startupcarvaan.mainActivities.MainActivity
- recreate.india.main.startupcarvaan.mainActivities.MainActivity$1
- recreate.india.main.startupcarvaan.mainActivities.MainActivity$2
+recreate/india/main/startupcarvaan/databinding/SinglecommentBinding.java
+ recreate.india.main.startupcarvaan.databinding.SinglecommentBinding
 recreate/india/main/startupcarvaan/databinding/ActivityLevelsBinding.java
  recreate.india.main.startupcarvaan.databinding.ActivityLevelsBinding
 recreate/india/main/startupcarvaan/databinding/LoadingLayoutBinding.java
@@ -53,6 +51,8 @@ recreate/india/main/startupcarvaan/databinding/ActivityHelppageBinding.java
  recreate.india.main.startupcarvaan.databinding.ActivityHelppageBinding
 recreate/india/main/startupcarvaan/databinding/FragmentPracticeBinding.java
  recreate.india.main.startupcarvaan.databinding.FragmentPracticeBinding
+recreate/india/main/startupcarvaan/databinding/ActivityAboutUsBinding.java
+ recreate.india.main.startupcarvaan.databinding.ActivityAboutUsBinding
 recreate/india/main/startupcarvaan/allmodels/user/ShareHoldings.java
  recreate.india.main.startupcarvaan.allmodels.user.ShareHoldings
 recreate/india/main/startupcarvaan/databinding/SlideLayoutBinding.java
@@ -128,6 +128,8 @@ recreate/india/main/startupcarvaan/aboutshare/models/blogdetails.java
  recreate.india.main.startupcarvaan.aboutshare.models.blogdetails
 recreate/india/main/startupcarvaan/allmodels/fragmentmodel/BiddingModel.java
  recreate.india.main.startupcarvaan.allmodels.fragmentmodel.BiddingModel
+recreate/india/main/startupcarvaan/databinding/SingleMoneyTransBinding.java
+ recreate.india.main.startupcarvaan.databinding.SingleMoneyTransBinding
 recreate/india/main/startupcarvaan/databinding/ActivityExampleBinding.java
  recreate.india.main.startupcarvaan.databinding.ActivityExampleBinding
 recreate/india/main/startupcarvaan/databinding/ViewlayoutBinding.java
@@ -243,6 +245,7 @@ recreate/india/main/startupcarvaan/allmodels/user/UserFunctions.java
  recreate.india.main.startupcarvaan.allmodels.user.UserFunctions$4
  recreate.india.main.startupcarvaan.allmodels.user.UserFunctions$5
  recreate.india.main.startupcarvaan.allmodels.user.UserFunctions$5$1
+ recreate.india.main.startupcarvaan.allmodels.user.UserFunctions$5$1$1
  recreate.india.main.startupcarvaan.allmodels.user.UserFunctions$6
  recreate.india.main.startupcarvaan.allmodels.user.UserFunctions$7
  recreate.india.main.startupcarvaan.allmodels.user.UserFunctions$8
@@ -373,5 +376,10 @@ recreate/india/main/startupcarvaan/mainActivities/MyRecyclerViewAdapter.java
  recreate.india.main.startupcarvaan.mainActivities.MyRecyclerViewAdapter$ViewHolder
 recreate/india/main/startupcarvaan/databinding/BuysuccessBinding.java
  recreate.india.main.startupcarvaan.databinding.BuysuccessBinding
-recreate/india/main/startupcarvaan/databinding/SinglecommentBinding.java
- recreate.india.main.startupcarvaan.databinding.SinglecommentBinding
+recreate/india/main/startupcarvaan/mainActivities/MainActivity.java
+ recreate.india.main.startupcarvaan.mainActivities.MainActivity
+ recreate.india.main.startupcarvaan.mainActivities.MainActivity$1
+ recreate.india.main.startupcarvaan.mainActivities.MainActivity$2
+recreate/india/main/startupcarvaan/AboutUs.java
+ recreate.india.main.startupcarvaan.AboutUs
+ recreate.india.main.startupcarvaan.AboutUs$1

@@ -44,22 +44,21 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:id="@+id/blaaa"
-        android:visibility="invisible"
+        android:id="@+id/bla"
+        android:visibility="visible"
         android:layout_alignParentBottom="true"
         android:text="Invest"
         android:textSize="17dp"
         android:textStyle="bold"
-        android:layout_gravity="bottom"
-        android:layout_marginBottom="60dp"/>
+        android:layout_gravity="bottom"/>
     <Button
-        android:text="Invest"
-        android:id="@+id/bla"
+        android:text="new Button"
+        android:id="@+id/newButton"
         android:layout_width="match_parent"
-        android:visibility="visible"
+        android:visibility="gone"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="0dp">
+        android:layout_marginBottom="100dp">
     </Button>
 
 

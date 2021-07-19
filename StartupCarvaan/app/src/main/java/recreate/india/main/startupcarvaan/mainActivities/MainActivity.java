@@ -22,6 +22,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 
 import io.paperdb.Paper;
+import recreate.india.main.startupcarvaan.AboutUs;
 import recreate.india.main.startupcarvaan.Helppage;
 import recreate.india.main.startupcarvaan.Levels;
 import recreate.india.main.startupcarvaan.R;
@@ -127,6 +128,9 @@ public class MainActivity extends AppCompatActivity{
                 case R.id.buyc:
                     fragment = new mycoins();
                     switchFragment(fragment);
+                    break;
+                case R.id.about_us:
+                    startActivity(new Intent(MainActivity.this,AboutUs.class));
                     break;
 
             }
