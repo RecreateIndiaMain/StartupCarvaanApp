@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.util.Pair;
 import android.widget.Button;
 
@@ -44,6 +45,7 @@ public class SplashScreen extends AppCompatActivity {
     private void gotonextpage() {
         Paper.book().write("version","1.10");
         if(FirebaseAuth.getInstance().getCurrentUser()!=null){
+            Log.v("User","NULL");
             startActivity(new Intent(SplashScreen.this,MainActivity.class));
             finish();
         }

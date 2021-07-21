@@ -2102,6 +2102,7 @@ id added_rci
 id addrci
 id address
 id adharcard
+id adharcard_up
 id adjust_height
 id adjust_width
 id advice
@@ -2251,6 +2252,7 @@ id deltaRelative
 id dependency_ordering
 id desc_aboutRci
 id description
+id description_up
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -2264,6 +2266,7 @@ id disableHome
 id disablePostScroll
 id disableScroll
 id displayName
+id displayName_up
 id displayname1
 id dotLayout
 id dragDown
@@ -2631,6 +2634,7 @@ id stretch
 id submenuarrow
 id submit
 id submit_area
+id submit_up
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -2677,6 +2681,7 @@ id timer
 id title
 id titleDividerNoCustom
 id title_template
+id title_up
 id toggle
 id top
 id topPanel
@@ -2707,9 +2712,13 @@ id upiname
 id upiphonenumber
 id useLogo
 id userAddress
+id userAddress_up
 id userEmail
+id userEmail_up
 id userImage
+id userImage_up
 id userPhone
+id userPhone_up
 id userPostImage
 id useridtransaction
 id video
@@ -2817,6 +2826,7 @@ layout activity_rci_exchange
 layout activity_recycler
 layout activity_splash_screen
 layout activity_transactions
+layout activity_update_profile
 layout activity_upipay
 layout apps_bottomsheet
 layout ayp_default_player_ui

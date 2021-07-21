@@ -67,8 +67,8 @@ public class ProfileActivity extends AppCompatActivity {
         updateprofile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ProfileActivity.this,CreateProfile.class));
-
+                startActivity(new Intent(ProfileActivity.this,UpdateProfile.class));
+                finish();
             }
         });
         ff.collection("users")
@@ -87,6 +87,9 @@ public class ProfileActivity extends AppCompatActivity {
                         level.setText(String.valueOf(profile.getLevel()));
                         points.setText(String.  valueOf(profile.getCurrentpoints()));
                         StorageReference imageurl=fs.getReference().child(profile.getImageurl());
+                        Glide.with(getBaseContext()).load(profile.getImageurl()).into(user_image);
+
+                        /*
                         imageurl.getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
                             @Override
                             public void onComplete(@NonNull Task<Uri> task) {
@@ -99,6 +102,8 @@ public class ProfileActivity extends AppCompatActivity {
                                 }
                             }
                         });
+
+                         */
                     }
                 });
 

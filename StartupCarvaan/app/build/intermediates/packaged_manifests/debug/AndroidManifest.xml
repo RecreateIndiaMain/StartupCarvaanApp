@@ -41,18 +41,18 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.StartupCarvaan" >
+        <activity
+            android:name="recreate.india.main.startupcarvaan.user.UpdateProfile"
+            android:theme="@style/MyTheme" >
+        </activity>
         <activity android:name="recreate.india.main.startupcarvaan.AboutUs" />
         <activity android:name="recreate.india.main.startupcarvaan.user.MoneyTransactions" />
         <activity android:name="recreate.india.main.startupcarvaan.instamojo" />
         <activity android:name="recreate.india.main.startupcarvaan.user.Transactions" />
-        <activity android:name="recreate.india.main.startupcarvaan.instamojo" />
-        <activity android:name="recreate.india.main.startupcarvaan.user.Transactions" />
-        <activity android:name="recreate.india.main.startupcarvaan.user.MoneyTransactions" />
         <activity android:name="recreate.india.main.startupcarvaan.coin_exchange.AboutRCI" />
         <activity android:name="recreate.india.main.startupcarvaan.Levels" />
         <activity android:name="recreate.india.main.startupcarvaan.mainActivities.RecyclerActivity" />
-        <activity android:name="recreate.india.main.startupcarvaan.payments.payin" >
-        </activity>
+        <activity android:name="recreate.india.main.startupcarvaan.payments.payin" />
         <activity android:name="recreate.india.main.startupcarvaan.Helppage" />
         <activity android:name="recreate.india.main.startupcarvaan.coin_exchange.buy_rci" />
         <activity android:name="recreate.india.main.startupcarvaan.mainActivities.IntroSliderActivity" />
@@ -67,9 +67,7 @@
         <activity
             android:name="recreate.india.main.startupcarvaan.aboutshare.blogging"
             android:theme="@style/MyTheme" />
-        <activity
-            android:name="recreate.india.main.startupcarvaan.mainActivities.MainActivity"
-            android:parentActivityName="recreate.india.main.startupcarvaan.mainActivities.MainActivity" />
+        <activity android:name="recreate.india.main.startupcarvaan.mainActivities.MainActivity" />
         <activity android:name="recreate.india.main.startupcarvaan.mainActivities.PrivacyPolicy" />
         <activity
             android:name="recreate.india.main.startupcarvaan.loginsignup.loginActivity"

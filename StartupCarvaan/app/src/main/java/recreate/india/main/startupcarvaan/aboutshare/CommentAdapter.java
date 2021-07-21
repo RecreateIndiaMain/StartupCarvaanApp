@@ -1,6 +1,7 @@
 package recreate.india.main.startupcarvaan.aboutshare;
 
 import android.content.Context;
+import android.gesture.GestureLibraries;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -62,22 +63,29 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.MyViewHo
                 .document(id).addSnapshotListener(new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable @org.jetbrains.annotations.Nullable DocumentSnapshot value, @Nullable @org.jetbrains.annotations.Nullable FirebaseFirestoreException error) {
-                profile[0] = value.toObject(UserProfile.class);
-                holder.comment.setText(display(commentArrayList.get(position).getComment()));
-                holder.username.setText(profile[0].getUsername());
-                StorageReference imageurl= FirebaseStorage.getInstance().getReference().child(profile[0].getImageurl());
-                imageurl.getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Uri> task) {
-                        if(task.getResult()!=null)
-                            Glide.with(context)
-                                    .load(task.getResult())
-                                    .into(holder.imageView);
-                        else{
-                            Toast.makeText(context, "file does not exists", Toast.LENGTH_SHORT).show();
-                        }
+                if(value!=null) {
+                    profile[0] = value.toObject(UserProfile.class);
+                    holder.comment.setText(display(commentArrayList.get(position).getComment()));
+                    holder.username.setText(profile[0].getUsername());
+                    try {
+                        Glide.with(context).load(profile[0].getImageurl()).placeholder(R.drawable.userimage).into(holder.imageView);
+                    } catch (Exception e) {
+                        Toast.makeText(context, error.getMessage(), Toast.LENGTH_SHORT).show();
                     }
-                });
+                }
+//                StorageReference imageurl= FirebaseStorage.getInstance().getReference().child(profile[0].getImageurl());
+//                imageurl.getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
+//                    @Override
+//                    public void onComplete(@NonNull Task<Uri> task) {
+//                        if(task.getResult()!=null)
+//                            Glide.with(context)
+//                                    .load(task.getResult())
+//                                    .into(holder.imageView);
+//                        else{
+//                            Toast.makeText(context, "file does not exists", Toast.LENGTH_SHORT).show();
+//                        }
+//                    }
+//                });
             }
         });
     }

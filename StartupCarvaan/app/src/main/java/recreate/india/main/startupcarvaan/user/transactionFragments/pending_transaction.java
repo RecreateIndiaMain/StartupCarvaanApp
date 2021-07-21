@@ -87,7 +87,7 @@ public class pending_transaction extends Fragment {
                                     @Override
                                     public void onComplete(@NonNull @NotNull Task<DocumentSnapshot> task) {
 
-                                        if(task.getResult().exists()==false){
+                                        if(!task.getResult().exists()){
                                             Toast.makeText(getContext(), "I will add new share", Toast.LENGTH_SHORT).show();
                                             userFunctions.addShareNewUser(model.getShareid(), model.getQuantity(), model.getPrice());
                                         }

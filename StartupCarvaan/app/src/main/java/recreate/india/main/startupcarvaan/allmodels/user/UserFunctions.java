@@ -1,5 +1,7 @@
 package recreate.india.main.startupcarvaan.allmodels.user;
 
+import android.util.Log;
+
 import androidx.annotation.NonNull;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -92,7 +94,7 @@ public class UserFunctions {
 
     public String getDay() {
         Date day = Timestamp.now().toDate();
-        String days = String.valueOf(day.toString().charAt(8))+String.valueOf(day.toString().charAt(9));
+        String days = String.valueOf(day.toString().charAt(8)) + String.valueOf(day.toString().charAt(9));
         return days;
     }
 
@@ -172,6 +174,7 @@ public class UserFunctions {
     }
 
     public void giveRewards(Double investment) {
+        //TODO: Testing is pending
         final UserProfile[] userProfile = {new UserProfile()};
         ff.collection("users").document(firebaseUser.getUid()).get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
@@ -190,15 +193,30 @@ public class UserFunctions {
                                 reward[0] = documentSnapshot.toObject(Reward.class);
                                 userProfile[0].setCurrentpoints(userProfile[0].getCurrentpoints() + (investment * 0.1));
                                 userProfile[0].setTotalpoints(userProfile[0].getTotalpoints() + (investment * 0.1));
+                                userProfile[0].setBonus(userProfile[0].getBonus() + (investment * 0.1));
                                 final Integer userlevel = userProfile[0].getLevel();
                                 Integer points = level[0].getLevel().get(userlevel - 1);
+                                Log.v("Reward", points.toString());
                                 if (userProfile[0].getCurrentpoints() >= points) {
                                     userProfile[0].setLevel(userlevel + 1);
                                     userProfile[0].setAddedrci(userProfile[0].getAddedrci() + reward[0].getReward().get(userlevel - 1));
                                     userProfile[0].setCurrentpoints(userProfile[0].getCurrentpoints() - points);
                                     // updating level
-                                    ff.collection("users").document(firebaseUser.getUid()).update("currentpoints", userProfile[0].getCurrentpoints(), "level", userProfile[0].getLevel(), "addedrci", userProfile[0].getAddedrci());
                                 }
+                                ff.collection("users").document(firebaseUser.getUid()).
+                                        update("currentpoints", userProfile[0].getCurrentpoints(),
+                                                "level", userProfile[0].getLevel(),
+                                                "totalpoints", userProfile[0].getTotalpoints(),
+                                                "bonus", userProfile[0].getBonus())
+                                        .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                            @Override
+                                            public void onComplete(@NonNull Task<Void> task) {
+                                                if (task.isSuccessful())
+                                                    Log.v("Reward", "User rewarded");
+                                                else
+                                                    Log.v("Reward", "cannot give reward");
+                                            }
+                                        });
                             }
                         });
                     }
@@ -208,28 +226,26 @@ public class UserFunctions {
     }
 
 
-
-
-public void removeShares(String shareid, String day, Double quantity, Double price) {
-    final ShareHoldings[] shareHoldings = {new ShareHoldings()};
-    ff.collection("users").document(firebaseUser.getUid()).collection("myshares").document(shareid).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-        @Override
-        public void onComplete(@NonNull @NotNull Task<DocumentSnapshot> task) {
-            if (task.getResult().exists()) {
-                shareHoldings[0] = task.getResult().toObject(ShareHoldings.class);
-                Map<String, ArrayList<Double>> holdings = shareHoldings[0].getHoldings();
-                ArrayList<Double> two = holdings.get(day);
-                two.set(0, two.get(0) - quantity);
-                if (two.get(0) == 0) {
-                    holdings.remove(day);
-                } else holdings.put(day, two);
-                ff.collection("users").document(firebaseUser.getUid()).collection("myshares")
-                        .document(shareid)
-                        .update("holdings", holdings);
+    public void removeShares(String shareid, String day, Double quantity, Double price) {
+        final ShareHoldings[] shareHoldings = {new ShareHoldings()};
+        ff.collection("users").document(firebaseUser.getUid()).collection("myshares").document(shareid).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull @NotNull Task<DocumentSnapshot> task) {
+                if (task.getResult().exists()) {
+                    shareHoldings[0] = task.getResult().toObject(ShareHoldings.class);
+                    Map<String, ArrayList<Double>> holdings = shareHoldings[0].getHoldings();
+                    ArrayList<Double> two = holdings.get(day);
+                    two.set(0, two.get(0) - quantity);
+                    if (two.get(0) == 0) {
+                        holdings.remove(day);
+                    } else holdings.put(day, two);
+                    ff.collection("users").document(firebaseUser.getUid()).collection("myshares")
+                            .document(shareid)
+                            .update("holdings", holdings);
+                }
             }
-        }
-    });
-}
+        });
+    }
 
     //
     public void addPendingTransaction(String shareid, Double quantity, Double price, String type) {
@@ -283,14 +299,15 @@ public void removeShares(String shareid, String day, Double quantity, Double pri
             }
         });
     }
-    public void checkIfDelete(String shareid){
+
+    public void checkIfDelete(String shareid) {
         ff.collection("users").document(firebaseUser.getUid()).collection("myshares").document(shareid)
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                     @Override
                     public void onComplete(@NonNull @NotNull Task<DocumentSnapshot> task) {
 
-                        if(task.getResult().toObject(ShareHoldings.class).getHoldings().size()==0){
+                        if (task.getResult().toObject(ShareHoldings.class).getHoldings().size() == 0) {
                             FirebaseFirestore.getInstance().collection("users")
                                     .document(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                     .collection("myshares")
