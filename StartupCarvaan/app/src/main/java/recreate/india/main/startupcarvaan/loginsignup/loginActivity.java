@@ -32,6 +32,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 import java.util.Map;
 
+import io.paperdb.Paper;
 import recreate.india.main.startupcarvaan.allmodels.user.UserProfile;
 import recreate.india.main.startupcarvaan.mainActivities.MainActivity;
 import recreate.india.main.startupcarvaan.R;
@@ -155,6 +156,7 @@ private CheckBox privacy;
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
+                            Paper.book().write("first","true");
                             updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.

@@ -43,13 +43,13 @@ public class SplashScreen extends AppCompatActivity {
 
     }
     private void gotonextpage() {
-        Paper.book().write("version","1.10");
+        Paper.book().write("version","1.12");
         if(FirebaseAuth.getInstance().getCurrentUser()!=null){
             Log.v("User","NULL");
             startActivity(new Intent(SplashScreen.this,MainActivity.class));
             finish();
         }
-        else if(Paper.book().read("first")=="true") {
+        else if(Paper.book().contains("first") && Paper.book().read("first").equals("true")){
             startActivity(new Intent(SplashScreen.this, loginActivity.class));
             finish();
         }

@@ -61,7 +61,7 @@ public class PrivacyPolicy extends AppCompatActivity {
         privacypolicy.loadUrl("https://www.privacypolicygenerator.info/live.php?token=Qk5tYKKzXzNauXqnmPWOD7pXpxOG8xQL");
 
         termand.getSettings().setJavaScriptEnabled(true);
-            termand.loadUrl("https://www.termsandconditionsgenerator.com/live.php?token=0WwI2zNxvD2pJTzuKS5Jqu4k9xKVzVoH");
+        termand.loadUrl("https://www.termsandconditionsgenerator.com/live.php?token=0WwI2zNxvD2pJTzuKS5Jqu4k9xKVzVoH");
 
 
 

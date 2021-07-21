@@ -204,8 +204,6 @@ public class allshares extends Fragment {
                         intent.putExtra("shareid",shareid);
                         intent.putExtra("type",model.getPeriod());
                         startActivity(intent);
-                        getActivity().finish();
-
                     }
                 });
 
