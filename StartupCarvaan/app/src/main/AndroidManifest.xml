@@ -14,7 +14,6 @@
         <activity android:name=".instamojo" />
         <activity android:name=".user.Transactions" />
         <activity android:name=".instamojo"/>
-
         <activity android:name=".user.Transactions" ></activity>
         <activity android:name=".user.MoneyTransactions"></activity>
         <activity android:name=".coin_exchange.AboutRCI" />

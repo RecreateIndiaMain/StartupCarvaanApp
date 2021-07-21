@@ -2136,7 +2136,6 @@ id beginOnFirstDraw
 id beginning
 id bet
 id betting
-id biding
 id bidingrecyclerview
 id bidprice
 id bla
@@ -2501,7 +2500,6 @@ id play_pause_button
 id points
 id position
 id postLayout
-id practice
 id practicerecyclerview
 id price
 id price_of_RCI
@@ -2586,9 +2584,9 @@ id sell_aboutRci
 id sellclose
 id sellingPrice
 id sellingprice
+id share_transactions
 id sharename
 id shares
-id shares_transactions
 id shortcut
 id showCustom
 id showHome

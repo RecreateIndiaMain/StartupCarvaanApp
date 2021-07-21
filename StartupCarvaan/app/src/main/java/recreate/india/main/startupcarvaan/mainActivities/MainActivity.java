@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -74,18 +75,18 @@ public class MainActivity extends AppCompatActivity{
                     fragment = new myshares();
                     switchFragment(fragment);
                     return true;
-                case R.id.practice:
-                    fragment = new practice();
-                    switchFragment(fragment);
-                    return true;
+//                case R.id.practice:
+//                    fragment = new practice();
+//                    switchFragment(fragment);
+//                    return true;
                 case R.id.mycoins:
                     fragment = new mycoins();
                     switchFragment(fragment);
                     return true;
-                case R.id.biding:
-                    fragment = new biding();
-                    switchFragment(fragment);
-                    return true;
+//                case R.id.biding:
+//                    fragment = new biding();
+//                    switchFragment(fragment);
+//                    return true;
             }
             return false;
         }
@@ -115,7 +116,7 @@ public class MainActivity extends AppCompatActivity{
                     startActivity(new Intent(MainActivity.this, Levels.class));
                     finish();
                     break;
-                case R.id.shares_transactions:
+                case R.id.share_transactions:
                     startActivity(new Intent(MainActivity.this,Transactions.class));
                     break;
 
@@ -186,6 +187,7 @@ public class MainActivity extends AppCompatActivity{
     @Override
     protected void onStart() {
         super.onStart();
+
         Paper.book().write("first","true");
         FirebaseFirestore.getInstance().collection("users")
                 .document(FirebaseAuth.getInstance().getCurrentUser().getUid())
@@ -195,24 +197,25 @@ public class MainActivity extends AppCompatActivity{
                 UserProfile userProfile=task.getResult().toObject(UserProfile.class);
                 if(userProfile.getUsername().equals("username")){
                     startActivity(new Intent(MainActivity.this,CreateProfile.class));
+                    finish();
                 }
             }
         });
 
+        String current=Paper.book().read("version");
+        FirebaseFirestore.getInstance().collection("version")
+                .document("version")
+                .addSnapshotListener(new EventListener<DocumentSnapshot>() {
+                    @Override
+                    public void onEvent(@Nullable @org.jetbrains.annotations.Nullable DocumentSnapshot value, @Nullable @org.jetbrains.annotations.Nullable FirebaseFirestoreException error) {
+                        String latest=value.getString("current");
+                        if(!current.equals(latest)){
+                            startActivity(new Intent(Intent.ACTION_VIEW,
+                                    Uri.parse("https://play.google.com/store/apps/details?id=recreate.india.main.startupcarvaan")));
+                        }
+                    }
+                });
 
-//        String current=Paper.book().read("version");
-//        FirebaseFirestore.getInstance().collection("version")
-//                .document("version")
-//                .addSnapshotListener(new EventListener<DocumentSnapshot>() {
-//                    @Override
-//                    public void onEvent(@Nullable @org.jetbrains.annotations.Nullable DocumentSnapshot value, @Nullable @org.jetbrains.annotations.Nullable FirebaseFirestoreException error) {
-//                        String latest=value.getString("current");
-//                        if(!current.equals(latest)){
-//                            startActivity(new Intent(Intent.ACTION_VIEW,
-//                                    Uri.parse("https://play.google.com/store/apps/details?id=recreate.india.main.startupcarvaan")));
-//                        }
-//                    }
-//                });
     }
 
     @Override

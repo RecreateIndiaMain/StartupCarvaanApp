@@ -363,12 +363,12 @@
             </LinearLayout>
             <WebView
                 android:layout_width="match_parent"
-                android:layout_height="1000dp"
-                android:id="@+id/privacypolicy"
+                android:layout_height="match_parent"
                 android:visibility="gone"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
+                android:id="@+id/privacypolicy"
                 tools:ignore="WebViewLayout" />
             <LinearLayout
                 android:layout_width="match_parent"

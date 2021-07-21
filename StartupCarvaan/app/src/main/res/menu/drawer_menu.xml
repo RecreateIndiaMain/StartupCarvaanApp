@@ -23,7 +23,7 @@
         </item>
         <item
             android:id="@+id/about_us"
-            android:title="About Us">
+            android:title="About Us/Contact us">
 
         </item>
         <item android:id="@+id/logout"
@@ -61,8 +61,8 @@
                 <item android:id="@+id/money_transactions"
                     android:title="Money Transactions"></item>
 
-                <item android:id="@+id/shares_transactions"
-                    android:title="Shares Transactions"></item>
+                <item android:id="@+id/share_transactions"
+                    android:title="Startup Cards Transactions"></item>
             </menu>
         </item>
 
