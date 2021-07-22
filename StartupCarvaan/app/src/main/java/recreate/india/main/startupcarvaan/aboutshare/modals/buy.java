@@ -93,10 +93,10 @@ public class buy extends DialogFragment {
                     if(userFunctions.check_rci(amount)){
                         userFunctions.deduct_rci(amount);
                         userFunctions.addPendingTransaction(shareid,quantity,buying_price,"buy");
-                        Toast.makeText(view.getContext(), "Thank you for investing with us..Your request will be processed shortly..", Toast.LENGTH_LONG).show();
+                        Toast.makeText(view.getContext(), "Thank you ....Your request will be processed shortly..", Toast.LENGTH_LONG).show();
                         dismiss();
                     }
-                    else Toast.makeText(getContext(), "you do not have enough amount", Toast.LENGTH_SHORT).show();
+                    else Toast.makeText(getContext(), "You do not have enough amount", Toast.LENGTH_SHORT).show();
                 }
             }
         });
