@@ -35,6 +35,7 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
+import io.paperdb.Paper;
 import recreate.india.main.startupcarvaan.R;
 import recreate.india.main.startupcarvaan.allmodels.user.UserProfile;
 import recreate.india.main.startupcarvaan.mainActivities.MainActivity;
@@ -62,6 +63,7 @@ private boolean timer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Paper.init(this);
         setContentView(R.layout.activity_phone_auth);
         resend=findViewById(R.id.otpresend);
         phone_layout=findViewById(R.id.phoneverify);
@@ -153,6 +155,7 @@ private boolean timer;
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
+                    Paper.book().write("first","true");
                     updateUI(firebaseAuth.getCurrentUser());
                 }
             }
@@ -173,6 +176,7 @@ private boolean timer;
                 .build();
         PhoneAuthProvider.verifyPhoneNumber(options);
     }
+
     private void updateUI(FirebaseUser user) {
         if (user != null) {
             FirebaseFirestore.getInstance().collection("users").document(user.getUid()).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {

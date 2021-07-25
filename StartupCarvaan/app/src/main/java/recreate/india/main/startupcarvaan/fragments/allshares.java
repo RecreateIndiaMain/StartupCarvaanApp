@@ -52,7 +52,7 @@ import recreate.india.main.startupcarvaan.aboutshare.blogging;
 import recreate.india.main.startupcarvaan.allmodels.share.Share;
 import recreate.india.main.startupcarvaan.allmodels.share.ShareFunctions;
 import recreate.india.main.startupcarvaan.allmodels.share.sharedetails.Trading;
-
+    
 public class allshares extends Fragment {
     private FirebaseFirestore ff= FirebaseFirestore.getInstance();
     private FirestoreRecyclerAdapter adapter;
@@ -204,8 +204,6 @@ public class allshares extends Fragment {
                         intent.putExtra("shareid",shareid);
                         intent.putExtra("type",model.getPeriod());
                         startActivity(intent);
-                        getActivity().finish();
-
                     }
                 });
 

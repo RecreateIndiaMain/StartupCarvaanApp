@@ -2,7 +2,7 @@ package recreate.india.main.startupcarvaan.allmodels.share.sharedetails;
 
 public class Selling {
     private Double sellingprice;
-    private Integer sellvolume;
+        private Integer sellvolume;
     public Selling(){
 
     }

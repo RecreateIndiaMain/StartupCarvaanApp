@@ -123,6 +123,9 @@ public class blogging extends AppCompatActivity {
                 holder.description.setText(model.getDescription());
                 holder.num_likes.setText(String.valueOf(model.getLikes().size()));
                 holder.num_comments.setText(String.valueOf(model.getComments().size()));
+
+                holder.commentimage.setClickable(model.getComments().size() != 0);
+
                 holder.commentbutton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -336,11 +339,5 @@ public class blogging extends AppCompatActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        startActivity(new Intent(blogging.this, MainActivity.class));
     }
 }

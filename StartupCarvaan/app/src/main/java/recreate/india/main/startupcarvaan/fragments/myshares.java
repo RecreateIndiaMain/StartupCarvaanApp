@@ -1,6 +1,8 @@
 package recreate.india.main.startupcarvaan.fragments;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -42,6 +45,7 @@ import recreate.india.main.startupcarvaan.allmodels.share.sharedetails.Trading;
 import recreate.india.main.startupcarvaan.allmodels.user.ShareHoldings;
 
 public class myshares extends Fragment {
+    private LinearLayout topbar;
     private RecyclerView myshare;
     private TextView sample;
     String item, day_;
@@ -72,7 +76,7 @@ public class myshares extends Fragment {
         sample = view.findViewById(R.id.sample);
         profit = view.findViewById(R.id.totalprofit);
         investment = view.findViewById(R.id.totalinvest);
-
+        topbar=view.findViewById(R.id.ll1);
 
         cpd = new CustomProgressDialogue(getActivity());
         Query query = FirebaseFirestore.getInstance().collection("users").document(user.getUid()).collection("myshares");
@@ -99,7 +103,6 @@ public class myshares extends Fragment {
                         share[0] = documentSnapshot.toObject(Share.class);
                         String startupName = share[0].getName();
                         String startupLogo = share[0].getLogourl();
-
                         ff.collection("startup").document(shareid).collection("sharedetails").document("trading").addSnapshotListener(new EventListener<DocumentSnapshot>() {
                             @Override
                             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
@@ -121,7 +124,8 @@ public class myshares extends Fragment {
 
                                 netInvestment += totalInvestment;
                                 netProfit += totalProfit;
-
+                                profit.setText(String.valueOf(netProfit));
+                                investment.setText(String.valueOf(netInvestment));
                                 final String[] item = new String[1];
                                 ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, list);
                                 arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -174,10 +178,15 @@ public class myshares extends Fragment {
 
             }
         };
+
         myshare.setAdapter(adapter);
         myshare.setLayoutManager(new LinearLayoutManager(getContext()));
-        profit.setText(String.valueOf(netProfit));
-        investment.setText(String.valueOf(netInvestment));
+        if( netProfit<0)
+            topbar.setBackgroundColor(Color.RED);
+        else
+            topbar.setBackgroundColor(getResources().getColor(R.color.green));
+        Toast.makeText(getContext(), netProfit.toString(), Toast.LENGTH_SHORT).show();
+
         return view;
     }
 

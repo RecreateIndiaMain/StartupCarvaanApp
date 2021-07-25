@@ -207,7 +207,8 @@ android:background="@drawable/my"
                 android:fontFamily="@font/proximanovaregular"
                 android:text="buy/redeem cards"
                 android:backgroundTint="#FF59B563"
-                android:textColor="@color/white"/>
+                android:textColor="@color/white"
+                android:visibility="gone"/>
         </LinearLayout>
 
     </LinearLayout>

@@ -2034,6 +2034,7 @@ id ThreeBounce
 id WanderingCubes
 id Wave
 id aboutRci
+id about_us
 id aboutshare
 id accelerate
 id accessibility_action_clickable_span
@@ -2101,6 +2102,7 @@ id added_rci
 id addrci
 id address
 id adharcard
+id adharcard_up
 id adjust_height
 id adjust_width
 id advice
@@ -2135,7 +2137,6 @@ id beginOnFirstDraw
 id beginning
 id bet
 id betting
-id biding
 id bidingrecyclerview
 id bidprice
 id bla
@@ -2208,6 +2209,10 @@ id companyname
 id confirm_button
 id confirmed
 id confirmed_transactions_recyclerView
+id contact_img1
+id contact_img2
+id contact_text1
+id contact_text2
 id container
 id content
 id contentPanel
@@ -2246,6 +2251,7 @@ id deltaRelative
 id dependency_ordering
 id desc_aboutRci
 id description
+id description_up
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -2259,6 +2265,7 @@ id disableHome
 id disablePostScroll
 id disableScroll
 id displayName
+id displayName_up
 id displayname1
 id dotLayout
 id dragDown
@@ -2496,7 +2503,6 @@ id play_pause_button
 id points
 id position
 id postLayout
-id practice
 id practicerecyclerview
 id price
 id price_of_RCI
@@ -2533,8 +2539,8 @@ id rectangle
 id rectangles
 id recycler_view
 id redeemImage
-id refud_policy
 id refund
+id refundtext
 id relativeLayout
 id required_investment
 id reverseSawtooth
@@ -2546,6 +2552,7 @@ id right_to_left
 id rounded
 id row_index_key
 id rule
+id rule1
 id ruletext
 id rzp_innerbox
 id rzp_outerbox
@@ -2580,9 +2587,9 @@ id sell_aboutRci
 id sellclose
 id sellingPrice
 id sellingprice
+id share_transactions
 id sharename
 id shares
-id shares_transactions
 id shortcut
 id showCustom
 id showHome
@@ -2625,6 +2632,7 @@ id stretch
 id submenuarrow
 id submit
 id submit_area
+id submit_up
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -2671,6 +2679,7 @@ id timer
 id title
 id titleDividerNoCustom
 id title_template
+id title_up
 id toggle
 id top
 id topPanel
@@ -2701,9 +2710,13 @@ id upiname
 id upiphonenumber
 id useLogo
 id userAddress
+id userAddress_up
 id userEmail
+id userEmail_up
 id userImage
+id userImage_up
 id userPhone
+id userPhone_up
 id userPostImage
 id useridtransaction
 id video
@@ -2790,6 +2803,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_about_us
 layout activity_blogging
 layout activity_buy_rci
 layout activity_card_view
@@ -2810,6 +2824,7 @@ layout activity_rci_exchange
 layout activity_recycler
 layout activity_splash_screen
 layout activity_transactions
+layout activity_update_profile
 layout activity_upipay
 layout apps_bottomsheet
 layout ayp_default_player_ui
@@ -2950,6 +2965,7 @@ navigation nav_graph2
 plurals mtrl_badge_content_description
 raw ayp_youtube_player
 raw rzp_config
+string ContactUs
 string Signin
 string Signup
 string YOUTUBE_API_KEY

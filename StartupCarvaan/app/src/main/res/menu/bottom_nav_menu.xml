@@ -4,21 +4,21 @@
     <item
         android:id="@+id/allshares"
         android:icon="@drawable/ic_home_black_24dp"
-        android:title="@string/allshares" />
+        android:title="all startups" />
 
     <item
         android:id="@+id/myshares"
         android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="@string/myshares" />
+        android:title="mycards" />
 
-    <item
-        android:id="@+id/practice"
-        android:icon="@drawable/ic_baseline_leaderboard_24"
-        android:title="@string/practice" />
-    <item
-        android:id="@+id/biding"
-        android:icon="@drawable/ic_baseline_groups_24"
-        android:title="@string/biding" />
+<!--    <item-->
+<!--        android:id="@+id/practice"-->
+<!--        android:icon="@drawable/ic_baseline_leaderboard_24"-->
+<!--        android:title="@string/practice" />-->
+<!--    <item-->
+<!--        android:id="@+id/biding"-->
+<!--        android:icon="@drawable/ic_baseline_groups_24"-->
+<!--        android:title="@string/biding" />-->
     <item
         android:id="@+id/mycoins"
         android:icon="@drawable/ic_baseline_attach_money_24"

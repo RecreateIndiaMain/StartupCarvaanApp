@@ -42,10 +42,10 @@ public final class ActivityPrivacyPolicyBinding implements ViewBinding {
   public final WebView privacypolicy;
 
   @NonNull
-  public final WebView refudPolicy;
+  public final LinearLayout refund;
 
   @NonNull
-  public final LinearLayout refund;
+  public final LinearLayout refundtext;
 
   @NonNull
   public final LinearLayout rule;
@@ -62,7 +62,7 @@ public final class ActivityPrivacyPolicyBinding implements ViewBinding {
   private ActivityPrivacyPolicyBinding(@NonNull ScrollView rootView, @NonNull ImageView im11,
       @NonNull ImageView im22, @NonNull ImageView im33, @NonNull ImageView im44,
       @NonNull LinearLayout newly, @NonNull LinearLayout privacy, @NonNull WebView privacypolicy,
-      @NonNull WebView refudPolicy, @NonNull LinearLayout refund, @NonNull LinearLayout rule,
+      @NonNull LinearLayout refund, @NonNull LinearLayout refundtext, @NonNull LinearLayout rule,
       @NonNull LinearLayout ruletext, @NonNull LinearLayout terms,
       @NonNull WebView termsandcondition) {
     this.rootView = rootView;
@@ -73,8 +73,8 @@ public final class ActivityPrivacyPolicyBinding implements ViewBinding {
     this.newly = newly;
     this.privacy = privacy;
     this.privacypolicy = privacypolicy;
-    this.refudPolicy = refudPolicy;
     this.refund = refund;
+    this.refundtext = refundtext;
     this.rule = rule;
     this.ruletext = ruletext;
     this.terms = terms;
@@ -150,15 +150,15 @@ public final class ActivityPrivacyPolicyBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.refud_policy;
-      WebView refudPolicy = rootView.findViewById(id);
-      if (refudPolicy == null) {
-        break missingId;
-      }
-
       id = R.id.refund;
       LinearLayout refund = rootView.findViewById(id);
       if (refund == null) {
+        break missingId;
+      }
+
+      id = R.id.refundtext;
+      LinearLayout refundtext = rootView.findViewById(id);
+      if (refundtext == null) {
         break missingId;
       }
 
@@ -187,7 +187,7 @@ public final class ActivityPrivacyPolicyBinding implements ViewBinding {
       }
 
       return new ActivityPrivacyPolicyBinding((ScrollView) rootView, im11, im22, im33, im44, newly,
-          privacy, privacypolicy, refudPolicy, refund, rule, ruletext, terms, termsandcondition);
+          privacy, privacypolicy, refund, refundtext, rule, ruletext, terms, termsandcondition);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
