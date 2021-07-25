@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/backgroundcolourmain"
+    tools:context=".mainActivities.PrivacyPolicy">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:id="@+id/newly"
+            android:background="@color/blue"
+            tools:ignore="Orientation">
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="35dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:id="@+id/rule"
+
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rules and Regulations"
+                android:textColor="#2C9FD3"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right|center_vertical"
+                >
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_baseline_arrow_drop_down_24"
+                    android:id="@+id/im11"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                android:visibility="gone"
+                android:id="@+id/ruletext">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="25dp"
+                            android:layout_marginTop="5dp"
+
+                            android:layout_marginLeft="50dp"
+                            android:text="1. About startup shares
+
+                       "
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="?attr/txtsugestion"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="25dp"
+                                android:layout_marginTop="5dp"
+
+                                android:layout_marginLeft="25dp"
+                                android:text="• These shares are not actual shares of that particular startup, but they are a true reflection of a startup. It shows its growth and success, so you can buy these shares and trade in them but you don't have any actual holding in the company.
+
+
+                       "
+                                android:textSize="14sp"
+
+                                android:textColor="?attr/txtsugestion"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="25dp"
+                                android:layout_marginTop="5dp"
+
+                                android:layout_marginLeft="25dp"
+                                android:text="• Startup will be removed from the app when its growth reaches 100%, and after that you will be given back 100 percent profits + extra incentives. You can then buy actual shares of those startups with the profit you earn from this app.
+
+
+                       "
+                                android:textSize="14sp"
+
+                                android:textColor="?attr/txtsugestion"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="25dp"
+                            android:layout_marginTop="12dp"
+
+                            android:layout_marginLeft="50dp"
+                            android:text="2. About the share price
+
+                       "
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="?attr/txtsugestion"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="25dp"
+                                android:layout_marginTop="5dp"
+
+                                android:layout_marginLeft="25dp"
+                                android:text="• We have defined the set of rules for the price change of a share, the price of a share will solely depend upon those rules.
+
+                       "
+                                android:textSize="14sp"
+
+                                android:textColor="?attr/txtsugestion"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="25dp"
+                                android:layout_marginTop="5dp"
+
+                                android:layout_marginLeft="25dp"
+                                android:text="• We hold the rights to maintain these rules and can change them later accordingly.When the rules will change you will be informed and you can ask for the justification.
+
+                "
+                                android:textSize="14sp"
+
+                                android:textColor="?attr/txtsugestion"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="25dp"
+                                android:layout_marginTop="12dp"
+
+                                android:layout_marginLeft="50dp"
+                                android:text="3.  Set of rules for startup share price.
+
+
+                       "
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="?attr/txtsugestion"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="25dp"
+                                android:layout_marginTop="5dp"
+
+                                android:layout_marginLeft="25dp"
+                                android:text="• Share price will increase if no more shares are available for buying.
+            New chunk of shares will be listed down when shares available for buying become 0.
+
+                       "
+                                android:textSize="14sp"
+
+                                android:textColor="?attr/txtsugestion"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="25dp"
+                                android:layout_marginTop="5dp"
+
+                                android:layout_marginLeft="25dp"
+                                android:text="• There will be a fixed time slot when a startup will be monitored on the bases of its work, milestones and achievement, If at the slot startup is working well then the share price increases but if startup fails to do so then share price will decrease.
+            You can easily judge a startup by following its blog and achievement and then decide to invest or not.
+            "
+                                android:textSize="14sp"
+
+                                android:textColor="?attr/txtsugestion"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="25dp"
+                                android:layout_marginTop="12dp"
+
+                                android:layout_marginLeft="50dp"
+                                android:text="4. About exchange coin rci
+
+
+
+                       "
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="?attr/txtsugestion"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="25dp"
+                                android:layout_marginTop="5dp"
+
+                                android:layout_marginLeft="25dp"
+                                android:text="• This is the app coin and you can only trade in this coin, first you have to buy these coins from rupees and then you can trade in these coins.
+
+                       "
+                                android:textSize="14sp"
+
+                                android:textColor="?attr/txtsugestion"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="25dp"
+                                android:layout_marginTop="5dp"
+
+                                android:layout_marginLeft="25dp"
+                                android:text="• As our platform grows rci price will also rise, but rci price will solely be determined by the admin(startup carvaan team).
+            You can enjoy bidding features for free through bonus coins which can be earned by watching ads.
+            "
+                                android:textSize="14sp"
+
+                                android:textColor="?attr/txtsugestion"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="25dp"
+                                android:layout_marginTop="12dp"
+
+                                android:layout_marginLeft="50dp"
+                                android:text="5. About all the rules.
+
+
+                       "
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="?attr/txtsugestion"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="25dp"
+                                android:layout_marginTop="5dp"
+
+                                android:layout_marginLeft="25dp"
+                                android:text="•You must accept all the rules before playing and you can never claim anything on these rules.
+            These rules are made under supervision and needed for safe play.
+
+                       "
+                                android:textSize="14sp"
+
+                                android:textColor="?attr/txtsugestion"/>
+
+                        </LinearLayout>
+            <LinearLayout
+
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="25dp"
+                android:id="@+id/refund"
+                android:layout_marginRight="20dp"
+
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Refund Policy"
+                    android:textColor="#2C9FD3"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|center_vertical"
+                    >
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_baseline_arrow_drop_down_24"
+                        android:id="@+id/im44"/>
+
+                </LinearLayout>
+            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone"
+                    android:id="@+id/refundtext">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginTop="5dp"
+
+                        android:layout_marginLeft="25dp"
+                        android:text="• Sample text"
+                        android:textSize="14sp"
+
+                        android:textColor="?attr/txtsugestion"/>
+                </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp"
+
+               android:layout_marginTop="25dp"
+                android:id="@+id/privacy"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Privacy Policy"
+                    android:textColor="#2C9FD3"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|center_vertical"
+                    >
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_baseline_arrow_drop_down_24"
+                        android:id="@+id/im22"/>
+
+                </LinearLayout>
+            </LinearLayout>
+            <WebView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:id="@+id/privacypolicy"
+                tools:ignore="WebViewLayout" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="25dp"
+                android:id="@+id/terms"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Terms and Condition"
+                    android:textColor="#2C9FD3"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|center_vertical">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_baseline_arrow_drop_down_24"
+                        android:id="@+id/im33"/>
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+            <WebView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:id="@+id/termsandcondition"
+                tools:ignore="WebViewLayout" />
+
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>

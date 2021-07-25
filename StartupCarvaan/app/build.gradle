@@ -116,4 +116,6 @@ dependencies {
     //Google ads
     implementation 'com.google.android.gms:play-services-ads:20.1.0'
     implementation 'com.google.code.gson:gson:2.8.6'
+    // Gif
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
 }

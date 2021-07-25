@@ -32,6 +32,7 @@ import recreate.india.main.startupcarvaan.allmodels.user.UserFunctions;
 
 public class buy extends DialogFragment {
     //local variables declaration
+    private TextView heading;
     private TextView priceofshare,availableforbuying;
     private EditText no_of_shares;
     private Button buy_now;
@@ -60,6 +61,7 @@ public class buy extends DialogFragment {
         no_of_shares=view.findViewById(R.id.noofshares);
         buy_now=view.findViewById(R.id.btn_buy);
         closebuy=view.findViewById(R.id.close68);
+        heading=view.findViewById(R.id.txt_buy);
         mUser=FirebaseAuth.getInstance().getCurrentUser();
 
         final Trading[] trading = {new Trading()};

@@ -33,13 +33,18 @@ public final class DailogbuyBinding implements ViewBinding {
   @NonNull
   public final TextView priceOfShares;
 
+  @NonNull
+  public final TextView txtBuy;
+
   private DailogbuyBinding(@NonNull LinearLayout rootView, @NonNull Button btnBuy,
-      @NonNull ImageView close68, @NonNull EditText noofshares, @NonNull TextView priceOfShares) {
+      @NonNull ImageView close68, @NonNull EditText noofshares, @NonNull TextView priceOfShares,
+      @NonNull TextView txtBuy) {
     this.rootView = rootView;
     this.btnBuy = btnBuy;
     this.close68 = close68;
     this.noofshares = noofshares;
     this.priceOfShares = priceOfShares;
+    this.txtBuy = txtBuy;
   }
 
   @Override
@@ -93,8 +98,14 @@ public final class DailogbuyBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.txt_buy;
+      TextView txtBuy = rootView.findViewById(id);
+      if (txtBuy == null) {
+        break missingId;
+      }
+
       return new DailogbuyBinding((LinearLayout) rootView, btnBuy, close68, noofshares,
-          priceOfShares);
+          priceOfShares, txtBuy);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

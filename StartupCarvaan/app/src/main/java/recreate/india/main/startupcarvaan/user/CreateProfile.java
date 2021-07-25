@@ -46,7 +46,7 @@ public class CreateProfile extends AppCompatActivity {
     private Uri imageUri;
     private String final_username = "";
     private FirebaseFirestore ff = FirebaseFirestore.getInstance();
-    private FirebaseStorage fs = FirebaseStorage.getInstance();
+    private StorageReference fs = FirebaseStorage.getInstance().getReference();
     private FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
     private String imageurl = "";
     private UserProfile profile = new UserProfile();
@@ -160,11 +160,11 @@ public class CreateProfile extends AppCompatActivity {
 
         if (imageUri != null) {
             cpd.setCancelable(false);
-            fs.getReference().child("users").putFile(imageUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
+            fs.child("users").child(user.getUid()).putFile(imageUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                 @Override
                 public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
                     if (task.isSuccessful()) {
-                        fs.getReference().child("users").getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                        fs.child("users").child(user.getUid()).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                             @Override
                             public void onSuccess(Uri uri) {
                                 userProfile.setImageurl(uri.toString());
@@ -238,7 +238,7 @@ public class CreateProfile extends AppCompatActivity {
 
         cpd.show();
         if (imageUri != null) {
-            StorageReference userimage = fs.getReference().child("users").child(user.getUid()).child("image");
+            StorageReference userimage = fs.child("users").child(user.getUid()).child("image");
             imageurl = userimage.getPath();
             userimage.putFile(imageUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                 @Override

@@ -26,6 +26,7 @@ import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
@@ -45,7 +46,7 @@ public class UpdateProfile extends AppCompatActivity {
     private FirebaseFirestore ff = FirebaseFirestore.getInstance();
     private UserProfile userProfile=new UserProfile();
     private Uri imageUri = null;
-    private FirebaseStorage fs = FirebaseStorage.getInstance();
+    private StorageReference fs = FirebaseStorage.getInstance().getReference();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,11 +81,12 @@ public class UpdateProfile extends AppCompatActivity {
         String aadhar1 = aadhar.getText().toString();
 
         if (imageUri != null) {
-            fs.getReference().child("users").putFile(imageUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
+            fs.child("users").child(user.getUid()).putFile(imageUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                 @Override
                 public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
                     if (task.isSuccessful()) {
-                        fs.getReference().getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                        fs.child("users").child(user.getUid()).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+
                             @Override
                             public void onSuccess(Uri uri) {
                                 userProfile.setImageurl(uri.toString());

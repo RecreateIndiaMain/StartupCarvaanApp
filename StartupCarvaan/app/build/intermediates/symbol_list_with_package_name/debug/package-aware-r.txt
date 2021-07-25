@@ -496,10 +496,12 @@ attr fontVariationSettings
 attr fontWeight
 attr foregroundInsidePadding
 attr framePosition
+attr freezesAnimation
 attr fullscreenBackgroundColor
 attr fullscreenTextColor
 attr gapBetweenBars
 attr gestureInsetBottomIgnored
+attr gifSource
 attr goIcon
 attr graph
 attr greyback
@@ -542,6 +544,7 @@ attr initialActivityCount
 attr insetForeground
 attr isLightTheme
 attr isMaterialTheme
+attr isOpaque
 attr itemBackground
 attr itemCount
 attr itemFillColor
@@ -666,6 +669,7 @@ attr listPreferredItemPaddingRight
 attr listPreferredItemPaddingStart
 attr logo
 attr logoDescription
+attr loopCount
 attr maintextcolour
 attr materialAlertDialogBodyTextStyle
 attr materialAlertDialogTheme
@@ -1940,6 +1944,7 @@ drawable test_custom_background
 drawable tfygu
 drawable tickcircle
 drawable tickinsidecircle
+drawable time
 drawable timer
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -2139,6 +2144,7 @@ id bet
 id betting
 id bidingrecyclerview
 id bidprice
+id billi
 id bla
 id blocking
 id blogtitle
@@ -2664,6 +2670,9 @@ id textView
 id textView2
 id textView3
 id textView4
+id textView5
+id textView6
+id textView7
 id text_input_end_icon
 id text_input_start_icon
 id textinput_counter
@@ -2699,6 +2708,7 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id txt_buy
 id unchecked
 id underprice
 id uniform
@@ -2808,6 +2818,7 @@ layout activity_blogging
 layout activity_buy_rci
 layout activity_card_view
 layout activity_create_profile
+layout activity_error
 layout activity_example
 layout activity_helppage
 layout activity_instamojo
@@ -3985,6 +3996,8 @@ styleable Fragment android_name android_id android_tag
 styleable FragmentContainerView android_name android_tag
 styleable FragmentNavigator android_name
 styleable FullscreenAttrs backgroundcolourmain backgroundlogin_suggest barcolour bidbackground cointextcolour darkwhiteback fullscreenBackgroundColor fullscreenTextColor greyback helppagery maintextcolour txtsugestion
+styleable GifTextureView gifSource isOpaque
+styleable GifView freezesAnimation loopCount
 styleable GradientColor android_startColor android_endColor android_type android_centerX android_centerY android_gradientRadius android_tileMode android_centerColor android_startX android_startY android_endX android_endY
 styleable GradientColorItem android_color android_offset
 styleable ImageFilterView altSrc brightness contrast crossfade overlay round roundPercent saturation warmth

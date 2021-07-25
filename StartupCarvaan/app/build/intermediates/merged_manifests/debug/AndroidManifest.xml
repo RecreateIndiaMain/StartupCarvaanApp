@@ -41,6 +41,8 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.StartupCarvaan" >
+        <activity android:name="recreate.india.main.startupcarvaan.Error" >
+        </activity>
         <activity
             android:name="recreate.india.main.startupcarvaan.user.UpdateProfile"
             android:theme="@style/MyTheme" >
