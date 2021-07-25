@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -58,6 +59,7 @@ public class blogging extends AppCompatActivity {
     String ans;
     private Button invest;
     private UserFunctions userFunctions = new UserFunctions();
+    private LinearLayout closelay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,7 +69,8 @@ public class blogging extends AppCompatActivity {
         pd.setMessage("This is BloggingDetails");
         pd.show();
         bottomNavigationView = findViewById(R.id.buy_sell_bottom_nav);
-        invest = findViewById(R.id.bla);
+        invest = findViewById(R.id.newButton);
+        closelay=findViewById(R.id.closedlayout);
         shareid = getIntent().getStringExtra("shareid");
         ans = getIntent().getStringExtra("type");
         invest.setOnClickListener(new View.OnClickListener() {
@@ -87,9 +90,17 @@ public class blogging extends AppCompatActivity {
         if (ans.equalsIgnoreCase("Investment")) {
             invest.setVisibility(View.VISIBLE);
             bottomNavigationView.setVisibility(View.GONE);
-        } else {
+            closelay.setVisibility(View.GONE);
+        } else if(ans.equalsIgnoreCase("Closed"))
+        {
+            invest.setVisibility(View.GONE);
+            bottomNavigationView.setVisibility(View.GONE);
+            closelay.setVisibility(View.VISIBLE);
+        }
+        else {
             invest.setVisibility(View.GONE);
             bottomNavigationView.setVisibility(View.VISIBLE);
+            closelay.setVisibility(View.GONE);
         }
 
         Query query = ff.collection("startup").document(shareid).collection("bloggings");

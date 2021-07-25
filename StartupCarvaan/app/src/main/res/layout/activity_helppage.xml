@@ -155,7 +155,7 @@
 
                         android:layout_marginRight="20dp"
                         android:layout_marginBottom="6dp"
-                        android:text="• From bonus coins you can participate in bidding contests and win exciting gifts and from rci you can buy dummy shares of a startup.
+                        android:text="• From bonus coins you can participate in bidding contests and win exciting gifts and from rci you can buy cards of a startup.
 "
                         android:textColor="?attr/txtsugestion"
                         android:textSize="15sp" />
@@ -286,7 +286,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="About Startup shares:"
+                        android:text="About Startup Cards:"
                         android:textColor="#2C9FD3"
                         android:textSize="18sp"
 
@@ -314,17 +314,7 @@
                     android:id="@+id/text3"
                     android:visibility="gone">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="28dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginRight="28dp"
 
-                        android:text="• As you are already aware of the rules of a startup share, one thing to remember is the following shares are not the actual shares of a startup, these are made to reflect the startup.
-"
-                        android:textColor="?attr/txtsugestion"
-                        android:textSize="15sp" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -332,7 +322,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginRight="20dp"
 
-                        android:text="• You can buy and sell a startup share at different prices to make profits.You can hold as many as shares of a single startup at different prices and sell them all at a single price.
+                        android:text="• You can buy and sell a startup card at different prices to make profits.You can hold as many as cards of a single startup at different prices and sell them all at a single price.
 "
                         android:textColor="?attr/txtsugestion"
                         android:textSize="15sp" />
@@ -381,7 +371,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="How to sell and buy shares ?"
+                        android:text="How to sell and buy Cards ?"
                         android:textColor="#2C9FD3"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -415,7 +405,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginRight="28dp"
 
-                        android:text="• For buying the shares with rci of your favorite startup .Go to the invest in me button shown in the all shares section of that particular startup then a blog page appears where you can like and comment on the post posted by that startup and there is a section  of sell click on that then enter the amount of the share you want to buy and then click on buy button.
+                        android:text="• For buying the cards with rci of your favorite startup .Go to the invest in me button shown in the all shares section of that particular startup then a blog page appears where you can like and comment on the post posted by that startup and there is a section  of sell click on that then enter the amount of the cards you want to buy and then click on buy button.
 "
                         android:textColor="?attr/txtsugestion"
                         android:textSize="15sp" />
@@ -426,7 +416,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginRight="20dp"
 
-                        android:text="• Similarly click on the Invest in me button and then go to the sell section  and choose which price shares you want to sell and then click on  sell button to sell that particular holding."
+                        android:text="• Similarly click on the Invest in me button and then go to the sell section  and choose which price cards you want to sell and then click on  sell button to sell that particular holding."
                         android:textColor="?attr/txtsugestion"
                         android:textSize="15sp" />
 
