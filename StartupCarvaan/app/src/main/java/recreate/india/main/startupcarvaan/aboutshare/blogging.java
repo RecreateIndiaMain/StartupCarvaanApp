@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -56,8 +57,9 @@ public class blogging extends AppCompatActivity {
     private FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
     private String shareid;
     String ans;
-    private Button invest;
+    private LinearLayout investaa;
     private UserFunctions userFunctions = new UserFunctions();
+    private LinearLayout closelay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,10 +69,11 @@ public class blogging extends AppCompatActivity {
         pd.setMessage("This is BloggingDetails");
         pd.show();
         bottomNavigationView = findViewById(R.id.buy_sell_bottom_nav);
-        invest = findViewById(R.id.bla);
+        investaa = findViewById(R.id.newButton);
+        closelay=findViewById(R.id.closedlayout);
         shareid = getIntent().getStringExtra("shareid");
         ans = getIntent().getStringExtra("type");
-        invest.setOnClickListener(new View.OnClickListener() {
+        investaa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(blogging.this, "invest", Toast.LENGTH_SHORT).show();
@@ -85,11 +88,19 @@ public class blogging extends AppCompatActivity {
         bottomNavigationView.setOnNavigationItemSelectedListener(onNavigationItemReselectedListener);
         recyclerView = findViewById(R.id.aboutshare);
         if (ans.equalsIgnoreCase("Investment")) {
-            invest.setVisibility(View.VISIBLE);
+            investaa.setVisibility(View.VISIBLE);
             bottomNavigationView.setVisibility(View.GONE);
-        } else {
-            invest.setVisibility(View.GONE);
+            closelay.setVisibility(View.GONE);
+        } else if(ans.equalsIgnoreCase("Closed"))
+        {
+            investaa.setVisibility(View.GONE);
+            bottomNavigationView.setVisibility(View.GONE);
+            closelay.setVisibility(View.VISIBLE);
+        }
+        else {
+            investaa.setVisibility(View.GONE);
             bottomNavigationView.setVisibility(View.VISIBLE);
+            closelay.setVisibility(View.GONE);
         }
 
         Query query = ff.collection("startup").document(shareid).collection("bloggings");
@@ -243,14 +254,6 @@ public class blogging extends AppCompatActivity {
         };
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(blogging.this));
-
-        invest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //TODO:  to be made
-            }
-        });
-
     }
 
     public class PostViewHolder extends RecyclerView.ViewHolder {

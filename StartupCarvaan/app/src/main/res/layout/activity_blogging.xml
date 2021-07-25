@@ -41,26 +41,55 @@
 
     </androidx.recyclerview.widget.RecyclerView>
 
-    <Button
+<!--    <Button-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:id="@+id/bla"-->
+<!--        android:visibility="visible"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:text="Invest"-->
+<!--        android:textSize="17dp"-->
+<!--        android:clickable="true"-->
+<!--        -->
+<!--        android:textStyle="bold"-->
+<!--        android:layout_gravity="bottom"/>-->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:id="@+id/bla"
-        android:visibility="visible"
+        android:layout_height="55dp"
         android:layout_alignParentBottom="true"
-        android:text="Invest"
-        android:textSize="17dp"
-        android:textStyle="bold"
-        android:layout_gravity="bottom"/>
-    <Button
-        android:text="new Button"
+        android:gravity="center"
         android:id="@+id/newButton"
-        android:layout_width="match_parent"
-        android:visibility="gone"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="100dp">
-    </Button>
+        android:background="@color/blue">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="Buy Now"
+            android:textColor="@color/white"
+            android:textStyle="bold">
+
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:id="@+id/closedlayout"
+        android:background="#A30A0A">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="Closed Now You can buy after 10 am tomorrow"
+            android:textColor="@color/white"
+            android:textStyle="bold">
+
+        </TextView>
+    </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/buy_sell_bottom_nav"

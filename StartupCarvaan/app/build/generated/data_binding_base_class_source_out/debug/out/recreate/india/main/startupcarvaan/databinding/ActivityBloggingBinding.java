@@ -4,7 +4,6 @@ package recreate.india.main.startupcarvaan.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -32,24 +31,24 @@ public final class ActivityBloggingBinding implements ViewBinding {
   public final ImageView backblog;
 
   @NonNull
-  public final Button bla;
-
-  @NonNull
   public final BottomNavigationView buySellBottomNav;
 
   @NonNull
-  public final Button newButton;
+  public final LinearLayout closedlayout;
+
+  @NonNull
+  public final LinearLayout newButton;
 
   private ActivityBloggingBinding(@NonNull RelativeLayout rootView,
       @NonNull RecyclerView aboutshare, @NonNull LinearLayout applayout,
-      @NonNull ImageView backblog, @NonNull Button bla,
-      @NonNull BottomNavigationView buySellBottomNav, @NonNull Button newButton) {
+      @NonNull ImageView backblog, @NonNull BottomNavigationView buySellBottomNav,
+      @NonNull LinearLayout closedlayout, @NonNull LinearLayout newButton) {
     this.rootView = rootView;
     this.aboutshare = aboutshare;
     this.applayout = applayout;
     this.backblog = backblog;
-    this.bla = bla;
     this.buySellBottomNav = buySellBottomNav;
+    this.closedlayout = closedlayout;
     this.newButton = newButton;
   }
 
@@ -98,26 +97,26 @@ public final class ActivityBloggingBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.bla;
-      Button bla = rootView.findViewById(id);
-      if (bla == null) {
-        break missingId;
-      }
-
       id = R.id.buy_sell_bottom_nav;
       BottomNavigationView buySellBottomNav = rootView.findViewById(id);
       if (buySellBottomNav == null) {
         break missingId;
       }
 
+      id = R.id.closedlayout;
+      LinearLayout closedlayout = rootView.findViewById(id);
+      if (closedlayout == null) {
+        break missingId;
+      }
+
       id = R.id.newButton;
-      Button newButton = rootView.findViewById(id);
+      LinearLayout newButton = rootView.findViewById(id);
       if (newButton == null) {
         break missingId;
       }
 
       return new ActivityBloggingBinding((RelativeLayout) rootView, aboutshare, applayout, backblog,
-          bla, buySellBottomNav, newButton);
+          buySellBottomNav, closedlayout, newButton);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

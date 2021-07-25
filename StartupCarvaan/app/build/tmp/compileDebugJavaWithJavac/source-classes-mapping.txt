@@ -296,8 +296,7 @@ recreate/india/main/startupcarvaan/aboutshare/blogging.java
  recreate.india.main.startupcarvaan.aboutshare.blogging$2$4
  recreate.india.main.startupcarvaan.aboutshare.blogging$2$5
  recreate.india.main.startupcarvaan.aboutshare.blogging$3
- recreate.india.main.startupcarvaan.aboutshare.blogging$4
- recreate.india.main.startupcarvaan.aboutshare.blogging$4$1
+ recreate.india.main.startupcarvaan.aboutshare.blogging$3$1
  recreate.india.main.startupcarvaan.aboutshare.blogging$PostViewHolder
 recreate/india/main/startupcarvaan/introSlider/SecondFragment.java
  recreate.india.main.startupcarvaan.introSlider.SecondFragment

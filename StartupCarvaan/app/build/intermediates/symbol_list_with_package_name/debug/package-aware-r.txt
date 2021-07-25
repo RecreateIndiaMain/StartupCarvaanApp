@@ -2144,8 +2144,11 @@ id bet
 id betting
 id bidingrecyclerview
 id bidprice
+<<<<<<< HEAD
 id billi
 id bla
+=======
+>>>>>>> 01f009d412b3e350d6f6bbeae653fa8c83cba3ee
 id blocking
 id blogtitle
 id bonus
@@ -2199,6 +2202,7 @@ id clip_horizontal
 id clip_vertical
 id close68
 id closebuy
+id closedlayout
 id closesellsuccess
 id coin_drawer
 id coins
@@ -2564,7 +2568,6 @@ id rzp_innerbox
 id rzp_outerbox
 id rzp_securedpayments
 id rzp_theMainMagicView
-id sample
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth

@@ -73,7 +73,7 @@ public class myshares extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_myshares, container, false);
         myshare = view.findViewById(R.id.mysharerecyclerview);
-        sample = view.findViewById(R.id.sample);
+//        sample = view.findViewById(R.id.sample);
         profit = view.findViewById(R.id.totalprofit);
         investment = view.findViewById(R.id.totalinvest);
         topbar=view.findViewById(R.id.ll1);
