@@ -61,7 +61,7 @@ public class comment extends DialogFragment {
         String shareid=bundle.getString("shareid");
         ff.collection("startup")
                 .document(shareid)
-                .collection("bloggings")
+                .collection("blogging")
                 .document(blogid)
                 .get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override

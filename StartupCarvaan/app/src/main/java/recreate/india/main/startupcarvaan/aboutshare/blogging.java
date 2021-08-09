@@ -67,7 +67,7 @@ public class blogging extends AppCompatActivity {
         setContentView(R.layout.activity_blogging);
         ProgressDialog pd = new ProgressDialog(blogging.this);
         pd.setMessage("This is BloggingDetails");
-        pd.show();
+//        pd.show();
         bottomNavigationView = findViewById(R.id.buy_sell_bottom_nav);
         investaa = findViewById(R.id.newButton);
         closelay=findViewById(R.id.closedlayout);
@@ -103,7 +103,7 @@ public class blogging extends AppCompatActivity {
             closelay.setVisibility(View.GONE);
         }
 
-        Query query = ff.collection("startup").document(shareid).collection("bloggings");
+        Query query = ff.collection("startup").document(shareid).collection("blogging");
 
         FirestoreRecyclerOptions<BloggingDetails> option = new FirestoreRecyclerOptions.
                 Builder<BloggingDetails>().setQuery(query, BloggingDetails.class).
@@ -124,23 +124,24 @@ public class blogging extends AppCompatActivity {
                 holder.num_likes.setText(String.valueOf(model.getLikes().size()));
                 holder.num_comments.setText(String.valueOf(model.getComments().size()));
 
-                holder.commentimage.setClickable(model.getComments().size() != 0);
+//                holder.commentimage.setClickable(model.getComments().size() != 0);
 
-                holder.commentbutton.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        if (holder.addcomment.getText().toString().isEmpty())
-                            Toast.makeText(blogging.this, "please enter some text", Toast.LENGTH_SHORT).show();
-                        else {
-                            model.getComments().put(firebaseUser.getUid() + new Random().toString(), holder.addcomment.getText().toString());
-                            ff.collection("startup")
-                                    .document(shareid)
-                                    .collection("bloggings")
-                                    .document(getSnapshots().getSnapshot(position).getId())
-                                    .update("comments", model.getComments());
+                    holder.commentbutton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            if (holder.addcomment.getText().toString().isEmpty())
+                                Toast.makeText(blogging.this, "please enter some text", Toast.LENGTH_SHORT).show();
+                            else {
+                                model.getComments().put(firebaseUser.getUid() + new Random().toString(), holder.addcomment.getText().toString());
+                                ff.collection("startup")
+                                        .document(shareid)
+                                        .collection("blogging")
+                                        .document(getSnapshots().getSnapshot(position).getId())
+                                        .update("comments", model.getComments());
+                            }
                         }
-                    }
-                });
+                    });
+
                 holder.likeimage.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -151,7 +152,7 @@ public class blogging extends AppCompatActivity {
                             model.getLikes().put(firebaseUser.getUid(), true);
                             ff.collection("startup")
                                     .document(shareid)
-                                    .collection("bloggings")
+                                    .collection("blogging")
                                     .document(getSnapshots().getSnapshot(position).getId())
                                     .update("likes", model.getLikes());
 
@@ -168,13 +169,17 @@ public class blogging extends AppCompatActivity {
                 holder.commentimage.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        comment comments = new comment();
-                        Bundle bd = new Bundle();
-                        bd.putString("shareid", shareid);
-                        bd.putString("blogid", getSnapshots().getSnapshot(position).getId());
-                        comments.setArguments(bd);
-                        comments.show(getSupportFragmentManager(), "Comment Dialogue");
-
+                        if(model.getComments().size()>0) {
+                            comment comments = new comment();
+                            Bundle bd = new Bundle();
+                            bd.putString("shareid", shareid);
+                            bd.putString("blogid", getSnapshots().getSnapshot(position).getId());
+                            comments.setArguments(bd);
+                            comments.show(getSupportFragmentManager(), "Comment Dialogue");
+                        }
+                        else{
+                            Toast.makeText(blogging.this, "No Comments on this Blog to Show..", Toast.LENGTH_SHORT).show();
+                        }
                     }
                 });
 
@@ -189,7 +194,7 @@ public class blogging extends AppCompatActivity {
                         public void onReady(@NotNull YouTubePlayer youTubePlayer) {
                             String id = model.getBlogurl();
                             youTubePlayer.cueVideo(id, 0);
-                            pd.dismiss();
+//                            pd.dismiss();
                         }
 
                         @Override
@@ -245,7 +250,7 @@ public class blogging extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<Uri> task) {
                             Glide.with(blogging.this).load(task.getResult()).into(holder.imageView);
-                            pd.dismiss();
+//                            pd.dismiss();
                         }
                     });
 

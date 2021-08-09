@@ -1752,6 +1752,7 @@ drawable ayp_ic_youtube_24dp
 drawable ayp_shape_rounded_corners
 drawable bidding
 drawable bidprice
+drawable blog
 drawable bonuscoin
 drawable bottomsheet_back
 drawable bsw
@@ -2144,11 +2145,7 @@ id bet
 id betting
 id bidingrecyclerview
 id bidprice
-<<<<<<< HEAD
 id billi
-id bla
-=======
->>>>>>> 01f009d412b3e350d6f6bbeae653fa8c83cba3ee
 id blocking
 id blogtitle
 id bonus
